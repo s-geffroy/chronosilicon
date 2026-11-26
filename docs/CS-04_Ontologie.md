@@ -1,0 +1,9 @@
+# CS-04 — Ontologie et données
+Ontologie TypeScript + JSON Schema, IDs stables, versions, migration explicite. Entités : Observer, Architecture, Component, Phenomenon, Event, Measurement, Distribution, Dependency, Scenario, Evidence. Propositions de champs :
+- Observer: id, kind, referenceUnit, frequencyHz ou frequencySegments, tauSeconds, clockDomain, assumptions.
+- Architecture: id, era, vendor/model, topology, configurationRefs. Component: id, architectureId, kind, parentId, clockDomain.
+- Phenomenon: id, componentKind, quantityKind, definitionKey, dimensions, scope. Measurement: id, phenomenonId, architectureId, valueSI/interval, unitOriginal, conditions, protocol, sourceIds, provenanceType, qualityStatus, uncertainty, distributionId, sampleCount, date, version.
+- Evidence: id, title, author, publisher, URL/DOI, date, locator précis, accessedAt, license, checksum si autorisé, scope, verificationStatus. Distribution: empirical samples ou quantiles sourcés, modèle paramétrique seulement justifié, n, conditions, méthode.
+- Event: id, kind, actorId, start/end SI, resourceIds, dependencies, scenarioId, provenance simulation. Dependency: predecessor/successor, relation (fin-début, etc.), lag, cause. Scenario: id, inputs, seed, modelVersion, initialState, results.
+
+Invariants : références résolues, IDs uniques, unité compatible avec quantityKind, toutes durées >=0, f>0 pour référence cadencée, segments non chevauchants, quantiles ordonnés, aucune valeur statistique sans protocole, aucune redistribution interdite. Statuts provenance (measured/documented/calculated/estimated/illustrative) orthogonaux à vérification (pending/qualified/contested/rejected), incertitude inconnue = null explicite. Données brutes immuables, données normalisées dérivées ; séparations par version et langue. Les exemples de test restent dans fixtures, hors corpus validé. Relations causales doivent être vérifiées pour chaque scénario.

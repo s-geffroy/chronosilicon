@@ -23,3 +23,12 @@ vendor/
 # Marqueur local du VPS, lu par scripts/infra-reconcile.sh : il dit que cette
 # application redemarre au boot de CETTE machine. Rien a faire dans un depot.
 .autostart
+
+# Chaine Node (outil conteneur 'node')
+node_modules/
+dist/
+.cache/
+playwright-report/
+test-results/
+coverage/
+*.tsbuildinfo

@@ -1,0 +1,20 @@
+CHRONOSILICON
+Copyright 2026 Sylvain Geffroy and CHRONOSILICON contributors
+
+Original source code is licensed under the Apache License, Version 2.0 (LICENSE).
+Original documentation and educational content: CC BY 4.0 (LICENSES/CC-BY-4.0.txt).
+Original data produced by the project (data structure, SI normalisation,
+values calculated by the project): CC0 1.0 (LICENSES/CC0-1.0.txt).
+
+THIRD-PARTY MATERIAL IS NOT COVERED BY THE LICENSES ABOVE.
+The corpus (data/raw, data/curated, data/validated) cites third-party documents
+(standards, datasheets, manuals, papers, web pages). For each source, the
+registry data/sources/sources.json records publisher, URL, licence/terms and a
+redistribution status (allowed / reference-only / unknown). Short literal
+excerpts ("quote" fields) are reproduced for citation and verification
+purposes only, with attribution and precise locators; no licence is granted on
+them by this project. Documents marked "reference-only" are referenced, never
+copied. Trademarks belong to their respective owners.
+
+Third-party software dependencies keep their own licences (see package-lock.json
+and node_modules/*/LICENSE in a local install).

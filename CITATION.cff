@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use CHRONOSILICON, please cite it as below."
+title: "CHRONOSILICON — An Open Atlas of Computational Time"
+type: software
+authors:
+  - family-names: Geffroy
+    given-names: Sylvain
+repository-code: "https://github.com/s-geffroy/chronosilicon"
+url: "https://s-geffroy.github.io/chronosilicon/"
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-11-26"
+keywords: [latency, computer architecture, time scales, education, metrology]
