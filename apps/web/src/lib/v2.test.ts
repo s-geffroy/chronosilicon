@@ -40,7 +40,9 @@ describe('G2 comparison display: ordered by era, never by value', () => {
   it('cpu clock comparison is in chronological (curated) order, not sorted by frequency', () => {
     const grp = corpus.groups.find((x) => x.id === 'cmp-cpu-clock')!;
     expect(orderMembers(grp).map((m) => m.id)).toEqual([
-      'intel-8086-initial-clock-m1', 'intel-pentium4-launch-clock-m1', 'intel-core-i9-14900k-pcore-base-m1', 'intel-core-i9-14900k-max-turbo-m1',
+      'intel-8080-initial-clock-m1', 'intel-8086-initial-clock-m1', 'intel-80286-initial-clock-m1', 'intel-80386-initial-clock-m1',
+      'intel-80486-initial-clock-m1', 'intel-pentium-initial-clock-m1', 'intel-pentium-pro-initial-clock-m1', 'amd-athlon-1ghz-2000-m1',
+      'intel-pentium4-launch-clock-m1', 'intel-core-i9-14900k-pcore-base-m1', 'intel-core-i9-14900k-max-turbo-m1',
     ]);
   });
   it('DRAM comparison keeps 1995 first even though 2019 values are lower', () => {
@@ -64,6 +66,9 @@ describe('G2 transformations (hard-coded oracles)', () => {
   const row = (id: string) => rows.find((x) => x.observer.id === id)!;
   it('pedagogical 4 GHz: 5.12888e9 cycles = subjective seconds', () => {
     expect(row('obs-pedagogical-4ghz').subjectiveSeconds).toBeCloseTo(5.1288815277667856e9, 0);
+  });
+  it('quantum QEC-cycle reference (1.1 µs): T = Δt/δref = 1.16565e6', () => {
+    expect(row('obs-quantum-qec-cycle').subjectiveSeconds).toBeCloseTo(1_165_654.8926742695, 3);
   });
   it('Intel 8086 at 5 MHz: 6.4111e6 cycles', () => {
     expect(row('obs-intel-8086').referenceUnits).toBeCloseTo(6_411_101.9097, 3);

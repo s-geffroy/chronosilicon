@@ -15,7 +15,7 @@
       "enum": ["physics", "logic", "cpu", "memory", "accelerator", "interconnect", "storage", "os", "network", "distributed", "ai", "peripheral", "human", "space", "emerging"]
     },
     "quantityKind": {
-      "enum": ["duration", "frequency", "throughput", "transfer_rate", "distance", "speed", "data_size", "cycle_count"]
+      "enum": ["duration", "frequency", "throughput", "transfer_rate", "distance", "speed", "data_size", "cycle_count", "compute_rate"]
     },
     "provenanceType": { "enum": ["measured", "documented", "calculated", "estimated", "illustrative"] },
     "verificationStatus": { "enum": ["pending", "qualified", "contested", "rejected"] },

@@ -1,7 +1,13 @@
-# sha256  file — data/raw is immutable (CS-04). M00 extraction records and independent verification verdicts, 2026-11-26.
+# sha256  file — data/raw is immutable (CS-04). M00 (2026-11-26) and lot 2 / M01 (2026-11-26b) extraction records and independent verification verdicts.
 cffe99f718cf4eccc49d2acc83f147ad014079b0b67fcd3a1240e2f1f84be09f  m00-2026-11-26-A_physics_space_human_network.json
 e438c84c712977791aaf69afbb30b26ed43b6ebb225ae21bb1e98b83676a2123  m00-2026-11-26-B_cpu_memory_os_hpc.json
 40f3fc21ba29ae670bdba2fa18367f7ebce58e6d9809a1baac5d906815e79a5b  m00-2026-11-26-C_storage_interconnect_gpu_ai.json
+f75e2bdbb44a95bdac0a8539ec0ca9dd9f9ee81ac48d2961ac191f3339183b21  m00-2026-11-26b-A_logic_emerging_space_network.json
+4cea9065366c2f1037f2928a8d0d31150caa396970f4e4a658c81e1b84836f6d  m00-2026-11-26b-B_cpu_memory_os_hpc_history.json
+fe38d56e2b3158830f81664db1e468db754423257ac2481af673f517c98120de  m00-2026-11-26b-C_storage_gpu_ai_peripheral.json
 fb8b8d3d90da9a135927efc7a460128b176629be0c9a236d4715a4d07657ad7d  verify-2026-11-26-A.json
 77979ad36b563a39c2ef81bd08096d0db3ba3db107e9e0a811dc187ea44544ee  verify-2026-11-26-B.json
 215974359aa0cab75d4ef24d4dabbce14338b6ea9cf4521a05efa85577950a55  verify-2026-11-26-C.json
+4e68c1ca430b92bce52ca7b2d2868eb0485c13395246fdb2b779e3b2f5c2bcc4  verify-2026-11-26b-A.json
+950d4c3162f3d3dafa2aee39676a647a2ab16017fcf1e0adbda2b6d6db22896d  verify-2026-11-26b-B.json
+de225c13fc9b698e2f94a87cb11ea241cc3cb7e20ee32129dc568462b0949f60  verify-2026-11-26b-C.json

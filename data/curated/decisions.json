@@ -225,6 +225,41 @@
       "patch": {
         "value": 8.333333333333334
       }
+    },
+    "linux-retpoline-indirect-branch-cost": {
+      "reason": "The paper states 'around 30 cycles' without a measurement method for this figure: classified as an estimate (lot-2 verifier recommendation, 2026-11-26).",
+      "patch": {
+        "provenanceType": "estimated",
+        "protocol": null
+      }
+    },
+    "hgx-b200-fp64-peak": {
+      "status": "contested",
+      "reason": "The NVIDIA page does not state whether 296 TFLOPS FP64 is per GPU or for the 8-GPU HGX board (the table mixes per-GPU and total rows): not comparable, withheld (lot-2 verifier note)."
+    },
+    "hdd-5400rpm-half-rotation": {
+      "reason": "Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "patch": {
+        "value": 5.555555555555555
+      }
+    },
+    "frame-time-144hz": {
+      "reason": "Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "patch": {
+        "value": 6.944444444444445
+      }
+    },
+    "frame-time-240hz": {
+      "reason": "Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "patch": {
+        "value": 4.166666666666667
+      }
+    },
+    "fdsoi28-ro101-frequency-296k-1v": {
+      "reason": "Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "patch": {
+        "value": 275.027502750275
+      }
     }
   },
   "sourcePatches": {

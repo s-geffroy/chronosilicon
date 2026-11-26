@@ -38,6 +38,16 @@ const ORACLE: Record<string, () => number> = {
   'hdd-7200rpm-half-rotation': () => 0.5 / si('exos-x20-spindle-frequency'),
   'hdd-7200rpm-full-rotation': () => 1 / si('exos-x20-spindle-frequency'),
   'solidigm-p5520-4k-qd16-latency-derived': () => 16 / 233_700, // Little's law, QD16, 233.7k IOPS documented
+  // lot 2 (M01)
+  'fdsoi28-ro101-frequency-296k-1v': () => 1 / (2 * 101 * si('fdsoi28-ro-stage-delay-296k-1v')), // ring oscillator, 101 stages
+  'gps-zenith-one-way-light-time': () => si('gps-orbit-altitude') / c(),
+  'geo-one-way-light-time-subsatellite': () => si('geo-orbit-altitude') / c(),
+  'ethernet-min-frame-wire-time-800g': () => 672 / si('ethernet-800gbe-rate') / 8, // 672 bit; rate stored in B/s
+  'hdd-15k-spindle-frequency': () => 15_000 / 60, // 15 000 RPM documented
+  'hdd-5400rpm-spindle-frequency': () => 5400 / 60, // 5400 RPM documented
+  'hdd-5400rpm-half-rotation': () => 0.5 / si('hdd-5400rpm-spindle-frequency'),
+  'frame-time-144hz': () => 1 / si('vesa-adaptivesync-min-max-refresh'),
+  'frame-time-240hz': () => 1 / si('vesa-adaptivesync-display240-tier'),
 };
 
 describe('calculated values are reproducible from their inputs', () => {

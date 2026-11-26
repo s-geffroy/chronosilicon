@@ -113,6 +113,20 @@
         "fr": "Référence : période d'image à 60 Hz exactement.",
         "en": "Reference: frame period at exactly 60 Hz."
       }
+    },
+    {
+      "id": "obs-quantum-qec-cycle",
+      "kind": "reference-operation",
+      "measurementId": "willow-surface-code-cycle-time-m1",
+      "frequencyHz": null,
+      "label": {
+        "fr": "Processeur quantique : un cycle de correction d'erreurs (1,1 µs) = 1 seconde subjective",
+        "en": "Quantum processor: one error-correction cycle (1.1 µs) = 1 subjective second"
+      },
+      "assumptions": {
+        "fr": "Référence : temps de cycle du code de surface publié pour un processeur de 72 qubits ; ce n'est pas une horloge, et un cycle n'est pas comparable à un cycle de CPU.",
+        "en": "Reference: published surface-code cycle time for a 72-qubit processor; this is not a clock, and one cycle is not comparable to a CPU cycle."
+      }
     }
   ]
 }

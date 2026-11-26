@@ -8,6 +8,7 @@ describe('dimensions', () => {
     expect(() => toSI(1, 'GT/s', 'throughput')).toThrow(DimensionError);
     expect(() => toSI(1, 'GHz', 'duration')).toThrow(DimensionError);
     expect(() => toSI(1, 'cycles', 'duration')).toThrow(DimensionError);
+    expect(() => toSI(1, 'Pflop/s', 'frequency')).toThrow(DimensionError);
     expect(() => toSI(1, 'furlong', 'distance')).toThrow(DimensionError);
   });
   it('refuses non-finite and negative values', () => {
@@ -31,6 +32,7 @@ describe('dimensions', () => {
       'bit/s': 0.125, 'kbit/s': 125, 'Mbit/s': 125000, 'Gbit/s': 125000000, 'Tbit/s': 125000000000,
       'T/s': 1, 'MT/s': 1e6, 'GT/s': 1e9, mm: 1e-3, cm: 1e-2, m: 1, km: 1e3, au: 149597870700, 'm/s': 1, 'km/s': 1e3,
       bit: 0.125, B: 1, kB: 1e3, MB: 1e6, GB: 1e9, TB: 1e12, KiB: 1024, MiB: 1048576, GiB: 1073741824, cycles: 1,
+      'flop/s': 1, 'Gflop/s': 1e9, 'Tflop/s': 1e12, 'Pflop/s': 1e15, 'Eflop/s': 1e18,
     };
     expect(Object.keys(UNITS).sort()).toEqual(Object.keys(expected).sort());
     for (const [u, f] of Object.entries(expected)) expect(toSI(1, u, unitKind(u)), u).toBeCloseTo(f, 12 - Math.max(0, Math.log10(f)));

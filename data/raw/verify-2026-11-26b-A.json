@@ -1,0 +1,536 @@
+{
+ "verifiedFile": "m00-2026-11-26b-A_logic_emerging_space_network.json",
+ "verifiedAt": "2026-11-26",
+ "verdicts": [
+  {
+   "id": "fdsoi28-ro-stage-delay-296k-1v",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/pdf/1903.06021",
+   "evidence": "Table II, row T=296 K, VDD=1 V, VN-WELL=0: tP 18 ps, IDYN 885, ISTAT 1.29 nA/stage. Table I: tP = 1/(f×2×101×1024).",
+   "fix": {
+    "protocol": "101-stage inverter ring oscillator (LVT flip-well, LG = 34 nm, WN = 420 nm, WP = 600 nm) with enabling AND gate and /1024 frequency divider; tP = 1/(f × 2 × 101 × 1024) from the divided output frequency f; protocol in Table I of the paper."
+   },
+   "labelFr": "Délai par étage d’un oscillateur en anneau, FD-SOI 28 nm, 296 K, 1,0 V",
+   "labelEn": "Ring-oscillator delay per stage, 28 nm FD-SOI, 296 K, 1.0 V",
+   "conditionsFr": "STMicroelectronics FD-SOI 28 nm (GO1, LVT, flip-well), anneau de 101 étages, 296 K, VDD = 1,0 V, sans polarisation arrière (VN-WELL = VP-WELL = 0 V).",
+   "conditionsEn": "STMicroelectronics 28 nm FD-SOI (GO1, LVT, flip-well), 101-stage ring oscillator, 296 K, VDD = 1.0 V, no back bias (VN-WELL = VP-WELL = 0 V).",
+   "notes": "Protocol said 'Measured on wafer': the paper does not say so (only that devices are processed on 300 mm SOI wafers). Removed."
+  },
+  {
+   "id": "fdsoi28-ro-stage-delay-4k-0v325",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/pdf/1903.06021",
+   "evidence": "Abstract: 'speed (τp=37ps) and static power (7nA/stage) can be achieved at 4.3K with VDD reduced down to 0.325V'; Table III row 0.325 V, VN 4 / VP -5.8: 37 ps, ISTAT 7.",
+   "fix": {
+    "protocol": "101-stage inverter ring oscillator (LVT flip-well, LG = 34 nm, WN = 420 nm, WP = 600 nm) with enabling AND gate and /1024 frequency divider; tP = 1/(f × 2 × 101 × 1024) from the divided output frequency f; protocol in Table I of the paper. Measurements between 296 K and 4.3 K."
+   },
+   "labelFr": "Délai par étage d’un oscillateur en anneau, FD-SOI 28 nm, 4,3 K, 0,325 V sous polarisation arrière directe",
+   "labelEn": "Ring-oscillator delay per stage, 28 nm FD-SOI, 4.3 K, 0.325 V with forward body bias",
+   "conditionsFr": "Même anneau de 101 étages, 4,3 K, VDD = 0,325 V, polarisation arrière directe VN-WELL = 4 V et VP-WELL = −5,8 V ; courant statique 7 nA par étage.",
+   "conditionsEn": "Same 101-stage ring oscillator, 4.3 K, VDD = 0.325 V, forward body bias VN-WELL = 4 V and VP-WELL = −5.8 V; static current 7 nA per stage.",
+   "notes": "Same 'on wafer' over-statement in protocol removed. Same table: 71 ps with VP-WELL = −4.8 V."
+  },
+  {
+   "id": "fdsoi28-ro101-frequency-296k-1v",
+   "verdict": "confirmed",
+   "checkedUrl": "https://arxiv.org/pdf/1903.06021",
+   "evidence": "Sec. II: 'The RO consists of 101 identical stages together with an enabling two-way AND gate.' Recomputed 1/(2×101×18 ps) = 275.03 MHz; input item confirmed.",
+   "fix": null,
+   "labelFr": "Fréquence d’oscillation de l’anneau à 101 étages, FD-SOI 28 nm, 296 K, 1,0 V",
+   "labelEn": "Oscillation frequency of the 101-stage ring oscillator, 28 nm FD-SOI, 296 K, 1.0 V",
+   "conditionsFr": "Valeur calculée : f = 1/(2 × 101 × tP) avec tP = 18 ps (296 K, 1,0 V), avant le diviseur par 1024 ; tP étant arrondi à la picoseconde, f est approchée.",
+   "conditionsEn": "Calculated value: f = 1/(2 × 101 × tP) with tP = 18 ps (296 K, 1.0 V), before the /1024 divider; tP is rounded to the picosecond, so f is approximate.",
+   "notes": "Formula consistent with Table I (tP = 1/(f×2×101×1024), f = divided output). Input tP is an integer ps, so ±3 % rounding on f."
+  },
+  {
+   "id": "ihp-sg13g2-hbt-ft",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://ihp-open-pdk-docs.readthedocs.io/en/main/process_specs/01_general.html",
+   "evidence": "PDK page: 'SG13G2 has the same device portfolio as SG13S but much higher bipolar performance with f T = 300 GHz and 500 GHz maximum oscillation frequency.'",
+   "fix": {
+    "conditions": "IHP SG13G2 0.13 µm SiGe:C BiCMOS, npn HBT; bias and device geometry not stated on the page; process of the open-source PDK."
+   },
+   "labelFr": "Fréquence de transition fT du TBH SiGe, IHP SG13G2 (BiCMOS 0,13 µm)",
+   "labelEn": "SiGe HBT transit frequency fT, IHP SG13G2 (0.13 µm BiCMOS)",
+   "conditionsFr": "IHP SG13G2, BiCMOS SiGe:C 0,13 µm, TBH npn ; polarisation et géométrie non précisées ; procédé du PDK libre.",
+   "conditionsEn": "IHP SG13G2 0.13 µm SiGe:C BiCMOS, npn HBT; bias and geometry not stated; process of the open-source PDK.",
+   "notes": "'peak value' is not on the cited PDK page (the Europractice brochure says 'peak fT/fmax values of 300 GHz/500 GHz'). Removed from conditions or cite the brochure."
+  },
+  {
+   "id": "ihp-sg13g2-hbt-fmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://ihp-open-pdk-docs.readthedocs.io/en/main/process_specs/01_general.html",
+   "evidence": "PDK page: 'f T = 300 GHz and 500 GHz maximum oscillation frequency' (SG13G2). Brochure table: 300 GHz/500 GHz/1.6 V.",
+   "fix": {
+    "conditions": "IHP SG13G2 0.13 µm SiGe:C BiCMOS, npn HBT; bias and device geometry not stated on the page."
+   },
+   "labelFr": "Fréquence maximale d’oscillation fmax du TBH SiGe, IHP SG13G2",
+   "labelEn": "SiGe HBT maximum oscillation frequency fmax, IHP SG13G2",
+   "conditionsFr": "IHP SG13G2, BiCMOS SiGe:C 0,13 µm, TBH npn ; polarisation et géométrie non précisées.",
+   "conditionsEn": "IHP SG13G2 0.13 µm SiGe:C BiCMOS, npn HBT; bias and geometry not stated.",
+   "notes": "Same as fT: 'peak' comes from the Europractice brochure, not from the PDK page."
+  },
+  {
+   "id": "ihp-sg13g3-hbt-ft",
+   "verdict": "confirmed",
+   "checkedUrl": "https://europractice-ic.com/wp-content/uploads/2026/02/IHP_February_2026.pdf",
+   "evidence": "Brochure p. 2 table '0.13µm SG13G3': 'fT= 470 GHz, fmax = 650 GHz'; text: 'SG13G3Cu ... up to 470GHz transit frequencies'; SG13G3 7-layer Al-BEOL, research and prototyping only.",
+   "fix": null,
+   "labelFr": "Fréquence de transition fT du TBH SiGe, IHP SG13G3",
+   "labelEn": "SiGe HBT transit frequency fT, IHP SG13G3",
+   "conditionsFr": "IHP SG13G3, BiCMOS SiGe:C 0,13 µm, BEOL aluminium à 7 niveaux, réservé à la recherche et au prototypage ; le texte donne « jusqu’à » 470 GHz pour la variante SG13G3Cu.",
+   "conditionsEn": "IHP SG13G3 0.13 µm SiGe:C BiCMOS, 7-layer Al BEOL, research and prototyping only; the text gives 'up to' 470 GHz for the SG13G3Cu variant.",
+   "notes": "Brochure (broker) relays IHP figures. Note the brochure also says 'cut-off frequencies of up to 500 GHz' in its sidebar, inconsistent with 470 GHz; table value used."
+  },
+  {
+   "id": "ihp-sg13g3-hbt-fmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://europractice-ic.com/wp-content/uploads/2026/02/IHP_February_2026.pdf",
+   "evidence": "Brochure p. 2: 'SG13G3Cu ... up to 650 GHz maximum oscillation frequencies'; table SG13G3: 'fmax = 650 GHz'. All text is on p. 2 (p. 1 has no extractable text).",
+   "fix": {
+    "locator": "p. 2, SG13G3Cu description paragraph and technology table column \"0.13µm SG13G3\""
+   },
+   "labelFr": "Fréquence maximale d’oscillation fmax du TBH SiGe, IHP SG13G3",
+   "labelEn": "SiGe HBT maximum oscillation frequency fmax, IHP SG13G3",
+   "conditionsFr": "IHP SG13G3 / SG13G3Cu, BiCMOS SiGe:C 0,13 µm ; valeur « jusqu’à » 650 GHz.",
+   "conditionsEn": "IHP SG13G3 / SG13G3Cu 0.13 µm SiGe:C BiCMOS; 'up to' 650 GHz value.",
+   "notes": "Locator said p. 1 for the description paragraph; pdftotext places it on p. 2 of 2."
+  },
+  {
+   "id": "ngc-inp-hemt-25nm-fmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.semiconductor-today.com/news_items/2015/apr/ng_010415.shtml",
+   "evidence": "'Frequency performance measurements were carried out over three bands: 10GHz-110GHz, 500GHz-700GHz, and 750GHz-1.0THz... Extrapolating the data to unity gain gave fMAX of 1.5THz.' Table 1: 25nm, fMAX ",
+   "fix": {
+    "protocol": "Frequency measurements in three bands (10-110 GHz, 500-700 GHz, 750 GHz-1.0 THz); fMAX obtained by extrapolating the data to unity gain (as reported by the trade-press item; available gain ~3.5 dB at 1.0 THz).",
+    "provenanceType": "estimated"
+   },
+   "labelFr": "Fréquence maximale d’oscillation fmax d’un HEMT InP à grille de 25 nm (Northrop Grumman, 2015)",
+   "labelEn": "Maximum oscillation frequency fmax of a 25 nm InP HEMT (Northrop Grumman, 2015)",
+   "conditionsFr": "HEMT InP de Northrop Grumman, grille en T Ti/Pt/Au de 25 nm ; valeur extrapolée au gain unité depuis des mesures jusqu’à 1,0 THz, rapportée par une source secondaire (Semiconductor Today) ; amplificateur associé : 9 dB de gain à 1,0 THz.",
+   "conditionsEn": "Northrop Grumman InP HEMT, 25 nm Ti/Pt/Au T-gate; value extrapolated to unity gain from measurements up to 1.0 THz, reported by a secondary source (Semiconductor Today); associated amplifier: 9 dB gain at 1.0 THz.",
+   "notes": "Protocol claimed 'on-wafer S-parameter measurements' and that fT was also extrapolated: the item says neither (on-wafer only for the amplifier figure). Value consistent between text and Table 1 (fmax 1.5 THz). Extrapolated, not observed: provenance better 'estimated' (or keep 'measured' with explicit extrapolation). Table 1 dates 25 nm process to 2013. Actual page title: 'Direct demonstration of 1THz performance in InP HEMTs' (source title in file differs). Primary IEEE EDL paper not read."
+  },
+  {
+   "id": "ngc-inp-hemt-25nm-ft",
+   "verdict": "inadequate",
+   "checkedUrl": "https://www.semiconductor-today.com/news_items/2015/apr/ng_010415.shtml",
+   "evidence": "Text: 'The cut-off frequency (fT) was 650GHz.' Same item, Table 1, 25nm column: 'Associated fT (THz) ... 0.61'. Source contradicts itself; primary paper paywalled.",
+   "fix": null,
+   "labelFr": "Fréquence de coupure fT d’un HEMT InP à grille de 25 nm (Northrop Grumman, 2015)",
+   "labelEn": "Cut-off frequency fT of a 25 nm InP HEMT (Northrop Grumman, 2015)",
+   "conditionsFr": "HEMT InP de Northrop Grumman, grille de 25 nm ; la source secondaire donne 650 GHz dans le texte et 0,61 THz dans son tableau ; article primaire non consulté.",
+   "conditionsEn": "Northrop Grumman 25 nm InP HEMT; the secondary source gives 650 GHz in its text and 0.61 THz in its table; primary paper not consulted.",
+   "notes": "Internal 650 vs 610 GHz inconsistency in a secondary source summarising a paywalled paper: cannot tell which is right. Protocol also over-states (no S-parameter or extrapolation mention for fT). Do not publish without the primary IEEE EDL paper."
+  },
+  {
+   "id": "willow-surface-code-cycle-time",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/html/2408.13687v1",
+   "evidence": "Abstract: '...with a cycle time of 1.1 µs'. Intro: 'on the 72-qubit processor ... the processor's fast 1.1 µs cycle duration'. Sec. V: 'Using our 72-qubit processor'.",
+   "fix": {
+    "conditions": "Surface-code error-correction cycle on Google's 72-qubit superconducting processor (real-time decoding experiment, distance 5), 2024; the paper states 1.1 µs for this processor.",
+    "labelEn": "Surface-code error-correction cycle time, Google 72-qubit superconducting processor",
+    "labelFr": "Durée d’un cycle de correction d’erreurs (code de surface), processeur supraconducteur Google de 72 qubits"
+   },
+   "labelFr": "Durée d’un cycle de correction d’erreurs (code de surface), processeur supraconducteur Google de 72 qubits",
+   "labelEn": "Surface-code error-correction cycle time, Google 72-qubit superconducting processor",
+   "conditionsFr": "Cycle de correction du code de surface sur le processeur supraconducteur Google de 72 qubits (expérience de décodage en temps réel, distance 5), 2024.",
+   "conditionsEn": "Surface-code cycle on Google's 72-qubit superconducting processor (real-time decoding experiment, distance 5), 2024.",
+   "notes": "Value correct but the source ties 1.1 µs explicitly to the 72-qubit processor, not to the 105-qubit one; no cycle time is stated for the 105-qubit device. The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere."
+  },
+  {
+   "id": "willow-mean-t1",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/html/2408.13687v1",
+   "evidence": "Sec. II, about the 105-qubit processor: 'The qubits have a mean operating T1 of 68 µs and T2,CPMG of 89 µs'. Uncertainties from scipy.curve_fit (SI VI).",
+   "fix": {
+    "protocol": "Mean operating T1 of the qubits of the 105-qubit processor as stated in Sec. II; the measurement procedure is not detailed in the paper (SI only mentions T1 uncertainties obtained with scipy curve_fit).",
+    "labelEn": "Mean qubit energy-relaxation time T1, Google 105-qubit processor",
+    "labelFr": "Temps de relaxation T1 moyen des qubits, processeur Google de 105 qubits"
+   },
+   "labelFr": "Temps de relaxation T1 moyen des qubits, processeur Google de 105 qubits",
+   "labelEn": "Mean qubit energy-relaxation time T1, Google 105-qubit processor",
+   "conditionsFr": "Processeur supraconducteur Google de 105 qubits (transmons), moyenne des T1 aux points de fonctionnement, 2024.",
+   "conditionsEn": "Google 105-qubit superconducting (transmon) processor, mean operating T1, 2024.",
+   "notes": "Protocol claimed 'standard transmon characterisation, details in SI': the SI does not describe a T1 protocol. The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere."
+  },
+  {
+   "id": "willow-mean-t2-cpmg",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/html/2408.13687v1",
+   "evidence": "Sec. II: 'The qubits have a mean operating T1 of 68 µs and T2,CPMG of 89 µs'.",
+   "fix": {
+    "protocol": "Mean operating T2,CPMG of the qubits of the 105-qubit processor as stated in Sec. II; procedure not detailed in the paper.",
+    "labelEn": "Mean qubit coherence time T2 (CPMG), Google 105-qubit processor",
+    "labelFr": "Temps de cohérence T2 (CPMG) moyen des qubits, processeur Google de 105 qubits"
+   },
+   "labelFr": "Temps de cohérence T2 (CPMG) moyen des qubits, processeur Google de 105 qubits",
+   "labelEn": "Mean qubit coherence time T2 (CPMG), Google 105-qubit processor",
+   "conditionsFr": "Processeur supraconducteur Google de 105 qubits, T2 mesuré en séquence CPMG, moyenne des qubits, 2024.",
+   "conditionsEn": "Google 105-qubit superconducting processor, T2 with CPMG sequence, mean over qubits, 2024.",
+   "notes": "Protocol 'details in the Supplementary Information' not supported. The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere."
+  },
+  {
+   "id": "willow-cz-gate-duration",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/html/2408.13687v1",
+   "evidence": "SI Sec. I: 'Our CZ gates are performed in 42 ns on the 105-qubit processor, and 37 ns on the 72-qubit processor.'",
+   "fix": {
+    "labelEn": "Two-qubit CZ gate duration, Google 105-qubit processor",
+    "labelFr": "Durée d’une porte CZ à deux qubits, processeur Google de 105 qubits"
+   },
+   "labelFr": "Durée d’une porte CZ à deux qubits, processeur Google de 105 qubits",
+   "labelEn": "Two-qubit CZ gate duration, Google 105-qubit processor",
+   "conditionsFr": "Porte CZ sur le processeur Google de 105 qubits (37 ns sur le processeur de 72 qubits de la même étude).",
+   "conditionsEn": "CZ gate on the Google 105-qubit processor (37 ns on the 72-qubit processor of the same study).",
+   "notes": "Value and quote exact; only the 'Willow' name is unsourced. The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere."
+  },
+  {
+   "id": "willow-single-qubit-gate-duration",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/html/2408.13687v1",
+   "evidence": "SI Sec. I: 'On the 105-qubit processor, all XY rotations have 25 ns duration, while on the 72-qubit processor, π and π/2 rotations have 35 ns duration and 18 ns duration respectively.'",
+   "fix": {
+    "labelEn": "Single-qubit XY rotation duration, Google 105-qubit processor",
+    "labelFr": "Durée d’une rotation XY à un qubit, processeur Google de 105 qubits"
+   },
+   "labelFr": "Durée d’une rotation XY à un qubit, processeur Google de 105 qubits",
+   "labelEn": "Single-qubit XY rotation duration, Google 105-qubit processor",
+   "conditionsFr": "Toutes les rotations XY sur le processeur Google de 105 qubits.",
+   "conditionsEn": "All XY rotations on the Google 105-qubit processor.",
+   "notes": "The 35/18 ns values are for the 72-qubit processor (confidenceNotes say 'another configuration'). The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere."
+  },
+  {
+   "id": "willow-realtime-decoder-latency-d5",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/html/2408.13687v1",
+   "evidence": "Abstract: 'average decoder latency of 63 µs at distance-5 up to a million cycles'; Sec. V: 'net average of 63 ± 17 µs independent of the length of the experiment (up to 1.1 seconds)'; 72-qubit process",
+   "fix": {
+    "protocol": "Real-time decoding on the 72-qubit processor, distance-5 surface code, experiments of increasing length up to 10^6 cycles (1.1 s), 10 shots per duration; latency = time from the decoder receiving the final cycle of syndromes to returning its correction; net average 63 ± 17 µs (Sec. V, Fig. 4d).",
+    "labelEn": "Average real-time decoder latency, distance-5 surface code, Google 72-qubit processor",
+    "labelFr": "Latence moyenne du décodeur temps réel, code de surface de distance 5, processeur Google de 72 qubits"
+   },
+   "labelFr": "Latence moyenne du décodeur temps réel, code de surface de distance 5, processeur Google de 72 qubits",
+   "labelEn": "Average real-time decoder latency, distance-5 surface code, Google 72-qubit processor",
+   "conditionsFr": "Processeur Google de 72 qubits, code de distance 5, décodage en temps réel jusqu’à un million de cycles de 1,1 µs ; moyenne 63 ± 17 µs.",
+   "conditionsEn": "Google 72-qubit processor, distance-5 code, real-time decoding up to one million 1.1 µs cycles; average 63 ± 17 µs.",
+   "notes": "Label said 'Google Willow' while the experiment is on the 72-qubit processor (conditions were right). The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere."
+  },
+  {
+   "id": "heron-r1-median-t1",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/pdf/2407.14431",
+   "evidence": "SI: 'The 57 qubit subset selected for k = 1 ... median properties: T1 = 180µs, T2 = 150µs'. Fig. 10 caption: 'Device properties on June 16th, 2024' (whole device, T1 median 1.8×10^2 µs).",
+   "fix": {
+    "conditions": "IBM Heron R1, 133-qubit ibm_montecarlo, fixed-frequency transmons with tunable couplers; median over the 57-qubit subset chosen for the k = 1 experiment (date of the subset values not stated; whole-device median T1 1.8 × 10^2 µs on 16 June 2024).",
+    "protocol": "Median device properties of the 57-qubit subset reported in the paper's Supplementary Information; the T1 measurement method is not described (gate errors stated as from randomized benchmarking)."
+   },
+   "labelFr": "T1 médian des qubits, IBM Heron R1 (ibm_montecarlo, sous-ensemble de 57 qubits)",
+   "labelEn": "Median qubit T1, IBM Heron R1 (ibm_montecarlo, 57-qubit subset)",
+   "conditionsFr": "IBM Heron R1 ibm_montecarlo (133 qubits), médiane sur le sous-ensemble de 57 qubits de l’expérience k = 1 ; date des valeurs du sous-ensemble non précisée (médiane de la puce entière 1,8 × 10² µs au 16 juin 2024).",
+   "conditionsEn": "IBM Heron R1 ibm_montecarlo (133 qubits), median over the 57-qubit subset of the k = 1 experiment; subset date not stated (whole-device median 1.8 × 10² µs on 16 June 2024).",
+   "notes": "The 16 June 2024 date is given for the whole-device Fig. 10, not explicitly for the subset medians; 'backend calibration data' and 'standard relaxation experiments' are not in the paper."
+  },
+  {
+   "id": "heron-r1-cz-gate-length",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/pdf/2407.14431",
+   "evidence": "SI: 57-qubit subset: 'two-qubit gate error 0.24% and length 104ns'; k = 3 and k = 5 subsets: 88ns. Fig. 9: circuits transpiled into CZ.",
+   "fix": {
+    "conditions": "Heron R1 ibm_montecarlo, two-qubit gate (circuits transpiled into CZ), median over the 57-qubit subset (k = 1); 88 ns median on the k = 3 and k = 5 subsets; date of subset values not stated."
+   },
+   "labelFr": "Durée de la porte à deux qubits, IBM Heron R1 (ibm_montecarlo)",
+   "labelEn": "Two-qubit gate length, IBM Heron R1 (ibm_montecarlo)",
+   "conditionsFr": "IBM Heron R1 ibm_montecarlo, porte à deux qubits (circuits transpilés en CZ), médiane sur le sous-ensemble de 57 qubits ; 88 ns sur les sous-ensembles k = 3 et k = 5.",
+   "conditionsEn": "IBM Heron R1 ibm_montecarlo, two-qubit gate (circuits transpiled into CZ), median over the 57-qubit subset; 88 ns on the k = 3 and k = 5 subsets.",
+   "notes": "Date 16 June 2024 not stated for subset values; 'native CZ' not stated as such. Provenance 'documented' is acceptable (reported pulse length)."
+  },
+  {
+   "id": "heron-r1-single-qubit-gate-length",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/pdf/2407.14431",
+   "evidence": "SI: 57-qubit subset 'single-qubit gate error 0.022% and length 32ns'; readout 'length 2µs'; 32 ns on all three subsets.",
+   "fix": {
+    "conditions": "Heron R1 ibm_montecarlo, median over the 57-qubit subset (k = 1), also 32 ns on the k = 3 and k = 5 subsets; readout length 2 µs; date of subset values not stated."
+   },
+   "labelFr": "Durée d’une porte à un qubit, IBM Heron R1 (ibm_montecarlo)",
+   "labelEn": "Single-qubit gate length, IBM Heron R1 (ibm_montecarlo)",
+   "conditionsFr": "IBM Heron R1 ibm_montecarlo, médiane sur le sous-ensemble de 57 qubits (32 ns aussi sur les deux autres sous-ensembles) ; durée de lecture 2 µs.",
+   "conditionsEn": "IBM Heron R1 ibm_montecarlo, median over the 57-qubit subset (also 32 ns on the two other subsets); readout length 2 µs.",
+   "notes": "Only the date attribution corrected."
+  },
+  {
+   "id": "imec-sot-mram-switching-time",
+   "verdict": "confirmed",
+   "checkedUrl": "https://arxiv.org/pdf/1810.10356",
+   "evidence": "Abstract: '62 nm devices with a W-based SOT underlayer ... sub-ns switching time of 210 ps'; text: 'SOT demonstrates reliable switching down to 210 ps with Vc,50% ~1V'; 'less than 23 mT in-plane field",
+   "fix": null,
+   "labelFr": "Durée de commutation d’une MRAM à couple spin-orbite, dispositif imec de 62 nm",
+   "labelEn": "Spin-orbit-torque MRAM switching time, imec 62 nm device",
+   "conditionsFr": "MTJ imec de 62 nm intégrée sur 300 mm, sous-couche SOT à base de W, tension critique d’environ 1 V à 50 % de probabilité, champ planaire inférieur à 23 mT ; dispositif de recherche, 2018.",
+   "conditionsEn": "imec 62 nm MTJ integrated on 300 mm, W-based SOT underlayer, critical voltage about 1 V at 50 % probability, in-plane field below 23 mT; research device, 2018.",
+   "notes": "Protocol matches Fig. 6 description. Conference venue not checked."
+  },
+  {
+   "id": "imec-stt-mram-min-pulse",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/pdf/1810.10356",
+   "evidence": "'In STT case, τp is limited to 5ns to avoid breakdown and the critical switching voltage evaluated at 50% probability is ~1V ... corresponding to an energy of ~470 fJ.'",
+   "fix": {
+    "labelEn": "Shortest STT write pulse tested on the same imec MTJ (limited to avoid breakdown)",
+    "labelFr": "Impulsion d’écriture STT la plus courte testée sur la même jonction imec (limitée pour éviter le claquage)"
+   },
+   "labelFr": "Impulsion d’écriture STT la plus courte testée sur la même jonction imec (limitée pour éviter le claquage)",
+   "labelEn": "Shortest STT write pulse tested on the same imec MTJ (limited to avoid breakdown)",
+   "conditionsFr": "Même dispositif de 62 nm commuté par transfert de spin sans champ extérieur ; durée d’impulsion limitée à 5 ns pour éviter le claquage ; environ 1 V et 470 fJ.",
+   "conditionsEn": "Same 62 nm device switched by spin-transfer torque at zero field; pulse length limited to 5 ns to avoid breakdown; about 1 V and 470 fJ.",
+   "notes": "5 ns is a test limit imposed by the authors, not a measured minimum switching time; label made explicit."
+  },
+  {
+   "id": "gps-orbit-altitude",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://archive.gps.gov/systems/gps/space/",
+   "evidence": "'GPS satellites fly in medium Earth orbit (MEO) at an altitude of approximately 20,200 km (12,550 miles). Each satellite circles the Earth twice a day.' Six equally-spaced orbital planes.",
+   "fix": {
+    "locator": "Space Segment page, \"Constellation Arrangement\" section"
+   },
+   "labelFr": "Altitude de l’orbite des satellites GPS (orbite moyenne)",
+   "labelEn": "GPS satellite orbit altitude (MEO)",
+   "conditionsFr": "Constellation GPS en orbite moyenne, altitude approximative (« approximately ») ; six plans orbitaux, deux révolutions par jour.",
+   "conditionsEn": "GPS constellation in medium Earth orbit, approximate altitude ('approximately'); six orbital planes, two orbits per day.",
+   "notes": "Archived official copy (archive.gps.gov), not updated since February 2025. Section heading is 'Constellation Arrangement'."
+  },
+  {
+   "id": "gps-zenith-one-way-light-time",
+   "verdict": "confirmed",
+   "checkedUrl": "https://archive.gps.gov/systems/gps/space/ ; https://physics.nist.gov/cgi-bin/cuu/Value?c",
+   "evidence": "Recomputed 20,200 km / 299,792.458 km/s = 67.380 ms; NIST CODATA 2022: c = 299 792 458 m/s exact; altitude item confirmed.",
+   "fix": null,
+   "labelFr": "Temps de trajet d’un signal depuis un satellite GPS au zénith",
+   "labelEn": "One-way signal time from a GPS satellite at zenith",
+   "conditionsFr": "Valeur calculée : propagation dans le vide sur l’altitude approximative de 20 200 km (satellite au zénith) ; plus long à basse élévation ; retards ionosphérique et troposphérique ignorés.",
+   "conditionsEn": "Calculated: vacuum propagation over the approximate 20,200 km altitude (satellite at zenith); longer at low elevation; ionospheric and tropospheric delays ignored.",
+   "notes": "Precision of 4 significant figures exceeds that of the 'approximately' input; the 25,000 km slant range is not from the source (stated as not computed)."
+  },
+  {
+   "id": "geo-orbit-altitude",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits",
+   "evidence": "ESA: GEO satellites 'fly above Earth's equator ... travel at about 3 km per second at an altitude of 35 786 km'; 'circular geostationary orbit'.",
+   "fix": null,
+   "labelFr": "Altitude de l’orbite géostationnaire",
+   "labelEn": "Geostationary orbit altitude",
+   "conditionsFr": "Orbite géostationnaire circulaire au-dessus de l’équateur ; altitude.",
+   "conditionsEn": "Circular geostationary orbit above the equator; altitude.",
+   "notes": ""
+  },
+  {
+   "id": "geo-one-way-light-time-subsatellite",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits ; https://physics.nist.gov/cgi-bin/cuu/Value?c",
+   "evidence": "Recomputed 35,786 / 299,792.458 = 119.369 ms; double 238.74 ms; inputs confirmed (ESA, NIST CODATA 2022).",
+   "fix": null,
+   "labelFr": "Temps de trajet aller d’un signal entre le point subsatellite et un satellite géostationnaire",
+   "labelEn": "One-way signal time between the sub-satellite point and a geostationary satellite",
+   "conditionsFr": "Valeur calculée : propagation dans le vide, station au point subsatellite (minimum) ; un aller-retour utilisateur–satellite–utilisateur vaut le double, avant tout traitement.",
+   "conditionsEn": "Calculated: vacuum propagation, ground station at the sub-satellite point (minimum); a user–satellite–user hop is twice this, before any processing.",
+   "notes": "41,700 km edge-of-coverage slant range is not from the source."
+  },
+  {
+   "id": "iss-average-altitude",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.nasa.gov/wp-content/uploads/2023/06/lg-2023-05-010-jsc-iss-litho-updates.pdf",
+   "evidence": "Lithograph: 'Travels at an average altitude of about 227 nautical miles (420 kilometers) above Earth.'",
+   "fix": {
+    "conditions": "ISS, average altitude 'about' 227 nautical miles (420 km) as stated on the 2023 lithograph."
+   },
+   "labelFr": "Altitude moyenne de la Station spatiale internationale",
+   "labelEn": "International Space Station average altitude",
+   "conditionsFr": "Station spatiale internationale, altitude moyenne « d’environ » 420 km (227 milles marins) selon la lithographie NASA de 2023.",
+   "conditionsEn": "International Space Station, average altitude 'about' 420 km (227 nautical miles) per the 2023 NASA lithograph.",
+   "notes": "'varies with drag and reboosts' is not in the source; removed."
+  },
+  {
+   "id": "new-horizons-distance-2026-06",
+   "verdict": "confirmed",
+   "checkedUrl": "https://science.nasa.gov/missions/new-horizons/nasas-new-horizons-spacecraft-wakes-from-hibernation-in-good-health/",
+   "evidence": "'With the spacecraft now approximately 5.9 billion miles (9.5 billion kilometers) from Earth, the radio signals carrying that confirmation took about 8 hours and 52 minutes'; 'On June 23'.",
+   "fix": null,
+   "labelFr": "Distance de New Horizons à la Terre, juin 2026",
+   "labelEn": "New Horizons distance from Earth, June 2026",
+   "conditionsFr": "Distance à la Terre au réveil d’hibernation, le 23 juin 2026 ; valeur arrondie (« approximately »).",
+   "conditionsEn": "Distance from Earth at the end of hibernation, 23 June 2026; rounded value ('approximately').",
+   "notes": ""
+  },
+  {
+   "id": "new-horizons-signal-time-2026-06",
+   "verdict": "confirmed",
+   "checkedUrl": "https://science.nasa.gov/missions/new-horizons/nasas-new-horizons-spacecraft-wakes-from-hibernation-in-good-health/",
+   "evidence": "'the radio signals carrying that confirmation took about 8 hours and 52 minutes to reach the APL Mission Operations Center via NASA's Deep Space Network station near Madrid' (= 532 min).",
+   "fix": null,
+   "labelFr": "Temps de trajet aller d’un signal radio de New Horizons vers la Terre, juin 2026",
+   "labelEn": "One-way radio signal time from New Horizons to Earth, June 2026",
+   "conditionsFr": "Signal de confirmation du 23 juin 2026, reçu par la station du DSN près de Madrid jusqu’au centre d’opérations de l’APL ; « environ » 8 h 52 min.",
+   "conditionsEn": "Confirmation signal of 23 June 2026, via the DSN station near Madrid to the APL Mission Operations Center; 'about' 8 h 52 min.",
+   "notes": "Includes ground relay to APL; 9.5e9 km / c = 528 min."
+  },
+  {
+   "id": "pluto-mean-distance-sun",
+   "verdict": "confirmed",
+   "checkedUrl": "https://science.nasa.gov/dwarf-planets/pluto/facts/",
+   "evidence": "'on average, Pluto is 3.7 billion miles (5.9 billion kilometers) away from the Sun, or 39 AU'; also 'average distance of about 3.7 billion miles (5.9 billion kilometers)'.",
+   "fix": null,
+   "labelFr": "Distance moyenne Soleil–Pluton",
+   "labelEn": "Mean Sun–Pluto distance",
+   "conditionsFr": "Distance moyenne sur l’orbite de Pluton (39 ua) ; valeur arrondie (« about »).",
+   "conditionsEn": "Average over Pluto's orbit (39 AU); rounded value ('about').",
+   "notes": ""
+  },
+  {
+   "id": "sun-pluto-light-time",
+   "verdict": "confirmed",
+   "checkedUrl": "https://science.nasa.gov/dwarf-planets/pluto/facts/",
+   "evidence": "'From this distance, it takes sunlight 5.5 hours to travel from the Sun to Pluto.' 5.9e9 km / c = 5.47 h.",
+   "fix": null,
+   "labelFr": "Temps de trajet de la lumière du Soleil jusqu’à Pluton (distance moyenne)",
+   "labelEn": "Sunlight travel time from the Sun to Pluto (mean distance)",
+   "conditionsFr": "À la distance moyenne d’environ 5,9 milliards de km ; valeur arrondie.",
+   "conditionsEn": "At the mean distance of about 5.9 billion km; rounded value.",
+   "notes": ""
+  },
+  {
+   "id": "ethernet-400gbe-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://standards.ieee.org/beyond-standards/ethernets-next-bar/",
+   "evidence": "'In 2002, 10 GbE was introduced, followed in 2010 with 40 GbE and 100 GbE, and then 200 GbE and 400 GbE in 2017.'",
+   "fix": {
+    "conditions": "IEEE 802.3 Ethernet rate, introduced in 2017 (with 200 GbE)."
+   },
+   "labelFr": "Débit de l’Ethernet 400 gigabits",
+   "labelEn": "400 Gigabit Ethernet data rate",
+   "conditionsFr": "Débit Ethernet IEEE 802.3, introduit en 2017 avec le 200 GbE.",
+   "conditionsEn": "IEEE 802.3 Ethernet rate, introduced in 2017 together with 200 GbE.",
+   "notes": "'MAC rate' and 'standardised' not in the article; minor wording fix."
+  },
+  {
+   "id": "ethernet-800gbe-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://standards.ieee.org/beyond-standards/ethernets-next-bar/ ; https://ieee802.org/3/df/",
+   "evidence": "'This culminated this year with the introduction of 800 GbE.' 'IEEE 802.3df-2024, with its parallel x8 structure for 800 GbE'; ieee802.org/3/df: approved 16 February 2024.",
+   "fix": {
+    "conditions": "IEEE Std 802.3df-2024 (approved 16 February 2024): 800 Gb/s Ethernet, parallel x8 structure built on existing 100 Gb/s electrical and optical signalling."
+   },
+   "labelFr": "Débit de l’Ethernet 800 gigabits",
+   "labelEn": "800 Gigabit Ethernet data rate",
+   "conditionsFr": "IEEE Std 802.3df-2024 (approuvée le 16 février 2024) : Ethernet à 800 Gbit/s, structure parallèle à 8 voies reposant sur la signalisation à 100 Gbit/s.",
+   "conditionsEn": "IEEE Std 802.3df-2024 (approved 16 February 2024): 800 Gb/s Ethernet, parallel x8 structure built on 100 Gb/s signalling.",
+   "notes": "'MAC' not stated; otherwise right."
+  },
+  {
+   "id": "ethernet-min-frame-wire-time-800g",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc2544.html",
+   "evidence": "RFC 2544 App. B: 'Ethernet size Preamble 64 bits Frame 8 x N bits Gap 96 bits'; Sec. 9.1: sizes 64...1518. (64+512+96)/800e9 = 0.84 ns.",
+   "fix": null,
+   "labelFr": "Durée de transmission d’une trame Ethernet minimale à 800 Gbit/s",
+   "labelEn": "Wire time of a minimum Ethernet frame at 800 Gbit/s",
+   "conditionsFr": "Valeur calculée : 672 bits (préambule de 64 bits, trame de 64 octets, intervalle de 96 bits, selon la RFC 2544, annexe B) au débit nominal de 800 Gbit/s.",
+   "conditionsEn": "Calculated: 672 bits (64-bit preamble, 64-byte frame, 96-bit gap, per RFC 2544 Appendix B) at a nominal 800 Gbit/s.",
+   "notes": "Input 800 GbE item confirmed (with wording fix)."
+  },
+  {
+   "id": "white-rabbit-sync-accuracy",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://white-rabbit.web.cern.ch/",
+   "evidence": "'sub-nanosecond accuracy and picoseconds precision of synchronization; connecting thousands of nodes; typical distances of 10 km'; extension 'incorporated into the new 2019 revision of IEEE 1588'.",
+   "fix": {
+    "conditions": "Upper bound: 'sub-nanosecond accuracy' with picosecond precision, thousands of nodes, typical 10 km between network elements; PTP extension incorporated in the 2019 revision of IEEE 1588."
+   },
+   "labelFr": "Précision de synchronisation temporelle de White Rabbit (extension de PTP)",
+   "labelEn": "White Rabbit (PTP extension) time synchronisation accuracy",
+   "conditionsFr": "Borne supérieure : précision « sous la nanoseconde » (exactitude), avec une fidélité de l’ordre de la picoseconde, milliers de nœuds, distances typiques de 10 km ; extension de PTP intégrée à la révision 2019 de l’IEEE 1588.",
+   "conditionsEn": "Upper bound: 'sub-nanosecond' accuracy with picosecond precision, thousands of nodes, typical 10 km distances; PTP extension incorporated in the 2019 revision of IEEE 1588.",
+   "notes": "'High Accuracy profile' is not named on the page; removed."
+  },
+  {
+   "id": "ntp-lan-typical-accuracy",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.ntp.org/documentation/4.2.8-series/",
+   "evidence": "'It provides accuracies typically less than a millisecond on LANs and up to a few milliseconds on WANs.'",
+   "fix": null,
+   "labelFr": "Précision typique de NTP sur un réseau local",
+   "labelEn": "Typical NTP accuracy on a LAN",
+   "conditionsFr": "Documentation de la série NTP 4.2.8 : précision « typiquement inférieure » à 1 ms sur un réseau local (borne), jusqu’à quelques millisecondes sur un réseau étendu.",
+   "conditionsEn": "NTP 4.2.8 series documentation: accuracy 'typically less than' 1 ms on LANs (bound), up to a few milliseconds on WANs.",
+   "notes": "Upper bound of a typical value, no protocol: 'estimated' acceptable."
+  },
+  {
+   "id": "wifi7-max-throughput",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.ieee802.org/11/Reports/tgbe_update.htm",
+   "evidence": "'The amendment defined EHT PHY and MAC layers capable of supporting a maximum throughput of at least 30 Gbps'; 'final approval from the IEEE SA Standards Board in September 2024'.",
+   "fix": {
+    "labelEn": "IEEE 802.11be target maximum throughput",
+    "labelFr": "Débit maximal visé par l’IEEE 802.11be"
+   },
+   "labelFr": "Débit maximal visé par l’IEEE 802.11be",
+   "labelEn": "IEEE 802.11be target maximum throughput",
+   "conditionsFr": "Amendement IEEE 802.11be (approuvé en septembre 2024) : couches PHY et MAC EHT capables d’un débit maximal « d’au moins » 30 Gbit/s ; borne inférieure d’un objectif de conception, pas un débit mesuré.",
+   "conditionsEn": "IEEE 802.11be amendment (approved September 2024): EHT PHY and MAC capable of a maximum throughput of 'at least' 30 Gbps; lower bound of a design target, not a measured rate.",
+   "notes": "'Wi-Fi 7' does not appear on the cited page; drop from label or cite a source naming it."
+  },
+  {
+   "id": "ble-min-connection-interval",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.ti.com/document-viewer/lit/html/SWRU271I/connection-parameters-swru2714664",
+   "evidence": "TI SWRU271I 5.2.1.1: 'The connection interval is the time between two connection events in units of 1.25 ms. ... minimum value of 6 (7.5 ms) to a maximum of 3200 (4.0 seconds).'",
+   "fix": {
+    "conditions": "LE connection interval in units of 1.25 ms, minimum value 6 (7.5 ms), as given in TI's CC2540/41 BLE Software Developer's Guide (SWRU271I Rev. I, 2020).",
+    "labelEn": "Bluetooth LE minimum connection interval (TI CC2540/41 guide)",
+    "labelFr": "Intervalle de connexion minimal du Bluetooth LE (guide TI CC2540/41)"
+   },
+   "labelFr": "Intervalle de connexion minimal du Bluetooth LE (guide TI CC2540/41)",
+   "labelEn": "Bluetooth LE minimum connection interval (TI CC2540/41 guide)",
+   "conditionsFr": "Intervalle de connexion en unités de 1,25 ms, valeur minimale 6 (7,5 ms), selon le guide du développeur TI CC2540/41 (SWRU271I, 2020).",
+   "conditionsEn": "Connection interval in 1.25 ms units, minimum value 6 (7.5 ms), per TI's CC2540/41 developer's guide (SWRU271I, 2020).",
+   "notes": "The claim about Core 6.2 Shorter Connection Intervals is unverified (bluetooth.com not read) and not in the source; removed from label and conditions. The TI page does not itself say it restates the Core spec."
+  },
+  {
+   "id": "ble-max-connection-interval",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.ti.com/document-viewer/lit/html/SWRU271I/connection-parameters-swru2714664",
+   "evidence": "TI SWRU271I 5.2.1.1: '... to a maximum of 3200 (4.0 seconds)'; units of 1.25 ms.",
+   "fix": null,
+   "labelFr": "Intervalle de connexion maximal du Bluetooth LE",
+   "labelEn": "Bluetooth LE maximum connection interval",
+   "conditionsFr": "Valeur maximale 3200 × 1,25 ms, selon le guide du développeur TI CC2540/41 (SWRU271I, 2020).",
+   "conditionsEn": "Maximum value 3200 × 1.25 ms, per TI's CC2540/41 developer's guide (SWRU271I, 2020).",
+   "notes": ""
+  },
+  {
+   "id": "starlink-us-median-peak-hour-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.starlink.com/updates/network-update",
+   "evidence": "Browser innerText: 'As of June 2025, Starlink is delivering median peak-hour latency of 25.7 milliseconds (ms) across all customers in the United States... fewer than one percent of measurements excee",
+   "fix": null,
+   "labelFr": "Latence médiane de Starlink aux heures de pointe, États-Unis (juin 2025)",
+   "labelEn": "Starlink median peak-hour latency, United States (June 2025)",
+   "conditionsFr": "Tous les clients américains, heures de pointe, juin 2025 ; latence = aller-retour du routeur Starlink vers Internet ; moins de 1 % des mesures dépassent 55 ms ; donnée déclarée par l’opérateur.",
+   "conditionsEn": "All US customers, peak hours, June 2025; latency = round trip from the Starlink router to the internet; fewer than 1 % of measurements exceed 55 ms; operator self-report.",
+   "notes": "Page read in the shared browser. Protocol matches ('anonymized measurements from millions of Starlink routers every 15 seconds'; RTT router→internet→response). Page shows no publication date."
+  },
+  {
+   "id": "starlink-satellite-hop-latency-usvi-2025-07",
+   "verdict": "confirmed",
+   "checkedUrl": "https://arxiv.org/html/2412.18243v3",
+   "evidence": "Table III 'Mean latency (ms) by region (May vs. July 2025)': 'U.S. Virgin Islands 54 43'; Table II: home PoP mmmiflx1; IV-A: Singapore Alibaba vantage, two TTLs, 100 IPs, every 3 s, 1 h.",
+   "fix": null,
+   "labelFr": "Latence du saut satellite Starlink, îles Vierges américaines (juillet 2025, moyenne)",
+   "labelEn": "Starlink satellite-hop latency, U.S. Virgin Islands (July 2025, mean)",
+   "conditionsFr": "Moyenne de l’écart d’aller-retour entre le routeur de l’utilisateur et son PoP de rattachement (mmmiflx1), îles Vierges américaines, juillet 2025 (54 ms en mai 2025) ; estimation du seul saut satellite.",
+   "conditionsEn": "Mean RTT difference between the user router and its home PoP (mmmiflx1), U.S. Virgin Islands, July 2025 (54 ms in May 2025); estimate of the satellite hop only.",
+   "notes": "Protocol matches Sec. IV-A. arXiv v3 is dated 23 Jan 2026 (source publishedDate '2025' is the measurement year)."
+  }
+ ]
+}

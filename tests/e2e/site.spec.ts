@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 
 const corpus = JSON.parse(readFileSync('data/validated/corpus.json', 'utf8')) as {
   measurements: Array<{ id: string; quantityKind: string; valueSI: number; sourceIds: string[] }>;
+  withheld: unknown[];
 };
 const firstDuration = corpus.measurements.find((m) => m.quantityKind === 'duration');
 
@@ -190,7 +191,7 @@ test('V2 comparison: ordered by year, comparability and frequency warning shown'
   await expect(page.getByTestId('cmp-note')).toContainText('different definitions or protocols');
   const years = await page.getByTestId('cmp-table').locator('tbody tr td:first-child').allTextContents();
   expect(years).toEqual([...years].sort());
-  expect(years[0]).toBe('1978');
+  expect(years[0]).toBe('1974');
   await page.getByTestId('cmp-select').selectOption('cmp-azure-rtt');
   await expect(page).toHaveURL(/g=cmp-azure-rtt/);
   await expect(page.getByTestId('cmp-note')).toContainText('same source and same method');
@@ -256,7 +257,7 @@ test('V4 immersion: journal derived from the simulated events, labelled as a met
 test('V5 laboratory: browser measurement labelled as such, raw samples exported; withheld data listed', async ({ page }) => {
   await page.goto('./#/laboratory?lang=en');
   await expect(page.getByTestId('laboratory')).toContainText('not native processor latency');
-  await expect(page.getByTestId('lab-withheld').locator('tbody tr')).toHaveCount(4);
+  await expect(page.getByTestId('lab-withheld').locator('tbody tr')).toHaveCount(corpus.withheld.length);
   await page.getByTestId('lab-run-timer').click();
   await expect(page.getByTestId('lab-n')).toHaveText(/^\d+$/);
   await expect(page.getByTestId('lab-result')).toContainText('Hyndman-Fan type 7');

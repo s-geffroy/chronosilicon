@@ -82,19 +82,22 @@
       "kind": "comparison",
       "quantityKind": "cycle_count",
       "label": {
-        "fr": "Latence du cache L1 de données, par génération",
-        "en": "L1 data cache latency, by generation"
+        "fr": "Latence du cache L1 de données, x86 et Arm",
+        "en": "L1 data cache latency, x86 and Arm"
       },
       "members": [
         "intel-skylake-client-l1d-latency-m1",
         "intel-icelake-client-l1d-latency-m1",
         "amd-zen4-l1d-load-to-use-m1",
-        "amd-zen5-l1d-load-to-use-m1"
+        "amd-zen5-l1d-load-to-use-m1",
+        "arm-neoverse-n2-l1d-load-latency-m1",
+        "arm-cortex-a520-l1-hit-latency-m1",
+        "arm-neoverse-v3-l1d-load-latency-m1"
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Définitions différentes : « meilleur cas » chez Intel, « load-to-use » chez AMD. En cycles de chaque cœur : à fréquences différentes, un même nombre de cycles ne dure pas le même temps physique.",
-        "en": "Different definitions: best case for Intel, load-to-use for AMD. In each core's own cycles: at different frequencies the same cycle count is not the same physical time."
+        "fr": "Définitions différentes : meilleur cas chez Intel, load-to-use chez AMD, latence de chargement sur succès L1 chez Arm (Cortex-A520 : plage de 2 à 4 cycles, borne haute retenue). Cycles propres à chaque cœur : à fréquences différentes, un même nombre de cycles ne dure pas le même temps physique.",
+        "en": "Different definitions: best case for Intel, load-to-use for AMD, L1-hit load latency for Arm (Cortex-A520: range 2 to 4 cycles, upper bound retained). Each core's own cycles: at different frequencies the same cycle count is not the same physical time."
       }
     },
     {
@@ -183,11 +186,18 @@
       "kind": "comparison",
       "quantityKind": "frequency",
       "label": {
-        "fr": "Fréquence d'horloge de processeurs x86, 1978–2023",
-        "en": "x86 processor clock frequency, 1978–2023"
+        "fr": "Fréquence d'horloge de processeurs x86, 1974–2023",
+        "en": "x86 processor clock frequency, 1974–2023"
       },
       "members": [
+        "intel-8080-initial-clock-m1",
         "intel-8086-initial-clock-m1",
+        "intel-80286-initial-clock-m1",
+        "intel-80386-initial-clock-m1",
+        "intel-80486-initial-clock-m1",
+        "intel-pentium-initial-clock-m1",
+        "intel-pentium-pro-initial-clock-m1",
+        "amd-athlon-1ghz-2000-m1",
         "intel-pentium4-launch-clock-m1",
         "intel-core-i9-14900k-pcore-base-m1",
         "intel-core-i9-14900k-max-turbo-m1"
@@ -203,10 +213,11 @@
       "kind": "comparison",
       "quantityKind": "transfer_rate",
       "label": {
-        "fr": "Débit brut par voie PCI Express, générations 4 à 6",
-        "en": "PCI Express raw rate per lane, generations 4 to 6"
+        "fr": "Débit brut par voie PCI Express, générations 3 à 6",
+        "en": "PCI Express raw rate per lane, generations 3 to 6"
       },
       "members": [
+        "pcie3-lane-rate-m1",
         "pcie4-lane-rate-m1",
         "pcie5-lane-rate-m1",
         "pcie6-lane-rate-m1"
@@ -243,19 +254,21 @@
       "kind": "comparison",
       "quantityKind": "throughput",
       "label": {
-        "fr": "Bande passante mémoire HBM d'accélérateurs",
-        "en": "Accelerator HBM memory bandwidth"
+        "fr": "Bande passante mémoire de GPU et d'accélérateurs",
+        "en": "GPU and accelerator memory bandwidth"
       },
       "members": [
         "h100-sxm-hbm-bandwidth-m1",
         "mi300x-hbm-bandwidth-m1",
         "tpu-v5p-hbm-bandwidth-m1",
-        "b200-per-gpu-hbm-bandwidth-m1"
+        "b200-per-gpu-hbm-bandwidth-m1",
+        "rtx4090-memory-bandwidth-m1",
+        "rtx5090-memory-bandwidth-m1"
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Valeurs crête constructeur, non mesurées ; la valeur B200 est calculée depuis le total d'un DGX B200 (8 GPU). Une bande passante ne se compare pas à une latence.",
-        "en": "Vendor peak values, not measurements; the B200 value is computed from a DGX B200 total (8 GPUs). A bandwidth does not compare to a latency."
+        "fr": "Valeurs crête constructeur, non mesurées : HBM pour les accélérateurs de centre de données, GDDR6X/GDDR7 pour les cartes grand public (RTX). La valeur B200 est calculée depuis le total d'un DGX B200 (8 GPU). Une bande passante ne se compare pas à une latence.",
+        "en": "Vendor peak values, not measurements: HBM for data-centre accelerators, GDDR6X/GDDR7 for consumer cards (RTX). The B200 value is computed from a DGX B200 total (8 GPUs). A bandwidth does not compare to a latency."
       }
     },
     {
@@ -296,6 +309,139 @@
       "note": {
         "fr": "Objectifs de conception, pas des mesures ; latence aller simple du plan usager pour URLLC/eMBB, aller-retour pour les satellites.",
         "en": "Design targets, not measurements; one-way user-plane latency for URLLC/eMBB, round trip for satellites."
+      }
+    },
+    {
+      "id": "hier-arm-cortex-a520",
+      "kind": "hierarchy",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Hiérarchie de caches, Arm Cortex-A520",
+        "en": "Cache hierarchy, Arm Cortex-A520"
+      },
+      "members": [
+        "arm-cortex-a520-l1-hit-latency-m1",
+        "arm-cortex-a520-l2-hit-latency-m1"
+      ],
+      "comparability": "same-source",
+      "note": {
+        "fr": "Même guide d'optimisation Arm, mais des plages : L1 de 2 à 4 cycles (borne haute retenue), L2 de 10 à 12 cycles (11 = bas du cas normal).",
+        "en": "Same Arm optimization guide, but ranges: L1 2 to 4 cycles (upper bound retained), L2 10 to 12 cycles (11 = low end of the normal case)."
+      }
+    },
+    {
+      "id": "cmp-top500-no1-history",
+      "kind": "comparison",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Puissance mesurée (Rmax) du n° 1 du TOP500, 1993–2026",
+        "en": "Measured performance (Rmax) of the TOP500 number one, 1993–2026"
+      },
+      "members": [
+        "top500-1993-06-r1-cm5-rmax-m1",
+        "top500-2008-06-r1-roadrunner-rmax-m1",
+        "top500-2022-06-r1-frontier-rmax-m1",
+        "top500-2026-11-r1-lineshine-rmax-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Résultats LINPACK (1993) puis HPL en double précision, soumis pour des systèmes différents. Rmax mesure un seul benchmark dense, pas la performance d'applications réelles. Les fréquences et le nombre de cœurs ont changé en même temps.",
+        "en": "LINPACK (1993) then double-precision HPL results, submitted for different systems. Rmax measures a single dense benchmark, not real application performance. Frequencies and core counts changed at the same time."
+      }
+    },
+    {
+      "id": "cmp-top500-2026-11-top5",
+      "kind": "comparison",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "TOP500 de novembre 2026 : Rmax des cinq premiers",
+        "en": "TOP500 November 2026: Rmax of the top five"
+      },
+      "members": [
+        "top500-2026-11-r1-lineshine-rmax-m1",
+        "top500-2026-11-r2-el-capitan-rmax-m1",
+        "top500-2026-11-r3-frontier-rmax-m1",
+        "top500-2026-11-r4-aurora-rmax-m1",
+        "top500-2026-11-r5-jupiter-booster-rmax-m1"
+      ],
+      "comparability": "same-definition",
+      "note": {
+        "fr": "Même benchmark (HPL, double précision) et même liste ; Rmax mesuré contre Rpeak théorique (voir les fiches). Le classement est celui du TOP500, pas une mesure de performance générale.",
+        "en": "Same benchmark (HPL, double precision) and same list; measured Rmax versus theoretical Rpeak (see sheets). The ranking is TOP500's, not a measure of general performance."
+      }
+    },
+    {
+      "id": "cmp-quantum-two-qubit-gate",
+      "kind": "comparison",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'une porte à deux qubits (CZ), processeurs supraconducteurs",
+        "en": "Two-qubit (CZ) gate duration, superconducting processors"
+      },
+      "members": [
+        "willow-cz-gate-duration-m1",
+        "heron-r1-cz-gate-length-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Processeurs, calibrations et articles différents ; la valeur IBM est un instantané de calibration d'un sous-ensemble de qubits. Une porte plus courte n'est pas forcément plus fidèle.",
+        "en": "Different processors, calibrations and papers; the IBM value is a calibration snapshot of a qubit subset. A shorter gate is not necessarily higher fidelity."
+      }
+    },
+    {
+      "id": "cmp-quantum-t1",
+      "kind": "comparison",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de relaxation T1 de qubits supraconducteurs",
+        "en": "T1 relaxation time of superconducting qubits"
+      },
+      "members": [
+        "willow-mean-t1-m1",
+        "heron-r1-median-t1-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Statistiques différentes : moyenne (Google) contre médiane (IBM), sur des ensembles de qubits différents.",
+        "en": "Different statistics: mean (Google) versus median (IBM), over different sets of qubits."
+      }
+    },
+    {
+      "id": "cmp-hbm-stack",
+      "kind": "comparison",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante d'une pile de mémoire HBM",
+        "en": "Bandwidth of one HBM memory stack"
+      },
+      "members": [
+        "hbm3-samsung-stack-bandwidth-m1",
+        "hbm3e-samsung-12h-stack-bandwidth-m1",
+        "hbm3e-micron-stack-bandwidth-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Valeurs constructeur de nature différente : maximum (« atteint »), « jusqu'à » et borne basse (« plus de »).",
+        "en": "Vendor values of different nature: maximum ('reaches'), 'up to' and lower bound ('more than')."
+      }
+    },
+    {
+      "id": "cmp-mlperf-ttft",
+      "kind": "comparison",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Délai avant le premier jeton (TTFT moyen), résultats MLPerf Inference v5.0",
+        "en": "Time to first token (mean TTFT), MLPerf Inference v5.0 results"
+      },
+      "members": [
+        "mlperf-v50-h200x8-llama2-70b-server-ttft-mean-m1",
+        "mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean-m1",
+        "mlperf-v50-b200x8-llama31-405b-server-ttft-mean-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Systèmes, modèles et scénarios différents (Server, Interactive), mesurés sous charge près du débit cible : ce ne sont pas des latences à vide.",
+        "en": "Different systems, models and scenarios (Server, Interactive), measured under load near the target rate: these are not idle latencies."
       }
     }
   ]

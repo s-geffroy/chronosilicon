@@ -1,0 +1,521 @@
+{
+ "verifiedFile": "m00-2026-11-26b-C_storage_gpu_ai_peripheral.json",
+ "verifiedAt": "2026-11-26",
+ "verdicts": [
+  {
+   "id": "solidigm-ps1010-random-read-latency",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.solidigm.com/products/data-center/d7/ps1010.html",
+   "evidence": "Rendered spec block (E3.S 7.5MM, 15.36TB): 'Latency Random Rating (Read / Write) 60μs / 7μs'; 'Latency Sequential Rating (Read / Write) 60μs / 7μs'.",
+   "fix": {
+    "conditions": "Solidigm D7-PS1010, PCIe 5.0 x4 NVMe; value displayed in the spec block for the default configuration (E3.S 7.5 mm, 15.36 TB); other capacities not checked. Block size, queue depth and statistic not stated on the page.",
+    "locator": "Specifications block (default E3.S 7.5MM / 15.36TB view), 'Latency Random Rating (Read / Write)'"
+   },
+   "labelFr": "Latence de lecture aléatoire nominale du Solidigm D7-PS1010",
+   "labelEn": "Solidigm D7-PS1010 random read latency (rated)",
+   "conditionsFr": "Solidigm D7-PS1010, PCIe 5.0 x4 NVMe, configuration E3.S 7,5 mm de 15,36 To ; valeur nominale du constructeur, taille de bloc, profondeur de file et statistique non précisées.",
+   "conditionsEn": "Solidigm D7-PS1010, PCIe 5.0 x4 NVMe, E3.S 7.5 mm 15.36 TB configuration; vendor rating, block size, queue depth and statistic not stated.",
+   "notes": "Page rendered in a real browser (values are injected by JS; curl gets '-'). Spec block shows one configuration at a time (default E3.S 7.5 mm, 15.36 TB); other capacities not checked, so 'all capacities on the same page' is not established. The 'Latency Sequential Rating' row shows the same 60μs / 7μs. The downloadable spec sheet (XLS) labels the rows 'Latency - Read' / 'Latency - Write', with no '(typ.)', unlike the sequential rows."
+  },
+  {
+   "id": "solidigm-ps1010-random-write-latency",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.solidigm.com/products/data-center/d7/ps1010.html",
+   "evidence": "Same rendered spec block: 'Latency Random Rating (Read / Write) 60μs / 7μs' (write = 7μs).",
+   "fix": {
+    "conditions": "Same drive and spec block as the read value (default E3.S 7.5 mm, 15.36 TB view). Conditions not stated on the page; the page does not attribute the value to a DRAM / power-loss-protected cache.",
+    "locator": "Specifications block (default E3.S 7.5MM / 15.36TB view), 'Latency Random Rating (Read / Write)'"
+   },
+   "labelFr": "Latence d'écriture aléatoire nominale du Solidigm D7-PS1010",
+   "labelEn": "Solidigm D7-PS1010 random write latency (rated)",
+   "conditionsFr": "Solidigm D7-PS1010, PCIe 5.0 x4 NVMe, configuration E3.S 7,5 mm de 15,36 To ; valeur nominale du constructeur, conditions de mesure non précisées.",
+   "conditionsEn": "Solidigm D7-PS1010, PCIe 5.0 x4 NVMe, E3.S 7.5 mm 15.36 TB configuration; vendor rating, measurement conditions not stated.",
+   "notes": "Page rendered in a real browser (values are injected by JS; curl gets '-'). Spec block shows one configuration at a time (default E3.S 7.5 mm, 15.36 TB); other capacities not checked, so 'all capacities on the same page' is not established. The 'Latency Sequential Rating' row shows the same 60μs / 7μs. The downloadable spec sheet (XLS) labels the rows 'Latency - Read' / 'Latency - Write', with no '(typ.)', unlike the sequential rows. The write-cache explanation in the original conditions is not on the page and was removed."
+  },
+  {
+   "id": "kioxia-cm7r-seq-read-measured",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://americas.kioxia.com/en-us/business/resources/performance-brief/cm7-namespace1-performance-brief.html",
+   "evidence": "p.1 '~14.5 GB/s average'; results table: 100% Sequential Read 14.5 in all 4 columns; one thread, 128K, QD32; FIO 3.28, Ubuntu 22.04.2, DL360 Gen11, 2 sockets Gold 6426Y.",
+   "fix": {
+    "conditions": "KIOXIA CM7-R 3.84 TB (1 DWPD), PCIe 5.0 x4, E3.S, 100% sequential read, 128K blocks, 1 thread, QD32, 3.84 TB namespace. The same 14.5 GB/s appears in all four tested configurations, one of which is a different drive (CM7-V 3.2 TB, 3 DWPD)."
+   },
+   "labelFr": "Débit de lecture séquentielle mesuré du KIOXIA CM7-R",
+   "labelEn": "KIOXIA CM7-R sequential read throughput, measured",
+   "conditionsFr": "KIOXIA CM7-R de 3,84 To (1 DWPD), PCIe 5.0 x4, lecture séquentielle à 100 %, blocs de 128K, 1 fil, profondeur de file 32 ; moyenne d'un test FIO mené par le constructeur.",
+   "conditionsEn": "KIOXIA CM7-R 3.84 TB (1 DWPD), PCIe 5.0 x4, 100% sequential read, 128K blocks, 1 thread, QD32; average of a vendor-run FIO test.",
+   "notes": "Protocol field checked against Appendix A/B: matches (2 CPU sockets, Xeon Gold 6426Y, 128 GB DDR5, Ubuntu 22.04.2, kernel 5.15.0-76, FIO 3.28); run count not stated. KIOXIA defines GB as 10^9 bytes (footnote), so 'presumably decimal' can be stated as decimal."
+  },
+  {
+   "id": "exos-15e900-average-latency",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://seagate.com/content/dam/seagate/migrated-assets/www-content/datasheets/pdfs/exos-15-e-900DS1958-3-2005GB-en_SG.pdf",
+   "evidence": "Spec tables p.1 and p.2: 'Average Latency (ms)' row = 2 / 2 / 2 for 900/600/300 GB, in both the standard and Fast-Format tables.",
+   "fix": {
+    "labelEn": "Seagate Exos 15E900 average latency (manufacturer)",
+    "labelFr": "Latence moyenne du Seagate Exos 15E900 (constructeur)"
+   },
+   "labelFr": "Latence moyenne du Seagate Exos 15E900 (constructeur)",
+   "labelEn": "Seagate Exos 15E900 average latency (manufacturer)",
+   "conditionsFr": "Seagate Exos 15E900, 2,5 pouces, SAS 12 Gb/s, modèles de 300 à 900 Go ; « Average Latency » de la fiche technique, sans définition.",
+   "conditionsEn": "Seagate Exos 15E900, 2.5-inch, SAS 12 Gb/s, 300 to 900 GB models; datasheet 'Average Latency', not defined further.",
+   "notes": "Non-contiguous quote checked on the cell itself: every cell of the row is 2, in both tables, so column alignment cannot change the value. The datasheet does not say 'rotational' nor give an RPM row; the half-revolution reading is an inference and was removed from the label."
+  },
+  {
+   "id": "hdd-15k-spindle-frequency",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://seagate.com/content/dam/seagate/migrated-assets/www-content/datasheets/pdfs/exos-15-e-900DS1958-3-2005GB-en_SG.pdf",
+   "evidence": "Datasheet p.1: 'The 900 GB model Exos 15E900 was the first to store 50% more mission-critical data than any other 15K hard drive.' No RPM row in the spec tables.",
+   "fix": {
+    "conditions": "Nominal '15K' class (15,000 rpm) converted to Hz; the Exos 15E900 datasheet only implies the class ('than any other 15K hard drive') and has no spindle-speed row."
+   },
+   "labelFr": "Fréquence de rotation d'un disque dur à 15 000 tr/min (Exos 15E900)",
+   "labelEn": "Rotation frequency of a 15K RPM hard drive (Exos 15E900)",
+   "conditionsFr": "Classe nominale « 15K » (15 000 tr/min) convertie en Hz ; la fiche Exos 15E900 ne donne pas de ligne de vitesse de rotation.",
+   "conditionsEn": "Nominal '15K' class (15,000 rpm) converted to Hz; the Exos 15E900 datasheet has no spindle-speed row.",
+   "notes": "Arithmetic 15000/60 = 250 Hz correct. The source supports '15K' only implicitly."
+  },
+  {
+   "id": "hdd-5400rpm-spindle-frequency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.seagate.com/content/dam/seagate/en/content-fragments/products/datasheets/barracuda-2-5/barracuda-2-5-DS1907-4-2507US-en_US.pdf",
+   "evidence": "Spec table: 'Spindle Speed (RPM) 5400RPM' for ST5000LM000, ST4000LM024, ST2000LM015, ST1000LM048, ST500LM030; SATA 6Gb/s; SMR.",
+   "fix": null,
+   "labelFr": "Fréquence de rotation d'un disque dur à 5400 tr/min (BarraCuda 2,5 pouces)",
+   "labelEn": "Rotation frequency of a 5400 RPM hard drive (BarraCuda 2.5)",
+   "conditionsFr": "Seagate BarraCuda 2,5 pouces (ST5000LM000 à ST500LM030), SMR, SATA 6 Gb/s ; 5400 tr/min convertis en Hz.",
+   "conditionsEn": "Seagate BarraCuda 2.5-inch (ST5000LM000 to ST500LM030), SMR, SATA 6Gb/s; 5400 rpm converted to Hz.",
+   "notes": "5400/60 = 90 Hz."
+  },
+  {
+   "id": "hdd-5400rpm-half-rotation",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.seagate.com/content/dam/seagate/en/content-fragments/products/datasheets/barracuda-2-5/barracuda-2-5-DS1907-4-2507US-en_US.pdf",
+   "evidence": "Input confirmed (5400RPM row). 0.5/90 Hz = 5.5556 ms.",
+   "fix": null,
+   "labelFr": "Latence rotationnelle moyenne à 5400 tr/min (demi-tour)",
+   "labelEn": "Average rotational latency at 5400 RPM (half revolution)",
+   "conditionsFr": "Demi-tour à 5400 tr/min, calculé ; hors temps de positionnement et de transfert. Seagate ne publie pas de latence moyenne pour ce disque.",
+   "conditionsEn": "Half revolution at 5400 rpm, calculated; excludes seek and transfer time. Seagate publishes no average latency for this drive.",
+   "notes": "Calculation checked."
+  },
+  {
+   "id": "lto9-native-transfer-rate",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.lto.org/lto-9/",
+   "evidence": "lto.org/lto-9: 'offering an 18 TB tape cartridge ... with transfer speeds of 400 MB/s (native), 1,000 MB/s (2.5:1).'",
+   "fix": null,
+   "labelFr": "Débit natif de la bande LTO-9",
+   "labelEn": "LTO-9 native transfer rate",
+   "conditionsFr": "LTO génération 9, cartouche de 18 To, données non compressées (1 000 Mo/s avec une compression de 2,5:1).",
+   "conditionsEn": "LTO generation 9, 18 TB cartridge, uncompressed data (1,000 MB/s at 2.5:1 compression).",
+   "notes": "IBM TS4300 Table 3 confirms half-height LTO 9 native 300 MB/s (L9); full-height (Table 2) 400 MB/s (L9)."
+  },
+  {
+   "id": "lto9-average-space-record-time",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.ibm.com/docs/api/v1/content/STAKKZ/con_3U_drives_sleds.html",
+   "evidence": "IBM HTML: Table 2 (full-height), row 'Average space record time from load point', cell with headers=entry__3 (column 'LTO 9') = '45 seconds'; LTO 10 cell '73 seconds (PA) 65 seconds (LA)'.",
+   "fix": {
+    "conditions": "IBM full-height LTO 9 drive in a TS4300 library; 'Average space record time from load point' as listed by IBM (no further definition on the page). Half-height LTO 9 drives: 65 seconds (Table 3).",
+    "confidenceNotes": "Cell alignment resolved from the HTML 'headers' attributes (cell entry__3 = LTO 9 column); not ambiguous."
+   },
+   "labelFr": "Temps moyen de positionnement sur un enregistrement depuis le début de bande (LTO-9)",
+   "labelEn": "LTO-9 average time to locate a record from load point",
+   "conditionsFr": "Lecteur IBM LTO 9 pleine hauteur dans une bibliothèque TS4300 ; « temps moyen de positionnement sur un enregistrement depuis le point de chargement » selon IBM (65 s en demi-hauteur).",
+   "conditionsEn": "IBM full-height LTO 9 drive in a TS4300 library; 'average space record time from load point' per IBM (65 s for half-height drives).",
+   "notes": "The documented URL returned 403 to curl and to the browser; the IBM Docs content API (same page, official) returned the HTML table. Parsed with cell 'headers' attributes: alignment is unambiguous. The gloss 'i.e. the mean seek to a file' is not in the source and was removed."
+  },
+  {
+   "id": "sata-rev3-line-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://sata-io.org/newsletters/SATAIO-July-2009-Newsletter.htm",
+   "evidence": "Newsletter: 'announced the release of its Serial ATA Revision 3.0 specification on May 27, 2009. The SATA Revision 3.0 specification doubles transfer speeds from 3Gb/s to 6Gb/s'.",
+   "fix": {
+    "conditions": "Serial ATA Revision 3.0, released 27 May 2009 (SATA-IO newsletter); transfer speed 6Gb/s, doubled from 3Gb/s."
+   },
+   "labelFr": "Débit de ligne de SATA révision 3.0 (SATA 6 Gbit/s)",
+   "labelEn": "SATA Revision 3.0 (SATA 6Gb/s) line rate",
+   "conditionsFr": "Serial ATA révision 3.0, publiée le 27 mai 2009 ; débit de 6 Gbit/s, doublé par rapport à 3 Gbit/s.",
+   "conditionsEn": "Serial ATA Revision 3.0, released 27 May 2009; 6Gb/s transfer speed, doubled from 3Gb/s.",
+   "notes": "8b/10b encoding, the ~600 MB/s payload and the 'SATA III' naming remark do not appear in this source; removed from conditions."
+  },
+  {
+   "id": "pcie3-lane-rate",
+   "verdict": "confirmed",
+   "checkedUrl": "https://us.design-reuse.com/news/24978/pci-express-3-0-specification.html",
+   "evidence": "Reprint 'BEAVERTON, Ore. -- November 19, 2010': 'a new 128b/130b encoding scheme and a data rate of 8 gigatransfers per second (GT/s)'; ~1 GB/s one direction on x1.",
+   "fix": null,
+   "labelFr": "Débit par voie de PCI Express 3.0",
+   "labelEn": "PCI Express 3.0 per-lane data rate",
+   "conditionsFr": "Spécification PCI Express Base 3.0 (novembre 2010), codage 128b/130b ; 8 GT/s par voie, environ 1 Go/s par sens sur une voie.",
+   "conditionsEn": "PCI Express Base 3.0 specification (November 2010), 128b/130b encoding; 8 GT/s per lane, about 1 GB/s per direction on one lane.",
+   "notes": "Secondary reprint of the PCI-SIG press release; pcisig.com not retried."
+  },
+  {
+   "id": "infiniband-ndr-port-rate",
+   "verdict": "confirmed",
+   "checkedUrl": "https://networking-docs.nvidia.com/qm97x0hw/Introduction",
+   "evidence": "Manual Introduction: '64 ports of NDR 400Gb/s InfiniBand per port in a 1U standard chassis design ... 51.2 Tb/s'; table 'NDR 400Gb/s OSFP Interfaces 32'; 'up to 128 ports of 200Gb/s'.",
+   "fix": null,
+   "labelFr": "Débit par port InfiniBand NDR (NVIDIA Quantum-2 QM9700)",
+   "labelEn": "InfiniBand NDR port rate (NVIDIA Quantum-2 QM9700)",
+   "conditionsFr": "Commutateurs NVIDIA QM97XX 1U (Quantum-2) : 64 ports NDR à 400 Gbit/s sur 32 cages OSFP, 128 ports à 200 Gbit/s en mode divisé, 51,2 Tbit/s bidirectionnels agrégés.",
+   "conditionsEn": "NVIDIA QM97XX 1U switches (Quantum-2): 64 NDR ports at 400 Gb/s on 32 OSFP cages, 128 ports at 200 Gb/s in split mode, 51.2 Tb/s aggregate bidirectional.",
+   "notes": "'Per direction' (confidenceNotes) is not stated by the manual."
+  },
+  {
+   "id": "infiniband-xdr-port-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.nvidia.com/en-us/networking/products/infiniband/quantum-x800/",
+   "evidence": "Product page: 'The NVIDIA Quantum-X800 InfiniBand switch provides 144 ports of 800 Gb/s connectivity per port.' The string 'XDR' does not appear on the page.",
+   "fix": {
+    "labelEn": "NVIDIA Quantum-X800 InfiniBand switch port rate",
+    "labelFr": "Débit par port du commutateur InfiniBand NVIDIA Quantum-X800"
+   },
+   "labelFr": "Débit par port du commutateur InfiniBand NVIDIA Quantum-X800",
+   "labelEn": "NVIDIA Quantum-X800 InfiniBand switch port rate",
+   "conditionsFr": "Commutateur InfiniBand NVIDIA Quantum-X800, 144 ports à 800 Gbit/s.",
+   "conditionsEn": "NVIDIA Quantum-X800 InfiniBand switch, 144 ports at 800 Gb/s.",
+   "notes": "The label asserted the XDR generation, which the cited source does not name; relabelled."
+  },
+  {
+   "id": "cxl-asic-expander-latency-mlc",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/html/2409.14317v1",
+   "evidence": "Table 1: 'CXL-A 2 × DDR4 128 214 24 375 14 ASIC, CXL 1.1, ×8' (Local Lat 214 ns); text: 'CXL-A exhibits the lowest latency at 214ns, despite using DDR4 memory'; MLC.",
+   "fix": {
+    "protocol": "Intel Memory Latency Checker (MLC) average latency on 4 CXL expanders from different vendors; same-socket ('Local') access; repetitions not stated. (The authors' MIO microbenchmark is validated against MLC, not the reverse.)"
+   },
+   "labelFr": "Latence moyenne mesurée d'un extenseur mémoire CXL (ASIC, CXL-A)",
+   "labelEn": "CXL memory expander (ASIC, CXL-A) average access latency, measured",
+   "conditionsFr": "CXL-A : contrôleur ASIC, CXL 1.1, liaison x8, 2 barrettes DDR4, 128 Go ; latence moyenne mesurée avec Intel MLC depuis un processeur du même socle, sur serveurs Intel bi-socles Sapphire/Emerald Rapids.",
+   "conditionsEn": "CXL-A: ASIC controller, CXL 1.1, x8 link, 2x DDR4, 128 GB; average latency measured with Intel MLC from a CPU on the same socket, on dual-socket Intel Sapphire/Emerald Rapids servers.",
+   "notes": "Paper: 'MIO average latency results are validated with Intel MLC reported ones'. The protocol field inverted this. Section 3.2 text gives CXL-B/CXL-D as 239/271 ns, while Table 1 gives B=271, D=239 (swap noted by the extractor, confirmed)."
+  },
+  {
+   "id": "cxl-fpga-expander-latency-mlc",
+   "verdict": "confirmed",
+   "checkedUrl": "https://arxiv.org/html/2409.14317v1",
+   "evidence": "Table 1: 'CXL-C 2 × DDR4 16 394 18 621 14 FPGA, CXL 1.1, ×8'; text: 'average latency and bandwidth are 214-394ns ... measured by Intel Memory Latency Checker (MLC)'; 'CXL-C is FPGA-based'.",
+   "fix": null,
+   "labelFr": "Latence moyenne mesurée d'un extenseur mémoire CXL (FPGA, CXL-C)",
+   "labelEn": "CXL memory expander (FPGA, CXL-C) average access latency, measured",
+   "conditionsFr": "CXL-C : contrôleur FPGA, CXL 1.1, liaison x8, 2 barrettes DDR4, 16 Go ; latence moyenne mesurée avec Intel MLC depuis un processeur du même socle.",
+   "conditionsEn": "CXL-C: FPGA-based controller, CXL 1.1, x8 link, 2x DDR4, 16 GB; average latency measured with Intel MLC from a CPU on the same socket.",
+   "notes": "Protocol field consistent with the source."
+  },
+  {
+   "id": "cuda-null-kernel-launch-h100",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/html/2603.12465v1",
+   "evidence": "Table III: 'H100 4.707 4.578 4.260 5.396' (avg, p50, p5, p95, μs). Sec. IV: W=50 warm-up, R=150 runs 'for both Phase 1 and Phase 2'; null kernel measured in Phase 2.",
+   "fix": {
+    "protocol": "Nsight Systems 12.8.1 (nsys) trace with CUPTI correlation IDs; T_sys^floor = mean of (GPU kernel start - cudaLaunchKernel timestamp) for an empty C++ __global__ null kernel; Phase 2 protocol: 50 warm-up iterations then 150 measured runs (null kernel 'profiled under the same protocol'); single-GPU Slurm allocation, 6 CPU cores, 32 GB host memory; CUDA 12.6, PyTorch 2.10, Python 3.13.",
+    "confidenceNotes": "Quote is the H100 row of Table III (avg, p50, p5, p95). The null kernel is part of Phase 2, run with 50 warm-up + 150 measured iterations. Measured under nsys tracing. Preprint."
+   },
+   "labelFr": "Latence de lancement d'un noyau CUDA vide sur H100, mesurée (moyenne)",
+   "labelEn": "CUDA null-kernel launch latency on H100, measured (mean)",
+   "conditionsFr": "Noyau CUDA vide, NVIDIA H100 80 Go dans un DGX H100, hôte Intel Xeon 8480C (6 cœurs alloués), CUDA 12.6 ; moyenne de l'écart entre l'appel cudaLaunchKernel et le début du noyau sur le GPU, mesurée sous Nsight Systems.",
+   "conditionsEn": "Empty CUDA kernel, NVIDIA H100 80 GB in a DGX H100, Intel Xeon 8480C host (6 cores allocated), CUDA 12.6; mean gap between the cudaLaunchKernel call and kernel start on the GPU, measured under Nsight Systems.",
+   "notes": "The original protocol said n not stated for the null kernel; the paper states W=50/R=150 for Phase 2, which includes the null-kernel run."
+  },
+  {
+   "id": "cuda-null-kernel-launch-h200",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/html/2603.12465v1",
+   "evidence": "Table III: 'H200 4.503 4.452 4.177 4.909'; H200 platform: Xeon Gold 6538Y+ with H200 NVL (141 GB); same W=50/R=150 protocol.",
+   "fix": {
+    "protocol": "Nsight Systems 12.8.1 (nsys) trace with CUPTI correlation IDs; T_sys^floor = mean of (GPU kernel start - cudaLaunchKernel timestamp) for an empty C++ __global__ null kernel; Phase 2 protocol: 50 warm-up iterations then 150 measured runs (null kernel 'profiled under the same protocol'); single-GPU Slurm allocation, 6 CPU cores, 32 GB host memory; CUDA 12.6, PyTorch 2.10, Python 3.13.",
+    "confidenceNotes": "Same as the H100 value: Phase 2, 50 warm-up + 150 measured iterations; measured under nsys tracing. Preprint."
+   },
+   "labelFr": "Latence de lancement d'un noyau CUDA vide sur H200 NVL, mesurée (moyenne)",
+   "labelEn": "CUDA null-kernel launch latency on H200 NVL, measured (mean)",
+   "conditionsFr": "Noyau CUDA vide, NVIDIA H200 NVL 141 Go, hôte Intel Xeon Gold 6538Y+ (6 cœurs alloués), CUDA 12.6 ; moyenne de l'écart entre l'appel cudaLaunchKernel et le début du noyau sur le GPU.",
+   "conditionsEn": "Empty CUDA kernel, NVIDIA H200 NVL 141 GB, Intel Xeon Gold 6538Y+ host (6 cores allocated), CUDA 12.6; mean gap between the cudaLaunchKernel call and kernel start on the GPU.",
+   "notes": "Same correction as H100 on the repetition count."
+  },
+  {
+   "id": "rtx4090-memory-bandwidth",
+   "verdict": "confirmed",
+   "checkedUrl": "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/nvidia-ada-gpu-architecture.pdf",
+   "evidence": "Ada whitepaper Table 2: columns RTX 2080 Ti / 3090 Ti / 4090 (AD102): 'Memory Interface 384-bit', 'Memory Clock (Data Rate) 21 Gbps', 'Memory Bandwidth ... 1008 GB/sec'.",
+   "fix": null,
+   "labelFr": "Bande passante mémoire crête de la GeForce RTX 4090",
+   "labelEn": "GeForce RTX 4090 peak memory bandwidth",
+   "conditionsFr": "GeForce RTX 4090 (AD102), 24 Go de GDDR6X, interface 384 bits, 21 Gbit/s ; valeur crête théorique du constructeur.",
+   "conditionsEn": "GeForce RTX 4090 (AD102), 24 GB GDDR6X, 384-bit interface, 21 Gbps; vendor peak theoretical value.",
+   "notes": "3090 Ti and 4090 both 1008 GB/sec, so column alignment does not affect the value. Memory text: 'RTX 4090 offers 1 TB/sec of peak'."
+  },
+  {
+   "id": "rtx5090-memory-bandwidth",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf",
+   "evidence": "Whitepaper p.13: 'The GeForce RTX 5090 ships with 28 Gbps GDDR7 memory and delivers 1.792 TB/sec peak'; Table 1 (p.15): 512-bit, 28 Gbps, 1792 GB/sec.",
+   "fix": {
+    "locator": "GDDR7 memory section, p.13 (Table 1, p.15)"
+   },
+   "labelFr": "Bande passante mémoire crête de la GeForce RTX 5090",
+   "labelEn": "GeForce RTX 5090 peak memory bandwidth",
+   "conditionsFr": "GeForce RTX 5090 (GB202), 32 Go de GDDR7 (PAM3), interface 512 bits, 28 Gbit/s ; valeur crête du constructeur.",
+   "conditionsEn": "GeForce RTX 5090 (GB202), 32 GB GDDR7 (PAM3), 512-bit interface, 28 Gbps; vendor peak value.",
+   "notes": "The quoted sentence is on printed page 13, not 14."
+  },
+  {
+   "id": "h100-sxm-fp64-peak",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.nvidia.com/en-us/data-center/h100/",
+   "evidence": "Spec table, columns H100 SXM / H100 NVL: 'FP64 34 teraFLOPS 30 teraFLOPs'; 'FP64 Tensor Core 67 teraFLOPS 60 teraFLOPs'.",
+   "fix": null,
+   "labelFr": "Débit crête FP64 (vectoriel) du NVIDIA H100 SXM",
+   "labelEn": "NVIDIA H100 SXM peak FP64 (vector) rate",
+   "conditionsFr": "NVIDIA H100 SXM, FP64 hors cœurs Tensor ; valeur crête du constructeur (FP64 Tensor Core : 67 TFLOPS ; H100 NVL : 30 et 60).",
+   "conditionsEn": "NVIDIA H100 SXM, FP64 non-tensor; vendor peak (FP64 Tensor Core: 67 TFLOPS; H100 NVL: 30 and 60).",
+   "notes": "'At boost clock' (confidenceNotes) is not stated on the page."
+  },
+  {
+   "id": "mi300x-fp64-vector-peak",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://rocm.docs.amd.com/en/latest/reference/gpu-arch/mi300.html",
+   "evidence": "ROCm table 'Peak-performance capabilities of the MI300X for different data types': row 'Vector FP64 | 128 | 81.7' (FLOPS/CLOCK/CU, Peak TFLOPS); Matrix FP64 256 / 163.4.",
+   "fix": {
+    "conditions": "AMD Instinct MI300X, vector FP64, 128 FLOPS/clock/CU; peak (FP64 matrix: 163.4 TFLOPS). The clock used is not stated on the page."
+   },
+   "labelFr": "Débit crête FP64 vectoriel de l'AMD Instinct MI300X",
+   "labelEn": "AMD Instinct MI300X peak FP64 vector rate",
+   "conditionsFr": "AMD Instinct MI300X, FP64 vectoriel, 128 FLOPS par cycle et par CU ; valeur crête (FP64 matriciel : 163,4 TFLOPS), fréquence utilisée non précisée.",
+   "conditionsEn": "AMD Instinct MI300X, vector FP64, 128 FLOPS/clock/CU; peak value (FP64 matrix: 163.4 TFLOPS), clock not stated.",
+   "notes": "Non-contiguous quote checked on the HTML table cells: row and column unambiguous. Reference to a corpus 2100 MHz clock removed (not in this source)."
+  },
+  {
+   "id": "hgx-b200-fp64-peak",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.nvidia.com/en-us/data-center/hgx/",
+   "evidence": "HGX table (HGX B300 | HGX B200): 'Form Factor 8x NVIDIA Blackwell Ultra SXM | 8x NVIDIA Blackwell SXM'; 'FP64/FP64 Tensor Core 10 TFLOPS | 296 TFLOPS'. No per-GPU/total note on this row.",
+   "fix": {
+    "labelEn": "NVIDIA HGX B200 peak FP64 rate (HGX table value; per-GPU or total not stated)",
+    "labelFr": "Débit crête FP64 de la NVIDIA HGX B200 (valeur du tableau HGX ; par GPU ou total non précisé)",
+    "conditions": "HGX B200 platform (8x NVIDIA Blackwell SXM), row 'FP64/FP64 Tensor Core', vendor peak. The page does NOT state whether 296 TFLOPS is per GPU or for the 8 GPUs; reading it as an 8-GPU total is an inference from other rows (e.g. 'Total Memory 1.4 TB', 'Total NVLink Bandwidth 14.4 TB/s'), not a statement of the source. Do not derive a per-GPU figure from it.",
+    "confidenceNotes": "Total-vs-per-GPU is not stated on the page; some rows are explicitly totals ('Total ...'), others per GPU ('NVLink GPU-to-GPU Bandwidth 1.8 TB/s')."
+   },
+   "labelFr": "Débit crête FP64 de la NVIDIA HGX B200 (valeur du tableau HGX ; par GPU ou total non précisé)",
+   "labelEn": "NVIDIA HGX B200 peak FP64 rate (HGX table value; per-GPU or total not stated)",
+   "conditionsFr": "Plateforme HGX B200 (8 GPU Blackwell SXM), ligne « FP64/FP64 Tensor Core », valeur crête du constructeur ; la page ne dit pas s'il s'agit d'une valeur par GPU ou du total des 8 GPU.",
+   "conditionsEn": "HGX B200 platform (8x Blackwell SXM), 'FP64/FP64 Tensor Core' row, vendor peak; the page does not say whether this is per GPU or the total for the 8 GPUs.",
+   "notes": "Per the attention point, the 8-GPU-total reading is not on the page; the fix makes this explicit and removes the derived '37 TFLOPS per GPU'. If the corpus needs a comparable per-GPU or per-system figure, this item should be treated as inadequate rather than used for comparisons. The table mixes explicit totals and per-GPU rows, so the context does not settle it."
+  },
+  {
+   "id": "mlperf-v50-h200x8-llama2-70b-server-ttft-mean",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/mlcommons/inference_results_v5.0/main/closed/NVIDIA/results/H200-SXM-141GBx8_TRT/llama2-70b-99/Server/performance/run_1/mlperf_log_summary.txt",
+   "evidence": "Summary: Scenario Server, PerformanceOnly, 'Result is : VALID'; 'Mean First Token latency (ns) : 397824116'; P50 358622532, P99 937554527; ttft 2e9, tpot 2e8; target_qps 114.24.",
+   "fix": null,
+   "labelFr": "MLPerf v5.0 Llama 2 70B, scénario Server : temps moyen jusqu'au premier token, 8 H200",
+   "labelEn": "MLPerf v5.0 Llama 2 70B Server: mean time to first token, 8x H200",
+   "conditionsFr": "MLPerf Inference v5.0, division Closed, run VALID (PerformanceOnly), soumis par NVIDIA ; llama2-70b-99, scénario Server (bornes TTFT 2000 ms, TPOT 200 ms), système NVIDIA 8 H200-SXM-141GB ; moyenne du temps jusqu'au premier token sous charge (P50 358,6 ms, P99 937,6 ms).",
+   "conditionsEn": "MLPerf Inference v5.0, Closed division, VALID PerformanceOnly run submitted by NVIDIA; llama2-70b-99, Server scenario (TTFT bound 2000 ms, TPOT bound 200 ms), NVIDIA 8x H200-SXM-141GB system; mean time to first token under load (P50 358.6 ms, P99 937.6 ms).",
+   "notes": "System JSON checked: 8x H200-SXM-141GB, Xeon Platinum 8480C, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8, closed. Protocol field consistent. 'Audited by MLCommons' (confidenceNotes) is not stated in the log."
+  },
+  {
+   "id": "mlperf-v50-h200x8-llama2-70b-server-tpot-mean",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/mlcommons/inference_results_v5.0/main/closed/NVIDIA/results/H200-SXM-141GBx8_TRT/llama2-70b-99/Server/performance/run_1/mlperf_log_summary.txt",
+   "evidence": "Same log: 'Mean Time to Output Token (ns) : 169962807'; P50 173273435, P99 181933574; tpot_latency 200000000; 33071.46 tokens/s.",
+   "fix": null,
+   "labelFr": "MLPerf v5.0 Llama 2 70B, scénario Server : temps moyen par token de sortie, 8 H200",
+   "labelEn": "MLPerf v5.0 Llama 2 70B Server: mean time per output token, 8x H200",
+   "conditionsFr": "MLPerf Inference v5.0, division Closed, run VALID (PerformanceOnly), soumis par NVIDIA ; llama2-70b-99, scénario Server, 8 H200-SXM-141GB ; moyenne du temps par token de sortie (P50 173,3 ms, P99 181,9 ms), borne TPOT de 200 ms.",
+   "conditionsEn": "MLPerf Inference v5.0, Closed, VALID run by NVIDIA; llama2-70b-99, Server scenario, 8x H200-SXM-141GB; mean time per output token (P50 173.3 ms, P99 181.9 ms), 200 ms TPOT bound.",
+   "notes": "The batching explanation in confidenceNotes is the extractor's interpretation, not in the log."
+  },
+  {
+   "id": "mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/mlcommons/inference_results_v5.0/main/closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-interactive-99/Server/performance/run_1/mlperf_log_summary.txt",
+   "evidence": "Log (llama2-70b-interactive-99/Server): VALID, PerformanceOnly; 'Mean First Token latency (ns) : 85598458'; P50 74019350, P99 212337410; ttft 4.5e8, tpot 4e7; target_qps 220.",
+   "fix": null,
+   "labelFr": "MLPerf v5.0 Llama 2 70B Interactive : temps moyen jusqu'au premier token, DGX B200",
+   "labelEn": "MLPerf v5.0 Llama 2 70B Interactive: mean time to first token, DGX B200",
+   "conditionsFr": "MLPerf Inference v5.0, division Closed, run VALID (PerformanceOnly), soumis par NVIDIA ; llama2-70b-interactive-99, scénario Server (bornes TTFT 450 ms, TPOT 40 ms), NVIDIA DGX B200 à 8 B200-SXM-180GB ; moyenne du temps jusqu'au premier token sous charge (P50 74,0 ms, P99 212,3 ms).",
+   "conditionsEn": "MLPerf Inference v5.0, Closed, VALID run by NVIDIA; llama2-70b-interactive-99, Server scenario (TTFT bound 450 ms, TPOT bound 40 ms), NVIDIA DGX B200 8x B200-SXM-180GB; mean time to first token under load (P50 74.0 ms, P99 212.3 ms).",
+   "notes": "System JSON: 'NVIDIA DGX B200 (8x B200-SXM-180GB, TensorRT)', Xeon Platinum 8570, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8. Protocol consistent."
+  },
+  {
+   "id": "mlperf-v50-b200x8-llama2-70b-interactive-tpot-mean",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/mlcommons/inference_results_v5.0/main/closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-interactive-99/Server/performance/run_1/mlperf_log_summary.txt",
+   "evidence": "Same log: 'Mean Time to Output Token (ns) : 36129344'; P50 36446606, P99 39122504; tpot_latency 40000000.",
+   "fix": null,
+   "labelFr": "MLPerf v5.0 Llama 2 70B Interactive : temps moyen par token de sortie, DGX B200",
+   "labelEn": "MLPerf v5.0 Llama 2 70B Interactive: mean time per output token, DGX B200",
+   "conditionsFr": "MLPerf Inference v5.0, division Closed, run VALID (PerformanceOnly), soumis par NVIDIA ; llama2-70b-interactive-99, scénario Server, DGX B200 ; moyenne du temps par token de sortie (P50 36,4 ms, P99 39,1 ms), borne de 40 ms.",
+   "conditionsEn": "MLPerf Inference v5.0, Closed, VALID run by NVIDIA; llama2-70b-interactive-99, Server scenario, DGX B200; mean time per output token (P50 36.4 ms, P99 39.1 ms), 40 ms bound.",
+   "notes": ""
+  },
+  {
+   "id": "mlperf-v50-b200x8-llama31-405b-server-ttft-mean",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://raw.githubusercontent.com/mlcommons/inference_results_v5.0/main/closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3_1-405b/Server/performance/run_1/mlperf_log_summary.txt",
+   "evidence": "Log (llama3_1-405b/Server): VALID; 'Mean First Token latency (ns) : 1860083007'; P50 1853367569, P99 4296681261; ttft 6e9, tpot 1.75e8; target_qps 1.3; sample count 8313.",
+   "fix": {
+    "conditions": "llama3_1-405b, Server scenario (TTFT bound 6000 ms, TPOT bound 175 ms); NVIDIA DGX B200 8x B200-SXM-180GB; mean TTFT (P50 1853.4 ms, P99 4296.7 ms)."
+   },
+   "labelFr": "MLPerf v5.0 Llama 3.1 405B, scénario Server : temps moyen jusqu'au premier token, DGX B200",
+   "labelEn": "MLPerf v5.0 Llama 3.1 405B Server: mean time to first token, DGX B200",
+   "conditionsFr": "MLPerf Inference v5.0, division Closed, run VALID (PerformanceOnly), soumis par NVIDIA ; llama3_1-405b, scénario Server (bornes TTFT 6000 ms, TPOT 175 ms), DGX B200 ; moyenne du temps jusqu'au premier token sous charge (P50 1853,4 ms, P99 4296,7 ms).",
+   "conditionsEn": "MLPerf Inference v5.0, Closed, VALID run by NVIDIA; llama3_1-405b, Server scenario (TTFT bound 6000 ms, TPOT bound 175 ms), DGX B200; mean time to first token under load (P50 1853.4 ms, P99 4296.7 ms).",
+   "notes": "'Long-context prompts' is not stated in the summary log; removed."
+  },
+  {
+   "id": "mlperf-v50-b200x8-llama31-405b-server-tpot-mean",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/mlcommons/inference_results_v5.0/main/closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3_1-405b/Server/performance/run_1/mlperf_log_summary.txt",
+   "evidence": "Same log: 'Mean Time to Output Token (ns) : 87022478'; P50 87226968, P99 113518660.",
+   "fix": null,
+   "labelFr": "MLPerf v5.0 Llama 3.1 405B, scénario Server : temps moyen par token de sortie, DGX B200",
+   "labelEn": "MLPerf v5.0 Llama 3.1 405B Server: mean time per output token, DGX B200",
+   "conditionsFr": "MLPerf Inference v5.0, division Closed, run VALID (PerformanceOnly), soumis par NVIDIA ; llama3_1-405b, scénario Server, DGX B200 ; moyenne du temps par token de sortie (P50 87,2 ms, P99 113,5 ms), borne de 175 ms.",
+   "conditionsEn": "MLPerf Inference v5.0, Closed, VALID run by NVIDIA; llama3_1-405b, Server scenario, DGX B200; mean time per output token (P50 87.2 ms, P99 113.5 ms), 175 ms bound.",
+   "notes": ""
+  },
+  {
+   "id": "android-pro-audio-rtl-max-analog",
+   "verdict": "confirmed",
+   "checkedUrl": "https://source.android.com/docs/compatibility/16/android-16-cdd",
+   "evidence": "CDD 5.6 RTL table (Handheld): 'FEATURE_AUDIO_PRO 20 5 analog (if supported)'; also 25/5 at least one path, 25/5 USB; RTL = Mean Continuous latency over 5 measurements, AAudio, CTS Verifier.",
+   "fix": null,
+   "labelFr": "Latence audio aller-retour maximale exigée pour l'audio pro Android (voie analogique)",
+   "labelEn": "Android pro-audio maximum round-trip audio latency (analog path)",
+   "conditionsFr": "Exigence de certification Android 16 (CDD) : appareil portable déclarant FEATURE_AUDIO_PRO, latence aller-retour ≤ 20 ms (MAD ≤ 5 ms) sur la boucle analogique 3,5 mm si elle existe ; borne maximale, pas une mesure.",
+   "conditionsEn": "Android 16 CDD certification requirement: handheld declaring FEATURE_AUDIO_PRO, round-trip latency ≤ 20 ms (MAD ≤ 5 ms) on the analog 3.5 mm loopback if supported; upper bound, not a measurement.",
+   "notes": "Table marked 'Start of requirements changed in Android 16'."
+  },
+  {
+   "id": "android-low-latency-rtl-max",
+   "verdict": "confirmed",
+   "checkedUrl": "https://source.android.com/docs/compatibility/16/android-16-cdd",
+   "evidence": "CDD 5.6 RTL table: 'FEATURE_AUDIO_LOW_LATENCY 50 10 at least one path'.",
+   "fix": null,
+   "labelFr": "Latence audio aller-retour maximale exigée pour l'audio basse latence Android",
+   "labelEn": "Android low-latency audio maximum round-trip latency",
+   "conditionsFr": "Exigence de certification Android 16 (CDD) : appareil portable déclarant FEATURE_AUDIO_LOW_LATENCY, latence aller-retour ≤ 50 ms (MAD ≤ 10 ms) sur au moins une boucle ; borne maximale, pas une mesure.",
+   "conditionsEn": "Android 16 CDD certification requirement: handheld declaring FEATURE_AUDIO_LOW_LATENCY, round-trip latency ≤ 50 ms (MAD ≤ 10 ms) on at least one loopback path; upper bound, not a measurement.",
+   "notes": ""
+  },
+  {
+   "id": "audio-sample-rate-44100",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://source.android.com/docs/compatibility/16/android-16-cdd",
+   "evidence": "CDD 5.4.2 [C-1-1]: 'MUST capture ... VOICE_RECOGNITION audio source at one of the sampling rates, 44100 and 48000.' 5.4.1 raw capture MUST support 8000, 11025, 16000, 44100, 48000 Hz.",
+   "fix": {
+    "conditions": "Sampling rate named in the Android 16 CDD: voice-recognition capture must use 44100 or 48000 Hz (5.4.2 [C-1-1]); raw capture must support 8000, 11025, 16000, 44100 and 48000 Hz (5.4.1). The CDD does not call it a 'standard PCM rate'."
+   },
+   "labelFr": "Fréquence d'échantillonnage audio de 44,1 kHz",
+   "labelEn": "Audio sampling rate 44.1 kHz",
+   "conditionsFr": "Fréquence d'échantillonnage citée par la CDD d'Android 16 : la capture pour la reconnaissance vocale doit se faire à 44 100 ou 48 000 Hz.",
+   "conditionsEn": "Sampling rate named in the Android 16 CDD: voice-recognition capture must use 44100 or 48000 Hz.",
+   "notes": "Value and quote correct; 'standard PCM rate' is a characterisation not made by the source."
+  },
+  {
+   "id": "audio-sample-rate-48000",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://source.android.com/docs/compatibility/16/android-16-cdd",
+   "evidence": "CDD 5.4.2 [C-1-1]: '... at one of the sampling rates, 44100 and 48000.' 7.8.4 glitch-test table lists NONE/SHARED at 48000, 44100, 16000.",
+   "fix": {
+    "conditions": "Sampling rate named in the Android 16 CDD: voice-recognition capture must use 44100 or 48000 Hz (5.4.2 [C-1-1]). The AAudio table cited is the 7.8.4 glitch-test combination list (SHOULD), not a stream-rate requirement."
+   },
+   "labelFr": "Fréquence d'échantillonnage audio de 48 kHz",
+   "labelEn": "Audio sampling rate 48 kHz",
+   "conditionsFr": "Fréquence d'échantillonnage citée par la CDD d'Android 16 : la capture pour la reconnaissance vocale doit se faire à 44 100 ou 48 000 Hz.",
+   "conditionsEn": "Sampling rate named in the Android 16 CDD: voice-recognition capture must use 44100 or 48000 Hz.",
+   "notes": "The 'only shared-mode rate above 44.1 kHz' remark refers to a SHOULD-level glitch-test list in 7.8.4; reworded."
+  },
+  {
+   "id": "vesa-adaptivesync-min-max-refresh",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://vesa.org/wp-content/uploads/2023/05/Adaptive-Sync-Display-CTS-r1.1.pdf",
+   "evidence": "CTS r1.1 (19 May 2023) Table 2-1 (p.22): 'Adaptive-Sync operation maximum refresh rate range ≥ 144 Hz | ≥ 60 Hz' (AdaptiveSync | MediaSync); minimum ≤ 60 Hz | ≤ 48 Hz.",
+   "fix": {
+    "locator": "Table 2-1 'Mandates that Vary by Logo Performance Tier', p.22",
+    "conditions": "VESA Adaptive-Sync Display CTS r1.1 (19 May 2023): for the AdaptiveSync Display logo tier, Adaptive-Sync operation maximum refresh rate ≥ 144 Hz and minimum ≤ 60 Hz (MediaSync: ≥ 60 Hz and ≤ 48 Hz). Certification threshold."
+   },
+   "labelFr": "VESA AdaptiveSync Display : fréquence de rafraîchissement maximale minimale exigée",
+   "labelEn": "VESA AdaptiveSync Display: minimum required maximum refresh rate",
+   "conditionsFr": "Seuil de certification VESA Adaptive-Sync Display CTS r1.1 : palier AdaptiveSync Display, fréquence maximale de fonctionnement Adaptive-Sync ≥ 144 Hz et minimale ≤ 60 Hz (MediaSync : ≥ 60 Hz et ≤ 48 Hz).",
+   "conditionsEn": "VESA Adaptive-Sync Display CTS r1.1 certification threshold: AdaptiveSync Display tier, Adaptive-Sync operating maximum ≥ 144 Hz and minimum ≤ 60 Hz (MediaSync: ≥ 60 Hz and ≤ 48 Hz).",
+   "notes": "Table 2-1 is on PDF page 22 ('Page 22 of 89'), not 21. 'At factory default resolution' belongs to the tier designator definition (sect. 2.4), not to this mandate."
+  },
+  {
+   "id": "vesa-adaptivesync-display240-tier",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://vesa.org/wp-content/uploads/2023/05/Adaptive-Sync-Display-CTS-r1.1.pdf",
+   "evidence": "Sect. 2.4 (p.25): tier designator 'indicates the maximum video frame rate that is achievable when using the Adaptive-Sync operation at the display's factory default resolution, such as AdaptiveSync Di",
+   "fix": {
+    "locator": "Section 2.4 'VESA CERTIFIED Compliance Program', p.25; Table 2-1 note a, p.22"
+   },
+   "labelFr": "Palier AdaptiveSync Display240 de VESA (fréquence de rafraîchissement)",
+   "labelEn": "VESA AdaptiveSync Display240 tier refresh rate",
+   "conditionsFr": "Exemple de désignation de palier VESA (AdaptiveSync Display240) : la désignation indique la fréquence d'images maximale atteinte en Adaptive-Sync à la résolution d'usine ; 240 est un exemple, pas un seuil.",
+   "conditionsEn": "Example VESA tier designator (AdaptiveSync Display240): the designator gives the maximum frame rate achieved with Adaptive-Sync at factory default resolution; 240 is an example, not a threshold.",
+   "notes": "Page numbers off by one (sect. 2.4 is on p.25)."
+  },
+  {
+   "id": "frame-time-144hz",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://vesa.org/wp-content/uploads/2023/05/Adaptive-Sync-Display-CTS-r1.1.pdf",
+   "evidence": "1/144 Hz = 6.944 ms; input vesa-adaptivesync-min-max-refresh confirmed (with locator fix).",
+   "fix": {
+    "locator": "Table 2-1, p.22"
+   },
+   "labelFr": "Durée d'une image à 144 Hz",
+   "labelEn": "Frame time at 144 Hz",
+   "conditionsFr": "Durée d'une période de rafraîchissement à exactement 144 Hz, calculée (seuil minimal de fréquence maximale du palier AdaptiveSync Display).",
+   "conditionsEn": "One refresh period at exactly 144 Hz, calculated (AdaptiveSync Display tier minimum for the maximum rate).",
+   "notes": "Calculation checked."
+  },
+  {
+   "id": "frame-time-240hz",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://vesa.org/wp-content/uploads/2023/05/Adaptive-Sync-Display-CTS-r1.1.pdf",
+   "evidence": "1/240 Hz = 4.167 ms; input vesa-adaptivesync-display240-tier confirmed (with locator fix).",
+   "fix": {
+    "locator": "Section 2.4, p.25"
+   },
+   "labelFr": "Durée d'une image à 240 Hz",
+   "labelEn": "Frame time at 240 Hz",
+   "conditionsFr": "Durée d'une période de rafraîchissement à exactement 240 Hz, calculée.",
+   "conditionsEn": "One refresh period at exactly 240 Hz, calculated.",
+   "notes": "Calculation checked."
+  },
+  {
+   "id": "vesa-adaptivesync-g2g-average-max",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://vesa.org/wp-content/uploads/2023/05/Adaptive-Sync-Display-CTS-r1.1.pdf",
+   "evidence": "Table 2-1 (p.22): 'Limit in average of the 64 G2G tests from a 9 × 9 matrix with factory-default overdrive | ≤ 5-ms average over the 64 tests | N/A'. Sect. 7.5.1.2: 10-90% transition times averaged.",
+   "fix": {
+    "locator": "Table 2-1, p.22"
+   },
+   "labelFr": "Temps de réponse gris à gris moyen maximal exigé par VESA AdaptiveSync Display",
+   "labelEn": "VESA AdaptiveSync Display maximum average grey-to-grey response time",
+   "conditionsFr": "Seuil de certification VESA Adaptive-Sync Display CTS r1.1 : moyenne des 64 transitions gris à gris (matrice 9 × 9, overdrive d'usine, temps de 10 à 90 %) ≤ 5 ms, palier AdaptiveSync seulement.",
+   "conditionsEn": "VESA Adaptive-Sync Display CTS r1.1 certification threshold: average of 64 grey-to-grey transitions (9 × 9 matrix, factory-default overdrive, 10-90% times) ≤ 5 ms, AdaptiveSync tier only.",
+   "notes": "Page number fix only."
+  },
+  {
+   "id": "hdmi21-max-bandwidth",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.hdmi.org/spec/hdmi2_1",
+   "evidence": "hdmi.org/spec/hdmi2_1 (HDMI 2.2 page): 'The Ultra High Speed HDMI Cable was introduced in the HDMI 2.1 Specification and entered the market in 2020. It is applicable for system configurations supporti",
+   "fix": {
+    "labelEn": "Ultra High Speed HDMI Cable maximum bandwidth (introduced with HDMI 2.1)",
+    "labelFr": "Bande passante maximale du câble Ultra High Speed HDMI (introduit avec HDMI 2.1)",
+    "conditions": "Ultra High Speed HDMI Cable, introduced in the HDMI 2.1 Specification and on the market from 2020; applicable for system configurations supporting up to 48 Gbps maximum bandwidth. HDMI 2.2 / Ultra96 goes up to 96 Gbps."
+   },
+   "labelFr": "Bande passante maximale du câble Ultra High Speed HDMI (introduit avec HDMI 2.1)",
+   "labelEn": "Ultra High Speed HDMI Cable maximum bandwidth (introduced with HDMI 2.1)",
+   "conditionsFr": "Câble Ultra High Speed HDMI, introduit avec la spécification HDMI 2.1 et commercialisé depuis 2020, prévu pour des configurations allant jusqu'à 48 Gbit/s.",
+   "conditionsEn": "Ultra High Speed HDMI Cable, introduced with the HDMI 2.1 Specification and on the market since 2020, for configurations up to 48 Gbps.",
+   "notes": "The page states the 48 Gbps limit for the cable class, not directly 'HDMI 2.1 maximum bandwidth'; 'gross link rate (FRL)' is not stated for this figure. Era '2017' (HDMI 2.1 release) is not given on the page, which says market entry 2020."
+  }
+ ]
+}

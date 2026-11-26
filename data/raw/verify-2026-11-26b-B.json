@@ -1,0 +1,499 @@
+{
+ "verifiedFile": "m00-2026-11-26b-B_cpu_memory_os_hpc_history.json",
+ "verifiedAt": "2026-11-26",
+ "verdicts": [
+  {
+   "id": "top500-2026-11-r1-lineshine-rmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2026/11/",
+   "evidence": "List page header: 'Rmax and Rpeak values are in PFlop/s'. Rank 1 row: LineShine ... 13,789,440 2,198.40 2,735.82.",
+   "fix": {
+    "protocol": "Rmax as listed in the TOP500 list: best LINPACK (HPL) performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page.",
+    "conditions": "TOP500 November 2026, rank 1: LineShine - LingKun, LX2 304C 1.55GHz, LingQi, Kylin OS (Shenzhen Cloud Computing Center Co., Ltd.; NSC Shenzhen, China); 13,789,440 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s."
+   },
+   "labelFr": "Rmax HPL de LineShine (TOP500 de novembre 2026, n° 1)",
+   "labelEn": "HPL Rmax, LineShine (TOP500 November 2026, #1)",
+   "conditionsFr": "TOP500 de novembre 2026, rang 1 : LineShine – LingKun, LX2 304C 1,55 GHz, LingQi, Kylin OS (Centre national de calcul de Shenzhen, Chine) ; 13 789 440 cœurs ; Rmax = meilleure performance LINPACK (HPL) en FP64 obtenue, en Pflop/s.",
+   "conditionsEn": "TOP500 November 2026, rank 1: LineShine - LingKun, LX2 304C 1.55GHz, LingQi, Kylin OS (Shenzhen Cloud Computing Center Co., Ltd.; NSC Shenzhen, China); 13,789,440 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s.",
+   "notes": "Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read."
+  },
+  {
+   "id": "top500-2026-11-r1-lineshine-rpeak",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2026/11/",
+   "evidence": "List page header: 'Rmax and Rpeak values are in PFlop/s'. Rank 1 row: LineShine ... 13,789,440 2,198.40 2,735.82.",
+   "fix": {
+    "conditions": "TOP500 November 2026, rank 1: LineShine - LingKun, LX2 304C 1.55GHz, LingQi, Kylin OS (Shenzhen Cloud Computing Center Co., Ltd.; NSC Shenzhen, China); 13,789,440 cores; Rpeak = theoretical peak in Pflop/s; per the list page, Rpeak values are calculated using the advertised clock rate of the CPU."
+   },
+   "labelFr": "Performance crête théorique Rpeak de LineShine (TOP500 de novembre 2026, n° 1)",
+   "labelEn": "Theoretical peak Rpeak, LineShine (TOP500 November 2026, #1)",
+   "conditionsFr": "TOP500 de novembre 2026, rang 1 : LineShine – LingKun, LX2 304C 1,55 GHz, LingQi, Kylin OS (Centre national de calcul de Shenzhen, Chine) ; 13 789 440 cœurs ; Rpeak = crête théorique en Pflop/s ; selon la page, Rpeak est calculé d’après la fréquence d’horloge annoncée du processeur.",
+   "conditionsEn": "TOP500 November 2026, rank 1: LineShine - LingKun, LX2 304C 1.55GHz, LingQi, Kylin OS (Shenzhen Cloud Computing Center Co., Ltd.; NSC Shenzhen, China); 13,789,440 cores; Rpeak = theoretical peak in Pflop/s; per the list page, Rpeak values are calculated using the advertised clock rate of the CPU.",
+   "notes": "Value confirmed. Conditions fix: the page does not say Rpeak is computed 'by TOP500' nor tie it to HPL; it only says Rpeak is calculated using the advertised CPU clock rate."
+  },
+  {
+   "id": "top500-2026-11-r2-el-capitan-rmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2026/11/",
+   "evidence": "List page header: 'Rmax and Rpeak values are in PFlop/s'. Rank 2 row: El Capitan ... 11,340,000 1,809.00 2,821.10.",
+   "fix": {
+    "protocol": "Rmax as listed in the TOP500 list: best LINPACK (HPL) performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page.",
+    "conditions": "TOP500 November 2026, rank 2: El Capitan - HPE Cray EX255a, AMD 4th Gen EPYC 24C 1.8GHz, AMD Instinct MI300A (DOE/NNSA/LLNL, USA); 11,340,000 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s."
+   },
+   "labelFr": "Rmax HPL de El Capitan (TOP500 de novembre 2026, n° 2)",
+   "labelEn": "HPL Rmax, El Capitan (TOP500 November 2026, #2)",
+   "conditionsFr": "TOP500 de novembre 2026, rang 2 : El Capitan – HPE Cray EX255a, AMD EPYC 4e génération 24 cœurs 1,8 GHz, AMD Instinct MI300A (DOE/NNSA/LLNL, États-Unis) ; 11 340 000 cœurs ; Rmax = meilleure performance LINPACK (HPL) en FP64 obtenue, en Pflop/s.",
+   "conditionsEn": "TOP500 November 2026, rank 2: El Capitan - HPE Cray EX255a, AMD 4th Gen EPYC 24C 1.8GHz, AMD Instinct MI300A (DOE/NNSA/LLNL, USA); 11,340,000 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s.",
+   "notes": "Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read."
+  },
+  {
+   "id": "top500-2026-11-r2-el-capitan-rpeak",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2026/11/",
+   "evidence": "List page header: 'Rmax and Rpeak values are in PFlop/s'. Rank 2 row: El Capitan ... 11,340,000 1,809.00 2,821.10.",
+   "fix": {
+    "conditions": "TOP500 November 2026, rank 2: El Capitan - HPE Cray EX255a, AMD 4th Gen EPYC 24C 1.8GHz, AMD Instinct MI300A (DOE/NNSA/LLNL, USA); 11,340,000 cores; Rpeak = theoretical peak in Pflop/s; per the list page, Rpeak values are calculated using the advertised clock rate of the CPU."
+   },
+   "labelFr": "Performance crête théorique Rpeak de El Capitan (TOP500 de novembre 2026, n° 2)",
+   "labelEn": "Theoretical peak Rpeak, El Capitan (TOP500 November 2026, #2)",
+   "conditionsFr": "TOP500 de novembre 2026, rang 2 : El Capitan – HPE Cray EX255a, AMD EPYC 4e génération 24 cœurs 1,8 GHz, AMD Instinct MI300A (DOE/NNSA/LLNL, États-Unis) ; 11 340 000 cœurs ; Rpeak = crête théorique en Pflop/s ; selon la page, Rpeak est calculé d’après la fréquence d’horloge annoncée du processeur.",
+   "conditionsEn": "TOP500 November 2026, rank 2: El Capitan - HPE Cray EX255a, AMD 4th Gen EPYC 24C 1.8GHz, AMD Instinct MI300A (DOE/NNSA/LLNL, USA); 11,340,000 cores; Rpeak = theoretical peak in Pflop/s; per the list page, Rpeak values are calculated using the advertised clock rate of the CPU.",
+   "notes": "Value confirmed. Conditions fix: the page does not say Rpeak is computed 'by TOP500' nor tie it to HPL; it only says Rpeak is calculated using the advertised CPU clock rate."
+  },
+  {
+   "id": "top500-2026-11-r3-frontier-rmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2026/11/",
+   "evidence": "List page header: 'Rmax and Rpeak values are in PFlop/s'. Rank 3 row: Frontier ... 9,066,176 1,353.00 2,055.72.",
+   "fix": {
+    "protocol": "Rmax as listed in the TOP500 list: best LINPACK (HPL) performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page.",
+    "conditions": "TOP500 November 2026, rank 3: Frontier - HPE Cray EX235a, AMD Optimized 3rd Generation EPYC 64C 2GHz, AMD Instinct MI250X (ORNL, USA); 9,066,176 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s."
+   },
+   "labelFr": "Rmax HPL de Frontier (TOP500 de novembre 2026, n° 3)",
+   "labelEn": "HPL Rmax, Frontier (TOP500 November 2026, #3)",
+   "conditionsFr": "TOP500 de novembre 2026, rang 3 : Frontier – HPE Cray EX235a, AMD EPYC optimisé 3e génération 64 cœurs 2 GHz, AMD Instinct MI250X (ORNL, États-Unis) ; 9 066 176 cœurs ; Rmax = meilleure performance LINPACK (HPL) en FP64 obtenue, en Pflop/s.",
+   "conditionsEn": "TOP500 November 2026, rank 3: Frontier - HPE Cray EX235a, AMD Optimized 3rd Generation EPYC 64C 2GHz, AMD Instinct MI250X (ORNL, USA); 9,066,176 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s.",
+   "notes": "Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read."
+  },
+  {
+   "id": "top500-2026-11-r3-frontier-rpeak",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2026/11/",
+   "evidence": "List page header: 'Rmax and Rpeak values are in PFlop/s'. Rank 3 row: Frontier ... 9,066,176 1,353.00 2,055.72.",
+   "fix": {
+    "conditions": "TOP500 November 2026, rank 3: Frontier - HPE Cray EX235a, AMD Optimized 3rd Generation EPYC 64C 2GHz, AMD Instinct MI250X (ORNL, USA); 9,066,176 cores; Rpeak = theoretical peak in Pflop/s; per the list page, Rpeak values are calculated using the advertised clock rate of the CPU."
+   },
+   "labelFr": "Performance crête théorique Rpeak de Frontier (TOP500 de novembre 2026, n° 3)",
+   "labelEn": "Theoretical peak Rpeak, Frontier (TOP500 November 2026, #3)",
+   "conditionsFr": "TOP500 de novembre 2026, rang 3 : Frontier – HPE Cray EX235a, AMD EPYC optimisé 3e génération 64 cœurs 2 GHz, AMD Instinct MI250X (ORNL, États-Unis) ; 9 066 176 cœurs ; Rpeak = crête théorique en Pflop/s ; selon la page, Rpeak est calculé d’après la fréquence d’horloge annoncée du processeur.",
+   "conditionsEn": "TOP500 November 2026, rank 3: Frontier - HPE Cray EX235a, AMD Optimized 3rd Generation EPYC 64C 2GHz, AMD Instinct MI250X (ORNL, USA); 9,066,176 cores; Rpeak = theoretical peak in Pflop/s; per the list page, Rpeak values are calculated using the advertised clock rate of the CPU.",
+   "notes": "Value confirmed. Conditions fix: the page does not say Rpeak is computed 'by TOP500' nor tie it to HPL; it only says Rpeak is calculated using the advertised CPU clock rate."
+  },
+  {
+   "id": "top500-2026-11-r4-aurora-rmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2026/11/",
+   "evidence": "List page header: 'Rmax and Rpeak values are in PFlop/s'. Rank 4 row: Aurora ... 9,264,128 1,012.00 1,980.01.",
+   "fix": {
+    "protocol": "Rmax as listed in the TOP500 list: best LINPACK (HPL) performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page.",
+    "conditions": "TOP500 November 2026, rank 4: Aurora - HPE Cray EX - Intel Exascale Compute Blade, Xeon CPU Max 9470 52C 2.4GHz, Intel Data Center GPU Max (ANL, USA); 9,264,128 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s."
+   },
+   "labelFr": "Rmax HPL de Aurora (TOP500 de novembre 2026, n° 4)",
+   "labelEn": "HPL Rmax, Aurora (TOP500 November 2026, #4)",
+   "conditionsFr": "TOP500 de novembre 2026, rang 4 : Aurora – HPE Cray EX, Intel Exascale Compute Blade, Xeon CPU Max 9470 52 cœurs 2,4 GHz, Intel Data Center GPU Max (ANL, États-Unis) ; 9 264 128 cœurs ; Rmax = meilleure performance LINPACK (HPL) en FP64 obtenue, en Pflop/s.",
+   "conditionsEn": "TOP500 November 2026, rank 4: Aurora - HPE Cray EX - Intel Exascale Compute Blade, Xeon CPU Max 9470 52C 2.4GHz, Intel Data Center GPU Max (ANL, USA); 9,264,128 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s.",
+   "notes": "Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read."
+  },
+  {
+   "id": "top500-2026-11-r4-aurora-rpeak",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2026/11/",
+   "evidence": "List page header: 'Rmax and Rpeak values are in PFlop/s'. Rank 4 row: Aurora ... 9,264,128 1,012.00 1,980.01.",
+   "fix": {
+    "conditions": "TOP500 November 2026, rank 4: Aurora - HPE Cray EX - Intel Exascale Compute Blade, Xeon CPU Max 9470 52C 2.4GHz, Intel Data Center GPU Max (ANL, USA); 9,264,128 cores; Rpeak = theoretical peak in Pflop/s; per the list page, Rpeak values are calculated using the advertised clock rate of the CPU."
+   },
+   "labelFr": "Performance crête théorique Rpeak de Aurora (TOP500 de novembre 2026, n° 4)",
+   "labelEn": "Theoretical peak Rpeak, Aurora (TOP500 November 2026, #4)",
+   "conditionsFr": "TOP500 de novembre 2026, rang 4 : Aurora – HPE Cray EX, Intel Exascale Compute Blade, Xeon CPU Max 9470 52 cœurs 2,4 GHz, Intel Data Center GPU Max (ANL, États-Unis) ; 9 264 128 cœurs ; Rpeak = crête théorique en Pflop/s ; selon la page, Rpeak est calculé d’après la fréquence d’horloge annoncée du processeur.",
+   "conditionsEn": "TOP500 November 2026, rank 4: Aurora - HPE Cray EX - Intel Exascale Compute Blade, Xeon CPU Max 9470 52C 2.4GHz, Intel Data Center GPU Max (ANL, USA); 9,264,128 cores; Rpeak = theoretical peak in Pflop/s; per the list page, Rpeak values are calculated using the advertised clock rate of the CPU.",
+   "notes": "Value confirmed. Conditions fix: the page does not say Rpeak is computed 'by TOP500' nor tie it to HPL; it only says Rpeak is calculated using the advertised CPU clock rate."
+  },
+  {
+   "id": "top500-2026-11-r5-jupiter-booster-rmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2026/11/",
+   "evidence": "List page header: 'Rmax and Rpeak values are in PFlop/s'. Rank 5 row: JUPITER Booster ... 4,801,344 1,000.00 1,226.28.",
+   "fix": {
+    "protocol": "Rmax as listed in the TOP500 list: best LINPACK (HPL) performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page.",
+    "conditions": "TOP500 November 2026, rank 5: JUPITER Booster - BullSequana XH3000, GH Superchip 72C 3GHz, NVIDIA GH200 Superchip (EuroHPC/FZJ, Germany); 4,801,344 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s."
+   },
+   "labelFr": "Rmax HPL de JUPITER Booster (TOP500 de novembre 2026, n° 5)",
+   "labelEn": "HPL Rmax, JUPITER Booster (TOP500 November 2026, #5)",
+   "conditionsFr": "TOP500 de novembre 2026, rang 5 : JUPITER Booster – BullSequana XH3000, GH Superchip 72 cœurs 3 GHz, NVIDIA GH200 Superchip (EuroHPC/FZJ, Allemagne) ; 4 801 344 cœurs ; Rmax = meilleure performance LINPACK (HPL) en FP64 obtenue, en Pflop/s.",
+   "conditionsEn": "TOP500 November 2026, rank 5: JUPITER Booster - BullSequana XH3000, GH Superchip 72C 3GHz, NVIDIA GH200 Superchip (EuroHPC/FZJ, Germany); 4,801,344 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s.",
+   "notes": "Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read."
+  },
+  {
+   "id": "top500-2026-11-r5-jupiter-booster-rpeak",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2026/11/",
+   "evidence": "List page header: 'Rmax and Rpeak values are in PFlop/s'. Rank 5 row: JUPITER Booster ... 4,801,344 1,000.00 1,226.28.",
+   "fix": {
+    "conditions": "TOP500 November 2026, rank 5: JUPITER Booster - BullSequana XH3000, GH Superchip 72C 3GHz, NVIDIA GH200 Superchip (EuroHPC/FZJ, Germany); 4,801,344 cores; Rpeak = theoretical peak in Pflop/s; per the list page, Rpeak values are calculated using the advertised clock rate of the CPU."
+   },
+   "labelFr": "Performance crête théorique Rpeak de JUPITER Booster (TOP500 de novembre 2026, n° 5)",
+   "labelEn": "Theoretical peak Rpeak, JUPITER Booster (TOP500 November 2026, #5)",
+   "conditionsFr": "TOP500 de novembre 2026, rang 5 : JUPITER Booster – BullSequana XH3000, GH Superchip 72 cœurs 3 GHz, NVIDIA GH200 Superchip (EuroHPC/FZJ, Allemagne) ; 4 801 344 cœurs ; Rpeak = crête théorique en Pflop/s ; selon la page, Rpeak est calculé d’après la fréquence d’horloge annoncée du processeur.",
+   "conditionsEn": "TOP500 November 2026, rank 5: JUPITER Booster - BullSequana XH3000, GH Superchip 72C 3GHz, NVIDIA GH200 Superchip (EuroHPC/FZJ, Germany); 4,801,344 cores; Rpeak = theoretical peak in Pflop/s; per the list page, Rpeak values are calculated using the advertised clock rate of the CPU.",
+   "notes": "Value confirmed. Conditions fix: the page does not say Rpeak is computed 'by TOP500' nor tie it to HPL; it only says Rpeak is calculated using the advertised CPU clock rate."
+  },
+  {
+   "id": "top500-1993-06-r1-cm5-rmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/1993/06/",
+   "evidence": "Header: 'Rmax and Rpeak values are in GFlop/s'. Rank 1: CM-5/1024, Thinking Machines Corporation Los Alamos National Laboratory United States 1,024 59.70 131.00",
+   "fix": {
+    "protocol": "Rmax as listed in the TOP500 list: best LINPACK performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page.",
+    "labelEn": "LINPACK Rmax, CM-5/1024 (Thinking Machines) (TOP500 June 1993, #1)",
+    "labelFr": "Rmax LINPACK du CM-5/1024 (Thinking Machines) (TOP500 de juin 1993, n° 1)",
+    "conditions": "TOP500 June 1993, rank 1: CM-5/1024, Thinking Machines Corporation (Los Alamos National Laboratory, USA); 1,024 cores; Rmax = best LINPACK FP64 performance achieved, in Gflop/s."
+   },
+   "labelFr": "Rmax LINPACK du CM-5/1024 (Thinking Machines) (TOP500 de juin 1993, n° 1)",
+   "labelEn": "LINPACK Rmax, CM-5/1024 (Thinking Machines) (TOP500 June 1993, #1)",
+   "conditionsFr": "TOP500 de juin 1993, rang 1 : CM-5/1024, Thinking Machines Corporation (Los Alamos National Laboratory, États-Unis) ; 1 024 cœurs ; Rmax = meilleure performance LINPACK en FP64 obtenue, en Gflop/s.",
+   "conditionsEn": "TOP500 June 1993, rank 1: CM-5/1024, Thinking Machines Corporation (Los Alamos National Laboratory, USA); 1,024 cores; Rmax = best LINPACK FP64 performance achieved, in Gflop/s.",
+   "notes": "Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. Label/conditions: neither source says the 1993 result was obtained with HPL (the TOP500 Linpack page only names 'the LINPACK Benchmark'); 'HPL' replaced by 'LINPACK'. The Linpack rules page is current and is not dated to 1993."
+  },
+  {
+   "id": "top500-2008-06-r1-roadrunner-rmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2008/06/",
+   "evidence": "Header: values in TFlop/s. Rank 1: Roadrunner - BladeCenter QS22/LS21 Cluster, PowerXCell 8i 3.2 Ghz / Opteron DC 1.8 GHz ... 122,400 1,026.00 1,375.78",
+   "fix": {
+    "protocol": "Rmax as listed in the TOP500 list: best LINPACK (HPL) performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page.",
+    "conditions": "TOP500 June 2008, rank 1: Roadrunner - BladeCenter QS22/LS21 Cluster, PowerXCell 8i 3.2 GHz / Opteron DC 1.8 GHz, Voltaire Infiniband, IBM (DOE/NNSA/LANL, USA); 122,400 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Tflop/s."
+   },
+   "labelFr": "Rmax HPL de Roadrunner (TOP500 de juin 2008, n° 1)",
+   "labelEn": "HPL Rmax, Roadrunner (TOP500 June 2008, #1)",
+   "conditionsFr": "TOP500 de juin 2008, rang 1 : Roadrunner – grappe BladeCenter QS22/LS21, PowerXCell 8i 3,2 GHz / Opteron double cœur 1,8 GHz, Voltaire Infiniband, IBM (DOE/NNSA/LANL, États-Unis) ; 122 400 cœurs ; Rmax = meilleure performance LINPACK (HPL) en FP64 obtenue, en Tflop/s.",
+   "conditionsEn": "TOP500 June 2008, rank 1: Roadrunner - BladeCenter QS22/LS21 Cluster, PowerXCell 8i 3.2 GHz / Opteron DC 1.8 GHz, Voltaire Infiniband, IBM (DOE/NNSA/LANL, USA); 122,400 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Tflop/s.",
+   "notes": "Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read."
+  },
+  {
+   "id": "top500-2022-06-r1-frontier-rmax",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.top500.org/lists/top500/list/2022/06/",
+   "evidence": "Header: values in PFlop/s. Rank 1: Frontier - HPE Cray EX235a, AMD Optimized 3rd Generation EPYC 64C 2GHz, AMD Instinct MI250X ... 8,730,112 1,102.00 1,685.65",
+   "fix": {
+    "protocol": "Rmax as listed in the TOP500 list: best LINPACK (HPL) performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page.",
+    "conditions": "TOP500 June 2022, rank 1: Frontier - HPE Cray EX235a, AMD Optimized 3rd Generation EPYC 64C 2GHz, AMD Instinct MI250X, Slingshot-11 (ORNL, USA); 8,730,112 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s."
+   },
+   "labelFr": "Rmax HPL de Frontier (TOP500 de juin 2022, n° 1)",
+   "labelEn": "HPL Rmax, Frontier (TOP500 June 2022, #1)",
+   "conditionsFr": "TOP500 de juin 2022, rang 1 : Frontier – HPE Cray EX235a, AMD EPYC optimisé 3e génération 64 cœurs 2 GHz, AMD Instinct MI250X, Slingshot-11 (ORNL, États-Unis) ; 8 730 112 cœurs ; Rmax = meilleure performance LINPACK (HPL) en FP64 obtenue, en Pflop/s.",
+   "conditionsEn": "TOP500 June 2022, rank 1: Frontier - HPE Cray EX235a, AMD Optimized 3rd Generation EPYC 64C 2GHz, AMD Instinct MI250X, Slingshot-11 (ORNL, USA); 8,730,112 cores; Rmax = best LINPACK (HPL) FP64 performance achieved, in Pflop/s.",
+   "notes": "Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read."
+  },
+  {
+   "id": "arm-neoverse-n2-l1d-load-latency",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://documentation-service.arm.com/static/63907c412b0dd145f8030d45",
+   "evidence": "§3.10: 'latencies shown assume the memory access hits in the Level 1 Data Cache'. Table 3-13 p.29: 'Load register, register offset, basic LDR, LDRB, ... 4 3 L'. Cover: Revision r0p3.",
+   "fix": {
+    "conditions": "Arm Neoverse N2, Software Optimization Guide Issue 5.0 (first release for r0p3); AArch64 integer loads (LDR/LDRB register offset; same 4-cycle latency for immediate and unscaled forms); latency assumes an L1 data cache hit and is the maximum latency to load all registers written.",
+    "locator": "§3.10 Load instructions, Table 3-13 \"AArch64 Load instructions\", PDF pp. 28-29 (register-offset rows on p. 29)"
+   },
+   "labelFr": "Latence de chargement sur succès L1D, Arm Neoverse N2 (LDR, décalage registre)",
+   "labelEn": "Load latency on L1D hit, Arm Neoverse N2 (LDR register offset)",
+   "conditionsFr": "Arm Neoverse N2, guide d’optimisation Issue 5.0 (première version pour r0p3) ; chargements entiers AArch64 (LDR/LDRB avec décalage registre ; même latence de 4 cycles pour les formes immédiates) ; latence supposant un succès en cache de données L1, maximale pour charger tous les registres écrits.",
+   "conditionsEn": "Arm Neoverse N2, Software Optimization Guide Issue 5.0 (first release for r0p3); AArch64 integer loads (LDR/LDRB register offset; same 4-cycle latency for immediate and unscaled forms); latency assumes an L1 data cache hit and is the maximum latency to load all registers written.",
+   "notes": "Value confirmed. Revision fix: the guide (Issue 5.0, 31 Oct 2022) is the 'First release for r0p3', not r0p0-r0p2. Register-offset rows are on PDF p. 29, the table starts p. 28."
+  },
+  {
+   "id": "arm-neoverse-v3-l1d-load-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://documentation-service.arm.com/static/6734eb2627eda361ad4da4f4",
+   "evidence": "Cover: Revision r0p2, Issue 3.0. §3.8: latencies assume L1 Data Cache hit. Table 3-7 p.18: 'Load register, literal LDR... 5'; 'Load register, unscaled immed LDUR, LDURB, 4 3 L'.",
+   "fix": null,
+   "labelFr": "Latence de chargement sur succès L1D, Arm Neoverse V3 (LDUR)",
+   "labelEn": "Load latency on L1D hit, Arm Neoverse V3 (LDUR)",
+   "conditionsFr": "Arm Neoverse V3 (r0p2, guide Issue 3.0) ; chargements entiers AArch64 à décalage immédiat non mis à l’échelle (LDUR, LDURB…) ; succès en cache de données L1 supposé ; le LDR littéral vaut 5 cycles dans la même table.",
+   "conditionsEn": "Arm Neoverse V3 (r0p2, SOG Issue 3.0); AArch64 integer loads with unscaled immediate offset (LDUR, LDURB...); latency assumes an L1 data cache hit; literal-pool LDR is 5 cycles in the same table.",
+   "notes": ""
+  },
+  {
+   "id": "arm-cortex-a520-l1-hit-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://documentation-service.arm.com/static/65fddf771bc22b03bca907cb",
+   "evidence": "Table 4-1 'Cortex-A520 cache access latencies' (p.77/77): 'L1 cache hit 2-4 cycles (2 is best case, 4 is normal case)'. Cover: Revision r0p1, Issue 1.2.",
+   "fix": null,
+   "labelFr": "Latence d’un succès en cache L1, Arm Cortex-A520",
+   "labelEn": "L1 cache hit latency, Arm Cortex-A520",
+   "conditionsFr": "Arm Cortex-A520 (r0p1) ; 2 cycles dans le meilleur cas, 4 cycles dans le cas normal ; la valeur retenue est le cas normal.",
+   "conditionsEn": "Arm Cortex-A520 (r0p1); 2 cycles best case, 4 cycles normal case; the value is the normal case.",
+   "notes": ""
+  },
+  {
+   "id": "arm-cortex-a520-l2-hit-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://documentation-service.arm.com/static/65fddf771bc22b03bca907cb",
+   "evidence": "Table 4-1 (p.77): 'L2 cache hit 10-12 cycles (10 is best case, 11-12 is normal case)'.",
+   "fix": null,
+   "labelFr": "Latence d’un succès en cache L2, Arm Cortex-A520",
+   "labelEn": "L2 cache hit latency, Arm Cortex-A520",
+   "conditionsFr": "Arm Cortex-A520 (r0p1) ; 10 cycles dans le meilleur cas, 11 à 12 cycles dans le cas normal ; la valeur 11 est le bas de la plage du cas normal.",
+   "conditionsEn": "Arm Cortex-A520 (r0p1); 10 cycles best case, 11-12 cycles normal case; the value 11 is the low end of the normal-case range.",
+   "notes": "Point chosen in a range; this is stated in conditions, and low/high (10/12) are given."
+  },
+  {
+   "id": "intel-8080-initial-clock",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.intel.com/content/dam/www/public/us/en/documents/corporate-information/history-intel-chips-timeline-poster.pdf",
+   "evidence": "pdftotext -bbox: '1974', '8080' column and 'Initial clock speed:' value '2MHz' share xMin≈266.0. Footer: Copyright 2012, 327635-001US.",
+   "fix": {
+    "conditions": "Intel 8080, year 1974 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel."
+   },
+   "labelFr": "Fréquence d’horloge initiale de l’Intel 8080",
+   "labelEn": "Initial clock speed, Intel 8080",
+   "conditionsFr": "Intel 8080, année 1974 sur l’affiche chronologique des puces Intel (2012, 327635-001US) ; « fréquence d’horloge initiale » telle qu’indiquée par Intel.",
+   "conditionsEn": "Intel 8080, year 1974 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel.",
+   "notes": "Value confirmed (PDF obtained via WebFetch, curl got HTTP 403). Conditions fix: '(first shipped speed grade)' is an interpretation not stated on the poster; the poster only gives a year per chip, not an introduction date wording."
+  },
+  {
+   "id": "intel-80286-initial-clock",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.intel.com/content/dam/www/public/us/en/documents/corporate-information/history-intel-chips-timeline-poster.pdf",
+   "evidence": "pdftotext -bbox: '1982', '286' column and 'Initial clock speed:' value '6MHz' share xMin≈468.8. Footer: Copyright 2012, 327635-001US.",
+   "fix": {
+    "conditions": "Intel 286, year 1982 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel."
+   },
+   "labelFr": "Fréquence d’horloge initiale de l’Intel 286 (80286)",
+   "labelEn": "Initial clock speed, Intel 286",
+   "conditionsFr": "Intel 286, année 1982 sur l’affiche chronologique des puces Intel (2012, 327635-001US) ; « fréquence d’horloge initiale » telle qu’indiquée par Intel.",
+   "conditionsEn": "Intel 286, year 1982 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel.",
+   "notes": "Value confirmed (PDF obtained via WebFetch, curl got HTTP 403). Conditions fix: '(first shipped speed grade)' is an interpretation not stated on the poster; the poster only gives a year per chip, not an introduction date wording."
+  },
+  {
+   "id": "intel-80386-initial-clock",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.intel.com/content/dam/www/public/us/en/documents/corporate-information/history-intel-chips-timeline-poster.pdf",
+   "evidence": "pdftotext -bbox: '1985', 'Intel386' column and 'Initial clock speed:' value '16MHz' share xMin≈570.6. Footer: Copyright 2012, 327635-001US.",
+   "fix": {
+    "conditions": "Intel386, year 1985 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel."
+   },
+   "labelFr": "Fréquence d’horloge initiale de l’Intel386 (80386)",
+   "labelEn": "Initial clock speed, Intel386",
+   "conditionsFr": "Intel386, année 1985 sur l’affiche chronologique des puces Intel (2012, 327635-001US) ; « fréquence d’horloge initiale » telle qu’indiquée par Intel.",
+   "conditionsEn": "Intel386, year 1985 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel.",
+   "notes": "Value confirmed (PDF obtained via WebFetch, curl got HTTP 403). Conditions fix: '(first shipped speed grade)' is an interpretation not stated on the poster; the poster only gives a year per chip, not an introduction date wording."
+  },
+  {
+   "id": "intel-80486-initial-clock",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.intel.com/content/dam/www/public/us/en/documents/corporate-information/history-intel-chips-timeline-poster.pdf",
+   "evidence": "pdftotext -bbox: '1989', 'Intel486' column and 'Initial clock speed:' value '25MHz' share xMin≈672.8. Footer: Copyright 2012, 327635-001US.",
+   "fix": {
+    "conditions": "Intel486, year 1989 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel."
+   },
+   "labelFr": "Fréquence d’horloge initiale de l’Intel486 (80486)",
+   "labelEn": "Initial clock speed, Intel486",
+   "conditionsFr": "Intel486, année 1989 sur l’affiche chronologique des puces Intel (2012, 327635-001US) ; « fréquence d’horloge initiale » telle qu’indiquée par Intel.",
+   "conditionsEn": "Intel486, year 1989 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel.",
+   "notes": "Value confirmed (PDF obtained via WebFetch, curl got HTTP 403). Conditions fix: '(first shipped speed grade)' is an interpretation not stated on the poster; the poster only gives a year per chip, not an introduction date wording."
+  },
+  {
+   "id": "intel-pentium-initial-clock",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.intel.com/content/dam/www/public/us/en/documents/corporate-information/history-intel-chips-timeline-poster.pdf",
+   "evidence": "pdftotext -bbox: '1993', 'Pentium' column and 'Initial clock speed:' value '66MHz' share xMin≈773.7. Footer: Copyright 2012, 327635-001US.",
+   "fix": {
+    "conditions": "Intel Pentium, year 1993 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel."
+   },
+   "labelFr": "Fréquence d’horloge initiale de l’Intel Pentium",
+   "labelEn": "Initial clock speed, Intel Pentium",
+   "conditionsFr": "Intel Pentium, année 1993 sur l’affiche chronologique des puces Intel (2012, 327635-001US) ; « fréquence d’horloge initiale » telle qu’indiquée par Intel.",
+   "conditionsEn": "Intel Pentium, year 1993 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel.",
+   "notes": "Value confirmed (PDF obtained via WebFetch, curl got HTTP 403). Conditions fix: '(first shipped speed grade)' is an interpretation not stated on the poster; the poster only gives a year per chip, not an introduction date wording."
+  },
+  {
+   "id": "intel-pentium-pro-initial-clock",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.intel.com/content/dam/www/public/us/en/documents/corporate-information/history-intel-chips-timeline-poster.pdf",
+   "evidence": "pdftotext -bbox: '1995', 'Pentium Pro' column and 'Initial clock speed:' value '200MHz' share xMin≈875.2. Footer: Copyright 2012, 327635-001US.",
+   "fix": {
+    "conditions": "Intel Pentium Pro, year 1995 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel."
+   },
+   "labelFr": "Fréquence d’horloge initiale de l’Intel Pentium Pro",
+   "labelEn": "Initial clock speed, Intel Pentium Pro",
+   "conditionsFr": "Intel Pentium Pro, année 1995 sur l’affiche chronologique des puces Intel (2012, 327635-001US) ; « fréquence d’horloge initiale » telle qu’indiquée par Intel.",
+   "conditionsEn": "Intel Pentium Pro, year 1995 on the Intel chips timeline poster (2012, 327635-001US); 'initial clock speed' as stated by Intel.",
+   "notes": "Value confirmed (PDF obtained via WebFetch, curl got HTTP 403). Conditions fix: '(first shipped speed grade)' is an interpretation not stated on the poster; the poster only gives a year per chip, not an introduction date wording."
+  },
+  {
+   "id": "amd-athlon-1ghz-2000",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://cpushack.com/CIC/announce/2000/k7.1000.html",
+   "evidence": "'AMD ATHLON PROCESSOR ROCKETS TO 1 GHz -AMD reaches industry landmark; announces 1GHz (1,000 MHz) AMD Athlon processor-' SUNNYVALE, CA--March 6, 2000 ... commencement of shipments",
+   "fix": {
+    "conditions": "AMD Athlon at 1 GHz (1,000 MHz); AMD announced commencement of shipments on 6 March 2000; first commercially available systems from Compaq and Gateway."
+   },
+   "labelFr": "Fréquence du premier AMD Athlon à 1 GHz (mars 2000)",
+   "labelEn": "Clock frequency of the first 1 GHz AMD Athlon (March 2000)",
+   "conditionsFr": "AMD Athlon à 1 GHz (1 000 MHz) ; AMD annonce le début des livraisons le 6 mars 2000 ; premiers systèmes commerciaux chez Compaq et Gateway.",
+   "conditionsEn": "AMD Athlon at 1 GHz (1,000 MHz); AMD announced commencement of shipments on 6 March 2000; first commercially available systems from Compaq and Gateway.",
+   "notes": "Value confirmed. Conditions fix: the codename 'K7' does not appear in the release (only in the mirror URL). Copy hosted by a third party (CPU Shack), labelled 'Original Document'."
+  },
+  {
+   "id": "motorola-mc68000-8mhz-max-frequency",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://web-docs.gsi.de/~kraemer/COLLECTION/MOTOROLA/m68000um.pdf",
+   "evidence": "§10.8 p.10-8: 'Frequency of Operation 4.0 8.0 4.0 10.0 4.0 12.5 8.0 16.7 8.0 16.7 8.0 20.0 MHz'; 'Cycle Time 125 250'; footnote: date codes of 8827 and later.",
+   "fix": {
+    "conditions": "Motorola MC68000, 8 MHz grade: frequency of operation 4.0 MHz min, 8.0 MHz max (value = max); cycle time 125-250 ns; valid for date codes 8827 and later. Other columns: 10, 12.5, 16.67 MHz (12F), 16 MHz and 20 MHz (20 MHz only for MC68HC000 and MC68EC000)."
+   },
+   "labelFr": "Fréquence de fonctionnement maximale du MC68000, version 8 MHz",
+   "labelEn": "Maximum operating frequency, MC68000 8 MHz grade",
+   "conditionsFr": "Motorola MC68000, version 8 MHz : fréquence de fonctionnement de 4,0 MHz minimum à 8,0 MHz maximum (valeur = maximum) ; temps de cycle 125 à 250 ns ; valable pour les codes de date 8827 et suivants. Autres colonnes : 10, 12,5, 16,67 MHz (12F), 16 MHz et 20 MHz (20 MHz pour les MC68HC000 et MC68EC000 seulement).",
+   "conditionsEn": "Motorola MC68000, 8 MHz grade: frequency of operation 4.0 MHz min, 8.0 MHz max (value = max); cycle time 125-250 ns; valid for date codes 8827 and later. Other columns: 10, 12.5, 16.67 MHz (12F), 16 MHz and 20 MHz (20 MHz only for MC68HC000 and MC68EC000).",
+   "notes": "Value confirmed. Conditions fix: the 16 MHz column was missing from the list of other grades. Section 10.8 states it applies to all processors except the MC68EC000, while the 20 MHz footnote names the MC68EC000: an internal inconsistency of the manual."
+  },
+  {
+   "id": "hbm3e-micron-stack-bandwidth",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.micron.com/products/memory/hbm/hbm3e",
+   "evidence": "FAQ: 'Micron’s HBM3E 8-high and 12-high solutions deliver an industry-leading bandwidth of more than 1.2 TB/s per placement. HBM3E has 1024 IO pins ... greater than 9.2Gbps'",
+   "fix": null,
+   "labelFr": "Débit par pile HBM3E (Micron, 8 et 12 couches)",
+   "labelEn": "Bandwidth per HBM3E stack (Micron 8-high / 12-high)",
+   "conditionsFr": "Micron HBM3E 8 couches (24 Go) et 12 couches (36 Go), par emplacement ; 1024 broches d’E/S à plus de 9,2 Gbit/s ; « plus de » 1,2 To/s : valeur plancher.",
+   "conditionsEn": "Micron HBM3E 8-high (24 GB) and 12-high (36 GB), per placement; 1024 I/O pins at above 9.2 Gb/s; 'more than' 1.2 TB/s: lower bound.",
+   "notes": "Source says 'per placement'; reading it as per stack is consistent with 1024 IO pins but is an interpretation."
+  },
+  {
+   "id": "hbm3e-micron-pin-speed",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.micron.com/products/memory/hbm/hbm3e",
+   "evidence": "FAQ 'What is the data rate of Micron’s HBM3E': '8-high and 12-high modules deliver an industry-leading pin speed of greater than 9.2Gbps'",
+   "fix": null,
+   "labelFr": "Débit par broche, HBM3E Micron",
+   "labelEn": "Pin data rate, Micron HBM3E",
+   "conditionsFr": "Micron HBM3E 8 et 12 couches ; par broche d’E/S ; « supérieur à 9,2 Gbit/s » : valeur plancher.",
+   "conditionsEn": "Micron HBM3E 8-high and 12-high; per I/O pin; 'greater than 9.2Gbps': lower bound.",
+   "notes": ""
+  },
+  {
+   "id": "hbm3e-samsung-12h-stack-bandwidth",
+   "verdict": "confirmed",
+   "checkedUrl": "https://semiconductor.samsung.com/dram/hbm/hbm3e/",
+   "evidence": "Product page: 'Its 12-layer stack offers up to 1,180GB/s bandwidth at 9.2Gbps'",
+   "fix": null,
+   "labelFr": "Débit par pile HBM3E à 12 couches (Samsung)",
+   "labelEn": "Bandwidth per HBM3E 12-high stack (Samsung)",
+   "conditionsFr": "Samsung HBM3E, pile de 12 couches, à 9,2 Gbit/s ; « jusqu’à » 1 180 Go/s : valeur maximale annoncée.",
+   "conditionsEn": "Samsung HBM3E 12-layer stack at 9.2 Gbps; 'up to' 1,180 GB/s: maximum stated.",
+   "notes": ""
+  },
+  {
+   "id": "hbm3-samsung-stack-bandwidth",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://semiconductor.samsung.com/dram/hbm/hbm3-icebolt/",
+   "evidence": "'The HBM3 takes performance to a whole new level, with processing speeds up to 6.4Gbps and bandwidth that reaches 819GB/s.' Also: 'HBM3 stacks 12 layers of ... 16 Gb DRAM dies for 24GB'.",
+   "fix": {
+    "conditions": "Samsung HBM3 (Icebolt), 12-layer 24 GB device; bandwidth 'reaches' 819 GB/s (maximum stated) with processing speeds 'up to' 6.4 Gbps; the page does not say 'per stack' or 'per pin' explicitly."
+   },
+   "labelFr": "Débit par pile HBM3 (Samsung Icebolt)",
+   "labelEn": "Bandwidth per HBM3 stack (Samsung Icebolt)",
+   "conditionsFr": "Samsung HBM3 (Icebolt), composant de 12 couches et 24 Go ; débit qui « atteint » 819 Go/s (maximum annoncé), à des vitesses « jusqu’à » 6,4 Gbit/s ; la page ne précise pas explicitement « par pile » ni « par broche ».",
+   "conditionsEn": "Samsung HBM3 (Icebolt), 12-layer 24 GB device; bandwidth 'reaches' 819 GB/s (maximum stated) with processing speeds 'up to' 6.4 Gbps; the page does not say 'per stack' or 'per pin' explicitly.",
+   "notes": "Value confirmed. Conditions fix: 819 GB/s is a maximum ('reaches'), not flagged as such; 'per stack' is an inference (consistent with the 24 GB 12-layer device)."
+  },
+  {
+   "id": "lpddr5x-samsung-pin-speed",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://semiconductor.samsung.com/dram/lpddr/lpddr5x/",
+   "evidence": "'Bar-raising speed ... LPDDR5X emerges as the ideal solution, showcasing a remarkable upgrade to up to 10.7 Gbps data processing speeds.'",
+   "fix": {
+    "conditions": "Samsung LPDDR5X; data processing speed 'up to' 10.7 Gbps (maximum stated on the product page); per-pin rate implied, not stated."
+   },
+   "labelFr": "Débit par broche, LPDDR5X Samsung",
+   "labelEn": "Data rate per pin, Samsung LPDDR5X",
+   "conditionsFr": "Samsung LPDDR5X ; vitesse de traitement « jusqu’à » 10,7 Gbit/s (maximum annoncé sur la page produit) ; débit par broche sous-entendu, non écrit.",
+   "conditionsEn": "Samsung LPDDR5X; data processing speed 'up to' 10.7 Gbps (maximum stated on the product page); per-pin rate implied, not stated.",
+   "notes": "Value confirmed. Conditions fix: '(fastest bin advertised on the page at access date)' is not in the source; the page does not say 'per pin'."
+  },
+  {
+   "id": "linux-kpti-entry-exit-cost-haswell",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.eecg.toronto.edu/~stumm/Papers/Ren-sosp-19.pdf",
+   "evidence": "p.7 §4.1.1: 'With KPTI, the lower-bound of the constant cost is on the order of 400–500 cycles'; 'Writing to CR3 is expensive, costing around 200 cycles'; footnote 1 method.",
+   "fix": {
+    "protocol": "KPTI constant cost measured by comparing an empty system call with and without the KPTI patch, measuring cycles spent in the MMU TLB miss handler, and subtracting that increase from the overall latency increase (footnote 1). HP DL160 G9 server, Intel Xeon E5-2630 v3 2.40 GHz, 128 GB DDR4 1866 MHz; Ubuntu-configured Linux kernels 3.0 to 4.20. The paper's general LEBench method (10,000 repetitions, K-best K=5, 5% tolerance) is described for its microbenchmarks; the paper does not say it was applied to this empty-system-call figure.",
+    "conditions": "Intel Xeon E5-2630 v3, Linux with KPTI (introduced after 4.14), with or without PCID; the lower bound of KPTI's constant cost per kernel entry and exit is 'on the order of 400–500 cycles'; value 400 = low end of that range; mainly two CR3 writes of around 200 cycles each."
+   },
+   "labelFr": "Surcoût constant de KPTI par entrée et sortie du noyau (Xeon E5-2630 v3)",
+   "labelEn": "Constant cost of KPTI per kernel entry and exit (Xeon E5-2630 v3)",
+   "conditionsFr": "Intel Xeon E5-2630 v3, Linux avec KPTI (introduit après la 4.14), avec ou sans PCID ; la borne basse du coût constant de KPTI par entrée et sortie du noyau est « de l’ordre de 400 à 500 cycles » ; la valeur 400 est le bas de cette plage ; coût dominé par deux écritures de CR3 d’environ 200 cycles chacune.",
+   "conditionsEn": "Intel Xeon E5-2630 v3, Linux with KPTI (introduced after 4.14), with or without PCID; the lower bound of KPTI's constant cost per kernel entry and exit is 'on the order of 400–500 cycles'; value 400 = low end of that range; mainly two CR3 writes of around 200 cycles each.",
+   "notes": "Value is the low end of an approximate range that is itself a lower bound; stated in conditions. Protocol fix: LEBench K-best method not stated for this figure; KPTI footnote method kept."
+  },
+  {
+   "id": "linux-kernel-entry-exit-no-kpti-haswell",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.eecg.toronto.edu/~stumm/Papers/Ren-sosp-19.pdf",
+   "evidence": "p.7 §4.1.1: 'whereas without KPTI, the kernel entry and exit overhead is less than 100 cycles.1'",
+   "fix": {
+    "protocol": "Same comparison as footnote 1 (empty system call with and without the KPTI patch); the paper gives no separate method for this figure. HP DL160 G9 server, Intel Xeon E5-2630 v3 2.40 GHz, 128 GB DDR4 1866 MHz; Ubuntu-configured Linux kernels 3.0 to 4.20.",
+    "conditions": "Intel Xeon E5-2630 v3, Linux without the KPTI patch; kernel entry and exit overhead 'less than 100 cycles': 100 is an upper bound."
+   },
+   "labelFr": "Coût d’entrée et de sortie du noyau sans KPTI (Xeon E5-2630 v3)",
+   "labelEn": "Kernel entry and exit overhead without KPTI (Xeon E5-2630 v3)",
+   "conditionsFr": "Intel Xeon E5-2630 v3, Linux sans le correctif KPTI ; coût d’entrée et de sortie du noyau « inférieur à 100 cycles » : 100 est une borne haute.",
+   "conditionsEn": "Intel Xeon E5-2630 v3, Linux without the KPTI patch; kernel entry and exit overhead 'less than 100 cycles': 100 is an upper bound.",
+   "notes": "Upper bound, stated. Protocol fix: the LEBench K-best method is not stated for this figure."
+  },
+  {
+   "id": "linux-retpoline-indirect-branch-cost",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.eecg.toronto.edu/~stumm/Papers/Ren-sosp-19.pdf",
+   "evidence": "Table 3 (p.5): 'Avoid indirect branch speculation (§4.1.2) | Mitigates Spectre (v2) ... | Adds around 30 cycles to each indirect jump or call.' §4.1.2: Retpoline patch, version 4.14.",
+   "fix": {
+    "protocol": "Not described: Table 3 gives 'around 30 cycles' per indirect jump or call without a measurement method; Table 3 results obtained with PCID enabled (footnote 2). HP DL160 G9 server, Intel Xeon E5-2630 v3 2.40 GHz, 128 GB DDR4 1866 MHz; Ubuntu-configured Linux kernels 3.0 to 4.20.",
+    "conditions": "Linux 'avoid indirect branch speculation' (Retpoline patch, introduced in 4.14, Spectre v2 mitigation), Intel Xeon E5-2630 v3; 'around 30 cycles' added to each indirect jump or call (approximate)."
+   },
+   "labelFr": "Surcoût par saut ou appel indirect avec la parade Spectre v2 (Xeon E5-2630 v3)",
+   "labelEn": "Added cost per indirect jump or call with Spectre v2 mitigation (Xeon E5-2630 v3)",
+   "conditionsFr": "Linux « avoid indirect branch speculation » (correctif Retpoline, introduit en 4.14, parade contre Spectre v2), Intel Xeon E5-2630 v3 ; « environ 30 cycles » ajoutés à chaque saut ou appel indirect (valeur approchée).",
+   "conditionsEn": "Linux 'avoid indirect branch speculation' (Retpoline patch, introduced in 4.14, Spectre v2 mitigation), Intel Xeon E5-2630 v3; 'around 30 cycles' added to each indirect jump or call (approximate).",
+   "notes": "Protocol fix: the shared protocol text described the KPTI footnote, which does not apply here; the paper gives no method for the 30-cycle figure. Consider provenanceType 'estimated' ('around')."
+  },
+  {
+   "id": "linux-read-syscall-baseline-haswell",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.eecg.toronto.edu/~stumm/Papers/Ren-sosp-19.pdf",
+   "evidence": "p.7: 'For the shortest read test with a baseline latency of 344ns, the PCID optimization reduces the slowdown from 113% to 47%.' Fig. 3: slowdown with increasing baseline latency.",
+   "fix": {
+    "protocol": "LEBench read test, page cache warmed before measurement, each measurement repeated 10,000 times and reported with the K-best method (K=5, 5% tolerance). HP DL160 G9 server, Intel Xeon E5-2630 v3 2.40 GHz, 128 GB DDR4 1866 MHz; Ubuntu-configured Linux kernels 3.0 to 4.20.",
+    "conditions": "LEBench read test with the shortest baseline latency in Figure 3 (read slowdown due to KPTI vs baseline latency), Intel Xeon E5-2630 v3; baseline without KPTI = 344 ns; KPTI slowdown 113% without PCID, 47% with PCID."
+   },
+   "labelFr": "Latence du plus court test read() sans KPTI (Xeon E5-2630 v3)",
+   "labelEn": "Latency of the shortest read() test without KPTI (Xeon E5-2630 v3)",
+   "conditionsFr": "Test read de LEBench ayant la plus courte latence de référence de la figure 3 (ralentissement dû à KPTI selon la latence de référence), Intel Xeon E5-2630 v3 ; latence de référence sans KPTI = 344 ns ; ralentissement par KPTI de 113 % sans PCID, 47 % avec PCID.",
+   "conditionsEn": "LEBench read test with the shortest baseline latency in Figure 3 (read slowdown due to KPTI vs baseline latency), Intel Xeon E5-2630 v3; baseline without KPTI = 344 ns; KPTI slowdown 113% without PCID, 47% with PCID.",
+   "notes": "Conditions fix: the paper does not say the shortest read test is a single 4 kB page nor tie the baseline to a '4.14-era' kernel; 'shortest' refers to baseline latency (Fig. 3). Protocol fix: KPTI footnote removed (not relevant)."
+  },
+  {
+   "id": "linux-minor-page-fault-sandybridge",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/pdf/1811.01412",
+   "evidence": "Table 2 (p.2): 'minor page fault most frequent ≈1,000 .. 4,000'; Table 1: i7-2640M @2.8GHz, Debian 8.11, 3.16.51-3. §2.2.4: 'Our kernel has KPTI enabled, but no PCID support.'",
+   "fix": {
+    "conditions": "Intel Core i7-2640M (Sandy Bridge, microcode 0x25) at 2.8 GHz, Debian 8.11, Linux 3.16.51-3; 'most frequent' minor page fault cost ≈1,000 to 4,000 cycles; value 1,000 = low end of that range. The paper states its kernel has KPTI enabled without PCID support; it does not say whether Table 2 was measured with KPTI on."
+   },
+   "labelFr": "Coût d’un défaut de page mineur (Core i7-2640M, Linux 3.16)",
+   "labelEn": "Minor page fault cost (Core i7-2640M, Linux 3.16)",
+   "conditionsFr": "Intel Core i7-2640M (Sandy Bridge, microcode 0x25) à 2,8 GHz, Debian 8.11, Linux 3.16.51-3 ; coût « le plus fréquent » d’un défaut de page mineur d’environ 1 000 à 4 000 cycles ; la valeur 1 000 est le bas de cette plage. L’article indique que son noyau a KPTI activé sans PCID ; il ne dit pas si la table 2 a été mesurée avec KPTI.",
+   "conditionsEn": "Intel Core i7-2640M (Sandy Bridge, microcode 0x25) at 2.8 GHz, Debian 8.11, Linux 3.16.51-3; 'most frequent' minor page fault cost ≈1,000 to 4,000 cycles; value 1,000 = low end of that range. The paper states its kernel has KPTI enabled without PCID support; it does not say whether Table 2 was measured with KPTI on.",
+   "notes": "Conditions fix: 'mitigation status not stated' is wrong, the report states KPTI enabled without PCID (§2.2.4) and later disables it with pti=off for its proposed setup. Value = low end of a 4x range; the range must be displayed, not 1,000 alone."
+  }
+ ]
+}

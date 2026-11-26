@@ -5,7 +5,8 @@
  *   duration → s, frequency → Hz, throughput → B/s (byte per second),
  *   transfer_rate → T/s (transfers per second, NOT bytes), distance → m,
  *   speed → m/s, data_size → B, cycle_count → cycles (dimensionless count
- *   that only makes sense with the clock domain of a named component).
+ *   that only makes sense with the clock domain of a named component),
+ *   compute_rate → flop/s (precision and benchmark stated in conditions).
  *
  * Rounding happens only at display time (CS-03).
  */
@@ -19,6 +20,7 @@ export const QUANTITY_KINDS = [
   'speed',
   'data_size',
   'cycle_count',
+  'compute_rate',
 ] as const;
 export type QuantityKind = (typeof QUANTITY_KINDS)[number];
 
@@ -31,6 +33,7 @@ export const BASE_UNIT: Readonly<Record<QuantityKind, string>> = {
   speed: 'm/s',
   data_size: 'B',
   cycle_count: 'cycles',
+  compute_rate: 'flop/s',
 };
 
 /** Exact SI constants (BIPM SI Brochure, 9th ed.). */
@@ -106,6 +109,12 @@ export const UNITS: Readonly<Record<string, UnitDef>> = {
   GiB: U('data_size', 1024 ** 3),
   // cycle count
   cycles: U('cycle_count', 1),
+  // compute rate (floating-point operations per second; precision stated in conditions)
+  'flop/s': U('compute_rate', 1),
+  'Gflop/s': U('compute_rate', 1e9),
+  'Tflop/s': U('compute_rate', 1e12),
+  'Pflop/s': U('compute_rate', 1e15),
+  'Eflop/s': U('compute_rate', 1e18),
 };
 
 export class DimensionError extends Error {

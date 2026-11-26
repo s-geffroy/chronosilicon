@@ -51,7 +51,7 @@ const fr = {
   'timeline.interval': 'intervalle {low} – {high}',
   'other.heading': 'Autres grandeurs (non temporelles)',
   'other.intro':
-    'Fréquences, débits, distances : elles ne se placent pas sur l’axe des durées. Un débit ne se compare pas à une latence sans taille de travail.',
+    'Fréquences, débits, distances, puissances de calcul : elles ne se placent pas sur l’axe des durées. Un débit ne se compare pas à une latence sans taille de travail.',
   'cycles.heading': 'Latences exprimées en cycles',
   'cycles.intro':
     'Ces valeurs comptent les cycles du cœur concerné. Les convertir en secondes exigerait la fréquence effective de ce cœur : elles ne sont donc pas placées sur l’axe.',
@@ -317,7 +317,7 @@ const en: Record<MessageKey, string> = {
   'timeline.interval': 'range {low} – {high}',
   'other.heading': 'Other quantities (not durations)',
   'other.intro':
-    'Frequencies, throughputs, distances do not belong on the duration axis. A throughput cannot be compared to a latency without a work size.',
+    'Frequencies, throughputs, distances, compute rates do not belong on the duration axis. A throughput cannot be compared to a latency without a work size.',
   'cycles.heading': 'Latencies expressed in cycles',
   'cycles.intro':
     'These values count cycles of the given core. Converting them to seconds would require that core’s effective frequency, so they are not placed on the axis.',

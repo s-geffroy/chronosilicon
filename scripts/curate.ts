@@ -20,6 +20,8 @@ interface RawItem {
   low: number | null; high: number | null; conditions: string; provenanceType: ProvenanceType;
   calculation: null | string | { formula: string; inputs: string[] }; sourceId: string; locator: string; quote: string | null;
   era: string | number | null; confidenceNotes: string | null;
+  /** Strict extractions (lot 2+): protocol written by the extractor for measured values. */
+  protocol?: string | null;
 }
 interface RawFile { accessedAt: string; sources: RawSource[]; items: RawItem[] }
 type VerdictKind = 'confirmed' | 'confirmed_with_fix' | 'mismatch' | 'unreachable' | 'inadequate';
@@ -126,14 +128,14 @@ for (const f of rawFiles) {
     const calc = it.calculation;
     const calculation = calc === null || calc === undefined ? null
       : typeof calc === 'string' ? { formula: calc, inputs: [...calc.matchAll(/[a-z0-9]+(?:-[a-z0-9]+)+/g)].map((m) => m[0]).filter((x) => x !== it.id && allItemIds.has(x)) }
-      : { formula: calc.formula, inputs: calc.inputs.filter((x) => allItemIds.has(x)) };
+      : { formula: calc.formula, inputs: calc.inputs.filter((x) => allItemIds.has(x) || x.startsWith('src:')).map((x) => (x.startsWith('src:') ? `src:${slug(x.slice(4))}` : x)) };
     // Inputs must be extracted items or explicit references to a cited source
     // ('src:<id>'); nothing is filled in automatically (review M-2/M-3).
     if (calculation && Object.hasOwn(patch, 'calculationInputs')) calculation.inputs = patch['calculationInputs'] as string[];
     if (calculation && Object.hasOwn(patch, 'calculationFormula')) calculation.formula = String(patch['calculationFormula']);
     // Never synthesised: a measured value needs an explicitly written protocol
     // (decisions.json), otherwise validate:data fails (review M-1).
-    const protocol = (Object.hasOwn(patch, 'protocol') ? patch['protocol'] : null) as string | null;
+    const protocol = (pick('protocol', it.protocol ?? null) ?? null) as string | null;
     if (!isKnownUnit(unit)) { status = 'rejected'; why.push(`unit ${unit} unknown`); }
     if (d?.status) { status = d.status; why.push(`decision: ${d.reason}`); }
     phenomena.push({
@@ -156,7 +158,8 @@ for (const f of rawFiles) {
       protocol,
       provenanceType,
       verificationStatus: status,
-      sourceIds: [slug(it.sourceId)],
+      // A source used as a calculation input is cited too (it carries part of the value).
+      sourceIds: [...new Set([slug(it.sourceId), ...(calculation?.inputs ?? []).filter((x) => x.startsWith('src:')).map((x) => x.slice(4))])],
       locator: String(pick('locator', it.locator)),
       quote: clip(pick('quote', it.quote) as string | null),
       era: Object.hasOwn(patch, 'era') ? (patch['era'] as number | null) : parseEra(pick('era', it.era)),

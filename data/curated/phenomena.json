@@ -1330,6 +1330,1126 @@
         "en": "Solidigm D7-P5520 mean 4 KB random read latency at QD16 (derived)"
       },
       "description": null
+    },
+    {
+      "id": "fdsoi28-ro-stage-delay-296k-1v",
+      "domain": "logic",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Délai par étage d’un oscillateur en anneau, FD-SOI 28 nm, 296 K, 1,0 V",
+        "en": "Ring-oscillator delay per stage, 28 nm FD-SOI, 296 K, 1.0 V"
+      },
+      "description": null
+    },
+    {
+      "id": "fdsoi28-ro-stage-delay-4k-0v325",
+      "domain": "logic",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Délai par étage d’un oscillateur en anneau, FD-SOI 28 nm, 4,3 K, 0,325 V sous polarisation arrière directe",
+        "en": "Ring-oscillator delay per stage, 28 nm FD-SOI, 4.3 K, 0.325 V with forward body bias"
+      },
+      "description": null
+    },
+    {
+      "id": "fdsoi28-ro101-frequency-296k-1v",
+      "domain": "logic",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d’oscillation de l’anneau à 101 étages, FD-SOI 28 nm, 296 K, 1,0 V",
+        "en": "Oscillation frequency of the 101-stage ring oscillator, 28 nm FD-SOI, 296 K, 1.0 V"
+      },
+      "description": null
+    },
+    {
+      "id": "ihp-sg13g2-hbt-ft",
+      "domain": "logic",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de transition fT du TBH SiGe, IHP SG13G2 (BiCMOS 0,13 µm)",
+        "en": "SiGe HBT transit frequency fT, IHP SG13G2 (0.13 µm BiCMOS)"
+      },
+      "description": null
+    },
+    {
+      "id": "ihp-sg13g2-hbt-fmax",
+      "domain": "logic",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence maximale d’oscillation fmax du TBH SiGe, IHP SG13G2",
+        "en": "SiGe HBT maximum oscillation frequency fmax, IHP SG13G2"
+      },
+      "description": null
+    },
+    {
+      "id": "ihp-sg13g3-hbt-ft",
+      "domain": "logic",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de transition fT du TBH SiGe, IHP SG13G3",
+        "en": "SiGe HBT transit frequency fT, IHP SG13G3"
+      },
+      "description": null
+    },
+    {
+      "id": "ihp-sg13g3-hbt-fmax",
+      "domain": "logic",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence maximale d’oscillation fmax du TBH SiGe, IHP SG13G3",
+        "en": "SiGe HBT maximum oscillation frequency fmax, IHP SG13G3"
+      },
+      "description": null
+    },
+    {
+      "id": "ngc-inp-hemt-25nm-fmax",
+      "domain": "logic",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence maximale d’oscillation fmax d’un HEMT InP à grille de 25 nm (Northrop Grumman, 2015)",
+        "en": "Maximum oscillation frequency fmax of a 25 nm InP HEMT (Northrop Grumman, 2015)"
+      },
+      "description": null
+    },
+    {
+      "id": "ngc-inp-hemt-25nm-ft",
+      "domain": "logic",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de coupure fT d’un HEMT InP à grille de 25 nm (Northrop Grumman, 2015)",
+        "en": "Cut-off frequency fT of a 25 nm InP HEMT (Northrop Grumman, 2015)"
+      },
+      "description": null
+    },
+    {
+      "id": "willow-surface-code-cycle-time",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d’un cycle de correction d’erreurs (code de surface), processeur supraconducteur Google de 72 qubits",
+        "en": "Surface-code error-correction cycle time, Google 72-qubit superconducting processor"
+      },
+      "description": null
+    },
+    {
+      "id": "willow-mean-t1",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de relaxation T1 moyen des qubits, processeur Google de 105 qubits",
+        "en": "Mean qubit energy-relaxation time T1, Google 105-qubit processor"
+      },
+      "description": null
+    },
+    {
+      "id": "willow-mean-t2-cpmg",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de cohérence T2 (CPMG) moyen des qubits, processeur Google de 105 qubits",
+        "en": "Mean qubit coherence time T2 (CPMG), Google 105-qubit processor"
+      },
+      "description": null
+    },
+    {
+      "id": "willow-cz-gate-duration",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d’une porte CZ à deux qubits, processeur Google de 105 qubits",
+        "en": "Two-qubit CZ gate duration, Google 105-qubit processor"
+      },
+      "description": null
+    },
+    {
+      "id": "willow-single-qubit-gate-duration",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d’une rotation XY à un qubit, processeur Google de 105 qubits",
+        "en": "Single-qubit XY rotation duration, Google 105-qubit processor"
+      },
+      "description": null
+    },
+    {
+      "id": "willow-realtime-decoder-latency-d5",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence moyenne du décodeur temps réel, code de surface de distance 5, processeur Google de 72 qubits",
+        "en": "Average real-time decoder latency, distance-5 surface code, Google 72-qubit processor"
+      },
+      "description": null
+    },
+    {
+      "id": "heron-r1-median-t1",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "T1 médian des qubits, IBM Heron R1 (ibm_montecarlo, sous-ensemble de 57 qubits)",
+        "en": "Median qubit T1, IBM Heron R1 (ibm_montecarlo, 57-qubit subset)"
+      },
+      "description": null
+    },
+    {
+      "id": "heron-r1-cz-gate-length",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée de la porte à deux qubits, IBM Heron R1 (ibm_montecarlo)",
+        "en": "Two-qubit gate length, IBM Heron R1 (ibm_montecarlo)"
+      },
+      "description": null
+    },
+    {
+      "id": "heron-r1-single-qubit-gate-length",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d’une porte à un qubit, IBM Heron R1 (ibm_montecarlo)",
+        "en": "Single-qubit gate length, IBM Heron R1 (ibm_montecarlo)"
+      },
+      "description": null
+    },
+    {
+      "id": "imec-sot-mram-switching-time",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée de commutation d’une MRAM à couple spin-orbite, dispositif imec de 62 nm",
+        "en": "Spin-orbit-torque MRAM switching time, imec 62 nm device"
+      },
+      "description": null
+    },
+    {
+      "id": "imec-stt-mram-min-pulse",
+      "domain": "emerging",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Impulsion d’écriture STT la plus courte testée sur la même jonction imec (limitée pour éviter le claquage)",
+        "en": "Shortest STT write pulse tested on the same imec MTJ (limited to avoid breakdown)"
+      },
+      "description": null
+    },
+    {
+      "id": "gps-orbit-altitude",
+      "domain": "space",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Altitude de l’orbite des satellites GPS (orbite moyenne)",
+        "en": "GPS satellite orbit altitude (MEO)"
+      },
+      "description": null
+    },
+    {
+      "id": "gps-zenith-one-way-light-time",
+      "domain": "space",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de trajet d’un signal depuis un satellite GPS au zénith",
+        "en": "One-way signal time from a GPS satellite at zenith"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-orbit-altitude",
+      "domain": "space",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Altitude de l’orbite géostationnaire",
+        "en": "Geostationary orbit altitude"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-one-way-light-time-subsatellite",
+      "domain": "space",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de trajet aller d’un signal entre le point subsatellite et un satellite géostationnaire",
+        "en": "One-way signal time between the sub-satellite point and a geostationary satellite"
+      },
+      "description": null
+    },
+    {
+      "id": "iss-average-altitude",
+      "domain": "space",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Altitude moyenne de la Station spatiale internationale",
+        "en": "International Space Station average altitude"
+      },
+      "description": null
+    },
+    {
+      "id": "new-horizons-distance-2026-06",
+      "domain": "space",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Distance de New Horizons à la Terre, juin 2026",
+        "en": "New Horizons distance from Earth, June 2026"
+      },
+      "description": null
+    },
+    {
+      "id": "new-horizons-signal-time-2026-06",
+      "domain": "space",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de trajet aller d’un signal radio de New Horizons vers la Terre, juin 2026",
+        "en": "One-way radio signal time from New Horizons to Earth, June 2026"
+      },
+      "description": null
+    },
+    {
+      "id": "pluto-mean-distance-sun",
+      "domain": "space",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Distance moyenne Soleil–Pluton",
+        "en": "Mean Sun–Pluto distance"
+      },
+      "description": null
+    },
+    {
+      "id": "sun-pluto-light-time",
+      "domain": "space",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de trajet de la lumière du Soleil jusqu’à Pluton (distance moyenne)",
+        "en": "Sunlight travel time from the Sun to Pluto (mean distance)"
+      },
+      "description": null
+    },
+    {
+      "id": "ethernet-400gbe-rate",
+      "domain": "network",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit de l’Ethernet 400 gigabits",
+        "en": "400 Gigabit Ethernet data rate"
+      },
+      "description": null
+    },
+    {
+      "id": "ethernet-800gbe-rate",
+      "domain": "network",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit de l’Ethernet 800 gigabits",
+        "en": "800 Gigabit Ethernet data rate"
+      },
+      "description": null
+    },
+    {
+      "id": "ethernet-min-frame-wire-time-800g",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée de transmission d’une trame Ethernet minimale à 800 Gbit/s",
+        "en": "Wire time of a minimum Ethernet frame at 800 Gbit/s"
+      },
+      "description": null
+    },
+    {
+      "id": "white-rabbit-sync-accuracy",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Précision de synchronisation temporelle de White Rabbit (extension de PTP)",
+        "en": "White Rabbit (PTP extension) time synchronisation accuracy"
+      },
+      "description": null
+    },
+    {
+      "id": "ntp-lan-typical-accuracy",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Précision typique de NTP sur un réseau local",
+        "en": "Typical NTP accuracy on a LAN"
+      },
+      "description": null
+    },
+    {
+      "id": "wifi7-max-throughput",
+      "domain": "network",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit maximal visé par l’IEEE 802.11be",
+        "en": "IEEE 802.11be target maximum throughput"
+      },
+      "description": null
+    },
+    {
+      "id": "ble-min-connection-interval",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Intervalle de connexion minimal du Bluetooth LE (guide TI CC2540/41)",
+        "en": "Bluetooth LE minimum connection interval (TI CC2540/41 guide)"
+      },
+      "description": null
+    },
+    {
+      "id": "ble-max-connection-interval",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Intervalle de connexion maximal du Bluetooth LE",
+        "en": "Bluetooth LE maximum connection interval"
+      },
+      "description": null
+    },
+    {
+      "id": "starlink-us-median-peak-hour-latency",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence médiane de Starlink aux heures de pointe, États-Unis (juin 2025)",
+        "en": "Starlink median peak-hour latency, United States (June 2025)"
+      },
+      "description": null
+    },
+    {
+      "id": "starlink-satellite-hop-latency-usvi-2025-07",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence du saut satellite Starlink, îles Vierges américaines (juillet 2025, moyenne)",
+        "en": "Starlink satellite-hop latency, U.S. Virgin Islands (July 2025, mean)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2026-11-r1-lineshine-rmax",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Rmax HPL de LineShine (TOP500 de novembre 2026, n° 1)",
+        "en": "HPL Rmax, LineShine (TOP500 November 2026, #1)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2026-11-r1-lineshine-rpeak",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Performance crête théorique Rpeak de LineShine (TOP500 de novembre 2026, n° 1)",
+        "en": "Theoretical peak Rpeak, LineShine (TOP500 November 2026, #1)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2026-11-r2-el-capitan-rmax",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Rmax HPL de El Capitan (TOP500 de novembre 2026, n° 2)",
+        "en": "HPL Rmax, El Capitan (TOP500 November 2026, #2)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2026-11-r2-el-capitan-rpeak",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Performance crête théorique Rpeak de El Capitan (TOP500 de novembre 2026, n° 2)",
+        "en": "Theoretical peak Rpeak, El Capitan (TOP500 November 2026, #2)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2026-11-r3-frontier-rmax",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Rmax HPL de Frontier (TOP500 de novembre 2026, n° 3)",
+        "en": "HPL Rmax, Frontier (TOP500 November 2026, #3)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2026-11-r3-frontier-rpeak",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Performance crête théorique Rpeak de Frontier (TOP500 de novembre 2026, n° 3)",
+        "en": "Theoretical peak Rpeak, Frontier (TOP500 November 2026, #3)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2026-11-r4-aurora-rmax",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Rmax HPL de Aurora (TOP500 de novembre 2026, n° 4)",
+        "en": "HPL Rmax, Aurora (TOP500 November 2026, #4)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2026-11-r4-aurora-rpeak",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Performance crête théorique Rpeak de Aurora (TOP500 de novembre 2026, n° 4)",
+        "en": "Theoretical peak Rpeak, Aurora (TOP500 November 2026, #4)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2026-11-r5-jupiter-booster-rmax",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Rmax HPL de JUPITER Booster (TOP500 de novembre 2026, n° 5)",
+        "en": "HPL Rmax, JUPITER Booster (TOP500 November 2026, #5)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2026-11-r5-jupiter-booster-rpeak",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Performance crête théorique Rpeak de JUPITER Booster (TOP500 de novembre 2026, n° 5)",
+        "en": "Theoretical peak Rpeak, JUPITER Booster (TOP500 November 2026, #5)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-1993-06-r1-cm5-rmax",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Rmax LINPACK du CM-5/1024 (Thinking Machines) (TOP500 de juin 1993, n° 1)",
+        "en": "LINPACK Rmax, CM-5/1024 (Thinking Machines) (TOP500 June 1993, #1)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2008-06-r1-roadrunner-rmax",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Rmax HPL de Roadrunner (TOP500 de juin 2008, n° 1)",
+        "en": "HPL Rmax, Roadrunner (TOP500 June 2008, #1)"
+      },
+      "description": null
+    },
+    {
+      "id": "top500-2022-06-r1-frontier-rmax",
+      "domain": "distributed",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Rmax HPL de Frontier (TOP500 de juin 2022, n° 1)",
+        "en": "HPL Rmax, Frontier (TOP500 June 2022, #1)"
+      },
+      "description": null
+    },
+    {
+      "id": "arm-neoverse-n2-l1d-load-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence de chargement sur succès L1D, Arm Neoverse N2 (LDR, décalage registre)",
+        "en": "Load latency on L1D hit, Arm Neoverse N2 (LDR register offset)"
+      },
+      "description": null
+    },
+    {
+      "id": "arm-neoverse-v3-l1d-load-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence de chargement sur succès L1D, Arm Neoverse V3 (LDUR)",
+        "en": "Load latency on L1D hit, Arm Neoverse V3 (LDUR)"
+      },
+      "description": null
+    },
+    {
+      "id": "arm-cortex-a520-l1-hit-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence d’un succès en cache L1, Arm Cortex-A520",
+        "en": "L1 cache hit latency, Arm Cortex-A520"
+      },
+      "description": null
+    },
+    {
+      "id": "arm-cortex-a520-l2-hit-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence d’un succès en cache L2, Arm Cortex-A520",
+        "en": "L2 cache hit latency, Arm Cortex-A520"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-8080-initial-clock",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d’horloge initiale de l’Intel 8080",
+        "en": "Initial clock speed, Intel 8080"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-80286-initial-clock",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d’horloge initiale de l’Intel 286 (80286)",
+        "en": "Initial clock speed, Intel 286"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-80386-initial-clock",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d’horloge initiale de l’Intel386 (80386)",
+        "en": "Initial clock speed, Intel386"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-80486-initial-clock",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d’horloge initiale de l’Intel486 (80486)",
+        "en": "Initial clock speed, Intel486"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-pentium-initial-clock",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d’horloge initiale de l’Intel Pentium",
+        "en": "Initial clock speed, Intel Pentium"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-pentium-pro-initial-clock",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d’horloge initiale de l’Intel Pentium Pro",
+        "en": "Initial clock speed, Intel Pentium Pro"
+      },
+      "description": null
+    },
+    {
+      "id": "amd-athlon-1ghz-2000",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence du premier AMD Athlon à 1 GHz (mars 2000)",
+        "en": "Clock frequency of the first 1 GHz AMD Athlon (March 2000)"
+      },
+      "description": null
+    },
+    {
+      "id": "motorola-mc68000-8mhz-max-frequency",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de fonctionnement maximale du MC68000, version 8 MHz",
+        "en": "Maximum operating frequency, MC68000 8 MHz grade"
+      },
+      "description": null
+    },
+    {
+      "id": "hbm3e-micron-stack-bandwidth",
+      "domain": "memory",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit par pile HBM3E (Micron, 8 et 12 couches)",
+        "en": "Bandwidth per HBM3E stack (Micron 8-high / 12-high)"
+      },
+      "description": null
+    },
+    {
+      "id": "hbm3e-micron-pin-speed",
+      "domain": "memory",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit par broche, HBM3E Micron",
+        "en": "Pin data rate, Micron HBM3E"
+      },
+      "description": null
+    },
+    {
+      "id": "hbm3e-samsung-12h-stack-bandwidth",
+      "domain": "memory",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit par pile HBM3E à 12 couches (Samsung)",
+        "en": "Bandwidth per HBM3E 12-high stack (Samsung)"
+      },
+      "description": null
+    },
+    {
+      "id": "hbm3-samsung-stack-bandwidth",
+      "domain": "memory",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit par pile HBM3 (Samsung Icebolt)",
+        "en": "Bandwidth per HBM3 stack (Samsung Icebolt)"
+      },
+      "description": null
+    },
+    {
+      "id": "lpddr5x-samsung-pin-speed",
+      "domain": "memory",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit par broche, LPDDR5X Samsung",
+        "en": "Data rate per pin, Samsung LPDDR5X"
+      },
+      "description": null
+    },
+    {
+      "id": "linux-kpti-entry-exit-cost-haswell",
+      "domain": "os",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Surcoût constant de KPTI par entrée et sortie du noyau (Xeon E5-2630 v3)",
+        "en": "Constant cost of KPTI per kernel entry and exit (Xeon E5-2630 v3)"
+      },
+      "description": null
+    },
+    {
+      "id": "linux-kernel-entry-exit-no-kpti-haswell",
+      "domain": "os",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Coût d’entrée et de sortie du noyau sans KPTI (Xeon E5-2630 v3)",
+        "en": "Kernel entry and exit overhead without KPTI (Xeon E5-2630 v3)"
+      },
+      "description": null
+    },
+    {
+      "id": "linux-retpoline-indirect-branch-cost",
+      "domain": "os",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Surcoût par saut ou appel indirect avec la parade Spectre v2 (Xeon E5-2630 v3)",
+        "en": "Added cost per indirect jump or call with Spectre v2 mitigation (Xeon E5-2630 v3)"
+      },
+      "description": null
+    },
+    {
+      "id": "linux-read-syscall-baseline-haswell",
+      "domain": "os",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence du plus court test read() sans KPTI (Xeon E5-2630 v3)",
+        "en": "Latency of the shortest read() test without KPTI (Xeon E5-2630 v3)"
+      },
+      "description": null
+    },
+    {
+      "id": "linux-minor-page-fault-sandybridge",
+      "domain": "os",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Coût d’un défaut de page mineur (Core i7-2640M, Linux 3.16)",
+        "en": "Minor page fault cost (Core i7-2640M, Linux 3.16)"
+      },
+      "description": null
+    },
+    {
+      "id": "solidigm-ps1010-random-read-latency",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence de lecture aléatoire nominale du Solidigm D7-PS1010",
+        "en": "Solidigm D7-PS1010 random read latency (rated)"
+      },
+      "description": null
+    },
+    {
+      "id": "solidigm-ps1010-random-write-latency",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence d'écriture aléatoire nominale du Solidigm D7-PS1010",
+        "en": "Solidigm D7-PS1010 random write latency (rated)"
+      },
+      "description": null
+    },
+    {
+      "id": "kioxia-cm7r-seq-read-measured",
+      "domain": "storage",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit de lecture séquentielle mesuré du KIOXIA CM7-R",
+        "en": "KIOXIA CM7-R sequential read throughput, measured"
+      },
+      "description": null
+    },
+    {
+      "id": "exos-15e900-average-latency",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence moyenne du Seagate Exos 15E900 (constructeur)",
+        "en": "Seagate Exos 15E900 average latency (manufacturer)"
+      },
+      "description": null
+    },
+    {
+      "id": "hdd-15k-spindle-frequency",
+      "domain": "storage",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de rotation d'un disque dur à 15 000 tr/min (Exos 15E900)",
+        "en": "Rotation frequency of a 15K RPM hard drive (Exos 15E900)"
+      },
+      "description": null
+    },
+    {
+      "id": "hdd-5400rpm-spindle-frequency",
+      "domain": "storage",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de rotation d'un disque dur à 5400 tr/min (BarraCuda 2,5 pouces)",
+        "en": "Rotation frequency of a 5400 RPM hard drive (BarraCuda 2.5)"
+      },
+      "description": null
+    },
+    {
+      "id": "hdd-5400rpm-half-rotation",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence rotationnelle moyenne à 5400 tr/min (demi-tour)",
+        "en": "Average rotational latency at 5400 RPM (half revolution)"
+      },
+      "description": null
+    },
+    {
+      "id": "lto9-native-transfer-rate",
+      "domain": "storage",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit natif de la bande LTO-9",
+        "en": "LTO-9 native transfer rate"
+      },
+      "description": null
+    },
+    {
+      "id": "lto9-average-space-record-time",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps moyen de positionnement sur un enregistrement depuis le début de bande (LTO-9)",
+        "en": "LTO-9 average time to locate a record from load point"
+      },
+      "description": null
+    },
+    {
+      "id": "sata-rev3-line-rate",
+      "domain": "storage",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit de ligne de SATA révision 3.0 (SATA 6 Gbit/s)",
+        "en": "SATA Revision 3.0 (SATA 6Gb/s) line rate"
+      },
+      "description": null
+    },
+    {
+      "id": "pcie3-lane-rate",
+      "domain": "interconnect",
+      "quantityKind": "transfer_rate",
+      "label": {
+        "fr": "Débit par voie de PCI Express 3.0",
+        "en": "PCI Express 3.0 per-lane data rate"
+      },
+      "description": null
+    },
+    {
+      "id": "infiniband-ndr-port-rate",
+      "domain": "interconnect",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit par port InfiniBand NDR (NVIDIA Quantum-2 QM9700)",
+        "en": "InfiniBand NDR port rate (NVIDIA Quantum-2 QM9700)"
+      },
+      "description": null
+    },
+    {
+      "id": "infiniband-xdr-port-rate",
+      "domain": "interconnect",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit par port du commutateur InfiniBand NVIDIA Quantum-X800",
+        "en": "NVIDIA Quantum-X800 InfiniBand switch port rate"
+      },
+      "description": null
+    },
+    {
+      "id": "cxl-asic-expander-latency-mlc",
+      "domain": "interconnect",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence moyenne mesurée d'un extenseur mémoire CXL (ASIC, CXL-A)",
+        "en": "CXL memory expander (ASIC, CXL-A) average access latency, measured"
+      },
+      "description": null
+    },
+    {
+      "id": "cxl-fpga-expander-latency-mlc",
+      "domain": "interconnect",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence moyenne mesurée d'un extenseur mémoire CXL (FPGA, CXL-C)",
+        "en": "CXL memory expander (FPGA, CXL-C) average access latency, measured"
+      },
+      "description": null
+    },
+    {
+      "id": "cuda-null-kernel-launch-h100",
+      "domain": "accelerator",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence de lancement d'un noyau CUDA vide sur H100, mesurée (moyenne)",
+        "en": "CUDA null-kernel launch latency on H100, measured (mean)"
+      },
+      "description": null
+    },
+    {
+      "id": "cuda-null-kernel-launch-h200",
+      "domain": "accelerator",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence de lancement d'un noyau CUDA vide sur H200 NVL, mesurée (moyenne)",
+        "en": "CUDA null-kernel launch latency on H200 NVL, measured (mean)"
+      },
+      "description": null
+    },
+    {
+      "id": "rtx4090-memory-bandwidth",
+      "domain": "accelerator",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante mémoire crête de la GeForce RTX 4090",
+        "en": "GeForce RTX 4090 peak memory bandwidth"
+      },
+      "description": null
+    },
+    {
+      "id": "rtx5090-memory-bandwidth",
+      "domain": "accelerator",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante mémoire crête de la GeForce RTX 5090",
+        "en": "GeForce RTX 5090 peak memory bandwidth"
+      },
+      "description": null
+    },
+    {
+      "id": "h100-sxm-fp64-peak",
+      "domain": "accelerator",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Débit crête FP64 (vectoriel) du NVIDIA H100 SXM",
+        "en": "NVIDIA H100 SXM peak FP64 (vector) rate"
+      },
+      "description": null
+    },
+    {
+      "id": "mi300x-fp64-vector-peak",
+      "domain": "accelerator",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Débit crête FP64 vectoriel de l'AMD Instinct MI300X",
+        "en": "AMD Instinct MI300X peak FP64 vector rate"
+      },
+      "description": null
+    },
+    {
+      "id": "hgx-b200-fp64-peak",
+      "domain": "accelerator",
+      "quantityKind": "compute_rate",
+      "label": {
+        "fr": "Débit crête FP64 de la NVIDIA HGX B200 (valeur du tableau HGX ; par GPU ou total non précisé)",
+        "en": "NVIDIA HGX B200 peak FP64 rate (HGX table value; per-GPU or total not stated)"
+      },
+      "description": null
+    },
+    {
+      "id": "mlperf-v50-h200x8-llama2-70b-server-ttft-mean",
+      "domain": "ai",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "MLPerf v5.0 Llama 2 70B, scénario Server : temps moyen jusqu'au premier token, 8 H200",
+        "en": "MLPerf v5.0 Llama 2 70B Server: mean time to first token, 8x H200"
+      },
+      "description": null
+    },
+    {
+      "id": "mlperf-v50-h200x8-llama2-70b-server-tpot-mean",
+      "domain": "ai",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "MLPerf v5.0 Llama 2 70B, scénario Server : temps moyen par token de sortie, 8 H200",
+        "en": "MLPerf v5.0 Llama 2 70B Server: mean time per output token, 8x H200"
+      },
+      "description": null
+    },
+    {
+      "id": "mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean",
+      "domain": "ai",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "MLPerf v5.0 Llama 2 70B Interactive : temps moyen jusqu'au premier token, DGX B200",
+        "en": "MLPerf v5.0 Llama 2 70B Interactive: mean time to first token, DGX B200"
+      },
+      "description": null
+    },
+    {
+      "id": "mlperf-v50-b200x8-llama2-70b-interactive-tpot-mean",
+      "domain": "ai",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "MLPerf v5.0 Llama 2 70B Interactive : temps moyen par token de sortie, DGX B200",
+        "en": "MLPerf v5.0 Llama 2 70B Interactive: mean time per output token, DGX B200"
+      },
+      "description": null
+    },
+    {
+      "id": "mlperf-v50-b200x8-llama31-405b-server-ttft-mean",
+      "domain": "ai",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "MLPerf v5.0 Llama 3.1 405B, scénario Server : temps moyen jusqu'au premier token, DGX B200",
+        "en": "MLPerf v5.0 Llama 3.1 405B Server: mean time to first token, DGX B200"
+      },
+      "description": null
+    },
+    {
+      "id": "mlperf-v50-b200x8-llama31-405b-server-tpot-mean",
+      "domain": "ai",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "MLPerf v5.0 Llama 3.1 405B, scénario Server : temps moyen par token de sortie, DGX B200",
+        "en": "MLPerf v5.0 Llama 3.1 405B Server: mean time per output token, DGX B200"
+      },
+      "description": null
+    },
+    {
+      "id": "android-pro-audio-rtl-max-analog",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence audio aller-retour maximale exigée pour l'audio pro Android (voie analogique)",
+        "en": "Android pro-audio maximum round-trip audio latency (analog path)"
+      },
+      "description": null
+    },
+    {
+      "id": "android-low-latency-rtl-max",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence audio aller-retour maximale exigée pour l'audio basse latence Android",
+        "en": "Android low-latency audio maximum round-trip latency"
+      },
+      "description": null
+    },
+    {
+      "id": "audio-sample-rate-44100",
+      "domain": "peripheral",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d'échantillonnage audio de 44,1 kHz",
+        "en": "Audio sampling rate 44.1 kHz"
+      },
+      "description": null
+    },
+    {
+      "id": "audio-sample-rate-48000",
+      "domain": "peripheral",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d'échantillonnage audio de 48 kHz",
+        "en": "Audio sampling rate 48 kHz"
+      },
+      "description": null
+    },
+    {
+      "id": "vesa-adaptivesync-min-max-refresh",
+      "domain": "peripheral",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "VESA AdaptiveSync Display : fréquence de rafraîchissement maximale minimale exigée",
+        "en": "VESA AdaptiveSync Display: minimum required maximum refresh rate"
+      },
+      "description": null
+    },
+    {
+      "id": "vesa-adaptivesync-display240-tier",
+      "domain": "peripheral",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Palier AdaptiveSync Display240 de VESA (fréquence de rafraîchissement)",
+        "en": "VESA AdaptiveSync Display240 tier refresh rate"
+      },
+      "description": null
+    },
+    {
+      "id": "frame-time-144hz",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'une image à 144 Hz",
+        "en": "Frame time at 144 Hz"
+      },
+      "description": null
+    },
+    {
+      "id": "frame-time-240hz",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'une image à 240 Hz",
+        "en": "Frame time at 240 Hz"
+      },
+      "description": null
+    },
+    {
+      "id": "vesa-adaptivesync-g2g-average-max",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de réponse gris à gris moyen maximal exigé par VESA AdaptiveSync Display",
+        "en": "VESA AdaptiveSync Display maximum average grey-to-grey response time"
+      },
+      "description": null
+    },
+    {
+      "id": "hdmi21-max-bandwidth",
+      "domain": "peripheral",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante maximale du câble Ultra High Speed HDMI (introduit avec HDMI 2.1)",
+        "en": "Ultra High Speed HDMI Cable maximum bandwidth (introduced with HDMI 2.1)"
+      },
+      "description": null
     }
   ]
 }
