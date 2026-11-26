@@ -10,9 +10,9 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 | V0 | G0 | **GO** : 129 valeurs qualifiées, 102 tests | `docs/reports/G0.md` |
 | V1 | G1 | **GO : V1 publiée** (commit `7ca44b5`, vérifiée HTTP, version.json et navigateur) | `docs/reports/G1.md` |
 | V2 | G2 | **GO : V2 publiée** (`main` = `2881239`, vérifiée en ligne) | `docs/reports/G2.md` |
-| V3 | G3 | **GO** : simulation exposée, 5 scénarios adossés au corpus | `docs/reports/G3.md` |
-| V4 | G4 | **GO** : journal d'immersion dérivé des événements | `docs/reports/G4.md` |
-| V5 | G5 | **GO** : laboratoire, mesure navigateur, contributions ; V00–V08 PASS | `docs/reports/G5.md` |
+| V3 | G3 | **GO, publiée** : simulation exposée, 5 scénarios adossés au corpus | `docs/reports/G3.md` |
+| V4 | G4 | **GO, publiée** : journal d'immersion dérivé des événements | `docs/reports/G4.md` |
+| V5 | G5 | **GO, publiée** : laboratoire, mesure navigateur, contributions ; V00–V08 PASS | `docs/reports/G5.md` |
 
 ## Ce qui existe réellement
 
@@ -26,7 +26,7 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 
 ## Publication
 
-- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = `2881239` (V2), run pages https://github.com/s-geffroy/chronosilicon/actions/runs/45884823144. V1 avait été publiée en `7ca44b5`.
+- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = `178d4ad` (V1 à V5), run pages https://github.com/s-geffroy/chronosilicon/actions/runs/45891059462. Historique : V1 `7ca44b5`, V2 `2881239`.
 - Vérifié le 2026-11-26 : HTTP 200, `version.json.commit` = SHA poussé, actifs sous `/chronosilicon/`, aucune erreur console (Chromium).
 - Toute publication suivante : fast-forward de `develop` vers `main` après la porte de la version (ADR-0003).
 
