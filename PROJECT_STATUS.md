@@ -8,7 +8,7 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 |---|---|---|---|
 | M00 | GM00 | **GO** avec réserves : nom provisoire (registres de marques non interrogés), auto-revue outillée | `docs/audits/M00.md` |
 | V0 | G0 | **GO** : 129 valeurs qualifiées, 102 tests | `docs/reports/G0.md` |
-| V1 | G1 | **GO pour publication** ; déploiement **NOT_RUN** (réglage Pages manuel attendu) | `docs/reports/G1.md` |
+| V1 | G1 | **GO : V1 publiée** (commit `7ca44b5`, vérifiée HTTP, version.json et navigateur) | `docs/reports/G1.md` |
 | V2 | G2 | non commencé (comparaison et multi-observateurs) | — |
 | V3 | G3 | moteur à événements discrets écrit et testé (15 tests), **non exposé**, porte non évaluée | — |
 | V4 | G4 | non commencé | — |
@@ -25,9 +25,9 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 
 ## Publication
 
-- URL cible : https://s-geffroy.github.io/chronosilicon/ → **404 à ce jour : non déployé**.
-- Bloquant : réglage manuel **Settings > Pages > Source : GitHub Actions** sur le dépôt.
-- Ensuite : fusion fast-forward de `develop` vers `main`, run `pages`, puis vérification HTTP, de `version.json` et du navigateur (ADR-0003).
+- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = `7ca44b5`, run pages https://github.com/s-geffroy/chronosilicon/actions/runs/45882067731.
+- Vérifié le 2026-11-26 : HTTP 200, `version.json.commit` = SHA poussé, actifs sous `/chronosilicon/`, aucune erreur console (Chromium).
+- Toute publication suivante : fast-forward de `develop` vers `main` après la porte de la version (ADR-0003).
 
 ## Décisions non validées par l'utilisateur
 
