@@ -22,6 +22,8 @@ interface RawItem {
   era: string | number | null; confidenceNotes: string | null;
   /** Strict extractions (lot 2+): protocol written by the extractor for measured values. */
   protocol?: string | null;
+  /** Optional published dispersion (ADR-0009). */
+  uncertainty?: Measurement['uncertainty'];
 }
 interface RawFile { accessedAt: string; sources: RawSource[]; items: RawItem[] }
 type VerdictKind = 'confirmed' | 'confirmed_with_fix' | 'mismatch' | 'unreachable' | 'inadequate';
@@ -163,7 +165,7 @@ for (const f of rawFiles) {
       locator: String(pick('locator', it.locator)),
       quote: clip(pick('quote', it.quote) as string | null),
       era: Object.hasOwn(patch, 'era') ? (patch['era'] as number | null) : parseEra(pick('era', it.era)),
-      uncertainty: null,
+      uncertainty: (pick('uncertainty', it.uncertainty ?? null) ?? null) as Measurement['uncertainty'],
       statistics: null,
       calculation: calculation ? { formula: calculation.formula, inputs: calculation.inputs.map((i) => (i.startsWith('src:') ? i : `${i}-m1`)) } : null,
       rawRef: `data/raw/${f}#${it.id}`,

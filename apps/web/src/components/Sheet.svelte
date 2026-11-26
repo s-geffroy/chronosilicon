@@ -58,7 +58,14 @@
       {#if level === 'scientific'}
         <dt>{t('sheet.protocol')}</dt><dd>{m.protocol ?? t('sheet.protocolNone')}</dd>
         {#if m.statistics}<dt>n</dt><dd>{m.statistics.sampleCount} ({m.statistics.method})</dd>{/if}
-        <dt>{t('sheet.uncertainty')}</dt><dd>{t('sheet.uncertaintyUnknown')}</dd>
+        <dt>{t('sheet.uncertainty')}</dt>
+        <dd data-testid="sheet-uncertainty">
+          {#if m.uncertainty}
+            {@const u = m.uncertainty}
+            {#if u.type === 'confidence-interval'}{formatValue(u.low!, m.unit, lang)} – {formatValue(u.high!, m.unit, lang)} ({t('unc.confidence-interval', { level: Math.round((u.level ?? 0) * 100) })}){:else}± {formatValue(u.value!, m.unit, lang)} ({t(`unc.${u.type}`)}){/if}{#if u.sampleCount !== null}{' · '}{t('unc.n', { n: u.sampleCount })}{/if}
+            <span class="help block">{t('unc.statement')} <q lang="en">{u.statement}</q> — {u.locator}</span>
+          {:else}{t('sheet.uncertaintyUnknown')}{/if}
+        </dd>
         {#if m.quote}<dt>{t('sheet.quote')}</dt><dd><blockquote>{m.quote}</blockquote></dd>{/if}
         <dt>{t('sheet.raw')}</dt><dd class="mono">{m.rawRef}</dd>
         {#if m.notes}<dt>{t('sheet.notes')}</dt><dd>{#if lang === 'fr'}<span class="help">{t('sheet.notesLang')}</span> {/if}<span lang="en">{m.notes}</span></dd>{/if}

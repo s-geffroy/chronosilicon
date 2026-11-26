@@ -1022,11 +1022,20 @@
       "locator": "Results; Table 1",
       "quote": "one voluntary blink took 572 ± 25 ms",
       "era": 2013,
-      "uncertainty": null,
+      "uncertainty": {
+        "type": "unspecified-plus-minus",
+        "value": 25,
+        "low": null,
+        "high": null,
+        "level": null,
+        "sampleCount": 25,
+        "statement": "one voluntary blink took 572 ± 25 ms",
+        "locator": "Results, running text"
+      },
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-voluntary-blink-duration",
-      "notes": "Spontaneous blinks are generally reported as shorter, but no source for that was consulted here: do not use 572 ms as 'a blink' without the word 'voluntary'. | Verifier: Read via WebFetch (PMC HTML; curl got a reCAPTCHA page). Values confirmed; only the s.e. attribution of ±25 is an inference. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26)."
+      "notes": "Spontaneous blinks are generally reported as shorter, but no source for that was consulted here: do not use 572 ms as 'a blink' without the word 'voluntary'. | Verifier: Read via WebFetch (PMC HTML; curl got a reCAPTCHA page). Values confirmed; only the s.e. attribution of ±25 is an inference. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). Published dispersion recorded as structured uncertainty (ADR-0009), from the source wording checked by the verifier. The source does not say what ±25 is for this value (the s.e. caption applies to Table 1, where 572 is not a cell): unspecified."
     },
     {
       "id": "human-voluntary-blink-closing-phase-m1",
@@ -1049,11 +1058,20 @@
       "locator": "Table 1",
       "quote": "Closing phase: 76 ± 2 ms",
       "era": 2013,
-      "uncertainty": null,
+      "uncertainty": {
+        "type": "standard-error",
+        "value": 2,
+        "low": null,
+        "high": null,
+        "level": null,
+        "sampleCount": 25,
+        "statement": "76 ± 2 ms; Table 1 caption: 'our values are mean ± s.e.'",
+        "locator": "Table 1, row \"This study (2013), 600 fps, n=25\""
+      },
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-voluntary-blink-closing-phase",
-      "notes": "Quote is the WebFetch rendering of a table cell (label + value), not a running-text sentence. | Verifier: Quote is a table-cell reconstruction, as disclosed. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26)."
+      "notes": "Quote is the WebFetch rendering of a table cell (label + value), not a running-text sentence. | Verifier: Quote is a table-cell reconstruction, as disclosed. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). Published dispersion recorded as structured uncertainty (ADR-0009), from the source wording checked by the verifier."
     },
     {
       "id": "human-flicker-fusion-uniform-m1",
@@ -4112,11 +4130,20 @@
       "locator": "Abstract; Sec. V \"Real-time decoding\"",
       "quote": "achieving an average decoder latency of 63 μs at distance-5 up to a million cycles",
       "era": 2024,
-      "uncertainty": null,
+      "uncertainty": {
+        "type": "unspecified-plus-minus",
+        "value": 17,
+        "low": null,
+        "high": null,
+        "level": null,
+        "sampleCount": null,
+        "statement": "net average of 63 ± 17 µs independent of the length of the experiment",
+        "locator": "Sec. V"
+      },
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#willow-realtime-decoder-latency-d5",
-      "notes": "Average only; decoder latency definition (time from end of final cycle to decoder output) is in Sec. V. | Verifier: Label said 'Google Willow' while the experiment is on the 72-qubit processor (conditions were right). The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere. | Decision: Bound wording in the excerpt does not bound this value (checked in the bound audit)."
+      "notes": "Average only; decoder latency definition (time from end of final cycle to decoder output) is in Sec. V. | Verifier: Label said 'Google Willow' while the experiment is on the 72-qubit processor (conditions were right). The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere. | Decision: Bound wording in the excerpt does not bound this value (checked in the bound audit). Published dispersion recorded as structured uncertainty (ADR-0009), from the source wording checked by the verifier. Closes lot-2 review m17."
     },
     {
       "id": "heron-r1-median-t1-m1",

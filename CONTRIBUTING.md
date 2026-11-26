@@ -6,6 +6,7 @@ Merci de votre intérêt. Le projet suit des règles strictes de traçabilité (
 - **Aucune valeur sans source consultée**. Chaque valeur doit avoir une URL ou un DOI, un localisateur précis (page, tableau, section), un extrait littéral court, une date d'accès, la licence ou les conditions de la source, et les conditions de validité : modèle, version, configuration, protocole.
 - Le type de provenance (`measured`, `documented`, `calculated`, `estimated`) est indépendant du statut de vérification (`pending`, `qualified`, `contested`, `rejected`). Les valeurs `illustrative` ne sont jamais admises dans le corpus.
 - Les statistiques (P50, P99…) ne sont acceptées qu'avec n et la méthode de calcul des quantiles. Un min/max n'est pas un intervalle de confiance.
+- Une dispersion publiée (« ± », écart-type, erreur-type, intervalle de confiance) peut être saisie dans le champ facultatif `uncertainty` (ADR-0009), avec la formulation exacte de la source. Si la source ne dit pas ce que représente le « ± », utilisez `unspecified-plus-minus`.
 - Ne copiez jamais un document dont la redistribution n'est pas permise : référencez-le.
 - Procédure : ajouter un fichier d'extraction dans `data/raw/` (immuable, avec sa somme dans `MANIFEST.sha256`). Une autre personne vérifie et produit un fichier `verify-*.json`. On lance ensuite `npm run curate`, puis `npm run build:data`.
 - Les données contradictoires sont conservées (statut `contested`), pas supprimées.

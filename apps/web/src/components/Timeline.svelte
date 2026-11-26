@@ -173,7 +173,7 @@
             {#each positive as m (m.id)}
               <tr>
                 <th scope="row"><button type="button" class="link" onclick={() => open(m)}>{label(m)}</button></th>
-                <td>{formatValue(m.value, m.unit, lang)}{#if m.low !== null && m.high !== null} ({formatValue(m.low, m.unit, lang)} – {formatValue(m.high, m.unit, lang)}){/if}</td>
+                <td>{formatValue(m.value, m.unit, lang)}{#if m.uncertainty?.value != null} ± {formatValue(m.uncertainty.value, m.unit, lang)}{/if}{#if m.low !== null && m.high !== null} ({formatValue(m.low, m.unit, lang)} – {formatValue(m.high, m.unit, lang)}){/if}</td>
                 <td>{formatPhysicalDuration(m.valueSI, lang)}</td>
                 <td>{formatCalendar(subj(m.valueSI), lang)}</td>
                 <td>{domainName(m)}</td>

@@ -43,6 +43,7 @@ export function buildJsonExport(ms: readonly NormalizedMeasurement[], ctx: Expor
 
 const CSV_COLUMNS = [
   'id', 'label', 'domain', 'quantityKind', 'value', 'unit', 'valueSI', 'siUnit', 'low', 'high',
+  'uncertaintyType', 'uncertaintyValue', 'uncertaintyLow', 'uncertaintyHigh', 'uncertaintyLevel', 'uncertaintyN',
   'subjectiveSeconds', 'observerFrequencyHz', 'configuration', 'conditions', 'provenanceType',
   'verificationStatus', 'sourceIds', 'sourceUrls', 'locator', 'era', 'corpusVersion', 'appVersion',
 ] as const;
@@ -70,6 +71,12 @@ export function buildCsvExport(ms: readonly NormalizedMeasurement[], ctx: Export
       siUnit: BASE_UNIT[m.quantityKind],
       low: m.low,
       high: m.high,
+      uncertaintyType: m.uncertainty?.type ?? null,
+      uncertaintyValue: m.uncertainty?.value ?? null,
+      uncertaintyLow: m.uncertainty?.low ?? null,
+      uncertaintyHigh: m.uncertainty?.high ?? null,
+      uncertaintyLevel: m.uncertainty?.level ?? null,
+      uncertaintyN: m.uncertainty?.sampleCount ?? null,
       subjectiveSeconds: subjectiveFor(m, ctx.frequencyHz),
       observerFrequencyHz: ctx.frequencyHz,
       configuration: m.configuration,

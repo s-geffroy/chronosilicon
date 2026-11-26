@@ -63,15 +63,35 @@
       }
     },
     "human-voluntary-blink-duration": {
-      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26). Published dispersion recorded as structured uncertainty (ADR-0009), from the source wording checked by the verifier. The source does not say what ±25 is for this value (the s.e. caption applies to Table 1, where 572 is not a cell): unspecified.",
       "patch": {
-        "protocol": "Kwon et al. 2013: n = 25 healthy volunteers (25-63 y); voluntary blinks filmed with high-speed video at 600 fps; mean reported (± 25 ms, dispersion statistic not specified in text)."
+        "protocol": "Kwon et al. 2013: n = 25 healthy volunteers (25-63 y); voluntary blinks filmed with high-speed video at 600 fps; mean reported (± 25 ms, dispersion statistic not specified in text).",
+        "uncertainty": {
+          "type": "unspecified-plus-minus",
+          "value": 25,
+          "low": null,
+          "high": null,
+          "level": null,
+          "sampleCount": 25,
+          "statement": "one voluntary blink took 572 ± 25 ms",
+          "locator": "Results, running text"
+        }
       }
     },
     "human-voluntary-blink-closing-phase": {
-      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26). Published dispersion recorded as structured uncertainty (ADR-0009), from the source wording checked by the verifier.",
       "patch": {
-        "protocol": "Kwon et al. 2013, same protocol (n = 25, 600 fps video); closing-phase duration, mean ± s.e."
+        "protocol": "Kwon et al. 2013, same protocol (n = 25, 600 fps video); closing-phase duration, mean ± s.e.",
+        "uncertainty": {
+          "type": "standard-error",
+          "value": 2,
+          "low": null,
+          "high": null,
+          "level": null,
+          "sampleCount": 25,
+          "statement": "76 ± 2 ms; Table 1 caption: 'our values are mean ± s.e.'",
+          "locator": "Table 1, row \"This study (2013), 600 fps, n=25\""
+        }
       }
     },
     "human-flicker-fusion-uniform": {
@@ -477,9 +497,19 @@
       }
     },
     "willow-realtime-decoder-latency-d5": {
-      "reason": "Bound wording in the excerpt does not bound this value (checked in the bound audit).",
+      "reason": "Bound wording in the excerpt does not bound this value (checked in the bound audit). Published dispersion recorded as structured uncertainty (ADR-0009), from the source wording checked by the verifier. Closes lot-2 review m17.",
       "patch": {
-        "boundChecked": true
+        "boundChecked": true,
+        "uncertainty": {
+          "type": "unspecified-plus-minus",
+          "value": 17,
+          "low": null,
+          "high": null,
+          "level": null,
+          "sampleCount": null,
+          "statement": "net average of 63 ± 17 µs independent of the length of the experiment",
+          "locator": "Sec. V"
+        }
       }
     },
     "iss-average-altitude": {

@@ -8,7 +8,7 @@ Ordre de priorité. Mis à jour le 2026-11-26.
 4. ~~V2 à V5~~ : réalisés, portes G2 à G5 GO le 2026-11-26 (`docs/reports/`).
 5. **[Données]** Lot 2 fait le 2026-11-26 : 239 valeurs qualifiées (`docs/audits/M01.md`). Suite possible vers 300 à 500, par la même chaîne :
    - lever les réserves : fiche Intel MCS-4 primaire, URL AMD officielles, communiqués PCI-SIG originaux ;
-   - incertitude structurée (écart-type, intervalle) dans le schéma des mesures : la dispersion publiée, comme le ±17 µs du décodeur quantique, n'est aujourd'hui que dans les conditions (revue du lot 2, m17) ;
+   - incertitude structurée : faite (ADR-0009, 3 valeurs renseignées) ; à compléter dès qu'une source publie une dispersion ;
    - latence de commutateur InfiniBand et transfert PCIe hôte-GPU mesurés avec protocole ;
    - ajouter des mesures avec protocole : appels système modernes, lancement de kernel GPU, distributions empiriques sourcées pour le simulateur.
 6. **[Propriétaire]** Recherche de marque EUIPO / INPI / USPTO pour « CHRONOSILICON » (risque R1).

@@ -33,6 +33,9 @@ Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant 
 ### Corrigé (mineurs de la revue du lot 2)
 - Audit des bornes sur tout le corpus (11 encodées), alerte de curation et test associé ; fiche affichant ≥/≤ ; conversions décimales exactes ; oracle des calculs à 1e-12 ; notes de groupes et observateur précisés ; ères et affirmations non sourcées retirées.
 
+### Ajouté (incertitude structurée)
+- Champ `uncertainty` des mesures (ADR-0009) : écart-type, erreur-type, « ± » non précisé, intervalle de confiance ; formulation de la source, n, normalisation SI, invariants, affichage dans la fiche et le tableau, export CSV. Trois dispersions publiées renseignées.
+
 ### Modifié
 - Remplacement du squelette Jekyll du VPS par la chaîne Node/Vite (ADR-0001).
 

@@ -288,3 +288,13 @@ test('sheet shows one-sided bounds as ≥ / ≤ (review lot 2, m1)', async ({ pa
   await page.goto('./#/timeline?lang=en&level=scientific&sel=android-pro-audio-rtl-max-analog-m1');
   await expect(page.getByTestId('sheet-interval')).toHaveText(/^≤ 20 ms$/);
 });
+
+test('sheet shows structured uncertainty with its type and the source wording (ADR-0009)', async ({ page }) => {
+  await page.goto('./#/timeline?lang=en&level=scientific&sel=human-voluntary-blink-closing-phase-m1');
+  await expect(page.getByTestId('sheet-uncertainty')).toContainText('± 2 ms (standard error) · n = 25');
+  await expect(page.getByTestId('sheet-uncertainty')).toContainText('mean ± s.e.');
+  await page.goto('./#/timeline?lang=fr&level=scientific&sel=willow-realtime-decoder-latency-d5-m1');
+  await expect(page.getByTestId('sheet-uncertainty')).toContainText('non précisée par la source');
+  await page.goto('./#/timeline?lang=en&level=scientific&sel=tcp-min-rto-m1');
+  await expect(page.getByTestId('sheet-uncertainty')).toHaveText('Unknown (not published by the source).');
+});

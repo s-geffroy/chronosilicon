@@ -52,6 +52,24 @@ export interface Statistics {
   readonly quantiles: ReadonlyArray<{ readonly p: number; readonly value: number }>;
 }
 
+/**
+ * Dispersion/uncertainty as published by the source (never computed or
+ * guessed). `value` is a ± half-width in the measurement unit; a confidence
+ * interval uses low/high/level instead.
+ */
+export type UncertaintyType = 'standard-deviation' | 'standard-error' | 'unspecified-plus-minus' | 'confidence-interval';
+export interface Uncertainty {
+  readonly type: UncertaintyType;
+  readonly value: number | null;
+  readonly low: number | null;
+  readonly high: number | null;
+  readonly level: number | null;
+  readonly sampleCount: number | null;
+  /** Literal wording of the source, e.g. "mean ± s.e.". */
+  readonly statement: string;
+  readonly locator: string;
+}
+
 export interface Measurement {
   readonly id: string;
   readonly phenomenonId: string;
@@ -69,7 +87,7 @@ export interface Measurement {
   readonly quote: string | null;
   readonly era: number | null;
   /** Unknown uncertainty is an explicit null (CS-04). */
-  readonly uncertainty: null;
+  readonly uncertainty: Uncertainty | null;
   readonly statistics: Statistics | null;
   readonly calculation: { readonly formula: string; readonly inputs: readonly string[] } | null;
   readonly rawRef: string;
@@ -82,6 +100,8 @@ export interface NormalizedMeasurement extends Measurement {
   readonly valueSI: number;
   readonly lowSI: number | null;
   readonly highSI: number | null;
+  /** SI-normalised uncertainty (half-width or interval bounds), null if unknown. */
+  readonly uncertaintySI: { readonly value: number | null; readonly low: number | null; readonly high: number | null } | null;
 }
 
 export type Comparability = 'same-protocol' | 'same-source' | 'same-definition' | 'heterogeneous';
@@ -268,6 +288,19 @@ export function checkInvariants({ sources, phenomena, measurements }: InvariantI
     if (m.high !== null && m.value > m.high) errors.push(`${at}: value > high`);
     if (m.provenanceType === 'illustrative') errors.push(`${at}: illustrative values are not admissible in the corpus`);
     if (m.provenanceType === 'measured' && !m.protocol) errors.push(`${at}: measured value without protocol`);
+    const u = m.uncertainty;
+    if (u) {
+      if (u.type === 'confidence-interval') {
+        if (u.low === null || u.high === null || u.level === null || u.value !== null) errors.push(`${at}: a confidence interval needs low, high and level, and no ± value`);
+        else if (!(u.low <= m.value && m.value <= u.high)) errors.push(`${at}: confidence interval does not contain the value`);
+      } else if (u.value === null || !(u.value > 0) || u.low !== null || u.high !== null || u.level !== null) {
+        errors.push(`${at}: ${u.type} needs a positive ± value and no low/high/level`);
+      }
+      if (u.type === 'standard-error' && u.sampleCount === null) errors.push(`${at}: a standard error needs the sample count`);
+      if (m.provenanceType === 'documented' || m.provenanceType === 'calculated') {
+        errors.push(`${at}: published dispersion requires a measured or estimated value (got ${m.provenanceType})`);
+      }
+    }
     if (m.statistics) {
       if (!m.protocol) errors.push(`${at}: statistics without protocol`);
       for (const p of checkQuantiles(m.statistics.quantiles)) errors.push(`${at}: ${p}`);
@@ -306,6 +339,11 @@ export function normalize(phenomena: readonly Phenomenon[], measurements: readon
       valueSI: toSI(m.value, m.unit, k),
       lowSI: m.low === null ? null : toSI(m.low, m.unit, k),
       highSI: m.high === null ? null : toSI(m.high, m.unit, k),
+      uncertaintySI: m.uncertainty === null ? null : {
+        value: m.uncertainty.value === null ? null : toSI(m.uncertainty.value, m.unit, k),
+        low: m.uncertainty.low === null ? null : toSI(m.uncertainty.low, m.unit, k),
+        high: m.uncertainty.high === null ? null : toSI(m.uncertainty.high, m.unit, k),
+      },
     };
   });
 }
