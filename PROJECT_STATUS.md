@@ -33,6 +33,7 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 ## Copie documentaire Drive
 
 - 2026-11-26 : dossier `ChatGPT/04_TECHNOLOGIES_INGENIERIE/CHRONOSILICON/2026-11-26_G1_V1-publiee` (https://drive.google.com/drive/folders/1j0mK7_bWW6_LvVZ5ehHCFbjzJU9uhd2M). 7 fichiers ; les tailles concordent toutes ; un fichier a été retéléchargé et son SHA-256 est identique à l'original. Archive locale : `docs/archives/2026-11-26_G1/` (SHA256SUMS.txt).
+- 2026-11-26 : dossier `…/CHRONOSILICON/2026-11-26_G2-G5_V2-a-V5-publiees` (https://drive.google.com/drive/folders/1F5t8vfQXhDJRo9J3zlZfN-K74FmjbxhI). 11 fichiers ; les tailles concordent toutes ; un fichier (G5) a été retéléchargé et son SHA-256 est identique à l'original. Archive locale : `docs/archives/2026-11-26_G2-G5/`.
 
 ## Décisions non validées par l'utilisateur
 
