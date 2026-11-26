@@ -7,7 +7,7 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 | Étape | Porte | Statut | Rapport |
 |---|---|---|---|
 | M00 | GM00 | **GO** avec réserves : nom provisoire (registres de marques non interrogés), auto-revue outillée | `docs/audits/M00.md` |
-| V0 | G0 | **GO** : 129 valeurs qualifiées, 102 tests | `docs/reports/G0.md` |
+| V0 | G0 | **GO** : 129 valeurs qualifiées (M00), puis **239** après le lot 2 (M01) | `docs/reports/G0.md`, `docs/reports/G0-lot2.md` |
 | V1 | G1 | **GO : V1 publiée** (commit `7ca44b5`, vérifiée HTTP, version.json et navigateur) | `docs/reports/G1.md` |
 | V2 | G2 | **GO : V2 publiée** (`main` = `2881239`, vérifiée en ligne) | `docs/reports/G2.md` |
 | V3 | G3 | **GO, publiée** : simulation exposée, 5 scénarios adossés au corpus | `docs/reports/G3.md` |
@@ -18,10 +18,10 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 
 - Monorepo npm workspaces : `packages/{metrology,observers,ontology,simulator}`, `apps/web` (Svelte 5, Vite 8, D3).
 - Données : 3 extractions M00 et 3 verdicts de vérification dans `data/raw/` (immuables), curation déterministe, corpus publié dans `data/validated/corpus.json`.
-  - 133 candidates : 129 qualifiées, 2 en attente, 2 contestées.
-  - 59 sources, dont 49 portent au moins une valeur qualifiée.
+  - 245 candidates (lots M00 et M01) : **239 qualifiées**, 2 en attente, 4 contestées.
+  - 120 sources, dont 108 portent au moins une valeur qualifiée. Les 15 domaines sont couverts.
 - Site V1 : chronologie logarithmique, fiches, convertisseur, FR/EN, 3 niveaux de lecture, export JSON/CSV, lien de partage. V2 : Architecture, Comparaison (15 groupes, sans classement), Observateurs (8). V3 : Simulation (5 scénarios, chemin critique, ressources). V4 : Immersion (journal dérivé). V5 : Laboratoire (registre, valeurs écartées, mesure navigateur, contributions). Tous les espaces de navigation sont réalisés.
-- Tests : 190 unitaires, 84 e2e (4 navigateurs) ; build déterministe.
+- Tests : 203 unitaires, 84 e2e (4 navigateurs) ; build déterministe.
 - CI : `ci.yml` vert sur `develop` (`a79760c`). `pages.yml` est prêt et ne s'exécute que sur `main`.
 
 ## Publication

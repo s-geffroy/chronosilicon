@@ -25,6 +25,11 @@ Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant 
 - V5 : Laboratoire (registre des sources, valeurs écartées et motifs, mesure navigateur avec statistiques documentées), `npm run contribute:check`, modèle d'issue (ADR-0008).
 - Revues contradictoires G3 et G4/G5 intégrées ; correctifs responsive mobile.
 
+### Ajouté (lot 2 du corpus, M01)
+- 112 nouvelles valeurs extraites et vérifiées indépendamment ; corpus publié de 129 à **239** valeurs qualifiées, 15 domaines sur 15 (logique et émergent inclus).
+- Grandeur `compute_rate` (flop/s) : TOP500 de 1993 à 2026 ; 7 nouveaux groupes de comparaison ; observateur « cycle de correction d'erreurs quantique ».
+- Définitions des types de provenance (ADR-0005) ; test de précédence de curation.
+
 ### Modifié
 - Remplacement du squelette Jekyll du VPS par la chaîne Node/Vite (ADR-0001).
 
