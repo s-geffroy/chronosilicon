@@ -10,12 +10,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Exact by definition (SI 2019); unperturbed ground-state hyperfine transition of the caesium-133 atom.",
+        "fr": "Valeur exacte par définition (SI 2019) ; transition hyperfine de l'état fondamental non perturbé de l'atome de césium 133.",
         "en": "Exact by definition (SI 2019); unperturbed ground-state hyperfine transition of the caesium-133 atom."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-bipm-si-brochure"
       ],
@@ -26,7 +26,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#caesium-hyperfine-frequency",
-      "notes": "Exact value. Cross-checked on src-bipm-second-page."
+      "notes": "Exact value. Cross-checked on src-bipm-second-page. | Verifier: Brochure V4.01 June 2026; licence CC BY 4.0 confirmed p.2."
     },
     {
       "id": "caesium-period-m1",
@@ -37,12 +37,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Derived from the exact SI definition.",
-        "en": "Derived from the exact SI definition."
+        "fr": "Déduite de la définition exacte de la seconde dans le SI.",
+        "en": "Derived from the exact SI definition of the second."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-bipm-si-brochure"
       ],
@@ -69,23 +69,23 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Exact by definition (defining constant of the SI).",
+        "fr": "Valeur exacte par définition (constante déterminante du SI).",
         "en": "Exact by definition (defining constant of the SI)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-bipm-si-brochure"
       ],
-      "locator": "Table 1, PDF p. 14; §2.3.1 definition of the metre, PDF p. 16",
+      "locator": "Table 1, PDF p. 14; §2.3.1 definition of the metre, PDF p. 17",
       "quote": "This definition implies the exact relation c = 299 792 458 m s−1.",
       "era": 1983,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#speed-of-light-vacuum",
-      "notes": "Also NIST CODATA 2022: '299 792 458 m s-1', uncertainty '(exact)' (src-nist-codata-c)."
+      "notes": "Also NIST CODATA 2022: '299 792 458 m s-1', uncertainty '(exact)' (src-nist-codata-c). | Verifier: Era 1983: brochure cites 17th CGPM 1983 redefinition of the metre."
     },
     {
       "id": "light-distance-per-ns-m1",
@@ -96,16 +96,16 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Vacuum. In optical fibre or copper, propagation is slower (group index not sourced here, see excluded).",
-        "en": "Vacuum. In optical fibre or copper, propagation is slower (group index not sourced here, see excluded)."
+        "fr": "Dans le vide.",
+        "en": "In vacuum."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-bipm-si-brochure"
       ],
-      "locator": "PDF p. 16",
+      "locator": "PDF p. 17",
       "quote": "This definition implies the exact relation c = 299 792 458 m s−1.",
       "era": null,
       "uncertainty": null,
@@ -117,7 +117,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#light-distance-per-ns",
-      "notes": "Exact."
+      "notes": "Exact. | Verifier: Remark on fibre/copper is not from the source; kept out of the short conditions."
     },
     {
       "id": "astronomical-unit-m1",
@@ -128,12 +128,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Conventional exact length (IAU 2012 Resolution B2), accepted for use with the SI. Not the instantaneous Earth-Sun distance.",
-        "en": "Conventional exact length (IAU 2012 Resolution B2), accepted for use with the SI. Not the instantaneous Earth-Sun distance."
+        "fr": "Unité hors SI reconnue internationalement, définie par la résolution B2 de l'UAI (2012).",
+        "en": "Internationally recognised non-SI unit, defined by IAU Resolution B2 (2012)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-bipm-si-brochure"
       ],
@@ -144,7 +144,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#astronomical-unit",
-      "notes": "The IAU PDF itself could not be fetched (see excluded); the BIPM brochure is an authoritative secondary carrier of the same exact value."
+      "notes": "The IAU PDF itself could not be fetched (see excluded); the BIPM brochure is an authoritative secondary carrier of the same exact value. | Verifier: 'Accepted for use with the SI' and 'not the instantaneous Earth-Sun distance' are not stated in Table 8 of this version."
     },
     {
       "id": "astronomical-unit-light-time-m1",
@@ -155,12 +155,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Vacuum, 1 au exactly; approximates Sun-Earth one-way light time (real distance varies over the year).",
-        "en": "Vacuum, 1 au exactly; approximates Sun-Earth one-way light time (real distance varies over the year)."
+        "fr": "Dans le vide, pour exactement 1 au.",
+        "en": "In vacuum, for exactly 1 au."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-bipm-si-brochure"
       ],
@@ -177,7 +177,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#astronomical-unit-light-time",
-      "notes": "About 8 min 19 s."
+      "notes": "About 8 min 19 s. | Verifier: The Sun-Earth approximation is an interpretation, not from the source."
     },
     {
       "id": "earth-moon-semimajor-axis-m1",
@@ -188,12 +188,12 @@
       "low": 357000,
       "high": 407000,
       "conditions": {
-        "fr": "Semimajor axis (0.3844 x 10^6 km). low/high: the fact sheet's stated rough range of the actual Earth-Moon distance over a year (footnote).",
-        "en": "Semimajor axis (0.3844 x 10^6 km). low/high: the fact sheet's stated rough range of the actual Earth-Moon distance over a year (footnote)."
+        "fr": "Demi-grand axe de l'orbite ; bornes : distance Terre-Lune approximative sur une année selon la fiche NASA.",
+        "en": "Orbit semimajor axis; bounds: approximate Earth-Moon distance over a year per the NASA fact sheet."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nasa-moon-factsheet"
       ],
@@ -215,12 +215,12 @@
       "low": 1.1908,
       "high": 1.3576,
       "conditions": {
-        "fr": "Vacuum, centre-to-centre distance equal to the semimajor axis; low/high from the 357,000-407,000 km range. Ignores ground-station and surface offsets.",
-        "en": "Vacuum, centre-to-centre distance equal to the semimajor axis; low/high from the 357,000-407,000 km range. Ignores ground-station and surface offsets."
+        "fr": "Dans le vide, distance égale au demi-grand axe ; bornes tirées de la plage 357 000-407 000 km.",
+        "en": "In vacuum, distance equal to the semimajor axis; bounds from the 357,000-407,000 km range."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nasa-moon-factsheet"
       ],
@@ -248,12 +248,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Fact sheet 'Distance from Earth: Minimum (10^6 km) 54.6'. Close oppositions only; most oppositions are farther.",
-        "en": "Fact sheet 'Distance from Earth: Minimum (10^6 km) 54.6'. Close oppositions only; most oppositions are farther."
+        "fr": "Distance minimale Terre-Mars indiquée par la fiche NASA.",
+        "en": "Minimum Earth-Mars distance given by the NASA fact sheet."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nasa-mars-factsheet"
       ],
@@ -264,7 +264,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#earth-mars-distance-min",
-      "notes": "Quote reconstructed from table cells label + value."
+      "notes": "Quote reconstructed from table cells label + value. | Verifier: 'Close oppositions only; most oppositions are farther' is not in the source."
     },
     {
       "id": "earth-mars-distance-max-m1",
@@ -275,12 +275,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Near solar conjunction (radio links are then generally disrupted by the Sun).",
-        "en": "Near solar conjunction (radio links are then generally disrupted by the Sun)."
+        "fr": "Distance maximale Terre-Mars indiquée par la fiche NASA.",
+        "en": "Maximum Earth-Mars distance given by the NASA fact sheet."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nasa-mars-factsheet"
       ],
@@ -291,7 +291,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#earth-mars-distance-max",
-      "notes": "Quote reconstructed from table cells label + value."
+      "notes": "Quote reconstructed from table cells label + value. | Verifier: 'Near solar conjunction, radio links disrupted' is not in the source."
     },
     {
       "id": "earth-mars-light-time-min-m1",
@@ -302,12 +302,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Vacuum, Earth-Mars distance 54.6e6 km (fact-sheet minimum); about 3.0 min.",
-        "en": "Vacuum, Earth-Mars distance 54.6e6 km (fact-sheet minimum); about 3.0 min."
+        "fr": "Dans le vide, distance Terre-Mars minimale de 54,6 millions de km.",
+        "en": "In vacuum, minimum Earth-Mars distance of 54.6 million km."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nasa-mars-factsheet"
       ],
@@ -335,12 +335,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Vacuum, Earth-Mars distance 401.4e6 km (fact-sheet maximum, near solar conjunction); about 22.3 min.",
-        "en": "Vacuum, Earth-Mars distance 401.4e6 km (fact-sheet maximum, near solar conjunction); about 22.3 min."
+        "fr": "Dans le vide, distance Terre-Mars maximale de 401,4 millions de km.",
+        "en": "In vacuum, maximum Earth-Mars distance of 401.4 million km."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nasa-mars-factsheet"
       ],
@@ -357,7 +357,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#earth-mars-light-time-max",
-      "notes": "NASA Goddard outreach page gives rounded 'about four minutes' and 'around 24 minutes'; its 24 min does not match its own 250 million miles (about 22.4 min), so the calculated range is preferred."
+      "notes": "NASA Goddard outreach page gives rounded 'about four minutes' and 'around 24 minutes'; its 24 min does not match its own 250 million miles (about 22.4 min), so the calculated range is preferred. | Verifier: Drop unsourced 'near solar conjunction'."
     },
     {
       "id": "voyager1-distance-2026-11-18-m1",
@@ -368,12 +368,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Snapshot dated Wednesday, Nov. 18, 2026, 2:16:07 a.m. PST. Increases continuously and oscillates with Earth's orbital motion.",
-        "en": "Snapshot dated Wednesday, Nov. 18, 2026, 2:16:07 a.m. PST. Increases continuously and oscillates with Earth's orbital motion."
+        "fr": "Distance annoncée par la NASA pour le 18 novembre 2026 à 2 h 16 min 07 s (heure du Pacifique), soit environ un jour-lumière.",
+        "en": "Distance announced by NASA for 18 November 2026 at 2:16:07 a.m. PST, about one light-day."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nasa-voyager-where"
       ],
@@ -384,7 +384,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#voyager1-distance-2026-11-18",
-      "notes": "Must always be cited with its date. The page calls it about one light-day."
+      "notes": "Must always be cited with its date. The page calls it about one light-day. | Verifier: Quote text matches (page writes 'will be' before the figure). 'Oscillates with Earth's orbital motion' not found on page."
     },
     {
       "id": "voyager1-light-time-2026-11-18-m1",
@@ -395,12 +395,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Vacuum, distance of 25.902e9 km on 2026-11-18 02:16:07 PST; about 24.0 h.",
-        "en": "Vacuum, distance of 25.902e9 km on 2026-11-18 02:16:07 PST; about 24.0 h."
+        "fr": "Dans le vide, pour une distance de 25,902 milliards de km le 18 novembre 2026.",
+        "en": "In vacuum, for a distance of 25.902 billion km on 18 November 2026."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nasa-voyager-where"
       ],
@@ -428,12 +428,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Before any RTT measurement; SHOULD-level requirement of RFC 6298. Implementations may differ.",
-        "en": "Before any RTT measurement; SHOULD-level requirement of RFC 6298. Implementations may differ."
+        "fr": "Avant toute mesure de RTT ; recommandation de niveau SHOULD de la RFC 6298.",
+        "en": "Before any RTT measurement; SHOULD-level recommendation of RFC 6298."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-rfc6298"
       ],
@@ -455,12 +455,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "SHOULD-level rule of RFC 6298. Some widely used stacks use a lower minimum (not sourced here).",
-        "en": "SHOULD-level rule of RFC 6298. Some widely used stacks use a lower minimum (not sourced here)."
+        "fr": "Règle de niveau SHOULD de la RFC 6298, appliquée à chaque calcul du RTO.",
+        "en": "SHOULD-level rule of RFC 6298, applied whenever RTO is computed."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-rfc6298"
       ],
@@ -471,7 +471,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-min-rto",
-      "notes": "Normative recommendation, not a measurement of deployed behaviour."
+      "notes": "Normative recommendation, not a measurement of deployed behaviour. | Verifier: Claim about lower minimums in deployed stacks is flagged unsourced; omitted from short conditions."
     },
     {
       "id": "tcp-max-rto-floor-m1",
@@ -482,12 +482,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "An upper bound MAY be placed on RTO, provided it is at least 60 s.",
-        "en": "An upper bound MAY be placed on RTO, provided it is at least 60 s."
+        "fr": "Un plafond PEUT être imposé au RTO, à condition qu'il soit d'au moins 60 s.",
+        "en": "A maximum MAY be placed on RTO, provided it is at least 60 s."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-rfc6298"
       ],
@@ -509,12 +509,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "If the timer expired awaiting the ACK of a SYN and RTO < 3 s, RTO is reset to 3 s once data transmission begins.",
-        "en": "If the timer expired awaiting the ACK of a SYN and RTO < 3 s, RTO is reset to 3 s once data transmission begins."
+        "fr": "Si le temporisateur expire en attendant l'ACK d'un SYN et que le RTO est inférieur à 3 s, il est remis à 3 s au début de la transmission des données.",
+        "en": "If the timer expires awaiting the ACK of a SYN and RTO is below 3 s, RTO is reset to 3 s when data transmission begins."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-rfc6298"
       ],
@@ -536,12 +536,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Value assumed by the TCP specification; explicitly an engineering choice. TIME-WAIT lasts 2 MSL.",
-        "en": "Value assumed by the TCP specification; explicitly an engineering choice. TIME-WAIT lasts 2 MSL."
+        "fr": "Valeur retenue par la spécification TCP, présentée comme un choix d'ingénierie ; l'état TIME-WAIT dure 2 MSL.",
+        "en": "Value taken by the TCP specification, described as an engineering choice; TIME-WAIT lasts 2 MSL."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-rfc9293"
       ],
@@ -563,12 +563,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "32-bit counter that 'typically' increments at least once every roughly 4 us; not assumed realtime nor precise.",
-        "en": "32-bit counter that 'typically' increments at least once every roughly 4 us; not assumed realtime nor precise."
+        "fr": "Compteur de 32 bits incrémenté en général au moins une fois toutes les 4 µs environ ; ni temps réel ni précis.",
+        "en": "32-bit counter that typically increments at least once every roughly 4 µs; neither realtime nor precise."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-rfc9293"
       ],
@@ -590,12 +590,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Design target, one way, UL and DL each; L2/L3 SDU ingress to egress over the radio interface, no DRX; considered an average value. Analytical evaluation.",
-        "en": "Design target, one way, UL and DL each; L2/L3 SDU ingress to egress over the radio interface, no DRX; considered an average value. Analytical evaluation."
+        "fr": "Objectif de conception, 0,5 ms en montant et en descendant, de l'entrée à la sortie des SDU couche 2/3 via l'interface radio, sans DRX ; valeur moyenne, évaluation analytique.",
+        "en": "Design target, 0.5 ms each for UL and DL, from layer 2/3 SDU ingress to egress over the radio interface, no DRX; average value, analytical evaluation."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-3gpp-tr38913"
       ],
@@ -617,12 +617,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Success probability 1-10^-5 for a 32-byte packet within 1 ms user-plane latency.",
-        "en": "Success probability 1-10^-5 for a 32-byte packet within 1 ms user-plane latency."
+        "fr": "Probabilité de succès de 1-10^-5 pour un paquet de 32 octets transmis en une fois avec une latence plan usager de 1 ms.",
+        "en": "Success probability 1-10^-5 for one transmission of a 32-byte packet with a 1 ms user-plane latency."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-3gpp-tr38913"
       ],
@@ -644,12 +644,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Design target, UL and DL each; same definition as 7.5.",
-        "en": "Design target, UL and DL each; same definition as 7.5."
+        "fr": "Objectif de conception, 4 ms en montant et en descendant, même définition qu'en 7.5.",
+        "en": "Design target, 4 ms each for UL and DL, same definition as 7.5."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-3gpp-tr38913"
       ],
@@ -671,12 +671,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Upper target when a GEO satellite link is involved; MEO up to 180 ms, LEO up to 50 ms in the same sentence.",
-        "en": "Upper target when a GEO satellite link is involved; MEO up to 180 ms, LEO up to 50 ms in the same sentence."
+        "fr": "Objectif de RTT plan usager pouvant atteindre 600 ms lorsqu'un lien satellite géostationnaire est impliqué.",
+        "en": "User-plane RTT target that can be as high as 600 ms when a GEO satellite link is involved."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-3gpp-tr38913"
       ],
@@ -698,12 +698,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Upper target for LEO satellite systems.",
-        "en": "Upper target for LEO satellite systems."
+        "fr": "Objectif de RTT plan usager allant jusqu'à 50 ms pour les systèmes satellites en orbite basse.",
+        "en": "User-plane RTT target of up to 50 ms for LEO satellite systems."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-3gpp-tr38913"
       ],
@@ -725,12 +725,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Frame from destination address to FCS, excluding preamble and inter-frame gap.",
-        "en": "Frame from destination address to FCS, excluding preamble and inter-frame gap."
+        "fr": "Plus petite des tailles d'essai Ethernet de la RFC 2544, qui incluent la taille minimale autorisée par la norme ; préambule et intervalle comptés à part.",
+        "en": "Smallest RFC 2544 Ethernet test size, which includes the minimum size permitted by the standard; preamble and gap counted separately."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-rfc2544"
       ],
@@ -741,7 +741,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ethernet-min-frame-size",
-      "notes": "64 as the minimum is inferred from the list including the minimum; IEEE 802.3 itself (minFrameSize) could not be consulted."
+      "notes": "64 as the minimum is inferred from the list including the minimum; IEEE 802.3 itself (minFrameSize) could not be consulted. | Verifier: 'From destination address to FCS' is not stated in RFC 2544 (IEEE 802.3 not consulted)."
     },
     {
       "id": "ethernet-min-frame-wire-time-1g-m1",
@@ -752,12 +752,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "64-byte frame + 64-bit preamble + 96-bit gap = 672 bits at a nominal 1e9 bit/s. Frame alone: 512 ns.",
-        "en": "64-byte frame + 64-bit preamble + 96-bit gap = 672 bits at a nominal 1e9 bit/s. Frame alone: 512 ns."
+        "fr": "672 bits (préambule 64 bits, trame 64 octets, intervalle 96 bits, d'après l'annexe B de la RFC 2544) à un débit nominal de 1 Gbit/s.",
+        "en": "672 bits (64-bit preamble, 64-byte frame, 96-bit gap, per RFC 2544 Appendix B) at a nominal 1 Gbit/s."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-rfc2544"
       ],
@@ -773,7 +773,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ethernet-min-frame-wire-time-1g",
-      "notes": "Cross-check: at 10 Mbit/s, 1/(672e-7 s) = 14 880.95 frames/s, matching RFC 2544 Appendix B '64 14880' for Ethernet. Line rate is a nominal parameter, not sourced from IEEE 802.3."
+      "notes": "Cross-check: at 10 Mbit/s, 1/(672e-7 s) = 14 880.95 frames/s, matching RFC 2544 Appendix B '64 14880' for Ethernet. Line rate is a nominal parameter, not sourced from IEEE 802.3. | Verifier: Arithmetic correct. RFC 2544 Appendix B tabulates 10 Mbit/s Ethernet only; the rate is a parameter not from the source. Conditions should carry the caveat now only in confidenceNotes."
     },
     {
       "id": "ethernet-min-frame-wire-time-10g-m1",
@@ -784,12 +784,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "672 bits at a nominal 1e10 bit/s. Frame alone: 51.2 ns.",
-        "en": "672 bits at a nominal 1e10 bit/s. Frame alone: 51.2 ns."
+        "fr": "672 bits (préambule 64 bits, trame 64 octets, intervalle 96 bits, d'après l'annexe B de la RFC 2544) à un débit nominal de 10 Gbit/s.",
+        "en": "672 bits (64-bit preamble, 64-byte frame, 96-bit gap, per RFC 2544 Appendix B) at a nominal 10 Gbit/s."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-rfc2544"
       ],
@@ -805,7 +805,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ethernet-min-frame-wire-time-10g",
-      "notes": "Assumes the 10 Mbit/s-era preamble/gap structure carries over to 10GbE (true for the nominal minimum IPG but not checked against IEEE 802.3 clauses for 10G/100G)."
+      "notes": "Assumes the 10 Mbit/s-era preamble/gap structure carries over to 10GbE (true for the nominal minimum IPG but not checked against IEEE 802.3 clauses for 10G/100G). | Verifier: Arithmetic correct. RFC 2544 Appendix B tabulates 10 Mbit/s Ethernet only; the rate is a parameter not from the source. Conditions should carry the caveat now only in confidenceNotes."
     },
     {
       "id": "ethernet-min-frame-wire-time-100g-m1",
@@ -816,12 +816,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "672 bits at a nominal 1e11 bit/s. Frame alone: 5.12 ns. Ignores 64b/66b line coding overhead.",
-        "en": "672 bits at a nominal 1e11 bit/s. Frame alone: 5.12 ns. Ignores 64b/66b line coding overhead."
+        "fr": "672 bits (préambule 64 bits, trame 64 octets, intervalle 96 bits, d'après l'annexe B de la RFC 2544) à un débit nominal de 100 Gbit/s.",
+        "en": "672 bits (64-bit preamble, 64-byte frame, 96-bit gap, per RFC 2544 Appendix B) at a nominal 100 Gbit/s."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-rfc2544"
       ],
@@ -837,7 +837,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ethernet-min-frame-wire-time-100g",
-      "notes": "Same caveat as the 10G item; 1 bit at 100 Gbit/s lasts 10 ps."
+      "notes": "Same caveat as the 10G item; 1 bit at 100 Gbit/s lasts 10 ps. | Verifier: Arithmetic correct. RFC 2544 Appendix B tabulates 10 Mbit/s Ethernet only; the rate is a parameter not from the source. Conditions should carry the caveat now only in confidenceNotes."
     },
     {
       "id": "azure-rtt-eastus-westeurope-m1",
@@ -848,12 +848,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "P50 of 1-minute probe measurements on the Azure backbone, 30-day window ending 2026-07-30; source East US (Virginia), destination West Europe (Netherlands). Reverse direction listed as 85 ms.",
-        "en": "P50 of 1-minute probe measurements on the Azure backbone, 30-day window ending 2026-07-30; source East US (Virginia), destination West Europe (Netherlands). Reverse direction listed as 85 ms."
+        "fr": "RTT médian (P50) mesuré par sondes sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de East US vers West Europe (85 ms en sens inverse).",
+        "en": "Median (P50) RTT from probes on the Azure backbone, 30-day window ending 30 July 2026; East US to West Europe (85 ms in reverse)."
       },
-      "protocol": "As reported by the source: P50 of 1-minute probe measurements on the Azure backbone, 30-day window ending 2026-07-30; source East US (Virginia), destination West Europe (Netherlands). Reverse direction listed as 85 ms.",
+      "protocol": "As reported by the source: Median (P50) RTT from probes on the Azure backbone, 30-day window ending 30 July 2026; East US to West Europe (85 ms in reverse).",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-azure-latency"
       ],
@@ -864,7 +864,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-westeurope",
-      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: 'The measurements are collected in 1-minute intervals'."
+      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: 'The measurements are collected in 1-minute intervals'. | Verifier: 'Virginia' and 'Netherlands' are not stated on the page."
     },
     {
       "id": "azure-rtt-eastus-westus-m1",
@@ -875,12 +875,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "P50, 30-day window ending 2026-07-30; Azure backbone.",
-        "en": "P50, 30-day window ending 2026-07-30; Azure backbone."
+        "fr": "RTT médian (P50) sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de East US vers West US.",
+        "en": "Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; East US to West US."
       },
-      "protocol": "As reported by the source: P50, 30-day window ending 2026-07-30; Azure backbone.",
+      "protocol": "As reported by the source: Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; East US to West US.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-azure-latency"
       ],
@@ -902,12 +902,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "P50, 30-day window ending 2026-07-30; Amsterdam area to Paris area regions.",
-        "en": "P50, 30-day window ending 2026-07-30; Amsterdam area to Paris area regions."
+        "fr": "RTT médian (P50) sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de West Europe vers France Central.",
+        "en": "Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; West Europe to France Central."
       },
-      "protocol": "As reported by the source: P50, 30-day window ending 2026-07-30; Amsterdam area to Paris area regions.",
+      "protocol": "As reported by the source: Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; West Europe to France Central.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-azure-latency"
       ],
@@ -918,7 +918,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-westeurope-francecentral",
-      "notes": "Columns: Belgium Central, France Central, France South, Spain Central, Switzerland North, Switzerland West, West Europe."
+      "notes": "Columns: Belgium Central, France Central, France South, Spain Central, Switzerland North, Switzerland West, West Europe. | Verifier: 'Amsterdam area to Paris area' not stated on the page."
     },
     {
       "id": "azure-rtt-eastus-australiaeast-m1",
@@ -929,12 +929,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "P50, 30-day window ending 2026-07-30; Virginia to New South Wales regions.",
-        "en": "P50, 30-day window ending 2026-07-30; Virginia to New South Wales regions."
+        "fr": "RTT médian (P50) sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de East US vers Australia East.",
+        "en": "Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; East US to Australia East."
       },
-      "protocol": "As reported by the source: P50, 30-day window ending 2026-07-30; Virginia to New South Wales regions.",
+      "protocol": "As reported by the source: Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; East US to Australia East.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-azure-latency"
       ],
@@ -945,7 +945,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-australiaeast",
-      "notes": "Columns: Australia Central, Australia Central 2, Australia East, Australia Southeast, New Zealand North."
+      "notes": "Columns: Australia Central, Australia Central 2, Australia East, Australia Southeast, New Zealand North. | Verifier: 'Virginia to New South Wales' not stated on the page."
     },
     {
       "id": "human-simple-visual-reaction-time-m1",
@@ -956,12 +956,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Community sample, n=1469, ages 18-65; lateralised visual stimuli, mouse-button press with dominant index finger; 231 ms uncorrected, 213 ms after subtracting measured display+mouse delay (averaged 17.8 ms).",
-        "en": "Community sample, n=1469, ages 18-65; lateralised visual stimuli, mouse-button press with dominant index finger; 231 ms uncorrected, 213 ms after subtracting measured display+mouse delay (averaged 17.8 ms)."
+        "fr": "Échantillon de 1 469 adultes de 18 à 65 ans ; stimuli visuels latéralisés, réponse à la souris avec l'index dominant ; 231 ms brut, 213 ms après correction des délais matériels (17,8 ms).",
+        "en": "Sample of 1,469 adults aged 18-65; lateralised visual stimuli, mouse press with dominant index finger; 231 ms raw, 213 ms corrected for hardware delays (17.8 ms)."
       },
-      "protocol": "As reported by the source: Community sample, n=1469, ages 18-65; lateralised visual stimuli, mouse-button press with dominant index finger; 231 ms uncorrected, 213 ms after subtracting measured display+mouse delay (averaged 17.8 ms).",
+      "protocol": "As reported by the source: Sample of 1,469 adults aged 18-65; lateralised visual stimuli, mouse press with dominant index finger; 231 ms raw, 213 ms corrected for hardware delays (17.8 ms).",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-woods-2015-srt"
       ],
@@ -983,12 +983,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Same sample (n=1469); estimated by subtracting finger-tapping movement-initiation time from SRT. Derived estimate, not directly observed.",
-        "en": "Same sample (n=1469); estimated by subtracting finger-tapping movement-initiation time from SRT. Derived estimate, not directly observed."
+        "fr": "Même échantillon ; estimé en soustrayant du temps de réaction le temps d'initiation du mouvement mesuré par un test de tapotement.",
+        "en": "Same sample; estimated by subtracting finger-tapping movement-initiation time from SRT."
       },
-      "protocol": "As reported by the source: Same sample (n=1469); estimated by subtracting finger-tapping movement-initiation time from SRT. Derived estimate, not directly observed.",
+      "protocol": "As reported by the source: Same sample; estimated by subtracting finger-tapping movement-initiation time from SRT.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-woods-2015-srt"
       ],
@@ -999,7 +999,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stimulus-detection-time",
-      "notes": "Model-dependent subtraction method."
+      "notes": "Model-dependent subtraction method. | Verifier: Derived quantity from measured data; 'measured' acceptable given the conditions disclose the subtraction."
     },
     {
       "id": "human-voluntary-blink-duration-m1",
@@ -1010,12 +1010,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 M, 14 F), aged 25-63 (mean 35); high-speed video at 600 fps. Mean ± 25 ms (s.e. per Table 1 caption). Closing phase 76 ± 2 ms, closed 58 ± 4 ms.",
-        "en": "Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 M, 14 F), aged 25-63 (mean 35); high-speed video at 600 fps. Mean ± 25 ms (s.e. per Table 1 caption). Closing phase 76 ± 2 ms, closed 58 ± 4 ms."
+        "fr": "Clignements volontaires (non spontanés) ; 25 volontaires sains (11 hommes, 14 femmes) de 25 à 63 ans ; vidéo rapide à 600 images/s.",
+        "en": "Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 men, 14 women) aged 25-63; high-speed video at 600 fps."
       },
-      "protocol": "As reported by the source: Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 M, 14 F), aged 25-63 (mean 35); high-speed video at 600 fps. Mean ± 25 ms (s.e. per Table 1 caption). Closing phase 76 ± 2 ms, closed 58 ± 4 ms.",
+      "protocol": "As reported by the source: Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 men, 14 women) aged 25-63; high-speed video at 600 fps.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-kwon-2013-blink"
       ],
@@ -1026,7 +1026,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-voluntary-blink-duration",
-      "notes": "Spontaneous blinks are generally reported as shorter, but no source for that was consulted here: do not use 572 ms as 'a blink' without the word 'voluntary'."
+      "notes": "Spontaneous blinks are generally reported as shorter, but no source for that was consulted here: do not use 572 ms as 'a blink' without the word 'voluntary'. | Verifier: Read via WebFetch (PMC HTML; curl got a reCAPTCHA page). Values confirmed; only the s.e. attribution of ±25 is an inference."
     },
     {
       "id": "human-voluntary-blink-closing-phase-m1",
@@ -1037,12 +1037,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Same study: n=25, 600 fps; mean ± 2 ms (s.e.).",
-        "en": "Same study: n=25, 600 fps; mean ± 2 ms (s.e.)."
+        "fr": "Même étude : 25 volontaires, 600 images/s ; moyenne ± 2 ms (erreur type).",
+        "en": "Same study: 25 volunteers, 600 fps; mean ± 2 ms (s.e.)."
       },
-      "protocol": "As reported by the source: Same study: n=25, 600 fps; mean ± 2 ms (s.e.).",
+      "protocol": "As reported by the source: Same study: 25 volunteers, 600 fps; mean ± 2 ms (s.e.).",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-kwon-2013-blink"
       ],
@@ -1053,7 +1053,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-voluntary-blink-closing-phase",
-      "notes": "Quote is the WebFetch rendering of a table cell (label + value), not a running-text sentence."
+      "notes": "Quote is the WebFetch rendering of a table cell (label + value), not a running-text sentence. | Verifier: Quote is a table-cell reconstruction, as disclosed."
     },
     {
       "id": "human-flicker-fusion-uniform-m1",
@@ -1064,12 +1064,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Spatially uniform modulated light; n=10 subjects; DLP projector setup. Sensitivity 'drops to zero near 65 Hz'.",
-        "en": "Spatially uniform modulated light; n=10 subjects; DLP projector setup. Sensitivity 'drops to zero near 65 Hz'."
+        "fr": "Lumière modulée spatialement uniforme ; 10 sujets ; projecteur DLP ; la sensibilité tombe à zéro vers 65 Hz.",
+        "en": "Spatially uniform modulated light; 10 subjects; DLP projector; sensitivity drops to zero near 65 Hz."
       },
-      "protocol": "As reported by the source: Spatially uniform modulated light; n=10 subjects; DLP projector setup. Sensitivity 'drops to zero near 65 Hz'.",
+      "protocol": "As reported by the source: Spatially uniform modulated light; 10 subjects; DLP projector; sensitivity drops to zero near 65 Hz.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-davis-2015-flicker"
       ],
@@ -1080,7 +1080,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-flicker-fusion-uniform",
-      "notes": "Small sample; 'near' is approximate. Classic CFF depends on luminance, eccentricity and contrast."
+      "notes": "Small sample; 'near' is approximate. Classic CFF depends on luminance, eccentricity and contrast. | Verifier: Read via Europe PMC full-text XML (official equivalent of the PMC article; PMC HTML returned reCAPTCHA to curl)."
     },
     {
       "id": "human-flicker-artifact-edge-median-m1",
@@ -1089,14 +1089,14 @@
       "value": 500,
       "unit": "Hz",
       "low": null,
-      "high": 800,
+      "high": null,
       "conditions": {
-        "fr": "Modulated light containing a high-spatial-frequency edge (eye movements across it); n=10; median viewer; several viewers above 800 Hz (high).",
-        "en": "Modulated light containing a high-spatial-frequency edge (eye movements across it); n=10; median viewer; several viewers above 800 Hz (high)."
+        "fr": "Lumière modulée comportant un bord net ; 10 sujets dont deux auteurs ; observateur médian ; plusieurs sujets voient encore des artefacts au-delà de 800 Hz.",
+        "en": "Modulated light with a sharp spatial edge; 10 subjects including two authors; median viewer; several subjects still saw artefacts above 800 Hz."
       },
-      "protocol": "As reported by the source: Modulated light containing a high-spatial-frequency edge (eye movements across it); n=10; median viewer; several viewers above 800 Hz (high).",
+      "protocol": "As reported by the source: Modulated light with a sharp spatial edge; 10 subjects including two authors; median viewer; several subjects still saw artefacts above 800 Hz.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-davis-2015-flicker"
       ],
@@ -1107,7 +1107,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-flicker-artifact-edge-median",
-      "notes": "n=10, two subjects are authors; single study, not replicated in the sources consulted. 'high' is a lower bound for some viewers, not a maximum."
+      "notes": "n=10, two subjects are authors; single study, not replicated in the sources consulted. 'high' is a lower bound for some viewers, not a maximum. | Verifier: high=800 is not an upper bound of a range (some viewers exceed it): set high to null. Eye-movement mechanism is a hypothesis in the source."
     },
     {
       "id": "human-stylus-latency-jnd-large-box-m1",
@@ -1118,12 +1118,12 @@
       "low": 2,
       "high": 16,
       "conditions": {
-        "fr": "n=16 naive adults (24-52 y); High Performance Stylus System with 1 ms baseline; JND by PEST adaptive procedure; task: dragging a stylus with a large box around the nib.",
-        "en": "n=16 naive adults (24-52 y); High Performance Stylus System with 1 ms baseline; JND by PEST adaptive procedure; task: dragging a stylus with a large box around the nib."
+        "fr": "16 adultes naïfs (24-52 ans) ; système de stylet à 1 ms de latence de base ; seuil par procédure adaptative PEST ; glisser avec une grande boîte (20 × 20 mm) autour de la pointe.",
+        "en": "16 naive adults (24-52 y); stylus system with 1 ms baseline latency; threshold by PEST adaptive procedure; dragging with a large (20 × 20 mm) box around the nib."
       },
-      "protocol": "As reported by the source: n=16 naive adults (24-52 y); High Performance Stylus System with 1 ms baseline; JND by PEST adaptive procedure; task: dragging a stylus with a large box around the nib.",
+      "protocol": "As reported by the source: 16 naive adults (24-52 y); stylus system with 1 ms baseline latency; threshold by PEST adaptive procedure; dragging with a large (20 × 20 mm) box around the nib.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-ng-2014-stylus"
       ],
@@ -1134,7 +1134,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stylus-latency-jnd-large-box",
-      "notes": "Internal inconsistency: the running text gives 'range 2 - 7' for the large box and '2 - 16' for the small box, opposite to the figure captions. Median values are consistent."
+      "notes": "Internal inconsistency: the running text gives 'range 2 - 7' for the large box and '2 - 16' for the small box, opposite to the figure captions. Median values are consistent. | Verifier: Range inconsistency between text and captions confirmed as described."
     },
     {
       "id": "human-stylus-latency-jnd-small-box-m1",
@@ -1145,12 +1145,12 @@
       "low": 2,
       "high": 7,
       "conditions": {
-        "fr": "Same study, n=16; small box around the nib; 1 ms baseline.",
-        "en": "Same study, n=16; small box around the nib; 1 ms baseline."
+        "fr": "Même étude, 16 participants ; petite boîte (6,25 × 6,25 mm) autour de la pointe ; latence de base 1 ms.",
+        "en": "Same study, 16 participants; small (6.25 × 6.25 mm) box around the nib; 1 ms baseline."
       },
-      "protocol": "As reported by the source: Same study, n=16; small box around the nib; 1 ms baseline.",
+      "protocol": "As reported by the source: Same study, 16 participants; small (6.25 × 6.25 mm) box around the nib; 1 ms baseline.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-ng-2014-stylus"
       ],
@@ -1172,12 +1172,12 @@
       "low": 10,
       "high": 70,
       "conditions": {
-        "fr": "Same study, n=16; scribbling task with a 7 ms baseline latency.",
-        "en": "Same study, n=16; scribbling task with a 7 ms baseline latency."
+        "fr": "Même étude, 16 participants ; tâche de gribouillage avec une latence de base de 7 ms.",
+        "en": "Same study, 16 participants; scribbling task with a 7 ms baseline latency."
       },
-      "protocol": "As reported by the source: Same study, n=16; scribbling task with a 7 ms baseline latency.",
+      "protocol": "As reported by the source: Same study, 16 participants; scribbling task with a 7 ms baseline latency.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-ng-2014-stylus"
       ],
@@ -1199,12 +1199,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Skylake client microarchitecture, 32 KB/8-way L1D, fastest latency (best case); Intel note: software-visible latency varies with access patterns",
-        "en": "Skylake client microarchitecture, 32 KB/8-way L1D, fastest latency (best case); Intel note: software-visible latency varies with access patterns"
+        "fr": "Microarchitecture Skylake client, L1D de 32 Ko à 8 voies ; latence la plus courte ; la latence visible par le logiciel varie selon les accès.",
+        "en": "Skylake client microarchitecture, 32 KB 8-way L1D; fastest latency; software-visible latency varies with access patterns."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol1-051"
       ],
@@ -1226,12 +1226,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Skylake client, 256 KB/4-way L2, fastest latency",
-        "en": "Skylake client, 256 KB/4-way L2, fastest latency"
+        "fr": "Skylake client, L2 de 256 Ko à 4 voies ; latence la plus courte.",
+        "en": "Skylake client, 256 KB 4-way L2; fastest latency."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol1-051"
       ],
@@ -1253,12 +1253,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Skylake client, shared L3 up to 2 MB per core; fastest latency; L3 latency depends on core/uncore clock ratio",
-        "en": "Skylake client, shared L3 up to 2 MB per core; fastest latency; L3 latency depends on core/uncore clock ratio"
+        "fr": "Skylake client, L3 partagé jusqu'à 2 Mo par cœur et 16 voies ; latence la plus courte, en cycles cœur ; la latence visible varie selon les accès.",
+        "en": "Skylake client, shared L3 up to 2 MB per core and up to 16 ways; fastest latency, in core cycles; software-visible latency varies with access patterns."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol1-051"
       ],
@@ -1269,7 +1269,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-skylake-client-l3-latency",
-      "notes": "The row is split across lines in the extraction. Value in core cycles."
+      "notes": "The row is split across lines in the extraction. Value in core cycles. | Verifier: La mention 'L3 latency depends on core/uncore clock ratio' vient de la note de la table Haswell (vol. 2), pas de la table Skylake."
     },
     {
       "id": "intel-icelake-client-l1d-latency-m1",
@@ -1280,12 +1280,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Ice Lake client (Sunny Cove), 48 KB/8-way DCU",
-        "en": "Ice Lake client (Sunny Cove), 48 KB/8-way DCU"
+        "fr": "Ice Lake client, DCU de 48 Ko à 8 voies ; la latence visible varie selon les accès.",
+        "en": "Ice Lake client, 48 KB 8-way DCU; software-visible latency varies with access patterns."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol1-051"
       ],
@@ -1307,12 +1307,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Ice Lake client, 512 KB/8-way MLC",
-        "en": "Ice Lake client, 512 KB/8-way MLC"
+        "fr": "Ice Lake client, MLC de 512 Ko à 8 voies.",
+        "en": "Ice Lake client, 512 KB 8-way MLC."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol1-051"
       ],
@@ -1334,12 +1334,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Haswell microarchitecture; the value is given as approximate ('~34'); L3 latency varies with the core/uncore clock ratio",
-        "en": "Haswell microarchitecture; the value is given as approximate ('~34'); L3 latency varies with the core/uncore clock ratio"
+        "fr": "Microarchitecture Haswell ; valeur approximative (~34) ; la latence du L3 varie avec le rapport des horloges cœur et uncore.",
+        "en": "Haswell microarchitecture; approximate value (~34); L3 latency varies with the core/uncore clock ratio."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol2-051"
       ],
@@ -1361,12 +1361,12 @@
       "low": 26,
       "high": 31,
       "conditions": {
-        "fr": "Second-generation Intel Core (Sandy Bridge); best-case lookup latency; varies with product segment and SKU",
-        "en": "Second-generation Intel Core (Sandy Bridge); best-case lookup latency; varies with product segment and SKU"
+        "fr": "Intel Core de deuxième génération (Sandy Bridge) ; latence dans le meilleur cas, 26 à 31 cycles selon le segment et la référence.",
+        "en": "Second-generation Intel Core (Sandy Bridge); best-case latency, 26 to 31 cycles depending on product segment and SKU."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol2-051"
       ],
@@ -1388,12 +1388,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Sandy Bridge; line modified in another core's L2/L1 ('dirty hit'); 43 cycles for a clean hit",
-        "en": "Sandy Bridge; line modified in another core's L2/L1 ('dirty hit'); 43 cycles for a clean hit"
+        "fr": "Sandy Bridge ; ligne modifiée dans le L1/L2 d'un autre cœur (dirty hit) ; 43 cycles pour un clean hit ; meilleur cas.",
+        "en": "Sandy Bridge; line modified in another core's L1/L2 (dirty hit); 43 cycles for a clean hit; best case."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol2-051"
       ],
@@ -1415,12 +1415,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Intel Xeon processor 5500 series (Nehalem-EP, two sockets), L2 miss served by DRAM attached to the local memory controller",
-        "en": "Intel Xeon processor 5500 series (Nehalem-EP, two sockets), L2 miss served by DRAM attached to the local memory controller"
+        "fr": "Intel Xeon 5500 (Nehalem) ; défaut de L2 servi par la DRAM du contrôleur mémoire local ; valeur approximative donnée en exemple.",
+        "en": "Intel Xeon 5500 (Nehalem); L2 miss served by DRAM attached to the local memory controller; approximate example value."
       },
       "protocol": null,
       "provenanceType": "estimated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol1-051"
       ],
@@ -1431,7 +1431,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-xeon5500-local-dram-latency",
-      "notes": "Intel calls these 'examples of the approximate latency values'. No protocol."
+      "notes": "Intel calls these 'examples of the approximate latency values'. No protocol. | Verifier: 'two sockets' retiré : non dit par la source."
     },
     {
       "id": "intel-xeon5500-remote-dram-latency-m1",
@@ -1442,12 +1442,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Xeon 5500, DRAM attached to the other socket's memory controller (NUMA remote)",
-        "en": "Xeon 5500, DRAM attached to the other socket's memory controller (NUMA remote)"
+        "fr": "Xeon 5500 ; DRAM rattachée au contrôleur mémoire distant (NUMA) ; valeur approximative.",
+        "en": "Xeon 5500; DRAM attached to the remote memory controller (NUMA); approximate value."
       },
       "protocol": null,
       "provenanceType": "estimated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol1-051"
       ],
@@ -1469,12 +1469,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Xeon 5500 (Nehalem), L2 miss served by the L3, line in exclusive state",
-        "en": "Xeon 5500 (Nehalem), L2 miss served by the L3, line in exclusive state"
+        "fr": "Xeon 5500 (Nehalem) ; défaut de L2 servi par le L3, ligne à l'état exclusif ; valeur approximative.",
+        "en": "Xeon 5500 (Nehalem); L2 miss served by L3, line in exclusive state; approximate value."
       },
       "protocol": null,
       "provenanceType": "estimated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol1-051"
       ],
@@ -1496,12 +1496,12 @@
       "low": 104,
       "high": 181,
       "conditions": {
-        "fr": "Processors with CPUID 06_2AH (Sandy Bridge client), slow VR configuration; 181 µs with MSR_POWER_CTL[4]=0, 104 µs with fast interrupt break mode (bit 4 = 1)",
-        "en": "Processors with CPUID 06_2AH (Sandy Bridge client), slow VR configuration; 181 µs with MSR_POWER_CTL[4]=0, 104 µs with fast interrupt break mode (bit 4 = 1)"
+        "fr": "Processeurs CPUID 06_2AH (Sandy Bridge client), régulateur lent ; 181 µs avec MSR_POWER_CTL[4]=0, 104 µs avec le mode d'interruption rapide ; estimation Intel.",
+        "en": "CPUID 06_2AH processors (Sandy Bridge client), slow VR; 181 µs with MSR_POWER_CTL[4]=0, 104 µs with fast interrupt break mode; Intel estimate."
       },
       "protocol": null,
       "provenanceType": "estimated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol1-051"
       ],
@@ -1512,7 +1512,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-sandybridge-c6-exit-latency",
-      "notes": "Intel: 'not processor specifications but estimates derived from empirical measurements'. The column headers mix 'typical' and 'worst case'. C1 = 1 µs in the same table."
+      "notes": "Intel: 'not processor specifications but estimates derived from empirical measurements'. The column headers mix 'typical' and 'worst case'. C1 = 1 µs in the same table. | Verifier: low/high correspondent à deux réglages, pas à une incertitude ; la seconde colonne est intitulée 'Worst Case' par Intel."
     },
     {
       "id": "intel-sandybridge-c1-exit-latency-m1",
@@ -1523,12 +1523,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "CPUID 06_2AH, slow VR, both MSR_POWER_CTL[4] settings",
-        "en": "CPUID 06_2AH, slow VR, both MSR_POWER_CTL[4] settings"
+        "fr": "CPUID 06_2AH, régulateur lent, pour les deux réglages de MSR_POWER_CTL[4] ; estimation Intel.",
+        "en": "CPUID 06_2AH, slow VR, both MSR_POWER_CTL[4] settings; Intel estimate."
       },
       "protocol": null,
       "provenanceType": "estimated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-orm-vol1-051"
       ],
@@ -1550,12 +1550,12 @@
       "low": 4,
       "high": 5,
       "conditions": {
-        "fr": "AMD Zen 4, 32 KB 8-way L1D; 4 cycles for simple addressing modes, 5 for complex ones; FPU: 7-8 cycles",
-        "en": "AMD Zen 4, 32 KB 8-way L1D; 4 cycles for simple addressing modes, 5 for complex ones; FPU: 7-8 cycles"
+        "fr": "AMD Zen 4, L1D de 32 Ko à 8 voies ; 4 cycles en adressage simple, 5 en adressage complexe ; 7 à 8 cycles pour la FPU.",
+        "en": "AMD Zen 4, 32 KB 8-way L1D; 4 cycles for simple addressing modes, 5 for complex ones; 7-8 cycles for the FPU."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-amd-zen4-sog"
       ],
@@ -1566,7 +1566,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen4-l1d-load-to-use",
-      "notes": "The quote joins two lines of the PDF."
+      "notes": "The quote joins two lines of the PDF. | Verifier: URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 57647_1.00.pdf (même publication et révision que la source déclarée)."
     },
     {
       "id": "amd-zen4-l2-load-to-use-m1",
@@ -1577,12 +1577,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "AMD Zen 4, 1 MB 8-way L2 per core (512 KB on some configurations); 'no less than' 14 cycles",
-        "en": "AMD Zen 4, 1 MB 8-way L2 per core (512 KB on some configurations); 'no less than' 14 cycles"
+        "fr": "AMD Zen 4, L2 de 1 Mo à 8 voies par cœur (512 Ko sur certaines configurations) ; au moins 14 cycles.",
+        "en": "AMD Zen 4, 1 MB 8-way L2 per core (512 KB on some configurations); no less than 14 cycles."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-amd-zen4-sog"
       ],
@@ -1593,7 +1593,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen4-l2-load-to-use",
-      "notes": "Lower bound, variable latency."
+      "notes": "Lower bound, variable latency. | Verifier: URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 57647_1.00.pdf (même publication et révision que la source déclarée)."
     },
     {
       "id": "amd-zen4-l3-load-to-use-m1",
@@ -1604,12 +1604,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "AMD Zen 4, up to 32 MB L3 shared by 8 cores (CCX); AMD calls it an 'average' with no protocol; 'may vary by product' (section 2.12)",
-        "en": "AMD Zen 4, up to 32 MB L3 shared by 8 cores (CCX); AMD calls it an 'average' with no protocol; 'may vary by product' (section 2.12)"
+        "fr": "AMD Zen 4, L3 jusqu'à 32 Mo partagé par 8 cœurs (CCX) ; moyenne annoncée par AMD sans méthode ; peut varier selon le produit.",
+        "en": "AMD Zen 4, up to 32 MB L3 shared by 8 cores (CCX); AMD-stated average with no method; may vary by product."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-amd-zen4-sog"
       ],
@@ -1620,7 +1620,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen4-l3-load-to-use",
-      "notes": "Statistic with no n and no method: treat it as a single value."
+      "notes": "Statistic with no n and no method: treat it as a single value. | Verifier: URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 57647_1.00.pdf (même publication et révision que la source déclarée)."
     },
     {
       "id": "amd-zen5-l1d-load-to-use-m1",
@@ -1631,12 +1631,12 @@
       "low": 4,
       "high": 5,
       "conditions": {
-        "fr": "AMD Zen 5, 48 KB 12-way L1D; FPU: 7-8 cycles",
-        "en": "AMD Zen 5, 48 KB 12-way L1D; FPU: 7-8 cycles"
+        "fr": "AMD Zen 5, L1D de 48 Ko à 12 voies ; 4 ou 5 cycles en entier, 7 ou 8 cycles pour la FPU.",
+        "en": "AMD Zen 5, 48 KB 12-way L1D; 4 or 5 cycles integer, 7 or 8 cycles FPU."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-amd-zen5-sog"
       ],
@@ -1647,7 +1647,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen5-l1d-load-to-use",
-      "notes": null
+      "notes": "Verifier: URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 58455_1.00.pdf (même publication et révision que la source déclarée)."
     },
     {
       "id": "amd-zen5-l2-load-to-use-m1",
@@ -1658,12 +1658,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "AMD Zen 5, 1 MB 16-way L2 per core; 'no less than' 14 cycles",
-        "en": "AMD Zen 5, 1 MB 16-way L2 per core; 'no less than' 14 cycles"
+        "fr": "AMD Zen 5, L2 de 1 Mo à 16 voies par cœur ; au moins 14 cycles.",
+        "en": "AMD Zen 5, 1 MB 16-way L2 per core; no less than 14 cycles."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-amd-zen5-sog"
       ],
@@ -1674,7 +1674,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen5-l2-load-to-use",
-      "notes": "Lower bound."
+      "notes": "Lower bound. | Verifier: URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 58455_1.00.pdf (même publication et révision que la source déclarée)."
     },
     {
       "id": "amd-zen5-l3-load-to-use-m1",
@@ -1685,12 +1685,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "AMD Zen 5, L3 up to 96 MB depending on SoC, shared within a CCX; average, 'may vary by product'",
-        "en": "AMD Zen 5, L3 up to 96 MB depending on SoC, shared within a CCX; average, 'may vary by product'"
+        "fr": "AMD Zen 5, L3 jusqu'à 96 Mo selon le SoC, partagé dans un CCX ; moyenne sans méthode ; peut varier selon le produit.",
+        "en": "AMD Zen 5, L3 up to 96 MB depending on SoC, shared within a CCX; average with no method; may vary by product."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-amd-zen5-sog"
       ],
@@ -1701,7 +1701,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen5-l3-load-to-use",
-      "notes": "Average with no n and no method."
+      "notes": "Average with no n and no method. | Verifier: URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 58455_1.00.pdf (même publication et révision que la source déclarée)."
     },
     {
       "id": "x86-add-r64-latency-alderlake-p-m1",
@@ -1712,12 +1712,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Alder Lake-P (Golden Cove P-core); register-register operand form; measured throughput 0.20 cycles/instr",
-        "en": "Alder Lake-P (Golden Cove P-core); register-register operand form; measured throughput 0.20 cycles/instr"
+        "fr": "Alder Lake-P ; forme registre-registre ; débit mesuré de 0,20 cycle par instruction.",
+        "en": "Alder Lake-P; register-register form; measured throughput 0.20 cycles per instruction."
       },
-      "protocol": "As reported by the source: Alder Lake-P (Golden Cove P-core); register-register operand form; measured throughput 0.20 cycles/instr",
+      "protocol": "As reported by the source: Alder Lake-P; register-register form; measured throughput 0.20 cycles per instruction.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-uops-info"
       ],
@@ -1728,7 +1728,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-add-r64-latency-alderlake-p",
-      "notes": "Zen 4 and Zen 5 also give 1 cycle on the same page."
+      "notes": "Zen 4 and Zen 5 also give 1 cycle on the same page. | Verifier: 'Golden Cove P-core' retiré : la page ne nomme pas le cœur."
     },
     {
       "id": "x86-imul-r64-latency-alderlake-p-m1",
@@ -1739,12 +1739,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Alder Lake-P; 64-bit register two-operand multiply; throughput 1.00",
-        "en": "Alder Lake-P; 64-bit register two-operand multiply; throughput 1.00"
+        "fr": "Alder Lake-P ; multiplication 64 bits à deux opérandes registres ; débit 1,00.",
+        "en": "Alder Lake-P; 64-bit two-operand register multiply; throughput 1.00."
       },
-      "protocol": "As reported by the source: Alder Lake-P; 64-bit register two-operand multiply; throughput 1.00",
+      "protocol": "As reported by the source: Alder Lake-P; 64-bit two-operand register multiply; throughput 1.00.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-uops-info"
       ],
@@ -1766,12 +1766,12 @@
       "low": 14,
       "high": 18,
       "conditions": {
-        "fr": "Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand→result pair; measured throughput 10 cycles",
-        "en": "Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand→result pair; measured throughput 10 cycles"
+        "fr": "Alder Lake-P ; division non signée 128/64 bits ; 14 à 18 cycles selon le couple opérande-résultat ; débit mesuré de 10 cycles.",
+        "en": "Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand-result pair; measured throughput 10 cycles."
       },
-      "protocol": "As reported by the source: Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand→result pair; measured throughput 10 cycles",
+      "protocol": "As reported by the source: Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand-result pair; measured throughput 10 cycles.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-uops-info"
       ],
@@ -1793,12 +1793,12 @@
       "low": 32,
       "high": 90,
       "conditions": {
-        "fr": "Skylake client; latency depends on operand values (bounds measured: operand 1→2 '35 ≤ lat ≤ 90'; other pairs 32-87, operand 3: 5-75); microcoded (32 MS uops)",
-        "en": "Skylake client; latency depends on operand values (bounds measured: operand 1→2 '35 ≤ lat ≤ 90'; other pairs 32-87, operand 3: 5-75); microcoded (32 MS uops)"
+        "fr": "Skylake ; latence dépendant des valeurs des opérandes : 35 à 90 cycles pour l'opérande 1 vers 2, 32 à 88 pour les autres couples des opérandes 1 et 2, 5 à 75 pour l'opérande 3 ; microcodée (32 µops MS).",
+        "en": "Skylake; latency depends on operand values: 35-90 cycles for operand 1→2, 32-88 for the other operand 1/2 pairs, 5-75 for operand 3; microcoded (32 MS uops)."
       },
-      "protocol": "As reported by the source: Skylake client; latency depends on operand values (bounds measured: operand 1→2 '35 ≤ lat ≤ 90'; other pairs 32-87, operand 3: 5-75); microcoded (32 MS uops)",
+      "protocol": "As reported by the source: Skylake; latency depends on operand values: 35-90 cycles for operand 1→2, 32-88 for the other operand 1/2 pairs, 5-75 for operand 3; microcoded (32 MS uops).",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-uops-info"
       ],
@@ -1809,7 +1809,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-div-r64-latency-skylake",
-      "notes": "uops.info gives bounds, not a single value; 'value' is the lower bound of the main entry. The contrast with Ice Lake/Alder Lake (14-18) is the useful point."
+      "notes": "uops.info gives bounds, not a single value; 'value' is the lower bound of the main entry. The contrast with Ice Lake/Alder Lake (14-18) is the useful point. | Verifier: 'other pairs 32-87' inexact (1→3 vaut 34-88). low=32 exclut l'opérande 3 (5-75) ; le dire explicitement."
     },
     {
       "id": "x86-div-r64-latency-zen4-m1",
@@ -1820,12 +1820,12 @@
       "low": 10,
       "high": 18,
       "conditions": {
-        "fr": "AMD Zen 4; depends on operand values; uops.info: 9-19 cycles depending on the operand pair; Agner Fog: 10-18; AMD: 8 cycles + 1 per 9 bits of quotient",
-        "en": "AMD Zen 4; depends on operand values; uops.info: 9-19 cycles depending on the operand pair; Agner Fog: 10-18; AMD: 8 cycles + 1 per 9 bits of quotient"
+        "fr": "AMD Zen 4 ; dépend des valeurs des opérandes ; 10 à 18 cycles (Agner Fog), 9 à 19 selon uops.info ; AMD : 8 cycles plus 1 par tranche de 9 bits de quotient.",
+        "en": "AMD Zen 4; depends on operand values; 10-18 cycles (Agner Fog), 9-19 per uops.info; AMD: 8 cycles plus 1 per 9 bits of quotient."
       },
-      "protocol": "As reported by the source: AMD Zen 4; depends on operand values; uops.info: 9-19 cycles depending on the operand pair; Agner Fog: 10-18; AMD: 8 cycles + 1 per 9 bits of quotient",
+      "protocol": "As reported by the source: AMD Zen 4; depends on operand values; 10-18 cycles (Agner Fog), 9-19 per uops.info; AMD: 8 cycles plus 1 per 9 bits of quotient.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-agner-instr-tables"
       ],
@@ -1847,12 +1847,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Core i9-14900K (Raptor Lake Refresh, Intel 7, 24 cores), launched Q4'23; 'Max Turbo Frequency' (best cores, favourable conditions)",
-        "en": "Core i9-14900K (Raptor Lake Refresh, Intel 7, 24 cores), launched Q4'23; 'Max Turbo Frequency' (best cores, favourable conditions)"
+        "fr": "Core i9-14900K (famille Raptor Lake, Intel 7, 24 cœurs), lancé au 4e trimestre 2023 ; fréquence turbo maximale annoncée.",
+        "en": "Core i9-14900K (Raptor Lake family, Intel 7, 24 cores), launched Q4'23; vendor Max Turbo Frequency."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-ark-i9-14900k"
       ],
@@ -1863,7 +1863,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-core-i9-14900k-max-turbo",
-      "notes": "The quote is the field label plus its value. Same page: P-core max turbo 5.6 GHz, E-core base 2.4 GHz."
+      "notes": "The quote is the field label plus its value. Same page: P-core max turbo 5.6 GHz, E-core base 2.4 GHz. | Verifier: La page dit 'Raptor Lake', pas 'Raptor Lake Refresh' ; '(best cores, favourable conditions)' n'est pas dans la page lue."
     },
     {
       "id": "intel-core-i9-14900k-pcore-base-m1",
@@ -1874,12 +1874,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Core i9-14900K, P-core base frequency",
-        "en": "Core i9-14900K, P-core base frequency"
+        "fr": "Core i9-14900K, fréquence de base des cœurs performance.",
+        "en": "Core i9-14900K, performance-core base frequency."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-ark-i9-14900k"
       ],
@@ -1901,12 +1901,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Intel 8086, introduced June 1978, 29,000 transistors, 3 µm",
-        "en": "Intel 8086, introduced June 1978, 29,000 transistors, 3 µm"
+        "fr": "Intel 8086, lancé en juin 1978, 29 000 transistors, gravure de 3 µm ; fréquence initiale.",
+        "en": "Intel 8086, introduced June 1978, 29,000 transistors, 3 µm line width; initial clock speed."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-vault-8086"
       ],
@@ -1928,12 +1928,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Pentium 4 (Willamette), 0.18 µm, 400 MHz system bus; introduced at 1.4 and 1.5 GHz on 20 Nov 2000",
-        "en": "Pentium 4 (Willamette), 0.18 µm, 400 MHz system bus; introduced at 1.4 and 1.5 GHz on 20 Nov 2000"
+        "fr": "Pentium 4, gravure de 0,18 µm, bus système à 400 MHz ; lancé à 1,4 et 1,5 GHz le 20 novembre 2000.",
+        "en": "Pentium 4, 0.18-micron process, 400 MHz system bus; introduced at 1.4 and 1.5 GHz on 20 Nov 2000."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-pr-p4-2000"
       ],
@@ -1944,7 +1944,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-pentium4-launch-clock",
-      "notes": "The later P4 models (3.8 GHz) could not be confirmed: legacy ark pages return 404."
+      "notes": "The later P4 models (3.8 GHz) could not be confirmed: legacy ark pages return 404. | Verifier: 'Willamette' retiré : absent du communiqué."
     },
     {
       "id": "intel-4004-min-clock-period-m1",
@@ -1955,8 +1955,8 @@
       "low": 1.35,
       "high": 2,
       "conditions": {
-        "fr": "Intel 4004, A.C. characteristics, TA = 0-70 °C, VSS-VDD = 15 V ± 5%; tCY min 1.35 µs, max 2.0 µs",
-        "en": "Intel 4004, A.C. characteristics, TA = 0-70 °C, VSS-VDD = 15 V ± 5%; tCY min 1.35 µs, max 2.0 µs"
+        "fr": "Intel 4004, caractéristiques AC, TA de 0 à 70 °C, VSS-VDD = 15 V ± 5 % ; tCY entre 1,35 et 2,0 µs (transcription tierce de la fiche).",
+        "en": "Intel 4004, A.C. characteristics, TA = 0-70 °C, VSS-VDD = 15 V ± 5%; tCY 1.35 to 2.0 µs (third-party transcription of the datasheet)."
       },
       "protocol": null,
       "provenanceType": "documented",
@@ -1971,7 +1971,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-4004-min-clock-period",
-      "notes": "WEAK: third-party transcription that does not cite its source; the original Intel datasheet could not be read (bitsavers 403, IEEE Milestones copy 404, intel.com 4004 pages 404). To be replaced by the Intel MCS-4 datasheet."
+      "notes": "WEAK: third-party transcription that does not cite its source; the original Intel datasheet could not be read (bitsavers 403, IEEE Milestones copy 404, intel.com 4004 pages 404). To be replaced by the Intel MCS-4 datasheet. | Verifier: Vérifié contre la transcription seulement ; fiche Intel originale non lue (copie IEEE Milestones : HTML au lieu du PDF). Source secondaire non citée : garder la mention WEAK. | Decision: Primary source (Intel MCS-4 datasheet) not read: value comes from a third-party transcription (pyntel4004) that does not cite its source; Intel secondary figures diverge (108 kHz / 740 kHz / 750 kHz). Held back until the original datasheet is consulted."
     },
     {
       "id": "intel-4004-max-clock-frequency-m1",
@@ -1982,8 +1982,8 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "1 / tCY min; same conditions as the source item",
-        "en": "1 / tCY min; same conditions as the source item"
+        "fr": "Inverse de la période d'horloge minimale tCY ; mêmes conditions que la valeur d'entrée.",
+        "en": "Inverse of the minimum clock period tCY; same conditions as the input value."
       },
       "protocol": null,
       "provenanceType": "calculated",
@@ -2003,7 +2003,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-4004-max-clock-frequency",
-      "notes": "Matches the commonly cited 740 kHz, but rests on the weak input above. Intel's own figures disagree (108 kHz in old pressroom timelines, 750 kHz reportedly in the 50th-anniversary material); none of those Intel documents could be read."
+      "notes": "Matches the commonly cited 740 kHz, but rests on the weak input above. Intel's own figures disagree (108 kHz in old pressroom timelines, 750 kHz reportedly in the 50th-anniversary material); none of those Intel documents could be read. | Verifier: Hérite de la faiblesse de la source d'entrée. | Decision: Derived from intel-4004-min-clock-period, which is held back (primary datasheet not read)."
     },
     {
       "id": "ddr5-5600b-taa-micron-m1",
@@ -2014,12 +2014,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Micron MT60B2G8RZ-56B:D (16Gb DDR5, x8), 5600 MT/s, CL-nRCD-nRP 46-45-45; tRCD = tRP = 16.000 ns too; same 16.000 ns at 6400 (52-52-52) and 7200 (58-58-58)",
-        "en": "Micron MT60B2G8RZ-56B:D (16Gb DDR5, x8), 5600 MT/s, CL-nRCD-nRP 46-45-45; tRCD = tRP = 16.000 ns too; same 16.000 ns at 6400 (52-52-52) and 7200 (58-58-58)"
+        "fr": "Micron MT60B2G8RZ-56B:D (DDR5 16 Gb, x8), 5600 MT/s, 46-45-45 ; tRCD et tRP valent aussi 16,000 ns ; même valeur à 6400 et 7200 MT/s.",
+        "en": "Micron MT60B2G8RZ-56B:D (16Gb DDR5, x8), 5600 MT/s, 46-45-45; tRCD and tRP also 16.000 ns; same value at 6400 and 7200 MT/s."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-micron-ddr5-16gb-revd"
       ],
@@ -2041,12 +2041,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Micron 8Gb DDR4, speed grade -062E, 3200 MT/s, 22-22-22; tRCD = tRP = 13.75 ns",
-        "en": "Micron 8Gb DDR4, speed grade -062E, 3200 MT/s, 22-22-22; tRCD = tRP = 13.75 ns"
+        "fr": "DDR4 Micron 8 Gb, grade -062E, 3200 MT/s, 22-22-22 ; tRCD et tRP valent aussi 13,75 ns.",
+        "en": "Micron 8Gb DDR4, -062E speed grade, 3200 MT/s, 22-22-22; tRCD and tRP also 13.75 ns."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-micron-ddr4-8gb"
       ],
@@ -2068,12 +2068,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "DDR4, 8,192 REFRESH commands per 64 ms between 0 and 85 °C (1x mode); 3.90625 µs between 85 and 95 °C",
-        "en": "DDR4, 8,192 REFRESH commands per 64 ms between 0 and 85 °C (1x mode); 3.90625 µs between 85 and 95 °C"
+        "fr": "DDR4, 8 192 commandes REFRESH par 64 ms entre 0 et 85 °C (mode 1x) ; moitié de cet intervalle entre 85 et 95 °C.",
+        "en": "DDR4, 8,192 REFRESH commands per 64 ms between 0 and 85 °C (1x mode); half that interval between 85 and 95 °C."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-micron-ddr4-8gb"
       ],
@@ -2095,12 +2095,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "8Gb DDR4 die, 1x refresh mode (4Gb: 260 ns, 16Gb: 550 ns)",
-        "en": "8Gb DDR4 die, 1x refresh mode (4Gb: 260 ns, 16Gb: 550 ns)"
+        "fr": "Puce DDR4 de 8 Gb, mode de rafraîchissement 1x (4 Gb : 260 ns ; 16 Gb : 550 ns).",
+        "en": "8Gb DDR4 die, 1x refresh mode (4Gb: 260 ns, 16Gb: 550 ns)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-micron-ddr4-8gb"
       ],
@@ -2122,12 +2122,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "2-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal core frequency (2.0 GHz) = 220 cycles, transparent huge pages, caches flushed; minimum of 3 internal runs × 4 sizes × 10 repetitions",
-        "en": "2-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal core frequency (2.0 GHz) = 220 cycles, transparent huge pages, caches flushed; minimum of 3 internal runs × 4 sizes × 10 repetitions"
+        "fr": "Bi-socket AMD EPYC 7702, CCX local, pointer chasing BenchIT x86-membench, fréquence nominale (2,0 GHz) soit 220 cycles, pages énormes transparentes, caches vidés.",
+        "en": "Dual-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal frequency (2.0 GHz) i.e. 220 cycles, transparent huge pages, caches flushed."
       },
-      "protocol": "As reported by the source: 2-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal core frequency (2.0 GHz) = 220 cycles, transparent huge pages, caches flushed; minimum of 3 internal runs × 4 sizes × 10 repetitions",
+      "protocol": "As reported by the source: Dual-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal frequency (2.0 GHz) i.e. 220 cycles, transparent huge pages, caches flushed.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-velten-icpe22"
       ],
@@ -2149,12 +2149,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "2-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled for the latency benchmark, BenchIT pointer chasing; 200 cycles",
-        "en": "2-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled for the latency benchmark, BenchIT pointer chasing; 200 cycles"
+        "fr": "Bi-socket Xeon Gold 6248, même SNC, uncore fixé à 2400 MHz, préchargeurs matériels désactivés, pointer chasing BenchIT ; 200 cycles.",
+        "en": "Dual-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled, BenchIT pointer chasing; 200 cycles."
       },
-      "protocol": "As reported by the source: 2-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled for the latency benchmark, BenchIT pointer chasing; 200 cycles",
+      "protocol": "As reported by the source: Dual-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled, BenchIT pointer chasing; 200 cycles.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-velten-icpe22"
       ],
@@ -2176,12 +2176,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Intel Alder motherboard, Pentium Pro 200 MHz, Linux 1.3.37 (Table 1); lmbench memory-read latency (strided load chain)",
-        "en": "Intel Alder motherboard, Pentium Pro 200 MHz, Linux 1.3.37 (Table 1); lmbench memory-read latency (strided load chain)"
+        "fr": "Carte Intel Alder, Pentium Pro 200 MHz, Linux 1.3.37 ; latence de lecture mémoire lmbench (chaîne de chargements à pas fixe).",
+        "en": "Intel Alder board, Pentium Pro 200 MHz, Linux 1.3.37; lmbench memory read latency (strided load chain)."
       },
-      "protocol": "As reported by the source: Intel Alder motherboard, Pentium Pro 200 MHz, Linux 1.3.37 (Table 1); lmbench memory-read latency (strided load chain)",
+      "protocol": "As reported by the source: Intel Alder board, Pentium Pro 200 MHz, Linux 1.3.37; lmbench memory read latency (strided load chain).",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-lmbench-1996"
       ],
@@ -2203,12 +2203,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Apple M4 chip (10-core CPU), MacBook Pro 14-inch M4 2024; peak vendor figure, unified memory",
-        "en": "Apple M4 chip (10-core CPU), MacBook Pro 14-inch M4 2024; peak vendor figure, unified memory"
+        "fr": "Puce Apple M4 (CPU 10 cœurs), MacBook Pro 14 pouces M4 2024 ; valeur constructeur, mémoire unifiée.",
+        "en": "Apple M4 chip (10-core CPU), 14-inch MacBook Pro M4 2024; vendor figure, unified memory."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-apple-mbp14-m4-specs"
       ],
@@ -2230,12 +2230,12 @@
       "low": 100,
       "high": 1000,
       "conditions": {
-        "fr": "Kconfig choices 100, 250 (default), 300 and 1000 Hz; distributions often change the default",
-        "en": "Kconfig choices 100, 250 (default), 300 and 1000 Hz; distributions often change the default"
+        "fr": "Choix Kconfig : 100, 250 (par défaut), 300 et 1000 Hz.",
+        "en": "Kconfig choices 100, 250 (default), 300 and 1000 Hz."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-linux-kconfig-hz"
       ],
@@ -2246,7 +2246,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#linux-config-hz-default",
-      "notes": "Confirmed by time(7): 'can be 100, 250 (the default) or 1000' (src-man-time7), plus 300 since 2.6.20."
+      "notes": "Confirmed by time(7): 'can be 100, 250 (the default) or 1000' (src-man-time7), plus 300 since 2.6.20. | Verifier: 'distributions often change the default' n'est pas dit par la source : je ne l'ai pas repris dans les conditions traduites."
     },
     {
       "id": "linux-tick-period-hz1000-m1",
@@ -2257,12 +2257,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "CONFIG_HZ=1000 (Kconfig: 'preferred choice for desktop systems')",
-        "en": "CONFIG_HZ=1000 (Kconfig: 'preferred choice for desktop systems')"
+        "fr": "CONFIG_HZ=1000 (Kconfig : choix privilégié pour les postes de travail).",
+        "en": "CONFIG_HZ=1000 (Kconfig: preferred choice for desktop systems)."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-linux-kconfig-hz"
       ],
@@ -2289,12 +2289,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "sysctl_sched_base_slice = 750000 ns before CPU-count scaling; effective value 0.75 ms × (1 + ilog(ncpus)) with the default logarithmic scaling",
-        "en": "sysctl_sched_base_slice = 750000 ns before CPU-count scaling; effective value 0.75 ms × (1 + ilog(ncpus)) with the default logarithmic scaling"
+        "fr": "sysctl_sched_base_slice = 750 000 ns avant mise à l'échelle ; valeur effective 0,75 ms × (1 + ilog(ncpus)).",
+        "en": "sysctl_sched_base_slice = 750000 ns before scaling; effective value 0.75 ms × (1 + ilog(ncpus))."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-linux-fair-c-v6-12"
       ],
@@ -2316,12 +2316,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "kernel/sched/fair.c on master (Makefile 7.4-rc4, 2026-11): 700000 ns × (1 + ilog(ncpus))",
-        "en": "kernel/sched/fair.c on master (Makefile 7.4-rc4, 2026-11): 700000 ns × (1 + ilog(ncpus))"
+        "fr": "kernel/sched/fair.c sur master (7.4-rc4, novembre 2026) : 700 000 ns × (1 + ilog(ncpus)).",
+        "en": "kernel/sched/fair.c on master (7.4-rc4, Nov 2026): 700000 ns × (1 + ilog(ncpus))."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-linux-fair-c-master"
       ],
@@ -2332,7 +2332,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#linux-eevdf-base-slice-master",
-      "notes": "The default went from 0.75 to 0.70 ms between 6.12 and master: the value depends on the version. The commit that made the change was not identified."
+      "notes": "The default went from 0.75 to 0.70 ms between 6.12 and master: the value depends on the version. The commit that made the change was not identified. | Verifier: master évolue : valeur datée du 2026-11-26."
     },
     {
       "id": "linux-default-timer-slack-m1",
@@ -2343,12 +2343,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Value for init (PID 1), inherited by its descendants; adjustable with prctl(PR_SET_TIMERSLACK); does not apply to real-time threads",
-        "en": "Value for init (PID 1), inherited by its descendants; adjustable with prctl(PR_SET_TIMERSLACK); does not apply to real-time threads"
+        "fr": "Valeur d'init (PID 1), héritée par les processus fils ; réglable par prctl(PR_SET_TIMERSLACK) ; ne s'applique pas aux threads temps réel.",
+        "en": "Value of init (PID 1), inherited by child processes; adjustable with prctl(PR_SET_TIMERSLACK); not applied to real-time threads."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-man-pr-set-timerslack"
       ],
@@ -2370,12 +2370,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Linux 1.3.37, Pentium Pro 200 MHz; write of one word to /dev/null in a loop",
-        "en": "Linux 1.3.37, Pentium Pro 200 MHz; write of one word to /dev/null in a loop"
+        "fr": "Linux 1.3.37, Pentium Pro 200 MHz ; écriture d'un mot dans /dev/null en boucle.",
+        "en": "Linux 1.3.37, Pentium Pro 200 MHz; writing one word to /dev/null in a loop."
       },
-      "protocol": "As reported by the source: Linux 1.3.37, Pentium Pro 200 MHz; write of one word to /dev/null in a loop",
+      "protocol": "As reported by the source: Linux 1.3.37, Pentium Pro 200 MHz; writing one word to /dev/null in a loop.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-lmbench-1996"
       ],
@@ -2397,12 +2397,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB)",
-        "en": "Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB)"
+        "fr": "Linux 1.3.37, Pentium Pro 200 MHz ; 2 processus, jeu de travail de 0 Ko (18 µs à 32 Ko).",
+        "en": "Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB)."
       },
-      "protocol": "As reported by the source: Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB)",
+      "protocol": "As reported by the source: Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB).",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-lmbench-1996"
       ],
@@ -2424,23 +2424,23 @@
       "low": 300,
       "high": 400,
       "conditions": {
-        "fr": "Rosetta switch, RoCE traffic from standard NICs; computed as the 2-hop minus 1-hop latency; mean and median",
-        "en": "Rosetta switch, RoCE traffic from standard NICs; computed as the 2-hop minus 1-hop latency; mean and median"
+        "fr": "Commutateur Rosetta, trafic RoCE depuis des cartes réseau standard ; différence entre latences à 2 sauts et à 1 saut ; moyenne et médiane ; distribution entre 300 et 400 ns hors quelques valeurs aberrantes.",
+        "en": "Rosetta switch, RoCE traffic from standard NICs; 2-hop minus 1-hop latency; mean and median; distribution between 300 and 400 ns except a few outliers."
       },
-      "protocol": "As reported by the source: Rosetta switch, RoCE traffic from standard NICs; computed as the 2-hop minus 1-hop latency; mean and median",
+      "protocol": "As reported by the source: Rosetta switch, RoCE traffic from standard NICs; 2-hop minus 1-hop latency; mean and median; distribution between 300 and 400 ns except a few outliers.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-desensi-slingshot"
       ],
       "locator": "Section II-A, Fig. 2 'Distribution of switch latency for RoCE traffic'",
-      "quote": "We observe that ROSETTA has a mean and median latency of 350 nanoseconds, with all the distribution lying between 300 and 400 nanoseconds",
+      "quote": "We observe that ROSETTA has a mean and median latency of 350 nanoseconds, with all the distribution lying between 300 and 400 nanoseconds, except for a few outliers.",
       "era": 2020,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#slingshot-rosetta-switch-latency",
-      "notes": "n not given in the text. The quote joins PDF lines. HPC/interconnect: possible overlap with the network agent."
+      "notes": "n not given in the text. The quote joins PDF lines. HPC/interconnect: possible overlap with the network agent. | Verifier: L'extrait tronquait 'except for a few outliers', ce qui rendait low/high plus stricts que la source."
     },
     {
       "id": "osu-latency-crossroads-8b-m1",
@@ -2451,12 +2451,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Crossroads (ATS-3), 2 nodes, 1 rank per node, 8-byte message, osu_latency; the page names neither the interconnect, nor the MPI library, nor n",
-        "en": "Crossroads (ATS-3), 2 nodes, 1 rank per node, 8-byte message, osu_latency; the page names neither the interconnect, nor the MPI library, nor n"
+        "fr": "Crossroads (ATS-3), 2 nœuds, 1 rang par nœud, message de 8 octets, osu_latency ; ni le chemin (le plus long ou le plus court), ni le réseau, ni la bibliothèque MPI ne sont précisés.",
+        "en": "Crossroads (ATS-3), 2 nodes, 1 rank per node, 8-byte message, osu_latency; neither the path (longest or shortest), the interconnect nor the MPI library is stated."
       },
-      "protocol": "As reported by the source: Crossroads (ATS-3), 2 nodes, 1 rank per node, 8-byte message, osu_latency; the page names neither the interconnect, nor the MPI library, nor n",
+      "protocol": "As reported by the source: Crossroads (ATS-3), 2 nodes, 1 rank per node, 8-byte message, osu_latency; neither the path (longest or shortest), the interconnect nor the MPI library is stated.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "contested",
       "sourceIds": [
         "src-lanl-osumb"
       ],
@@ -2467,7 +2467,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#osu-latency-crossroads-8b",
-      "notes": "Conditions incomplete: the interconnect does not appear on the page, so this is not a measurement with a full protocol."
+      "notes": "Conditions incomplete: the interconnect does not appear on the page, so this is not a measurement with a full protocol. | Verifier: Limite de l'inadéquat : protocole partiel. Libellé : la page dit 'P2p Latency', pas 'ping-pong' ni 'aller simple'. | Decision: Incomplete protocol: interconnect, MPI library, sample count and which of the two required tests (longest/shortest path, Table 4.6) produced the value are not stated. Verifier flagged it at the limit of 'inadequate'."
     },
     {
       "id": "pcie4-lane-rate-m1",
@@ -2478,12 +2478,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "PCI Express 4.0 Base Specification Version 1.0; raw signaling rate per lane, per direction, before 128b/130b encoding overhead.",
-        "en": "PCI Express 4.0 Base Specification Version 1.0; raw signaling rate per lane, per direction, before 128b/130b encoding overhead."
+        "fr": "Spécification PCI Express 4.0, version 1.0 : débit de 16 GT/s.",
+        "en": "PCI Express 4.0 Specification Version 1.0: 16 GT/s data rate."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-dr-pcie4"
       ],
@@ -2494,7 +2494,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie4-lane-rate",
-      "notes": "Press-release text read on a third-party reproduction because pcisig.com refused the request (403). No x16 GB/s value in this release."
+      "notes": "Press-release text read on a third-party reproduction because pcisig.com refused the request (403). No x16 GB/s value in this release. | Verifier: Valeur exacte. 'per direction, before 128b/130b encoding' ne figure pas dans la source : retiré."
     },
     {
       "id": "pcie5-lane-rate-m1",
@@ -2505,12 +2505,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "PCI Express 5.0 Base Specification; raw bit rate per lane, 128b/130b encoding.",
-        "en": "PCI Express 5.0 Base Specification; raw bit rate per lane, 128b/130b encoding."
+        "fr": "Spécification PCI Express 5.0 : débit brut de 32 GT/s.",
+        "en": "PCI Express 5.0 specification: 32 GT/s raw bit rate."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-dr-pcie5"
       ],
@@ -2521,7 +2521,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie5-lane-rate",
-      "notes": "Secondary hosting of the PCI-SIG press release."
+      "notes": "Secondary hosting of the PCI-SIG press release. | Verifier: '128b/130b encoding' absent de la source : retiré."
     },
     {
       "id": "pcie5-x16-bandwidth-m1",
@@ -2532,12 +2532,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "x16 link; figure counts both directions combined (about 64 GB/s per direction, cf. a quote in the same release: 'doubles that again to 64 GB/second').",
-        "en": "x16 link; figure counts both directions combined (about 64 GB/s per direction, cf. a quote in the same release: 'doubles that again to 64 GB/second')."
+        "fr": "Lien x16 PCIe 5.0, valeur « jusqu'à » annoncée ; le sens n'est pas précisé, mais la même dépêche donne 64 GB/s pour le x16, ce qui est cohérent avec un total des deux sens.",
+        "en": "PCIe 5.0 x16 link, 'up to' figure; direction not stated, but the same release gives 64 GB/s for x16, consistent with a two-direction total."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-dr-pcie5"
       ],
@@ -2548,7 +2548,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie5-x16-bandwidth",
-      "notes": "The release does not say 'bidirectional' explicitly; the per-direction interpretation rests on the analyst quote in the same text and on NVIDIA's 'PCIe Gen5: 128GB/s' for H100 (src-nvidia-h100). Display as total, not per direction."
+      "notes": "The release does not say 'bidirectional' explicitly; the per-direction interpretation rests on the analyst quote in the same text and on NVIDIA's 'PCIe Gen5: 128GB/s' for H100 (src-nvidia-h100). Display as total, not per direction. | Verifier: Le libellé affirmait « deux sens » comme un fait sourcé ; c'est une déduction. La référence à la page NVIDIA H100 n'éclaire pas le sens."
     },
     {
       "id": "pcie6-lane-rate-m1",
@@ -2559,12 +2559,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "PCI Express 6.0 specification; PAM4 signaling, FLIT mode.",
-        "en": "PCI Express 6.0 specification; PAM4 signaling, FLIT mode."
+        "fr": "Spécification PCI Express 6.0 : débit brut de 64 GT/s, signalisation PAM4, mode Flit.",
+        "en": "PCI Express 6.0 specification: 64 GT/s raw data rate, PAM4 signaling, Flit mode."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-dr-pcie6"
       ],
@@ -2586,12 +2586,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "x16 link, both directions combined (about 128 GB/s per direction).",
-        "en": "x16 link, both directions combined (about 128 GB/s per direction)."
+        "fr": "Lien x16 PCIe 6.0, valeur « jusqu'à » annoncée ; le sens n'est pas précisé par la source.",
+        "en": "PCIe 6.0 x16 link, 'up to' figure; direction not stated in the source."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-dr-pcie6"
       ],
@@ -2602,7 +2602,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie6-x16-bandwidth",
-      "notes": "Direction not stated in this text; same convention as the PCIe 5.0 '128 GB/s' figure (2x per generation)."
+      "notes": "Direction not stated in this text; same convention as the PCIe 5.0 '128 GB/s' figure (2x per generation). | Verifier: « deux sens / 128 GB/s par sens » non sourcé ici."
     },
     {
       "id": "cxl3-data-rate-m1",
@@ -2613,23 +2613,23 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Compute Express Link 3.0; per lane, built on PCIe 6.0 electricals.",
-        "en": "Compute Express Link 3.0; per lane, built on PCIe 6.0 electricals."
+        "fr": "Spécification Compute Express Link 3.0 : débit doublé à 64 GT/s par rapport à CXL 2.0.",
+        "en": "Compute Express Link 3.0 specification: data rate doubled to 64 GT/s over CXL 2.0."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-cxl3-pr"
       ],
-      "locator": "p.1, highlights bullet 1",
+      "locator": "p.1, highlights bullet 2 (also 'Doubles the bandwidth to 64GTs' in the feature list)",
       "quote": "CXL 3.0 specification doubles the data rate to 64GTs with no added latency over CXL 2.0.",
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#cxl3-data-rate",
-      "notes": "'64GTs' is written without slash in the source. The 'no added latency' claim is not quantified."
+      "notes": "'64GTs' is written without slash in the source. The 'no added latency' claim is not quantified. | Verifier: Valeur juste ; « built on PCIe 6.0 electricals » non sourcé ; c'est la 2e puce, pas la 1re."
     },
     {
       "id": "usb-low-speed-rate-m1",
@@ -2640,23 +2640,23 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "USB 1.x/2.0 low-speed mode (keyboards, mice of the USB 1.x era).",
-        "en": "USB 1.x/2.0 low-speed mode (keyboards, mice of the USB 1.x era)."
+        "fr": "USB 2.0, mode de signalisation low-speed à capacités limitées, destiné à quelques périphériques peu gourmands comme les souris.",
+        "en": "USB 2.0 limited-capability low-speed signaling mode, intended for a few low-bandwidth devices such as mice."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usb20-spec"
       ],
-      "locator": "Section 7.1 introduction bullet list, p. 17 (PDF p. 45)",
+      "locator": "Section 4.2.1 Electrical, bullet list, p. 17 (PDF p. 45)",
       "quote": "A limited capability low-speed signaling mode is also defined at 1.5 Mb/s.",
       "era": 1996,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-low-speed-rate",
-      "notes": null
+      "notes": "Verifier: Le passage est en 4.2.1, pas 7.1. « keyboards » et « USB 1.x era » ne sont pas dans la source."
     },
     {
       "id": "usb-full-speed-rate-m1",
@@ -2667,23 +2667,23 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "USB 1.x/2.0 full-speed signaling bit rate (gross, not payload).",
-        "en": "USB 1.x/2.0 full-speed signaling bit rate (gross, not payload)."
+        "fr": "USB 2.0, débit binaire de signalisation full-speed (brut, hors charge utile).",
+        "en": "USB 2.0 full-speed signaling bit rate (gross, not payload)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usb20-spec"
       ],
-      "locator": "p. 17 (PDF p. 45)",
+      "locator": "Section 4.2.1 Electrical, p. 17 (PDF p. 45)",
       "quote": "The USB full-speed signaling bit rate is 12 Mb/s.",
       "era": 1996,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-full-speed-rate",
-      "notes": null
+      "notes": "Verifier: La source vérifiée est USB 2.0 ; USB 1.x n'y est pas cité. Ère 1996 non vérifiable dans ce document."
     },
     {
       "id": "usb-high-speed-rate-m1",
@@ -2694,12 +2694,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "USB 2.0 high-speed signaling bit rate (gross).",
+        "fr": "USB 2.0, débit binaire de signalisation high-speed (brut).",
         "en": "USB 2.0 high-speed signaling bit rate (gross)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usb20-spec"
       ],
@@ -2710,7 +2710,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-high-speed-rate",
-      "notes": null
+      "notes": "Verifier: Localisateur exact ; section 4.2.1."
     },
     {
       "id": "usb32-20g-rate-m1",
@@ -2721,12 +2721,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "USB 3.2, two lanes of 10 Gbps over USB Type-C.",
-        "en": "USB 3.2, two lanes of 10 Gbps over USB Type-C."
+        "fr": "USB 3.2, fonctionnement sur deux voies de 10 Gbit/s via câbles USB Type-C.",
+        "en": "USB 3.2, two-lane operation at 10 Gbps per lane over USB Type-C cables."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usbif-usb32"
       ],
@@ -2737,7 +2737,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb32-20g-rate",
-      "notes": null
+      "notes": "Verifier: Ère 2017 absente de la page."
     },
     {
       "id": "usb4-80g-rate-m1",
@@ -2748,23 +2748,23 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "USB4 two-lane operation over 80 Gbps certified cables (USB4 Version 2.0 capability).",
-        "en": "USB4 two-lane operation over 80 Gbps certified cables (USB4 Version 2.0 capability)."
+        "fr": "USB4, fonctionnement sur deux voies, jusqu'à 80 Gbit/s avec des câbles certifiés 80 Gbit/s.",
+        "en": "USB4 two-lane operation, up to 80 Gbps over 80 Gbps certified cables."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usbif-usb4"
       ],
       "locator": "USB4 page, Key characteristics, bullet 1",
       "quote": "Two-lane operation using existing USB Type-C cables and up to 80 Gbps operation over 80 Gbps certified cables",
-      "era": 2022,
+      "era": null,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb4-80g-rate",
-      "notes": "Page gives no year and no 40 Gbps figure; era 2022 is not from this page (unverified, can be set to null)."
+      "notes": "Page gives no year and no 40 Gbps figure; era 2022 is not from this page (unverified, can be set to null). | Verifier: « USB4 Version 2.0 » absent de la page ; ère 2022 non sourcée."
     },
     {
       "id": "usb-fs-frame-m1",
@@ -2775,12 +2775,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "USB full-speed and low-speed bus time base (Start-of-Frame every 1 ms).",
-        "en": "USB full-speed and low-speed bus time base (Start-of-Frame every 1 ms)."
+        "fr": "USB 2.0, base de temps d'un bus full-speed ou low-speed (trame de 1 ms).",
+        "en": "USB 2.0 time base of a full-/low-speed bus (1 ms frame)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usb20-spec"
       ],
@@ -2802,12 +2802,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "USB 2.0 high-speed bus time base.",
-        "en": "USB 2.0 high-speed bus time base."
+        "fr": "USB 2.0, base de temps d'un bus high-speed (micro-trame de 125 µs).",
+        "en": "USB 2.0 high-speed bus time base (125 µs microframe)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usb20-spec"
       ],
@@ -2829,12 +2829,12 @@
       "low": 1,
       "high": 255,
       "conditions": {
-        "fr": "USB 2.0 spec, full-speed interrupt endpoint (typical of HID mice/keyboards); requested period 1 to 255 ms. The host only guarantees the interval is no longer than requested.",
-        "en": "USB 2.0 spec, full-speed interrupt endpoint (typical of HID mice/keyboards); requested period 1 to 255 ms. The host only guarantees the interval is no longer than requested."
+        "fr": "USB 2.0, point de terminaison interrupt full-speed : période demandée de 1 à 255 ms ; l'hôte garantit seulement un intervalle au plus égal à la période demandée.",
+        "en": "USB 2.0 full-speed interrupt endpoint: requested period 1 to 255 ms; the host only guarantees the interval is no longer than requested."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usb20-spec"
       ],
@@ -2845,7 +2845,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-fs-interrupt-min-period",
-      "notes": null
+      "notes": "Verifier: « typical of HID mice/keyboards » non sourcé."
     },
     {
       "id": "usb-ls-interrupt-min-period-m1",
@@ -2856,12 +2856,12 @@
       "low": 10,
       "high": 255,
       "conditions": {
-        "fr": "USB 2.0 spec, low-speed interrupt endpoint.",
-        "en": "USB 2.0 spec, low-speed interrupt endpoint."
+        "fr": "USB 2.0, point de terminaison interrupt low-speed : période demandée de 10 à 255 ms.",
+        "en": "USB 2.0 low-speed interrupt endpoint: requested period 10 to 255 ms."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usb20-spec"
       ],
@@ -2883,12 +2883,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Full-speed interrupt endpoint polled at its shortest allowed period (1 ms); the usual '1000 Hz' gaming-mouse figure.",
-        "en": "Full-speed interrupt endpoint polled at its shortest allowed period (1 ms); the usual '1000 Hz' gaming-mouse figure."
+        "fr": "Point de terminaison interrupt full-speed interrogé à sa période minimale autorisée (1 ms) ; borne supérieure.",
+        "en": "Full-speed interrupt endpoint polled at its shortest allowed period (1 ms); upper bound."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usb20-spec"
       ],
@@ -2904,7 +2904,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-fs-max-polling-rate",
-      "notes": "Upper bound; actual rate depends on the bInterval chosen by the device and on the host."
+      "notes": "Upper bound; actual rate depends on the bInterval chosen by the device and on the host. | Verifier: Calcul juste. La mention « gaming-mouse 1000 Hz » n'est pas dans la source."
     },
     {
       "id": "usb-hs-max-polling-rate-m1",
@@ -2915,12 +2915,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "High-speed interrupt endpoint with bInterval = 1, i.e. period (2^(1-1)) x 125 µs = 125 µs.",
-        "en": "High-speed interrupt endpoint with bInterval = 1, i.e. period (2^(1-1)) x 125 µs = 125 µs."
+        "fr": "Point de terminaison interrupt high-speed avec bInterval = 1, soit une période de 125 µs ; borne supérieure.",
+        "en": "High-speed interrupt endpoint with bInterval = 1, i.e. a 125 µs period; upper bound."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-usb20-spec"
       ],
@@ -2947,12 +2947,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Video format 8K at 60 Hz supported by HDMI 2.2 (also by HDMI 2.1).",
-        "en": "Video format 8K at 60 Hz supported by HDMI 2.2 (also by HDMI 2.1)."
+        "fr": "Format vidéo 8K à 60 Hz pris en charge par HDMI 2.2.",
+        "en": "8K video format at 60 Hz supported by HDMI 2.2."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-hdmi-spec"
       ],
@@ -2963,7 +2963,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdmi-8k60-refresh",
-      "notes": "'8K60' notation: 60 = refresh rate in Hz. This is a format supported by the interface, not a display property."
+      "notes": "'8K60' notation: 60 = refresh rate in Hz. This is a format supported by the interface, not a display property. | Verifier: « also by HDMI 2.1 » non sourcé sur cette page."
     },
     {
       "id": "hdmi-4k120-refresh-m1",
@@ -2974,12 +2974,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Video format 4K at 120 Hz supported by HDMI 2.2.",
-        "en": "Video format 4K at 120 Hz supported by HDMI 2.2."
+        "fr": "Format vidéo 4K à 120 Hz pris en charge par HDMI 2.2.",
+        "en": "4K video format at 120 Hz supported by HDMI 2.2."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-hdmi-spec"
       ],
@@ -3001,12 +3001,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "HDMI 2.2 with Ultra96 cable, Fixed Rate Link.",
-        "en": "HDMI 2.2 with Ultra96 cable, Fixed Rate Link."
+        "fr": "HDMI 2.2 avec câble Ultra96 et technologie Fixed Rate Link, jusqu'à 96 Gbit/s.",
+        "en": "HDMI 2.2 with Ultra96 cable and Fixed Rate Link, up to 96 Gbps."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-hdmi-spec"
       ],
@@ -3017,7 +3017,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdmi22-bandwidth",
-      "notes": "Era not on the page."
+      "notes": "Era not on the page. | Verifier: Ère 2025 absente de la page."
     },
     {
       "id": "frame-time-60hz-m1",
@@ -3028,12 +3028,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "One refresh period at exactly 60 Hz (some broadcast-derived timings use 59.94 Hz, i.e. 16.683 ms).",
-        "en": "One refresh period at exactly 60 Hz (some broadcast-derived timings use 59.94 Hz, i.e. 16.683 ms)."
+        "fr": "Une période de rafraîchissement à exactement 60 Hz.",
+        "en": "One refresh period at exactly 60 Hz."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-hdmi-spec"
       ],
@@ -3049,7 +3049,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#frame-time-60hz",
-      "notes": null
+      "notes": "Verifier: Calcul juste ; la remarque sur 59,94 Hz n'est pas dans la source."
     },
     {
       "id": "frame-time-120hz-m1",
@@ -3060,12 +3060,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "One refresh period at 120 Hz.",
+        "fr": "Une période de rafraîchissement à 120 Hz.",
         "en": "One refresh period at 120 Hz."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-hdmi-spec"
       ],
@@ -3092,12 +3092,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "NVIDIA H100 SXM, 80 GB HBM3; peak theoretical. Source value 3.35 TB/s, converted to GB/s (x1000).",
-        "en": "NVIDIA H100 SXM, 80 GB HBM3; peak theoretical. Source value 3.35 TB/s, converted to GB/s (x1000)."
+        "fr": "NVIDIA H100 SXM, 80 Go de mémoire GPU ; 3,35 To/s convertis en Go/s.",
+        "en": "NVIDIA H100 SXM, 80 GB GPU memory; 3.35 TB/s converted to GB/s."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nvidia-h100"
       ],
@@ -3108,7 +3108,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#h100-sxm-hbm-bandwidth",
-      "notes": "Quote is flattened table text (columns SXM, NVL). Era 2022 is launch year, not on page."
+      "notes": "Quote is flattened table text (columns SXM, NVL). Era 2022 is launch year, not on page. | Verifier: « HBM3 » et « peak theoretical » non indiqués pour la SXM sur la page (HBM3 n'y est cité que pour la NVL)."
     },
     {
       "id": "h100-sxm-nvlink-bandwidth-m1",
@@ -3119,12 +3119,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "H100 SXM, NVLink 4th generation, per GPU, aggregate of all links, both directions as marketed. Same row gives PCIe Gen5: 128 GB/s.",
-        "en": "H100 SXM, NVLink 4th generation, per GPU, aggregate of all links, both directions as marketed. Same row gives PCIe Gen5: 128 GB/s."
+        "fr": "H100 SXM, NVLink de quatrième génération, 900 Go/s d'interconnexion GPU à GPU ; le sens n'est pas précisé.",
+        "en": "H100 SXM, fourth-generation NVLink, 900 GB/s GPU-to-GPU interconnect; direction not stated."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nvidia-h100"
       ],
@@ -3135,7 +3135,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#h100-sxm-nvlink-bandwidth",
-      "notes": "Page does not say whether 900 GB/s is bidirectional; NVIDIA convention is total bidirectional. Do not divide without a source."
+      "notes": "Page does not say whether 900 GB/s is bidirectional; NVIDIA convention is total bidirectional. Do not divide without a source. | Verifier: « aggregate of all links, both directions as marketed » non sourcé."
     },
     {
       "id": "b200-nvlink-gpu-to-gpu-m1",
@@ -3146,12 +3146,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "HGX B200 (8 Blackwell GPUs), NVLink 5th generation, per GPU; 1.8 TB/s converted. Total NVLink bandwidth 14.4 TB/s for 8 GPUs.",
-        "en": "HGX B200 (8 Blackwell GPUs), NVLink 5th generation, per GPU; 1.8 TB/s converted. Total NVLink bandwidth 14.4 TB/s for 8 GPUs."
+        "fr": "HGX B200 (8 GPU Blackwell), NVLink de cinquième génération, bande passante GPU à GPU ; 1,8 To/s convertis ; 14,4 To/s au total.",
+        "en": "HGX B200 (8 Blackwell GPUs), fifth-generation NVLink, GPU-to-GPU bandwidth; 1.8 TB/s converted; 14.4 TB/s total."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nvidia-hgx"
       ],
@@ -3162,7 +3162,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#b200-nvlink-gpu-to-gpu",
-      "notes": "Columns identified as HGX B300 then HGX B200 from the 'Total Memory 2.1 TB 1.4 TB' row. Era not on page."
+      "notes": "Columns identified as HGX B300 then HGX B200 from the 'Total Memory 2.1 TB 1.4 TB' row. Era not on page. | Verifier: Ère 2024 absente de la page."
     },
     {
       "id": "dgx-b200-total-hbm-bandwidth-m1",
@@ -3173,12 +3173,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "DGX B200 system with 8 Blackwell GPUs, 1,440 GB HBM3e total; 64 TB/s converted. System total, not per GPU.",
-        "en": "DGX B200 system with 8 Blackwell GPUs, 1,440 GB HBM3e total; 64 TB/s converted. System total, not per GPU."
+        "fr": "Système DGX B200 à 8 GPU Blackwell, 1 440 Go de HBM3e au total ; 64 To/s convertis ; total système.",
+        "en": "DGX B200 system with 8 Blackwell GPUs, 1,440 GB HBM3e total; 64 TB/s converted; system total."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nvidia-dgxb200"
       ],
@@ -3200,12 +3200,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "B200 GPU as configured in DGX B200; even split of the system figure.",
-        "en": "B200 GPU as configured in DGX B200; even split of the system figure."
+        "fr": "GPU B200 du DGX B200 ; répartition égale du chiffre système entre 8 GPU (dérivé).",
+        "en": "B200 GPU in DGX B200; even split of the system figure across 8 GPUs (derived)."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-nvidia-dgxb200"
       ],
@@ -3221,7 +3221,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#b200-per-gpu-hbm-bandwidth",
-      "notes": "Assumes identical GPUs and that the system figure is a plain sum; no per-GPU NVIDIA statement was read in this task."
+      "notes": "Assumes identical GPUs and that the system figure is a plain sum; no per-GPU NVIDIA statement was read in this task. | Verifier: Hypothèse de répartition égale signalée ; aucune valeur par GPU sur la page."
     },
     {
       "id": "mi300x-hbm-bandwidth-m1",
@@ -3232,12 +3232,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "AMD Instinct MI300X OAM, 192 GB HBM3; peak theoretical; 5.3 TB/s converted.",
+        "fr": "AMD Instinct MI300X OAM, 192 Go de HBM3 ; bande passante crête théorique ; 5,3 To/s convertis.",
         "en": "AMD Instinct MI300X OAM, 192 GB HBM3; peak theoretical; 5.3 TB/s converted."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-amd-mi300x"
       ],
@@ -3248,7 +3248,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#mi300x-hbm-bandwidth",
-      "notes": "Era not on page."
+      "notes": "Era not on page. | Verifier: Date de lancement 12/06/2023 sur la page."
     },
     {
       "id": "mi300x-peak-engine-clock-m1",
@@ -3259,12 +3259,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "AMD Instinct MI300X, peak (boost) engine clock.",
-        "en": "AMD Instinct MI300X, peak (boost) engine clock."
+        "fr": "AMD Instinct MI300X, fréquence crête du moteur.",
+        "en": "AMD Instinct MI300X, peak engine clock."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-amd-mi300x"
       ],
@@ -3275,7 +3275,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#mi300x-peak-engine-clock",
-      "notes": null
+      "notes": "Verifier: « (boost) » n'est pas le terme de la source."
     },
     {
       "id": "tpu-v5p-hbm-bandwidth-m1",
@@ -3286,12 +3286,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Cloud TPU v5p, per chip, 95 GiB usable HBM (96 GiB physical).",
+        "fr": "Cloud TPU v5p, par puce, 95 Gio de HBM utilisables (96 Gio physiques).",
         "en": "Cloud TPU v5p, per chip, 95 GiB usable HBM (96 GiB physical)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-gcloud-tpuv5p"
       ],
@@ -3313,12 +3313,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Cloud TPU v5p, per chip, bidirectional, 3D torus topology.",
+        "fr": "Cloud TPU v5p, par puce, bidirectionnelle, topologie en tore 3D.",
         "en": "Cloud TPU v5p, per chip, bidirectional, 3D torus topology."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-gcloud-tpuv5p"
       ],
@@ -3340,12 +3340,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "MLPerf Inference, Datacenter suite, Closed division, Conversational (Server); TTFT = time to first token. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value.",
-        "en": "MLPerf Inference, Datacenter suite, Closed division, Conversational (Server); TTFT = time to first token. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value."
+        "fr": "MLPerf Inference, suite Datacenter, division Closed, catégorie Conversational ; TTFT = délai du premier jeton ; borne au 99e centile, critère de validité et non mesure (règles au commit ff7edba, 2026-08-20).",
+        "en": "MLPerf Inference, Datacenter suite, Closed division, Conversational category; TTFT = time to first token; 99th-percentile bound, a pass/fail limit, not a measurement (rules at commit ff7edba, 2026-08-20)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-mlperf-inference-rules"
       ],
@@ -3367,12 +3367,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "MLPerf Inference, Datacenter suite, Closed division, Conversational (Server); TPOT = average interval between generated tokens. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value.",
-        "en": "MLPerf Inference, Datacenter suite, Closed division, Conversational (Server); TPOT = average interval between generated tokens. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value."
+        "fr": "MLPerf Inference, suite Datacenter, division Closed, catégorie Conversational ; TPOT = intervalle moyen entre jetons générés ; borne au 99e centile, critère de validité et non mesure (règles au commit ff7edba, 2026-08-20).",
+        "en": "MLPerf Inference, Datacenter suite, Closed division, Conversational category; TPOT = average interval between generated tokens; 99th-percentile bound, a pass/fail limit, not a measurement (rules at commit ff7edba, 2026-08-20)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-mlperf-inference-rules"
       ],
@@ -3394,12 +3394,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "MLPerf Inference, Datacenter suite, Closed division, Interactive; TTFT = time to first token. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value.",
-        "en": "MLPerf Inference, Datacenter suite, Closed division, Interactive; TTFT = time to first token. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value."
+        "fr": "MLPerf Inference, suite Datacenter, division Closed, catégorie Interactive ; TTFT = délai du premier jeton ; borne au 99e centile, critère de validité et non mesure (règles au commit ff7edba, 2026-08-20).",
+        "en": "MLPerf Inference, Datacenter suite, Closed division, Interactive category; TTFT = time to first token; 99th-percentile bound, a pass/fail limit, not a measurement (rules at commit ff7edba, 2026-08-20)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-mlperf-inference-rules"
       ],
@@ -3421,12 +3421,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "MLPerf Inference, Datacenter suite, Closed division, Interactive; TPOT = average interval between generated tokens. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value.",
-        "en": "MLPerf Inference, Datacenter suite, Closed division, Interactive; TPOT = average interval between generated tokens. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value."
+        "fr": "MLPerf Inference, suite Datacenter, division Closed, catégorie Interactive ; TPOT = intervalle moyen entre jetons générés ; borne au 99e centile, critère de validité et non mesure (règles au commit ff7edba, 2026-08-20).",
+        "en": "MLPerf Inference, Datacenter suite, Closed division, Interactive category; TPOT = average interval between generated tokens; 99th-percentile bound, a pass/fail limit, not a measurement (rules at commit ff7edba, 2026-08-20)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-mlperf-inference-rules"
       ],
@@ -3448,12 +3448,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Seagate Exos X20 18/20 TB (ST20000NM007D etc.), 7,200 RPM.",
-        "en": "Seagate Exos X20 18/20 TB (ST20000NM007D etc.), 7,200 RPM."
+        "fr": "Seagate Exos X20 18/20 To (ST20000NM007D, etc.), 7 200 tr/min ; conversion en Hz.",
+        "en": "Seagate Exos X20 18/20 TB (ST20000NM007D etc.), 7,200 RPM; converted to Hz."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-seagate-exos-x20"
       ],
@@ -3480,12 +3480,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Seagate Exos X20 18/20 TB, all SATA/SAS variants; manufacturer 'Average Latency', i.e. half-rotation time at 7,200 RPM; excludes seek time.",
-        "en": "Seagate Exos X20 18/20 TB, all SATA/SAS variants; manufacturer 'Average Latency', i.e. half-rotation time at 7,200 RPM; excludes seek time."
+        "fr": "Seagate Exos X20 18/20 To, toutes variantes SATA/SAS ; « latence moyenne » donnée par le fabricant, sans définition dans la fiche.",
+        "en": "Seagate Exos X20 18/20 TB, all SATA/SAS variants; manufacturer 'Average Latency', not defined in the data sheet."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-seagate-exos-x20"
       ],
@@ -3496,7 +3496,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#exos-x20-average-latency",
-      "notes": "Matches the half-rotation calculation (item hdd-7200rpm-half-rotation) to 3 significant figures, confirming its meaning. Seek time is not given in this data sheet."
+      "notes": "Matches the half-rotation calculation (item hdd-7200rpm-half-rotation) to 3 significant figures, confirming its meaning. Seek time is not given in this data sheet. | Verifier: L'interprétation « demi-tour, hors temps d'accès » est une déduction, pas un énoncé de la source."
     },
     {
       "id": "hdd-7200rpm-half-rotation-m1",
@@ -3507,12 +3507,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Any disk at 7,200 RPM, uniformly random target sector; excludes seek and transfer.",
+        "fr": "Tout disque à 7 200 tr/min, secteur cible aléatoire uniforme ; hors temps de positionnement et de transfert.",
         "en": "Any disk at 7,200 RPM, uniformly random target sector; excludes seek and transfer."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-seagate-exos-x20"
       ],
@@ -3539,12 +3539,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Any disk at 7,200 RPM; worst-case rotational wait.",
+        "fr": "Tout disque à 7 200 tr/min ; attente rotationnelle maximale.",
         "en": "Any disk at 7,200 RPM; worst-case rotational wait."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-seagate-exos-x20"
       ],
@@ -3571,12 +3571,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Seagate Exos X20 18/20 TB, outer diameter (OD); 285 MB/s = 272 MiB/s.",
+        "fr": "Seagate Exos X20 18/20 To, pistes extérieures (OD) ; 285 Mo/s, soit 272 Mio/s.",
         "en": "Seagate Exos X20 18/20 TB, outer diameter (OD); 285 MB/s = 272 MiB/s."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-seagate-exos-x20"
       ],
@@ -3598,12 +3598,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Samsung 990 PRO 1 TB and 2 TB, PCIe 4.0 x4, random read, QD1, 1 thread, rated 'up to' 22K IOPS; IOmeter 1.1.0, Ryzen 7 5800X, Windows 10 Pro, SSD as secondary drive. Block size not stated in the data sheet (random IOPS conventionally 4 KB).",
-        "en": "Samsung 990 PRO 1 TB and 2 TB, PCIe 4.0 x4, random read, QD1, 1 thread, rated 'up to' 22K IOPS; IOmeter 1.1.0, Ryzen 7 5800X, Windows 10 Pro, SSD as secondary drive. Block size not stated in the data sheet (random IOPS conventionally 4 KB)."
+        "fr": "Samsung 990 PRO 1 et 2 To, PCIe 4.0 x4, lecture aléatoire QD1, 1 thread, « jusqu'à » 22K IOPS (IOmeter 1.1.0) ; latence dérivée, borne inférieure ; taille de bloc non indiquée.",
+        "en": "Samsung 990 PRO 1 and 2 TB, PCIe 4.0 x4, random read QD1, 1 thread, 'up to' 22K IOPS (IOmeter 1.1.0); derived latency, lower bound; block size not stated."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "contested",
       "sourceIds": [
         "src-samsung-990pro-ds"
       ],
@@ -3619,7 +3619,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#samsung-990pro-qd1-read-latency-derived",
-      "notes": "Derived, not a published latency. Block size missing in the source. Quote is flattened table text."
+      "notes": "Derived, not a published latency. Block size missing in the source. Quote is flattened table text. | Verifier: Recalcul 1/22 000 s = 45,45 µs exact. « 4K » dans le libellé n'est pas sourcé. 22K est arrondi : 4 chiffres significatifs sont excessifs. | Decision: Derived with Little's law from an 'up to' marketing IOPS figure with unstated block size: at most a lower bound on mean latency, misleading on a timeline of typical values."
     },
     {
       "id": "optane-p5800x-4k-qd1-p99-read-m1",
@@ -3630,23 +3630,23 @@
       "low": null,
       "high": 6,
       "conditions": {
-        "fr": "Intel Optane SSD P5800X (3D XPoint, PCIe 4.0 x4), 4 KiB random read, QD1, 99th percentile QoS; specified as '< 6 µs' (upper bound).",
-        "en": "Intel Optane SSD P5800X (3D XPoint, PCIe 4.0 x4), 4 KiB random read, QD1, 99th percentile QoS; specified as '< 6 µs' (upper bound)."
+        "fr": "Intel Optane SSD P5800X (PCIe 4.0 x4), lecture aléatoire 4K, QD1, QoS au 99e centile ; spécifié « < 6 µs » (borne supérieure).",
+        "en": "Intel Optane SSD P5800X (PCIe 4.0 x4), 4K random read, QD1, 99th-percentile QoS; specified as '< 6 µs' (upper bound)."
       },
       "protocol": null,
       "provenanceType": "documented",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-intel-p5800x-brief"
       ],
-      "locator": "Specification table, QoS section, p.2",
+      "locator": "Specifications table, QoS section, PDF p.4",
       "quote": "4KRR, QD=1, 99% • < 6μs",
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#optane-p5800x-4k-qd1-p99-read",
-      "notes": "Upper bound, not a typical value; n and method not given in the brief (refers to Intel Performance Index). Product discontinued. Read on a third-party CDN copy of the Intel PDF."
+      "notes": "Upper bound, not a typical value; n and method not given in the brief (refers to Intel Performance Index). Product discontinued. Read on a third-party CDN copy of the Intel PDF. | Verifier: La table est en p.4 du PDF, pas p.2. « 3D XPoint » et « 4 KiB » absents de la source."
     },
     {
       "id": "solidigm-p5620-qd1-write-p999999-m1",
@@ -3657,12 +3657,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; Xeon Gold 6254 x2, CentOS 8.2 (kernel 5.4.49), C-states and HT off, fio. Block size not stated in this footnote.",
-        "en": "Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; Xeon Gold 6254 x2, CentOS 8.2 (kernel 5.4.49), C-states and HT off, fio. Block size not stated in this footnote."
+        "fr": "Solidigm D7-P5620 3,2 To, écriture aléatoire 100 %, QD1, 99,9999e centile ; 2 Xeon Gold 6254, CentOS 8.2, noyau 5.4.49, C-states et HT désactivés, fio ; taille de bloc non indiquée.",
+        "en": "Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; 2x Xeon Gold 6254, CentOS 8.2, kernel 5.4.49, C-states and HT off, fio; block size not stated."
       },
-      "protocol": "As reported by the source: Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; Xeon Gold 6254 x2, CentOS 8.2 (kernel 5.4.49), C-states and HT off, fio. Block size not stated in this footnote.",
+      "protocol": "As reported by the source: Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; 2x Xeon Gold 6254, CentOS 8.2, kernel 5.4.49, C-states and HT off, fio; block size not stated.",
       "provenanceType": "measured",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-solidigm-p5520-brief"
       ],
@@ -3684,12 +3684,12 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Solidigm D7-P5520 7.68 TB, measured 233.7K random-read IOPS, 4 KB, QD16; Ice Lake test server, fio.",
-        "en": "Solidigm D7-P5520 7.68 TB, measured 233.7K random-read IOPS, 4 KB, QD16; Ice Lake test server, fio."
+        "fr": "Solidigm D7-P5520 7,68 To, 233,7K IOPS en lecture aléatoire mesurés, blocs de 4 Ko, QD16, serveur Ice Lake, fio ; latence dérivée par la loi de Little.",
+        "en": "Solidigm D7-P5520 7.68 TB, measured 233.7K random-read IOPS, 4 KB, QD16, Ice Lake server, fio; latency derived via Little's law."
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "pending",
+      "verificationStatus": "qualified",
       "sourceIds": [
         "src-solidigm-p5520-brief"
       ],
@@ -3705,7 +3705,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#solidigm-p5520-4k-qd16-latency-derived",
-      "notes": "Assumes QD16 is total outstanding I/Os (number of jobs not stated); if several jobs each at QD16, real latency is higher."
+      "notes": "Assumes QD16 is total outstanding I/Os (number of jobs not stated); if several jobs each at QD16, real latency is higher. | Verifier: Hypothèse QD16 = total des E/S en vol signalée."
     }
   ]
 }

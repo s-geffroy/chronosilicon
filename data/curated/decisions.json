@@ -1,1 +1,22 @@
-{"schemaVersion":"1.0.0","decisions":{}}
+{
+  "schemaVersion": "1.0.0",
+  "_comment": "Manual curation decisions (ADR-0005). Every entry must state its reason. Reviewer: Claude Code main session, 2026-11-26 (self-review, not external validation).",
+  "decisions": {
+    "intel-4004-min-clock-period": {
+      "status": "pending",
+      "reason": "Primary source (Intel MCS-4 datasheet) not read: value comes from a third-party transcription (pyntel4004) that does not cite its source; Intel secondary figures diverge (108 kHz / 740 kHz / 750 kHz). Held back until the original datasheet is consulted."
+    },
+    "intel-4004-max-clock-frequency": {
+      "status": "pending",
+      "reason": "Derived from intel-4004-min-clock-period, which is held back (primary datasheet not read)."
+    },
+    "osu-latency-crossroads-8b": {
+      "status": "contested",
+      "reason": "Incomplete protocol: interconnect, MPI library, sample count and which of the two required tests (longest/shortest path, Table 4.6) produced the value are not stated. Verifier flagged it at the limit of 'inadequate'."
+    },
+    "samsung-990pro-qd1-read-latency-derived": {
+      "status": "contested",
+      "reason": "Derived with Little's law from an 'up to' marketing IOPS figure with unstated block size: at most a lower bound on mean latency, misleading on a timeline of typical values."
+    }
+  }
+}

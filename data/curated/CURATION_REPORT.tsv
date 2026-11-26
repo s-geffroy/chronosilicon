@@ -1,134 +1,134 @@
 item	status	reason
-caesium-hyperfine-frequency	pending	no verdict
-caesium-period	pending	no verdict
-speed-of-light-vacuum	pending	no verdict
-light-distance-per-ns	pending	no verdict
-astronomical-unit	pending	no verdict
-astronomical-unit-light-time	pending	no verdict
-earth-moon-semimajor-axis	pending	no verdict
-earth-moon-light-time-one-way	pending	no verdict
-earth-mars-distance-min	pending	no verdict
-earth-mars-distance-max	pending	no verdict
-earth-mars-light-time-min	pending	no verdict
-earth-mars-light-time-max	pending	no verdict
-voyager1-distance-2026-11-18	pending	no verdict
-voyager1-light-time-2026-11-18	pending	no verdict
-tcp-initial-rto	pending	no verdict
-tcp-min-rto	pending	no verdict
-tcp-max-rto-floor	pending	no verdict
-tcp-rto-after-syn-timeout	pending	no verdict
-tcp-msl	pending	no verdict
-tcp-isn-clock-tick	pending	no verdict
-nr-urllc-user-plane-latency-target	pending	no verdict
-nr-urllc-reliability-latency	pending	no verdict
-nr-embb-user-plane-latency-target	pending	no verdict
-ntn-geo-user-plane-rtt-target	pending	no verdict
-ntn-leo-user-plane-rtt-target	pending	no verdict
-ethernet-min-frame-size	pending	no verdict
-ethernet-min-frame-wire-time-1g	pending	no verdict
-ethernet-min-frame-wire-time-10g	pending	no verdict
-ethernet-min-frame-wire-time-100g	pending	no verdict
-azure-rtt-eastus-westeurope	pending	no verdict
-azure-rtt-eastus-westus	pending	no verdict
-azure-rtt-westeurope-francecentral	pending	no verdict
-azure-rtt-eastus-australiaeast	pending	no verdict
-human-simple-visual-reaction-time	pending	no verdict
-human-stimulus-detection-time	pending	no verdict
-human-voluntary-blink-duration	pending	no verdict
-human-voluntary-blink-closing-phase	pending	no verdict
-human-flicker-fusion-uniform	pending	no verdict
-human-flicker-artifact-edge-median	pending	no verdict
-human-stylus-latency-jnd-large-box	pending	no verdict
-human-stylus-latency-jnd-small-box	pending	no verdict
-human-stylus-latency-jnd-scribbling	pending	no verdict
-intel-skylake-client-l1d-latency	pending	no verdict
-intel-skylake-client-l2-latency	pending	no verdict
-intel-skylake-client-l3-latency	pending	no verdict
-intel-icelake-client-l1d-latency	pending	no verdict
-intel-icelake-client-l2-latency	pending	no verdict
-intel-haswell-l3-latency	pending	no verdict
-intel-sandybridge-llc-latency	pending	no verdict
-intel-sandybridge-other-core-dirty-hit	pending	no verdict
-intel-xeon5500-local-dram-latency	pending	no verdict
-intel-xeon5500-remote-dram-latency	pending	no verdict
-intel-xeon5500-l3-hit-exclusive	pending	no verdict
-intel-sandybridge-c6-exit-latency	pending	no verdict
-intel-sandybridge-c1-exit-latency	pending	no verdict
-amd-zen4-l1d-load-to-use	pending	no verdict
-amd-zen4-l2-load-to-use	pending	no verdict
-amd-zen4-l3-load-to-use	pending	no verdict
-amd-zen5-l1d-load-to-use	pending	no verdict
-amd-zen5-l2-load-to-use	pending	no verdict
-amd-zen5-l3-load-to-use	pending	no verdict
-x86-add-r64-latency-alderlake-p	pending	no verdict
-x86-imul-r64-latency-alderlake-p	pending	no verdict
-x86-div-r64-latency-alderlake-p	pending	no verdict
-x86-div-r64-latency-skylake	pending	no verdict
-x86-div-r64-latency-zen4	pending	no verdict
-intel-core-i9-14900k-max-turbo	pending	no verdict
-intel-core-i9-14900k-pcore-base	pending	no verdict
-intel-8086-initial-clock	pending	no verdict
-intel-pentium4-launch-clock	pending	no verdict
-intel-4004-min-clock-period	pending	no verdict
-intel-4004-max-clock-frequency	pending	no verdict
-ddr5-5600b-taa-micron	pending	no verdict
-ddr4-3200-cl-micron	pending	no verdict
-ddr4-trefi-micron	pending	no verdict
-ddr4-8gb-trfc1-micron	pending	no verdict
-dram-latency-epyc-7702-measured	pending	no verdict
-dram-latency-xeon-6248-measured	pending	no verdict
-dram-latency-pentiumpro-lmbench-1995	pending	no verdict
-apple-m4-memory-bandwidth	pending	no verdict
-linux-config-hz-default	pending	no verdict
-linux-tick-period-hz1000	pending	no verdict
-linux-eevdf-base-slice-v6-12	pending	no verdict
-linux-eevdf-base-slice-master	pending	no verdict
-linux-default-timer-slack	pending	no verdict
-lmbench-null-syscall-linux-pentiumpro	pending	no verdict
-lmbench-context-switch-linux-pentiumpro	pending	no verdict
-slingshot-rosetta-switch-latency	pending	no verdict
-osu-latency-crossroads-8b	pending	no verdict
-pcie4-lane-rate	pending	no verdict
-pcie5-lane-rate	pending	no verdict
-pcie5-x16-bandwidth	pending	no verdict
-pcie6-lane-rate	pending	no verdict
-pcie6-x16-bandwidth	pending	no verdict
-cxl3-data-rate	pending	no verdict
-usb-low-speed-rate	pending	no verdict
-usb-full-speed-rate	pending	no verdict
-usb-high-speed-rate	pending	no verdict
-usb32-20g-rate	pending	no verdict
-usb4-80g-rate	pending	no verdict
-usb-fs-frame	pending	no verdict
-usb-hs-microframe	pending	no verdict
-usb-fs-interrupt-min-period	pending	no verdict
-usb-ls-interrupt-min-period	pending	no verdict
-usb-fs-max-polling-rate	pending	no verdict
-usb-hs-max-polling-rate	pending	no verdict
-hdmi-8k60-refresh	pending	no verdict
-hdmi-4k120-refresh	pending	no verdict
-hdmi22-bandwidth	pending	no verdict
-frame-time-60hz	pending	no verdict
-frame-time-120hz	pending	no verdict
-h100-sxm-hbm-bandwidth	pending	no verdict
-h100-sxm-nvlink-bandwidth	pending	no verdict
-b200-nvlink-gpu-to-gpu	pending	no verdict
-dgx-b200-total-hbm-bandwidth	pending	no verdict
-b200-per-gpu-hbm-bandwidth	pending	no verdict
-mi300x-hbm-bandwidth	pending	no verdict
-mi300x-peak-engine-clock	pending	no verdict
-tpu-v5p-hbm-bandwidth	pending	no verdict
-tpu-v5p-ici-bandwidth	pending	no verdict
-mlperf-llama2-70b-server-ttft	pending	no verdict
-mlperf-llama2-70b-server-tpot	pending	no verdict
-mlperf-llama2-70b-interactive-ttft	pending	no verdict
-mlperf-llama2-70b-interactive-tpot	pending	no verdict
-exos-x20-spindle-frequency	pending	no verdict
-exos-x20-average-latency	pending	no verdict
-hdd-7200rpm-half-rotation	pending	no verdict
-hdd-7200rpm-full-rotation	pending	no verdict
-exos-x20-sustained-transfer	pending	no verdict
-samsung-990pro-qd1-read-latency-derived	pending	no verdict
-optane-p5800x-4k-qd1-p99-read	pending	no verdict
-solidigm-p5620-qd1-write-p999999	pending	no verdict
-solidigm-p5520-4k-qd16-latency-derived	pending	no verdict
+caesium-hyperfine-frequency	qualified	verdict confirmed (verify-2026-11-26-A.json)
+caesium-period	qualified	verdict confirmed (verify-2026-11-26-A.json)
+speed-of-light-vacuum	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+light-distance-per-ns	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+astronomical-unit	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+astronomical-unit-light-time	qualified	verdict confirmed (verify-2026-11-26-A.json)
+earth-moon-semimajor-axis	qualified	verdict confirmed (verify-2026-11-26-A.json)
+earth-moon-light-time-one-way	qualified	verdict confirmed (verify-2026-11-26-A.json)
+earth-mars-distance-min	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+earth-mars-distance-max	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+earth-mars-light-time-min	qualified	verdict confirmed (verify-2026-11-26-A.json)
+earth-mars-light-time-max	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+voyager1-distance-2026-11-18	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+voyager1-light-time-2026-11-18	qualified	verdict confirmed (verify-2026-11-26-A.json)
+tcp-initial-rto	qualified	verdict confirmed (verify-2026-11-26-A.json)
+tcp-min-rto	qualified	verdict confirmed (verify-2026-11-26-A.json)
+tcp-max-rto-floor	qualified	verdict confirmed (verify-2026-11-26-A.json)
+tcp-rto-after-syn-timeout	qualified	verdict confirmed (verify-2026-11-26-A.json)
+tcp-msl	qualified	verdict confirmed (verify-2026-11-26-A.json)
+tcp-isn-clock-tick	qualified	verdict confirmed (verify-2026-11-26-A.json)
+nr-urllc-user-plane-latency-target	qualified	verdict confirmed (verify-2026-11-26-A.json)
+nr-urllc-reliability-latency	qualified	verdict confirmed (verify-2026-11-26-A.json)
+nr-embb-user-plane-latency-target	qualified	verdict confirmed (verify-2026-11-26-A.json)
+ntn-geo-user-plane-rtt-target	qualified	verdict confirmed (verify-2026-11-26-A.json)
+ntn-leo-user-plane-rtt-target	qualified	verdict confirmed (verify-2026-11-26-A.json)
+ethernet-min-frame-size	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+ethernet-min-frame-wire-time-1g	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+ethernet-min-frame-wire-time-10g	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+ethernet-min-frame-wire-time-100g	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+azure-rtt-eastus-westeurope	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+azure-rtt-eastus-westus	qualified	verdict confirmed (verify-2026-11-26-A.json)
+azure-rtt-westeurope-francecentral	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+azure-rtt-eastus-australiaeast	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+human-simple-visual-reaction-time	qualified	verdict confirmed (verify-2026-11-26-A.json)
+human-stimulus-detection-time	qualified	verdict confirmed (verify-2026-11-26-A.json)
+human-voluntary-blink-duration	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+human-voluntary-blink-closing-phase	qualified	verdict confirmed (verify-2026-11-26-A.json)
+human-flicker-fusion-uniform	qualified	verdict confirmed (verify-2026-11-26-A.json)
+human-flicker-artifact-edge-median	qualified	verdict confirmed_with_fix (verify-2026-11-26-A.json)
+human-stylus-latency-jnd-large-box	qualified	verdict confirmed (verify-2026-11-26-A.json)
+human-stylus-latency-jnd-small-box	qualified	verdict confirmed (verify-2026-11-26-A.json)
+human-stylus-latency-jnd-scribbling	qualified	verdict confirmed (verify-2026-11-26-A.json)
+intel-skylake-client-l1d-latency	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-skylake-client-l2-latency	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-skylake-client-l3-latency	qualified	verdict confirmed_with_fix (verify-2026-11-26-B.json)
+intel-icelake-client-l1d-latency	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-icelake-client-l2-latency	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-haswell-l3-latency	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-sandybridge-llc-latency	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-sandybridge-other-core-dirty-hit	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-xeon5500-local-dram-latency	qualified	verdict confirmed_with_fix (verify-2026-11-26-B.json)
+intel-xeon5500-remote-dram-latency	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-xeon5500-l3-hit-exclusive	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-sandybridge-c6-exit-latency	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-sandybridge-c1-exit-latency	qualified	verdict confirmed (verify-2026-11-26-B.json)
+amd-zen4-l1d-load-to-use	qualified	verdict confirmed (verify-2026-11-26-B.json)
+amd-zen4-l2-load-to-use	qualified	verdict confirmed (verify-2026-11-26-B.json)
+amd-zen4-l3-load-to-use	qualified	verdict confirmed (verify-2026-11-26-B.json)
+amd-zen5-l1d-load-to-use	qualified	verdict confirmed (verify-2026-11-26-B.json)
+amd-zen5-l2-load-to-use	qualified	verdict confirmed (verify-2026-11-26-B.json)
+amd-zen5-l3-load-to-use	qualified	verdict confirmed (verify-2026-11-26-B.json)
+x86-add-r64-latency-alderlake-p	qualified	verdict confirmed_with_fix (verify-2026-11-26-B.json)
+x86-imul-r64-latency-alderlake-p	qualified	verdict confirmed (verify-2026-11-26-B.json)
+x86-div-r64-latency-alderlake-p	qualified	verdict confirmed (verify-2026-11-26-B.json)
+x86-div-r64-latency-skylake	qualified	verdict confirmed_with_fix (verify-2026-11-26-B.json)
+x86-div-r64-latency-zen4	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-core-i9-14900k-max-turbo	qualified	verdict confirmed_with_fix (verify-2026-11-26-B.json)
+intel-core-i9-14900k-pcore-base	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-8086-initial-clock	qualified	verdict confirmed (verify-2026-11-26-B.json)
+intel-pentium4-launch-clock	qualified	verdict confirmed_with_fix (verify-2026-11-26-B.json)
+intel-4004-min-clock-period	pending	verdict confirmed (verify-2026-11-26-B.json); decision: Primary source (Intel MCS-4 datasheet) not read: value comes from a third-party transcription (pyntel4004) that does not cite its source; Intel secondary figures diverge (108 kHz / 740 kHz / 750 kHz). Held back until the original datasheet is consulted.
+intel-4004-max-clock-frequency	pending	verdict confirmed (verify-2026-11-26-B.json); decision: Derived from intel-4004-min-clock-period, which is held back (primary datasheet not read).
+ddr5-5600b-taa-micron	qualified	verdict confirmed (verify-2026-11-26-B.json)
+ddr4-3200-cl-micron	qualified	verdict confirmed (verify-2026-11-26-B.json)
+ddr4-trefi-micron	qualified	verdict confirmed (verify-2026-11-26-B.json)
+ddr4-8gb-trfc1-micron	qualified	verdict confirmed (verify-2026-11-26-B.json)
+dram-latency-epyc-7702-measured	qualified	verdict confirmed (verify-2026-11-26-B.json)
+dram-latency-xeon-6248-measured	qualified	verdict confirmed (verify-2026-11-26-B.json)
+dram-latency-pentiumpro-lmbench-1995	qualified	verdict confirmed (verify-2026-11-26-B.json)
+apple-m4-memory-bandwidth	qualified	verdict confirmed (verify-2026-11-26-B.json)
+linux-config-hz-default	qualified	verdict confirmed_with_fix (verify-2026-11-26-B.json)
+linux-tick-period-hz1000	qualified	verdict confirmed (verify-2026-11-26-B.json)
+linux-eevdf-base-slice-v6-12	qualified	verdict confirmed (verify-2026-11-26-B.json)
+linux-eevdf-base-slice-master	qualified	verdict confirmed (verify-2026-11-26-B.json)
+linux-default-timer-slack	qualified	verdict confirmed (verify-2026-11-26-B.json)
+lmbench-null-syscall-linux-pentiumpro	qualified	verdict confirmed (verify-2026-11-26-B.json)
+lmbench-context-switch-linux-pentiumpro	qualified	verdict confirmed (verify-2026-11-26-B.json)
+slingshot-rosetta-switch-latency	qualified	verdict confirmed_with_fix (verify-2026-11-26-B.json)
+osu-latency-crossroads-8b	contested	verdict confirmed_with_fix (verify-2026-11-26-B.json); decision: Incomplete protocol: interconnect, MPI library, sample count and which of the two required tests (longest/shortest path, Table 4.6) produced the value are not stated. Verifier flagged it at the limit of 'inadequate'.
+pcie4-lane-rate	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+pcie5-lane-rate	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+pcie5-x16-bandwidth	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+pcie6-lane-rate	qualified	verdict confirmed (verify-2026-11-26-C.json)
+pcie6-x16-bandwidth	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+cxl3-data-rate	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+usb-low-speed-rate	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+usb-full-speed-rate	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+usb-high-speed-rate	qualified	verdict confirmed (verify-2026-11-26-C.json)
+usb32-20g-rate	qualified	verdict confirmed (verify-2026-11-26-C.json)
+usb4-80g-rate	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+usb-fs-frame	qualified	verdict confirmed (verify-2026-11-26-C.json)
+usb-hs-microframe	qualified	verdict confirmed (verify-2026-11-26-C.json)
+usb-fs-interrupt-min-period	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+usb-ls-interrupt-min-period	qualified	verdict confirmed (verify-2026-11-26-C.json)
+usb-fs-max-polling-rate	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+usb-hs-max-polling-rate	qualified	verdict confirmed (verify-2026-11-26-C.json)
+hdmi-8k60-refresh	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+hdmi-4k120-refresh	qualified	verdict confirmed (verify-2026-11-26-C.json)
+hdmi22-bandwidth	qualified	verdict confirmed (verify-2026-11-26-C.json)
+frame-time-60hz	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+frame-time-120hz	qualified	verdict confirmed (verify-2026-11-26-C.json)
+h100-sxm-hbm-bandwidth	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+h100-sxm-nvlink-bandwidth	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+b200-nvlink-gpu-to-gpu	qualified	verdict confirmed (verify-2026-11-26-C.json)
+dgx-b200-total-hbm-bandwidth	qualified	verdict confirmed (verify-2026-11-26-C.json)
+b200-per-gpu-hbm-bandwidth	qualified	verdict confirmed (verify-2026-11-26-C.json)
+mi300x-hbm-bandwidth	qualified	verdict confirmed (verify-2026-11-26-C.json)
+mi300x-peak-engine-clock	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+tpu-v5p-hbm-bandwidth	qualified	verdict confirmed (verify-2026-11-26-C.json)
+tpu-v5p-ici-bandwidth	qualified	verdict confirmed (verify-2026-11-26-C.json)
+mlperf-llama2-70b-server-ttft	qualified	verdict confirmed (verify-2026-11-26-C.json)
+mlperf-llama2-70b-server-tpot	qualified	verdict confirmed (verify-2026-11-26-C.json)
+mlperf-llama2-70b-interactive-ttft	qualified	verdict confirmed (verify-2026-11-26-C.json)
+mlperf-llama2-70b-interactive-tpot	qualified	verdict confirmed (verify-2026-11-26-C.json)
+exos-x20-spindle-frequency	qualified	verdict confirmed (verify-2026-11-26-C.json)
+exos-x20-average-latency	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+hdd-7200rpm-half-rotation	qualified	verdict confirmed (verify-2026-11-26-C.json)
+hdd-7200rpm-full-rotation	qualified	verdict confirmed (verify-2026-11-26-C.json)
+exos-x20-sustained-transfer	qualified	verdict confirmed (verify-2026-11-26-C.json)
+samsung-990pro-qd1-read-latency-derived	contested	verdict confirmed_with_fix (verify-2026-11-26-C.json); decision: Derived with Little's law from an 'up to' marketing IOPS figure with unstated block size: at most a lower bound on mean latency, misleading on a timeline of typical values.
+optane-p5800x-4k-qd1-p99-read	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
+solidigm-p5620-qd1-write-p999999	qualified	verdict confirmed (verify-2026-11-26-C.json)
+solidigm-p5520-4k-qd16-latency-derived	qualified	verdict confirmed (verify-2026-11-26-C.json)

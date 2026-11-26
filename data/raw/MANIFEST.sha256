@@ -1,4 +1,7 @@
-# sha256  file — data/raw is immutable (CS-04). Agent extraction records of M00, 2026-11-26.
+# sha256  file — data/raw is immutable (CS-04). M00 extraction records and independent verification verdicts, 2026-11-26.
 cffe99f718cf4eccc49d2acc83f147ad014079b0b67fcd3a1240e2f1f84be09f  m00-2026-11-26-A_physics_space_human_network.json
 e438c84c712977791aaf69afbb30b26ed43b6ebb225ae21bb1e98b83676a2123  m00-2026-11-26-B_cpu_memory_os_hpc.json
 40f3fc21ba29ae670bdba2fa18367f7ebce58e6d9809a1baac5d906815e79a5b  m00-2026-11-26-C_storage_interconnect_gpu_ai.json
+fb8b8d3d90da9a135927efc7a460128b176629be0c9a236d4715a4d07657ad7d  verify-2026-11-26-A.json
+77979ad36b563a39c2ef81bd08096d0db3ba3db107e9e0a811dc187ea44544ee  verify-2026-11-26-B.json
+215974359aa0cab75d4ef24d4dabbce14338b6ea9cf4521a05efa85577950a55  verify-2026-11-26-C.json

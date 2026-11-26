@@ -1,0 +1,543 @@
+{
+ "verifiedFile": "m00-2026-11-26-A_physics_space_human_network.json",
+ "verifiedAt": "2026-11-26",
+ "verdicts": [
+  {
+   "id": "caesium-hyperfine-frequency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+   "evidence": "Table 1 p.14: ∆νCs 9 192 631 770 Hz; p.16: 'the second is equal to the duration of 9 192 631 770 periods'. Same value on bipm.org second page.",
+   "fix": null,
+   "labelFr": "Fréquence de la transition hyperfine du césium 133 (définit la seconde)",
+   "labelEn": "Caesium-133 hyperfine transition frequency (defines the second)",
+   "conditionsFr": "Valeur exacte par définition (SI 2019) ; transition hyperfine de l'état fondamental non perturbé de l'atome de césium 133.",
+   "conditionsEn": "Exact by definition (SI 2019); unperturbed ground-state hyperfine transition of the caesium-133 atom.",
+   "notes": "Brochure V4.01 June 2026; licence CC BY 4.0 confirmed p.2."
+  },
+  {
+   "id": "caesium-period",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+   "evidence": "Recalculated 1/9192631770 s = 0.10878277570776665 ns (last digit float rounding). Input confirmed.",
+   "fix": null,
+   "labelFr": "Une période du rayonnement de référence du césium 133",
+   "labelEn": "One period of the caesium-133 reference radiation",
+   "conditionsFr": "Déduite de la définition exacte de la seconde dans le SI.",
+   "conditionsEn": "Derived from the exact SI definition of the second.",
+   "notes": ""
+  },
+  {
+   "id": "speed-of-light-vacuum",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+   "evidence": "Table 1 p.14: c 299 792 458 m s−1. Quote 'This definition implies the exact relation c = 299 792 458 m s−1' is on PDF p.17 (metre), not p.16. NIST CODATA page: '(exact)'.",
+   "fix": {
+    "locator": "Table 1, PDF p. 14; §2.3.1 definition of the metre, PDF p. 17"
+   },
+   "labelFr": "Vitesse de la lumière dans le vide",
+   "labelEn": "Speed of light in vacuum",
+   "conditionsFr": "Valeur exacte par définition (constante déterminante du SI).",
+   "conditionsEn": "Exact by definition (defining constant of the SI).",
+   "notes": "Era 1983: brochure cites 17th CGPM 1983 redefinition of the metre."
+  },
+  {
+   "id": "light-distance-per-ns",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+   "evidence": "299 792 458 m/s × 1e-9 s = 0.299792458 m. Quote is on PDF p.17.",
+   "fix": {
+    "locator": "PDF p. 17"
+   },
+   "labelFr": "Distance parcourue par la lumière dans le vide en 1 ns",
+   "labelEn": "Distance travelled by light in vacuum in 1 ns",
+   "conditionsFr": "Dans le vide.",
+   "conditionsEn": "In vacuum.",
+   "notes": "Remark on fibre/copper is not from the source; kept out of the short conditions."
+  },
+  {
+   "id": "astronomical-unit",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+   "evidence": "Table 8 'Non-SI units' p.30: '1 au = 149 597 870 700 m', in group 'Internationally recognised units that are not decimal multiples or submultiples of SI units'; note (j): IAU 2012 Resolution B2.",
+   "fix": {
+    "conditions": "Internationally recognised non-SI unit (Table 8 of the 2026 V4.01 brochure, which no longer uses the wording 'accepted for use with the SI'); defined by IAU 2012 Resolution B2 (note j)."
+   },
+   "labelFr": "Unité astronomique",
+   "labelEn": "Astronomical unit",
+   "conditionsFr": "Unité hors SI reconnue internationalement, définie par la résolution B2 de l'UAI (2012).",
+   "conditionsEn": "Internationally recognised non-SI unit, defined by IAU Resolution B2 (2012).",
+   "notes": "'Accepted for use with the SI' and 'not the instantaneous Earth-Sun distance' are not stated in Table 8 of this version."
+  },
+  {
+   "id": "astronomical-unit-light-time",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+   "evidence": "Recalculated 149597870700/299792458 = 499.00478383615643 s. Inputs confirmed.",
+   "fix": null,
+   "labelFr": "Temps-lumière pour une unité astronomique",
+   "labelEn": "Light time for one astronomical unit",
+   "conditionsFr": "Dans le vide, pour exactement 1 au.",
+   "conditionsEn": "In vacuum, for exactly 1 au.",
+   "notes": "The Sun-Earth approximation is an interpretation, not from the source."
+  },
+  {
+   "id": "earth-moon-semimajor-axis",
+   "verdict": "confirmed",
+   "checkedUrl": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+   "evidence": "Orbital parameters: 'Semimajor axis (10^6 km) 0.3844'; footnote: 'roughly ranges from 357,000 km to 407,000 km'. Last Updated 11 January 2024.",
+   "fix": null,
+   "labelFr": "Demi-grand axe de l'orbite lunaire",
+   "labelEn": "Earth-Moon orbit semimajor axis",
+   "conditionsFr": "Demi-grand axe de l'orbite ; bornes : distance Terre-Lune approximative sur une année selon la fiche NASA.",
+   "conditionsEn": "Orbit semimajor axis; bounds: approximate Earth-Moon distance over a year per the NASA fact sheet.",
+   "notes": ""
+  },
+  {
+   "id": "earth-moon-light-time-one-way",
+   "verdict": "confirmed",
+   "checkedUrl": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+   "evidence": "Recalculated 384.4e6/c = 1.28222 s; 357e6/c = 1.1908 s; 407e6/c = 1.3576 s. Inputs confirmed.",
+   "fix": null,
+   "labelFr": "Temps-lumière Terre-Lune, aller simple (demi-grand axe)",
+   "labelEn": "Earth-Moon one-way light time (semimajor axis)",
+   "conditionsFr": "Dans le vide, distance égale au demi-grand axe ; bornes tirées de la plage 357 000-407 000 km.",
+   "conditionsEn": "In vacuum, distance equal to the semimajor axis; bounds from the 357,000-407,000 km range.",
+   "notes": ""
+  },
+  {
+   "id": "earth-mars-distance-min",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "evidence": "Mars Observational Parameters > Distance from Earth: 'Minimum (10^6 km) 54.6'. Last Updated 19 May 2025.",
+   "fix": {
+    "conditions": "Fact sheet 'Distance from Earth: Minimum (10^6 km) 54.6'."
+   },
+   "labelFr": "Distance minimale Terre-Mars",
+   "labelEn": "Minimum Earth-Mars distance",
+   "conditionsFr": "Distance minimale Terre-Mars indiquée par la fiche NASA.",
+   "conditionsEn": "Minimum Earth-Mars distance given by the NASA fact sheet.",
+   "notes": "'Close oppositions only; most oppositions are farther' is not in the source."
+  },
+  {
+   "id": "earth-mars-distance-max",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "evidence": "Same table: 'Maximum (10^6 km) 401.4'.",
+   "fix": {
+    "conditions": "Fact sheet 'Distance from Earth: Maximum (10^6 km) 401.4'."
+   },
+   "labelFr": "Distance maximale Terre-Mars",
+   "labelEn": "Maximum Earth-Mars distance",
+   "conditionsFr": "Distance maximale Terre-Mars indiquée par la fiche NASA.",
+   "conditionsEn": "Maximum Earth-Mars distance given by the NASA fact sheet.",
+   "notes": "'Near solar conjunction, radio links disrupted' is not in the source."
+  },
+  {
+   "id": "earth-mars-light-time-min",
+   "verdict": "confirmed",
+   "checkedUrl": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "evidence": "Recalculated 54.6e9/c = 182.126 s (about 3.0 min). Input confirmed.",
+   "fix": null,
+   "labelFr": "Temps-lumière Terre-Mars, aller simple, à la distance minimale",
+   "labelEn": "Earth-Mars one-way light time at minimum distance",
+   "conditionsFr": "Dans le vide, distance Terre-Mars minimale de 54,6 millions de km.",
+   "conditionsEn": "In vacuum, minimum Earth-Mars distance of 54.6 million km.",
+   "notes": ""
+  },
+  {
+   "id": "earth-mars-light-time-max",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "evidence": "Recalculated 401.4e9/c = 1338.926 s (about 22.3 min). Input confirmed.",
+   "fix": {
+    "conditions": "Vacuum, Earth-Mars distance 401.4e6 km (fact-sheet maximum); about 22.3 min."
+   },
+   "labelFr": "Temps-lumière Terre-Mars, aller simple, à la distance maximale",
+   "labelEn": "Earth-Mars one-way light time at maximum distance",
+   "conditionsFr": "Dans le vide, distance Terre-Mars maximale de 401,4 millions de km.",
+   "conditionsEn": "In vacuum, maximum Earth-Mars distance of 401.4 million km.",
+   "notes": "Drop unsourced 'near solar conjunction'."
+  },
+  {
+   "id": "voyager1-distance-2026-11-18",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+   "evidence": "'On Wednesday, Nov. 18, 2026, at 2:16:07 a.m. PST, NASA's Voyager 1 spacecraft will be 16.094 billion miles (25.902 billion kilometers) away from Earth'. Page Last Updated Nov 24, 2026.",
+   "fix": {
+    "conditions": "Value announced by NASA for Wednesday, Nov. 18, 2026, 2:16:07 a.m. PST (stated as 'will be', i.e. a predicted position); described as one light-day. Distance increases over time."
+   },
+   "labelFr": "Distance de Voyager 1 à la Terre (18 novembre 2026)",
+   "labelEn": "Voyager 1 distance from Earth (18 Nov 2026)",
+   "conditionsFr": "Distance annoncée par la NASA pour le 18 novembre 2026 à 2 h 16 min 07 s (heure du Pacifique), soit environ un jour-lumière.",
+   "conditionsEn": "Distance announced by NASA for 18 November 2026 at 2:16:07 a.m. PST, about one light-day.",
+   "notes": "Quote text matches (page writes 'will be' before the figure). 'Oscillates with Earth's orbital motion' not found on page."
+  },
+  {
+   "id": "voyager1-light-time-2026-11-18",
+   "verdict": "confirmed",
+   "checkedUrl": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+   "evidence": "Recalculated 25.902e12/c = 86399.77 s (24.0 h); page: 'the distance light travels in 24 hours, also known as one light-day'.",
+   "fix": null,
+   "labelFr": "Temps-lumière aller simple vers Voyager 1 (18 novembre 2026)",
+   "labelEn": "Voyager 1 one-way light time (18 Nov 2026)",
+   "conditionsFr": "Dans le vide, pour une distance de 25,902 milliards de km le 18 novembre 2026.",
+   "conditionsEn": "In vacuum, for a distance of 25.902 billion km on 18 November 2026.",
+   "notes": ""
+  },
+  {
+   "id": "tcp-initial-rto",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc6298.txt",
+   "evidence": "(2.1) 'Until a round-trip time (RTT) measurement has been made ... the sender SHOULD set RTO <- 1 second'; note: previous version used 3 s.",
+   "fix": null,
+   "labelFr": "Délai initial de retransmission TCP (RTO)",
+   "labelEn": "TCP initial retransmission timeout",
+   "conditionsFr": "Avant toute mesure de RTT ; recommandation de niveau SHOULD de la RFC 6298.",
+   "conditionsEn": "Before any RTT measurement; SHOULD-level recommendation of RFC 6298.",
+   "notes": ""
+  },
+  {
+   "id": "tcp-min-rto",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc6298.txt",
+   "evidence": "(2.4) 'Whenever RTO is computed, if it is less than 1 second, then the RTO SHOULD be rounded up to 1 second.'",
+   "fix": null,
+   "labelFr": "Délai minimal de retransmission TCP (RTO)",
+   "labelEn": "TCP minimum retransmission timeout",
+   "conditionsFr": "Règle de niveau SHOULD de la RFC 6298, appliquée à chaque calcul du RTO.",
+   "conditionsEn": "SHOULD-level rule of RFC 6298, applied whenever RTO is computed.",
+   "notes": "Claim about lower minimums in deployed stacks is flagged unsourced; omitted from short conditions."
+  },
+  {
+   "id": "tcp-max-rto-floor",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc6298.txt",
+   "evidence": "(2.5) 'A maximum value MAY be placed on RTO provided it is at least 60 seconds.'",
+   "fix": null,
+   "labelFr": "Plafond minimal autorisé pour le RTO TCP",
+   "labelEn": "Lowest permitted cap on TCP RTO",
+   "conditionsFr": "Un plafond PEUT être imposé au RTO, à condition qu'il soit d'au moins 60 s.",
+   "conditionsEn": "A maximum MAY be placed on RTO, provided it is at least 60 s.",
+   "notes": ""
+  },
+  {
+   "id": "tcp-rto-after-syn-timeout",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc6298.txt",
+   "evidence": "(5.7) 'If the timer expires awaiting the ACK of a SYN segment and ... RTO less than 3 seconds, the RTO MUST be re-initialized to 3 seconds when data transmission begins'.",
+   "fix": null,
+   "labelFr": "RTO TCP après expiration d'un SYN",
+   "labelEn": "TCP RTO after a SYN timeout",
+   "conditionsFr": "Si le temporisateur expire en attendant l'ACK d'un SYN et que le RTO est inférieur à 3 s, il est remis à 3 s au début de la transmission des données.",
+   "conditionsEn": "If the timer expires awaiting the ACK of a SYN and RTO is below 3 s, RTO is reset to 3 s when data transmission begins.",
+   "notes": ""
+  },
+  {
+   "id": "tcp-msl",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc9293.txt",
+   "evidence": "§3.4.2: 'For this specification the MSL is taken to be 2 minutes. This is an engineering choice'. TIME-WAIT timeout=2MSL in state diagram.",
+   "fix": null,
+   "labelFr": "Durée de vie maximale d'un segment TCP (MSL)",
+   "labelEn": "TCP Maximum Segment Lifetime (MSL)",
+   "conditionsFr": "Valeur retenue par la spécification TCP, présentée comme un choix d'ingénierie ; l'état TIME-WAIT dure 2 MSL.",
+   "conditionsEn": "Value taken by the TCP specification, described as an engineering choice; TIME-WAIT lasts 2 MSL.",
+   "notes": ""
+  },
+  {
+   "id": "tcp-isn-clock-tick",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc9293.txt",
+   "evidence": "§3.4.1: 'This clock is a 32-bit counter that typically increments at least once every roughly 4 microseconds, although it is neither assumed to be realtime nor precise'.",
+   "fix": null,
+   "labelFr": "Pas de l'horloge des numéros de séquence initiaux TCP",
+   "labelEn": "TCP initial sequence number clock tick",
+   "conditionsFr": "Compteur de 32 bits incrémenté en général au moins une fois toutes les 4 µs environ ; ni temps réel ni précis.",
+   "conditionsEn": "32-bit counter that typically increments at least once every roughly 4 µs; neither realtime nor precise.",
+   "notes": ""
+  },
+  {
+   "id": "nr-urllc-user-plane-latency-target",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.etsi.org/deliver/etsi_tr/138900_138999/138913/17.00.00_60/tr_138913v170000p.pdf",
+   "evidence": "§7.5: 'For URLLC, the target for user plane latency should be 0.5ms for UL, and 0.5ms for DL'; NOTE1: 'considered an average value'; 'Analytical evaluation'.",
+   "fix": null,
+   "labelFr": "Objectif de latence plan usager 5G NR URLLC",
+   "labelEn": "5G NR URLLC user-plane latency target",
+   "conditionsFr": "Objectif de conception, 0,5 ms en montant et en descendant, de l'entrée à la sortie des SDU couche 2/3 via l'interface radio, sans DRX ; valeur moyenne, évaluation analytique.",
+   "conditionsEn": "Design target, 0.5 ms each for UL and DL, from layer 2/3 SDU ingress to egress over the radio interface, no DRX; average value, analytical evaluation.",
+   "notes": ""
+  },
+  {
+   "id": "nr-urllc-reliability-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.etsi.org/deliver/etsi_tr/138900_138999/138913/17.00.00_60/tr_138913v170000p.pdf",
+   "evidence": "§7.9: 'A general URLLC reliability requirement for one transmission of a packet is 1-10-5 for 32 bytes with a user plane latency of 1ms.'",
+   "fix": null,
+   "labelFr": "Latence associée à l'exigence de fiabilité 5G NR URLLC",
+   "labelEn": "5G NR URLLC reliability latency bound",
+   "conditionsFr": "Probabilité de succès de 1-10^-5 pour un paquet de 32 octets transmis en une fois avec une latence plan usager de 1 ms.",
+   "conditionsEn": "Success probability 1-10^-5 for one transmission of a 32-byte packet with a 1 ms user-plane latency.",
+   "notes": ""
+  },
+  {
+   "id": "nr-embb-user-plane-latency-target",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.etsi.org/deliver/etsi_tr/138900_138999/138913/17.00.00_60/tr_138913v170000p.pdf",
+   "evidence": "§7.5: 'For eMBB, the target for user plane latency should be 4ms for UL, and 4ms for DL.'",
+   "fix": null,
+   "labelFr": "Objectif de latence plan usager 5G NR eMBB",
+   "labelEn": "5G NR eMBB user-plane latency target",
+   "conditionsFr": "Objectif de conception, 4 ms en montant et en descendant, même définition qu'en 7.5.",
+   "conditionsEn": "Design target, 4 ms each for UL and DL, same definition as 7.5.",
+   "notes": ""
+  },
+  {
+   "id": "ntn-geo-user-plane-rtt-target",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.etsi.org/deliver/etsi_tr/138900_138999/138913/17.00.00_60/tr_138913v170000p.pdf",
+   "evidence": "§7.5: 'the target for user plane RTT can be as high as 600ms for GEO satellite systems, up to 180ms for MEO ... and up to 50ms for LEO'.",
+   "fix": null,
+   "labelFr": "Objectif de RTT plan usager par satellite géostationnaire",
+   "labelEn": "Satellite (GEO) user-plane RTT target",
+   "conditionsFr": "Objectif de RTT plan usager pouvant atteindre 600 ms lorsqu'un lien satellite géostationnaire est impliqué.",
+   "conditionsEn": "User-plane RTT target that can be as high as 600 ms when a GEO satellite link is involved.",
+   "notes": ""
+  },
+  {
+   "id": "ntn-leo-user-plane-rtt-target",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.etsi.org/deliver/etsi_tr/138900_138999/138913/17.00.00_60/tr_138913v170000p.pdf",
+   "evidence": "§7.5: '...and up to 50ms for LEO satellite systems.'",
+   "fix": null,
+   "labelFr": "Objectif de RTT plan usager par satellite en orbite basse",
+   "labelEn": "Satellite (LEO) user-plane RTT target",
+   "conditionsFr": "Objectif de RTT plan usager allant jusqu'à 50 ms pour les systèmes satellites en orbite basse.",
+   "conditionsEn": "User-plane RTT target of up to 50 ms for LEO satellite systems.",
+   "notes": ""
+  },
+  {
+   "id": "ethernet-min-frame-size",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc2544.txt",
+   "evidence": "§9.1: '64, 128, 256, 512, 1024, 1280, 1518 / These sizes include the maximum and minimum frame sizes permitted by the Ethernet standard'. No frame-field definition (DA to FCS) in RFC 2544.",
+   "fix": {
+    "conditions": "Smallest of the RFC 2544 Ethernet test sizes, which include the minimum frame size permitted by the Ethernet standard; preamble and inter-frame gap counted separately (Appendix B)."
+   },
+   "labelFr": "Taille minimale d'une trame Ethernet",
+   "labelEn": "Minimum Ethernet frame size",
+   "conditionsFr": "Plus petite des tailles d'essai Ethernet de la RFC 2544, qui incluent la taille minimale autorisée par la norme ; préambule et intervalle comptés à part.",
+   "conditionsEn": "Smallest RFC 2544 Ethernet test size, which includes the minimum size permitted by the standard; preamble and gap counted separately.",
+   "notes": "'From destination address to FCS' is not stated in RFC 2544 (IEEE 802.3 not consulted)."
+  },
+  {
+   "id": "ethernet-min-frame-wire-time-1g",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc2544.txt",
+   "evidence": "Appendix B 'Ethernet size: Preamble 64 bits / Frame 8 x N bits / Gap 96 bits'; 64+512+96=672 bits / 1e9 bit/s = 672 ns. Cross-check 10 Mb/s: 14880 pps matches.",
+   "fix": {
+    "conditions": "672 bits (64-bit preamble + 64-byte frame + 96-bit gap, from RFC 2544 Appendix B, a table for 10 Mbit/s Ethernet) at a nominal 1e9 bit/s; the transfer of this structure to 1 Gbit/s was not checked against IEEE 802.3."
+   },
+   "labelFr": "Durée d'occupation du lien par une trame Ethernet minimale à 1 Gbit/s (préambule et intervalle compris)",
+   "labelEn": "Wire time of a minimum Ethernet frame at 1 Gbit/s (with preamble and gap)",
+   "conditionsFr": "672 bits (préambule 64 bits, trame 64 octets, intervalle 96 bits, d'après l'annexe B de la RFC 2544) à un débit nominal de 1 Gbit/s.",
+   "conditionsEn": "672 bits (64-bit preamble, 64-byte frame, 96-bit gap, per RFC 2544 Appendix B) at a nominal 1 Gbit/s.",
+   "notes": "Arithmetic correct. RFC 2544 Appendix B tabulates 10 Mbit/s Ethernet only; the rate is a parameter not from the source. Conditions should carry the caveat now only in confidenceNotes."
+  },
+  {
+   "id": "ethernet-min-frame-wire-time-10g",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc2544.txt",
+   "evidence": "Appendix B 'Ethernet size: Preamble 64 bits / Frame 8 x N bits / Gap 96 bits'; 64+512+96=672 bits / 1e10 bit/s = 67.2 ns. Cross-check 10 Mb/s: 14880 pps matches.",
+   "fix": {
+    "conditions": "672 bits (64-bit preamble + 64-byte frame + 96-bit gap, from RFC 2544 Appendix B, a table for 10 Mbit/s Ethernet) at a nominal 1e10 bit/s; the transfer of this structure to 10 Gbit/s was not checked against IEEE 802.3."
+   },
+   "labelFr": "Durée d'occupation du lien par une trame Ethernet minimale à 10 Gbit/s (préambule et intervalle compris)",
+   "labelEn": "Wire time of a minimum Ethernet frame at 10 Gbit/s (with preamble and gap)",
+   "conditionsFr": "672 bits (préambule 64 bits, trame 64 octets, intervalle 96 bits, d'après l'annexe B de la RFC 2544) à un débit nominal de 10 Gbit/s.",
+   "conditionsEn": "672 bits (64-bit preamble, 64-byte frame, 96-bit gap, per RFC 2544 Appendix B) at a nominal 10 Gbit/s.",
+   "notes": "Arithmetic correct. RFC 2544 Appendix B tabulates 10 Mbit/s Ethernet only; the rate is a parameter not from the source. Conditions should carry the caveat now only in confidenceNotes."
+  },
+  {
+   "id": "ethernet-min-frame-wire-time-100g",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.rfc-editor.org/rfc/rfc2544.txt",
+   "evidence": "Appendix B 'Ethernet size: Preamble 64 bits / Frame 8 x N bits / Gap 96 bits'; 64+512+96=672 bits / 1e11 bit/s = 6.72 ns. Cross-check 10 Mb/s: 14880 pps matches.",
+   "fix": {
+    "conditions": "672 bits (64-bit preamble + 64-byte frame + 96-bit gap, from RFC 2544 Appendix B, a table for 10 Mbit/s Ethernet) at a nominal 1e11 bit/s; the transfer of this structure to 100 Gbit/s was not checked against IEEE 802.3."
+   },
+   "labelFr": "Durée d'occupation du lien par une trame Ethernet minimale à 100 Gbit/s (préambule et intervalle compris)",
+   "labelEn": "Wire time of a minimum Ethernet frame at 100 Gbit/s (with preamble and gap)",
+   "conditionsFr": "672 bits (préambule 64 bits, trame 64 octets, intervalle 96 bits, d'après l'annexe B de la RFC 2544) à un débit nominal de 100 Gbit/s.",
+   "conditionsEn": "672 bits (64-bit preamble, 64-byte frame, 96-bit gap, per RFC 2544 Appendix B) at a nominal 100 Gbit/s.",
+   "notes": "Arithmetic correct. RFC 2544 Appendix B tabulates 10 Mbit/s Ethernet only; the rate is a parameter not from the source. Conditions should carry the caveat now only in confidenceNotes."
+  },
+  {
+   "id": "azure-rtt-eastus-westeurope",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://learn.microsoft.com/en-us/azure/networking/azure-network-latency",
+   "evidence": "Western Europe tab, row East US: 90|88|84|81|98|90|83, West Europe column = 83. East US tab, row West Europe -> East US = 85. Dataset July 30, 2026, P50, 1-minute intervals.",
+   "fix": {
+    "conditions": "P50 round-trip time of probe measurements collected in 1-minute intervals on the Azure backbone, 30-day window ending 2026-07-30; source East US, destination West Europe. Reverse direction listed as 85 ms."
+   },
+   "labelFr": "RTT médian Azure East US vers West Europe (transatlantique)",
+   "labelEn": "Median RTT Azure East US to West Europe (transatlantic)",
+   "conditionsFr": "RTT médian (P50) mesuré par sondes sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de East US vers West Europe (85 ms en sens inverse).",
+   "conditionsEn": "Median (P50) RTT from probes on the Azure backbone, 30-day window ending 30 July 2026; East US to West Europe (85 ms in reverse).",
+   "notes": "'Virginia' and 'Netherlands' are not stated on the page."
+  },
+  {
+   "id": "azure-rtt-eastus-westus",
+   "verdict": "confirmed",
+   "checkedUrl": "https://learn.microsoft.com/en-us/azure/networking/azure-network-latency",
+   "evidence": "West US tab, row East US: 52|69|71|58; columns West Central US, West US, West US 2, West US 3 -> West US = 69.",
+   "fix": null,
+   "labelFr": "RTT médian Azure East US vers West US (transcontinental)",
+   "labelEn": "Median RTT Azure East US to West US (transcontinental)",
+   "conditionsFr": "RTT médian (P50) sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de East US vers West US.",
+   "conditionsEn": "Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; East US to West US.",
+   "notes": ""
+  },
+  {
+   "id": "azure-rtt-westeurope-francecentral",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://learn.microsoft.com/en-us/azure/networking/azure-network-latency",
+   "evidence": "Western Europe tab, row West Europe: 8|13|22|27|17|20|(blank); France Central column = 13.",
+   "fix": {
+    "conditions": "P50, 30-day window ending 2026-07-30; Azure backbone; source West Europe, destination France Central."
+   },
+   "labelFr": "RTT médian Azure West Europe vers France Central",
+   "labelEn": "Median RTT Azure West Europe to France Central",
+   "conditionsFr": "RTT médian (P50) sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de West Europe vers France Central.",
+   "conditionsEn": "Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; West Europe to France Central.",
+   "notes": "'Amsterdam area to Paris area' not stated on the page."
+  },
+  {
+   "id": "azure-rtt-eastus-australiaeast",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://learn.microsoft.com/en-us/azure/networking/azure-network-latency",
+   "evidence": "Australasia tab, row East US: 200|200|201|212|183; Australia East column = 201.",
+   "fix": {
+    "conditions": "P50, 30-day window ending 2026-07-30; Azure backbone; source East US, destination Australia East."
+   },
+   "labelFr": "RTT médian Azure East US vers Australia East",
+   "labelEn": "Median RTT Azure East US to Australia East",
+   "conditionsFr": "RTT médian (P50) sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de East US vers Australia East.",
+   "conditionsEn": "Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; East US to Australia East.",
+   "notes": "'Virginia to New South Wales' not stated on the page."
+  },
+  {
+   "id": "human-simple-visual-reaction-time",
+   "verdict": "confirmed",
+   "checkedUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4374455",
+   "evidence": "Abstract: 'community sample of 1469 subjects ranging in age from 18 to 65. Mean SRT latencies were short (231, 213 ms when corrected for hardware delays)'; hardware delays 'averaged 17.8 ms'.",
+   "fix": null,
+   "labelFr": "Temps de réaction simple visuel (moyenne, corrigée des délais matériels)",
+   "labelEn": "Simple visual reaction time (mean, hardware-corrected)",
+   "conditionsFr": "Échantillon de 1 469 adultes de 18 à 65 ans ; stimuli visuels latéralisés, réponse à la souris avec l'index dominant ; 231 ms brut, 213 ms après correction des délais matériels (17,8 ms).",
+   "conditionsEn": "Sample of 1,469 adults aged 18-65; lateralised visual stimuli, mouse press with dominant index finger; 231 ms raw, 213 ms corrected for hardware delays (17.8 ms).",
+   "notes": ""
+  },
+  {
+   "id": "human-stimulus-detection-time",
+   "verdict": "confirmed",
+   "checkedUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4374455",
+   "evidence": "Abstract: 'SDT was estimated by subtracting movement initiation time, measured in a speeded finger tapping test, from SRTs. SDT latencies averaged 131 ms and were unaffected by age.'",
+   "fix": null,
+   "labelFr": "Temps de détection d'un stimulus visuel (TR simple moins initiation du mouvement)",
+   "labelEn": "Visual stimulus detection time (SRT minus movement initiation)",
+   "conditionsFr": "Même échantillon ; estimé en soustrayant du temps de réaction le temps d'initiation du mouvement mesuré par un test de tapotement.",
+   "conditionsEn": "Same sample; estimated by subtracting finger-tapping movement-initiation time from SRT.",
+   "notes": "Derived quantity from measured data; 'measured' acceptable given the conditions disclose the subtraction."
+  },
+  {
+   "id": "human-voluntary-blink-duration",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4043155",
+   "evidence": "Text: 'one voluntary blink took 572 ± 25 ms'; 25 volunteers (11 M, 14 F), aged 25-63, mean 35; 600 fps. Table 1 caption: 'our values are mean ± s.e.'; 572 itself is not a Table 1 cell.",
+   "fix": {
+    "conditions": "Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 M, 14 F), aged 25-63 (mean 35); high-speed video at 600 fps. Reported as 572 ± 25 ms (the text does not name the dispersion measure; Table 1 values are mean ± s.e.). Closing phase 76 ± 2 ms, closed phase 58 ± 4 ms."
+   },
+   "labelFr": "Durée d'un clignement volontaire des yeux",
+   "labelEn": "Duration of a voluntary eye blink",
+   "conditionsFr": "Clignements volontaires (non spontanés) ; 25 volontaires sains (11 hommes, 14 femmes) de 25 à 63 ans ; vidéo rapide à 600 images/s.",
+   "conditionsEn": "Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 men, 14 women) aged 25-63; high-speed video at 600 fps.",
+   "notes": "Read via WebFetch (PMC HTML; curl got a reCAPTCHA page). Values confirmed; only the s.e. attribution of ±25 is an inference."
+  },
+  {
+   "id": "human-voluntary-blink-closing-phase",
+   "verdict": "confirmed",
+   "checkedUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4043155",
+   "evidence": "Table 1, row 'This study (2013), 600 fps, n=25', closing-phase duration '76 ± 2'; caption: 'our values are mean ± s.e.'.",
+   "fix": null,
+   "labelFr": "Phase de fermeture d'un clignement volontaire",
+   "labelEn": "Closing phase of a voluntary blink",
+   "conditionsFr": "Même étude : 25 volontaires, 600 images/s ; moyenne ± 2 ms (erreur type).",
+   "conditionsEn": "Same study: 25 volunteers, 600 fps; mean ± 2 ms (s.e.).",
+   "notes": "Quote is a table-cell reconstruction, as disclosed."
+  },
+  {
+   "id": "human-flicker-fusion-uniform",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4314649/fullTextXML",
+   "evidence": "'When the modulated light source is spatially uniform, we obtain a contrast sensitivity curve that matches ... Sensitivity drops to zero near 65 Hz.' Ten subjects; DLP projector.",
+   "fix": null,
+   "labelFr": "Limite de fusion du papillotement en lumière uniforme",
+   "labelEn": "Flicker fusion limit for uniform light",
+   "conditionsFr": "Lumière modulée spatialement uniforme ; 10 sujets ; projecteur DLP ; la sensibilité tombe à zéro vers 65 Hz.",
+   "conditionsEn": "Spatially uniform modulated light; 10 subjects; DLP projector; sensitivity drops to zero near 65 Hz.",
+   "notes": "Read via Europe PMC full-text XML (official equivalent of the PMC article; PMC HTML returned reCAPTCHA to curl)."
+  },
+  {
+   "id": "human-flicker-artifact-edge-median",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4314649/fullTextXML",
+   "evidence": "'when the modulated light source contains a spatial high frequency edge, all viewers saw flicker artifacts over 200 Hz and several viewers reported ... over 800 Hz. For the median viewer, flicker arti",
+   "fix": {
+    "high": null,
+    "conditions": "Modulated light containing a high-spatial-frequency edge; n=10 (aged 20-29, two of them authors); median viewer. All viewers saw artefacts above 200 Hz and several reported them above 800 Hz. The authors hypothesise that eye movements across the edge are responsible."
+   },
+   "labelFr": "Visibilité des artefacts de papillotement avec un bord net (observateur médian)",
+   "labelEn": "Flicker artefact visibility with a spatial edge (median viewer)",
+   "conditionsFr": "Lumière modulée comportant un bord net ; 10 sujets dont deux auteurs ; observateur médian ; plusieurs sujets voient encore des artefacts au-delà de 800 Hz.",
+   "conditionsEn": "Modulated light with a sharp spatial edge; 10 subjects including two authors; median viewer; several subjects still saw artefacts above 800 Hz.",
+   "notes": "high=800 is not an upper bound of a range (some viewers exceed it): set high to null. Eye-movement mechanism is a hypothesis in the source."
+  },
+  {
+   "id": "human-stylus-latency-jnd-large-box",
+   "verdict": "confirmed",
+   "checkedUrl": "https://webdocs.cs.ualberta.ca/~wfb/publications/C-2014-SIGCHI-Latency.pdf",
+   "evidence": "Fig. 9 caption: 'Results ranged from 2 to 16 milliseconds, with a median latency of 6 milliseconds.' 'Sixteen naïve individuals (4 female) ... (M = 33, range 24-52 years)'; PEST; 1 ms baseline.",
+   "fix": null,
+   "labelFr": "Latence de stylet juste perceptible en glisser (grande boîte, médiane)",
+   "labelEn": "Just-noticeable stylus latency while dragging (large box, median)",
+   "conditionsFr": "16 adultes naïfs (24-52 ans) ; système de stylet à 1 ms de latence de base ; seuil par procédure adaptative PEST ; glisser avec une grande boîte (20 × 20 mm) autour de la pointe.",
+   "conditionsEn": "16 naive adults (24-52 y); stylus system with 1 ms baseline latency; threshold by PEST adaptive procedure; dragging with a large (20 × 20 mm) box around the nib.",
+   "notes": "Range inconsistency between text and captions confirmed as described."
+  },
+  {
+   "id": "human-stylus-latency-jnd-small-box",
+   "verdict": "confirmed",
+   "checkedUrl": "https://webdocs.cs.ualberta.ca/~wfb/publications/C-2014-SIGCHI-Latency.pdf",
+   "evidence": "Fig. 10 caption: 'Results ranged from 2 to 7 milliseconds, with a median latency of 2 milliseconds.' Abstract: '~1 versus 2 milliseconds while dragging'.",
+   "fix": null,
+   "labelFr": "Latence de stylet juste perceptible en glisser (petite boîte, médiane)",
+   "labelEn": "Just-noticeable stylus latency while dragging (small box, median)",
+   "conditionsFr": "Même étude, 16 participants ; petite boîte (6,25 × 6,25 mm) autour de la pointe ; latence de base 1 ms.",
+   "conditionsEn": "Same study, 16 participants; small (6.25 × 6.25 mm) box around the nib; 1 ms baseline.",
+   "notes": ""
+  },
+  {
+   "id": "human-stylus-latency-jnd-scribbling",
+   "verdict": "confirmed",
+   "checkedUrl": "https://webdocs.cs.ualberta.ca/~wfb/publications/C-2014-SIGCHI-Latency.pdf",
+   "evidence": "'participants were able to discriminate between the 7millisecond baseline latency and a median of 40 milliseconds (Figure 11; range 10 - 70 milliseconds)'.",
+   "fix": null,
+   "labelFr": "Latence de stylet juste perceptible en gribouillage (médiane)",
+   "labelEn": "Just-noticeable stylus latency while scribbling (median)",
+   "conditionsFr": "Même étude, 16 participants ; tâche de gribouillage avec une latence de base de 7 ms.",
+   "conditionsEn": "Same study, 16 participants; scribbling task with a 7 ms baseline latency.",
+   "notes": ""
+  }
+ ]
+}

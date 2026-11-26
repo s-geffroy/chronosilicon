@@ -886,8 +886,8 @@
       "domain": "distributed",
       "quantityKind": "duration",
       "label": {
-        "fr": "Latence MPI aller simple, 8 octets, LANL Crossroads (osu_latency)",
-        "en": "MPI ping-pong latency, 8 bytes, LANL Crossroads (osu_latency)"
+        "fr": "Latence MPI point à point, 8 octets, LANL Crossroads (osu_latency)",
+        "en": "MPI point-to-point latency, 8 bytes, LANL Crossroads (osu_latency)"
       },
       "description": null
     },
@@ -916,8 +916,8 @@
       "domain": "interconnect",
       "quantityKind": "throughput",
       "label": {
-        "fr": "Bande passante totale PCIe 5.0 x16 (deux sens)",
-        "en": "PCIe 5.0 x16 total bandwidth (both directions)"
+        "fr": "Bande passante PCIe 5.0 x16 (maximum annoncé, deux sens déduits)",
+        "en": "PCIe 5.0 x16 bandwidth (up to, both directions inferred)"
       },
       "description": null
     },
@@ -936,8 +936,8 @@
       "domain": "interconnect",
       "quantityKind": "throughput",
       "label": {
-        "fr": "Bande passante totale PCIe 6.0 x16 (deux sens)",
-        "en": "PCIe 6.0 x16 total bandwidth (both directions)"
+        "fr": "Bande passante PCIe 6.0 x16 (maximum annoncé)",
+        "en": "PCIe 6.0 x16 bandwidth (up to)"
       },
       "description": null
     },
@@ -1296,8 +1296,8 @@
       "domain": "storage",
       "quantityKind": "duration",
       "label": {
-        "fr": "Latence moyenne de lecture aléatoire du Samsung 990 PRO à QD1 (dérivée des IOPS)",
-        "en": "Samsung 990 PRO mean 4K random read latency at QD1 (derived from IOPS)"
+        "fr": "Latence moyenne de lecture aléatoire du Samsung 990 PRO à QD1 (dérivée des IOPS, borne inférieure)",
+        "en": "Samsung 990 PRO mean random read latency at QD1 (derived from IOPS, lower bound)"
       },
       "description": null
     },

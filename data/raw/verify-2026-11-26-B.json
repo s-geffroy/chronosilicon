@@ -1,0 +1,589 @@
+{
+ "verifiedFile": "m00-2026-11-26-B_cpu_memory_os_hpc.json",
+ "verifiedAt": "2026-11-26",
+ "verdicts": [
+  {
+   "id": "intel-skylake-client-l1d-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930021/248966-051-optimization-reference-manual-vol1.pdf",
+   "evidence": "Table 2-16 p. 2-36 : First Level Data 32 KB/8, 64 B, Fastest Latency 4 cycle ; note 1 : latence visible variable.",
+   "fix": null,
+   "labelFr": "Latence la plus courte du cache de données L1, Intel Skylake (client)",
+   "labelEn": "L1 data cache fastest latency, Intel Skylake client",
+   "conditionsFr": "Microarchitecture Skylake client, L1D de 32 Ko à 8 voies ; latence la plus courte ; la latence visible par le logiciel varie selon les accès.",
+   "conditionsEn": "Skylake client microarchitecture, 32 KB 8-way L1D; fastest latency; software-visible latency varies with access patterns.",
+   "notes": ""
+  },
+  {
+   "id": "intel-skylake-client-l2-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930021/248966-051-optimization-reference-manual-vol1.pdf",
+   "evidence": "Table 2-16 p. 2-36 : Second Level 256KB/4, 64, 12 cycle.",
+   "fix": null,
+   "labelFr": "Latence la plus courte du cache L2, Intel Skylake (client)",
+   "labelEn": "L2 cache fastest latency, Intel Skylake client",
+   "conditionsFr": "Skylake client, L2 de 256 Ko à 4 voies ; latence la plus courte.",
+   "conditionsEn": "Skylake client, 256 KB 4-way L2; fastest latency.",
+   "notes": ""
+  },
+  {
+   "id": "intel-skylake-client-l3-latency",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930021/248966-051-optimization-reference-manual-vol1.pdf",
+   "evidence": "Table 2-16 p. 2-36 : Third Level (Shared L3), Up to 2MB per core/Up to 16 ways, 64, 44. Note 1 seule : latence variable selon accès ; pas de mention du ratio cœur/uncore.",
+   "fix": {
+    "conditions": "Skylake client, shared L3 up to 2 MB per core / up to 16 ways; fastest latency; software-visible latency varies with access patterns and other factors (note 1)"
+   },
+   "labelFr": "Latence la plus courte du cache L3 partagé, Intel Skylake (client)",
+   "labelEn": "Shared L3 cache fastest latency, Intel Skylake client",
+   "conditionsFr": "Skylake client, L3 partagé jusqu'à 2 Mo par cœur et 16 voies ; latence la plus courte, en cycles cœur ; la latence visible varie selon les accès.",
+   "conditionsEn": "Skylake client, shared L3 up to 2 MB per core and up to 16 ways; fastest latency, in core cycles; software-visible latency varies with access patterns.",
+   "notes": "La mention 'L3 latency depends on core/uncore clock ratio' vient de la note de la table Haswell (vol. 2), pas de la table Skylake."
+  },
+  {
+   "id": "intel-icelake-client-l1d-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930021/248966-051-optimization-reference-manual-vol1.pdf",
+   "evidence": "Table 2-9 p. 2-21 : First Level (DCU) 48KB/8, 64, 5 ; note 1 latence variable.",
+   "fix": null,
+   "labelFr": "Latence du cache de données L1, Intel Ice Lake (client)",
+   "labelEn": "L1 data cache latency, Intel Ice Lake client",
+   "conditionsFr": "Ice Lake client, DCU de 48 Ko à 8 voies ; la latence visible varie selon les accès.",
+   "conditionsEn": "Ice Lake client, 48 KB 8-way DCU; software-visible latency varies with access patterns.",
+   "notes": ""
+  },
+  {
+   "id": "intel-icelake-client-l2-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930021/248966-051-optimization-reference-manual-vol1.pdf",
+   "evidence": "Table 2-9 p. 2-21 : Second Level (MLC) 512KB/8, 64, 13 ; LLC 'xx' (dépend du nombre de cœurs).",
+   "fix": null,
+   "labelFr": "Latence du cache L2 (MLC), Intel Ice Lake (client)",
+   "labelEn": "L2 (MLC) latency, Intel Ice Lake client",
+   "conditionsFr": "Ice Lake client, MLC de 512 Ko à 8 voies.",
+   "conditionsEn": "Ice Lake client, 512 KB 8-way MLC.",
+   "notes": ""
+  },
+  {
+   "id": "intel-haswell-l3-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930022/356477-051-optimization-reference-manual-vol2.pdf",
+   "evidence": "Vol. 2 Table 1-4 p. 1-5 : Third Level (Shared L3) Varies, 64, ~34 ; note 1 : L3 varie avec le ratio d'horloges cœur/uncore.",
+   "fix": null,
+   "labelFr": "Latence la plus courte du L3 partagé, Intel Haswell",
+   "labelEn": "Shared L3 fastest latency, Intel Haswell",
+   "conditionsFr": "Microarchitecture Haswell ; valeur approximative (~34) ; la latence du L3 varie avec le rapport des horloges cœur et uncore.",
+   "conditionsEn": "Haswell microarchitecture; approximate value (~34); L3 latency varies with the core/uncore clock ratio.",
+   "notes": ""
+  },
+  {
+   "id": "intel-sandybridge-llc-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930022/356477-051-optimization-reference-manual-vol2.pdf",
+   "evidence": "Vol. 2 Table 2-6 p. 2-11 : Third Level (LLC) 26-31 + appel de note 2 ('varies with product segment and sku') ; latences 'best-case'.",
+   "fix": null,
+   "labelFr": "Latence de chargement du cache de dernier niveau (LLC), Intel Sandy Bridge",
+   "labelEn": "LLC load latency, Intel Sandy Bridge",
+   "conditionsFr": "Intel Core de deuxième génération (Sandy Bridge) ; latence dans le meilleur cas, 26 à 31 cycles selon le segment et la référence.",
+   "conditionsEn": "Second-generation Intel Core (Sandy Bridge); best-case latency, 26 to 31 cycles depending on product segment and SKU.",
+   "notes": ""
+  },
+  {
+   "id": "intel-sandybridge-other-core-dirty-hit",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930022/356477-051-optimization-reference-manual-vol2.pdf",
+   "evidence": "Table 2-6 p. 2-11 : 'L2 and L1 DCache in other cores if applicable • 43 - clean hit; • 60 - dirty hit' ; meilleur cas.",
+   "fix": null,
+   "labelFr": "Latence d'un chargement servi par le L1/L2 d'un autre cœur (ligne modifiée), Intel Sandy Bridge",
+   "labelEn": "Load latency from another core's L1/L2 (dirty hit), Intel Sandy Bridge",
+   "conditionsFr": "Sandy Bridge ; ligne modifiée dans le L1/L2 d'un autre cœur (dirty hit) ; 43 cycles pour un clean hit ; meilleur cas.",
+   "conditionsEn": "Sandy Bridge; line modified in another core's L1/L2 (dirty hit); 43 cycles for a clean hit; best case.",
+   "notes": ""
+  },
+  {
+   "id": "intel-xeon5500-local-dram-latency",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930021/248966-051-optimization-reference-manual-vol1.pdf",
+   "evidence": "Vol. 1 Table 22-7 p. 22-23 : 'Local DRAM ~ 50 ns' ; 'examples of the approximate latency values'. Le texte ne précise pas une configuration à deux sockets.",
+   "fix": {
+    "conditions": "Intel Xeon processor 5500 series (Nehalem), L2 miss served by DRAM attached to the local memory controller; approximate example value"
+   },
+   "labelFr": "Latence approximative de la DRAM locale, Intel Xeon 5500 (Nehalem)",
+   "labelEn": "Approximate local DRAM latency, Intel Xeon 5500 (Nehalem)",
+   "conditionsFr": "Intel Xeon 5500 (Nehalem) ; défaut de L2 servi par la DRAM du contrôleur mémoire local ; valeur approximative donnée en exemple.",
+   "conditionsEn": "Intel Xeon 5500 (Nehalem); L2 miss served by DRAM attached to the local memory controller; approximate example value.",
+   "notes": "'two sockets' retiré : non dit par la source."
+  },
+  {
+   "id": "intel-xeon5500-remote-dram-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930021/248966-051-optimization-reference-manual-vol1.pdf",
+   "evidence": "Table 22-7 p. 22-23 : 'Remote DRAM ~ 90 ns'.",
+   "fix": null,
+   "labelFr": "Latence approximative de la DRAM distante (autre socket), Intel Xeon 5500 (Nehalem)",
+   "labelEn": "Approximate remote DRAM latency, Intel Xeon 5500 (Nehalem)",
+   "conditionsFr": "Xeon 5500 ; DRAM rattachée au contrôleur mémoire distant (NUMA) ; valeur approximative.",
+   "conditionsEn": "Xeon 5500; DRAM attached to the remote memory controller (NUMA); approximate value.",
+   "notes": ""
+  },
+  {
+   "id": "intel-xeon5500-l3-hit-exclusive",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930021/248966-051-optimization-reference-manual-vol1.pdf",
+   "evidence": "Table 22-7 p. 22-23 : 'L3 hit, Line exclusive ~ 42 cycles'.",
+   "fix": null,
+   "labelFr": "Latence approximative d'un succès en L3 (ligne exclusive), Intel Xeon 5500",
+   "labelEn": "Approximate L3 hit latency (exclusive line), Intel Xeon 5500",
+   "conditionsFr": "Xeon 5500 (Nehalem) ; défaut de L2 servi par le L3, ligne à l'état exclusif ; valeur approximative.",
+   "conditionsEn": "Xeon 5500 (Nehalem); L2 miss served by L3, line in exclusive state; approximate value.",
+   "notes": ""
+  },
+  {
+   "id": "intel-sandybridge-c6-exit-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930021/248966-051-optimization-reference-manual-vol1.pdf",
+   "evidence": "Table 16-2 p. 16-18 : C6 181 μs (Typical, MSR_POWER_CTL[4]=0) / 104 μs (MSR[4]=1) ; 'estimates derived from empirical measurements', pas des spécifications.",
+   "fix": null,
+   "labelFr": "Latence de sortie de l'état C6 (typique), Intel Sandy Bridge client, régulateur lent",
+   "labelEn": "Package C6 exit latency (typical), Intel Sandy Bridge client, slow VR",
+   "conditionsFr": "Processeurs CPUID 06_2AH (Sandy Bridge client), régulateur lent ; 181 µs avec MSR_POWER_CTL[4]=0, 104 µs avec le mode d'interruption rapide ; estimation Intel.",
+   "conditionsEn": "CPUID 06_2AH processors (Sandy Bridge client), slow VR; 181 µs with MSR_POWER_CTL[4]=0, 104 µs with fast interrupt break mode; Intel estimate.",
+   "notes": "low/high correspondent à deux réglages, pas à une incertitude ; la seconde colonne est intitulée 'Worst Case' par Intel."
+  },
+  {
+   "id": "intel-sandybridge-c1-exit-latency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://cdrdv2-public.intel.com/930021/248966-051-optimization-reference-manual-vol1.pdf",
+   "evidence": "Table 16-2 p. 16-18 : C1 1 μs dans les deux colonnes ; 'Intel estimates only'.",
+   "fix": null,
+   "labelFr": "Latence de sortie de l'état C1, Intel Sandy Bridge client",
+   "labelEn": "C1 exit latency, Intel Sandy Bridge client",
+   "conditionsFr": "CPUID 06_2AH, régulateur lent, pour les deux réglages de MSR_POWER_CTL[4] ; estimation Intel.",
+   "conditionsEn": "CPUID 06_2AH, slow VR, both MSR_POWER_CTL[4] settings; Intel estimate.",
+   "notes": ""
+  },
+  {
+   "id": "amd-zen4-l1d-load-to-use",
+   "verdict": "confirmed",
+   "checkedUrl": "https://kib.kiev.ua/x86docs/AMD/Optimization/57647_1.00_Software%20Optimization%20Guide%20for%20the%20AMD%20Zen4%20Microarchitecture.zip",
+   "evidence": "§2.6.2 (PDF p. 16) : '4- or 5- cycle integer load-to-use latency, and a 7- or 8-cycle FPU'; §2.12 : 4 cycles modes simples, 5 complexes.",
+   "fix": null,
+   "labelFr": "Latence load-to-use entière du cache L1D, AMD Zen 4",
+   "labelEn": "L1D integer load-to-use latency, AMD Zen 4",
+   "conditionsFr": "AMD Zen 4, L1D de 32 Ko à 8 voies ; 4 cycles en adressage simple, 5 en adressage complexe ; 7 à 8 cycles pour la FPU.",
+   "conditionsEn": "AMD Zen 4, 32 KB 8-way L1D; 4 cycles for simple addressing modes, 5 for complex ones; 7-8 cycles for the FPU.",
+   "notes": "URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 57647_1.00.pdf (même publication et révision que la source déclarée)."
+  },
+  {
+   "id": "amd-zen4-l2-load-to-use",
+   "verdict": "confirmed",
+   "checkedUrl": "https://kib.kiev.ua/x86docs/AMD/Optimization/57647_1.00_Software%20Optimization%20Guide%20for%20the%20AMD%20Zen4%20Microarchitecture.zip",
+   "evidence": "§2.6.3 p. 18 : L2 8-way 1 Mbyte (some 512 Kbytes) 'with a variable load-to-use latency of no less than 14 cycles'.",
+   "fix": null,
+   "labelFr": "Latence load-to-use minimale du cache L2, AMD Zen 4",
+   "labelEn": "L2 load-to-use latency (minimum), AMD Zen 4",
+   "conditionsFr": "AMD Zen 4, L2 de 1 Mo à 8 voies par cœur (512 Ko sur certaines configurations) ; au moins 14 cycles.",
+   "conditionsEn": "AMD Zen 4, 1 MB 8-way L2 per core (512 KB on some configurations); no less than 14 cycles.",
+   "notes": "URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 57647_1.00.pdf (même publication et révision que la source déclarée)."
+  },
+  {
+   "id": "amd-zen4-l3-load-to-use",
+   "verdict": "confirmed",
+   "checkedUrl": "https://kib.kiev.ua/x86docs/AMD/Optimization/57647_1.00_Software%20Optimization%20Guide%20for%20the%20AMD%20Zen4%20Microarchitecture.zip",
+   "evidence": "§2.6.4 p. 18 : L3 jusqu'à 32 Mo, 16 voies, 8 cœurs par CCX ; 'average load-to-use latency of 50 cycles' ; §2.12 : 'may vary by product'.",
+   "fix": null,
+   "labelFr": "Latence load-to-use moyenne du cache L3, AMD Zen 4",
+   "labelEn": "L3 average load-to-use latency, AMD Zen 4",
+   "conditionsFr": "AMD Zen 4, L3 jusqu'à 32 Mo partagé par 8 cœurs (CCX) ; moyenne annoncée par AMD sans méthode ; peut varier selon le produit.",
+   "conditionsEn": "AMD Zen 4, up to 32 MB L3 shared by 8 cores (CCX); AMD-stated average with no method; may vary by product.",
+   "notes": "URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 57647_1.00.pdf (même publication et révision que la source déclarée)."
+  },
+  {
+   "id": "amd-zen5-l1d-load-to-use",
+   "verdict": "confirmed",
+   "checkedUrl": "https://kib.kiev.ua/x86docs/AMD/Optimization/58455_1.00_Software%20Optimization%20Guide%20for%20the%20AMD%20Zen5%20Microarchitecture.zip",
+   "evidence": "§2.6.2 p. 20 : 48-Kbyte 12-way L1D ; '4- or 5- cycle integer load-to-use latency, and a 7- or 8-cycle FPU'.",
+   "fix": null,
+   "labelFr": "Latence load-to-use entière du cache L1D, AMD Zen 5",
+   "labelEn": "L1D integer load-to-use latency, AMD Zen 5",
+   "conditionsFr": "AMD Zen 5, L1D de 48 Ko à 12 voies ; 4 ou 5 cycles en entier, 7 ou 8 cycles pour la FPU.",
+   "conditionsEn": "AMD Zen 5, 48 KB 12-way L1D; 4 or 5 cycles integer, 7 or 8 cycles FPU.",
+   "notes": "URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 58455_1.00.pdf (même publication et révision que la source déclarée)."
+  },
+  {
+   "id": "amd-zen5-l2-load-to-use",
+   "verdict": "confirmed",
+   "checkedUrl": "https://kib.kiev.ua/x86docs/AMD/Optimization/58455_1.00_Software%20Optimization%20Guide%20for%20the%20AMD%20Zen5%20Microarchitecture.zip",
+   "evidence": "§2.6.3 p. 23 : unified 16-way L2, '1 Mbyte with a variable load-to-use latency of no less than 14 cycles'.",
+   "fix": null,
+   "labelFr": "Latence load-to-use minimale du cache L2, AMD Zen 5",
+   "labelEn": "L2 load-to-use latency (minimum), AMD Zen 5",
+   "conditionsFr": "AMD Zen 5, L2 de 1 Mo à 16 voies par cœur ; au moins 14 cycles.",
+   "conditionsEn": "AMD Zen 5, 1 MB 16-way L2 per core; no less than 14 cycles.",
+   "notes": "URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 58455_1.00.pdf (même publication et révision que la source déclarée)."
+  },
+  {
+   "id": "amd-zen5-l3-load-to-use",
+   "verdict": "confirmed",
+   "checkedUrl": "https://kib.kiev.ua/x86docs/AMD/Optimization/58455_1.00_Software%20Optimization%20Guide%20for%20the%20AMD%20Zen5%20Microarchitecture.zip",
+   "evidence": "§2.6.4 p. 23 : L3 jusqu'à 96 Mo selon le SoC, partagé dans le CCX ; 'average load-to-use latency of 46 cycles' ; 'may vary by product'.",
+   "fix": null,
+   "labelFr": "Latence load-to-use moyenne du cache L3, AMD Zen 5",
+   "labelEn": "L3 average load-to-use latency, AMD Zen 5",
+   "conditionsFr": "AMD Zen 5, L3 jusqu'à 96 Mo selon le SoC, partagé dans un CCX ; moyenne sans méthode ; peut varier selon le produit.",
+   "conditionsEn": "AMD Zen 5, L3 up to 96 MB depending on SoC, shared within a CCX; average with no method; may vary by product.",
+   "notes": "URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 58455_1.00.pdf (même publication et révision que la source déclarée)."
+  },
+  {
+   "id": "x86-add-r64-latency-alderlake-p",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://uops.info/html-instr/",
+   "evidence": "ADD_01_R64_R64.html, section ADL-P 'Alder Lake-P' : Latency operand 1 → 1: 1 ; Measured (loop) 0.20.",
+   "fix": {
+    "conditions": "Alder Lake-P; register-register operand form; measured throughput 0.20 cycles/instr"
+   },
+   "labelFr": "Latence de ADD r64,r64, Intel Alder Lake-P",
+   "labelEn": "ADD r64,r64 latency, Intel Alder Lake-P",
+   "conditionsFr": "Alder Lake-P ; forme registre-registre ; débit mesuré de 0,20 cycle par instruction.",
+   "conditionsEn": "Alder Lake-P; register-register form; measured throughput 0.20 cycles per instruction.",
+   "notes": "'Golden Cove P-core' retiré : la page ne nomme pas le cœur."
+  },
+  {
+   "id": "x86-imul-r64-latency-alderlake-p",
+   "verdict": "confirmed",
+   "checkedUrl": "https://uops.info/html-instr/",
+   "evidence": "IMUL_R64_R64.html, ADL-P : Latency operand 1 → 1: 3 ; débit 1.00 ; SKL, ZEN4, ZEN5 aussi 3 ; Zen4 SOG §2.10 '3 cycle latency' vérifié.",
+   "fix": null,
+   "labelFr": "Latence de IMUL r64,r64, Intel Alder Lake-P",
+   "labelEn": "IMUL r64,r64 latency, Intel Alder Lake-P",
+   "conditionsFr": "Alder Lake-P ; multiplication 64 bits à deux opérandes registres ; débit 1,00.",
+   "conditionsEn": "Alder Lake-P; 64-bit two-operand register multiply; throughput 1.00.",
+   "notes": ""
+  },
+  {
+   "id": "x86-div-r64-latency-alderlake-p",
+   "verdict": "confirmed",
+   "checkedUrl": "https://uops.info/html-instr/",
+   "evidence": "DIV_R64.html, ADL-P : 1→2: 14, 1→3: 18, 2→2: 14, 2→3: 18, 3→2: 18, 3→3: 18 ; Measured (loop) 10.00.",
+   "fix": null,
+   "labelFr": "Latence de DIV r64 (division 64 bits non signée), Intel Alder Lake-P",
+   "labelEn": "DIV r64 latency, Intel Alder Lake-P",
+   "conditionsFr": "Alder Lake-P ; division non signée 128/64 bits ; 14 à 18 cycles selon le couple opérande-résultat ; débit mesuré de 10 cycles.",
+   "conditionsEn": "Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand-result pair; measured throughput 10 cycles.",
+   "notes": ""
+  },
+  {
+   "id": "x86-div-r64-latency-skylake",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://uops.info/html-instr/",
+   "evidence": "DIV_R64.html, SKL : 1→2: 35≤lat≤90 ; 1→3: 34-88 ; 2→2 et 2→3: 32-87 ; 3→2: 5-75 ; 3→3: 5-73 ; MS 32.",
+   "fix": {
+    "conditions": "Skylake; latency depends on operand values (bounds measured: operand 1→2 '35 ≤ lat ≤ 90'; operand 1→3 34-88; operand 2 pairs 32-87; operand 3: 5-75); microcoded (32 MS uops)"
+   },
+   "labelFr": "Latence de DIV r64, Intel Skylake",
+   "labelEn": "DIV r64 latency, Intel Skylake",
+   "conditionsFr": "Skylake ; latence dépendant des valeurs des opérandes : 35 à 90 cycles pour l'opérande 1 vers 2, 32 à 88 pour les autres couples des opérandes 1 et 2, 5 à 75 pour l'opérande 3 ; microcodée (32 µops MS).",
+   "conditionsEn": "Skylake; latency depends on operand values: 35-90 cycles for operand 1→2, 32-88 for the other operand 1/2 pairs, 5-75 for operand 3; microcoded (32 MS uops).",
+   "notes": "'other pairs 32-87' inexact (1→3 vaut 34-88). low=32 exclut l'opérande 3 (5-75) ; le dire explicitement."
+  },
+  {
+   "id": "x86-div-r64-latency-zen4",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.agner.org/optimize/instruction_tables.pdf",
+   "evidence": "Agner p. 127, AMD Zen 4 : 'DIV r64/m64 2 10-18 7-12'. uops.info ZEN4 : bornes 9 à 19. Zen4 SOG : 8 cycles + 1 par 9 bits de quotient.",
+   "fix": null,
+   "labelFr": "Latence de DIV r64, AMD Zen 4",
+   "labelEn": "DIV r64 latency, AMD Zen 4",
+   "conditionsFr": "AMD Zen 4 ; dépend des valeurs des opérandes ; 10 à 18 cycles (Agner Fog), 9 à 19 selon uops.info ; AMD : 8 cycles plus 1 par tranche de 9 bits de quotient.",
+   "conditionsEn": "AMD Zen 4; depends on operand values; 10-18 cycles (Agner Fog), 9-19 per uops.info; AMD: 8 cycles plus 1 per 9 bits of quotient.",
+   "notes": ""
+  },
+  {
+   "id": "intel-core-i9-14900k-max-turbo",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.intel.com/content/www/us/en/products/sku/236773/intel-core-i9-processor-14900k-36m-cache-up-to-6-00-ghz/specifications.html",
+   "evidence": "ARK (WebFetch ; curl refusé 403) : Max Turbo Frequency 6 GHz ; P-core Max Turbo 5.6 GHz ; 24 cœurs ; Q4'23 ; Intel 7 ; 'Products formerly Raptor Lake'.",
+   "fix": {
+    "conditions": "Core i9-14900K (code name 'Products formerly Raptor Lake', Intel 7, 24 cores), launched Q4'23; 'Max Turbo Frequency'"
+   },
+   "labelFr": "Fréquence turbo maximale, Intel Core i9-14900K",
+   "labelEn": "Max turbo frequency, Intel Core i9-14900K",
+   "conditionsFr": "Core i9-14900K (famille Raptor Lake, Intel 7, 24 cœurs), lancé au 4e trimestre 2023 ; fréquence turbo maximale annoncée.",
+   "conditionsEn": "Core i9-14900K (Raptor Lake family, Intel 7, 24 cores), launched Q4'23; vendor Max Turbo Frequency.",
+   "notes": "La page dit 'Raptor Lake', pas 'Raptor Lake Refresh' ; '(best cores, favourable conditions)' n'est pas dans la page lue."
+  },
+  {
+   "id": "intel-core-i9-14900k-pcore-base",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.intel.com/content/www/us/en/products/sku/236773/intel-core-i9-processor-14900k-36m-cache-up-to-6-00-ghz/specifications.html",
+   "evidence": "ARK (WebFetch) : 'Performance-core Base Frequency: 3.2 GHz'.",
+   "fix": null,
+   "labelFr": "Fréquence de base des cœurs performance, Intel Core i9-14900K",
+   "labelEn": "Performance-core base frequency, Intel Core i9-14900K",
+   "conditionsFr": "Core i9-14900K, fréquence de base des cœurs performance.",
+   "conditionsEn": "Core i9-14900K, performance-core base frequency.",
+   "notes": ""
+  },
+  {
+   "id": "intel-8086-initial-clock",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.intel.com/content/www/us/en/history/virtual-vault/articles/the-intel-8086.html",
+   "evidence": "Virtual Vault (WebFetch ; curl 403) : 'Introduction date: June 1978', 'Initial Clock Speed: 5 MHz', 'Number of transistors: 29,000', 'Circuit line Width: 3 microns'.",
+   "fix": null,
+   "labelFr": "Fréquence d'horloge initiale de l'Intel 8086",
+   "labelEn": "Initial clock speed, Intel 8086",
+   "conditionsFr": "Intel 8086, lancé en juin 1978, 29 000 transistors, gravure de 3 µm ; fréquence initiale.",
+   "conditionsEn": "Intel 8086, introduced June 1978, 29,000 transistors, 3 µm line width; initial clock speed.",
+   "notes": ""
+  },
+  {
+   "id": "intel-pentium4-launch-clock",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.intel.com/pressroom/archive/releases/2000/dp112000.htm",
+   "evidence": "Communiqué du 20 nov. 2000 (WebFetch ; curl 403) : 'introduced today at 1.5 and 1.4 GHz speeds' ; 0.18-micron ; 400 MHz system bus. Pas de nom 'Willamette'.",
+   "fix": {
+    "conditions": "Pentium 4, 0.18-micron process, 400 MHz system bus; introduced at 1.4 and 1.5 GHz on 20 Nov 2000"
+   },
+   "labelFr": "Fréquence au lancement de l'Intel Pentium 4 (version la plus rapide)",
+   "labelEn": "Launch clock speed, Intel Pentium 4 (top bin)",
+   "conditionsFr": "Pentium 4, gravure de 0,18 µm, bus système à 400 MHz ; lancé à 1,4 et 1,5 GHz le 20 novembre 2000.",
+   "conditionsEn": "Pentium 4, 0.18-micron process, 400 MHz system bus; introduced at 1.4 and 1.5 GHz on 20 Nov 2000.",
+   "notes": "'Willamette' retiré : absent du communiqué."
+  },
+  {
+   "id": "intel-4004-min-clock-period",
+   "verdict": "confirmed",
+   "checkedUrl": "https://pyntel4004.readthedocs.io/en/latest/intro/manual/hardware4004.html",
+   "evidence": "pyntel4004, A.C. Characteristics (TA 0-70 °C, 15 V ± 5 %) : t_CY Clock Period, Min 1.35, Max 2.0, µsec (colonnes HTML vérifiées).",
+   "fix": null,
+   "labelFr": "Période d'horloge minimale (tCY) de l'Intel 4004",
+   "labelEn": "Minimum clock period (tCY), Intel 4004",
+   "conditionsFr": "Intel 4004, caractéristiques AC, TA de 0 à 70 °C, VSS-VDD = 15 V ± 5 % ; tCY entre 1,35 et 2,0 µs (transcription tierce de la fiche).",
+   "conditionsEn": "Intel 4004, A.C. characteristics, TA = 0-70 °C, VSS-VDD = 15 V ± 5%; tCY 1.35 to 2.0 µs (third-party transcription of the datasheet).",
+   "notes": "Vérifié contre la transcription seulement ; fiche Intel originale non lue (copie IEEE Milestones : HTML au lieu du PDF). Source secondaire non citée : garder la mention WEAK."
+  },
+  {
+   "id": "intel-4004-max-clock-frequency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://pyntel4004.readthedocs.io/en/latest/intro/manual/hardware4004.html",
+   "evidence": "Recalcul : 1 / 1,35 µs = 740,74 kHz → 740,7 kHz. Entrée intel-4004-min-clock-period confirmée (source faible).",
+   "fix": null,
+   "labelFr": "Fréquence d'horloge maximale de l'Intel 4004 (déduite de tCY)",
+   "labelEn": "Maximum clock frequency, Intel 4004 (derived from tCY)",
+   "conditionsFr": "Inverse de la période d'horloge minimale tCY ; mêmes conditions que la valeur d'entrée.",
+   "conditionsEn": "Inverse of the minimum clock period tCY; same conditions as the input value.",
+   "notes": "Hérite de la faiblesse de la source d'entrée."
+  },
+  {
+   "id": "ddr5-5600b-taa-micron",
+   "verdict": "confirmed",
+   "checkedUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7969/16gb-ddr5-sdram-dierevd.pdf",
+   "evidence": "Table 2 p. 2 : MT60B2G8RZ-56B:D 2Gb x8, 0.357ns/5600 MT/s, 46-45-45, 16.000 16.000 16.000 ; -64B 52-52-52 et -72B 58-58-58 aussi 16.000.",
+   "fix": null,
+   "labelFr": "Latence CAS tAA, DDR5-5600B (Micron 16 Gb, révision D)",
+   "labelEn": "CAS latency tAA, DDR5-5600B (Micron 16Gb die D)",
+   "conditionsFr": "Micron MT60B2G8RZ-56B:D (DDR5 16 Gb, x8), 5600 MT/s, 46-45-45 ; tRCD et tRP valent aussi 16,000 ns ; même valeur à 6400 et 7200 MT/s.",
+   "conditionsEn": "Micron MT60B2G8RZ-56B:D (16Gb DDR5, x8), 5600 MT/s, 46-45-45; tRCD and tRP also 16.000 ns; same value at 6400 and 7200 MT/s.",
+   "notes": ""
+  },
+  {
+   "id": "ddr4-3200-cl-micron",
+   "verdict": "confirmed",
+   "checkedUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8734/MT40A1G8SA-062E.pdf",
+   "evidence": "Table 1 'Key Timing Parameters' p. 1 : '-062E 3200 22-22-22 13.75 13.75 13.75'.",
+   "fix": null,
+   "labelFr": "Latence CAS (CL en ns), DDR4-3200 -062E (Micron 8 Gb)",
+   "labelEn": "CAS latency (CL in ns), DDR4-3200 -062E (Micron 8Gb)",
+   "conditionsFr": "DDR4 Micron 8 Gb, grade -062E, 3200 MT/s, 22-22-22 ; tRCD et tRP valent aussi 13,75 ns.",
+   "conditionsEn": "Micron 8Gb DDR4, -062E speed grade, 3200 MT/s, 22-22-22; tRCD and tRP also 13.75 ns.",
+   "notes": ""
+  },
+  {
+   "id": "ddr4-trefi-micron",
+   "verdict": "confirmed",
+   "checkedUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8734/MT40A1G8SA-062E.pdf",
+   "evidence": "p. 21 : '8,192 refresh commands within 64ms between 0 oC and 85 oC. This allows for a tREFI of 7.8125μs' ; Table 51 p. 149 : 7.8 μs, /2 entre 85 et 95 °C.",
+   "fix": null,
+   "labelFr": "Intervalle moyen de rafraîchissement tREFI, DDR4 (0 à 85 °C)",
+   "labelEn": "Average refresh interval tREFI, DDR4 (0-85 °C)",
+   "conditionsFr": "DDR4, 8 192 commandes REFRESH par 64 ms entre 0 et 85 °C (mode 1x) ; moitié de cet intervalle entre 85 et 95 °C.",
+   "conditionsEn": "DDR4, 8,192 REFRESH commands per 64 ms between 0 and 85 °C (1x mode); half that interval between 85 and 95 °C.",
+   "notes": ""
+  },
+  {
+   "id": "ddr4-8gb-trfc1-micron",
+   "verdict": "confirmed",
+   "checkedUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8734/MT40A1G8SA-062E.pdf",
+   "evidence": "Table 51 p. 149 : tRFC1 160 / 260 / 350 / 550 ns pour 2Gb / 4Gb / 8Gb / 16Gb.",
+   "fix": null,
+   "labelFr": "Durée d'un cycle de rafraîchissement tRFC1, DDR4 8 Gb",
+   "labelEn": "Refresh cycle time tRFC1, DDR4 8Gb",
+   "conditionsFr": "Puce DDR4 de 8 Gb, mode de rafraîchissement 1x (4 Gb : 260 ns ; 16 Gb : 550 ns).",
+   "conditionsEn": "8Gb DDR4 die, 1x refresh mode (4Gb: 260 ns, 16Gb: 550 ns).",
+   "notes": ""
+  },
+  {
+   "id": "dram-latency-epyc-7702-measured",
+   "verdict": "confirmed",
+   "checkedUrl": "https://arxiv.org/pdf/2204.03290",
+   "evidence": "§6.1 : 'a latency of about 220 cycles (110 ns) for the Rome system' ; Table 2 RAM 110 (220) ; THP always, caches vidés, min de 3 mesures × 4 tailles × 10.",
+   "fix": null,
+   "labelFr": "Latence mesurée de lecture en mémoire principale locale, AMD EPYC 7702 (Rome)",
+   "labelEn": "Measured local main-memory read latency, AMD EPYC 7702 (Rome)",
+   "conditionsFr": "Bi-socket AMD EPYC 7702, CCX local, pointer chasing BenchIT x86-membench, fréquence nominale (2,0 GHz) soit 220 cycles, pages énormes transparentes, caches vidés.",
+   "conditionsEn": "Dual-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal frequency (2.0 GHz) i.e. 220 cycles, transparent huge pages, caches flushed.",
+   "notes": ""
+  },
+  {
+   "id": "dram-latency-xeon-6248-measured",
+   "verdict": "confirmed",
+   "checkedUrl": "https://arxiv.org/pdf/2204.03290",
+   "evidence": "§6.1 : '200 cycles (80 ns) for CLX' ; Table 3 : Same SNC RAM 80 (200), Other SNC 86.4 (216) ; uncore 2400 MHz ; prefetchers désactivés pour la latence sur CLX.",
+   "fix": null,
+   "labelFr": "Latence mesurée de lecture en mémoire principale locale, Intel Xeon Gold 6248 (Cascade Lake)",
+   "labelEn": "Measured local main-memory read latency, Intel Xeon Gold 6248 (Cascade Lake)",
+   "conditionsFr": "Bi-socket Xeon Gold 6248, même SNC, uncore fixé à 2400 MHz, préchargeurs matériels désactivés, pointer chasing BenchIT ; 200 cycles.",
+   "conditionsEn": "Dual-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled, BenchIT pointer chasing; 200 cycles.",
+   "notes": ""
+  },
+  {
+   "id": "dram-latency-pentiumpro-lmbench-1995",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.usenix.org/legacy/publications/library/proceedings/sd96/full_papers/mcvoy.pdf",
+   "evidence": "Table 6 : 'Linux/i686 5 10 8K 30 256K 179' ; Table 1 : Intel Alder, Linux 1.3.37, Pentium Pro 200 ; liste de pointeurs à pas (stride).",
+   "fix": null,
+   "labelFr": "Latence mémoire mesurée, Pentium Pro 200 MHz sous Linux (lmbench, 1995)",
+   "labelEn": "Measured memory latency, Pentium Pro 200 MHz under Linux (lmbench, 1995)",
+   "conditionsFr": "Carte Intel Alder, Pentium Pro 200 MHz, Linux 1.3.37 ; latence de lecture mémoire lmbench (chaîne de chargements à pas fixe).",
+   "conditionsEn": "Intel Alder board, Pentium Pro 200 MHz, Linux 1.3.37; lmbench memory read latency (strided load chain).",
+   "notes": ""
+  },
+  {
+   "id": "apple-m4-memory-bandwidth",
+   "verdict": "confirmed",
+   "checkedUrl": "https://support.apple.com/en-us/121552",
+   "evidence": "Tech Specs > Chip : 'Apple M4 chip 10-core CPU with 4 performance cores and 6 efficiency cores ... 120GB/s memory bandwidth'.",
+   "fix": null,
+   "labelFr": "Bande passante mémoire de l'Apple M4",
+   "labelEn": "Memory bandwidth, Apple M4",
+   "conditionsFr": "Puce Apple M4 (CPU 10 cœurs), MacBook Pro 14 pouces M4 2024 ; valeur constructeur, mémoire unifiée.",
+   "conditionsEn": "Apple M4 chip (10-core CPU), 14-inch MacBook Pro M4 2024; vendor figure, unified memory.",
+   "notes": ""
+  },
+  {
+   "id": "linux-config-hz-default",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://raw.githubusercontent.com/torvalds/linux/master/kernel/Kconfig.hz",
+   "evidence": "kernel/Kconfig.hz (master, Makefile 7.4-rc4) : choice prompt \"Timer frequency\" default HZ_250 ; HZ_100/250/300/1000. time(7) : '100, 250 (the default) or 1000', 300 depuis 2.6.20.",
+   "fix": {
+    "conditions": "Kconfig choices 100, 250 (default), 300 and 1000 Hz"
+   },
+   "labelFr": "Fréquence par défaut de l'interruption d'horloge (CONFIG_HZ), Linux",
+   "labelEn": "Default timer interrupt frequency (CONFIG_HZ), Linux",
+   "conditionsFr": "Choix Kconfig : 100, 250 (par défaut), 300 et 1000 Hz.",
+   "conditionsEn": "Kconfig choices 100, 250 (default), 300 and 1000 Hz.",
+   "notes": "'distributions often change the default' n'est pas dit par la source : je ne l'ai pas repris dans les conditions traduites."
+  },
+  {
+   "id": "linux-tick-period-hz1000",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/torvalds/linux/master/kernel/Kconfig.hz",
+   "evidence": "Recalcul 1/1000 Hz = 1 ms. Kconfig.hz HZ_1000 : '1000 Hz is the preferred choice for desktop systems'. Entrée (option HZ_1000) confirmée.",
+   "fix": null,
+   "labelFr": "Période du tick d'horloge à HZ=1000",
+   "labelEn": "Scheduler tick period at HZ=1000",
+   "conditionsFr": "CONFIG_HZ=1000 (Kconfig : choix privilégié pour les postes de travail).",
+   "conditionsEn": "CONFIG_HZ=1000 (Kconfig: preferred choice for desktop systems).",
+   "notes": ""
+  },
+  {
+   "id": "linux-eevdf-base-slice-v6-12",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/torvalds/linux/v6.12/kernel/sched/fair.c",
+   "evidence": "fair.c v6.12 l. 73-76 : '(default: 0.75 msec * (1 + ilog(ncpus)), units: nanoseconds)' ; sysctl_sched_base_slice = 750000ULL.",
+   "fix": null,
+   "labelFr": "Tranche de temps de base par défaut de l'ordonnanceur EEVDF, Linux 6.12",
+   "labelEn": "EEVDF base time slice default, Linux 6.12",
+   "conditionsFr": "sysctl_sched_base_slice = 750 000 ns avant mise à l'échelle ; valeur effective 0,75 ms × (1 + ilog(ncpus)).",
+   "conditionsEn": "sysctl_sched_base_slice = 750000 ns before scaling; effective value 0.75 ms × (1 + ilog(ncpus)).",
+   "notes": ""
+  },
+  {
+   "id": "linux-eevdf-base-slice-master",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/torvalds/linux/master/kernel/sched/fair.c",
+   "evidence": "fair.c master (Makefile 7.4-rc4) l. 83-85 : '(default: 0.70 msec * (1 + ilog(ncpus)), units: nanoseconds)' ; = 700000ULL.",
+   "fix": null,
+   "labelFr": "Tranche de temps de base par défaut d'EEVDF, Linux master (7.4-rc4)",
+   "labelEn": "EEVDF base time slice default, Linux master (7.4-rc4)",
+   "conditionsFr": "kernel/sched/fair.c sur master (7.4-rc4, novembre 2026) : 700 000 ns × (1 + ilog(ncpus)).",
+   "conditionsEn": "kernel/sched/fair.c on master (7.4-rc4, Nov 2026): 700000 ns × (1 + ilog(ncpus)).",
+   "notes": "master évolue : valeur datée du 2026-11-26."
+  },
+  {
+   "id": "linux-default-timer-slack",
+   "verdict": "confirmed",
+   "checkedUrl": "https://man7.org/linux/man-pages/man2/PR_SET_TIMERSLACK.2const.html",
+   "evidence": "PR_SET_TIMERSLACK(2const) : 'The timer slack values of init(1) (PID 1)... are 50,000 nanoseconds (50 microseconds)' ; héritée par fork ; pas appliquée au temps réel. init_task.c l. 185.",
+   "fix": null,
+   "labelFr": "Marge de temporisation (timer slack) par défaut, Linux",
+   "labelEn": "Default timer slack, Linux",
+   "conditionsFr": "Valeur d'init (PID 1), héritée par les processus fils ; réglable par prctl(PR_SET_TIMERSLACK) ; ne s'applique pas aux threads temps réel.",
+   "conditionsEn": "Value of init (PID 1), inherited by child processes; adjustable with prctl(PR_SET_TIMERSLACK); not applied to real-time threads.",
+   "notes": ""
+  },
+  {
+   "id": "lmbench-null-syscall-linux-pentiumpro",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.usenix.org/legacy/publications/library/proceedings/sd96/full_papers/mcvoy.pdf",
+   "evidence": "Table 7 'Simple system call time (microseconds)' : Linux/i686 3 ; §6.3 : écriture d'un mot dans /dev/null.",
+   "fix": null,
+   "labelFr": "Durée d'un appel système simple, Linux sur Pentium Pro 200 (lmbench, 1995)",
+   "labelEn": "Simple system call time, Linux on Pentium Pro 200 (lmbench, 1995)",
+   "conditionsFr": "Linux 1.3.37, Pentium Pro 200 MHz ; écriture d'un mot dans /dev/null en boucle.",
+   "conditionsEn": "Linux 1.3.37, Pentium Pro 200 MHz; writing one word to /dev/null in a loop.",
+   "notes": ""
+  },
+  {
+   "id": "lmbench-context-switch-linux-pentiumpro",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.usenix.org/legacy/publications/library/proceedings/sd96/full_papers/mcvoy.pdf",
+   "evidence": "Table 10 : 'Linux/i686 6 18 7 101' (2 processus 0KB / 32KB, 8 processus 0KB / 32KB).",
+   "fix": null,
+   "labelFr": "Durée d'un changement de contexte (2 processus), Linux sur Pentium Pro 200 (lmbench, 1995)",
+   "labelEn": "Context switch time, 2 processes, Linux on Pentium Pro 200 (lmbench, 1995)",
+   "conditionsFr": "Linux 1.3.37, Pentium Pro 200 MHz ; 2 processus, jeu de travail de 0 Ko (18 µs à 32 Ko).",
+   "conditionsEn": "Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB).",
+   "notes": ""
+  },
+  {
+   "id": "slingshot-rosetta-switch-latency",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://arxiv.org/pdf/2008.08886",
+   "evidence": "§II-A : 'ROSETTA has a mean and median latency of 350 nanoseconds, with all the distribution lying between 300 and 400 nanoseconds, except for a few outliers.'",
+   "fix": {
+    "conditions": "Rosetta switch, RoCE traffic from standard NICs; computed as 2-hop minus 1-hop latency; mean and median; distribution between 300 and 400 ns except for a few outliers",
+    "quote": "We observe that ROSETTA has a mean and median latency of 350 nanoseconds, with all the distribution lying between 300 and 400 nanoseconds, except for a few outliers."
+   },
+   "labelFr": "Latence d'un commutateur HPE Slingshot (Rosetta)",
+   "labelEn": "Switch latency, HPE Slingshot Rosetta switch",
+   "conditionsFr": "Commutateur Rosetta, trafic RoCE depuis des cartes réseau standard ; différence entre latences à 2 sauts et à 1 saut ; moyenne et médiane ; distribution entre 300 et 400 ns hors quelques valeurs aberrantes.",
+   "conditionsEn": "Rosetta switch, RoCE traffic from standard NICs; 2-hop minus 1-hop latency; mean and median; distribution between 300 and 400 ns except a few outliers.",
+   "notes": "L'extrait tronquait 'except for a few outliers', ce qui rendait low/high plus stricts que la source."
+  },
+  {
+   "id": "osu-latency-crossroads-8b",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://lanl.github.io/benchmarks/09_Microbenchmarks/M3_OSUMB/OSUMB.html",
+   "evidence": "Table 4.7 (Crossroads) : 'osu_latency 1 per node 8 B 2 1.61 us'. Table 4.6 prévoit 2 essais (Longest Path / Shortest Path) ; 4.7 ne dit pas lequel.",
+   "fix": {
+    "conditions": "Crossroads (ATS-3), 2 nodes, 1 rank per node, 8-byte message, osu_latency; Table 4.6 asks for two tests (longest path / shortest path) but Table 4.7 does not say which one this is; interconnect, MPI library and n not stated"
+   },
+   "labelFr": "Latence MPI point à point, 8 octets, LANL Crossroads (osu_latency)",
+   "labelEn": "MPI point-to-point latency, 8 bytes, LANL Crossroads (osu_latency)",
+   "conditionsFr": "Crossroads (ATS-3), 2 nœuds, 1 rang par nœud, message de 8 octets, osu_latency ; ni le chemin (le plus long ou le plus court), ni le réseau, ni la bibliothèque MPI ne sont précisés.",
+   "conditionsEn": "Crossroads (ATS-3), 2 nodes, 1 rank per node, 8-byte message, osu_latency; neither the path (longest or shortest), the interconnect nor the MPI library is stated.",
+   "notes": "Limite de l'inadéquat : protocole partiel. Libellé : la page dit 'P2p Latency', pas 'ping-pong' ni 'aller simple'."
+  }
+ ]
+}

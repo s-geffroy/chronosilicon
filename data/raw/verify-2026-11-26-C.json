@@ -1,0 +1,580 @@
+{
+ "verifiedFile": "m00-2026-11-26-C_storage_interconnect_gpu_ai.json",
+ "verifiedAt": "2026-11-26",
+ "verdicts": [
+  {
+   "id": "pcie4-lane-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://us.design-reuse.com/news/42959/pcie-4-0-version-1-0.html",
+   "evidence": "Texte : « delivers high performance 16GT/s data rates with flexible lane width configurations » ; PCIe 4.0 Specification Version 1.0, 25 oct. 2017.",
+   "fix": {
+    "conditions": "PCI Express 4.0 Base Specification Version 1.0; 16 GT/s data rate (per lane). The release does not mention direction or 128b/130b encoding."
+   },
+   "labelFr": "Débit par voie PCIe 4.0",
+   "labelEn": "PCIe 4.0 per-lane data rate",
+   "conditionsFr": "Spécification PCI Express 4.0, version 1.0 : débit de 16 GT/s.",
+   "conditionsEn": "PCI Express 4.0 Specification Version 1.0: 16 GT/s data rate.",
+   "notes": "Valeur exacte. 'per direction, before 128b/130b encoding' ne figure pas dans la source : retiré."
+  },
+  {
+   "id": "pcie5-lane-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://us.design-reuse.com/news/46222/32gt-s-pci-express-5-0-specification.html",
+   "evidence": "Liste « PCIe 5.0 Specification Highlights » : « Delivers 32 GT/s raw bit rate and up to 128 GB/s via x16 configuration ».",
+   "fix": {
+    "conditions": "PCI Express 5.0 specification; 32 GT/s raw bit rate. Encoding not stated in the release."
+   },
+   "labelFr": "Débit brut par voie PCIe 5.0",
+   "labelEn": "PCIe 5.0 per-lane raw bit rate",
+   "conditionsFr": "Spécification PCI Express 5.0 : débit brut de 32 GT/s.",
+   "conditionsEn": "PCI Express 5.0 specification: 32 GT/s raw bit rate.",
+   "notes": "'128b/130b encoding' absent de la source : retiré."
+  },
+  {
+   "id": "pcie5-x16-bandwidth",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://us.design-reuse.com/news/46222/32gt-s-pci-express-5-0-specification.html",
+   "evidence": "« up to 128 GB/s via x16 configuration » ; la même dépêche cite : « The new PCIe 5.0 standard doubles that again to 64 GB/second » (x16).",
+   "fix": {
+    "labelEn": "PCIe 5.0 x16 bandwidth (up to, both directions inferred)",
+    "labelFr": "Bande passante PCIe 5.0 x16 (maximum annoncé, deux sens déduits)",
+    "conditions": "x16 link, 'up to' figure. The release does not state the direction; it also quotes 64 GB/s for x16, consistent with 128 GB/s being both directions combined."
+   },
+   "labelFr": "Bande passante PCIe 5.0 x16 (maximum annoncé, deux sens déduits)",
+   "labelEn": "PCIe 5.0 x16 bandwidth (up to, both directions inferred)",
+   "conditionsFr": "Lien x16 PCIe 5.0, valeur « jusqu'à » annoncée ; le sens n'est pas précisé, mais la même dépêche donne 64 GB/s pour le x16, ce qui est cohérent avec un total des deux sens.",
+   "conditionsEn": "PCIe 5.0 x16 link, 'up to' figure; direction not stated, but the same release gives 64 GB/s for x16, consistent with a two-direction total.",
+   "notes": "Le libellé affirmait « deux sens » comme un fait sourcé ; c'est une déduction. La référence à la page NVIDIA H100 n'éclaire pas le sens."
+  },
+  {
+   "id": "pcie6-lane-rate",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.design-reuse.com/news/news51221.html",
+   "evidence": "Liste « PCIe 6.0 Specification Features » : « 64 GT/s raw data rate and up to 256 GB/s via x16 configuration », PAM4, « Flit Mode ».",
+   "fix": null,
+   "labelFr": "Débit brut par voie PCIe 6.0",
+   "labelEn": "PCIe 6.0 per-lane raw data rate",
+   "conditionsFr": "Spécification PCI Express 6.0 : débit brut de 64 GT/s, signalisation PAM4, mode Flit.",
+   "conditionsEn": "PCI Express 6.0 specification: 64 GT/s raw data rate, PAM4 signaling, Flit mode.",
+   "notes": ""
+  },
+  {
+   "id": "pcie6-x16-bandwidth",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.design-reuse.com/news/news51221.html",
+   "evidence": "« 64 GT/s raw data rate and up to 256 GB/s via x16 configuration ». Aucune mention du sens dans la dépêche.",
+   "fix": {
+    "labelEn": "PCIe 6.0 x16 bandwidth (up to)",
+    "labelFr": "Bande passante PCIe 6.0 x16 (maximum annoncé)",
+    "conditions": "x16 link, 'up to' figure; direction not stated in the release (by analogy with the PCIe 5.0 release, likely both directions combined)."
+   },
+   "labelFr": "Bande passante PCIe 6.0 x16 (maximum annoncé)",
+   "labelEn": "PCIe 6.0 x16 bandwidth (up to)",
+   "conditionsFr": "Lien x16 PCIe 6.0, valeur « jusqu'à » annoncée ; le sens n'est pas précisé par la source.",
+   "conditionsEn": "PCIe 6.0 x16 link, 'up to' figure; direction not stated in the source.",
+   "notes": "« deux sens / 128 GB/s par sens » non sourcé ici."
+  },
+  {
+   "id": "cxl3-data-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://computeexpresslink.org/wp-content/uploads/2023/12/CXL_3.0-Specification-Release_FINAL.pdf",
+   "evidence": "p.1, 2e puce : « CXL 3.0 specification doubles the data rate to 64GTs with no added latency over CXL 2.0. » Pas de mention de PCIe 6.0 ni de « per lane ».",
+   "fix": {
+    "conditions": "Compute Express Link 3.0 specification; data rate doubled to 64 GT/s over CXL 2.0. The release does not mention PCIe 6.0 or lanes.",
+    "locator": "p.1, highlights bullet 2 (also 'Doubles the bandwidth to 64GTs' in the feature list)"
+   },
+   "labelFr": "Débit CXL 3.0",
+   "labelEn": "CXL 3.0 data rate",
+   "conditionsFr": "Spécification Compute Express Link 3.0 : débit doublé à 64 GT/s par rapport à CXL 2.0.",
+   "conditionsEn": "Compute Express Link 3.0 specification: data rate doubled to 64 GT/s over CXL 2.0.",
+   "notes": "Valeur juste ; « built on PCIe 6.0 electricals » non sourcé ; c'est la 2e puce, pas la 1re."
+  },
+  {
+   "id": "usb-low-speed-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.usb.org/sites/default/files/usb_20_20250603.zip (usb_20.pdf)",
+   "evidence": "Section 4.2.1 Electrical, p.17 (PDF p.45) : « A limited capability low-speed signaling mode is also defined at 1.5 Mb/s. » ; « such as mice ».",
+   "fix": {
+    "locator": "Section 4.2.1 Electrical, bullet list, p. 17 (PDF p. 45)",
+    "conditions": "USB 2.0 specification, low-speed signaling mode, defined for a limited number of low-bandwidth devices such as mice."
+   },
+   "labelFr": "Débit de signalisation USB low-speed",
+   "labelEn": "USB low-speed signaling rate",
+   "conditionsFr": "USB 2.0, mode de signalisation low-speed à capacités limitées, destiné à quelques périphériques peu gourmands comme les souris.",
+   "conditionsEn": "USB 2.0 limited-capability low-speed signaling mode, intended for a few low-bandwidth devices such as mice.",
+   "notes": "Le passage est en 4.2.1, pas 7.1. « keyboards » et « USB 1.x era » ne sont pas dans la source."
+  },
+  {
+   "id": "usb-full-speed-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.usb.org/sites/default/files/usb_20_20250603.zip (usb_20.pdf)",
+   "evidence": "Section 4.2.1, p.17 (PDF p.45) : « The USB full-speed signaling bit rate is 12 Mb/s. »",
+   "fix": {
+    "locator": "Section 4.2.1 Electrical, p. 17 (PDF p. 45)",
+    "conditions": "USB 2.0 specification, full-speed signaling bit rate (gross, not payload)."
+   },
+   "labelFr": "Débit de signalisation USB full-speed",
+   "labelEn": "USB full-speed signaling rate",
+   "conditionsFr": "USB 2.0, débit binaire de signalisation full-speed (brut, hors charge utile).",
+   "conditionsEn": "USB 2.0 full-speed signaling bit rate (gross, not payload).",
+   "notes": "La source vérifiée est USB 2.0 ; USB 1.x n'y est pas cité. Ère 1996 non vérifiable dans ce document."
+  },
+  {
+   "id": "usb-high-speed-rate",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.usb.org/sites/default/files/usb_20_20250603.zip (usb_20.pdf)",
+   "evidence": "Section 4.2.1, p.17 (PDF p.45) : « The USB high-speed signaling bit rate is 480 Mb/s. »",
+   "fix": null,
+   "labelFr": "Débit de signalisation USB 2.0 high-speed",
+   "labelEn": "USB 2.0 high-speed signaling rate",
+   "conditionsFr": "USB 2.0, débit binaire de signalisation high-speed (brut).",
+   "conditionsEn": "USB 2.0 high-speed signaling bit rate (gross).",
+   "notes": "Localisateur exact ; section 4.2.1."
+  },
+  {
+   "id": "usb32-20g-rate",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.usb.org/usb-32-0",
+   "evidence": "Page USB 3.2 : « allowing for up to two lanes of 10Gbps operation to realize a 20Gbps data transfer rate » ; câbles USB Type-C conçus pour le multivoie.",
+   "fix": null,
+   "labelFr": "Débit USB 3.2 sur deux voies (20 Gbit/s)",
+   "labelEn": "USB 3.2 two-lane transfer rate (20 Gbps)",
+   "conditionsFr": "USB 3.2, fonctionnement sur deux voies de 10 Gbit/s via câbles USB Type-C.",
+   "conditionsEn": "USB 3.2, two-lane operation at 10 Gbps per lane over USB Type-C cables.",
+   "notes": "Ère 2017 absente de la page."
+  },
+  {
+   "id": "usb4-80g-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.usb.org/usb4",
+   "evidence": "Page USB4 : « Two-lane operation using existing USB Type-C cables and up to 80 Gbps operation over 80 Gbps certified cables ». Pas de « Version 2.0 ».",
+   "fix": {
+    "conditions": "USB4 two-lane operation, up to 80 Gbps over 80 Gbps certified cables (page does not name a USB4 version).",
+    "era": null
+   },
+   "labelFr": "Débit maximal USB4 (câbles 80 Gbit/s)",
+   "labelEn": "USB4 maximum data rate (80 Gbps cables)",
+   "conditionsFr": "USB4, fonctionnement sur deux voies, jusqu'à 80 Gbit/s avec des câbles certifiés 80 Gbit/s.",
+   "conditionsEn": "USB4 two-lane operation, up to 80 Gbps over 80 Gbps certified cables.",
+   "notes": "« USB4 Version 2.0 » absent de la page ; ère 2022 non sourcée."
+  },
+  {
+   "id": "usb-fs-frame",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.usb.org/sites/default/files/usb_20_20250603.zip (usb_20.pdf)",
+   "evidence": "Section 5.3.3, p.36 (PDF p.64) : « USB establishes a 1 millisecond time base called a frame on a full-/low-speed bus ».",
+   "fix": null,
+   "labelFr": "Période de trame USB full/low-speed",
+   "labelEn": "USB full/low-speed frame period",
+   "conditionsFr": "USB 2.0, base de temps d'un bus full-speed ou low-speed (trame de 1 ms).",
+   "conditionsEn": "USB 2.0 time base of a full-/low-speed bus (1 ms frame).",
+   "notes": ""
+  },
+  {
+   "id": "usb-hs-microframe",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.usb.org/sites/default/files/usb_20_20250603.zip (usb_20.pdf)",
+   "evidence": "Section 5.3.3, p.36 (PDF p.64) : « and a 125 µs time base called a microframe on a high-speed bus ».",
+   "fix": null,
+   "labelFr": "Période de micro-trame USB 2.0 high-speed",
+   "labelEn": "USB 2.0 high-speed microframe period",
+   "conditionsFr": "USB 2.0, base de temps d'un bus high-speed (micro-trame de 125 µs).",
+   "conditionsEn": "USB 2.0 high-speed bus time base (125 µs microframe).",
+   "notes": ""
+  },
+  {
+   "id": "usb-fs-interrupt-min-period",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.usb.org/sites/default/files/usb_20_20250603.zip (usb_20.pdf)",
+   "evidence": "Section 5.7.4, p.51 (PDF p.79) : « A full-speed endpoint can specify a desired period from 1 ms to 255 ms. » ; l'hôte garantit seulement que l'intervalle n'est pas plus long.",
+   "fix": {
+    "conditions": "USB 2.0 spec, full-speed interrupt endpoint; requested period 1 to 255 ms. The host only guarantees the interval is no longer than requested."
+   },
+   "labelFr": "Période d'interrogation minimale d'un point de terminaison interrupt USB full-speed",
+   "labelEn": "USB full-speed interrupt endpoint shortest polling period",
+   "conditionsFr": "USB 2.0, point de terminaison interrupt full-speed : période demandée de 1 à 255 ms ; l'hôte garantit seulement un intervalle au plus égal à la période demandée.",
+   "conditionsEn": "USB 2.0 full-speed interrupt endpoint: requested period 1 to 255 ms; the host only guarantees the interval is no longer than requested.",
+   "notes": "« typical of HID mice/keyboards » non sourcé."
+  },
+  {
+   "id": "usb-ls-interrupt-min-period",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.usb.org/sites/default/files/usb_20_20250603.zip (usb_20.pdf)",
+   "evidence": "Section 5.7.4, p.51 (PDF p.79) : « Low-speed endpoints are limited to specifying only 10 ms to 255 ms. »",
+   "fix": null,
+   "labelFr": "Période d'interrogation minimale d'un point de terminaison interrupt USB low-speed",
+   "labelEn": "USB low-speed interrupt endpoint shortest polling period",
+   "conditionsFr": "USB 2.0, point de terminaison interrupt low-speed : période demandée de 10 à 255 ms.",
+   "conditionsEn": "USB 2.0 low-speed interrupt endpoint: requested period 10 to 255 ms.",
+   "notes": ""
+  },
+  {
+   "id": "usb-fs-max-polling-rate",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.usb.org/sites/default/files/usb_20_20250603.zip (usb_20.pdf)",
+   "evidence": "Recalcul : 1 / 1 ms = 1000 Hz. Entrée usb-fs-interrupt-min-period confirmée (p.51).",
+   "fix": {
+    "conditions": "Full-speed interrupt endpoint polled at its shortest allowed period (1 ms); upper bound."
+   },
+   "labelFr": "Fréquence maximale d'interrogation interrupt USB full-speed",
+   "labelEn": "Maximum USB full-speed interrupt polling rate",
+   "conditionsFr": "Point de terminaison interrupt full-speed interrogé à sa période minimale autorisée (1 ms) ; borne supérieure.",
+   "conditionsEn": "Full-speed interrupt endpoint polled at its shortest allowed period (1 ms); upper bound.",
+   "notes": "Calcul juste. La mention « gaming-mouse 1000 Hz » n'est pas dans la source."
+  },
+  {
+   "id": "usb-hs-max-polling-rate",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.usb.org/sites/default/files/usb_20_20250603.zip (usb_20.pdf)",
+   "evidence": "p.51 : période high-speed (2^(bInterval-1)) x 125 µs, bInterval de 1 à 16 ; bInterval = 1 donne 125 µs, soit 8000 Hz. Entrée usb-hs-microframe confirmée.",
+   "fix": null,
+   "labelFr": "Fréquence maximale d'interrogation interrupt USB high-speed",
+   "labelEn": "Maximum USB high-speed interrupt polling rate",
+   "conditionsFr": "Point de terminaison interrupt high-speed avec bInterval = 1, soit une période de 125 µs ; borne supérieure.",
+   "conditionsEn": "High-speed interrupt endpoint with bInterval = 1, i.e. a 125 µs period; upper bound.",
+   "notes": ""
+  },
+  {
+   "id": "hdmi-8k60-refresh",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.hdmi.org/spec/hdmi2_1",
+   "evidence": "« HDMI® Specification 2.2 ... supports a range of higher video resolutions and refresh rates including 8K60 and 4K120 ». La page ne lie pas 8K60 à HDMI 2.1.",
+   "fix": {
+    "conditions": "Video format 8K at 60 Hz supported by HDMI 2.2."
+   },
+   "labelFr": "Fréquence de rafraîchissement HDMI 8K60",
+   "labelEn": "HDMI 8K60 refresh rate",
+   "conditionsFr": "Format vidéo 8K à 60 Hz pris en charge par HDMI 2.2.",
+   "conditionsEn": "8K video format at 60 Hz supported by HDMI 2.2.",
+   "notes": "« also by HDMI 2.1 » non sourcé sur cette page."
+  },
+  {
+   "id": "hdmi-4k120-refresh",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.hdmi.org/spec/hdmi2_1",
+   "evidence": "« supports a range of higher video resolutions and refresh rates including 8K60 and 4K120 » (HDMI 2.2).",
+   "fix": null,
+   "labelFr": "Fréquence de rafraîchissement HDMI 4K120",
+   "labelEn": "HDMI 4K120 refresh rate",
+   "conditionsFr": "Format vidéo 4K à 120 Hz pris en charge par HDMI 2.2.",
+   "conditionsEn": "4K video format at 120 Hz supported by HDMI 2.2.",
+   "notes": ""
+  },
+  {
+   "id": "hdmi22-bandwidth",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.hdmi.org/spec/hdmi2_1",
+   "evidence": "« Higher 96Gbps bandwidth and next-gen HDMI Fixed Rate Link technology » ; « The new Ultra96 HDMI Cable supports up to 96Gbps bandwidth ».",
+   "fix": null,
+   "labelFr": "Bande passante maximale HDMI 2.2",
+   "labelEn": "HDMI 2.2 maximum bandwidth",
+   "conditionsFr": "HDMI 2.2 avec câble Ultra96 et technologie Fixed Rate Link, jusqu'à 96 Gbit/s.",
+   "conditionsEn": "HDMI 2.2 with Ultra96 cable and Fixed Rate Link, up to 96 Gbps.",
+   "notes": "Ère 2025 absente de la page."
+  },
+  {
+   "id": "frame-time-60hz",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.hdmi.org/spec/hdmi2_1",
+   "evidence": "Recalcul : 1/60 s = 16,667 ms. Entrée hdmi-8k60-refresh vérifiée sur la page.",
+   "fix": {
+    "conditions": "One refresh period at exactly 60 Hz."
+   },
+   "labelFr": "Durée d'une image à 60 Hz",
+   "labelEn": "Frame duration at 60 Hz",
+   "conditionsFr": "Une période de rafraîchissement à exactement 60 Hz.",
+   "conditionsEn": "One refresh period at exactly 60 Hz.",
+   "notes": "Calcul juste ; la remarque sur 59,94 Hz n'est pas dans la source."
+  },
+  {
+   "id": "frame-time-120hz",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.hdmi.org/spec/hdmi2_1",
+   "evidence": "Recalcul : 1/120 s = 8,333 ms. Entrée hdmi-4k120-refresh confirmée.",
+   "fix": null,
+   "labelFr": "Durée d'une image à 120 Hz",
+   "labelEn": "Frame duration at 120 Hz",
+   "conditionsFr": "Une période de rafraîchissement à 120 Hz.",
+   "conditionsEn": "One refresh period at 120 Hz.",
+   "notes": ""
+  },
+  {
+   "id": "h100-sxm-hbm-bandwidth",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.nvidia.com/en-us/data-center/h100/",
+   "evidence": "Tableau : « GPU Memory 80GB 94GB GPU Memory Bandwidth 3.35TB/s 3.9TB/s » (colonnes H100 SXM, H100 NVL).",
+   "fix": {
+    "conditions": "NVIDIA H100 SXM, 80 GB GPU memory. Source value 3.35 TB/s, converted to GB/s (x1000)."
+   },
+   "labelFr": "Bande passante mémoire du GPU NVIDIA H100 SXM",
+   "labelEn": "NVIDIA H100 SXM GPU memory bandwidth",
+   "conditionsFr": "NVIDIA H100 SXM, 80 Go de mémoire GPU ; 3,35 To/s convertis en Go/s.",
+   "conditionsEn": "NVIDIA H100 SXM, 80 GB GPU memory; 3.35 TB/s converted to GB/s.",
+   "notes": "« HBM3 » et « peak theoretical » non indiqués pour la SXM sur la page (HBM3 n'y est cité que pour la NVL)."
+  },
+  {
+   "id": "h100-sxm-nvlink-bandwidth",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.nvidia.com/en-us/data-center/h100/",
+   "evidence": "Tableau : « Interconnect NVIDIA NVLink™: 900GB/s PCIe Gen5: 128GB/s » ; texte : « fourth-generation NVLink, which offers 900 gigabytes per second (GB/s) of GPU-to-GPU interconnect ».",
+   "fix": {
+    "conditions": "H100 SXM, fourth-generation NVLink, 900 GB/s GPU-to-GPU interconnect; the page does not state whether this is bidirectional. Same row gives PCIe Gen5: 128 GB/s."
+   },
+   "labelFr": "Bande passante NVLink du NVIDIA H100 SXM",
+   "labelEn": "NVIDIA H100 SXM NVLink bandwidth",
+   "conditionsFr": "H100 SXM, NVLink de quatrième génération, 900 Go/s d'interconnexion GPU à GPU ; le sens n'est pas précisé.",
+   "conditionsEn": "H100 SXM, fourth-generation NVLink, 900 GB/s GPU-to-GPU interconnect; direction not stated.",
+   "notes": "« aggregate of all links, both directions as marketed » non sourcé."
+  },
+  {
+   "id": "b200-nvlink-gpu-to-gpu",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.nvidia.com/en-us/data-center/hgx/",
+   "evidence": "Tableau HGX : « NVLink GPU-to-GPU Bandwidth 1.8 TB/s 1.8 TB/s Total NVLink Bandwidth 14.4 TB/s 14.4 TB/s » ; NVLink « Fifth generation » ; B200 = 2e colonne (Total Memory 1.4 TB).",
+   "fix": null,
+   "labelFr": "Bande passante NVLink GPU à GPU du NVIDIA HGX B200",
+   "labelEn": "NVIDIA HGX B200 NVLink GPU-to-GPU bandwidth",
+   "conditionsFr": "HGX B200 (8 GPU Blackwell), NVLink de cinquième génération, bande passante GPU à GPU ; 1,8 To/s convertis ; 14,4 To/s au total.",
+   "conditionsEn": "HGX B200 (8 Blackwell GPUs), fifth-generation NVLink, GPU-to-GPU bandwidth; 1.8 TB/s converted; 14.4 TB/s total.",
+   "notes": "Ère 2024 absente de la page."
+  },
+  {
+   "id": "dgx-b200-total-hbm-bandwidth",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.nvidia.com/en-us/data-center/dgx-b200/",
+   "evidence": "« GPU 8x NVIDIA Blackwell GPUs GPU Memory 1,440 GB total, 64 TB/s HBM3e bandwidth ».",
+   "fix": null,
+   "labelFr": "Bande passante HBM3e cumulée du NVIDIA DGX B200 (8 GPU)",
+   "labelEn": "NVIDIA DGX B200 aggregate HBM3e bandwidth (8 GPUs)",
+   "conditionsFr": "Système DGX B200 à 8 GPU Blackwell, 1 440 Go de HBM3e au total ; 64 To/s convertis ; total système.",
+   "conditionsEn": "DGX B200 system with 8 Blackwell GPUs, 1,440 GB HBM3e total; 64 TB/s converted; system total.",
+   "notes": ""
+  },
+  {
+   "id": "b200-per-gpu-hbm-bandwidth",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.nvidia.com/en-us/data-center/dgx-b200/",
+   "evidence": "Recalcul : 64 To/s / 8 = 8 To/s = 8000 Go/s. Entrée dgx-b200-total-hbm-bandwidth confirmée.",
+   "fix": null,
+   "labelFr": "Bande passante HBM3e par GPU NVIDIA B200 (dérivée)",
+   "labelEn": "NVIDIA B200 per-GPU HBM3e bandwidth (derived)",
+   "conditionsFr": "GPU B200 du DGX B200 ; répartition égale du chiffre système entre 8 GPU (dérivé).",
+   "conditionsEn": "B200 GPU in DGX B200; even split of the system figure across 8 GPUs (derived).",
+   "notes": "Hypothèse de répartition égale signalée ; aucune valeur par GPU sur la page."
+  },
+  {
+   "id": "mi300x-hbm-bandwidth",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html",
+   "evidence": "« Dedicated Memory Size 192 GB Dedicated Memory Type HBM3 ... Peak Memory Bandwidth 5.3 TB/s » ; « GPU Form Factor OAM Module » ; note : 5.325 TB/s peak theoretical.",
+   "fix": null,
+   "labelFr": "Bande passante mémoire crête de l'AMD Instinct MI300X",
+   "labelEn": "AMD Instinct MI300X peak memory bandwidth",
+   "conditionsFr": "AMD Instinct MI300X OAM, 192 Go de HBM3 ; bande passante crête théorique ; 5,3 To/s convertis.",
+   "conditionsEn": "AMD Instinct MI300X OAM, 192 GB HBM3; peak theoretical; 5.3 TB/s converted.",
+   "notes": "Date de lancement 12/06/2023 sur la page."
+  },
+  {
+   "id": "mi300x-peak-engine-clock",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html",
+   "evidence": "« Peak Engine Clock 2100 MHz » (GPU Specifications).",
+   "fix": {
+    "conditions": "AMD Instinct MI300X, peak engine clock."
+   },
+   "labelFr": "Fréquence crête du moteur de l'AMD Instinct MI300X",
+   "labelEn": "AMD Instinct MI300X peak engine clock",
+   "conditionsFr": "AMD Instinct MI300X, fréquence crête du moteur.",
+   "conditionsEn": "AMD Instinct MI300X, peak engine clock.",
+   "notes": "« (boost) » n'est pas le terme de la source."
+  },
+  {
+   "id": "tpu-v5p-hbm-bandwidth",
+   "verdict": "confirmed",
+   "checkedUrl": "https://docs.cloud.google.com/tpu/docs/v5p",
+   "evidence": "Tableau : « HBM capacity per chip (GiB) 95 HBM bandwidth per chip (GBps) 2765 » ; note : 96 GiB physiques.",
+   "fix": null,
+   "labelFr": "Bande passante HBM par puce Google TPU v5p",
+   "labelEn": "Google TPU v5p HBM bandwidth per chip",
+   "conditionsFr": "Cloud TPU v5p, par puce, 95 Gio de HBM utilisables (96 Gio physiques).",
+   "conditionsEn": "Cloud TPU v5p, per chip, 95 GiB usable HBM (96 GiB physical).",
+   "notes": ""
+  },
+  {
+   "id": "tpu-v5p-ici-bandwidth",
+   "verdict": "confirmed",
+   "checkedUrl": "https://docs.cloud.google.com/tpu/docs/v5p",
+   "evidence": "« Bidirectional inter-chip interconnect (ICI) bandwidth per chip (GBps) 1200 » ; « Interconnect topology 3D torus ».",
+   "fix": null,
+   "labelFr": "Bande passante d'interconnexion inter-puces (ICI) par puce Google TPU v5p",
+   "labelEn": "Google TPU v5p inter-chip interconnect (ICI) bandwidth per chip",
+   "conditionsFr": "Cloud TPU v5p, par puce, bidirectionnelle, topologie en tore 3D.",
+   "conditionsEn": "Cloud TPU v5p, per chip, bidirectional, 3D torus topology.",
+   "notes": ""
+  },
+  {
+   "id": "mlperf-llama2-70b-server-ttft",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/mlcommons/inference_policies/ff7edba545fded369e7e7e3d5a2f0bab4a95eece/inference_rules.adoc",
+   "evidence": "Ligne Llama2-70b, colonne « Server latency constraint » : « Conversational category: TTFT/TPOT: 2000 ms/200 ms. Interactive category: TTFT/TPOT: 450 ms/40 ms. » ; Server/Interactive : 99 %.",
+   "fix": null,
+   "labelFr": "Limite TTFT MLPerf Inference Llama2-70B, scénario Server",
+   "labelEn": "MLPerf Inference Llama2-70B Server TTFT limit",
+   "conditionsFr": "MLPerf Inference, suite Datacenter, division Closed, catégorie Conversational ; TTFT = délai du premier jeton ; borne au 99e centile, critère de validité et non mesure (règles au commit ff7edba, 2026-08-20).",
+   "conditionsEn": "MLPerf Inference, Datacenter suite, Closed division, Conversational category; TTFT = time to first token; 99th-percentile bound, a pass/fail limit, not a measurement (rules at commit ff7edba, 2026-08-20).",
+   "notes": ""
+  },
+  {
+   "id": "mlperf-llama2-70b-server-tpot",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/mlcommons/inference_policies/ff7edba545fded369e7e7e3d5a2f0bab4a95eece/inference_rules.adoc",
+   "evidence": "Ligne Llama2-70b, colonne « Server latency constraint » : « Conversational category: TTFT/TPOT: 2000 ms/200 ms. Interactive category: TTFT/TPOT: 450 ms/40 ms. » ; Server/Interactive : 99 %.",
+   "fix": null,
+   "labelFr": "Limite TPOT MLPerf Inference Llama2-70B, scénario Server",
+   "labelEn": "MLPerf Inference Llama2-70B Server TPOT limit",
+   "conditionsFr": "MLPerf Inference, suite Datacenter, division Closed, catégorie Conversational ; TPOT = intervalle moyen entre jetons générés ; borne au 99e centile, critère de validité et non mesure (règles au commit ff7edba, 2026-08-20).",
+   "conditionsEn": "MLPerf Inference, Datacenter suite, Closed division, Conversational category; TPOT = average interval between generated tokens; 99th-percentile bound, a pass/fail limit, not a measurement (rules at commit ff7edba, 2026-08-20).",
+   "notes": ""
+  },
+  {
+   "id": "mlperf-llama2-70b-interactive-ttft",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/mlcommons/inference_policies/ff7edba545fded369e7e7e3d5a2f0bab4a95eece/inference_rules.adoc",
+   "evidence": "Ligne Llama2-70b, colonne « Server latency constraint » : « Conversational category: TTFT/TPOT: 2000 ms/200 ms. Interactive category: TTFT/TPOT: 450 ms/40 ms. » ; Server/Interactive : 99 %.",
+   "fix": null,
+   "labelFr": "Limite TTFT MLPerf Inference Llama2-70B, catégorie Interactive",
+   "labelEn": "MLPerf Inference Llama2-70B Interactive TTFT limit",
+   "conditionsFr": "MLPerf Inference, suite Datacenter, division Closed, catégorie Interactive ; TTFT = délai du premier jeton ; borne au 99e centile, critère de validité et non mesure (règles au commit ff7edba, 2026-08-20).",
+   "conditionsEn": "MLPerf Inference, Datacenter suite, Closed division, Interactive category; TTFT = time to first token; 99th-percentile bound, a pass/fail limit, not a measurement (rules at commit ff7edba, 2026-08-20).",
+   "notes": ""
+  },
+  {
+   "id": "mlperf-llama2-70b-interactive-tpot",
+   "verdict": "confirmed",
+   "checkedUrl": "https://raw.githubusercontent.com/mlcommons/inference_policies/ff7edba545fded369e7e7e3d5a2f0bab4a95eece/inference_rules.adoc",
+   "evidence": "Ligne Llama2-70b, colonne « Server latency constraint » : « Conversational category: TTFT/TPOT: 2000 ms/200 ms. Interactive category: TTFT/TPOT: 450 ms/40 ms. » ; Server/Interactive : 99 %.",
+   "fix": null,
+   "labelFr": "Limite TPOT MLPerf Inference Llama2-70B, catégorie Interactive",
+   "labelEn": "MLPerf Inference Llama2-70B Interactive TPOT limit",
+   "conditionsFr": "MLPerf Inference, suite Datacenter, division Closed, catégorie Interactive ; TPOT = intervalle moyen entre jetons générés ; borne au 99e centile, critère de validité et non mesure (règles au commit ff7edba, 2026-08-20).",
+   "conditionsEn": "MLPerf Inference, Datacenter suite, Closed division, Interactive category; TPOT = average interval between generated tokens; 99th-percentile bound, a pass/fail limit, not a measurement (rules at commit ff7edba, 2026-08-20).",
+   "notes": ""
+  },
+  {
+   "id": "exos-x20-spindle-frequency",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.seagate.com/files/www-content/datasheets/pdfs/exos-x20-channel-DS2080-2111GB-en_EM.pdf",
+   "evidence": "Tableau p.2 : « Spindle Speed (RPM) 7,200 RPM » pour les 4 modèles. Recalcul : 7200/60 = 120 Hz.",
+   "fix": null,
+   "labelFr": "Fréquence de rotation de la broche du Seagate Exos X20",
+   "labelEn": "Seagate Exos X20 spindle rotation frequency",
+   "conditionsFr": "Seagate Exos X20 18/20 To (ST20000NM007D, etc.), 7 200 tr/min ; conversion en Hz.",
+   "conditionsEn": "Seagate Exos X20 18/20 TB (ST20000NM007D etc.), 7,200 RPM; converted to Hz.",
+   "notes": ""
+  },
+  {
+   "id": "exos-x20-average-latency",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://www.seagate.com/files/www-content/datasheets/pdfs/exos-x20-channel-DS2080-2111GB-en_EM.pdf",
+   "evidence": "Tableau p.2 : « Average Latency (ms) 4.16 » pour les 4 modèles SATA/SAS 18 et 20 To. La fiche ne définit pas ce terme.",
+   "fix": {
+    "conditions": "Seagate Exos X20 18/20 TB, all SATA/SAS variants; manufacturer 'Average Latency' (not defined in the data sheet; equals the half-rotation time at 7,200 RPM to 3 significant figures). Seek time not given."
+   },
+   "labelFr": "Latence moyenne (rotationnelle) du Seagate Exos X20",
+   "labelEn": "Seagate Exos X20 average (rotational) latency",
+   "conditionsFr": "Seagate Exos X20 18/20 To, toutes variantes SATA/SAS ; « latence moyenne » donnée par le fabricant, sans définition dans la fiche.",
+   "conditionsEn": "Seagate Exos X20 18/20 TB, all SATA/SAS variants; manufacturer 'Average Latency', not defined in the data sheet.",
+   "notes": "L'interprétation « demi-tour, hors temps d'accès » est une déduction, pas un énoncé de la source."
+  },
+  {
+   "id": "hdd-7200rpm-half-rotation",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.seagate.com/files/www-content/datasheets/pdfs/exos-x20-channel-DS2080-2111GB-en_EM.pdf",
+   "evidence": "Recalcul : 0,5 x 60/7200 s = 4,1667 ms. Entrée 7 200 tr/min confirmée p.2.",
+   "fix": null,
+   "labelFr": "Latence rotationnelle moyenne à 7 200 tr/min (un demi-tour)",
+   "labelEn": "Mean rotational latency at 7,200 RPM (half a revolution)",
+   "conditionsFr": "Tout disque à 7 200 tr/min, secteur cible aléatoire uniforme ; hors temps de positionnement et de transfert.",
+   "conditionsEn": "Any disk at 7,200 RPM, uniformly random target sector; excludes seek and transfer.",
+   "notes": ""
+  },
+  {
+   "id": "hdd-7200rpm-full-rotation",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.seagate.com/files/www-content/datasheets/pdfs/exos-x20-channel-DS2080-2111GB-en_EM.pdf",
+   "evidence": "Recalcul : 60/7200 s = 8,3333 ms. Entrée 7 200 tr/min confirmée p.2.",
+   "fix": null,
+   "labelFr": "Durée d'un tour complet à 7 200 tr/min",
+   "labelEn": "One full revolution at 7,200 RPM",
+   "conditionsFr": "Tout disque à 7 200 tr/min ; attente rotationnelle maximale.",
+   "conditionsEn": "Any disk at 7,200 RPM; worst-case rotational wait.",
+   "notes": ""
+  },
+  {
+   "id": "exos-x20-sustained-transfer",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.seagate.com/files/www-content/datasheets/pdfs/exos-x20-channel-DS2080-2111GB-en_EM.pdf",
+   "evidence": "Tableau p.2 : « Max. Sustained Transfer Rate OD (MB/s, MiB/s) 285/272 ».",
+   "fix": null,
+   "labelFr": "Débit soutenu maximal du Seagate Exos X20 (pistes extérieures)",
+   "labelEn": "Seagate Exos X20 maximum sustained transfer rate (outer diameter)",
+   "conditionsFr": "Seagate Exos X20 18/20 To, pistes extérieures (OD) ; 285 Mo/s, soit 272 Mio/s.",
+   "conditionsEn": "Seagate Exos X20 18/20 TB, outer diameter (OD); 285 MB/s = 272 MiB/s.",
+   "notes": ""
+  },
+  {
+   "id": "samsung-990pro-qd1-read-latency-derived",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://download.semiconductor.samsung.com/resources/data-sheet/Samsung_NVMe_SSD_990_PRO_Datasheet_Rev.1.0_10129514072296.pdf",
+   "evidence": "Tableau : « QD 1 Thread 1 Ran. Read 22K IOPS 22K IOPS » (Up to) ; IOmeter 1.1.0, Ryzen 7 5800X, Windows 10 Pro, SSD secondaire. Taille de bloc absente.",
+   "fix": {
+    "labelEn": "Samsung 990 PRO mean random read latency at QD1 (derived from IOPS, lower bound)",
+    "labelFr": "Latence moyenne de lecture aléatoire du Samsung 990 PRO à QD1 (dérivée des IOPS, borne inférieure)"
+   },
+   "labelFr": "Latence moyenne de lecture aléatoire du Samsung 990 PRO à QD1 (dérivée des IOPS, borne inférieure)",
+   "labelEn": "Samsung 990 PRO mean random read latency at QD1 (derived from IOPS, lower bound)",
+   "conditionsFr": "Samsung 990 PRO 1 et 2 To, PCIe 4.0 x4, lecture aléatoire QD1, 1 thread, « jusqu'à » 22K IOPS (IOmeter 1.1.0) ; latence dérivée, borne inférieure ; taille de bloc non indiquée.",
+   "conditionsEn": "Samsung 990 PRO 1 and 2 TB, PCIe 4.0 x4, random read QD1, 1 thread, 'up to' 22K IOPS (IOmeter 1.1.0); derived latency, lower bound; block size not stated.",
+   "notes": "Recalcul 1/22 000 s = 45,45 µs exact. « 4K » dans le libellé n'est pas sourcé. 22K est arrondi : 4 chiffres significatifs sont excessifs."
+  },
+  {
+   "id": "optane-p5800x-4k-qd1-p99-read",
+   "verdict": "confirmed_with_fix",
+   "checkedUrl": "https://d3qpfyfioyv8j5.cloudfront.net/syndication/solution_center/723/assets/pdf/a1169660-optane-ssd-p5800x-product-brief.pdf",
+   "evidence": "Tableau Specifications, PDF p.4 : « QoS • 4KRR, QD=1, 99% • < 6μs » ; Interface « PCIe x4 » ; « PCIe 4.0-compliant » dans le texte. Pas de « 3D XPoint ».",
+   "fix": {
+    "locator": "Specifications table, QoS section, PDF p.4",
+    "conditions": "Intel Optane SSD P5800X (PCIe 4.0 x4), 4K random read, QD1, 99th percentile QoS; specified as '< 6 µs' (upper bound)."
+   },
+   "labelFr": "Latence de lecture aléatoire 4K de l'Intel Optane SSD P5800X, QD1, 99e centile",
+   "labelEn": "Intel Optane SSD P5800X 4K random read latency, QD1, 99th percentile",
+   "conditionsFr": "Intel Optane SSD P5800X (PCIe 4.0 x4), lecture aléatoire 4K, QD1, QoS au 99e centile ; spécifié « < 6 µs » (borne supérieure).",
+   "conditionsEn": "Intel Optane SSD P5800X (PCIe 4.0 x4), 4K random read, QD1, 99th-percentile QoS; specified as '< 6 µs' (upper bound).",
+   "notes": "La table est en p.4 du PDF, pas p.2. « 3D XPoint » et « 4 KiB » absents de la source."
+  },
+  {
+   "id": "solidigm-p5620-qd1-write-p999999",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.solidigm.com/products/data-center/product-briefs/d7-p5520-p5620-product-brief.html",
+   "evidence": "Note [5] : « Latency for the two drives measured was 137usec and 586usec respectively on 6 9s latency for 100% QD1 random write IO » ; Xeon Gold 6254, 2 sockets, CentOS 8.2.2004, kernel 5.4.49, fio.",
+   "fix": null,
+   "labelFr": "Latence d'écriture aléatoire du Solidigm D7-P5620, QD1, six neuf",
+   "labelEn": "Solidigm D7-P5620 random write latency, QD1, six-nines",
+   "conditionsFr": "Solidigm D7-P5620 3,2 To, écriture aléatoire 100 %, QD1, 99,9999e centile ; 2 Xeon Gold 6254, CentOS 8.2, noyau 5.4.49, C-states et HT désactivés, fio ; taille de bloc non indiquée.",
+   "conditionsEn": "Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; 2x Xeon Gold 6254, CentOS 8.2, kernel 5.4.49, C-states and HT off, fio; block size not stated.",
+   "notes": ""
+  },
+  {
+   "id": "solidigm-p5520-4k-qd16-latency-derived",
+   "verdict": "confirmed",
+   "checkedUrl": "https://www.solidigm.com/products/data-center/product-briefs/d7-p5520-p5620-product-brief.html",
+   "evidence": "Note [7] : « Measured results of 233.7 and 206 RR KIOPS respectively using 4 KB transfer size and QD16 » (7,68 To, Ice Lake, fio). Recalcul 16/233 700 s = 68,5 µs.",
+   "fix": null,
+   "labelFr": "Latence moyenne de lecture aléatoire 4 Ko du Solidigm D7-P5520 à QD16 (dérivée)",
+   "labelEn": "Solidigm D7-P5520 mean 4 KB random read latency at QD16 (derived)",
+   "conditionsFr": "Solidigm D7-P5520 7,68 To, 233,7K IOPS en lecture aléatoire mesurés, blocs de 4 Ko, QD16, serveur Ice Lake, fio ; latence dérivée par la loi de Little.",
+   "conditionsEn": "Solidigm D7-P5520 7.68 TB, measured 233.7K random-read IOPS, 4 KB, QD16, Ice Lake server, fio; latency derived via Little's law.",
+   "notes": "Hypothèse QD16 = total des E/S en vol signalée."
+  }
+ ]
+}
