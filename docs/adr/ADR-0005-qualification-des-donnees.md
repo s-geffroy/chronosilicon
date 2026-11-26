@@ -17,3 +17,17 @@
   - Les extraits littéraux sont des citations courtes, attribuées et localisées. Pour les sources `reference-only` ou `unknown`, le projet n'accorde aucune licence sur ces extraits : `NOTICE` les exclut de CC0 et de CC BY. Aucune conclusion juridique n'est tirée.
   - Chaque mesure crée son propre phénomène en V0 et V1. Le regroupement par phénomène commun (par exemple « latence L1 » sur plusieurs microarchitectures) est reporté à V2, où il conditionne la comparaison.
   - Les valeurs en cycles (`cycle_count`) ne sont jamais converties en secondes sans fréquence effective sourcée. Elles sont affichées à part.
+
+## Définitions des types de provenance (ajout du 2026-11-26, revue du lot 2, M8)
+
+Ces règles servent à vérifier chaque classement ; en cas de doute, on retient le type le plus faible.
+
+| Type | Règle | Exemples |
+|---|---|---|
+| `measured` | La source rapporte une **mesure** qu'elle a effectuée ou publiée, et donne au moins un élément de protocole : matériel, logiciel, méthode, n ou statistique. Le protocole est obligatoire dans le corpus (invariant). | lmbench, BenchIT, résultats MLPerf, Rmax HPL |
+| `documented` | Valeur **spécifiée** ou **annoncée** par une norme, une fiche technique, un manuel ou une page constructeur, sans protocole de mesure. Une borne (« jusqu'à », « au moins », « ≤ ») reste `documented` et se code en `low`/`high`. | RFC, PCI-SIG, fiches SSD, Kconfig |
+| `calculated` | Valeur **dérivée par le projet** à partir d'entrées sourcées, avec une formule. Chaque entrée est une valeur du corpus ou une source citée (`src:`). Chaque valeur calculée est recalculée par un oracle de test. | temps-lumière, période d'image |
+| `estimated` | Ordre de grandeur annoncé comme approximatif par la source (« ~ », « around », « approximately », « typically less than »), ou valeur extrapolée **sans méthode** donnée. | retpoline « around 30 cycles », NTP « typically < 1 ms », fmax extrapolé |
+| `illustrative` | Exemple pédagogique sans source. **Interdit dans le corpus** : réservé aux fixtures de test. | — |
+
+Le statut de vérification (`pending`, `qualified`, `contested`, `rejected`) est indépendant du type de provenance : une valeur `estimated` peut être `qualified` si elle est fidèle à sa source.

@@ -142,7 +142,7 @@ for (const f of rawFiles) {
       id: it.id,
       domain: (patch['domain'] as Domain | undefined) ?? it.domain,
       quantityKind,
-      label: { fr: String(fix['labelFr'] ?? v?.labelFr ?? it.labelFr), en: String(fix['labelEn'] ?? v?.labelEn ?? it.labelEn) },
+      label: { fr: String(pick('labelFr', v?.labelFr ?? it.labelFr)), en: String(pick('labelEn', v?.labelEn ?? it.labelEn)) },
       description: null,
     });
     measurements.push({
@@ -167,7 +167,7 @@ for (const f of rawFiles) {
       statistics: null,
       calculation: calculation ? { formula: calculation.formula, inputs: calculation.inputs.map((i) => (i.startsWith('src:') ? i : `${i}-m1`)) } : null,
       rawRef: `data/raw/${f}#${it.id}`,
-      notes: clip([it.confidenceNotes, v?.notes ? `Verifier: ${v.notes}` : null, d ? `Decision: ${d.reason}` : null].filter(Boolean).join(' | ') || null, 1000),
+      notes: clip([pick('confidenceNotes', it.confidenceNotes) as string | null, v?.notes ? `Verifier: ${v.notes}` : null, d ? `Decision: ${d.reason}` : null].filter(Boolean).join(' | ') || null, 1000),
     });
     report.push(`${it.id}\t${status}\t${why.join('; ')}`);
   }

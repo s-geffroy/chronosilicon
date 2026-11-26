@@ -1516,8 +1516,8 @@
       "domain": "emerging",
       "quantityKind": "duration",
       "label": {
-        "fr": "Durée de commutation d’une MRAM à couple spin-orbite, dispositif imec de 62 nm",
-        "en": "Spin-orbit-torque MRAM switching time, imec 62 nm device"
+        "fr": "Temps de commutation le plus court rapporté, SOT-MRAM imec",
+        "en": "Shortest reported switching time, imec SOT-MRAM"
       },
       "description": null
     },

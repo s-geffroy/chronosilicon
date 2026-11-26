@@ -186,8 +186,8 @@
       "kind": "comparison",
       "quantityKind": "frequency",
       "label": {
-        "fr": "Fréquence d'horloge de processeurs x86, 1974–2023",
-        "en": "x86 processor clock frequency, 1974–2023"
+        "fr": "Fréquence d'horloge de processeurs Intel 8080 et x86, 1974–2023",
+        "en": "Clock frequency of Intel 8080 and x86 processors, 1974–2023"
       },
       "members": [
         "intel-8080-initial-clock-m1",
@@ -402,8 +402,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Statistiques différentes : moyenne (Google) contre médiane (IBM), sur des ensembles de qubits différents.",
-        "en": "Different statistics: mean (Google) versus median (IBM), over different sets of qubits."
+        "fr": "Statistiques et populations différentes : moyenne sur tout le processeur (Google) contre médiane d'un sous-ensemble de 57 qubits choisis (IBM). L'écart ne mesure pas une différence de technologie.",
+        "en": "Different statistics and populations: mean over the whole processor (Google) versus median of a selected 57-qubit subset (IBM). The gap does not measure a technology difference."
       }
     },
     {
@@ -430,8 +430,8 @@
       "kind": "comparison",
       "quantityKind": "duration",
       "label": {
-        "fr": "Délai avant le premier jeton (TTFT moyen), résultats MLPerf Inference v5.0",
-        "en": "Time to first token (mean TTFT), MLPerf Inference v5.0 results"
+        "fr": "Délai avant le premier jeton (TTFT moyen), MLPerf Inference v5.0, scénario Server",
+        "en": "Time to first token (mean TTFT), MLPerf Inference v5.0, Server scenario"
       },
       "members": [
         "mlperf-v50-h200x8-llama2-70b-server-ttft-mean-m1",
@@ -440,8 +440,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Systèmes, modèles et scénarios différents (Server, Interactive), mesurés sous charge près du débit cible : ce ne sont pas des latences à vide.",
-        "en": "Different systems, models and scenarios (Server, Interactive), measured under load near the target rate: these are not idle latencies."
+        "fr": "Trois résultats du scénario Server, mais pour des benchmarks différents dont les bornes de TTFT diffèrent : llama2-70b (2 000 ms), sa variante « interactive » (450 ms) et llama3.1-405b (6 000 ms). Les systèmes visent la borne de leur benchmark sous charge : comparer ces valeurs entre elles ne compare pas le matériel.",
+        "en": "Three Server-scenario results, but for different benchmarks with different TTFT bounds: llama2-70b (2,000 ms), its 'interactive' variant (450 ms) and llama3.1-405b (6,000 ms). Systems target their benchmark's bound under load: comparing these values does not compare the hardware."
       }
     }
   ]

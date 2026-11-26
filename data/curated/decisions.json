@@ -256,10 +256,125 @@
       }
     },
     "fdsoi28-ro101-frequency-296k-1v": {
-      "reason": "Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "reason": "Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value. Input stage delay is rounded to 18 ps (±0.5 ps): interval 1/(202×18.5 ps) to 1/(202×17.5 ps) carried with the value (lot-2 review M9).",
       "patch": {
-        "value": 275.027502750275
+        "value": 275.027502750275,
+        "low": 267.5943270002676,
+        "high": 282.88543140028287
       }
+    },
+    "top500-2026-11-r1-lineshine-rmax": {
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "patch": {
+        "confidenceNotes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance."
+      }
+    },
+    "top500-2026-11-r2-el-capitan-rmax": {
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "patch": {
+        "confidenceNotes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance."
+      }
+    },
+    "top500-2026-11-r3-frontier-rmax": {
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "patch": {
+        "confidenceNotes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance."
+      }
+    },
+    "top500-2026-11-r4-aurora-rmax": {
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "patch": {
+        "confidenceNotes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance."
+      }
+    },
+    "top500-2026-11-r5-jupiter-booster-rmax": {
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "patch": {
+        "confidenceNotes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance."
+      }
+    },
+    "top500-1993-06-r1-cm5-rmax": {
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "patch": {
+        "confidenceNotes": "Vendor/site-submitted benchmark result; not an independent measurement. LINPACK benchmark only, not representative of application performance. First TOP500 list; value on the page in GFlop/s (Rpeak 131.00 GFlop/s on the same row, not extracted)."
+      }
+    },
+    "top500-2008-06-r1-roadrunner-rmax": {
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "patch": {
+        "confidenceNotes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance. First system above 1 Pflop/s on HPL (value 1,026.00 TFlop/s on the page)."
+      }
+    },
+    "top500-2022-06-r1-frontier-rmax": {
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "patch": {
+        "confidenceNotes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance. First list with an HPL exaflop system; compare with Frontier 1,353.00 Pflop/s in Nov. 2026 (system upgraded, 9,066,176 cores)."
+      }
+    },
+    "mlperf-v50-h200x8-llama2-70b-server-ttft-mean": {
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "patch": {
+        "confidenceNotes": "397,824,116 ns rounded. Submitter-run; latency is under a server load near the target QPS, not unloaded."
+      }
+    },
+    "android-low-latency-rtl-max": {
+      "reason": "Bound encoded in low/high so the interface shows it (lot-2 review M3).",
+      "patch": {
+        "high": 50
+      }
+    },
+    "android-pro-audio-rtl-max-analog": {
+      "reason": "Bound encoded in low/high so the interface shows it (lot-2 review M3).",
+      "patch": {
+        "high": 20
+      }
+    },
+    "vesa-adaptivesync-g2g-average-max": {
+      "reason": "Bound encoded in low/high so the interface shows it (lot-2 review M3).",
+      "patch": {
+        "high": 5
+      }
+    },
+    "vesa-adaptivesync-min-max-refresh": {
+      "reason": "Bound encoded in low/high so the interface shows it (lot-2 review M3).",
+      "patch": {
+        "low": 144
+      }
+    },
+    "hdmi21-max-bandwidth": {
+      "reason": "Bound encoded in low/high so the interface shows it (lot-2 review M3).",
+      "patch": {
+        "high": 48
+      }
+    },
+    "ihp-sg13g3-hbt-fmax": {
+      "reason": "Bound encoded in low/high so the interface shows it (lot-2 review M3).",
+      "patch": {
+        "high": 650
+      }
+    },
+    "imec-sot-mram-switching-time": {
+      "reason": "The source reports switching 'down to 210 ps': a best case, encoded as a lower bound and relabelled (lot-2 review M3).",
+      "patch": {
+        "low": 210,
+        "labelFr": "Temps de commutation le plus court rapporté, SOT-MRAM imec",
+        "labelEn": "Shortest reported switching time, imec SOT-MRAM"
+      }
+    },
+    "gps-zenith-one-way-light-time": {
+      "reason": "Stored at full precision (rounding only at display, CS-03; lot-2 review M9).",
+      "patch": {
+        "value": 67.37994723002672
+      }
+    },
+    "geo-one-way-light-time-subsatellite": {
+      "reason": "Stored at full precision (rounding only at display, CS-03; lot-2 review M9).",
+      "patch": {
+        "value": 119.36924710761069
+      }
+    },
+    "b200-per-gpu-hbm-bandwidth": {
+      "reason": "Kept qualified, unlike HGX B200 FP64: the DGX B200 page labels 64 TB/s as the system total and states 8 GPUs, so the per-GPU value only assumes an equal split (stated in conditions); the HGX FP64 row does not say whether it is per GPU or total (lot-2 review, equal-treatment check)."
     }
   },
   "sourcePatches": {

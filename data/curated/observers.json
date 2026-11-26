@@ -120,12 +120,12 @@
       "measurementId": "willow-surface-code-cycle-time-m1",
       "frequencyHz": null,
       "label": {
-        "fr": "Processeur quantique : un cycle de correction d'erreurs (1,1 µs) = 1 seconde subjective",
-        "en": "Quantum processor: one error-correction cycle (1.1 µs) = 1 subjective second"
+        "fr": "Processeur quantique Google (72 qubits, code de surface de distance 5) : un cycle de correction d'erreurs (1,1 µs) = 1 seconde subjective",
+        "en": "Google quantum processor (72 qubits, distance-5 surface code): one error-correction cycle (1.1 µs) = 1 subjective second"
       },
       "assumptions": {
-        "fr": "Référence : temps de cycle du code de surface publié pour un processeur de 72 qubits ; ce n'est pas une horloge, et un cycle n'est pas comparable à un cycle de CPU.",
-        "en": "Reference: published surface-code cycle time for a 72-qubit processor; this is not a clock, and one cycle is not comparable to a CPU cycle."
+        "fr": "Référence tirée d'une seule expérience publiée ; la latence du décodeur (63 µs) n'est pas incluse. Ce n'est pas une horloge, et un cycle n'est pas comparable à un cycle de CPU.",
+        "en": "Reference from a single published experiment; decoder latency (63 µs) is not included. This is not a clock, and one cycle is not comparable to a CPU cycle."
       }
     }
   ]

@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "corpusVersion": "0.3.0+861df41c979b",
+  "corpusVersion": "0.3.0+ffa8784e8668",
   "inputs": {
     "data/sources/sources.json": "71566c6bfd2b20268b40497da849c4e1e54c372aa776b2fcd7b16a24aab5cbad",
-    "data/curated/phenomena.json": "b834b3fa3ad66bc959bbb956806b6cf0fd378fa97212e8c4804f6a12218798bd",
-    "data/curated/measurements.json": "8140260f509a7f790da306a6c8704973e0876723e3c81ffdac3303572002de98",
-    "data/curated/groups.json": "a6020f7db48a818a8de24ca4624f87842e5615c7a43b73683a6af547451d7f72",
-    "data/curated/observers.json": "f4f1de4765f5cd3c8dce2d7b9cc9f43649470afedbee39cecaffac91164bf7e9",
+    "data/curated/phenomena.json": "310ade2c3fda90b9eae3f0f7198f49a9187144ba6a379dac436e93312145e0f0",
+    "data/curated/measurements.json": "640eff3563f38909aa37c5d8e0bb030f15a87109c0cad55fc00a79f9e3e89ff1",
+    "data/curated/groups.json": "8a865eb6d3d7cef220becf6a74d024d0eb143b160606957b6d4d829c105f4810",
+    "data/curated/observers.json": "88e35c1c8c3611aeb0db9f9101a43a6d88c83a982b6addd987f6093906ce9399",
     "data/curated/scenarios.json": "c922b1ea2e636abf6eddcc895126dcebb879f675478a61a7406101a603f2b0de"
   },
   "phenomena": [
@@ -1475,8 +1475,8 @@
       "domain": "emerging",
       "quantityKind": "duration",
       "label": {
-        "fr": "Durée de commutation d’une MRAM à couple spin-orbite, dispositif imec de 62 nm",
-        "en": "Spin-orbit-torque MRAM switching time, imec 62 nm device"
+        "fr": "Temps de commutation le plus court rapporté, SOT-MRAM imec",
+        "en": "Shortest reported switching time, imec SOT-MRAM"
       },
       "description": null
     },
@@ -5984,7 +5984,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#b200-per-gpu-hbm-bandwidth",
-      "notes": "Assumes identical GPUs and that the system figure is a plain sum; no per-GPU NVIDIA statement was read in this task. | Verifier: Hypothèse de répartition égale signalée ; aucune valeur par GPU sur la page.",
+      "notes": "Assumes identical GPUs and that the system figure is a plain sum; no per-GPU NVIDIA statement was read in this task. | Verifier: Hypothèse de répartition égale signalée ; aucune valeur par GPU sur la page. | Decision: Kept qualified, unlike HGX B200 FP64: the DGX B200 page labels 64 TB/s as the system total and states 8 GPUs, so the per-GPU value only assumes an equal split (stated in conditions); the HGX FP64 row does not say whether it is per GPU or total (lot-2 review, equal-treatment check).",
       "quantityKind": "throughput",
       "valueSI": 8000000000000,
       "lowSI": null,
@@ -6574,8 +6574,8 @@
       "configuration": null,
       "value": 275.027502750275,
       "unit": "MHz",
-      "low": null,
-      "high": null,
+      "low": 267.5943270002676,
+      "high": 282.88543140028287,
       "conditions": {
         "fr": "Valeur calculée : f = 1/(2 × 101 × tP) avec tP = 18 ps (296 K, 1,0 V), avant le diviseur par 1024 ; tP étant arrondi à la picoseconde, f est approchée.",
         "en": "Calculated value: f = 1/(2 × 101 × tP) with tP = 18 ps (296 K, 1.0 V), before the /1024 divider; tP is rounded to the picosecond, so f is approximate."
@@ -6599,11 +6599,11 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#fdsoi28-ro101-frequency-296k-1v",
-      "notes": "The paper reports tP, not f; f is back-computed with the usual RO relation, which the paper uses implicitly (tP derived from f). Rounded. | Verifier: Formula consistent with Table I (tP = 1/(f×2×101×1024), f = divided output). Input tP is an integer ps, so ±3 % rounding on f. | Decision: Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "notes": "The paper reports tP, not f; f is back-computed with the usual RO relation, which the paper uses implicitly (tP derived from f). Rounded. | Verifier: Formula consistent with Table I (tP = 1/(f×2×101×1024), f = divided output). Input tP is an integer ps, so ±3 % rounding on f. | Decision: Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value. Input stage delay is rounded to 18 ps (±0.5 ps): interval 1/(202×18.5 ps) to 1/(202×17.5 ps) carried with the value (lot-2 review M9).",
       "quantityKind": "frequency",
       "valueSI": 275027502.750275,
-      "lowSI": null,
-      "highSI": null
+      "lowSI": 267594327.0002676,
+      "highSI": 282885431.40028286
     },
     {
       "id": "ihp-sg13g2-hbt-ft-m1",
@@ -6705,7 +6705,7 @@
       "value": 650,
       "unit": "GHz",
       "low": null,
-      "high": null,
+      "high": 650,
       "conditions": {
         "fr": "IHP SG13G3 / SG13G3Cu, BiCMOS SiGe:C 0,13 µm ; valeur « jusqu’à » 650 GHz.",
         "en": "IHP SG13G3 / SG13G3Cu 0.13 µm SiGe:C BiCMOS; 'up to' 650 GHz value."
@@ -6723,11 +6723,11 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#ihp-sg13g3-hbt-fmax",
-      "notes": "Same caveats as fT. | Verifier: Locator said p. 1 for the description paragraph; pdftotext places it on p. 2 of 2.",
+      "notes": "Same caveats as fT. | Verifier: Locator said p. 1 for the description paragraph; pdftotext places it on p. 2 of 2. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3).",
       "quantityKind": "frequency",
       "valueSI": 650000000000,
       "lowSI": null,
-      "highSI": null
+      "highSI": 650000000000
     },
     {
       "id": "ngc-inp-hemt-25nm-fmax-m1",
@@ -7045,7 +7045,7 @@
       "configuration": null,
       "value": 210,
       "unit": "ps",
-      "low": null,
+      "low": 210,
       "high": null,
       "conditions": {
         "fr": "MTJ imec de 62 nm intégrée sur 300 mm, sous-couche SOT à base de W, tension critique d’environ 1 V à 50 % de probabilité, champ planaire inférieur à 23 mT ; dispositif de recherche, 2018.",
@@ -7064,10 +7064,10 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#imec-sot-mram-switching-time",
-      "notes": "Shortest write pulse on a research cell, not a product write latency (no peripheral circuitry). Needs an assisting field. | Verifier: Protocol matches Fig. 6 description. Conference venue not checked.",
+      "notes": "Shortest write pulse on a research cell, not a product write latency (no peripheral circuitry). Needs an assisting field. | Verifier: Protocol matches Fig. 6 description. Conference venue not checked. | Decision: The source reports switching 'down to 210 ps': a best case, encoded as a lower bound and relabelled (lot-2 review M3).",
       "quantityKind": "duration",
       "valueSI": 2.1e-10,
-      "lowSI": null,
+      "lowSI": 2.1e-10,
       "highSI": null
     },
     {
@@ -7136,7 +7136,7 @@
       "id": "gps-zenith-one-way-light-time-m1",
       "phenomenonId": "gps-zenith-one-way-light-time",
       "configuration": null,
-      "value": 67.38,
+      "value": 67.37994723002672,
       "unit": "ms",
       "low": null,
       "high": null,
@@ -7164,9 +7164,9 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#gps-zenith-one-way-light-time",
-      "notes": "Lower bound for a ground receiver. | Verifier: Precision of 4 significant figures exceeds that of the 'approximately' input; the 25,000 km slant range is not from the source (stated as not computed).",
+      "notes": "Lower bound for a ground receiver. | Verifier: Precision of 4 significant figures exceeds that of the 'approximately' input; the 25,000 km slant range is not from the source (stated as not computed). | Decision: Stored at full precision (rounding only at display, CS-03; lot-2 review M9).",
       "quantityKind": "duration",
-      "valueSI": 0.06738,
+      "valueSI": 0.06737994723002672,
       "lowSI": null,
       "highSI": null
     },
@@ -7205,7 +7205,7 @@
       "id": "geo-one-way-light-time-subsatellite-m1",
       "phenomenonId": "geo-one-way-light-time-subsatellite",
       "configuration": null,
-      "value": 119.37,
+      "value": 119.36924710761069,
       "unit": "ms",
       "low": null,
       "high": null,
@@ -7233,9 +7233,9 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#geo-one-way-light-time-subsatellite",
-      "notes": "Minimum; slant range at the edge of coverage is ~41,700 km (not computed here). | Verifier: 41,700 km edge-of-coverage slant range is not from the source.",
+      "notes": "Minimum; slant range at the edge of coverage is ~41,700 km (not computed here). | Verifier: 41,700 km edge-of-coverage slant range is not from the source. | Decision: Stored at full precision (rounding only at display, CS-03; lot-2 review M9).",
       "quantityKind": "duration",
-      "valueSI": 0.11937,
+      "valueSI": 0.1193692471076107,
       "lowSI": null,
       "highSI": null
     },
@@ -7735,7 +7735,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#top500-2026-11-r1-lineshine-rmax",
-      "notes": "Vendor/site-submitted benchmark result, audited by the TOP500 editors; not an independent measurement. FP64 HPL only, not representative of application performance. | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read.",
+      "notes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance. | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
       "quantityKind": "compute_rate",
       "valueSI": 2198400000000000000,
       "lowSI": null,
@@ -7797,7 +7797,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#top500-2026-11-r2-el-capitan-rmax",
-      "notes": "Vendor/site-submitted benchmark result, audited by the TOP500 editors; not an independent measurement. FP64 HPL only, not representative of application performance. | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read.",
+      "notes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance. | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
       "quantityKind": "compute_rate",
       "valueSI": 1809000000000000000,
       "lowSI": null,
@@ -7859,7 +7859,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#top500-2026-11-r3-frontier-rmax",
-      "notes": "Vendor/site-submitted benchmark result, audited by the TOP500 editors; not an independent measurement. FP64 HPL only, not representative of application performance. | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read.",
+      "notes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance. | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
       "quantityKind": "compute_rate",
       "valueSI": 1353000000000000000,
       "lowSI": null,
@@ -7921,7 +7921,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#top500-2026-11-r4-aurora-rmax",
-      "notes": "Vendor/site-submitted benchmark result, audited by the TOP500 editors; not an independent measurement. FP64 HPL only, not representative of application performance. | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read.",
+      "notes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance. | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
       "quantityKind": "compute_rate",
       "valueSI": 1012000000000000000,
       "lowSI": null,
@@ -7983,7 +7983,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#top500-2026-11-r5-jupiter-booster-rmax",
-      "notes": "Vendor/site-submitted benchmark result, audited by the TOP500 editors; not an independent measurement. FP64 HPL only, not representative of application performance. | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read.",
+      "notes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance. | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
       "quantityKind": "compute_rate",
       "valueSI": 1000000000000000000,
       "lowSI": null,
@@ -8045,7 +8045,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#top500-1993-06-r1-cm5-rmax",
-      "notes": "Vendor/site-submitted benchmark result, audited by the TOP500 editors; not an independent measurement. FP64 HPL only, not representative of application performance. First TOP500 list; value on the page in GFlop/s (Rpeak 131.00 GFlop/s on the same row, not extracted). | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. Label/conditions: neither source says the 1993 result was obtained with HPL (the TOP500 Linpack page only names 'the LINPACK Benchmark'); 'HPL' replaced by 'LINPACK'. The Linpack rules page is current and is not dated to 1993.",
+      "notes": "Vendor/site-submitted benchmark result; not an independent measurement. LINPACK benchmark only, not representative of application performance. First TOP500 list; value on the page in GFlop/s (Rpeak 131.00 GFlop/s on the same row, not extracted). | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. Label/conditions: neither source says the 1993 result was obtained with HPL (the TOP500 Linpack page only names 'the LINPACK Benchmark'); 'HPL' replaced by 'LINPACK'. The Linpack rules page is current and is not dated to 1993. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
       "quantityKind": "compute_rate",
       "valueSI": 59700000000,
       "lowSI": null,
@@ -8076,7 +8076,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#top500-2008-06-r1-roadrunner-rmax",
-      "notes": "Vendor/site-submitted benchmark result, audited by the TOP500 editors; not an independent measurement. FP64 HPL only, not representative of application performance. First system above 1 Pflop/s on HPL (value 1,026.00 TFlop/s on the page). | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read.",
+      "notes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance. First system above 1 Pflop/s on HPL (value 1,026.00 TFlop/s on the page). | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
       "quantityKind": "compute_rate",
       "valueSI": 1026000000000000,
       "lowSI": null,
@@ -8107,7 +8107,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#top500-2022-06-r1-frontier-rmax",
-      "notes": "Vendor/site-submitted benchmark result, audited by the TOP500 editors; not an independent measurement. FP64 HPL only, not representative of application performance. First list with an HPL exaflop system; compare with Frontier 1,353.00 Pflop/s in Nov. 2026 (system upgraded, 9,066,176 cores). | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read.",
+      "notes": "Vendor/site-submitted benchmark result; not an independent measurement. FP64 HPL only, not representative of application performance. First list with an HPL exaflop system; compare with Frontier 1,353.00 Pflop/s in Nov. 2026 (system upgraded, 9,066,176 cores). | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
       "quantityKind": "compute_rate",
       "valueSI": 1102000000000000000,
       "lowSI": null,
@@ -9083,7 +9083,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#lto9-average-space-record-time",
-      "notes": "Value 45 seconds read in the LTO 9 column; the extraction tool flagged ambiguous column alignment in this table (LTO 10 has two values). The Oracle data sheet that apparently lists 45 s for 'average file access time (first file)' returned 403. | Verifier: The documented URL returned 403 to curl and to the browser; the IBM Docs content API (same page, official) returned the HTML table. Parsed with cell 'headers' attributes: alignment is unambiguous. The gloss 'i.e. the mean seek to a file' is not in the source and was removed.",
+      "notes": "Cell alignment resolved from the HTML 'headers' attributes (cell entry__3 = LTO 9 column); not ambiguous. | Verifier: The documented URL returned 403 to curl and to the browser; the IBM Docs content API (same page, official) returned the HTML table. Parsed with cell 'headers' attributes: alignment is unambiguous. The gloss 'i.e. the mean seek to a file' is not in the source and was removed.",
       "quantityKind": "duration",
       "valueSI": 45,
       "lowSI": null,
@@ -9300,7 +9300,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#cuda-null-kernel-launch-h100",
-      "notes": "Quote is the H100 table row (cells avg, p50, p5, p95). Repetition count for the null kernel not stated (other phases: 50 warm-up + 150 runs). Includes profiler tracing overhead. Preprint. | Verifier: The original protocol said n not stated for the null kernel; the paper states W=50/R=150 for Phase 2, which includes the null-kernel run.",
+      "notes": "Quote is the H100 row of Table III (avg, p50, p5, p95). The null kernel is part of Phase 2, run with 50 warm-up + 150 measured iterations. Measured under nsys tracing. Preprint. | Verifier: The original protocol said n not stated for the null kernel; the paper states W=50/R=150 for Phase 2, which includes the null-kernel run.",
       "quantityKind": "duration",
       "valueSI": 0.000004707,
       "lowSI": null,
@@ -9331,7 +9331,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#cuda-null-kernel-launch-h200",
-      "notes": "Same caveats as the H100 value. | Verifier: Same correction as H100 on the repetition count.",
+      "notes": "Same as the H100 value: Phase 2, 50 warm-up + 150 measured iterations; measured under nsys tracing. Preprint. | Verifier: Same correction as H100 on the repetition count.",
       "quantityKind": "duration",
       "valueSI": 0.000004503,
       "lowSI": null,
@@ -9486,7 +9486,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-h200x8-llama2-70b-server-ttft-mean",
-      "notes": "397,824,116 ns rounded. Submitter-run, audited by MLCommons rules; latency is under a server load near the target QPS, not unloaded. | Verifier: System JSON checked: 8x H200-SXM-141GB, Xeon Platinum 8480C, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8, closed. Protocol field consistent. 'Audited by MLCommons' (confidenceNotes) is not stated in the log.",
+      "notes": "397,824,116 ns rounded. Submitter-run; latency is under a server load near the target QPS, not unloaded. | Verifier: System JSON checked: 8x H200-SXM-141GB, Xeon Platinum 8480C, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8, closed. Protocol field consistent. 'Audited by MLCommons' (confidenceNotes) is not stated in the log. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
       "quantityKind": "duration",
       "valueSI": 0.39780000000000004,
       "lowSI": null,
@@ -9654,7 +9654,7 @@
       "value": 20,
       "unit": "ms",
       "low": null,
-      "high": null,
+      "high": 20,
       "conditions": {
         "fr": "Exigence de certification Android 16 (CDD) : appareil portable déclarant FEATURE_AUDIO_PRO, latence aller-retour ≤ 20 ms (MAD ≤ 5 ms) sur la boucle analogique 3,5 mm si elle existe ; borne maximale, pas une mesure.",
         "en": "Android 16 CDD certification requirement: handheld declaring FEATURE_AUDIO_PRO, round-trip latency ≤ 20 ms (MAD ≤ 5 ms) on the analog 3.5 mm loopback if supported; upper bound, not a measurement."
@@ -9672,11 +9672,11 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#android-pro-audio-rtl-max-analog",
-      "notes": "Upper bound required for certification, not a measured device latency. Quote is the flattened table row (RTL ms, MAD ms, path). | Verifier: Table marked 'Start of requirements changed in Android 16'.",
+      "notes": "Upper bound required for certification, not a measured device latency. Quote is the flattened table row (RTL ms, MAD ms, path). | Verifier: Table marked 'Start of requirements changed in Android 16'. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3).",
       "quantityKind": "duration",
       "valueSI": 0.02,
       "lowSI": null,
-      "highSI": null
+      "highSI": 0.02
     },
     {
       "id": "android-low-latency-rtl-max-m1",
@@ -9685,7 +9685,7 @@
       "value": 50,
       "unit": "ms",
       "low": null,
-      "high": null,
+      "high": 50,
       "conditions": {
         "fr": "Exigence de certification Android 16 (CDD) : appareil portable déclarant FEATURE_AUDIO_LOW_LATENCY, latence aller-retour ≤ 50 ms (MAD ≤ 10 ms) sur au moins une boucle ; borne maximale, pas une mesure.",
         "en": "Android 16 CDD certification requirement: handheld declaring FEATURE_AUDIO_LOW_LATENCY, round-trip latency ≤ 50 ms (MAD ≤ 10 ms) on at least one loopback path; upper bound, not a measurement."
@@ -9703,11 +9703,11 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#android-low-latency-rtl-max",
-      "notes": "Upper bound, not a measurement.",
+      "notes": "Upper bound, not a measurement. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3).",
       "quantityKind": "duration",
       "valueSI": 0.05,
       "lowSI": null,
-      "highSI": null
+      "highSI": 0.05
     },
     {
       "id": "audio-sample-rate-44100-m1",
@@ -9777,7 +9777,7 @@
       "configuration": null,
       "value": 144,
       "unit": "Hz",
-      "low": null,
+      "low": 144,
       "high": null,
       "conditions": {
         "fr": "Seuil de certification VESA Adaptive-Sync Display CTS r1.1 : palier AdaptiveSync Display, fréquence maximale de fonctionnement Adaptive-Sync ≥ 144 Hz et minimale ≤ 60 Hz (MediaSync : ≥ 60 Hz et ≤ 48 Hz).",
@@ -9796,10 +9796,10 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#vesa-adaptivesync-min-max-refresh",
-      "notes": "Threshold for certification, not a display measurement. | Verifier: Table 2-1 is on PDF page 22 ('Page 22 of 89'), not 21. 'At factory default resolution' belongs to the tier designator definition (sect. 2.4), not to this mandate.",
+      "notes": "Threshold for certification, not a display measurement. | Verifier: Table 2-1 is on PDF page 22 ('Page 22 of 89'), not 21. 'At factory default resolution' belongs to the tier designator definition (sect. 2.4), not to this mandate. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3).",
       "quantityKind": "frequency",
       "valueSI": 144,
-      "lowSI": null,
+      "lowSI": 144,
       "highSI": null
     },
     {
@@ -9912,7 +9912,7 @@
       "value": 5,
       "unit": "ms",
       "low": null,
-      "high": null,
+      "high": 5,
       "conditions": {
         "fr": "Seuil de certification VESA Adaptive-Sync Display CTS r1.1 : moyenne des 64 transitions gris à gris (matrice 9 × 9, overdrive d'usine, temps de 10 à 90 %) ≤ 5 ms, palier AdaptiveSync seulement.",
         "en": "VESA Adaptive-Sync Display CTS r1.1 certification threshold: average of 64 grey-to-grey transitions (9 × 9 matrix, factory-default overdrive, 10-90% times) ≤ 5 ms, AdaptiveSync tier only."
@@ -9930,11 +9930,11 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#vesa-adaptivesync-g2g-average-max",
-      "notes": "Certification upper bound, not a measurement. | Verifier: Page number fix only.",
+      "notes": "Certification upper bound, not a measurement. | Verifier: Page number fix only. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3).",
       "quantityKind": "duration",
       "valueSI": 0.005,
       "lowSI": null,
-      "highSI": null
+      "highSI": 0.005
     },
     {
       "id": "hdmi21-max-bandwidth-m1",
@@ -9943,7 +9943,7 @@
       "value": 48,
       "unit": "Gbit/s",
       "low": null,
-      "high": null,
+      "high": 48,
       "conditions": {
         "fr": "Câble Ultra High Speed HDMI, introduit avec la spécification HDMI 2.1 et commercialisé depuis 2020, prévu pour des configurations allant jusqu'à 48 Gbit/s.",
         "en": "Ultra High Speed HDMI Cable, introduced with the HDMI 2.1 Specification and on the market since 2020, for configurations up to 48 Gbps."
@@ -9961,11 +9961,11 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#hdmi21-max-bandwidth",
-      "notes": "The page is now the HDMI 2.2 overview; the sentence describes the 48G cable class of HDMI 2.1. | Verifier: The page states the 48 Gbps limit for the cable class, not directly 'HDMI 2.1 maximum bandwidth'; 'gross link rate (FRL)' is not stated for this figure. Era '2017' (HDMI 2.1 release) is not given on the page, which says market entry 2020.",
+      "notes": "The page is now the HDMI 2.2 overview; the sentence describes the 48G cable class of HDMI 2.1. | Verifier: The page states the 48 Gbps limit for the cable class, not directly 'HDMI 2.1 maximum bandwidth'; 'gross link rate (FRL)' is not stated for this figure. Era '2017' (HDMI 2.1 release) is not given on the page, which says market entry 2020. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3).",
       "quantityKind": "throughput",
       "valueSI": 6000000000,
       "lowSI": null,
-      "highSI": null
+      "highSI": 6000000000
     }
   ],
   "sources": [
@@ -11775,8 +11775,8 @@
       "kind": "comparison",
       "quantityKind": "frequency",
       "label": {
-        "fr": "Fréquence d'horloge de processeurs x86, 1974–2023",
-        "en": "x86 processor clock frequency, 1974–2023"
+        "fr": "Fréquence d'horloge de processeurs Intel 8080 et x86, 1974–2023",
+        "en": "Clock frequency of Intel 8080 and x86 processors, 1974–2023"
       },
       "members": [
         "intel-8080-initial-clock-m1",
@@ -11991,8 +11991,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Statistiques différentes : moyenne (Google) contre médiane (IBM), sur des ensembles de qubits différents.",
-        "en": "Different statistics: mean (Google) versus median (IBM), over different sets of qubits."
+        "fr": "Statistiques et populations différentes : moyenne sur tout le processeur (Google) contre médiane d'un sous-ensemble de 57 qubits choisis (IBM). L'écart ne mesure pas une différence de technologie.",
+        "en": "Different statistics and populations: mean over the whole processor (Google) versus median of a selected 57-qubit subset (IBM). The gap does not measure a technology difference."
       }
     },
     {
@@ -12019,8 +12019,8 @@
       "kind": "comparison",
       "quantityKind": "duration",
       "label": {
-        "fr": "Délai avant le premier jeton (TTFT moyen), résultats MLPerf Inference v5.0",
-        "en": "Time to first token (mean TTFT), MLPerf Inference v5.0 results"
+        "fr": "Délai avant le premier jeton (TTFT moyen), MLPerf Inference v5.0, scénario Server",
+        "en": "Time to first token (mean TTFT), MLPerf Inference v5.0, Server scenario"
       },
       "members": [
         "mlperf-v50-h200x8-llama2-70b-server-ttft-mean-m1",
@@ -12029,8 +12029,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Systèmes, modèles et scénarios différents (Server, Interactive), mesurés sous charge près du débit cible : ce ne sont pas des latences à vide.",
-        "en": "Different systems, models and scenarios (Server, Interactive), measured under load near the target rate: these are not idle latencies."
+        "fr": "Trois résultats du scénario Server, mais pour des benchmarks différents dont les bornes de TTFT diffèrent : llama2-70b (2 000 ms), sa variante « interactive » (450 ms) et llama3.1-405b (6 000 ms). Les systèmes visent la borne de leur benchmark sous charge : comparer ces valeurs entre elles ne compare pas le matériel.",
+        "en": "Three Server-scenario results, but for different benchmarks with different TTFT bounds: llama2-70b (2,000 ms), its 'interactive' variant (450 ms) and llama3.1-405b (6,000 ms). Systems target their benchmark's bound under load: comparing these values does not compare the hardware."
       }
     }
   ],
@@ -12161,12 +12161,12 @@
       "measurementId": "willow-surface-code-cycle-time-m1",
       "frequencyHz": null,
       "label": {
-        "fr": "Processeur quantique : un cycle de correction d'erreurs (1,1 µs) = 1 seconde subjective",
-        "en": "Quantum processor: one error-correction cycle (1.1 µs) = 1 subjective second"
+        "fr": "Processeur quantique Google (72 qubits, code de surface de distance 5) : un cycle de correction d'erreurs (1,1 µs) = 1 seconde subjective",
+        "en": "Google quantum processor (72 qubits, distance-5 surface code): one error-correction cycle (1.1 µs) = 1 subjective second"
       },
       "assumptions": {
-        "fr": "Référence : temps de cycle du code de surface publié pour un processeur de 72 qubits ; ce n'est pas une horloge, et un cycle n'est pas comparable à un cycle de CPU.",
-        "en": "Reference: published surface-code cycle time for a 72-qubit processor; this is not a clock, and one cycle is not comparable to a CPU cycle."
+        "fr": "Référence tirée d'une seule expérience publiée ; la latence du décodeur (63 µs) n'est pas incluse. Ce n'est pas une horloge, et un cycle n'est pas comparable à un cycle de CPU.",
+        "en": "Reference from a single published experiment; decoder latency (63 µs) is not included. This is not a clock, and one cycle is not comparable to a CPU cycle."
       },
       "referenceSI": 0.0000011
     }
