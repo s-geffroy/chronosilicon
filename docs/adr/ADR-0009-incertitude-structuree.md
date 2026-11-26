@@ -13,6 +13,7 @@
      - Une valeur `calculated` sans propagation affiche « non propagée », et non « non publiée ».
   4. La normalisation SI produit `uncertaintySI` et `quantilesSI`. Les exports CSV et JSON portent le type, les bornes, n, les quantiles et leurs équivalents SI.
   5. **Un « ± » n'est jamais affiché sans son type**, ni dans la fiche ni dans le tableau, ni pour les lecteurs d'écran (par exemple « ± 25 ms (± non précisé) »). La fiche ajoute n et la formulation de la source.
+  6. Le format strict des contributions accepte un champ `uncertainty` facultatif, validé par le même schéma.
   7. **n** (`sampleCount`) : le nombre d'unités indépendantes derrière la statistique, tel que la source le donne (sujets, exécutions, requêtes). Il doit concorder entre `uncertainty` et `statistics`. Dans `statistics`, n peut être `null` **seulement** si la source ne le publie pas, et `sampleCountNote` l'explique alors (par exemple MLPerf : nombre de requêtes non publié, au moins 100). n n'est jamais inventé.
   8. **Invariants supplémentaires** :
      - pas de « ± » sur une valeur qui est une borne unilatérale ;
@@ -20,7 +21,6 @@
      - la formulation de la source doit contenir la valeur de la dispersion ;
      - règles conditionnelles dans le schéma (un intervalle n'a pas de ± ; une erreur-type a un n), de sorte que `contribute:check` les attrape avant le build ;
      - **garde sur les données** : toute valeur mesurée dont l'extrait ou les conditions publient un ±, un écart-type, une erreur-type, un intervalle de confiance ou un percentile doit les avoir structurés (test).
-  6. Le format strict des contributions accepte un champ `uncertainty` facultatif, validé par le même schéma.
 - Données renseignées (2026-11-26), depuis les verdicts des vérificateurs. Incertitudes :
   - phase de fermeture d'un clignement volontaire : ± 2 ms, **erreur-type**, n = 25 (légende du tableau 1 : « mean ± s.e. ») ;
   - clignement volontaire complet : ± 25 ms, **non précisé** (la légende « s.e. » s'applique au tableau 1, où 572 ms ne figure pas) ;

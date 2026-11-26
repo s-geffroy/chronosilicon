@@ -21,7 +21,8 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
   - 245 candidates (lots M00 et M01) : **239 qualifiées**, 2 en attente, 4 contestées.
   - 120 sources, dont 108 portent au moins une valeur qualifiée. Les 15 domaines sont couverts.
 - Site V1 : chronologie logarithmique, fiches, convertisseur, FR/EN, 3 niveaux de lecture, export JSON/CSV, lien de partage. V2 : Architecture, Comparaison (15 groupes, sans classement), Observateurs (8). V3 : Simulation (5 scénarios, chemin critique, ressources). V4 : Immersion (journal dérivé). V5 : Laboratoire (registre, valeurs écartées, mesure navigateur, contributions). Tous les espaces de navigation sont réalisés.
-- Tests : 205 unitaires, 88 e2e (4 navigateurs) ; build déterministe.
+- Tests : 212 unitaires, 96 e2e (4 navigateurs) ; build déterministe.
+- Incertitude structurée (ADR-0009) : 3 dispersions et 12 jeux de statistiques publiées, jamais inventées ; « ± » toujours affiché avec son type.
 - CI : `ci.yml` vert sur `develop` (`a79760c`). `pages.yml` est prêt et ne s'exécute que sur `main`.
 
 ## Publication
