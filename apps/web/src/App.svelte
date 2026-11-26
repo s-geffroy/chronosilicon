@@ -11,11 +11,11 @@
   import Comparison from './components/Comparison.svelte';
   import Observers from './components/Observers.svelte';
   import Simulation from './components/Simulation.svelte';
+  import Immersion from './components/Immersion.svelte';
   import Sheet from './components/Sheet.svelte';
   import type { MessageKey } from './lib/i18n';
 
   const PLANNED: Partial<Record<Route, string>> = {
-    immersion: 'V4',
     laboratory: 'V5',
   };
   const t = app.t;
@@ -72,6 +72,8 @@
     <Observers />
   {:else if route === 'simulation'}
     <Simulation />
+  {:else if route === 'immersion'}
+    <Immersion />
   {:else if route === 'about'}
     <About />
   {:else}

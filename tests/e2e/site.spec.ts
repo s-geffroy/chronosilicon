@@ -90,7 +90,7 @@ test('FR/EN switch changes texts, not values', async ({ page }) => {
 });
 
 test('unbuilt spaces are explicitly marked unavailable', async ({ page }) => {
-  for (const r of ['immersion', 'laboratory']) {
+  for (const r of ['laboratory']) {
     await page.goto(`./#/${r}?lang=en`);
     await expect(page.getByTestId('unavailable')).toContainText('not built yet');
   }
@@ -149,7 +149,7 @@ test('share link reproduces the state', async ({ page, context }) => {
 });
 
 test('accessibility: no axe violations (WCAG 2.1 AA) on main views', async ({ page }) => {
-  for (const r of ['timeline', 'converter', 'about', 'simulation', 'architecture', 'comparison', 'observers']) {
+  for (const r of ['timeline', 'converter', 'about', 'simulation', 'architecture', 'comparison', 'observers', 'immersion', 'laboratory']) {
     await page.goto(`./#/${r}?lang=fr`);
     await page.waitForLoadState('networkidle');
     const res = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
@@ -232,4 +232,15 @@ test('V3 simulation: dependent vs independent reads, capacity, critical path, ex
   const json = JSON.parse(readFileSync((await dl.path())!, 'utf8'));
   expect(json.scenarioId).toBe('sc-dram-independent-reads');
   expect(json.makespan).toBe('640000000'); // femtoseconds, decimal string
+});
+
+test('V4 immersion: journal derived from the simulated events, labelled as a metaphor', async ({ page }) => {
+  await page.goto('./#/immersion?lang=en&sc=sc-mars-command');
+  await expect(page.getByTestId('immersion')).toContainText('Metaphor');
+  const items = page.getByTestId('journal').locator('li');
+  await expect(items).toHaveCount(8); // 6 events + 2 elapsed-time lines
+  await expect(items.nth(2)).toContainText('The model does not say what I do meanwhile');
+  await page.getByTestId('imm-select').selectOption('sc-tcp-first-response');
+  await expect(page).toHaveURL(/sc=sc-tcp-first-response/);
+  await expect(items.first()).toContainText('handshake');
 });
