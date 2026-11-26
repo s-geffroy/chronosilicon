@@ -29,6 +29,10 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 - Vérifié le 2026-11-26 : HTTP 200, `version.json.commit` = SHA poussé, actifs sous `/chronosilicon/`, aucune erreur console (Chromium).
 - Toute publication suivante : fast-forward de `develop` vers `main` après la porte de la version (ADR-0003).
 
+## Copie documentaire Drive
+
+- 2026-11-26 : dossier `ChatGPT/04_TECHNOLOGIES_INGENIERIE/CHRONOSILICON/2026-11-26_G1_V1-publiee` (https://drive.google.com/drive/folders/1j0mK7_bWW6_LvVZ5ehHCFbjzJU9uhd2M). 7 fichiers ; les tailles concordent toutes ; un fichier a été retéléchargé et son SHA-256 est identique à l'original. Archive locale : `docs/archives/2026-11-26_G1/` (SHA256SUMS.txt).
+
 ## Décisions non validées par l'utilisateur
 
 Aucune décision structurante en suspens. Les choix mineurs sont tracés dans `docs/adr/ADR-0001` à `ADR-0005`.
