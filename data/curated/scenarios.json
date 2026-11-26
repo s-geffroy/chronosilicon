@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "_comment": "V3 discrete-event scenarios (CS-08, ADR-0007). Every task duration is a qualified duration of the corpus (fixed, no invented distribution). Capacities are explicit model assumptions, adjustable in the UI. What is NOT modelled is listed in 'excluded'.",
+  "scenarios": [
+    {
+      "id": "sc-dram-dependent-reads",
+      "label": { "fr": "8 lectures mémoire dépendantes (pointer chasing)", "en": "8 dependent memory reads (pointer chasing)" },
+      "description": { "fr": "Chaque lecture a besoin de l'adresse fournie par la précédente : elles s'enchaînent, quelle que soit la capacité de la mémoire.", "en": "Each read needs the address returned by the previous one: they chain, whatever the memory capacity." },
+      "excluded": { "fr": "Caches, préchargement matériel, traduction d'adresses (TLB).", "en": "Caches, hardware prefetching, address translation (TLB)." },
+      "resources": [{ "id": "mem", "kind": "ram", "capacity": 4, "capacityAssumption": { "fr": "Lectures DRAM simultanées possibles : hypothèse pédagogique réglable, non sourcée.", "en": "Concurrent DRAM reads in flight: adjustable teaching assumption, not sourced." } }],
+      "tasks": [
+        { "id": "r1", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": [] },
+        { "id": "r2", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": ["r1"] },
+        { "id": "r3", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": ["r2"] },
+        { "id": "r4", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": ["r3"] },
+        { "id": "r5", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": ["r4"] },
+        { "id": "r6", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": ["r5"] },
+        { "id": "r7", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": ["r6"] },
+        { "id": "r8", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": ["r7"] }
+      ]
+    },
+    {
+      "id": "sc-dram-independent-reads",
+      "label": { "fr": "8 lectures mémoire indépendantes", "en": "8 independent memory reads" },
+      "description": { "fr": "Les adresses sont connues d'avance : les lectures se recouvrent, limitées seulement par la capacité de la mémoire.", "en": "Addresses are known in advance: reads overlap, limited only by memory capacity." },
+      "excluded": { "fr": "Caches, préchargement, bande passante, contention entre cœurs.", "en": "Caches, prefetching, bandwidth, contention between cores." },
+      "resources": [{ "id": "mem", "kind": "ram", "capacity": 4, "capacityAssumption": { "fr": "Lectures DRAM simultanées possibles : hypothèse pédagogique réglable, non sourcée.", "en": "Concurrent DRAM reads in flight: adjustable teaching assumption, not sourced." } }],
+      "tasks": [
+        { "id": "r1", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": [] },
+        { "id": "r2", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": [] },
+        { "id": "r3", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": [] },
+        { "id": "r4", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": [] },
+        { "id": "r5", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": [] },
+        { "id": "r6", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": [] },
+        { "id": "r7", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": [] },
+        { "id": "r8", "measurementId": "dram-latency-xeon-6248-measured-m1", "resourceId": "mem", "dependsOn": [] }
+      ]
+    },
+    {
+      "id": "sc-tcp-first-response",
+      "label": { "fr": "Première réponse sur une nouvelle connexion TCP transatlantique", "en": "First response on a new transatlantic TCP connection" },
+      "description": { "fr": "Poignée de main TCP (un aller-retour) puis requête et réponse (un second aller-retour), entre l'est des États-Unis et l'Europe de l'Ouest.", "en": "TCP handshake (one round trip) then request and response (a second round trip), between US East and West Europe." },
+      "excluded": { "fr": "Résolution DNS, chiffrement TLS, temps de traitement du serveur, pertes et retransmissions.", "en": "DNS resolution, TLS encryption, server processing time, losses and retransmissions." },
+      "resources": [],
+      "tasks": [
+        { "id": "handshake", "measurementId": "azure-rtt-eastus-westeurope-m1", "resourceId": null, "dependsOn": [] },
+        { "id": "request-response", "measurementId": "azure-rtt-eastus-westeurope-m1", "resourceId": null, "dependsOn": ["handshake"] }
+      ]
+    },
+    {
+      "id": "sc-click-to-reaction",
+      "label": { "fr": "Du clic de souris à la réaction humaine (bornes supérieures d'attente)", "en": "From mouse click to human reaction (upper bounds of waiting)" },
+      "description": { "fr": "Attente maximale de l'interrogation USB full-speed à 1 ms, attente maximale de la prochaine image à 60 Hz, puis temps de réaction visuel humain à ce qui s'affiche.", "en": "Worst-case wait for the 1 ms USB full-speed poll, worst-case wait for the next 60 Hz frame, then human visual reaction time to what is displayed." },
+      "excluded": { "fr": "Traitement par le système et l'application, rendu, latence propre de l'écran : inconnus ici, non inventés. Les attentes sont des bornes supérieures, pas des moyennes.", "en": "System and application processing, rendering, the display's own latency: unknown here, not invented. Waits are upper bounds, not averages." },
+      "resources": [],
+      "tasks": [
+        { "id": "usb-poll", "measurementId": "usb-fs-interrupt-min-period-m1", "resourceId": null, "dependsOn": [] },
+        { "id": "next-frame", "measurementId": "frame-time-60hz-m1", "resourceId": null, "dependsOn": ["usb-poll"] },
+        { "id": "human-reaction", "measurementId": "human-simple-visual-reaction-time-m1", "resourceId": null, "dependsOn": ["next-frame"] }
+      ]
+    },
+    {
+      "id": "sc-mars-command",
+      "label": { "fr": "Commande vers Mars et accusé de réception (distance minimale)", "en": "Command to Mars and acknowledgement (minimum distance)" },
+      "description": { "fr": "Le signal part vers Mars à la vitesse de la lumière ; l'accusé de réception revient par le même chemin.", "en": "The signal travels to Mars at the speed of light; the acknowledgement comes back the same way." },
+      "excluded": { "fr": "Temps de traitement à bord, attente de visibilité des antennes, codage et relais.", "en": "On-board processing, antenna visibility windows, coding and relays." },
+      "resources": [],
+      "tasks": [
+        { "id": "uplink", "measurementId": "earth-mars-light-time-min-m1", "resourceId": null, "dependsOn": [] },
+        { "id": "downlink", "measurementId": "earth-mars-light-time-min-m1", "resourceId": null, "dependsOn": ["uplink"] }
+      ]
+    }
+  ]
+}

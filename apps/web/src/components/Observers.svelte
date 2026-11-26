@@ -25,7 +25,8 @@
   <p><strong>{phenomenonOf(observed).label[lang]}</strong> : {formatPhysicalDuration(observed.valueSI, lang)}
     · <button type="button" class="link" onclick={() => app.set({ selected: observed.id }, true)}>{t('cmp.open')}</button></p>
   <p class="help">{t('obs.cyclesNote')}</p>
-  <div class="table-wrap">
+  <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+  <div class="table-wrap" tabindex="0" role="region" aria-label={t('view.table')}>
     <table data-testid="obs-table">
       <thead>
         <tr><th scope="col">{t('obs.observer')}</th><th scope="col">{t('obs.reference')}</th><th scope="col">{t('obs.units')}</th><th scope="col">{t('obs.subjective')}</th></tr>

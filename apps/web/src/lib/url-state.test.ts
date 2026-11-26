@@ -3,7 +3,7 @@ import { parseHash, serializeHash, DEFAULT_STATE } from './url-state';
 
 describe('shareable URL state', () => {
   it('round-trips validated parameters', () => {
-    const s = { ...DEFAULT_STATE, route: 'converter' as const, lang: 'en' as const, frequencyHz: 3.2e9, level: 'scientific' as const, domains: ['cpu' as const, 'space' as const], selected: 'abc-1', group: 'cmp-l1d-cycles', observed: 'tcp-min-rto-m1' };
+    const s = { ...DEFAULT_STATE, route: 'converter' as const, lang: 'en' as const, frequencyHz: 3.2e9, level: 'scientific' as const, domains: ['cpu' as const, 'space' as const], selected: 'abc-1', group: 'cmp-l1d-cycles', observed: 'tcp-min-rto-m1', scenario: 'sc-mars-command', capacity: 2 };
     const back = parseHash(serializeHash(s, '0.1.0'));
     expect(back).toEqual(s);
   });
@@ -24,6 +24,9 @@ describe('shareable URL state', () => {
     expect(parseHash('#/timeline?f=1e99').frequencyHz).toBe(4e9);
     expect(parseHash('#/timeline?f=1e6').frequencyHz).toBe(1e6);
     expect(parseHash('#/timeline?f=0x10').frequencyHz).toBe(4e9);
+    expect(parseHash('#/simulation?cap=0').capacity).toBeNull();
+    expect(parseHash('#/simulation?cap=65').capacity).toBeNull();
+    expect(parseHash('#/simulation?cap=8').capacity).toBe(8);
   });
   it('empty hash → defaults with browser language', () => {
     expect(parseHash('', 'en')).toEqual({ ...DEFAULT_STATE, lang: 'en' });

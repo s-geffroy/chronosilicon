@@ -10,11 +10,11 @@
   import Architecture from './components/Architecture.svelte';
   import Comparison from './components/Comparison.svelte';
   import Observers from './components/Observers.svelte';
+  import Simulation from './components/Simulation.svelte';
   import Sheet from './components/Sheet.svelte';
   import type { MessageKey } from './lib/i18n';
 
   const PLANNED: Partial<Record<Route, string>> = {
-    simulation: 'V3',
     immersion: 'V4',
     laboratory: 'V5',
   };
@@ -70,6 +70,8 @@
     <Comparison />
   {:else if route === 'observers'}
     <Observers />
+  {:else if route === 'simulation'}
+    <Simulation />
   {:else if route === 'about'}
     <About />
   {:else}

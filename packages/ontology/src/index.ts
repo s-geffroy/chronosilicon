@@ -114,6 +114,49 @@ export interface ResolvedObserver extends ObserverDef {
   readonly referenceSI: number;
 }
 
+/** Curated discrete-event scenario (V3, CS-08). Durations reference qualified corpus values. */
+export interface ScenarioDef {
+  readonly id: string;
+  readonly label: I18nText;
+  readonly description: I18nText;
+  /** What the scenario deliberately does NOT model. */
+  readonly excluded: I18nText;
+  readonly resources: ReadonlyArray<{
+    readonly id: string;
+    readonly kind: 'cpu' | 'ram' | 'gpu' | 'storage' | 'network' | 'display' | 'other';
+    readonly capacity: number;
+    readonly capacityAssumption: I18nText;
+  }>;
+  readonly tasks: ReadonlyArray<{
+    readonly id: string;
+    readonly measurementId: string;
+    readonly resourceId: string | null;
+    readonly dependsOn: readonly string[];
+  }>;
+}
+
+/** Scenario invariants: every duration is a qualified corpus duration; references resolve. */
+export function checkScenarios(scenarios: readonly ScenarioDef[], qualified: readonly NormalizedMeasurement[]): string[] {
+  const errors: string[] = [];
+  const byId = new Map(qualified.map((m) => [m.id, m]));
+  const ids = new Set<string>();
+  for (const sc of scenarios) {
+    if (ids.has(sc.id)) errors.push(`duplicate scenario ${sc.id}`);
+    ids.add(sc.id);
+    const res = new Set(sc.resources.map((r) => r.id));
+    const tasks = new Set(sc.tasks.map((t) => t.id));
+    if (tasks.size !== sc.tasks.length) errors.push(`scenario ${sc.id}: duplicate task id`);
+    for (const t of sc.tasks) {
+      const m = byId.get(t.measurementId);
+      if (!m) errors.push(`scenario ${sc.id}/${t.id}: ${t.measurementId} is not a qualified measurement`);
+      else if (m.quantityKind !== 'duration') errors.push(`scenario ${sc.id}/${t.id}: ${t.measurementId} is not a duration`);
+      if (t.resourceId !== null && !res.has(t.resourceId)) errors.push(`scenario ${sc.id}/${t.id}: unknown resource ${t.resourceId}`);
+      for (const d of t.dependsOn) if (!tasks.has(d)) errors.push(`scenario ${sc.id}/${t.id}: unknown predecessor ${d}`);
+    }
+  }
+  return errors;
+}
+
 export interface Corpus {
   readonly schemaVersion: typeof SCHEMA_VERSION;
   readonly corpusVersion: string;
@@ -123,6 +166,7 @@ export interface Corpus {
   readonly sources: readonly Evidence[];
   readonly groups: readonly Group[];
   readonly observers: readonly ResolvedObserver[];
+  readonly scenarios: readonly ScenarioDef[];
 }
 
 /**

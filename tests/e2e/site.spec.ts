@@ -90,7 +90,7 @@ test('FR/EN switch changes texts, not values', async ({ page }) => {
 });
 
 test('unbuilt spaces are explicitly marked unavailable', async ({ page }) => {
-  for (const r of ['simulation', 'immersion', 'laboratory']) {
+  for (const r of ['immersion', 'laboratory']) {
     await page.goto(`./#/${r}?lang=en`);
     await expect(page.getByTestId('unavailable')).toContainText('not built yet');
   }
@@ -212,4 +212,24 @@ test('V2 comparison: cycle groups are not converted; common observer is named fo
   await page.getByTestId('cmp-select').selectOption('cmp-dram-latency');
   await expect(page.getByTestId('cmp-table')).toContainText('Subjective time, common observer at 4 GHz');
   await expect(page.getByTestId('cmp-note')).toContainText('These values are not a series');
+});
+
+test('V3 simulation: dependent vs independent reads, capacity, critical path, export', async ({ page }) => {
+  await page.goto('./#/simulation?lang=en&sc=sc-dram-dependent-reads');
+  await expect(page.getByTestId('sim-excluded')).toContainText('Not modelled');
+  await expect(page.getByTestId('sim-makespan')).toHaveText('640 ns');
+  await expect(page.getByTestId('sim-critical')).toHaveText('r1 → r2 → r3 → r4 → r5 → r6 → r7 → r8');
+  await page.getByTestId('sim-select').selectOption('sc-dram-independent-reads');
+  await expect(page.getByTestId('sim-makespan')).toHaveText('160 ns');
+  await page.getByTestId('sim-capacity').fill('1');
+  await page.getByTestId('sim-capacity').press('Enter');
+  await expect(page.getByTestId('sim-makespan')).toHaveText('640 ns');
+  await expect(page).toHaveURL(/cap=1/);
+  await expect(page.getByTestId('sim-overlap')).toHaveText('0 %');
+  await page.reload();
+  await expect(page.getByTestId('sim-makespan')).toHaveText('640 ns');
+  const [dl] = await Promise.all([page.waitForEvent('download'), page.getByTestId('sim-export').click()]);
+  const json = JSON.parse(readFileSync((await dl.path())!, 'utf8'));
+  expect(json.scenarioId).toBe('sc-dram-independent-reads');
+  expect(json.makespan).toBe('640000000'); // femtoseconds, decimal string
 });

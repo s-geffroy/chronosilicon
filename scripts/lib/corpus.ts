@@ -4,9 +4,10 @@ import { createHash } from 'node:crypto';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Ajv2020 } from 'ajv/dist/2020.js';
+import { simulate, SIMULATOR_MODEL_VERSION } from '@chronosilicon/simulator';
 import {
-  SCHEMA_VERSION, checkInvariants, checkV2Invariants, normalize, resolveObservers,
-  type Corpus, type Evidence, type Group, type Measurement, type ObserverDef, type Phenomenon,
+  SCHEMA_VERSION, checkInvariants, checkScenarios, checkV2Invariants, normalize, resolveObservers,
+  type Corpus, type Evidence, type Group, type Measurement, type ObserverDef, type Phenomenon, type ScenarioDef,
 } from '@chronosilicon/ontology';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -16,6 +17,7 @@ export const P = {
   measurements: 'data/curated/measurements.json',
   groups: 'data/curated/groups.json',
   observers: 'data/curated/observers.json',
+  scenarios: 'data/curated/scenarios.json',
   corpus: 'data/validated/corpus.json',
   rawDir: 'data/raw',
   rawManifest: 'data/raw/MANIFEST.sha256',
@@ -58,28 +60,50 @@ export function runPipeline(): PipelineResult {
   const ms = load<{ measurements: Measurement[] }>(P.measurements, 'measurements.schema.json');
   const gr = load<{ groups: Group[] }>(P.groups, 'groups.schema.json');
   const ob = load<{ observers: ObserverDef[] }>(P.observers, 'observers.schema.json');
+  const sc = load<{ scenarios: ScenarioDef[] }>(P.scenarios, 'scenarios.schema.json');
   errors.push(...checkRawManifest());
-  if (!s || !ph || !ms || !gr || !ob) return { errors, corpus: null, stats: {} };
+  if (!s || !ph || !ms || !gr || !ob || !sc) return { errors, corpus: null, stats: {} };
   errors.push(...checkInvariants({ sources: s.sources, phenomena: ph.phenomena, measurements: ms.measurements }));
   if (errors.length) return { errors, corpus: null, stats: {} };
 
   const qualified = ms.measurements.filter((m) => m.verificationStatus === 'qualified');
   const normalized = normalize(ph.phenomena, qualified);
   errors.push(...checkV2Invariants(gr.groups, ob.observers, normalized));
+  errors.push(...checkScenarios(sc.scenarios, normalized));
+  // Every scenario must actually run (no cycle, no deadlock) with its default capacities.
+  if (!errors.length) {
+    const dur = new Map(normalized.map((m) => [m.id, m.valueSI]));
+    for (const def of sc.scenarios) {
+      try {
+        simulate({
+          id: def.id, modelVersion: SIMULATOR_MODEL_VERSION, seed: 1,
+          resources: def.resources.map((r) => ({ id: r.id, kind: r.kind, capacity: r.capacity })),
+          tasks: def.tasks.map((t, i) => ({
+            id: t.id, label: t.id, actor: def.id, resourceId: t.resourceId, priority: i,
+            duration: { kind: 'fixed' as const, seconds: dur.get(t.measurementId)!, measurementId: t.measurementId },
+            dependencies: t.dependsOn.map((p) => ({ predecessor: p, relation: 'finish-to-start' as const, lagSeconds: 0 })),
+          })),
+        });
+      } catch (e) {
+        errors.push(`scenario ${def.id}: ${(e as Error).message}`);
+      }
+    }
+  }
   if (errors.length) return { errors, corpus: null, stats: {} };
   const usedPh = new Set(qualified.map((m) => m.phenomenonId));
   const usedSrc = new Set(qualified.flatMap((m) => m.sourceIds));
   const inputs: Record<string, string> = {};
-  for (const rel of [P.sources, P.phenomena, P.measurements, P.groups, P.observers]) inputs[rel] = sha256(read(rel));
+  for (const rel of [P.sources, P.phenomena, P.measurements, P.groups, P.observers, P.scenarios]) inputs[rel] = sha256(read(rel));
   const corpus: Corpus = {
     schemaVersion: SCHEMA_VERSION,
-    corpusVersion: `0.2.0+${sha256(Object.values(inputs).join('')).slice(0, 12)}`,
+    corpusVersion: `0.3.0+${sha256(Object.values(inputs).join('')).slice(0, 12)}`,
     inputs,
     phenomena: ph.phenomena.filter((p) => usedPh.has(p.id)),
     measurements: normalized,
     sources: s.sources.filter((x) => usedSrc.has(x.id)),
     groups: gr.groups,
     observers: resolveObservers(ob.observers, normalized),
+    scenarios: sc.scenarios,
   };
   const count = (st: string) => ms.measurements.filter((m) => m.verificationStatus === st).length;
   return {
@@ -96,6 +120,7 @@ export function runPipeline(): PipelineResult {
       qualifiedPhenomena: usedPh.size,
       groups: gr.groups.length,
       observers: ob.observers.length,
+      scenarios: sc.scenarios.length,
     },
   };
 }

@@ -15,7 +15,8 @@
     <article class="group" aria-labelledby={`h-${g.id}`} data-testid={`hier-${g.id}`}>
       <h2 id={`h-${g.id}`}>{g.label[lang]}</h2>
       <p class="help"><strong>{t(`cmp.${g.comparability}`)}.</strong> {g.note[lang]}</p>
-      <div class="table-wrap">
+      <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+      <div class="table-wrap" tabindex="0" role="region" aria-label={t('view.table')}>
         <table>
           <thead><tr><th scope="col">{t('arch.level')}</th><th scope="col">{t('arch.cycles')}</th><th scope="col">{t('col.range')}</th><th scope="col">{t('arch.ownFrame')}</th><th scope="col">{t('sheet.conditions')}</th></tr></thead>
           <tbody>

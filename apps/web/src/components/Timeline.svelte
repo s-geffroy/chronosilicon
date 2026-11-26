@@ -159,7 +159,8 @@
         <figcaption id="axis-cap">{t('axis.caption', { factor: tickFactor })} {t(`axis.${app.s.axis}`)}.</figcaption>
       </figure>
     {:else}
-      <div class="table-wrap">
+      <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+      <div class="table-wrap" tabindex="0" role="region" aria-label={t('view.table')}>
         <table data-testid="duration-table">
           <caption>{t('timeline.heading')}</caption>
           <thead>
@@ -193,7 +194,8 @@
   {#if cycles.length > 0}
     <h2>{t('cycles.heading')}</h2>
     <p>{t('cycles.intro')}</p>
-    <div class="table-wrap">
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+    <div class="table-wrap" tabindex="0" role="region" aria-label={t('view.table')}>
       <table data-testid="cycles-table">
         <thead><tr><th scope="col">{t('col.phenomenon')}</th><th scope="col">{t('col.value')}</th><th scope="col">{t('col.configuration')}</th><th scope="col">{t('col.provenance')}</th></tr></thead>
         <tbody>
@@ -211,7 +213,8 @@
   {#if others.length > 0}
     <h2>{t('other.heading')}</h2>
     <p>{t('other.intro')}</p>
-    <div class="table-wrap">
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+    <div class="table-wrap" tabindex="0" role="region" aria-label={t('view.table')}>
       <table data-testid="other-table">
         <thead><tr><th scope="col">{t('col.phenomenon')}</th><th scope="col">{t('col.value')}</th><th scope="col">{t('col.domain')}</th><th scope="col">{t('col.provenance')}</th></tr></thead>
         <tbody>

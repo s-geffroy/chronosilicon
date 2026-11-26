@@ -28,6 +28,10 @@ export interface UrlState {
   group: string | null;
   /** Duration observed in the observers space (validated id). */
   observed: string | null;
+  /** Simulation scenario (validated id). */
+  scenario: string | null;
+  /** Capacity override for the scenario's first resource (1..64). */
+  capacity: number | null;
 }
 
 export const DEFAULT_STATE: Readonly<UrlState> = Object.freeze({
@@ -42,6 +46,8 @@ export const DEFAULT_STATE: Readonly<UrlState> = Object.freeze({
   selected: null,
   group: null,
   observed: null,
+  scenario: null,
+  capacity: null,
 });
 
 const MAX_F = 1e15;
@@ -57,6 +63,7 @@ function pickList<T extends string>(v: string | null, allowed: readonly T[]): T[
   return items.length ? [...new Set(items)] : null;
 }
 
+const capOrNull = (v: string | null) => (v !== null && /^\d{1,2}$/.test(v) && Number(v) >= 1 && Number(v) <= 64 ? Number(v) : null);
 const idOrNull = (v: string | null) => (v !== null && ID.test(v) ? v : null);
 
 export function parseHash(hash: string, fallbackLang: Lang = 'fr'): UrlState {
@@ -78,6 +85,8 @@ export function parseHash(hash: string, fallbackLang: Lang = 'fr'): UrlState {
     selected: sel !== null && ID.test(sel) ? sel : null,
     group: idOrNull(q.get('g')),
     observed: idOrNull(q.get('m')),
+    scenario: idOrNull(q.get('sc')),
+    capacity: capOrNull(q.get('cap')),
   };
 }
 
@@ -93,6 +102,8 @@ export function serializeHash(s: UrlState, appVersion: string): string {
   if (s.selected) q.set('sel', s.selected);
   if (s.group) q.set('g', s.group);
   if (s.observed) q.set('m', s.observed);
+  if (s.scenario) q.set('sc', s.scenario);
+  if (s.capacity !== null) q.set('cap', String(s.capacity));
   q.set('v', appVersion);
   return `#/${s.route}?${q.toString()}`;
 }

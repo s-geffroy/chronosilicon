@@ -26,7 +26,8 @@
     {#if group.quantityKind === 'frequency'}<p><strong>{t('cmp.freqWarning')}</strong></p>{/if}
     {#if group.quantityKind === 'duration'}<p>{t('cmp.commonObserver', { f: formatFrequency(app.s.frequencyHz, lang) })}</p>{/if}
   </div>
-  <div class="table-wrap">
+  <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+  <div class="table-wrap" tabindex="0" role="region" aria-label={t('view.table')}>
     <table data-testid="cmp-table">
       <caption>{group.label[lang]}</caption>
       <thead>

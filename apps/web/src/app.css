@@ -154,3 +154,8 @@ dialog blockquote { margin: 0; padding-left: 0.75rem; border-left: 3px solid var
 .block { display: block; }
 label.block { display: grid; gap: 0.25rem; font-weight: 600; margin: 0.75rem 0; max-width: 40rem; }
 .group { margin-top: 1.5rem; }
+
+.gantt .gantt-track { position: relative; min-width: 12rem; width: 45%; }
+.gantt-bar { position: absolute; top: 30%; height: 40%; background: var(--accent); border-radius: 0.15rem; }
+.gantt-wait { position: absolute; top: 40%; height: 20%; background: repeating-linear-gradient(45deg, var(--muted) 0 3px, transparent 3px 6px); }
+.gantt tr.critical th { font-weight: 650; }
