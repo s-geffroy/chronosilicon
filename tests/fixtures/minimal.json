@@ -1,0 +1,15 @@
+{
+  "_comment": "TEST FIXTURE — fictitious values, never part of the corpus (CS-04).",
+  "sources": [
+    {"id": "src-fixture", "title": "Fixture", "author": null, "publisher": "tests", "url": "https://example.org/fixture", "doi": null, "publishedDate": null, "version": null, "accessedAt": "2026-11-26", "license": "n/a", "redistribution": "allowed", "accessNotes": "fixture", "verificationStatus": "qualified"}
+  ],
+  "phenomena": [
+    {"id": "fixture-op", "domain": "cpu", "quantityKind": "duration", "label": {"fr": "Opération fictive", "en": "Fictitious op"}, "description": null}
+  ],
+  "measurements": [
+    {"id": "fixture-op-1", "phenomenonId": "fixture-op", "configuration": null, "value": 1, "unit": "ns", "low": null, "high": null,
+     "conditions": {"fr": "fixture", "en": "fixture"}, "protocol": null, "provenanceType": "documented", "verificationStatus": "qualified",
+     "sourceIds": ["src-fixture"], "locator": "n/a", "quote": null, "era": null, "uncertainty": null, "statistics": null,
+     "calculation": null, "rawRef": "fixture#1", "notes": null}
+  ]
+}

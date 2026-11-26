@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chronosilicon.local/schemas/common.schema.json",
+  "title": "Common definitions",
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,95}$" },
+    "date": { "type": "string", "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$" },
+    "i18nText": {
+      "type": "object",
+      "required": ["fr", "en"],
+      "additionalProperties": false,
+      "properties": { "fr": { "type": "string", "minLength": 1 }, "en": { "type": "string", "minLength": 1 } }
+    },
+    "domain": {
+      "enum": ["physics", "logic", "cpu", "memory", "accelerator", "interconnect", "storage", "os", "network", "distributed", "ai", "peripheral", "human", "space", "emerging"]
+    },
+    "quantityKind": {
+      "enum": ["duration", "frequency", "throughput", "transfer_rate", "distance", "speed", "data_size", "cycle_count"]
+    },
+    "provenanceType": { "enum": ["measured", "documented", "calculated", "estimated", "illustrative"] },
+    "verificationStatus": { "enum": ["pending", "qualified", "contested", "rejected"] },
+    "redistribution": { "enum": ["allowed", "reference-only", "unknown"] }
+  }
+}

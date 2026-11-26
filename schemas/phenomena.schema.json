@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chronosilicon.local/schemas/phenomena.schema.json",
+  "title": "Phenomena",
+  "type": "object",
+  "required": ["schemaVersion", "phenomena"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "phenomena": { "type": "array", "items": { "$ref": "#/$defs/phenomenon" } }
+  },
+  "$defs": {
+    "phenomenon": {
+      "type": "object",
+      "required": ["id", "domain", "quantityKind", "label", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "domain": { "$ref": "common.schema.json#/$defs/domain" },
+        "quantityKind": { "$ref": "common.schema.json#/$defs/quantityKind" },
+        "label": { "$ref": "common.schema.json#/$defs/i18nText" },
+        "description": { "oneOf": [{ "type": "null" }, { "$ref": "common.schema.json#/$defs/i18nText" }] }
+      }
+    }
+  }
+}
