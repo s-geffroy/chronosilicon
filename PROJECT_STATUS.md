@@ -21,12 +21,12 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
   - 245 candidates (lots M00 et M01) : **239 qualifiées**, 2 en attente, 4 contestées.
   - 120 sources, dont 108 portent au moins une valeur qualifiée. Les 15 domaines sont couverts.
 - Site V1 : chronologie logarithmique, fiches, convertisseur, FR/EN, 3 niveaux de lecture, export JSON/CSV, lien de partage. V2 : Architecture, Comparaison (15 groupes, sans classement), Observateurs (8). V3 : Simulation (5 scénarios, chemin critique, ressources). V4 : Immersion (journal dérivé). V5 : Laboratoire (registre, valeurs écartées, mesure navigateur, contributions). Tous les espaces de navigation sont réalisés.
-- Tests : 203 unitaires, 84 e2e (4 navigateurs) ; build déterministe.
+- Tests : 205 unitaires, 88 e2e (4 navigateurs) ; build déterministe.
 - CI : `ci.yml` vert sur `develop` (`a79760c`). `pages.yml` est prêt et ne s'exécute que sur `main`.
 
 ## Publication
 
-- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = `cf84cdd` (V1 à V5, corpus lot 2, 239 valeurs ; run https://github.com/s-geffroy/chronosilicon/actions/runs/45898057526). Précédent : `178d4ad` (V1 à V5), run pages https://github.com/s-geffroy/chronosilicon/actions/runs/45891059462. Historique : V1 `7ca44b5`, V2 `2881239`.
+- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = `6f213d0` (V1 à V5, corpus de 239 valeurs, mineurs de la revue du lot 2 traités). Précédents : `cf84cdd` (lot 2), `178d4ad` (V1 à V5)
 - Vérifié le 2026-11-26 : HTTP 200, `version.json.commit` = SHA poussé, actifs sous `/chronosilicon/`, aucune erreur console (Chromium).
 - Toute publication suivante : fast-forward de `develop` vers `main` après la porte de la version (ADR-0003).
 
