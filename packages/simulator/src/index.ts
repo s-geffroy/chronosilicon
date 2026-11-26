@@ -5,8 +5,12 @@
  * Time representation: integer femtoseconds as BigInt (resolution 1 fs,
  * exact over the 20+ orders of magnitude between gate delays and deep-space
  * light times; 2^53 fs ≈ 9 s would overflow a double-precision integer).
- * Serialised as decimal strings. Ordering of simultaneous events is
- * deterministic: (time, priority, stable id).
+ * Serialised as decimal strings. Inputs are IEEE doubles: near 86 400 s two
+ * neighbouring doubles are ~15 ps apart, so exactness is that of the input.
+ *
+ * Ordering of simultaneous events is deterministic:
+ * (time, event type [cancel < end < ready < start], priority, declaration order).
+ * Consequence: a cancellation at the exact end time wins (the task is cancelled).
  */
 
 export const SIMULATOR_MODEL_VERSION = '1.0.0';
@@ -132,6 +136,8 @@ export function validateScenario(s: Scenario): string[] {
     ids.add(t.id);
   }
   const res = new Map(s.resources.map((r) => [r.id, r]));
+  if (res.size !== s.resources.length) errs.push('duplicate resource id');
+  if (s.maxEvents !== undefined && !(Number.isInteger(s.maxEvents) && s.maxEvents > 0)) errs.push('maxEvents must be a positive integer');
   for (const r of s.resources) if (!(Number.isInteger(r.capacity) && r.capacity >= 1)) errs.push(`resource ${r.id}: capacity must be an integer >= 1`);
   for (const t of s.tasks) {
     if (t.resourceId !== null && !res.has(t.resourceId)) errs.push(`task ${t.id}: unknown resource ${t.resourceId}`);
@@ -144,6 +150,8 @@ export function validateScenario(s: Scenario): string[] {
     if (dur.kind === 'fixed' && !(Number.isFinite(dur.seconds) && dur.seconds >= 0)) errs.push(`task ${t.id}: invalid duration`);
     if (dur.kind === 'empirical' && (dur.samplesSeconds.length === 0 || dur.samplesSeconds.some((x) => !(Number.isFinite(x) && x >= 0)))) errs.push(`task ${t.id}: invalid samples`);
     if (t.releaseSeconds !== undefined && !(Number.isFinite(t.releaseSeconds) && t.releaseSeconds >= 0)) errs.push(`task ${t.id}: invalid release`);
+    if (t.cancelAtSeconds !== undefined && !(Number.isFinite(t.cancelAtSeconds) && t.cancelAtSeconds >= 0)) errs.push(`task ${t.id}: invalid cancellation time`);
+    if (!Number.isFinite(t.priority)) errs.push(`task ${t.id}: priority must be finite`);
   }
   // Cycle detection (DFS) — an impossible causal chain is a deadlock.
   const byId = new Map(s.tasks.map((t) => [t.id, t]));
@@ -270,19 +278,24 @@ export function simulate(s: Scenario): SimulationResult {
     pendingDeps.set(id, n);
     if (n === 0 && out.get(id)!.status === 'open') push(earliest.get(id)!, 'ready', id);
   };
-  const cancelCascade = (id: string) => {
-    const o = out.get(id)!;
-    if (o.status !== 'open') return;
-    o.status = 'cancelled';
-    events.push({ seq: events.length, time: now, kind: 'cancel', taskId: id, resourceId: tasks.get(id)!.resourceId });
-    const rid = tasks.get(id)!.resourceId;
-    if (rid) {
-      const r = res.get(rid)!;
-      const wi = r.waiting.indexOf(id);
-      if (wi >= 0) r.waiting.splice(wi, 1);
-      else if (o.start !== null) { accrue(r); r.inUse--; r.lastFreedBy = id; o.end = now; tryStart(rid); }
-    } else if (o.start !== null) o.end = now;
-    for (const s2 of successors.get(id) ?? []) cancelCascade(s2.id);
+  /** Iterative cascade (no recursion: long chains must not overflow the stack). */
+  const cancelCascade = (rootId: string) => {
+    const stack = [rootId];
+    while (stack.length) {
+      const id = stack.pop()!;
+      const o = out.get(id)!;
+      if (o.status !== 'open') continue;
+      o.status = 'cancelled';
+      events.push({ seq: events.length, time: now, kind: 'cancel', taskId: id, resourceId: tasks.get(id)!.resourceId });
+      const rid = tasks.get(id)!.resourceId;
+      if (rid) {
+        const r = res.get(rid)!;
+        const wi = r.waiting.indexOf(id);
+        if (wi >= 0) r.waiting.splice(wi, 1);
+        else if (o.start !== null) { accrue(r); r.inUse--; r.lastFreedBy = id; o.end = now; tryStart(rid); }
+      } else if (o.start !== null) o.end = now;
+      for (const s2 of successors.get(id) ?? []) stack.push(s2.id);
+    }
   };
 
   let processed = 0;

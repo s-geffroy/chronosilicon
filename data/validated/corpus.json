@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "corpusVersion": "0.3.0+bc80a0c9b13d",
+  "corpusVersion": "0.3.0+5736b4b7663a",
   "inputs": {
     "data/sources/sources.json": "6493c97ea5fc1b8b1630cd51ea2b55988a86177a6cb403212ab9ef896cc3f709",
     "data/curated/phenomena.json": "8af7bf6aa069afdd199855956b165c7f61c218df478d504817175afa24e61b14",
     "data/curated/measurements.json": "6ddbf6275370423158cddd612c08acb0c6219e0269325a10625a4726f2333011",
     "data/curated/groups.json": "b4d8752270b3d7240c434e3b0ca8bbf0fbd87e78e6d0847f72d21bb8f13e885d",
     "data/curated/observers.json": "7ac3bbb875d48ebc514a9d75c30d8376b7d4f56fda62b77f12e4a4cd01f174fa",
-    "data/curated/scenarios.json": "a6e818fccfcaba6a75b227b2d8b86d91ed532dd10712a7dd4590abaa9387c21c"
+    "data/curated/scenarios.json": "c922b1ea2e636abf6eddcc895126dcebb879f675478a61a7406101a603f2b0de"
   },
   "phenomena": [
     {
@@ -6576,8 +6576,8 @@
         "en": "Each read needs the address returned by the previous one: they chain, whatever the memory capacity."
       },
       "excluded": {
-        "fr": "Caches, préchargement matériel, traduction d'adresses (TLB).",
-        "en": "Caches, hardware prefetching, address translation (TLB)."
+        "fr": "Caches, préchargement matériel, traduction d'adresses (TLB). Augmentation de la latence sous charge.",
+        "en": "Caches, hardware prefetching, address translation (TLB). Latency increase under load."
       },
       "resources": [
         {
@@ -6666,8 +6666,8 @@
         "en": "Addresses are known in advance: reads overlap, limited only by memory capacity."
       },
       "excluded": {
-        "fr": "Caches, préchargement, bande passante, contention entre cœurs.",
-        "en": "Caches, prefetching, bandwidth, contention between cores."
+        "fr": "Caches, préchargement, bande passante, contention entre cœurs. Augmentation de la latence sous charge.",
+        "en": "Caches, prefetching, bandwidth, contention between cores. Latency increase under load."
       },
       "resources": [
         {
@@ -6738,8 +6738,8 @@
         "en": "First response on a new transatlantic TCP connection"
       },
       "description": {
-        "fr": "Poignée de main TCP (un aller-retour) puis requête et réponse (un second aller-retour), entre l'est des États-Unis et l'Europe de l'Ouest.",
-        "en": "TCP handshake (one round trip) then request and response (a second round trip), between US East and West Europe."
+        "fr": "Poignée de main TCP (un aller-retour) puis requête et réponse (un second aller-retour), entre l'est des États-Unis et l'Europe de l'Ouest. Chaque aller-retour est la médiane publiée pour le réseau dorsal privé Azure ; additionner deux médianes donne un ordre de grandeur, pas la médiane du total.",
+        "en": "TCP handshake (one round trip) then request and response (a second round trip), between US East and West Europe. Each round trip is the published median on Azure's private backbone; adding two medians gives an order of magnitude, not the median of the total."
       },
       "excluded": {
         "fr": "Résolution DNS, chiffrement TLS, temps de traitement du serveur, pertes et retransmissions.",
@@ -6766,16 +6766,16 @@
     {
       "id": "sc-click-to-reaction",
       "label": {
-        "fr": "Du clic de souris à la réaction humaine (bornes supérieures d'attente)",
-        "en": "From mouse click to human reaction (upper bounds of waiting)"
+        "fr": "Du clic à la réaction humaine : ordre de grandeur à partir d'attentes sourcées",
+        "en": "From click to human reaction: order of magnitude from sourced waits"
       },
       "description": {
-        "fr": "Attente maximale de l'interrogation USB full-speed à 1 ms, attente maximale de la prochaine image à 60 Hz, puis temps de réaction visuel humain à ce qui s'affiche.",
-        "en": "Worst-case wait for the 1 ms USB full-speed poll, worst-case wait for the next 60 Hz frame, then human visual reaction time to what is displayed."
+        "fr": "Hypothèses déclarées : souris interrogée toutes les 1 ms (période minimale qu'un périphérique USB full-speed peut demander ; selon le périphérique, elle peut aller jusqu'à 255 ms) ; attente d'une période d'image complète à 60 Hz (cas le plus défavorable) ; puis temps de réaction visuel simple moyen (213 ms, moyenne d'un échantillon). Le total mélange des majorants et une moyenne : c'est un ordre de grandeur, ni un maximum ni une valeur typique.",
+        "en": "Declared assumptions: mouse polled every 1 ms (the minimum period a USB full-speed device can request; depending on the device it can be up to 255 ms); waiting one full 60 Hz frame (worst case); then the mean simple visual reaction time (213 ms, mean of a sample). The total mixes upper bounds and a mean: it is an order of magnitude, neither a maximum nor a typical value."
       },
       "excluded": {
-        "fr": "Traitement par le système et l'application, rendu, latence propre de l'écran : inconnus ici, non inventés. Les attentes sont des bornes supérieures, pas des moyennes.",
-        "en": "System and application processing, rendering, the display's own latency: unknown here, not invented. Waits are upper bounds, not averages."
+        "fr": "Traitement par le système et l'application, rendu, latence propre de l'écran : inconnus ici, non inventés. Dispersion du temps de réaction.",
+        "en": "System and application processing, rendering, the display's own latency: unknown here, not invented. Spread of the reaction time."
       },
       "resources": [],
       "tasks": [

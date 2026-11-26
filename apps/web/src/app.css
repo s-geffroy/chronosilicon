@@ -121,9 +121,10 @@ tbody th { font-weight: 500; }
 .converter { display: grid; gap: 0.75rem; margin: 1rem 0; }
 .row-inputs { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .row-inputs label { display: grid; gap: 0.2rem; font-weight: 600; }
-.result dl, dialog dl { display: grid; grid-template-columns: minmax(8rem, max-content) 1fr; gap: 0.35rem 1rem; }
+.result dl, dl.result, dialog dl { display: grid; grid-template-columns: minmax(8rem, max-content) minmax(0, 1fr); gap: 0.35rem 1rem; }
+.result dd, dl.result dd, dialog dd { min-width: 0; overflow-wrap: anywhere; }
 .result dd, dialog dd { margin: 0; }
-.result dt, dialog dt { font-weight: 600; color: var(--muted); }
+.result dt, dl.result dt, dialog dt { font-weight: 600; color: var(--muted); }
 .result strong { font-size: 1.25rem; }
 
 dialog { width: min(44rem, 100vw - 1rem); max-height: 92vh; border: 1px solid var(--line); border-radius: 0.5rem; background: var(--panel); color: var(--fg); padding: 1rem 1.25rem 1.5rem; }
@@ -144,7 +145,7 @@ dialog blockquote { margin: 0; padding-left: 0.75rem; border-left: 3px solid var
   .axis { margin-left: 0; }
   .row { grid-template-columns: 1fr; }
   .row-label { padding-right: 0; }
-  .result dl, dialog dl { grid-template-columns: 1fr; }
+  .result dl, dl.result, dialog dl { grid-template-columns: minmax(0, 1fr); }
   .tick:not(:first-child):not(:last-child):nth-child(even) { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -152,7 +153,9 @@ dialog blockquote { margin: 0; padding-left: 0.75rem; border-left: 3px solid var
 }
 
 .block { display: block; }
-label.block { display: grid; gap: 0.25rem; font-weight: 600; margin: 0.75rem 0; max-width: 40rem; }
+label.block { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.25rem; font-weight: 600; margin: 0.75rem 0; max-width: 40rem; }
+label.block select, label.block input { width: 100%; min-width: 0; }
+label.block input[type='number'] { width: 8rem; }
 .group { margin-top: 1.5rem; }
 
 .gantt .gantt-track { position: relative; min-width: 12rem; width: 45%; }

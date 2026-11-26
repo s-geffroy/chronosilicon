@@ -22,6 +22,8 @@
   const pct = (fs: bigint) => (run.result.makespan > 0n ? (Number(fs) / Number(run.result.makespan)) * 100 : 0);
   const dur = (fs: bigint) => formatPhysicalDuration(fsToSeconds(fs), lang);
   const pickScenario = (id: string) => app.set({ scenario: id, capacity: null });
+  // Render the (long) event log only when opened: a closed <details> must not keep a hit-testable box.
+  let eventsOpen = $state(false);
 </script>
 
 <section aria-labelledby="sim-h" data-testid="simulation">
@@ -38,7 +40,11 @@
   {#if firstRes && capacity !== null}
     <label class="block">{t('sim.capacity', { r: firstRes.id })}
       <input type="number" min="1" max="64" step="1" value={capacity} data-testid="sim-capacity"
-        onchange={(e) => { const v = Number(e.currentTarget.value); if (Number.isInteger(v) && v >= 1 && v <= 64) app.set({ capacity: v }); }} />
+        onchange={(e) => {
+          const v = Number(e.currentTarget.value);
+          if (Number.isInteger(v) && v >= 1 && v <= 64) app.set({ capacity: v });
+          else e.currentTarget.value = String(capacity); // never display a value that is not used
+        }} />
       <span class="help">{firstRes.capacityAssumption[lang]}</span>
     </label>
   {/if}
@@ -48,7 +54,8 @@
     <dd><strong data-testid="sim-makespan">{formatPhysicalDuration(run.makespanSeconds, lang)}</strong>
       · {formatCalendar(toSubjective(run.makespanSeconds, obs).subjectiveSeconds, lang)} ({formatFrequency(app.s.frequencyHz, lang)})</dd>
     <dt>{t('sim.sum')}</dt><dd data-testid="sim-sum">{formatPhysicalDuration(run.sumSeconds, lang)}</dd>
-    <dt>{t('sim.overlap')}</dt><dd data-testid="sim-overlap">{formatNumber(run.overlapShare * 100, lang, 3)} %</dd>
+    <dt>{t('sim.overlap')}</dt><dd><span data-testid="sim-overlap">{formatNumber(run.overlapShare * 100, lang, 3)} %</span>
+      {#if firstRes}<span class="help block">{t('sim.overlapAssumption')}</span>{/if}</dd>
     <dt>{t('sim.critical')}</dt><dd data-testid="sim-critical">{run.result.criticalPath.join(' → ')}</dd>
     <dt>{t('sim.seed')}</dt><dd class="mono">{t('sim.seedValue', { seed: SCENARIO_SEED, model: SIMULATOR_MODEL_VERSION })}</dd>
   </dl>
@@ -70,7 +77,7 @@
                 <span class="gantt-wait" style:left="{pct(r.ready)}%" style:width="{pct(r.start - r.ready)}%" title={t('sim.wait')}></span>
               {/if}
               {#if r.start !== null && r.end !== null}
-                <span class="gantt-bar" style:left="{pct(r.start)}%" style:width="{Math.max(0.5, pct(r.end - r.start))}%"></span>
+                <span class="gantt-bar" style:left="{pct(r.start)}%" style:width="{Math.min(100 - pct(r.start), Math.max(0.5, pct(r.end - r.start)))}%"></span>
               {/if}
             </td>
           </tr>
@@ -96,8 +103,9 @@
     </div>
   {/if}
 
-  <details>
+  <details ontoggle={(e) => (eventsOpen = e.currentTarget.open)}>
     <summary>{t('sim.events')} ({run.result.events.length})</summary>
+    {#if eventsOpen}
     <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
     <div class="table-wrap" tabindex="0" role="region" aria-label={t('view.table')}>
       <table data-testid="sim-events">
@@ -109,6 +117,7 @@
         </tbody>
       </table>
     </div>
+    {/if}
   </details>
-  <p><button type="button" data-testid="sim-export" onclick={() => download(`chronosilicon-${def.id}.json`, serializeResult(run.result), 'application/json')}>{t('sim.export')}</button></p>
+  <p><button type="button" data-testid="sim-export" onclick={() => download(`chronosilicon-${def.id}.json`, JSON.stringify({ corpusVersion: corpus.corpusVersion, scenario: def, capacity, result: JSON.parse(serializeResult(run.result)) }, null, 2), 'application/json')}>{t('sim.export')}</button></p>
 </section>

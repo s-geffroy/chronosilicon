@@ -224,6 +224,9 @@ test('V3 simulation: dependent vs independent reads, capacity, critical path, ex
   await expect(page.getByTestId('sim-critical')).toHaveText('r1 → r2 → r3 → r4 → r5 → r6 → r7 → r8');
   await page.getByTestId('sim-select').selectOption('sc-dram-independent-reads');
   await expect(page.getByTestId('sim-makespan')).toHaveText('160 ns');
+  await page.getByTestId('sim-capacity').fill('100');
+  await page.getByTestId('sim-capacity').press('Enter');
+  await expect(page.getByTestId('sim-capacity')).toHaveValue('4'); // rejected value is not displayed
   await page.getByTestId('sim-capacity').fill('1');
   await page.getByTestId('sim-capacity').press('Enter');
   await expect(page.getByTestId('sim-makespan')).toHaveText('640 ns');
@@ -233,8 +236,10 @@ test('V3 simulation: dependent vs independent reads, capacity, critical path, ex
   await expect(page.getByTestId('sim-makespan')).toHaveText('640 ns');
   const [dl] = await Promise.all([page.waitForEvent('download'), page.getByTestId('sim-export').click()]);
   const json = JSON.parse(readFileSync((await dl.path())!, 'utf8'));
-  expect(json.scenarioId).toBe('sc-dram-independent-reads');
-  expect(json.makespan).toBe('640000000'); // femtoseconds, decimal string
+  expect(json.result.scenarioId).toBe('sc-dram-independent-reads');
+  expect(json.result.makespan).toBe('640000000'); // femtoseconds, decimal string
+  expect(json.corpusVersion).toMatch(/^0\.3\.0\+/);
+  expect(json.capacity).toBe(1);
 });
 
 test('V4 immersion: journal derived from the simulated events, labelled as a metaphor', async ({ page }) => {
@@ -260,4 +265,13 @@ test('V5 laboratory: browser measurement labelled as such, raw samples exported;
   expect(json.samples.length).toBe(json.summary.n);
   expect(json.samples.every((x: number) => Number.isFinite(x) && x > 0)).toBe(true);
   expect(json.summary.quantiles[0].value).toBeLessThanOrEqual(json.summary.quantiles[2].value);
+});
+
+test('no horizontal page overflow on any view (responsive)', async ({ page }) => {
+  for (const r of ['timeline', 'converter', 'architecture', 'observers', 'simulation', 'immersion', 'comparison', 'laboratory', 'about']) {
+    await page.goto(`./#/${r}?lang=fr`);
+    await expect(page.locator('main h1')).toBeVisible();
+    const [sw, cw] = await page.evaluate(() => [document.documentElement.scrollWidth, document.documentElement.clientWidth]);
+    expect(sw, r).toBeLessThanOrEqual(cw);
+  }
 });

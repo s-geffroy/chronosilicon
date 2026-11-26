@@ -66,29 +66,53 @@ describe('analytic scenarios', () => {
 
 describe('invariants', () => {
   const rnd = (seed: number) => { let s = seed; return () => ((s = (s * 1103515245 + 12345) % 2 ** 31) / 2 ** 31); };
-  it('causality and resource conservation on random DAGs', () => {
+  it('causality (with lag and release), reconstructed occupancy and work conservation on random DAGs', () => {
     const r = rnd(7);
-    for (let n = 0; n < 50; n++) {
+    for (let n = 0; n < 60; n++) {
       const ts: Task[] = [];
       for (let i = 0; i < 20; i++) {
         const deps = ts.filter(() => r() < 0.15).map((t) => after(t.id, r() < 0.3 ? r() * 1e-6 : 0));
-        ts.push(task(`t${i}`, 10 ** (-9 + r() * 6), { resourceId: r() < 0.7 ? (r() < 0.5 ? 'cpu' : 'io') : null, dependencies: deps, priority: Math.floor(r() * 3) }));
+        ts.push(task(`t${i}`, 10 ** (-9 + r() * 6), {
+          resourceId: r() < 0.7 ? (r() < 0.5 ? 'cpu' : 'io') : null, dependencies: deps, priority: Math.floor(r() * 3),
+          ...(r() < 0.2 ? { releaseSeconds: r() * 1e-5 } : {}),
+        }));
       }
+      const caps: Record<string, number> = { cpu: 2, io: 1 };
       const res = simulate(scen(ts, [{ id: 'cpu', kind: 'cpu', capacity: 2 }, { id: 'io', kind: 'storage', capacity: 1 }]));
       for (const t of ts) {
         const tr = res.tasks.get(t.id)!;
         expect(tr.start! >= tr.ready!).toBe(true);
-        for (const d of t.dependencies) expect(tr.start! >= res.tasks.get(d.predecessor)!.end!).toBe(true);
+        if (t.releaseSeconds !== undefined) expect(tr.start! >= fs(t.releaseSeconds)).toBe(true);
+        // causality includes the lag
+        for (const d of t.dependencies) expect(tr.start! >= res.tasks.get(d.predecessor)!.end! + fs(d.lagSeconds)).toBe(true);
+        // work conservation: each task runs exactly its fixed duration
+        expect(tr.end! - tr.start!).toBe(fs((t.duration as { seconds: number }).seconds));
       }
-      for (const u of res.resources) expect(u.maxConcurrent).toBeLessThanOrEqual(u.capacity);
-      // busy integral equals the sum of durations of tasks on the resource
-      for (const u of res.resources) {
-        const sum = ts.filter((t) => t.resourceId === u.id).reduce((a, t) => a + res.tasks.get(t.id)!.duration, 0n);
-        expect(u.busy).toBe(sum);
+      // occupancy reconstructed from the task intervals, independently of the engine counters
+      for (const [rid, cap] of Object.entries(caps)) {
+        const iv = ts.filter((t) => t.resourceId === rid).map((t) => res.tasks.get(t.id)!);
+        const points = [...new Set(iv.map((x) => x.start!))];
+        for (const p of points) expect(iv.filter((x) => x.start! <= p && x.end! > p).length).toBeLessThanOrEqual(cap);
       }
-      // monotone event times
       for (let i = 1; i < res.events.length; i++) expect(res.events[i]!.time >= res.events[i - 1]!.time).toBe(true);
     }
+  });
+  it('critical path follows the binding constraint (resource wait vs dependency)', () => {
+    // a (1 s) and b (3 s) share a capacity-1 resource; c depends on a only, d waits for the resource.
+    const r = simulate(scen([
+      task('b', 3, { resourceId: 'x', priority: 0 }),
+      task('a', 1, { resourceId: 'x', priority: 1 }),
+      task('c', 0.5, { dependencies: [after('a')] }),
+    ], [{ id: 'x', kind: 'cpu', capacity: 1 }]));
+    // b runs 0–3, a waits for the resource and runs 3–4, c runs 4–4.5: path b → a → c
+    expect(r.tasks.get('a')!.start).toBe(fs(3));
+    expect(r.makespan).toBe(fs(4.5));
+    expect(r.criticalPath).toEqual(['b', 'a', 'c']);
+  });
+  it('release time delays the start', () => {
+    const r = simulate(scen([task('a', 1, { releaseSeconds: 2 })]));
+    expect(r.tasks.get('a')!.start).toBe(fs(2));
+    expect(r.makespan).toBe(fs(3));
   });
   it('simultaneous events are ordered deterministically (priority, then declaration order)', () => {
     const ts = [task('b', 1, { resourceId: 'c', priority: 1 }), task('a', 1, { resourceId: 'c', priority: 0 }), task('d', 1, { resourceId: 'c', priority: 1 })];
@@ -97,13 +121,15 @@ describe('invariants', () => {
     expect(starts).toEqual(['a', 'b', 'd']);
     expect(serializeResult(simulate(scen(ts, [{ id: 'c', kind: 'cpu', capacity: 1 }])))).toBe(serializeResult(r));
   });
-  it('seed reproducibility with sourced empirical samples', () => {
-    const t = (id: string): Task => ({ ...task(id, 0), duration: { kind: 'empirical', samplesSeconds: [1e-6, 2e-6, 3e-6, 4e-6], measurementId: 'fixture' } });
-    const a = simulate(scen([t('x'), t('y'), t('z')], [], { seed: 42 }));
-    const b = simulate(scen([t('x'), t('y'), t('z')], [], { seed: 42 }));
-    const c = simulate(scen([t('x'), t('y'), t('z')], [], { seed: 43 }));
-    expect(serializeResult(a)).toBe(serializeResult(b));
-    expect([a, c].map((r) => [...r.tasks.values()].map((x) => x.duration).join())).not.toEqual(['', '']);
+  it('seed: same seed → identical draws; different seeds → different draws (discriminant)', () => {
+    const samples = [1e-6, 2e-6, 3e-6, 4e-6];
+    const t = (id: string): Task => ({ ...task(id, 0), duration: { kind: 'empirical', samplesSeconds: samples, measurementId: 'fixture' } });
+    const ts = Array.from({ length: 24 }, (_, i) => t(`x${i}`));
+    const draws = (seed: number) => [...simulate(scen(ts, [], { seed })).tasks.values()].map((x) => x.duration);
+    expect(draws(42)).toEqual(draws(42));
+    expect(draws(42)).not.toEqual(draws(43));
+    // every draw is one of the sourced samples (no invented value)
+    for (const d of draws(42)) expect(samples.map(fs)).toContain(d);
   });
   it('cancellation stops the task and cascades to dependents', () => {
     const r = simulate(scen([task('a', 10, { cancelAtSeconds: 2, resourceId: 'n' }), task('b', 1, { dependencies: [after('a')] }), task('c', 1, { resourceId: 'n' })], [{ id: 'n', kind: 'network', capacity: 1 }]));
@@ -123,6 +149,16 @@ describe('rejections', () => {
   it('unknown references, bad capacity, negative lag', () => {
     const e = validateScenario(scen([task('a', 1, { resourceId: 'zz', dependencies: [after('nope', -1)] })], [{ id: 'r', kind: 'cpu', capacity: 0 }])).join();
     expect(e).toMatch(/unknown resource/); expect(e).toMatch(/unknown predecessor/); expect(e).toMatch(/negative/); expect(e).toMatch(/capacity/);
+  });
+  it('rejects duplicate resources, NaN priority, negative cancellation, invalid maxEvents', () => {
+    const e = validateScenario(scen([task('a', 1, { priority: NaN, cancelAtSeconds: -1 })],
+      [{ id: 'r', kind: 'cpu', capacity: 1 }, { id: 'r', kind: 'cpu', capacity: 2 }], { maxEvents: NaN })).join();
+    expect(e).toMatch(/duplicate resource/); expect(e).toMatch(/priority/); expect(e).toMatch(/cancellation/); expect(e).toMatch(/maxEvents/);
+  });
+  it('long cancellation cascades do not overflow the stack', () => {
+    const ts = Array.from({ length: 20_000 }, (_, i) => task(`t${i}`, 1, i ? { dependencies: [after(`t${i - 1}`)] } : { cancelAtSeconds: 0.5 }));
+    const r = simulate(scen(ts, [], { maxEvents: 100_000 }));
+    expect([...r.tasks.values()].every((x) => x.status === 'cancelled')).toBe(true);
   });
   it('event limit', () => {
     const ts = Array.from({ length: 100 }, (_, i) => task(`t${i}`, 1));
