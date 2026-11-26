@@ -39,7 +39,7 @@
         <dt>{t('sheet.subjective', { f: formatFrequency(app.s.frequencyHz, lang) })}</dt>
         <dd>
           <strong>{formatCalendar(sub.subjectiveSeconds, lang)}</strong>
-          <span class="help">{t('sheet.cycles', { n: formatNumber(sub.referenceUnits, lang) })}</span>
+          <span class="help">{t('sheet.cycles', { n: formatNumber(sub.referenceUnits, lang, 6) })}</span>
         </dd>
         {#if level === 'explore'}
           <dd class="analogy">{t('sheet.analogy', { t: formatCalendar(sub.subjectiveSeconds, lang) })}</dd>

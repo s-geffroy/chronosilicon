@@ -44,3 +44,15 @@ export function formatFrequency(hz: number, lang: Lang): string {
 export function formatValue(value: number, unit: string, lang: Lang): string {
   return `${formatNumber(value, lang, 6)} ${unit}`;
 }
+
+/** Compact single-unit label for axis ticks, e.g. "2,8 h", "317 a" (narrow units). */
+export function formatCalendarShort(seconds: number, lang: Lang): string {
+  const [first] = calendarParts(seconds);
+  if (!first) return '0 s';
+  const size: Record<CalendarUnit, number> = { year: 365.25 * 86_400, day: 86_400, hour: 3600, minute: 60, second: 1 };
+  const v = seconds / size[first.unit];
+  if (first.unit === 'year' && v >= 1e4) {
+    return `${new Intl.NumberFormat(LOCALE[lang], { notation: 'compact', maximumSignificantDigits: 2 }).format(v)} ${lang === 'fr' ? 'a' : 'y'}`;
+  }
+  return new Intl.NumberFormat(LOCALE[lang], { style: 'unit', unit: INTL_UNIT[first.unit], unitDisplay: 'narrow', maximumSignificantDigits: 2 }).format(v);
+}

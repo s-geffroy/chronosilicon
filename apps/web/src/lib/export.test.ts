@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { csvEscape } from './export';
-import { formatCalendar, formatPhysicalDuration } from './format';
+import { formatCalendar, formatCalendarShort, formatPhysicalDuration } from './format';
 
 describe('CSV escaping', () => {
   it('quotes separators and doubles quotes', () => {
@@ -26,5 +26,11 @@ describe('display formatting', () => {
     expect(formatCalendar(13342.56, 'en')).toBe('3 hours 42 minutes');
     expect(n(formatCalendar(13342.56, 'fr'))).toBe('3 heures 42 minutes');
     expect(formatCalendar(4e9, 'en')).toBe('126 years 274 days');
+  });
+  it('axis ticks use one compact unit', () => {
+    expect(formatCalendarShort(1e4, 'en')).toBe('2.8h');
+    expect(formatCalendarShort(1e10, 'fr')).toBe('320a');
+    expect(formatCalendarShort(1e16, 'en')).toBe('320m y');
+    expect(formatCalendarShort(30, 'en')).toBe('30s');
   });
 });

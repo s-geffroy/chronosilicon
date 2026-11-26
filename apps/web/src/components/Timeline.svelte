@@ -5,7 +5,7 @@
   import { app } from '../lib/app.svelte';
   import { corpus, phenomenonOf } from '../lib/corpus';
   import { PROVENANCES } from '../lib/url-state';
-  import { formatCalendar, formatPhysicalDuration, formatValue } from '../lib/format';
+  import { formatCalendar, formatCalendarShort, formatPhysicalDuration, formatValue } from '../lib/format';
   import ObserverControl from './ObserverControl.svelte';
   import ExportPanel from './ExportPanel.svelte';
 
@@ -49,8 +49,11 @@
     for (let e = Math.round(Math.log10(d0)); e <= Math.round(Math.log10(d1)); e += step) out.push(10 ** e);
     return out;
   });
-  const tickLabel = (v: number) => (app.s.axis === 'physical' ? formatPhysicalDuration(v, lang) : formatCalendar(v, lang));
-  const fmtAxis = (seconds: number) => tickLabel(axisValue(seconds));
+  const tickLabel = (v: number) => (app.s.axis === 'physical' ? formatPhysicalDuration(v, lang) : formatCalendarShort(v, lang));
+  const fmtAxis = (seconds: number) => {
+    const v = axisValue(seconds);
+    return app.s.axis === 'physical' ? formatPhysicalDuration(v, lang) : formatCalendar(v, lang);
+  };
 
   function toggle<T extends string>(list: readonly T[], all: readonly T[], item: T): T[] | null {
     const next = list.includes(item) ? list.filter((x) => x !== item) : [...list, item];
@@ -84,7 +87,7 @@
     </fieldset>
   </div>
 
-  <details class="filters" open>
+  <details class="filters">
     <summary>{t('filter.domains')} · {t('filter.provenance')}</summary>
     <fieldset>
       <legend>{t('filter.domains')}</legend>
