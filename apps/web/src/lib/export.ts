@@ -49,9 +49,10 @@ const CSV_COLUMNS = [
 
 export function csvEscape(v: unknown): string {
   if (v === null || v === undefined) return '';
+  if (typeof v === 'number') return String(v);
   const s = String(v);
-  // Neutralise spreadsheet formula injection, then quote.
-  const safe = /^[=+\-@\t\r]/.test(s) && !/^-?\d/.test(s) ? `'${s}` : s;
+  // Neutralise spreadsheet formula injection (any string starting with = + - @ tab CR), then quote.
+  const safe = /^[=+\-@\t\r]/.test(s) ? `'${s}` : s;
   return /[",\n\r;]/.test(safe) ? `"${safe.replace(/"/g, '""')}"` : safe;
 }
 

@@ -4,16 +4,24 @@
   const t = app.t;
   let ghz = $state(String(app.s.frequencyHz / 1e9));
   let invalid = $state(false);
+  /** Last frequency this field committed: external URL changes differ from it. */
+  let committedHz = app.s.frequencyHz;
   $effect(() => {
-    // keep the field in sync when the URL changes elsewhere
-    const current = app.s.frequencyHz / 1e9;
-    if (Number(ghz.replace(',', '.')) !== current) ghz = String(current);
+    const hz = app.s.frequencyHz;
+    if (hz !== committedHz) {
+      committedHz = hz;
+      ghz = String(hz / 1e9);
+      invalid = false;
+    }
   });
   function commit(v: string) {
     ghz = v;
-    const x = Number(v.replace(',', '.'));
-    invalid = !(Number.isFinite(x) && x > 0 && x <= 1e6);
-    if (!invalid) app.set({ frequencyHz: x * 1e9 });
+    const x = Number(v.trim().replace(',', '.'));
+    invalid = !(v.trim() !== '' && Number.isFinite(x) && x > 0 && x <= 1e6);
+    if (!invalid) {
+      committedHz = x * 1e9;
+      app.set({ frequencyHz: committedHz });
+    }
   }
 </script>
 

@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "corpusVersion": "0.1.0+11bfebf0cf0f",
+  "corpusVersion": "0.1.0+e006fbeb9783",
   "inputs": {
-    "data/sources/sources.json": "1ec44a613ea3529e448867946956eebcd734cb2a449d79aea79ce62905612fd7",
+    "data/sources/sources.json": "6493c97ea5fc1b8b1630cd51ea2b55988a86177a6cb403212ab9ef896cc3f709",
     "data/curated/phenomena.json": "8af7bf6aa069afdd199855956b165c7f61c218df478d504817175afa24e61b14",
-    "data/curated/measurements.json": "049d8b8e058b43bc238ef1d96a34743c2a8051e28a4bfabed516a5429b512e62"
+    "data/curated/measurements.json": "6ddbf6275370423158cddd612c08acb0c6219e0269325a10625a4726f2333011"
   },
   "phenomena": [
     {
@@ -2265,7 +2265,7 @@
         "fr": "RTT médian (P50) mesuré par sondes sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de East US vers West Europe (85 ms en sens inverse).",
         "en": "Median (P50) RTT from probes on the Azure backbone, 30-day window ending 30 July 2026; East US to West Europe (85 ms in reverse)."
       },
-      "protocol": "As reported by the source: Median (P50) RTT from probes on the Azure backbone, 30-day window ending 30 July 2026; East US to West Europe (85 ms in reverse).",
+      "protocol": "Azure backbone round-trip probes between region pairs; statistic: median (P50) over a 30-day window ending 2026-07-30. Not stated by the source: sample count, probe type, quantile method.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2278,7 +2278,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-westeurope",
-      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: 'The measurements are collected in 1-minute intervals'. | Verifier: 'Virginia' and 'Netherlands' are not stated on the page.",
+      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: 'The measurements are collected in 1-minute intervals'. | Verifier: 'Virginia' and 'Netherlands' are not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.083,
       "lowSI": null,
@@ -2296,7 +2296,7 @@
         "fr": "RTT médian (P50) sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de East US vers West US.",
         "en": "Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; East US to West US."
       },
-      "protocol": "As reported by the source: Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; East US to West US.",
+      "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2309,7 +2309,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-westus",
-      "notes": "Columns: West Central US, West US, West US 2, West US 3.",
+      "notes": "Columns: West Central US, West US, West US 2, West US 3. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.069,
       "lowSI": null,
@@ -2327,7 +2327,7 @@
         "fr": "RTT médian (P50) sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de West Europe vers France Central.",
         "en": "Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; West Europe to France Central."
       },
-      "protocol": "As reported by the source: Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; West Europe to France Central.",
+      "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2340,7 +2340,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-westeurope-francecentral",
-      "notes": "Columns: Belgium Central, France Central, France South, Spain Central, Switzerland North, Switzerland West, West Europe. | Verifier: 'Amsterdam area to Paris area' not stated on the page.",
+      "notes": "Columns: Belgium Central, France Central, France South, Spain Central, Switzerland North, Switzerland West, West Europe. | Verifier: 'Amsterdam area to Paris area' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.013000000000000001,
       "lowSI": null,
@@ -2358,7 +2358,7 @@
         "fr": "RTT médian (P50) sur le réseau dorsal Azure, fenêtre de 30 jours close le 30 juillet 2026 ; de East US vers Australia East.",
         "en": "Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; East US to Australia East."
       },
-      "protocol": "As reported by the source: Median (P50) RTT on the Azure backbone, 30-day window ending 30 July 2026; East US to Australia East.",
+      "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2371,7 +2371,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-australiaeast",
-      "notes": "Columns: Australia Central, Australia Central 2, Australia East, Australia Southeast, New Zealand North. | Verifier: 'Virginia to New South Wales' not stated on the page.",
+      "notes": "Columns: Australia Central, Australia Central 2, Australia East, Australia Southeast, New Zealand North. | Verifier: 'Virginia to New South Wales' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.201,
       "lowSI": null,
@@ -2389,7 +2389,7 @@
         "fr": "Échantillon de 1 469 adultes de 18 à 65 ans ; stimuli visuels latéralisés, réponse à la souris avec l'index dominant ; 231 ms brut, 213 ms après correction des délais matériels (17,8 ms).",
         "en": "Sample of 1,469 adults aged 18-65; lateralised visual stimuli, mouse press with dominant index finger; 231 ms raw, 213 ms corrected for hardware delays (17.8 ms)."
       },
-      "protocol": "As reported by the source: Sample of 1,469 adults aged 18-65; lateralised visual stimuli, mouse press with dominant index finger; 231 ms raw, 213 ms corrected for hardware delays (17.8 ms).",
+      "protocol": "Woods et al. 2015: n = 1469 adults (18-65 y); lateralised visual stimuli; response = mouse press with dominant index finger; value = sample mean corrected for 17.8 ms hardware delay (raw 231 ms).",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2402,7 +2402,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-simple-visual-reaction-time",
-      "notes": "Mean of subject means; Experiment 2 (n=189, ages 18-82, other lab) was about 7 ms slower. Latency rises with age.",
+      "notes": "Mean of subject means; Experiment 2 (n=189, ages 18-82, other lab) was about 7 ms slower. Latency rises with age. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.213,
       "lowSI": null,
@@ -2420,7 +2420,7 @@
         "fr": "Même échantillon ; estimé en soustrayant du temps de réaction le temps d'initiation du mouvement mesuré par un test de tapotement.",
         "en": "Same sample; estimated by subtracting finger-tapping movement-initiation time from SRT."
       },
-      "protocol": "As reported by the source: Same sample; estimated by subtracting finger-tapping movement-initiation time from SRT.",
+      "protocol": "Woods et al. 2015, same sample (n = 1469): detection time estimated as simple reaction time minus finger-tapping movement-initiation time (derived by the authors).",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2433,7 +2433,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stimulus-detection-time",
-      "notes": "Model-dependent subtraction method. | Verifier: Derived quantity from measured data; 'measured' acceptable given the conditions disclose the subtraction.",
+      "notes": "Model-dependent subtraction method. | Verifier: Derived quantity from measured data; 'measured' acceptable given the conditions disclose the subtraction. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.131,
       "lowSI": null,
@@ -2451,7 +2451,7 @@
         "fr": "Clignements volontaires (non spontanés) ; 25 volontaires sains (11 hommes, 14 femmes) de 25 à 63 ans ; vidéo rapide à 600 images/s.",
         "en": "Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 men, 14 women) aged 25-63; high-speed video at 600 fps."
       },
-      "protocol": "As reported by the source: Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 men, 14 women) aged 25-63; high-speed video at 600 fps.",
+      "protocol": "Kwon et al. 2013: n = 25 healthy volunteers (25-63 y); voluntary blinks filmed with high-speed video at 600 fps; mean reported (± 25 ms, dispersion statistic not specified in text).",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2464,7 +2464,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-voluntary-blink-duration",
-      "notes": "Spontaneous blinks are generally reported as shorter, but no source for that was consulted here: do not use 572 ms as 'a blink' without the word 'voluntary'. | Verifier: Read via WebFetch (PMC HTML; curl got a reCAPTCHA page). Values confirmed; only the s.e. attribution of ±25 is an inference.",
+      "notes": "Spontaneous blinks are generally reported as shorter, but no source for that was consulted here: do not use 572 ms as 'a blink' without the word 'voluntary'. | Verifier: Read via WebFetch (PMC HTML; curl got a reCAPTCHA page). Values confirmed; only the s.e. attribution of ±25 is an inference. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.5720000000000001,
       "lowSI": null,
@@ -2482,7 +2482,7 @@
         "fr": "Même étude : 25 volontaires, 600 images/s ; moyenne ± 2 ms (erreur type).",
         "en": "Same study: 25 volunteers, 600 fps; mean ± 2 ms (s.e.)."
       },
-      "protocol": "As reported by the source: Same study: 25 volunteers, 600 fps; mean ± 2 ms (s.e.).",
+      "protocol": "Kwon et al. 2013, same protocol (n = 25, 600 fps video); closing-phase duration, mean ± s.e.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2495,7 +2495,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-voluntary-blink-closing-phase",
-      "notes": "Quote is the WebFetch rendering of a table cell (label + value), not a running-text sentence. | Verifier: Quote is a table-cell reconstruction, as disclosed.",
+      "notes": "Quote is the WebFetch rendering of a table cell (label + value), not a running-text sentence. | Verifier: Quote is a table-cell reconstruction, as disclosed. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.076,
       "lowSI": null,
@@ -2513,7 +2513,7 @@
         "fr": "Lumière modulée spatialement uniforme ; 10 sujets ; projecteur DLP ; la sensibilité tombe à zéro vers 65 Hz.",
         "en": "Spatially uniform modulated light; 10 subjects; DLP projector; sensitivity drops to zero near 65 Hz."
       },
-      "protocol": "As reported by the source: Spatially uniform modulated light; 10 subjects; DLP projector; sensitivity drops to zero near 65 Hz.",
+      "protocol": "Davis et al. 2015: n = 10 subjects; spatially uniform modulated light from a DLP projector; frequency at which flicker sensitivity falls to zero.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2526,7 +2526,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-flicker-fusion-uniform",
-      "notes": "Small sample; 'near' is approximate. Classic CFF depends on luminance, eccentricity and contrast. | Verifier: Read via Europe PMC full-text XML (official equivalent of the PMC article; PMC HTML returned reCAPTCHA to curl).",
+      "notes": "Small sample; 'near' is approximate. Classic CFF depends on luminance, eccentricity and contrast. | Verifier: Read via Europe PMC full-text XML (official equivalent of the PMC article; PMC HTML returned reCAPTCHA to curl). | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "frequency",
       "valueSI": 65,
       "lowSI": null,
@@ -2544,7 +2544,7 @@
         "fr": "Lumière modulée comportant un bord net ; 10 sujets dont deux auteurs ; observateur médian ; plusieurs sujets voient encore des artefacts au-delà de 800 Hz.",
         "en": "Modulated light with a sharp spatial edge; 10 subjects including two authors; median viewer; several subjects still saw artefacts above 800 Hz."
       },
-      "protocol": "As reported by the source: Modulated light with a sharp spatial edge; 10 subjects including two authors; median viewer; several subjects still saw artefacts above 800 Hz.",
+      "protocol": "Davis et al. 2015: n = 10 subjects (two of them authors); modulated light with a sharp spatial edge; median viewer's highest frequency at which artefacts are visible.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2557,7 +2557,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-flicker-artifact-edge-median",
-      "notes": "n=10, two subjects are authors; single study, not replicated in the sources consulted. 'high' is a lower bound for some viewers, not a maximum. | Verifier: high=800 is not an upper bound of a range (some viewers exceed it): set high to null. Eye-movement mechanism is a hypothesis in the source.",
+      "notes": "n=10, two subjects are authors; single study, not replicated in the sources consulted. 'high' is a lower bound for some viewers, not a maximum. | Verifier: high=800 is not an upper bound of a range (some viewers exceed it): set high to null. Eye-movement mechanism is a hypothesis in the source. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "frequency",
       "valueSI": 500,
       "lowSI": null,
@@ -2575,7 +2575,7 @@
         "fr": "16 adultes naïfs (24-52 ans) ; système de stylet à 1 ms de latence de base ; seuil par procédure adaptative PEST ; glisser avec une grande boîte (20 × 20 mm) autour de la pointe.",
         "en": "16 naive adults (24-52 y); stylus system with 1 ms baseline latency; threshold by PEST adaptive procedure; dragging with a large (20 × 20 mm) box around the nib."
       },
-      "protocol": "As reported by the source: 16 naive adults (24-52 y); stylus system with 1 ms baseline latency; threshold by PEST adaptive procedure; dragging with a large (20 × 20 mm) box around the nib.",
+      "protocol": "Ng et al. CHI 2014: n = 16 naive adults; 1 ms baseline stylus system; just-noticeable latency difference estimated by PEST adaptive staircase; dragging task with large box; median across participants.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2588,7 +2588,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stylus-latency-jnd-large-box",
-      "notes": "Internal inconsistency: the running text gives 'range 2 - 7' for the large box and '2 - 16' for the small box, opposite to the figure captions. Median values are consistent. | Verifier: Range inconsistency between text and captions confirmed as described.",
+      "notes": "Internal inconsistency: the running text gives 'range 2 - 7' for the large box and '2 - 16' for the small box, opposite to the figure captions. Median values are consistent. | Verifier: Range inconsistency between text and captions confirmed as described. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.006,
       "lowSI": 0.002,
@@ -2606,7 +2606,7 @@
         "fr": "Même étude, 16 participants ; petite boîte (6,25 × 6,25 mm) autour de la pointe ; latence de base 1 ms.",
         "en": "Same study, 16 participants; small (6.25 × 6.25 mm) box around the nib; 1 ms baseline."
       },
-      "protocol": "As reported by the source: Same study, 16 participants; small (6.25 × 6.25 mm) box around the nib; 1 ms baseline.",
+      "protocol": "Ng et al. CHI 2014: same protocol (n = 16, PEST, 1 ms baseline), dragging task with small box; median across participants.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2619,7 +2619,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stylus-latency-jnd-small-box",
-      "notes": "Abstract: '~1 versus 2 milliseconds while dragging'. Same range inconsistency as above.",
+      "notes": "Abstract: '~1 versus 2 milliseconds while dragging'. Same range inconsistency as above. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.002,
       "lowSI": 0.002,
@@ -2637,7 +2637,7 @@
         "fr": "Même étude, 16 participants ; tâche de gribouillage avec une latence de base de 7 ms.",
         "en": "Same study, 16 participants; scribbling task with a 7 ms baseline latency."
       },
-      "protocol": "As reported by the source: Same study, 16 participants; scribbling task with a 7 ms baseline latency.",
+      "protocol": "Ng et al. CHI 2014: same protocol (n = 16, PEST), scribbling task with 7 ms baseline; median across participants.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -2650,7 +2650,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stylus-latency-jnd-scribbling",
-      "notes": "Quote joined across a line break in the PDF.",
+      "notes": "Quote joined across a line break in the PDF. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.04,
       "lowSI": 0.01,
@@ -3257,7 +3257,7 @@
         "fr": "Alder Lake-P ; forme registre-registre ; débit mesuré de 0,20 cycle par instruction.",
         "en": "Alder Lake-P; register-register form; measured throughput 0.20 cycles per instruction."
       },
-      "protocol": "As reported by the source: Alder Lake-P; register-register form; measured throughput 0.20 cycles per instruction.",
+      "protocol": "uops.info automated microbenchmarks executed on an Alder Lake-P CPU (latency of a dependency chain through the register operand). Sample count, frequency and OS not extracted.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -3270,7 +3270,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-add-r64-latency-alderlake-p",
-      "notes": "Zen 4 and Zen 5 also give 1 cycle on the same page. | Verifier: 'Golden Cove P-core' retiré : la page ne nomme pas le cœur.",
+      "notes": "Zen 4 and Zen 5 also give 1 cycle on the same page. | Verifier: 'Golden Cove P-core' retiré : la page ne nomme pas le cœur. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "cycle_count",
       "valueSI": 1,
       "lowSI": null,
@@ -3288,7 +3288,7 @@
         "fr": "Alder Lake-P ; multiplication 64 bits à deux opérandes registres ; débit 1,00.",
         "en": "Alder Lake-P; 64-bit two-operand register multiply; throughput 1.00."
       },
-      "protocol": "As reported by the source: Alder Lake-P; 64-bit two-operand register multiply; throughput 1.00.",
+      "protocol": "uops.info automated microbenchmarks on Alder Lake-P (dependency-chain latency). Sample count, frequency and OS not extracted.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -3301,7 +3301,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-imul-r64-latency-alderlake-p",
-      "notes": "Same value (3) measured on Skylake, Zen 4 and Zen 5, and documented by AMD (Zen 4 SOG §2.10: '64 bits × 64 bits with 3 cycle latency').",
+      "notes": "Same value (3) measured on Skylake, Zen 4 and Zen 5, and documented by AMD (Zen 4 SOG §2.10: '64 bits × 64 bits with 3 cycle latency'). | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "cycle_count",
       "valueSI": 3,
       "lowSI": null,
@@ -3319,7 +3319,7 @@
         "fr": "Alder Lake-P ; division non signée 128/64 bits ; 14 à 18 cycles selon le couple opérande-résultat ; débit mesuré de 10 cycles.",
         "en": "Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand-result pair; measured throughput 10 cycles."
       },
-      "protocol": "As reported by the source: Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand-result pair; measured throughput 10 cycles.",
+      "protocol": "uops.info automated microbenchmarks on Alder Lake-P; latency varies with operand values (14-18 cycles); lower bound retained. Sample count not extracted.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -3332,7 +3332,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-div-r64-latency-alderlake-p",
-      "notes": "The quote joins two consecutive entries with '...'.",
+      "notes": "The quote joins two consecutive entries with '...'. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "cycle_count",
       "valueSI": 14,
       "lowSI": 14,
@@ -3350,7 +3350,7 @@
         "fr": "Skylake ; latence dépendant des valeurs des opérandes : 35 à 90 cycles pour l'opérande 1 vers 2, 32 à 88 pour les autres couples des opérandes 1 et 2, 5 à 75 pour l'opérande 3 ; microcodée (32 µops MS).",
         "en": "Skylake; latency depends on operand values: 35-90 cycles for operand 1→2, 32-88 for the other operand 1/2 pairs, 5-75 for operand 3; microcoded (32 MS uops)."
       },
-      "protocol": "As reported by the source: Skylake; latency depends on operand values: 35-90 cycles for operand 1→2, 32-88 for the other operand 1/2 pairs, 5-75 for operand 3; microcoded (32 MS uops).",
+      "protocol": "uops.info automated microbenchmarks on Skylake; latency depends on operand values (ranges per operand pair given in conditions). Sample count not extracted.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -3363,7 +3363,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-div-r64-latency-skylake",
-      "notes": "uops.info gives bounds, not a single value; 'value' is the lower bound of the main entry. The contrast with Ice Lake/Alder Lake (14-18) is the useful point. | Verifier: 'other pairs 32-87' inexact (1→3 vaut 34-88). low=32 exclut l'opérande 3 (5-75) ; le dire explicitement.",
+      "notes": "uops.info gives bounds, not a single value; 'value' is the lower bound of the main entry. The contrast with Ice Lake/Alder Lake (14-18) is the useful point. | Verifier: 'other pairs 32-87' inexact (1→3 vaut 34-88). low=32 exclut l'opérande 3 (5-75) ; le dire explicitement. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "cycle_count",
       "valueSI": 35,
       "lowSI": 32,
@@ -3381,7 +3381,7 @@
         "fr": "AMD Zen 4 ; dépend des valeurs des opérandes ; 10 à 18 cycles (Agner Fog), 9 à 19 selon uops.info ; AMD : 8 cycles plus 1 par tranche de 9 bits de quotient.",
         "en": "AMD Zen 4; depends on operand values; 10-18 cycles (Agner Fog), 9-19 per uops.info; AMD: 8 cycles plus 1 per 9 bits of quotient."
       },
-      "protocol": "As reported by the source: AMD Zen 4; depends on operand values; 10-18 cycles (Agner Fog), 9-19 per uops.info; AMD: 8 cycles plus 1 per 9 bits of quotient.",
+      "protocol": "Agner Fog instruction tables: measurements with the author's test programs on AMD Zen 4; latency depends on operand values (10-18). Test details not extracted.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -3394,7 +3394,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-div-r64-latency-zen4",
-      "notes": "Two independent measurements (Agner Fog, uops.info) and AMD documentation agree on the order of magnitude. Agner columns: Ops=2, latency 10-18, reciprocal throughput 7-12.",
+      "notes": "Two independent measurements (Agner Fog, uops.info) and AMD documentation agree on the order of magnitude. Agner columns: Ops=2, latency 10-18, reciprocal throughput 7-12. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "cycle_count",
       "valueSI": 10,
       "lowSI": 10,
@@ -3660,7 +3660,7 @@
         "fr": "Bi-socket AMD EPYC 7702, CCX local, pointer chasing BenchIT x86-membench, fréquence nominale (2,0 GHz) soit 220 cycles, pages énormes transparentes, caches vidés.",
         "en": "Dual-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal frequency (2.0 GHz) i.e. 220 cycles, transparent huge pages, caches flushed."
       },
-      "protocol": "As reported by the source: Dual-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal frequency (2.0 GHz) i.e. 220 cycles, transparent huge pages, caches flushed.",
+      "protocol": "Velten et al. ICPE 2022: BenchIT x86-membench pointer chasing; dual-socket EPYC 7702 at nominal 2.0 GHz; local CCX memory; transparent huge pages; caches flushed before measurement.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -3673,7 +3673,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#dram-latency-epyc-7702-measured",
-      "notes": "The paper notes that the DIMMs, I/O p-states and uncore frequency influence the value. The quote joins two PDF lines.",
+      "notes": "The paper notes that the DIMMs, I/O p-states and uncore frequency influence the value. The quote joins two PDF lines. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 1.1e-7,
       "lowSI": null,
@@ -3691,7 +3691,7 @@
         "fr": "Bi-socket Xeon Gold 6248, même SNC, uncore fixé à 2400 MHz, préchargeurs matériels désactivés, pointer chasing BenchIT ; 200 cycles.",
         "en": "Dual-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled, BenchIT pointer chasing; 200 cycles."
       },
-      "protocol": "As reported by the source: Dual-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled, BenchIT pointer chasing; 200 cycles.",
+      "protocol": "Velten et al. ICPE 2022: BenchIT x86-membench pointer chasing; dual-socket Xeon Gold 6248, same SNC domain, uncore fixed at 2.4 GHz, hardware prefetchers disabled.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -3704,7 +3704,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#dram-latency-xeon-6248-measured",
-      "notes": "Other SNC: 86.4 ns (Table 3).",
+      "notes": "Other SNC: 86.4 ns (Table 3). | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 8e-8,
       "lowSI": null,
@@ -3722,7 +3722,7 @@
         "fr": "Carte Intel Alder, Pentium Pro 200 MHz, Linux 1.3.37 ; latence de lecture mémoire lmbench (chaîne de chargements à pas fixe).",
         "en": "Intel Alder board, Pentium Pro 200 MHz, Linux 1.3.37; lmbench memory read latency (strided load chain)."
       },
-      "protocol": "As reported by the source: Intel Alder board, Pentium Pro 200 MHz, Linux 1.3.37; lmbench memory read latency (strided load chain).",
+      "protocol": "McVoy & Staelin, lmbench (USENIX 1996): memory read latency by strided dependent load chain; Pentium Pro 200 MHz, Linux 1.3.37.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -3735,7 +3735,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#dram-latency-pentiumpro-lmbench-1995",
-      "notes": "The paper itself warns that some results were donated by users and recommends checking them; it says the clock rate was computed (footnote 3).",
+      "notes": "The paper itself warns that some results were donated by users and recommends checking them; it says the clock rate was computed (footnote 3). | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 1.79e-7,
       "lowSI": null,
@@ -3827,13 +3827,13 @@
       "uncertainty": null,
       "statistics": null,
       "calculation": {
-        "formula": "T = 1 / HZ = 1 / 1000 Hz = 1 ms; input: linux-config-hz-default (option HZ_1000)",
+        "formula": "T = 1 / HZ with HZ = 1000 (Kconfig option HZ_1000) = 1 ms",
         "inputs": [
-          "linux-config-hz-default-m1"
+          "src:src-linux-kconfig-hz"
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#linux-tick-period-hz1000",
-      "notes": "4 ms at HZ=250, 10 ms at HZ=100. Tickless kernels (NO_HZ) do not tick at a fixed rate.",
+      "notes": "4 ms at HZ=250, 10 ms at HZ=100. Tickless kernels (NO_HZ) do not tick at a fixed rate. | Decision: Input is the HZ_1000 Kconfig option (1000 Hz) documented in the cited Kconfig source, not the 250 Hz default item (review M-3).",
       "quantityKind": "duration",
       "valueSI": 0.001,
       "lowSI": null,
@@ -3944,7 +3944,7 @@
         "fr": "Linux 1.3.37, Pentium Pro 200 MHz ; écriture d'un mot dans /dev/null en boucle.",
         "en": "Linux 1.3.37, Pentium Pro 200 MHz; writing one word to /dev/null in a loop."
       },
-      "protocol": "As reported by the source: Linux 1.3.37, Pentium Pro 200 MHz; writing one word to /dev/null in a loop.",
+      "protocol": "lmbench (USENIX 1996): null system call measured as writing one word to /dev/null in a loop; Pentium Pro 200 MHz, Linux 1.3.37.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -3957,7 +3957,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#lmbench-null-syscall-linux-pentiumpro",
-      "notes": "Historical. No recent measurement with a published protocol was found within budget.",
+      "notes": "Historical. No recent measurement with a published protocol was found within budget. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.000003,
       "lowSI": null,
@@ -3975,7 +3975,7 @@
         "fr": "Linux 1.3.37, Pentium Pro 200 MHz ; 2 processus, jeu de travail de 0 Ko (18 µs à 32 Ko).",
         "en": "Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB)."
       },
-      "protocol": "As reported by the source: Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB).",
+      "protocol": "lmbench (USENIX 1996): context switch between 2 processes passing a token, 0 KB working set; Pentium Pro 200 MHz, Linux 1.3.37.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -3988,7 +3988,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#lmbench-context-switch-linux-pentiumpro",
-      "notes": "Historical.",
+      "notes": "Historical. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.000006,
       "lowSI": null,
@@ -4006,7 +4006,7 @@
         "fr": "Commutateur Rosetta, trafic RoCE depuis des cartes réseau standard ; différence entre latences à 2 sauts et à 1 saut ; moyenne et médiane ; distribution entre 300 et 400 ns hors quelques valeurs aberrantes.",
         "en": "Rosetta switch, RoCE traffic from standard NICs; 2-hop minus 1-hop latency; mean and median; distribution between 300 and 400 ns except a few outliers."
       },
-      "protocol": "As reported by the source: Rosetta switch, RoCE traffic from standard NICs; 2-hop minus 1-hop latency; mean and median; distribution between 300 and 400 ns except a few outliers.",
+      "protocol": "De Sensi et al. (Slingshot, SC 2020): switch latency computed as 2-hop minus 1-hop latency with RoCE traffic from standard NICs; mean and median reported; sample count not extracted.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -4019,7 +4019,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#slingshot-rosetta-switch-latency",
-      "notes": "n not given in the text. The quote joins PDF lines. HPC/interconnect: possible overlap with the network agent. | Verifier: L'extrait tronquait 'except for a few outliers', ce qui rendait low/high plus stricts que la source.",
+      "notes": "n not given in the text. The quote joins PDF lines. HPC/interconnect: possible overlap with the network agent. | Verifier: L'extrait tronquait 'except for a few outliers', ce qui rendait low/high plus stricts que la source. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 3.5000000000000004e-7,
       "lowSI": 3.0000000000000004e-7,
@@ -4659,7 +4659,7 @@
       "id": "frame-time-60hz-m1",
       "phenomenonId": "frame-time-60hz",
       "configuration": null,
-      "value": 16.667,
+      "value": 16.666666666666668,
       "unit": "ms",
       "low": null,
       "high": null,
@@ -4685,9 +4685,9 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#frame-time-60hz",
-      "notes": "Verifier: Calcul juste ; la remarque sur 59,94 Hz n'est pas dans la source.",
+      "notes": "Verifier: Calcul juste ; la remarque sur 59,94 Hz n'est pas dans la source. | Decision: Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
       "quantityKind": "duration",
-      "valueSI": 0.016667,
+      "valueSI": 0.01666666666666667,
       "lowSI": null,
       "highSI": null
     },
@@ -4695,7 +4695,7 @@
       "id": "frame-time-120hz-m1",
       "phenomenonId": "frame-time-120hz",
       "configuration": null,
-      "value": 8.333,
+      "value": 8.333333333333334,
       "unit": "ms",
       "low": null,
       "high": null,
@@ -4721,9 +4721,9 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#frame-time-120hz",
-      "notes": null,
+      "notes": "Decision: Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
       "quantityKind": "duration",
-      "valueSI": 0.008333,
+      "valueSI": 0.008333333333333335,
       "lowSI": null,
       "highSI": null
     },
@@ -5161,11 +5161,11 @@
       "calculation": {
         "formula": "7200 rev/min / 60 s/min = 120 rev/s = 120 Hz; input: documented 7,200 RPM (this source)",
         "inputs": [
-          "const:documented-in-cited-source"
+          "src:src-seagate-exos-x20"
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#exos-x20-spindle-frequency",
-      "notes": "Only conversion RPM -> Hz; unit enum has no RPM.",
+      "notes": "Only conversion RPM -> Hz; unit enum has no RPM. | Decision: Input is the 7200 RPM documented in the cited Seagate data sheet (review M-2).",
       "quantityKind": "frequency",
       "valueSI": 120,
       "lowSI": null,
@@ -5206,7 +5206,7 @@
       "id": "hdd-7200rpm-half-rotation-m1",
       "phenomenonId": "hdd-7200rpm-half-rotation",
       "configuration": null,
-      "value": 4.1667,
+      "value": 4.166666666666667,
       "unit": "ms",
       "low": null,
       "high": null,
@@ -5232,9 +5232,9 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdd-7200rpm-half-rotation",
-      "notes": null,
+      "notes": "Decision: Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
       "quantityKind": "duration",
-      "valueSI": 0.0041667,
+      "valueSI": 0.0041666666666666675,
       "lowSI": null,
       "highSI": null
     },
@@ -5242,7 +5242,7 @@
       "id": "hdd-7200rpm-full-rotation-m1",
       "phenomenonId": "hdd-7200rpm-full-rotation",
       "configuration": null,
-      "value": 8.3333,
+      "value": 8.333333333333334,
       "unit": "ms",
       "low": null,
       "high": null,
@@ -5268,9 +5268,9 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdd-7200rpm-full-rotation",
-      "notes": null,
+      "notes": "Decision: Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
       "quantityKind": "duration",
-      "valueSI": 0.0083333,
+      "valueSI": 0.008333333333333335,
       "lowSI": null,
       "highSI": null
     },
@@ -5348,7 +5348,7 @@
         "fr": "Solidigm D7-P5620 3,2 To, écriture aléatoire 100 %, QD1, 99,9999e centile ; 2 Xeon Gold 6254, CentOS 8.2, noyau 5.4.49, C-states et HT désactivés, fio ; taille de bloc non indiquée.",
         "en": "Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; 2x Xeon Gold 6254, CentOS 8.2, kernel 5.4.49, C-states and HT off, fio; block size not stated."
       },
-      "protocol": "As reported by the source: Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; 2x Xeon Gold 6254, CentOS 8.2, kernel 5.4.49, C-states and HT off, fio; block size not stated.",
+      "protocol": "Solidigm product brief footnote: fio, 100% random write, QD1, 99.9999th percentile; 2x Xeon Gold 6254, CentOS 8.2, kernel 5.4.49, C-states and HT disabled; block size not stated.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -5361,7 +5361,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#solidigm-p5620-qd1-write-p999999",
-      "notes": "Vendor-run measurement; n (I/O count) not given. 586 µs is the older D7-P4610 in the same test.",
+      "notes": "Vendor-run measurement; n (I/O count) not given. 586 µs is the older D7-P4610 in the same test. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.000137,
       "lowSI": null,
@@ -5371,7 +5371,7 @@
       "id": "solidigm-p5520-4k-qd16-latency-derived-m1",
       "phenomenonId": "solidigm-p5520-4k-qd16-latency-derived",
       "configuration": null,
-      "value": 68.5,
+      "value": 68.464,
       "unit": "us",
       "low": null,
       "high": null,
@@ -5393,13 +5393,13 @@
       "calculation": {
         "formula": "Little's law: mean latency = QD / IOPS = 16 / 233,700 s = 68.5 µs",
         "inputs": [
-          "const:documented-in-cited-source"
+          "src:src-solidigm-p5520-brief"
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#solidigm-p5520-4k-qd16-latency-derived",
-      "notes": "Assumes QD16 is total outstanding I/Os (number of jobs not stated); if several jobs each at QD16, real latency is higher. | Verifier: Hypothèse QD16 = total des E/S en vol signalée.",
+      "notes": "Assumes QD16 is total outstanding I/Os (number of jobs not stated); if several jobs each at QD16, real latency is higher. | Verifier: Hypothèse QD16 = total des E/S en vol signalée. | Decision: Input is the 233,700 IOPS (4 KiB, QD16) documented in the cited Solidigm brief (review M-2). Value recomputed to 5 significant digits (16 / 233700 s = 68.464 µs) instead of the extraction's rounded 68.5 µs (calculated-value oracle).",
       "quantityKind": "duration",
-      "valueSI": 0.0000685,
+      "valueSI": 0.000068464,
       "lowSI": null,
       "highSI": null
     }
@@ -6085,14 +6085,14 @@
       "title": "MLPerf Inference Rules (inference_rules.adoc)",
       "author": null,
       "publisher": "MLCommons",
-      "url": "https://github.com/mlcommons/inference_policies/blob/master/inference_rules.adoc",
+      "url": "https://github.com/mlcommons/inference_policies/blob/ff7edba545fded369e7e7e3d5a2f0bab4a95eece/inference_rules.adoc",
       "doi": null,
       "publishedDate": "2026-08-20",
-      "version": "master, last commit ff7edba545fded369e7e7e3d5a2f0bab4a95eece (2026-08-20)",
+      "version": "commit ff7edba545fded369e7e7e3d5a2f0bab4a95eece (2026-08-20)",
       "accessedAt": "2026-11-26",
       "license": "Apache-2.0 (repository LICENSE.md, per GitHub API)",
       "redistribution": "allowed",
-      "accessNotes": "Raw file via raw.githubusercontent.com; license via GitHub API. The document itself carries no license line; MLPerf name and logo are trademarks.",
+      "accessNotes": "Raw file via raw.githubusercontent.com; license via GitHub API. The document itself carries no license line; MLPerf name and logo are trademarks. | Curation: Permalink to the verified commit instead of the moving master branch (review m-12).",
       "verificationStatus": "qualified"
     },
     {

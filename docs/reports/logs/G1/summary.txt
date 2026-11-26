@@ -1,0 +1,15 @@
+gate=G1
+date_utc=2026-11-26T18:55:43Z
+commit=c3a4f75592e4dfeed6b85617d646921874fc024a
+dirty=5
+node=v26.13.1 npm=11.20.0
+image=mcr.microsoft.com/playwright:v1.65.0-noble
+uname=Linux 6.8.0-147-generic x86_64
+ci=PASS
+lint=PASS
+typecheck=PASS
+validate:data=PASS
+test=PASS
+build=PASS
+test:e2e=PASS
+overall=PASS

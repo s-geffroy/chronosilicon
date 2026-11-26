@@ -48,14 +48,15 @@ function pickList<T extends string>(v: string | null, allowed: readonly T[]): T[
   if (v === null) return null;
   if (v === '') return [];
   const items = v.split(',').filter((x): x is T => (allowed as readonly string[]).includes(x));
-  return [...new Set(items)];
+  return items.length ? [...new Set(items)] : null;
 }
 
 export function parseHash(hash: string, fallbackLang: Lang = 'fr'): UrlState {
   const h = hash.replace(/^#\/?/, '');
   const [path = '', query = ''] = h.split('?');
   const q = new URLSearchParams(query);
-  const f = Number(q.get('f'));
+  const fRaw = q.get('f') ?? '';
+  const f = /^\d+(\.\d+)?(e\d+)?$/i.test(fRaw) ? Number(fRaw) : NaN;
   const sel = q.get('sel');
   return {
     route: pick(path, ROUTES, DEFAULT_STATE.route),

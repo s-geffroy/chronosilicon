@@ -16,12 +16,16 @@ async function noConsoleErrors(page: Page) {
 
 test('loads under the Pages base path with all assets, no server dependency', async ({ page }) => {
   const failed: string[] = [];
+  const foreign: string[] = [];
+  const origin = new URL(test.info().project.use.baseURL!).origin;
+  page.on('request', (r) => { if (!r.url().startsWith('data:') && new URL(r.url()).origin !== origin) foreign.push(r.url()); });
   page.on('requestfailed', (r) => failed.push(r.url()));
   page.on('response', (r) => { if (r.status() >= 400) failed.push(`${r.status()} ${r.url()}`); });
   const errors = await noConsoleErrors(page);
   await page.goto('./');
   await expect(page.getByTestId('timeline')).toBeVisible();
   expect(failed).toEqual([]);
+  expect(foreign).toEqual([]); // no third-party or server dependency at runtime
   expect(errors).toEqual([]);
   const v = await page.request.get('version.json');
   expect(v.ok()).toBe(true);
@@ -44,7 +48,7 @@ test('converter: 1 km of light in vacuum ≈ 3 h 42 min at 4 GHz (CS-03 oracle t
   await expect(page.getByTestId('conv-subjective')).toHaveText('3 hours 42 minutes');
   await page.getByTestId('conv-unit').selectOption('s');
   await page.getByTestId('conv-value').fill('1');
-  await expect(page.getByTestId('conv-subjective')).toHaveText('126 years 274 days');
+  await expect(page.getByTestId('conv-subjective')).toHaveText('126 years 275 days');
   await page.getByTestId('conv-value').fill('-1');
   await expect(page.getByText('Enter a positive, finite duration.')).toBeVisible();
 });
@@ -58,6 +62,18 @@ test('converter reverse direction and frequency change', async ({ page }) => {
   await page.getByTestId('frequency').fill('1');
   await expect(page.getByTestId('conv-result')).toContainText('4 ns');
   await page.getByTestId('frequency').fill('-3');
+  await expect(page.getByRole('alert')).toBeVisible();
+});
+
+test('frequency field keeps what the user types (no silent overwrite)', async ({ page }) => {
+  await page.goto('./#/converter?lang=en');
+  const f = page.getByTestId('frequency');
+  await f.fill('');
+  await f.pressSequentially('0.5');
+  await expect(f).toHaveValue('0.5');
+  await expect(page).toHaveURL(/f=500000000/);
+  await f.fill('0');
+  await expect(f).toHaveValue('0');
   await expect(page.getByRole('alert')).toBeVisible();
 });
 
@@ -100,6 +116,7 @@ test('domain filter and table alternative', async ({ page }) => {
   await page.goto('./#/timeline?lang=en');
   const total = corpus.measurements.length;
   await expect(page.getByTestId('count')).toContainText(`${total} values shown out of ${total}`);
+  await page.locator('details.filters > summary').click();
   await page.getByRole('button', { name: 'None' }).click();
   await expect(page.getByTestId('count')).toContainText(`0 values shown out of ${total}`);
   await page.getByRole('button', { name: 'All' }).click();

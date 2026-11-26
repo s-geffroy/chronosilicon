@@ -23,6 +23,18 @@ describe('dimensions', () => {
       expect(unitKind(u)).toBe(def.kind);
     }
   });
+  it('absolute factors of every unit (independent table, review M-8)', () => {
+    const expected: Record<string, number> = {
+      fs: 1e-15, ps: 1e-12, ns: 1e-9, us: 1e-6, 'µs': 1e-6, ms: 1e-3, s: 1, min: 60, h: 3600, d: 86400, a: 31557600,
+      Hz: 1, kHz: 1e3, MHz: 1e6, GHz: 1e9, THz: 1e12,
+      'B/s': 1, 'kB/s': 1e3, 'MB/s': 1e6, 'GB/s': 1e9, 'TB/s': 1e12, 'KiB/s': 1024, 'MiB/s': 1048576, 'GiB/s': 1073741824,
+      'bit/s': 0.125, 'kbit/s': 125, 'Mbit/s': 125000, 'Gbit/s': 125000000, 'Tbit/s': 125000000000,
+      'T/s': 1, 'MT/s': 1e6, 'GT/s': 1e9, mm: 1e-3, cm: 1e-2, m: 1, km: 1e3, au: 149597870700, 'm/s': 1, 'km/s': 1e3,
+      bit: 0.125, B: 1, kB: 1e3, MB: 1e6, GB: 1e9, TB: 1e12, KiB: 1024, MiB: 1048576, GiB: 1073741824, cycles: 1,
+    };
+    expect(Object.keys(UNITS).sort()).toEqual(Object.keys(expected).sort());
+    for (const [u, f] of Object.entries(expected)) expect(toSI(1, u, unitKind(u)), u).toBeCloseTo(f, 12 - Math.max(0, Math.log10(f)));
+  });
   it('astronomical unit is exact (IAU 2012)', () => expect(toSI(1, 'au', 'distance')).toBe(149_597_870_700));
 });
 

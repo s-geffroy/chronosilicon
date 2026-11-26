@@ -36,12 +36,19 @@ interface Decision {
     quantityKind?: QuantityKind; domain?: Domain; provenanceType?: ProvenanceType;
   };
 }
-interface Decisions { schemaVersion: '1.0.0'; decisions: Record<string, Decision> }
+interface Decisions {
+  schemaVersion: '1.0.0';
+  decisions: Record<string, Decision>;
+  /** Corrections of source metadata (e.g. permalink), reason mandatory. */
+  sourcePatches?: Record<string, { url?: string; version?: string; reason: string }>;
+}
 
 const readJson = <T>(rel: string): T => JSON.parse(readFileSync(join(ROOT, rel), 'utf8')) as T;
 const rawFiles = readdirSync(join(ROOT, P.rawDir)).filter((f) => /^m00-.*\.json$/.test(f)).sort();
 const verdictFiles = readdirSync(join(ROOT, P.rawDir)).filter((f) => /^verify-.*\.json$/.test(f)).sort();
-const decisions = readJson<Decisions>('data/curated/decisions.json').decisions;
+const decisionsFile = readJson<Decisions>('data/curated/decisions.json');
+const decisions = decisionsFile.decisions;
+const sourcePatches = decisionsFile.sourcePatches ?? {};
 
 const STATUS: Record<VerdictKind, VerificationStatus> = {
   confirmed: 'qualified', confirmed_with_fix: 'qualified', unreachable: 'pending', inadequate: 'contested', mismatch: 'rejected',
@@ -67,6 +74,12 @@ const parseEra = (e: unknown): number | null => {
 };
 const clip = (s: string | null, n = 300) => (s && s.length > n ? s.slice(0, n - 1) + '…' : s);
 
+/** A value can never be null/NaN: fail loudly instead of coercing to 0 (review M-9). */
+function requireNumber(v: unknown, id: string): number {
+  if (typeof v !== 'number' || !Number.isFinite(v)) throw new Error(`${id}: value must be a finite number, got ${String(v)}`);
+  return v;
+}
+
 /** Stable ids must match ^[a-z0-9-]+ ; dots etc. are mapped to '-'. */
 const slug = (id: string) => id.toLowerCase().replace(/[^a-z0-9-]/g, '-');
 const allItemIds = new Set(rawFiles.flatMap((f) => readJson<RawFile>(`${P.rawDir}/${f}`).items.map((i) => i.id)));
@@ -88,6 +101,11 @@ for (const f of rawFiles) {
       version: s.version ?? null, accessedAt: raw.accessedAt, license: s.license, redistribution: s.redistribution,
       accessNotes: s.accessNotes, verificationStatus: 'pending',
     });
+    const sp = sourcePatches[slug(s.id)];
+    if (sp) {
+      const last = sources[sources.length - 1]!;
+      sources[sources.length - 1] = { ...last, url: sp.url ?? last.url, version: sp.version ?? last.version, accessNotes: `${last.accessNotes} | Curation: ${sp.reason}` };
+    }
   }
   for (const it of raw.items) {
     const v = verdicts.get(it.id);
@@ -106,9 +124,13 @@ for (const f of rawFiles) {
     const calculation = calc === null || calc === undefined ? null
       : typeof calc === 'string' ? { formula: calc, inputs: [...calc.matchAll(/[a-z0-9]+(?:-[a-z0-9]+)+/g)].map((m) => m[0]).filter((x) => x !== it.id && allItemIds.has(x)) }
       : { formula: calc.formula, inputs: calc.inputs.filter((x) => allItemIds.has(x)) };
-    // Inputs documented in the same source but not extracted as separate items.
-    if (calculation && calculation.inputs.length === 0) calculation.inputs.push('const:documented-in-cited-source');
-    const protocol = (Object.hasOwn(patch, 'protocol') ? patch['protocol'] : provenanceType === 'measured' ? `As reported by the source: ${v?.conditionsEn ?? it.conditions}` : null) as string | null;
+    // Inputs must be extracted items or explicit references to a cited source
+    // ('src:<id>'); nothing is filled in automatically (review M-2/M-3).
+    if (calculation && Object.hasOwn(patch, 'calculationInputs')) calculation.inputs = patch['calculationInputs'] as string[];
+    if (calculation && Object.hasOwn(patch, 'calculationFormula')) calculation.formula = String(patch['calculationFormula']);
+    // Never synthesised: a measured value needs an explicitly written protocol
+    // (decisions.json), otherwise validate:data fails (review M-1).
+    const protocol = (Object.hasOwn(patch, 'protocol') ? patch['protocol'] : null) as string | null;
     if (!isKnownUnit(unit)) { status = 'rejected'; why.push(`unit ${unit} unknown`); }
     if (d?.status) { status = d.status; why.push(`decision: ${d.reason}`); }
     phenomena.push({
@@ -122,7 +144,7 @@ for (const f of rawFiles) {
       id: `${it.id}-m1`,
       phenomenonId: it.id,
       configuration: (patch['configuration'] as string | undefined) ?? null,
-      value: Number(pick('value', it.value)),
+      value: requireNumber(pick('value', it.value), it.id),
       unit,
       low: (pick('low', it.low ?? null) ?? null) as number | null,
       high: (pick('high', it.high ?? null) ?? null) as number | null,
@@ -137,7 +159,7 @@ for (const f of rawFiles) {
       era: Object.hasOwn(patch, 'era') ? (patch['era'] as number | null) : parseEra(pick('era', it.era)),
       uncertainty: null,
       statistics: null,
-      calculation: calculation ? { formula: calculation.formula, inputs: calculation.inputs.map((i) => (i.startsWith('const:') ? i : `${i}-m1`)) } : null,
+      calculation: calculation ? { formula: calculation.formula, inputs: calculation.inputs.map((i) => (i.startsWith('src:') ? i : `${i}-m1`)) } : null,
       rawRef: `data/raw/${f}#${it.id}`,
       notes: clip([it.confidenceNotes, v?.notes ? `Verifier: ${v.notes}` : null, d ? `Decision: ${d.reason}` : null].filter(Boolean).join(' | ') || null, 1000),
     });
@@ -152,7 +174,7 @@ while (changed) {
   changed = false;
   for (const m of measurements) {
     if (m.verificationStatus !== 'qualified' || !m.calculation) continue;
-    const bad = m.calculation.inputs.filter((i) => !i.startsWith('const:') && byId.get(i)?.verificationStatus !== 'qualified');
+    const bad = m.calculation.inputs.filter((i) => !i.startsWith('src:') && byId.get(i)?.verificationStatus !== 'qualified');
     if (bad.length) {
       (m as { verificationStatus: VerificationStatus }).verificationStatus = 'pending';
       report.push(`${m.phenomenonId}\tpending\tcalculation inputs not qualified: ${bad.join(', ')}`);

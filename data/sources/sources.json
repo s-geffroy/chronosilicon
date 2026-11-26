@@ -816,14 +816,14 @@
       "title": "MLPerf Inference Rules (inference_rules.adoc)",
       "author": null,
       "publisher": "MLCommons",
-      "url": "https://github.com/mlcommons/inference_policies/blob/master/inference_rules.adoc",
+      "url": "https://github.com/mlcommons/inference_policies/blob/ff7edba545fded369e7e7e3d5a2f0bab4a95eece/inference_rules.adoc",
       "doi": null,
       "publishedDate": "2026-08-20",
-      "version": "master, last commit ff7edba545fded369e7e7e3d5a2f0bab4a95eece (2026-08-20)",
+      "version": "commit ff7edba545fded369e7e7e3d5a2f0bab4a95eece (2026-08-20)",
       "accessedAt": "2026-11-26",
       "license": "Apache-2.0 (repository LICENSE.md, per GitHub API)",
       "redistribution": "allowed",
-      "accessNotes": "Raw file via raw.githubusercontent.com; license via GitHub API. The document itself carries no license line; MLPerf name and logo are trademarks.",
+      "accessNotes": "Raw file via raw.githubusercontent.com; license via GitHub API. The document itself carries no license line; MLPerf name and logo are trademarks. | Curation: Permalink to the verified commit instead of the moving master branch (review m-12).",
       "verificationStatus": "qualified"
     },
     {

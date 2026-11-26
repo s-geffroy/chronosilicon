@@ -34,7 +34,7 @@
   const subj = (seconds: number) => toSubjective(seconds, observer).subjectiveSeconds;
 
   const scale = $derived.by(() => {
-    const vals = positive.flatMap((m) => [m.lowSI ?? m.valueSI, m.highSI ?? m.valueSI]).map(axisValue);
+    const vals = positive.flatMap((m) => [m.lowSI && m.lowSI > 0 ? m.lowSI : m.valueSI, m.highSI ?? m.valueSI]).map(axisValue);
     const lo = vals.length ? Math.min(...vals) : 1e-9;
     const hi = vals.length ? Math.max(...vals) : 1;
     const d0 = 10 ** Math.floor(Math.log10(lo));
@@ -42,14 +42,20 @@
     return scaleLog().domain([d0, d1]).range([0, 100]);
   });
   /** Real decade ticks, recomputed when the reference frame changes. */
+  const tickStep = $derived.by(() => {
+    const [d0, d1] = scale.domain() as [number, number];
+    return Math.max(1, Math.ceil((Math.log10(d1) - Math.log10(d0)) / 10));
+  });
   const ticks = $derived.by(() => {
     const [d0, d1] = scale.domain() as [number, number];
     const out: number[] = [];
-    const step = Math.max(1, Math.ceil((Math.log10(d1) - Math.log10(d0)) / 10));
-    for (let e = Math.round(Math.log10(d0)); e <= Math.round(Math.log10(d1)); e += step) out.push(10 ** e);
+    for (let e = Math.round(Math.log10(d0)); e <= Math.round(Math.log10(d1)); e += tickStep) out.push(10 ** e);
     return out;
   });
+  const tickFactor = $derived(new Intl.NumberFormat(lang === 'fr' ? 'fr-FR' : 'en-GB').format(10 ** tickStep));
   const tickLabel = (v: number) => (app.s.axis === 'physical' ? formatPhysicalDuration(v, lang) : formatCalendarShort(v, lang));
+  /** '≤' / '≥' when the source gives only one bound (review m-3). */
+  const boundPrefix = (m: NormalizedMeasurement) => (m.high !== null && m.low === null && m.high === m.value ? '≤ ' : m.low !== null && m.high === null && m.low === m.value ? '≥ ' : '');
   const fmtAxis = (seconds: number) => {
     const v = axisValue(seconds);
     return app.s.axis === 'physical' ? formatPhysicalDuration(v, lang) : formatCalendar(v, lang);
@@ -139,18 +145,18 @@
                 </span>
                 <span class="track">
                   {#each ticks as tk (tk)}<span class="grid" style:left="{scale(tk)}%"></span>{/each}
-                  {#if m.lowSI !== null && m.highSI !== null}
+                  {#if m.lowSI !== null && m.highSI !== null && m.lowSI > 0}
                     <span class="interval" style:left="{scale(axisValue(m.lowSI))}%" style:width="{Math.max(0.5, scale(axisValue(m.highSI)) - scale(axisValue(m.lowSI)))}%" title={t('timeline.interval', { low: fmtAxis(m.lowSI), high: fmtAxis(m.highSI) })}></span>
                   {/if}
                   <span class="dot prov-{m.provenanceType}" style:left="{scale(axisValue(m.valueSI))}%"></span>
-                  <span class="val" style:left="{Math.min(scale(axisValue(m.valueSI)), 70)}%">{fmtAxis(m.valueSI)}</span>
+                  <span class="val" style:left="{Math.min(scale(axisValue(m.valueSI)), 70)}%">{boundPrefix(m)}{fmtAxis(m.valueSI)}</span>
                 </span>
                 <span class="sr-only">{rowDetails(m)}</span>
               </button>
             </li>
           {/each}
         </ol>
-        <figcaption id="axis-cap">{t('axis.caption')} {t(`axis.${app.s.axis}`)}.</figcaption>
+        <figcaption id="axis-cap">{t('axis.caption', { factor: tickFactor })} {t(`axis.${app.s.axis}`)}.</figcaption>
       </figure>
     {:else}
       <div class="table-wrap">

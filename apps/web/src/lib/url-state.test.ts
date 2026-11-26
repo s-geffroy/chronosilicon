@@ -16,11 +16,14 @@ describe('shareable URL state', () => {
     expect(s.domains).toEqual(['cpu']);
     expect(s.selected).toBeNull();
     expect(s.axis).toBe('subjective');
+    expect(parseHash('#/timeline?d=bogus').domains).toBeNull();
+    expect(parseHash('#/timeline?d=').domains).toEqual([]);
   });
   it('rejects infinite or absurd frequencies', () => {
     expect(parseHash('#/timeline?f=Infinity').frequencyHz).toBe(4e9);
     expect(parseHash('#/timeline?f=1e99').frequencyHz).toBe(4e9);
     expect(parseHash('#/timeline?f=1e6').frequencyHz).toBe(1e6);
+    expect(parseHash('#/timeline?f=0x10').frequencyHz).toBe(4e9);
   });
   it('empty hash → defaults with browser language', () => {
     expect(parseHash('', 'en')).toEqual({ ...DEFAULT_STATE, lang: 'en' });

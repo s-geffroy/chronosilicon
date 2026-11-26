@@ -142,7 +142,12 @@ export function checkInvariants({ sources, phenomena, measurements }: InvariantI
     if (m.provenanceType === 'calculated') {
       if (!m.calculation) errors.push(`${at}: calculated value without calculation`);
       else for (const i of m.calculation.inputs) {
-        if (!measIds.has(i) && !i.startsWith('const:')) errors.push(`${at}: calculation input ${i} unresolved`);
+        if (i.startsWith('src:')) {
+          if (!m.sourceIds.includes(i.slice(4))) errors.push(`${at}: calculation input ${i} is not a cited source`);
+        } else if (!measIds.has(i)) errors.push(`${at}: calculation input ${i} unresolved`);
+        else if (m.verificationStatus === 'qualified' && measurements.find((x) => x.id === i)?.verificationStatus !== 'qualified') {
+          errors.push(`${at}: qualified calculation relies on non-qualified input ${i}`);
+        }
       }
     }
     if (m.verificationStatus === 'qualified') {

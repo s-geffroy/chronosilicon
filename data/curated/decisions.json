@@ -12,11 +12,226 @@
     },
     "osu-latency-crossroads-8b": {
       "status": "contested",
-      "reason": "Incomplete protocol: interconnect, MPI library, sample count and which of the two required tests (longest/shortest path, Table 4.6) produced the value are not stated. Verifier flagged it at the limit of 'inadequate'."
+      "reason": "Incomplete protocol: interconnect, MPI library, sample count and which of the two required tests (longest/shortest path, Table 4.6) produced the value are not stated. Verifier flagged it at the limit of 'inadequate'.",
+      "patch": {
+        "protocol": "LANL Crossroads acceptance results: osu_latency, 2 nodes, 1 rank per node, 8-byte message. Not stated: interconnect, MPI library, sample count, and which of the two required tests (Table 4.6) produced the value."
+      }
     },
     "samsung-990pro-qd1-read-latency-derived": {
       "status": "contested",
-      "reason": "Derived with Little's law from an 'up to' marketing IOPS figure with unstated block size: at most a lower bound on mean latency, misleading on a timeline of typical values."
+      "reason": "Derived with Little's law from an 'up to' marketing IOPS figure with unstated block size: at most a lower bound on mean latency, misleading on a timeline of typical values.",
+      "patch": {
+        "calculationInputs": [
+          "src:src-samsung-990pro-ds"
+        ]
+      }
+    },
+    "azure-rtt-eastus-westeurope": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Azure backbone round-trip probes between region pairs; statistic: median (P50) over a 30-day window ending 2026-07-30. Not stated by the source: sample count, probe type, quantile method."
+      }
+    },
+    "azure-rtt-eastus-westus": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated."
+      }
+    },
+    "azure-rtt-westeurope-francecentral": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated."
+      }
+    },
+    "azure-rtt-eastus-australiaeast": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated."
+      }
+    },
+    "human-simple-visual-reaction-time": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Woods et al. 2015: n = 1469 adults (18-65 y); lateralised visual stimuli; response = mouse press with dominant index finger; value = sample mean corrected for 17.8 ms hardware delay (raw 231 ms)."
+      }
+    },
+    "human-stimulus-detection-time": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Woods et al. 2015, same sample (n = 1469): detection time estimated as simple reaction time minus finger-tapping movement-initiation time (derived by the authors)."
+      }
+    },
+    "human-voluntary-blink-duration": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Kwon et al. 2013: n = 25 healthy volunteers (25-63 y); voluntary blinks filmed with high-speed video at 600 fps; mean reported (± 25 ms, dispersion statistic not specified in text)."
+      }
+    },
+    "human-voluntary-blink-closing-phase": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Kwon et al. 2013, same protocol (n = 25, 600 fps video); closing-phase duration, mean ± s.e."
+      }
+    },
+    "human-flicker-fusion-uniform": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Davis et al. 2015: n = 10 subjects; spatially uniform modulated light from a DLP projector; frequency at which flicker sensitivity falls to zero."
+      }
+    },
+    "human-flicker-artifact-edge-median": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Davis et al. 2015: n = 10 subjects (two of them authors); modulated light with a sharp spatial edge; median viewer's highest frequency at which artefacts are visible."
+      }
+    },
+    "human-stylus-latency-jnd-large-box": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Ng et al. CHI 2014: n = 16 naive adults; 1 ms baseline stylus system; just-noticeable latency difference estimated by PEST adaptive staircase; dragging task with large box; median across participants."
+      }
+    },
+    "human-stylus-latency-jnd-small-box": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Ng et al. CHI 2014: same protocol (n = 16, PEST, 1 ms baseline), dragging task with small box; median across participants."
+      }
+    },
+    "human-stylus-latency-jnd-scribbling": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Ng et al. CHI 2014: same protocol (n = 16, PEST), scribbling task with 7 ms baseline; median across participants."
+      }
+    },
+    "x86-add-r64-latency-alderlake-p": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "uops.info automated microbenchmarks executed on an Alder Lake-P CPU (latency of a dependency chain through the register operand). Sample count, frequency and OS not extracted."
+      }
+    },
+    "x86-imul-r64-latency-alderlake-p": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "uops.info automated microbenchmarks on Alder Lake-P (dependency-chain latency). Sample count, frequency and OS not extracted."
+      }
+    },
+    "x86-div-r64-latency-alderlake-p": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "uops.info automated microbenchmarks on Alder Lake-P; latency varies with operand values (14-18 cycles); lower bound retained. Sample count not extracted."
+      }
+    },
+    "x86-div-r64-latency-skylake": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "uops.info automated microbenchmarks on Skylake; latency depends on operand values (ranges per operand pair given in conditions). Sample count not extracted."
+      }
+    },
+    "x86-div-r64-latency-zen4": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Agner Fog instruction tables: measurements with the author's test programs on AMD Zen 4; latency depends on operand values (10-18). Test details not extracted."
+      }
+    },
+    "dram-latency-epyc-7702-measured": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Velten et al. ICPE 2022: BenchIT x86-membench pointer chasing; dual-socket EPYC 7702 at nominal 2.0 GHz; local CCX memory; transparent huge pages; caches flushed before measurement."
+      }
+    },
+    "dram-latency-xeon-6248-measured": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Velten et al. ICPE 2022: BenchIT x86-membench pointer chasing; dual-socket Xeon Gold 6248, same SNC domain, uncore fixed at 2.4 GHz, hardware prefetchers disabled."
+      }
+    },
+    "dram-latency-pentiumpro-lmbench-1995": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "McVoy & Staelin, lmbench (USENIX 1996): memory read latency by strided dependent load chain; Pentium Pro 200 MHz, Linux 1.3.37."
+      }
+    },
+    "lmbench-null-syscall-linux-pentiumpro": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "lmbench (USENIX 1996): null system call measured as writing one word to /dev/null in a loop; Pentium Pro 200 MHz, Linux 1.3.37."
+      }
+    },
+    "lmbench-context-switch-linux-pentiumpro": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "lmbench (USENIX 1996): context switch between 2 processes passing a token, 0 KB working set; Pentium Pro 200 MHz, Linux 1.3.37."
+      }
+    },
+    "slingshot-rosetta-switch-latency": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "De Sensi et al. (Slingshot, SC 2020): switch latency computed as 2-hop minus 1-hop latency with RoCE traffic from standard NICs; mean and median reported; sample count not extracted."
+      }
+    },
+    "solidigm-p5620-qd1-write-p999999": {
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "patch": {
+        "protocol": "Solidigm product brief footnote: fio, 100% random write, QD1, 99.9999th percentile; 2x Xeon Gold 6254, CentOS 8.2, kernel 5.4.49, C-states and HT disabled; block size not stated."
+      }
+    },
+    "exos-x20-spindle-frequency": {
+      "reason": "Input is the 7200 RPM documented in the cited Seagate data sheet (review M-2).",
+      "patch": {
+        "calculationInputs": [
+          "src:src-seagate-exos-x20"
+        ]
+      }
+    },
+    "solidigm-p5520-4k-qd16-latency-derived": {
+      "reason": "Input is the 233,700 IOPS (4 KiB, QD16) documented in the cited Solidigm brief (review M-2). Value recomputed to 5 significant digits (16 / 233700 s = 68.464 µs) instead of the extraction's rounded 68.5 µs (calculated-value oracle).",
+      "patch": {
+        "calculationInputs": [
+          "src:src-solidigm-p5520-brief"
+        ],
+        "value": 68.464
+      }
+    },
+    "linux-tick-period-hz1000": {
+      "reason": "Input is the HZ_1000 Kconfig option (1000 Hz) documented in the cited Kconfig source, not the 250 Hz default item (review M-3).",
+      "patch": {
+        "calculationInputs": [
+          "src:src-linux-kconfig-hz"
+        ],
+        "calculationFormula": "T = 1 / HZ with HZ = 1000 (Kconfig option HZ_1000) = 1 ms"
+      }
+    },
+    "frame-time-60hz": {
+      "reason": "Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "patch": {
+        "value": 16.666666666666668
+      }
+    },
+    "frame-time-120hz": {
+      "reason": "Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "patch": {
+        "value": 8.333333333333334
+      }
+    },
+    "hdd-7200rpm-half-rotation": {
+      "reason": "Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "patch": {
+        "value": 4.166666666666667
+      }
+    },
+    "hdd-7200rpm-full-rotation": {
+      "reason": "Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "patch": {
+        "value": 8.333333333333334
+      }
+    }
+  },
+  "sourcePatches": {
+    "src-mlperf-inference-rules": {
+      "url": "https://github.com/mlcommons/inference_policies/blob/ff7edba545fded369e7e7e3d5a2f0bab4a95eece/inference_rules.adoc",
+      "version": "commit ff7edba545fded369e7e7e3d5a2f0bab4a95eece (2026-08-20)",
+      "reason": "Permalink to the verified commit instead of the moving master branch (review m-12)."
     }
   }
 }
