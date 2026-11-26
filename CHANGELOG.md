@@ -16,6 +16,9 @@ Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant 
 - CI GitHub Actions (`ci.yml`) et workflow Pages (`pages.yml`). Image Playwright épinglée par digest, actions épinglées par SHA.
 - Gouvernance : licences Apache-2.0 / CC BY 4.0 / CC0 1.0, NOTICE, CITATION.cff, CONTRIBUTING, CODE_OF_CONDUCT, ADR-0001 à ADR-0005.
 
+### Ajouté (V2)
+- Espaces Architecture, Comparaison et Observateurs. Groupes curés et observateurs dérivés du corpus, invariants de compatibilité (ADR-0006). Revue contradictoire G2 intégrée.
+
 ### Modifié
 - Remplacement du squelette Jekyll du VPS par la chaîne Node/Vite (ADR-0001).
 

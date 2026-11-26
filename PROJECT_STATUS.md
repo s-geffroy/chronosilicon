@@ -9,7 +9,7 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 | M00 | GM00 | **GO** avec réserves : nom provisoire (registres de marques non interrogés), auto-revue outillée | `docs/audits/M00.md` |
 | V0 | G0 | **GO** : 129 valeurs qualifiées, 102 tests | `docs/reports/G0.md` |
 | V1 | G1 | **GO : V1 publiée** (commit `7ca44b5`, vérifiée HTTP, version.json et navigateur) | `docs/reports/G1.md` |
-| V2 | G2 | non commencé (comparaison et multi-observateurs) | — |
+| V2 | G2 | **GO** : architecture, comparaison, observateurs (commit `557bbcb`) | `docs/reports/G2.md` |
 | V3 | G3 | moteur à événements discrets écrit et testé (15 tests), **non exposé**, porte non évaluée | — |
 | V4 | G4 | non commencé | — |
 | V5 | G5 | non commencé | — |
@@ -20,7 +20,7 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 - Données : 3 extractions M00 et 3 verdicts de vérification dans `data/raw/` (immuables), curation déterministe, corpus publié dans `data/validated/corpus.json`.
   - 133 candidates : 129 qualifiées, 2 en attente, 2 contestées.
   - 59 sources, dont 49 portent au moins une valeur qualifiée.
-- Site V1 : chronologie logarithmique, fiches, convertisseur, FR/EN, 3 niveaux de lecture, export JSON/CSV, lien de partage. Les espaces V2 à V5 sont marqués « non disponible ».
+- Site V1 : chronologie logarithmique, fiches, convertisseur, FR/EN, 3 niveaux de lecture, export JSON/CSV, lien de partage. V2 : espaces Architecture (hiérarchies en cycles), Comparaison (15 groupes, sans classement) et Observateurs (8 observateurs dérivés du corpus). Les espaces V3 à V5 sont marqués « non disponible ».
 - CI : `ci.yml` vert sur `develop` (`a79760c`). `pages.yml` est prêt et ne s'exécute que sur `main`.
 
 ## Publication
