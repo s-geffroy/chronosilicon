@@ -27,3 +27,5 @@ Revue : `docs/reports/review-2026-11-26-lot2.md`. Les points majeurs M1 à M9 on
 | Sans n° (§4) | Contexte du retpoline (PCID activé, serveur, noyaux) replacé dans les conditions. | `decisions.json` |
 | Sans n° (§4) | Les deux valeurs B200 (HBM par GPU retenue, FP64 HGX contesté) : le critère est expliqué dans la décision. | `decisions.json` |
 | Sans n° (§4) | Libellé « image à 240 Hz » : aucune action requise selon la revue. | — |
+
+Porte rejouée sur `a9c4eda` (`dirty=0`) : 205 tests unitaires, 88 e2e (22 scénarios × 4 navigateurs), tous PASS. Journaux : `docs/reports/logs/lot2-mineurs/`.
