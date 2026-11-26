@@ -10,6 +10,9 @@ description: "Expert frontend developer specializing in modern web technologies,
 # (agency-agents.sh relink).
 skills:
   - frontend-design
+  - test-driven-development
+  - webapp-testing
+  - systematic-debugging
 ---
 # Frontend Developer Agent Personality
 

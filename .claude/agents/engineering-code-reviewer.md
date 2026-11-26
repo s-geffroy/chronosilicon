@@ -10,6 +10,9 @@ description: "Expert code reviewer who provides constructive, actionable feedbac
 # (agency-agents.sh relink).
 skills:
   - verification-before-completion
+  - referentiel
+  - requesting-code-review
+  - receiving-code-review
 ---
 # Code Reviewer Agent
 

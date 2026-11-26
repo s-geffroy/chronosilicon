@@ -10,8 +10,8 @@ tools: WebFetch, WebSearch, Read, Write, Edit
 # Skills prechargees : .claude/team.yaml, limitees aux skills installees
 # (agency-agents.sh relink).
 skills:
-  - copy-editing
   - content-strategy
+  - copy-editing
 ---
 # Marketing Content Creator Agent
 
