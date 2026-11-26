@@ -181,3 +181,4 @@ export function checkQuantiles(q: ReadonlyArray<{ p: number; value: number }>): 
   }
   return problems;
 }
+export * from './stats';

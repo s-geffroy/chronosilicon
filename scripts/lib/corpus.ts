@@ -104,6 +104,14 @@ export function runPipeline(): PipelineResult {
     groups: gr.groups,
     observers: resolveObservers(ob.observers, normalized),
     scenarios: sc.scenarios,
+    withheld: ms.measurements
+      .filter((m) => m.verificationStatus !== 'qualified')
+      .map((m) => ({
+        id: m.id,
+        label: ph.phenomena.find((p) => p.id === m.phenomenonId)!.label,
+        status: m.verificationStatus,
+        reason: m.notes?.split(' | ').find((x) => x.startsWith('Decision: '))?.slice(10) ?? 'No independent verdict yet.',
+      })),
   };
   const count = (st: string) => ms.measurements.filter((m) => m.verificationStatus === st).length;
   return {

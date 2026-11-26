@@ -12,12 +12,11 @@
   import Observers from './components/Observers.svelte';
   import Simulation from './components/Simulation.svelte';
   import Immersion from './components/Immersion.svelte';
+  import Laboratory from './components/Laboratory.svelte';
   import Sheet from './components/Sheet.svelte';
   import type { MessageKey } from './lib/i18n';
 
-  const PLANNED: Partial<Record<Route, string>> = {
-    laboratory: 'V5',
-  };
+  const PLANNED: Partial<Record<Route, string>> = {};
   const t = app.t;
   let route = $derived(app.s.route);
 
@@ -74,6 +73,8 @@
     <Simulation />
   {:else if route === 'immersion'}
     <Immersion />
+  {:else if route === 'laboratory'}
+    <Laboratory />
   {:else if route === 'about'}
     <About />
   {:else}

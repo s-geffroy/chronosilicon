@@ -167,6 +167,8 @@ export interface Corpus {
   readonly groups: readonly Group[];
   readonly observers: readonly ResolvedObserver[];
   readonly scenarios: readonly ScenarioDef[];
+  /** Values kept out of the published corpus, with their status and reason (CS-11: keep contradictory data). */
+  readonly withheld: ReadonlyArray<{ readonly id: string; readonly label: I18nText; readonly status: VerificationStatus; readonly reason: string }>;
 }
 
 /**

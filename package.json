@@ -22,7 +22,8 @@
     "preview": "npm run -w @chronosilicon/web preview",
     "test:e2e": "playwright test",
     "check": "npm run lint && npm run typecheck && npm run validate:data && npm test && npm run build",
-    "curate": "tsx scripts/curate.ts"
+    "curate": "tsx scripts/curate.ts",
+    "contribute:check": "tsx scripts/contribute-check.ts"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

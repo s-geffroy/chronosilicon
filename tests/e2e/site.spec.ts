@@ -89,10 +89,13 @@ test('FR/EN switch changes texts, not values', async ({ page }) => {
   expect(countFr?.match(/\d+/g)).toEqual(countEn?.match(/\d+/g));
 });
 
-test('unbuilt spaces are explicitly marked unavailable', async ({ page }) => {
-  for (const r of ['laboratory']) {
+test('every navigation space is built (no placeholder left)', async ({ page }) => {
+  await page.goto('./#/timeline?lang=en');
+  await expect(page.locator('nav .badge')).toHaveCount(0);
+  for (const r of ['architecture', 'observers', 'simulation', 'immersion', 'comparison', 'laboratory']) {
     await page.goto(`./#/${r}?lang=en`);
-    await expect(page.getByTestId('unavailable')).toContainText('not built yet');
+    await expect(page.getByTestId('unavailable')).toHaveCount(0);
+    await expect(page.getByTestId(r)).toBeVisible();
   }
 });
 
@@ -243,4 +246,18 @@ test('V4 immersion: journal derived from the simulated events, labelled as a met
   await page.getByTestId('imm-select').selectOption('sc-tcp-first-response');
   await expect(page).toHaveURL(/sc=sc-tcp-first-response/);
   await expect(items.first()).toContainText('handshake');
+});
+
+test('V5 laboratory: browser measurement labelled as such, raw samples exported; withheld data listed', async ({ page }) => {
+  await page.goto('./#/laboratory?lang=en');
+  await expect(page.getByTestId('laboratory')).toContainText('not native processor latency');
+  await expect(page.getByTestId('lab-withheld').locator('tbody tr')).toHaveCount(4);
+  await page.getByTestId('lab-run-timer').click();
+  await expect(page.getByTestId('lab-n')).toHaveText(/^\d+$/);
+  await expect(page.getByTestId('lab-result')).toContainText('Hyndman-Fan type 7');
+  const [dl] = await Promise.all([page.waitForEvent('download'), page.getByTestId('lab-export').click()]);
+  const json = JSON.parse(readFileSync((await dl.path())!, 'utf8'));
+  expect(json.samples.length).toBe(json.summary.n);
+  expect(json.samples.every((x: number) => Number.isFinite(x) && x > 0)).toBe(true);
+  expect(json.summary.quantiles[0].value).toBeLessThanOrEqual(json.summary.quantiles[2].value);
 });

@@ -6835,5 +6835,43 @@
         }
       ]
     }
+  ],
+  "withheld": [
+    {
+      "id": "intel-4004-min-clock-period-m1",
+      "label": {
+        "fr": "Période d'horloge minimale (tCY) de l'Intel 4004",
+        "en": "Minimum clock period (tCY), Intel 4004"
+      },
+      "status": "pending",
+      "reason": "Primary source (Intel MCS-4 datasheet) not read: value comes from a third-party transcription (pyntel4004) that does not cite its source; Intel secondary figures diverge (108 kHz / 740 kHz / 750 kHz). Held back until the original datasheet is consulted."
+    },
+    {
+      "id": "intel-4004-max-clock-frequency-m1",
+      "label": {
+        "fr": "Fréquence d'horloge maximale de l'Intel 4004 (déduite de tCY)",
+        "en": "Maximum clock frequency, Intel 4004 (derived from tCY)"
+      },
+      "status": "pending",
+      "reason": "Derived from intel-4004-min-clock-period, which is held back (primary datasheet not read)."
+    },
+    {
+      "id": "osu-latency-crossroads-8b-m1",
+      "label": {
+        "fr": "Latence MPI point à point, 8 octets, LANL Crossroads (osu_latency)",
+        "en": "MPI point-to-point latency, 8 bytes, LANL Crossroads (osu_latency)"
+      },
+      "status": "contested",
+      "reason": "Incomplete protocol: interconnect, MPI library, sample count and which of the two required tests (longest/shortest path, Table 4.6) produced the value are not stated. Verifier flagged it at the limit of 'inadequate'."
+    },
+    {
+      "id": "samsung-990pro-qd1-read-latency-derived-m1",
+      "label": {
+        "fr": "Latence moyenne de lecture aléatoire du Samsung 990 PRO à QD1 (dérivée des IOPS, borne inférieure)",
+        "en": "Samsung 990 PRO mean random read latency at QD1 (derived from IOPS, lower bound)"
+      },
+      "status": "contested",
+      "reason": "Derived with Little's law from an 'up to' marketing IOPS figure with unstated block size: at most a lower bound on mean latency, misleading on a timeline of typical values."
+    }
   ]
 }

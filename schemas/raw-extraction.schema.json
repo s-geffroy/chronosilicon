@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chronosilicon.local/schemas/raw-extraction.schema.json",
+  "title": "Raw extraction record (data/raw/m00-*.json or contributions)",
+  "type": "object",
+  "required": ["accessedAt", "sources", "items", "excluded"],
+  "properties": {
+    "accessedAt": { "$ref": "common.schema.json#/$defs/date" },
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "publisher", "url", "license", "redistribution", "accessNotes"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^src-[a-z0-9.-]+$" },
+          "title": { "type": "string", "minLength": 1 },
+          "publisher": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "pattern": "^https?://" },
+          "license": { "type": "string", "minLength": 1 },
+          "redistribution": { "$ref": "common.schema.json#/$defs/redistribution" },
+          "accessNotes": { "type": "string" }
+        }
+      }
+    },
+    "items": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "labelEn", "labelFr", "domain", "quantityKind", "value", "unit", "conditions", "provenanceType", "sourceId", "locator", "quote"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,90}$" },
+          "labelEn": { "type": "string", "minLength": 1 },
+          "labelFr": { "type": "string", "minLength": 1 },
+          "domain": { "$ref": "common.schema.json#/$defs/domain" },
+          "quantityKind": { "type": "string" },
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "minLength": 1 },
+          "conditions": { "type": "string", "minLength": 5 },
+          "provenanceType": { "enum": ["measured", "documented", "calculated", "estimated"] },
+          "sourceId": { "type": "string", "pattern": "^src-" },
+          "locator": { "type": "string", "minLength": 2 },
+          "quote": { "type": ["string", "null"], "maxLength": 300 }
+        }
+      }
+    },
+    "excluded": { "type": "array" }
+  }
+}
