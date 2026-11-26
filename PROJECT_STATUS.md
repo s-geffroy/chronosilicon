@@ -37,6 +37,7 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 - 2026-11-26 : dossier `…/CHRONOSILICON/2026-11-26_G2-G5_V2-a-V5-publiees` (https://drive.google.com/drive/folders/1F5t8vfQXhDJRo9J3zlZfN-K74FmjbxhI). 11 fichiers ; les tailles concordent toutes ; un fichier (G5) a été retéléchargé et son SHA-256 est identique à l'original. Archive locale : `docs/archives/2026-11-26_G2-G5/`.
 - 2026-11-26 : dossier `…/CHRONOSILICON/2026-11-26_lot2_corpus-239-valeurs` (https://drive.google.com/drive/folders/1WmZ9aqK6QkJ4jLb4CR9Epo0VYThf96tR). 6 fichiers ; les tailles concordent ; le SHA-256 du rapport G0-lot2 retéléchargé est identique (665adc21…). Archive locale : `docs/archives/2026-11-26_lot2/`.
 - 2026-11-26 : réponses aux mineurs du lot 2 et état associé, ajoutés au dossier Drive du lot 2 (tailles concordantes, 4102 et 4109 octets). Archive locale : `docs/archives/2026-11-26_lot2-mineurs/`.
+- 2026-11-26 : dossier `…/CHRONOSILICON/2026-11-26_incertitude-structuree` (https://drive.google.com/drive/folders/1J70nzEXWGyZICk6_pZmz77eBGSilz4wE), 5 fichiers aux tailles concordantes. Archive locale : `docs/archives/2026-11-26_incertitude/`.
 
 ## Décisions non validées par l'utilisateur
 

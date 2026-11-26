@@ -62,7 +62,7 @@
           {#if m.uncertainty}
             {@const u = m.uncertainty}
             {#if u.type === 'confidence-interval'}{formatValue(u.low!, m.unit, lang)} – {formatValue(u.high!, m.unit, lang)} ({t('unc.confidence-interval', { level: formatLevel(u.level ?? 0, lang) })}){:else}± {formatValue(u.value!, m.unit, lang)} ({t(`unc.${u.type}`)}){/if}{#if u.sampleCount !== null}<span class="unc">· {t('unc.n', { n: u.sampleCount })}</span>{/if}
-            <span class="help block">{t('unc.statement')} <span lang="en">{u.statement}</span> — {u.locator}</span>
+            <span class="help block">{t('unc.statement')}{#if lang === 'fr'} {t('sheet.notesLang')}{/if} <span lang="en">{u.statement}</span> — {u.locator}</span>
           {:else if m.provenanceType === 'calculated'}{t('unc.notPropagated')}{:else}{t('sheet.uncertaintyUnknown')}{/if}
         </dd>
         {#if m.statistics}
@@ -70,7 +70,7 @@
           <dd data-testid="sheet-statistics">
             {m.statistics.quantiles.map((q) => `P${Math.round(q.p * 100)} ${formatValue(q.value, m.unit, lang)}`).join(' · ')}
             · {m.statistics.sampleCount !== null ? t('unc.n', { n: m.statistics.sampleCount }) : t('stats.nUnknown')}
-            <span class="help block">{t('stats.method')} : <span lang="en">{m.statistics.method}</span>{#if m.statistics.sampleCountNote} — <span lang="en">{m.statistics.sampleCountNote}</span>{/if}</span>
+            <span class="help block">{t('stats.method')} :{#if lang === 'fr'} {t('sheet.notesLang')}{/if} <span lang="en">{m.statistics.method}</span>{#if m.statistics.sampleCountNote} — <span lang="en">{m.statistics.sampleCountNote}</span>{/if}</span>
           </dd>
         {/if}
         {#if m.quote}<dt>{t('sheet.quote')}</dt><dd><blockquote>{m.quote}</blockquote></dd>{/if}
