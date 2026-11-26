@@ -95,22 +95,25 @@ for (const f of rawFiles) {
     const fix = (v?.fix ?? {}) as Record<string, unknown>;
     let status: VerificationStatus = v ? STATUS[v.verdict] : 'pending';
     const why: string[] = [v ? `verdict ${v.verdict} (${v.file})` : 'no verdict'];
-    const patch = d?.patch ?? {};
-    const quantityKind = patch.quantityKind ?? kindFor(it);
-    const unit = String(patch.unit ?? fix['unit'] ?? it.unit);
-    const provenanceType = (patch.provenanceType ?? fix['provenanceType'] ?? it.provenanceType) as ProvenanceType;
+    const patch = (d?.patch ?? {}) as Record<string, unknown>;
+    /** Precedence: manual decision > verifier fix > raw extraction (explicit null wins). */
+    const pick = (key: string, rawValue: unknown): unknown =>
+      Object.hasOwn(patch, key) ? patch[key] : Object.hasOwn(fix, key) ? fix[key] : rawValue;
+    const quantityKind = (patch['quantityKind'] as QuantityKind | undefined) ?? kindFor(it);
+    const unit = String(pick('unit', it.unit));
+    const provenanceType = pick('provenanceType', it.provenanceType) as ProvenanceType;
     const calc = it.calculation;
     const calculation = calc === null || calc === undefined ? null
       : typeof calc === 'string' ? { formula: calc, inputs: [...calc.matchAll(/[a-z0-9]+(?:-[a-z0-9]+)+/g)].map((m) => m[0]).filter((x) => x !== it.id && allItemIds.has(x)) }
       : { formula: calc.formula, inputs: calc.inputs.filter((x) => allItemIds.has(x)) };
     // Inputs documented in the same source but not extracted as separate items.
     if (calculation && calculation.inputs.length === 0) calculation.inputs.push('const:documented-in-cited-source');
-    const protocol = provenanceType === 'measured' ? (patch.protocol ?? `As reported by the source: ${v?.conditionsEn ?? it.conditions}`) : (patch.protocol ?? null);
+    const protocol = (Object.hasOwn(patch, 'protocol') ? patch['protocol'] : provenanceType === 'measured' ? `As reported by the source: ${v?.conditionsEn ?? it.conditions}` : null) as string | null;
     if (!isKnownUnit(unit)) { status = 'rejected'; why.push(`unit ${unit} unknown`); }
     if (d?.status) { status = d.status; why.push(`decision: ${d.reason}`); }
     phenomena.push({
       id: it.id,
-      domain: patch.domain ?? it.domain,
+      domain: (patch['domain'] as Domain | undefined) ?? it.domain,
       quantityKind,
       label: { fr: String(fix['labelFr'] ?? v?.labelFr ?? it.labelFr), en: String(fix['labelEn'] ?? v?.labelEn ?? it.labelEn) },
       description: null,
@@ -118,19 +121,20 @@ for (const f of rawFiles) {
     measurements.push({
       id: `${it.id}-m1`,
       phenomenonId: it.id,
-      configuration: patch.configuration ?? null,
-      value: Number(patch.value ?? fix['value'] ?? it.value),
+      configuration: (patch['configuration'] as string | undefined) ?? null,
+      value: Number(pick('value', it.value)),
       unit,
-      low: (patch.low ?? fix['low'] ?? it.low ?? null) as number | null,
-      high: (patch.high ?? fix['high'] ?? it.high ?? null) as number | null,
+      low: (pick('low', it.low ?? null) ?? null) as number | null,
+      high: (pick('high', it.high ?? null) ?? null) as number | null,
+      // The verifier's bilingual conditions already integrate its 'conditions' fix.
       conditions: { fr: v?.conditionsFr ?? it.conditions, en: v?.conditionsEn ?? it.conditions },
       protocol,
       provenanceType,
       verificationStatus: status,
       sourceIds: [slug(it.sourceId)],
-      locator: String(patch.locator ?? fix['locator'] ?? it.locator),
-      quote: clip((fix['quote'] as string | undefined) ?? it.quote),
-      era: patch.era ?? parseEra(fix['era'] ?? it.era),
+      locator: String(pick('locator', it.locator)),
+      quote: clip(pick('quote', it.quote) as string | null),
+      era: Object.hasOwn(patch, 'era') ? (patch['era'] as number | null) : parseEra(pick('era', it.era)),
       uncertainty: null,
       statistics: null,
       calculation: calculation ? { formula: calculation.formula, inputs: calculation.inputs.map((i) => (i.startsWith('const:') ? i : `${i}-m1`)) } : null,
