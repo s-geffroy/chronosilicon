@@ -26,7 +26,7 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 
 ## Publication
 
-- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = `178d4ad` (V1 à V5), run pages https://github.com/s-geffroy/chronosilicon/actions/runs/45891059462. Historique : V1 `7ca44b5`, V2 `2881239`.
+- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = `cf84cdd` (V1 à V5, corpus lot 2, 239 valeurs ; run https://github.com/s-geffroy/chronosilicon/actions/runs/45898057526). Précédent : `178d4ad` (V1 à V5), run pages https://github.com/s-geffroy/chronosilicon/actions/runs/45891059462. Historique : V1 `7ca44b5`, V2 `2881239`.
 - Vérifié le 2026-11-26 : HTTP 200, `version.json.commit` = SHA poussé, actifs sous `/chronosilicon/`, aucune erreur console (Chromium).
 - Toute publication suivante : fast-forward de `develop` vers `main` après la porte de la version (ADR-0003).
 
@@ -34,6 +34,7 @@ Dernière mise à jour : 2026-11-26 (session Claude Code, Opus 5.5). Source cano
 
 - 2026-11-26 : dossier `ChatGPT/04_TECHNOLOGIES_INGENIERIE/CHRONOSILICON/2026-11-26_G1_V1-publiee` (https://drive.google.com/drive/folders/1j0mK7_bWW6_LvVZ5ehHCFbjzJU9uhd2M). 7 fichiers ; les tailles concordent toutes ; un fichier a été retéléchargé et son SHA-256 est identique à l'original. Archive locale : `docs/archives/2026-11-26_G1/` (SHA256SUMS.txt).
 - 2026-11-26 : dossier `…/CHRONOSILICON/2026-11-26_G2-G5_V2-a-V5-publiees` (https://drive.google.com/drive/folders/1F5t8vfQXhDJRo9J3zlZfN-K74FmjbxhI). 11 fichiers ; les tailles concordent toutes ; un fichier (G5) a été retéléchargé et son SHA-256 est identique à l'original. Archive locale : `docs/archives/2026-11-26_G2-G5/`.
+- 2026-11-26 : dossier `…/CHRONOSILICON/2026-11-26_lot2_corpus-239-valeurs` (https://drive.google.com/drive/folders/1WmZ9aqK6QkJ4jLb4CR9Epo0VYThf96tR). 6 fichiers ; les tailles concordent ; le SHA-256 du rapport G0-lot2 retéléchargé est identique (665adc21…). Archive locale : `docs/archives/2026-11-26_lot2/`.
 
 ## Décisions non validées par l'utilisateur
 
