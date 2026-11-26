@@ -19,6 +19,12 @@ Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant 
 ### Ajouté (V2)
 - Espaces Architecture, Comparaison et Observateurs. Groupes curés et observateurs dérivés du corpus, invariants de compatibilité (ADR-0006). Revue contradictoire G2 intégrée.
 
+### Ajouté (V3–V5)
+- V3 : espace Simulation, 5 scénarios dont toutes les durées viennent du corpus, chemin critique, ressources, journal d'événements, export (ADR-0007).
+- V4 : Immersion, journal à la première personne dérivé des événements simulés (ADR-0008).
+- V5 : Laboratoire (registre des sources, valeurs écartées et motifs, mesure navigateur avec statistiques documentées), `npm run contribute:check`, modèle d'issue (ADR-0008).
+- Revues contradictoires G3 et G4/G5 intégrées ; correctifs responsive mobile.
+
 ### Modifié
 - Remplacement du squelette Jekyll du VPS par la chaîne Node/Vite (ADR-0001).
 
