@@ -84,6 +84,36 @@ export interface NormalizedMeasurement extends Measurement {
   readonly highSI: number | null;
 }
 
+export type Comparability = 'same-protocol' | 'same-source' | 'same-definition' | 'heterogeneous';
+
+/** A curated set of comparable measurements (V2). Displayed by era, never ranked by value. */
+export interface Group {
+  readonly id: string;
+  readonly kind: 'comparison' | 'hierarchy';
+  readonly quantityKind: QuantityKind;
+  readonly label: I18nText;
+  readonly members: readonly string[];
+  readonly comparability: Comparability;
+  readonly note: I18nText;
+}
+
+export interface ObserverDef {
+  readonly id: string;
+  readonly kind: 'clocked' | 'reference-operation';
+  /** Qualified measurement the observer is derived from (null = project convention). */
+  readonly measurementId: string | null;
+  /** Only for convention observers (measurementId null). */
+  readonly frequencyHz: number | null;
+  readonly label: I18nText;
+  readonly assumptions: I18nText;
+}
+
+/** Observer resolved against the corpus (derived, published). */
+export interface ResolvedObserver extends ObserverDef {
+  /** Clocked: frequency in Hz. Reference-operation: reference duration in s. */
+  readonly referenceSI: number;
+}
+
 export interface Corpus {
   readonly schemaVersion: typeof SCHEMA_VERSION;
   readonly corpusVersion: string;
@@ -91,6 +121,63 @@ export interface Corpus {
   readonly phenomena: readonly Phenomenon[];
   readonly measurements: readonly NormalizedMeasurement[];
   readonly sources: readonly Evidence[];
+  readonly groups: readonly Group[];
+  readonly observers: readonly ResolvedObserver[];
+}
+
+/**
+ * V2 invariants (G2: data compatibility). Groups only reference qualified
+ * measurements of the group's quantity kind; hierarchies must share a
+ * protocol; observers derive from qualified values of the right kind.
+ */
+export function checkV2Invariants(
+  groups: readonly Group[],
+  observers: readonly ObserverDef[],
+  qualified: readonly NormalizedMeasurement[],
+): string[] {
+  const errors: string[] = [];
+  const byId = new Map(qualified.map((m) => [m.id, m]));
+  const seen = new Set<string>();
+  for (const g of groups) {
+    if (seen.has(g.id)) errors.push(`duplicate group ${g.id}`);
+    seen.add(g.id);
+    if (g.kind === 'hierarchy' && g.comparability !== 'same-protocol' && g.comparability !== 'same-source') {
+      errors.push(`group ${g.id}: a hierarchy must come from one source (same-protocol or same-source)`);
+    }
+    if (g.comparability === 'same-protocol' || g.comparability === 'same-source') {
+      const srcs = new Set(g.members.map((id) => byId.get(id)?.sourceIds.join('+')));
+      if (srcs.size > 1) errors.push(`group ${g.id}: declared ${g.comparability} but members cite different sources`);
+    }
+    for (const id of g.members) {
+      const m = byId.get(id);
+      if (!m) errors.push(`group ${g.id}: member ${id} is not a qualified measurement`);
+      else if (m.quantityKind !== g.quantityKind) errors.push(`group ${g.id}: member ${id} is ${m.quantityKind}, group is ${g.quantityKind}`);
+    }
+  }
+  const oseen = new Set<string>();
+  for (const o of observers) {
+    if (oseen.has(o.id)) errors.push(`duplicate observer ${o.id}`);
+    oseen.add(o.id);
+    if (o.measurementId === null) {
+      if (o.kind !== 'clocked' || o.frequencyHz === null || !(o.frequencyHz > 0)) errors.push(`observer ${o.id}: convention observers must be clocked with frequencyHz > 0`);
+      continue;
+    }
+    if (o.frequencyHz !== null) errors.push(`observer ${o.id}: frequency must come from its measurement`);
+    const m = byId.get(o.measurementId);
+    const want = o.kind === 'clocked' ? 'frequency' : 'duration';
+    if (!m) errors.push(`observer ${o.id}: ${o.measurementId} is not a qualified measurement`);
+    else if (m.quantityKind !== want) errors.push(`observer ${o.id}: needs a ${want}, got ${m.quantityKind}`);
+    else if (!(m.valueSI > 0)) errors.push(`observer ${o.id}: reference must be > 0`);
+  }
+  return errors;
+}
+
+export function resolveObservers(observers: readonly ObserverDef[], qualified: readonly NormalizedMeasurement[]): ResolvedObserver[] {
+  const byId = new Map(qualified.map((m) => [m.id, m]));
+  return observers.map((o) => ({
+    ...o,
+    referenceSI: o.measurementId === null ? o.frequencyHz! : byId.get(o.measurementId)!.valueSI,
+  }));
 }
 
 export interface InvariantInput {

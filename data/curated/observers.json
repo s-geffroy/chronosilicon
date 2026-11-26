@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0.0",
+  "_comment": "Observers of the multi-observer space (V2, CS-07). Clocked observers take a qualified frequency; reference-operation observers take a qualified duration. tau = 1 subjective second per reference unit.",
+  "observers": [
+    {
+      "id": "obs-pedagogical-4ghz",
+      "kind": "clocked",
+      "measurementId": null,
+      "frequencyHz": 4000000000,
+      "label": {
+        "fr": "Cœur pédagogique à 4 GHz (convention du projet)",
+        "en": "Pedagogical 4 GHz core (project convention)"
+      },
+      "assumptions": {
+        "fr": "Fréquence constante par convention ; 1 cycle = 1 seconde subjective.",
+        "en": "Constant frequency by convention; 1 cycle = 1 subjective second."
+      }
+    },
+    {
+      "id": "obs-intel-8086",
+      "kind": "clocked",
+      "measurementId": "intel-8086-initial-clock-m1",
+      "frequencyHz": null,
+      "label": {
+        "fr": "Intel 8086 (1978)",
+        "en": "Intel 8086 (1978)"
+      },
+      "assumptions": {
+        "fr": "Fréquence documentée supposée constante ; cycles théoriques, pas instructions.",
+        "en": "Documented frequency assumed constant; theoretical cycles, not instructions."
+      }
+    },
+    {
+      "id": "obs-pentium4",
+      "kind": "clocked",
+      "measurementId": "intel-pentium4-launch-clock-m1",
+      "frequencyHz": null,
+      "label": {
+        "fr": "Intel Pentium 4 à son lancement (2000)",
+        "en": "Intel Pentium 4 at launch (2000)"
+      },
+      "assumptions": {
+        "fr": "Fréquence documentée supposée constante ; cycles théoriques.",
+        "en": "Documented frequency assumed constant; theoretical cycles."
+      }
+    },
+    {
+      "id": "obs-i9-14900k-base",
+      "kind": "clocked",
+      "measurementId": "intel-core-i9-14900k-pcore-base-m1",
+      "frequencyHz": null,
+      "label": {
+        "fr": "Intel Core i9-14900K, fréquence de base (2023)",
+        "en": "Intel Core i9-14900K, base frequency (2023)"
+      },
+      "assumptions": {
+        "fr": "Fréquence de base des P-cores ; la fréquence réelle varie (DVFS).",
+        "en": "P-core base frequency; actual frequency varies (DVFS)."
+      }
+    },
+    {
+      "id": "obs-i9-14900k-turbo",
+      "kind": "clocked",
+      "measurementId": "intel-core-i9-14900k-max-turbo-m1",
+      "frequencyHz": null,
+      "label": {
+        "fr": "Intel Core i9-14900K, turbo maximal (2023)",
+        "en": "Intel Core i9-14900K, maximum turbo (2023)"
+      },
+      "assumptions": {
+        "fr": "Fréquence maximale opportuniste, supposée constante pour le calcul alors qu'elle n'est pas soutenue en permanence.",
+        "en": "Opportunistic maximum frequency, assumed constant for the calculation although it is not sustained permanently."
+      }
+    },
+    {
+      "id": "obs-mi300x",
+      "kind": "clocked",
+      "measurementId": "mi300x-peak-engine-clock-m1",
+      "frequencyHz": null,
+      "label": {
+        "fr": "GPU AMD Instinct MI300X, horloge crête (2023)",
+        "en": "AMD Instinct MI300X GPU, peak engine clock (2023)"
+      },
+      "assumptions": {
+        "fr": "Horloge crête constructeur supposée constante ; un cycle GPU pilote de nombreuses unités en parallèle (non quantifié ici).",
+        "en": "Vendor peak clock assumed constant; one GPU cycle drives many parallel units (not quantified here)."
+      }
+    },
+    {
+      "id": "obs-human-reaction",
+      "kind": "reference-operation",
+      "measurementId": "human-simple-visual-reaction-time-m1",
+      "frequencyHz": null,
+      "label": {
+        "fr": "Adulte (18–65 ans) : un temps de réaction visuel simple moyen = 1 seconde subjective",
+        "en": "Adult (18–65 years): one mean simple visual reaction time = 1 subjective second"
+      },
+      "assumptions": {
+        "fr": "Référence : moyenne d'un échantillon (n = 1469), sans dispersion publiée ici. Avec la valeur brute (231 ms) plutôt que corrigée (213 ms), le résultat baisse d'environ 8 % : ordre de grandeur seulement. Ce n'est pas une horloge.",
+        "en": "Reference: mean of a sample (n = 1469), dispersion not given here. Using the raw value (231 ms) instead of the corrected one (213 ms) lowers the result by about 8%: order of magnitude only. This is not a clock."
+      }
+    },
+    {
+      "id": "obs-display-60hz",
+      "kind": "reference-operation",
+      "measurementId": "frame-time-60hz-m1",
+      "frequencyHz": null,
+      "label": {
+        "fr": "Écran 60 Hz : une image = 1 seconde subjective",
+        "en": "60 Hz display: one frame = 1 subjective second"
+      },
+      "assumptions": {
+        "fr": "Référence : période d'image à 60 Hz exactement.",
+        "en": "Reference: frame period at exactly 60 Hz."
+      }
+    }
+  ]
+}

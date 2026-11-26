@@ -5,8 +5,8 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import {
-  SCHEMA_VERSION, checkInvariants, normalize,
-  type Corpus, type Evidence, type Measurement, type Phenomenon,
+  SCHEMA_VERSION, checkInvariants, checkV2Invariants, normalize, resolveObservers,
+  type Corpus, type Evidence, type Group, type Measurement, type ObserverDef, type Phenomenon,
 } from '@chronosilicon/ontology';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -14,6 +14,8 @@ export const P = {
   sources: 'data/sources/sources.json',
   phenomena: 'data/curated/phenomena.json',
   measurements: 'data/curated/measurements.json',
+  groups: 'data/curated/groups.json',
+  observers: 'data/curated/observers.json',
   corpus: 'data/validated/corpus.json',
   rawDir: 'data/raw',
   rawManifest: 'data/raw/MANIFEST.sha256',
@@ -54,23 +56,30 @@ export function runPipeline(): PipelineResult {
   const s = load<{ sources: Evidence[] }>(P.sources, 'sources.schema.json');
   const ph = load<{ phenomena: Phenomenon[] }>(P.phenomena, 'phenomena.schema.json');
   const ms = load<{ measurements: Measurement[] }>(P.measurements, 'measurements.schema.json');
+  const gr = load<{ groups: Group[] }>(P.groups, 'groups.schema.json');
+  const ob = load<{ observers: ObserverDef[] }>(P.observers, 'observers.schema.json');
   errors.push(...checkRawManifest());
-  if (!s || !ph || !ms) return { errors, corpus: null, stats: {} };
+  if (!s || !ph || !ms || !gr || !ob) return { errors, corpus: null, stats: {} };
   errors.push(...checkInvariants({ sources: s.sources, phenomena: ph.phenomena, measurements: ms.measurements }));
   if (errors.length) return { errors, corpus: null, stats: {} };
 
   const qualified = ms.measurements.filter((m) => m.verificationStatus === 'qualified');
+  const normalized = normalize(ph.phenomena, qualified);
+  errors.push(...checkV2Invariants(gr.groups, ob.observers, normalized));
+  if (errors.length) return { errors, corpus: null, stats: {} };
   const usedPh = new Set(qualified.map((m) => m.phenomenonId));
   const usedSrc = new Set(qualified.flatMap((m) => m.sourceIds));
   const inputs: Record<string, string> = {};
-  for (const rel of [P.sources, P.phenomena, P.measurements]) inputs[rel] = sha256(read(rel));
+  for (const rel of [P.sources, P.phenomena, P.measurements, P.groups, P.observers]) inputs[rel] = sha256(read(rel));
   const corpus: Corpus = {
     schemaVersion: SCHEMA_VERSION,
-    corpusVersion: `0.1.0+${sha256(Object.values(inputs).join('')).slice(0, 12)}`,
+    corpusVersion: `0.2.0+${sha256(Object.values(inputs).join('')).slice(0, 12)}`,
     inputs,
     phenomena: ph.phenomena.filter((p) => usedPh.has(p.id)),
-    measurements: normalize(ph.phenomena, qualified),
+    measurements: normalized,
     sources: s.sources.filter((x) => usedSrc.has(x.id)),
+    groups: gr.groups,
+    observers: resolveObservers(ob.observers, normalized),
   };
   const count = (st: string) => ms.measurements.filter((m) => m.verificationStatus === st).length;
   return {
@@ -85,6 +94,8 @@ export function runPipeline(): PipelineResult {
       contested: count('contested'),
       rejected: count('rejected'),
       qualifiedPhenomena: usedPh.size,
+      groups: gr.groups.length,
+      observers: ob.observers.length,
     },
   };
 }

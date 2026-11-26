@@ -60,7 +60,7 @@
         <dt>{t('sheet.uncertainty')}</dt><dd>{t('sheet.uncertaintyUnknown')}</dd>
         {#if m.quote}<dt>{t('sheet.quote')}</dt><dd><blockquote>{m.quote}</blockquote></dd>{/if}
         <dt>{t('sheet.raw')}</dt><dd class="mono">{m.rawRef}</dd>
-        {#if m.notes}<dt>{t('sheet.notes')}</dt><dd>{m.notes}</dd>{/if}
+        {#if m.notes}<dt>{t('sheet.notes')}</dt><dd>{#if lang === 'fr'}<span class="help">{t('sheet.notesLang')}</span> {/if}<span lang="en">{m.notes}</span></dd>{/if}
       {/if}
     </dl>
     <h3>{t('sheet.source')}</h3>

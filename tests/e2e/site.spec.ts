@@ -90,7 +90,7 @@ test('FR/EN switch changes texts, not values', async ({ page }) => {
 });
 
 test('unbuilt spaces are explicitly marked unavailable', async ({ page }) => {
-  for (const r of ['architecture', 'observers', 'simulation', 'immersion', 'comparison', 'laboratory']) {
+  for (const r of ['simulation', 'immersion', 'laboratory']) {
     await page.goto(`./#/${r}?lang=en`);
     await expect(page.getByTestId('unavailable')).toContainText('not built yet');
   }
@@ -149,7 +149,7 @@ test('share link reproduces the state', async ({ page, context }) => {
 });
 
 test('accessibility: no axe violations (WCAG 2.1 AA) on main views', async ({ page }) => {
-  for (const r of ['timeline', 'converter', 'about', 'simulation']) {
+  for (const r of ['timeline', 'converter', 'about', 'simulation', 'architecture', 'comparison', 'observers']) {
     await page.goto(`./#/${r}?lang=fr`);
     await page.waitForLoadState('networkidle');
     const res = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
@@ -171,4 +171,45 @@ test('internal navigation links all resolve', async ({ page }) => {
     await page.goto(`./${h}`);
     await expect(page.locator('main h1')).toBeVisible();
   }
+});
+
+test('V2 architecture: cycle latencies read in the core own frame (no frequency assumed)', async ({ page }) => {
+  await page.goto('./#/architecture?lang=en');
+  const zen4 = page.getByTestId('hier-hier-zen4');
+  await expect(zen4).toContainText('50 cycles');
+  await expect(zen4).toContainText('50 seconds');
+  await expect(zen4).toContainText('three different statistics');
+});
+
+test('V2 comparison: ordered by year, comparability and frequency warning shown', async ({ page }) => {
+  await page.goto('./#/comparison?lang=en&g=cmp-cpu-clock');
+  await expect(page.getByTestId('cmp-note')).toContainText('A frequency is not a performance');
+  await expect(page.getByTestId('cmp-note')).toContainText('different definitions or protocols');
+  const years = await page.getByTestId('cmp-table').locator('tbody tr td:first-child').allTextContents();
+  expect(years).toEqual([...years].sort());
+  expect(years[0]).toBe('1978');
+  await page.getByTestId('cmp-select').selectOption('cmp-azure-rtt');
+  await expect(page).toHaveURL(/g=cmp-azure-rtt/);
+  await expect(page.getByTestId('cmp-note')).toContainText('same source and same method');
+});
+
+test('V2 observers: same physical duration, several frames (CS-07)', async ({ page }) => {
+  await page.goto('./#/observers?lang=en&m=earth-moon-light-time-one-way-m1');
+  await expect(page.getByTestId('obs-obs-pedagogical-4ghz')).toHaveText('162 years 192 days');
+  // 1.28222 s / 0.213 s = 6.02 reaction times
+  await expect(page.getByTestId('obs-obs-human-reaction')).toHaveText('≈ 6 subjective seconds');
+  await page.getByTestId('obs-select').selectOption('tcp-min-rto-m1');
+  await expect(page).toHaveURL(/m=tcp-min-rto-m1/);
+  await expect(page.getByTestId('obs-obs-pedagogical-4ghz')).toHaveText('126 years 275 days');
+  // A frequency id in the URL must never be observed as a duration (review M7).
+  await page.goto('./#/observers?lang=en&m=intel-8086-initial-clock-m1');
+  await expect(page.getByTestId('obs-select')).toHaveValue('earth-moon-light-time-one-way-m1');
+});
+
+test('V2 comparison: cycle groups are not converted; common observer is named for durations', async ({ page }) => {
+  await page.goto('./#/comparison?lang=en&g=cmp-l1d-cycles');
+  await expect(page.getByTestId('cmp-table')).not.toContainText('Subjective time');
+  await page.getByTestId('cmp-select').selectOption('cmp-dram-latency');
+  await expect(page.getByTestId('cmp-table')).toContainText('Subjective time, common observer at 4 GHz');
+  await expect(page.getByTestId('cmp-note')).toContainText('These values are not a series');
 });

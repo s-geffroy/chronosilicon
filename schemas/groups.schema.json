@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chronosilicon.local/schemas/groups.schema.json",
+  "title": "Comparison and hierarchy groups (V2)",
+  "type": "object",
+  "required": ["schemaVersion", "groups"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "_comment": { "type": "string" },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "quantityKind", "label", "members", "comparability", "note"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/id" },
+          "kind": { "enum": ["comparison", "hierarchy"] },
+          "quantityKind": { "$ref": "common.schema.json#/$defs/quantityKind" },
+          "label": { "$ref": "common.schema.json#/$defs/i18nText" },
+          "members": { "type": "array", "minItems": 2, "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/id" } },
+          "comparability": { "enum": ["same-protocol", "same-source", "same-definition", "heterogeneous"] },
+          "note": { "$ref": "common.schema.json#/$defs/i18nText" }
+        }
+      }
+    }
+  }
+}

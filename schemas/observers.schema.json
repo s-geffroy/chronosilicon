@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chronosilicon.local/schemas/observers.schema.json",
+  "title": "Observers (V2, CS-07)",
+  "type": "object",
+  "required": ["schemaVersion", "observers"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "_comment": { "type": "string" },
+    "observers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "measurementId", "frequencyHz", "label", "assumptions"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^obs-[a-z0-9-]+$" },
+          "kind": { "enum": ["clocked", "reference-operation"] },
+          "measurementId": { "type": ["string", "null"] },
+          "frequencyHz": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+          "label": { "$ref": "common.schema.json#/$defs/i18nText" },
+          "assumptions": { "$ref": "common.schema.json#/$defs/i18nText" }
+        }
+      }
+    }
+  }
+}

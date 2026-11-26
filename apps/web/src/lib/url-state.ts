@@ -24,6 +24,10 @@ export interface UrlState {
   domains: Domain[] | null; // null = all
   provenance: ProvenanceType[] | null; // null = all
   selected: string | null;
+  /** Comparison/hierarchy group (validated id). */
+  group: string | null;
+  /** Duration observed in the observers space (validated id). */
+  observed: string | null;
 }
 
 export const DEFAULT_STATE: Readonly<UrlState> = Object.freeze({
@@ -36,6 +40,8 @@ export const DEFAULT_STATE: Readonly<UrlState> = Object.freeze({
   domains: null,
   provenance: null,
   selected: null,
+  group: null,
+  observed: null,
 });
 
 const MAX_F = 1e15;
@@ -50,6 +56,8 @@ function pickList<T extends string>(v: string | null, allowed: readonly T[]): T[
   const items = v.split(',').filter((x): x is T => (allowed as readonly string[]).includes(x));
   return items.length ? [...new Set(items)] : null;
 }
+
+const idOrNull = (v: string | null) => (v !== null && ID.test(v) ? v : null);
 
 export function parseHash(hash: string, fallbackLang: Lang = 'fr'): UrlState {
   const h = hash.replace(/^#\/?/, '');
@@ -68,6 +76,8 @@ export function parseHash(hash: string, fallbackLang: Lang = 'fr'): UrlState {
     domains: pickList(q.get('d'), DOMAINS),
     provenance: pickList(q.get('p'), PROVENANCES),
     selected: sel !== null && ID.test(sel) ? sel : null,
+    group: idOrNull(q.get('g')),
+    observed: idOrNull(q.get('m')),
   };
 }
 
@@ -81,6 +91,8 @@ export function serializeHash(s: UrlState, appVersion: string): string {
   if (s.domains !== null) q.set('d', s.domains.join(','));
   if (s.provenance !== null) q.set('p', s.provenance.join(','));
   if (s.selected) q.set('sel', s.selected);
+  if (s.group) q.set('g', s.group);
+  if (s.observed) q.set('m', s.observed);
   q.set('v', appVersion);
   return `#/${s.route}?${q.toString()}`;
 }

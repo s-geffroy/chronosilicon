@@ -150,3 +150,7 @@ dialog blockquote { margin: 0; padding-left: 0.75rem; border-left: 3px solid var
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+.block { display: block; }
+label.block { display: grid; gap: 0.25rem; font-weight: 600; margin: 0.75rem 0; max-width: 40rem; }
+.group { margin-top: 1.5rem; }

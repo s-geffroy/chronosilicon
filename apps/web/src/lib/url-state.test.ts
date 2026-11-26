@@ -3,7 +3,7 @@ import { parseHash, serializeHash, DEFAULT_STATE } from './url-state';
 
 describe('shareable URL state', () => {
   it('round-trips validated parameters', () => {
-    const s = { ...DEFAULT_STATE, route: 'converter' as const, lang: 'en' as const, frequencyHz: 3.2e9, level: 'scientific' as const, domains: ['cpu' as const, 'space' as const], selected: 'abc-1' };
+    const s = { ...DEFAULT_STATE, route: 'converter' as const, lang: 'en' as const, frequencyHz: 3.2e9, level: 'scientific' as const, domains: ['cpu' as const, 'space' as const], selected: 'abc-1', group: 'cmp-l1d-cycles', observed: 'tcp-min-rto-m1' };
     const back = parseHash(serializeHash(s, '0.1.0'));
     expect(back).toEqual(s);
   });

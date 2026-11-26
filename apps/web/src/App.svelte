@@ -7,13 +7,13 @@
   import Converter from './components/Converter.svelte';
   import Unavailable from './components/Unavailable.svelte';
   import About from './components/About.svelte';
+  import Architecture from './components/Architecture.svelte';
+  import Comparison from './components/Comparison.svelte';
+  import Observers from './components/Observers.svelte';
   import Sheet from './components/Sheet.svelte';
   import type { MessageKey } from './lib/i18n';
 
   const PLANNED: Partial<Record<Route, string>> = {
-    architecture: 'V2',
-    observers: 'V2',
-    comparison: 'V2',
     simulation: 'V3',
     immersion: 'V4',
     laboratory: 'V5',
@@ -64,6 +64,12 @@
     <Timeline />
   {:else if route === 'converter'}
     <Converter />
+  {:else if route === 'architecture'}
+    <Architecture />
+  {:else if route === 'comparison'}
+    <Comparison />
+  {:else if route === 'observers'}
+    <Observers />
   {:else if route === 'about'}
     <About />
   {:else}

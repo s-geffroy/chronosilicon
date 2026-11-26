@@ -1,0 +1,302 @@
+{
+  "schemaVersion": "1.0.0",
+  "_comment": "Hand-curated comparison and hierarchy groups (V2, ADR-0006). Members are measurement ids of the qualified corpus. Members are displayed by era, never ranked by value.",
+  "groups": [
+    {
+      "id": "hier-skylake-client",
+      "kind": "hierarchy",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Hiérarchie de caches, Intel Skylake (client)",
+        "en": "Cache hierarchy, Intel Skylake (client)"
+      },
+      "members": [
+        "intel-skylake-client-l1d-latency-m1",
+        "intel-skylake-client-l2-latency-m1",
+        "intel-skylake-client-l3-latency-m1"
+      ],
+      "comparability": "same-protocol",
+      "note": {
+        "fr": "Latences « les plus courtes » publiées par Intel (meilleur cas) dans une même table du manuel d'optimisation.",
+        "en": "Fastest (best-case) latencies published by Intel in a single table of the optimization manual."
+      }
+    },
+    {
+      "id": "hier-icelake-client",
+      "kind": "hierarchy",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Hiérarchie de caches, Intel Ice Lake (client)",
+        "en": "Cache hierarchy, Intel Ice Lake (client)"
+      },
+      "members": [
+        "intel-icelake-client-l1d-latency-m1",
+        "intel-icelake-client-l2-latency-m1"
+      ],
+      "comparability": "same-protocol",
+      "note": {
+        "fr": "Intel ne publie pas de latence L3 chiffrée pour Ice Lake client dans ce manuel (valeur « xx ») : le niveau est absent, pas estimé.",
+        "en": "Intel gives no numeric L3 latency for Ice Lake client in this manual ('xx'): the level is missing, not estimated."
+      }
+    },
+    {
+      "id": "hier-zen4",
+      "kind": "hierarchy",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Hiérarchie de caches, AMD Zen 4",
+        "en": "Cache hierarchy, AMD Zen 4"
+      },
+      "members": [
+        "amd-zen4-l1d-load-to-use-m1",
+        "amd-zen4-l2-load-to-use-m1",
+        "amd-zen4-l3-load-to-use-m1"
+      ],
+      "comparability": "same-source",
+      "note": {
+        "fr": "Même document AMD, mais trois statistiques différentes : L1 = borne basse d'une plage (4 à 5 cycles), L2 = minimum (« pas moins de 14 cycles »), L3 = moyenne annoncée sans n ni méthode.",
+        "en": "Same AMD document, but three different statistics: L1 = lower bound of a range (4 to 5 cycles), L2 = minimum ('no less than 14 cycles'), L3 = stated average without n or method."
+      }
+    },
+    {
+      "id": "hier-zen5",
+      "kind": "hierarchy",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Hiérarchie de caches, AMD Zen 5",
+        "en": "Cache hierarchy, AMD Zen 5"
+      },
+      "members": [
+        "amd-zen5-l1d-load-to-use-m1",
+        "amd-zen5-l2-load-to-use-m1",
+        "amd-zen5-l3-load-to-use-m1"
+      ],
+      "comparability": "same-source",
+      "note": {
+        "fr": "Même document AMD, mais trois statistiques différentes : L1 = borne basse d'une plage (4 à 5 cycles), L2 = minimum (« pas moins de 14 cycles »), L3 = moyenne annoncée sans n ni méthode.",
+        "en": "Same AMD document, but three different statistics: L1 = lower bound of a range (4 to 5 cycles), L2 = minimum ('no less than 14 cycles'), L3 = stated average without n or method."
+      }
+    },
+    {
+      "id": "cmp-l1d-cycles",
+      "kind": "comparison",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence du cache L1 de données, par génération",
+        "en": "L1 data cache latency, by generation"
+      },
+      "members": [
+        "intel-skylake-client-l1d-latency-m1",
+        "intel-icelake-client-l1d-latency-m1",
+        "amd-zen4-l1d-load-to-use-m1",
+        "amd-zen5-l1d-load-to-use-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Définitions différentes : « meilleur cas » chez Intel, « load-to-use » chez AMD. En cycles de chaque cœur : à fréquences différentes, un même nombre de cycles ne dure pas le même temps physique.",
+        "en": "Different definitions: best case for Intel, load-to-use for AMD. In each core's own cycles: at different frequencies the same cycle count is not the same physical time."
+      }
+    },
+    {
+      "id": "cmp-l2-cycles",
+      "kind": "comparison",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence du cache L2, par génération",
+        "en": "L2 cache latency, by generation"
+      },
+      "members": [
+        "intel-skylake-client-l2-latency-m1",
+        "intel-icelake-client-l2-latency-m1",
+        "amd-zen4-l2-load-to-use-m1",
+        "amd-zen5-l2-load-to-use-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Définitions constructeur différentes (meilleur cas Intel, load-to-use AMD) ; cycles propres à chaque cœur.",
+        "en": "Different vendor definitions (Intel best case, AMD load-to-use); cycles of each core."
+      }
+    },
+    {
+      "id": "cmp-llc-cycles",
+      "kind": "comparison",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence du dernier niveau de cache (L3/LLC), par génération",
+        "en": "Last-level cache (L3/LLC) latency, by generation"
+      },
+      "members": [
+        "intel-xeon5500-l3-hit-exclusive-m1",
+        "intel-sandybridge-llc-latency-m1",
+        "intel-haswell-l3-latency-m1",
+        "intel-skylake-client-l3-latency-m1",
+        "amd-zen4-l3-load-to-use-m1",
+        "amd-zen5-l3-load-to-use-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Valeurs de nature différente : estimation serveur (Xeon 5500, ligne exclusive), borne basse d'une plage selon le modèle (Sandy Bridge, 26 à 31), valeur approchée (Haswell, ~34), meilleur cas (Skylake client) et moyennes sans méthode (AMD). Intel indique pour Haswell que la latence varie avec le rapport d'horloge cœur/uncore. Cycles de cœurs différents : à lire côte à côte, sans classement.",
+        "en": "Values of different nature: server estimate (Xeon 5500, exclusive line), lower bound of a model-dependent range (Sandy Bridge, 26 to 31), approximate value (Haswell, ~34), best case (Skylake client) and averages without method (AMD). Intel states for Haswell that the latency varies with the core/uncore clock ratio. Cycles of different cores: read side by side, not as a ranking."
+      }
+    },
+    {
+      "id": "cmp-div64-cycles",
+      "kind": "comparison",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence de la division entière 64 bits (DIV r64)",
+        "en": "64-bit integer division latency (DIV r64)"
+      },
+      "members": [
+        "x86-div-r64-latency-skylake-m1",
+        "x86-div-r64-latency-alderlake-p-m1",
+        "x86-div-r64-latency-zen4-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "La latence dépend des valeurs des opérandes (plages dans chaque fiche) ; sources différentes (uops.info, Agner Fog). La valeur retenue est la borne basse de la plage publiée, pas un cas typique.",
+        "en": "Latency depends on operand values (ranges in each sheet); different sources (uops.info, Agner Fog). The retained value is the lower bound of the published range, not a typical case."
+      }
+    },
+    {
+      "id": "cmp-dram-latency",
+      "kind": "comparison",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence de la mémoire principale (DRAM locale), 1995–2019",
+        "en": "Main memory (local DRAM) latency, 1995–2019"
+      },
+      "members": [
+        "dram-latency-pentiumpro-lmbench-1995-m1",
+        "intel-xeon5500-local-dram-latency-m1",
+        "dram-latency-epyc-7702-measured-m1",
+        "dram-latency-xeon-6248-measured-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Protocoles et plateformes différents : poste de travail mesuré par lmbench (1995), estimation Intel (2009), serveurs bi-socket mesurés en pointer chasing (2019). Ces valeurs ne forment pas une série. Les deux mesures de 2019 citent leurs cycles : environ 200 à 220 cycles de leur propre horloge. À 200 MHz, la valeur de 1995 correspondrait à environ 36 cycles (calcul : 179 ns × 200 MHz). Le nombre de cycles d'attente a donc été multiplié par environ 6, tandis que la durée physique a baissé au plus d'un facteur 2 sur ces plateformes.",
+        "en": "Different protocols and platforms: workstation measured with lmbench (1995), Intel estimate (2009), dual-socket servers measured by pointer chasing (2019). These values are not a series. Both 2019 measurements state their cycles: about 200 to 220 cycles of their own clock. At 200 MHz the 1995 value would be about 36 cycles (calculation: 179 ns × 200 MHz). The number of waiting cycles was thus multiplied by about 6, while the physical duration dropped by at most a factor of 2 on these platforms."
+      }
+    },
+    {
+      "id": "cmp-cpu-clock",
+      "kind": "comparison",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d'horloge de processeurs x86, 1978–2023",
+        "en": "x86 processor clock frequency, 1978–2023"
+      },
+      "members": [
+        "intel-8086-initial-clock-m1",
+        "intel-pentium4-launch-clock-m1",
+        "intel-core-i9-14900k-pcore-base-m1",
+        "intel-core-i9-14900k-max-turbo-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Une fréquence n'est pas une performance : le travail par cycle (IPC), le nombre de cœurs et la mémoire varient entre générations. Le i9-14900K a une fréquence de base et une fréquence turbo maximale, opportuniste.",
+        "en": "A frequency is not a performance: work per cycle (IPC), core count and memory differ between generations. The i9-14900K has a base and an opportunistic maximum turbo frequency."
+      }
+    },
+    {
+      "id": "cmp-pcie-lane-rate",
+      "kind": "comparison",
+      "quantityKind": "transfer_rate",
+      "label": {
+        "fr": "Débit brut par voie PCI Express, générations 4 à 6",
+        "en": "PCI Express raw rate per lane, generations 4 to 6"
+      },
+      "members": [
+        "pcie4-lane-rate-m1",
+        "pcie5-lane-rate-m1",
+        "pcie6-lane-rate-m1"
+      ],
+      "comparability": "same-definition",
+      "note": {
+        "fr": "Transferts par seconde, pas octets par seconde : le codage et le protocole réduisent le débit utile.",
+        "en": "Transfers per second, not bytes per second: encoding and protocol reduce the useful throughput."
+      }
+    },
+    {
+      "id": "cmp-usb-rate",
+      "kind": "comparison",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit de signalisation USB, générations successives",
+        "en": "USB signalling rate, successive generations"
+      },
+      "members": [
+        "usb-low-speed-rate-m1",
+        "usb-full-speed-rate-m1",
+        "usb-high-speed-rate-m1",
+        "usb32-20g-rate-m1",
+        "usb4-80g-rate-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Débits nominaux publiés par l'USB-IF : une seule ligne pour USB 2.0, agrégat de deux voies pour USB 3.2 20 Gbit/s et USB4 80 Gbit/s. Le débit utile est inférieur.",
+        "en": "Nominal rates published by USB-IF: a single line for USB 2.0, an aggregate of two lanes for USB 3.2 20 Gbit/s and USB4 80 Gbit/s. Useful throughput is lower."
+      }
+    },
+    {
+      "id": "cmp-accelerator-hbm",
+      "kind": "comparison",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante mémoire HBM d'accélérateurs",
+        "en": "Accelerator HBM memory bandwidth"
+      },
+      "members": [
+        "h100-sxm-hbm-bandwidth-m1",
+        "mi300x-hbm-bandwidth-m1",
+        "tpu-v5p-hbm-bandwidth-m1",
+        "b200-per-gpu-hbm-bandwidth-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Valeurs crête constructeur, non mesurées ; la valeur B200 est calculée depuis le total d'un DGX B200 (8 GPU). Une bande passante ne se compare pas à une latence.",
+        "en": "Vendor peak values, not measurements; the B200 value is computed from a DGX B200 total (8 GPUs). A bandwidth does not compare to a latency."
+      }
+    },
+    {
+      "id": "cmp-azure-rtt",
+      "kind": "comparison",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Aller-retour réseau entre régions Azure (médianes)",
+        "en": "Network round trip between Azure regions (medians)"
+      },
+      "members": [
+        "azure-rtt-westeurope-francecentral-m1",
+        "azure-rtt-eastus-westus-m1",
+        "azure-rtt-eastus-westeurope-m1",
+        "azure-rtt-eastus-australiaeast-m1"
+      ],
+      "comparability": "same-protocol",
+      "note": {
+        "fr": "Même source et même méthode (médiane sur 30 jours, réseau dorsal Azure) ; n non publié.",
+        "en": "Same source and method (30-day median, Azure backbone); n not published."
+      }
+    },
+    {
+      "id": "cmp-mobile-latency-targets",
+      "kind": "comparison",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Objectifs de latence 3GPP (5G et satellites)",
+        "en": "3GPP latency targets (5G and satellites)"
+      },
+      "members": [
+        "nr-urllc-user-plane-latency-target-m1",
+        "nr-embb-user-plane-latency-target-m1",
+        "ntn-leo-user-plane-rtt-target-m1",
+        "ntn-geo-user-plane-rtt-target-m1"
+      ],
+      "comparability": "heterogeneous",
+      "note": {
+        "fr": "Objectifs de conception, pas des mesures ; latence aller simple du plan usager pour URLLC/eMBB, aller-retour pour les satellites.",
+        "en": "Design targets, not measurements; one-way user-plane latency for URLLC/eMBB, round trip for satellites."
+      }
+    }
+  ]
+}

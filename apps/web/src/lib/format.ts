@@ -31,7 +31,8 @@ export function formatCalendar(seconds: number, lang: Lang): string {
   const [a, b] = parts;
   if (!a) return fmt('second', 0);
   if (a.unit === 'year' && a.value >= 1e6) {
-    return `${formatNumber(a.value, lang, 3)} ${fmt('year', 2).replace(/^[\d\s.,\u202f\u00a0]+/, '')}`;
+    // 3 significant digits: announce the rounding explicitly.
+    return `≈ ${formatNumber(a.value, lang, 3)} ${fmt('year', 2).replace(/^[\d\s.,\u202f\u00a0]+/, '')}`;
   }
   if (!b) return fmt(a.unit, a.value, { maximumSignificantDigits: a.value >= 1000 ? 21 : 3, maximumFractionDigits: a.value >= 1000 ? 0 : undefined } as Intl.NumberFormatOptions);
   let whole = a.value;
