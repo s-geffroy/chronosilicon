@@ -37,6 +37,12 @@ describe('dimensions', () => {
     expect(Object.keys(UNITS).sort()).toEqual(Object.keys(expected).sort());
     for (const [u, f] of Object.entries(expected)) expect(toSI(1, u, unitKind(u)), u).toBeCloseTo(f, 12 - Math.max(0, Math.log10(f)));
   });
+  it('decimal sub-units convert without floating noise (review lot 2, m2)', () => {
+    expect(toSI(43, 'ms', 'duration')).toBe(0.043);
+    expect(toSI(180, 'us', 'duration')).toBe(0.00018);
+    expect(toSI(397.8, 'ms', 'duration')).toBe(0.3978);
+    expect(toSI(6.72, 'ns', 'duration')).toBe(6.72e-9);
+  });
   it('astronomical unit is exact (IAU 2012)', () => expect(toSI(1, 'au', 'distance')).toBe(149_597_870_700));
 });
 

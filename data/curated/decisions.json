@@ -185,12 +185,12 @@
       }
     },
     "solidigm-p5520-4k-qd16-latency-derived": {
-      "reason": "Input is the 233,700 IOPS (4 KiB, QD16) documented in the cited Solidigm brief (review M-2). Value recomputed to 5 significant digits (16 / 233700 s = 68.464 µs) instead of the extraction's rounded 68.5 µs (calculated-value oracle).",
+      "reason": "Input is the 233,700 IOPS (4 KiB, QD16) documented in the cited Solidigm brief (review M-2). Value stored at full precision (16 / 233700 s = 68.4638… µs) instead of the extraction's rounded 68.5 µs (calculated-value oracle, tolerance 1e-12).",
       "patch": {
         "calculationInputs": [
           "src:src-solidigm-p5520-brief"
         ],
-        "value": 68.464
+        "value": 68.46384253316218
       }
     },
     "linux-tick-period-hz1000": {
@@ -227,10 +227,12 @@
       }
     },
     "linux-retpoline-indirect-branch-cost": {
-      "reason": "The paper states 'around 30 cycles' without a measurement method for this figure: classified as an estimate (lot-2 verifier recommendation, 2026-11-26).",
+      "reason": "The paper states 'around 30 cycles' without a measurement method for this figure: classified as an estimate (lot-2 verifier recommendation, 2026-11-26). Context kept in conditions after removing the protocol (lot-2 review, section 4).",
       "patch": {
         "provenanceType": "estimated",
-        "protocol": null
+        "protocol": null,
+        "conditionsFr": "Linux « avoid indirect branch speculation » (correctif Retpoline, introduit en 4.14, parade contre Spectre v2), Intel Xeon E5-2630 v3 ; « environ 30 cycles » ajoutés à chaque saut ou appel indirect (valeur approchée) ; résultats du tableau 3 obtenus avec PCID activé (serveur HP DL160 G9, noyaux 3.0 à 4.20).",
+        "conditionsEn": "Linux 'avoid indirect branch speculation' (Retpoline patch, introduced in 4.14, Spectre v2 mitigation), Intel Xeon E5-2630 v3; 'around 30 cycles' added to each indirect jump or call (approximate); Table 3 results obtained with PCID enabled (HP DL160 G9 server, kernels 3.0 to 4.20)."
       }
     },
     "hgx-b200-fp64-peak": {
@@ -244,9 +246,11 @@
       }
     },
     "frame-time-144hz": {
-      "reason": "Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "reason": "Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value. Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "patch": {
-        "value": 6.944444444444445
+        "value": 6.944444444444445,
+        "high": 6.944444444444445,
+        "boundChecked": true
       }
     },
     "frame-time-240hz": {
@@ -294,9 +298,10 @@
       }
     },
     "top500-1993-06-r1-cm5-rmax": {
-      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit). Protocol states that the cited rules are the current ones, not dated 1993 (lot-2 review m10).",
       "patch": {
-        "confidenceNotes": "Vendor/site-submitted benchmark result; not an independent measurement. LINPACK benchmark only, not representative of application performance. First TOP500 list; value on the page in GFlop/s (Rpeak 131.00 GFlop/s on the same row, not extracted)."
+        "confidenceNotes": "Vendor/site-submitted benchmark result; not an independent measurement. LINPACK benchmark only, not representative of application performance. First TOP500 list; value on the page in GFlop/s (Rpeak 131.00 GFlop/s on the same row, not extracted).",
+        "protocol": "Rules cited are those of the current TOP500 Linpack page, not dated 1993; the 1993 run used LINPACK. Rmax as listed in the TOP500 list: best LINPACK performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page."
       }
     },
     "top500-2008-06-r1-roadrunner-rmax": {
@@ -342,9 +347,10 @@
       }
     },
     "hdmi21-max-bandwidth": {
-      "reason": "Bound encoded in low/high so the interface shows it (lot-2 review M3).",
+      "reason": "Bound encoded in low/high so the interface shows it (lot-2 review M3). Era 2017 is not stated by the cited page: set to unknown (lot-2 review m15).",
       "patch": {
-        "high": 48
+        "high": 48,
+        "era": null
       }
     },
     "ihp-sg13g3-hbt-fmax": {
@@ -375,6 +381,145 @@
     },
     "b200-per-gpu-hbm-bandwidth": {
       "reason": "Kept qualified, unlike HGX B200 FP64: the DGX B200 page labels 64 TB/s as the system total and states 8 GPUs, so the per-GPU value only assumes an equal split (stated in conditions); the HGX FP64 row does not say whether it is per GPU or total (lot-2 review, equal-treatment check)."
+    },
+    "tcp-min-rto": {
+      "reason": "Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "patch": {
+        "low": 1,
+        "boundChecked": true
+      }
+    },
+    "tcp-max-rto-floor": {
+      "reason": "Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "patch": {
+        "low": 60,
+        "boundChecked": true
+      }
+    },
+    "tcp-isn-clock-tick": {
+      "reason": "Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "patch": {
+        "high": 4,
+        "boundChecked": true
+      }
+    },
+    "ntn-leo-user-plane-rtt-target": {
+      "reason": "Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "patch": {
+        "high": 50,
+        "boundChecked": true
+      }
+    },
+    "amd-zen4-l2-load-to-use": {
+      "reason": "Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "patch": {
+        "low": 14,
+        "boundChecked": true
+      }
+    },
+    "amd-zen5-l2-load-to-use": {
+      "reason": "Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "patch": {
+        "low": 14,
+        "boundChecked": true
+      }
+    },
+    "pcie5-x16-bandwidth": {
+      "reason": "Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "patch": {
+        "high": 128,
+        "boundChecked": true
+      }
+    },
+    "pcie6-x16-bandwidth": {
+      "reason": "Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "patch": {
+        "high": 256,
+        "boundChecked": true
+      }
+    },
+    "usb4-80g-rate": {
+      "reason": "Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "patch": {
+        "high": 80,
+        "boundChecked": true
+      }
+    },
+    "usb-hs-max-polling-rate": {
+      "reason": "Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "patch": {
+        "high": 8000,
+        "boundChecked": true
+      }
+    },
+    "tcp-initial-rto": {
+      "reason": "Bound wording in the excerpt does not bound this value (checked in the bound audit).",
+      "patch": {
+        "boundChecked": true
+      }
+    },
+    "pcie5-lane-rate": {
+      "reason": "Bound wording in the excerpt does not bound this value (checked in the bound audit).",
+      "patch": {
+        "boundChecked": true
+      }
+    },
+    "pcie6-lane-rate": {
+      "reason": "Bound wording in the excerpt does not bound this value (checked in the bound audit).",
+      "patch": {
+        "boundChecked": true
+      }
+    },
+    "usb32-20g-rate": {
+      "reason": "Bound wording in the excerpt does not bound this value (checked in the bound audit).",
+      "patch": {
+        "boundChecked": true
+      }
+    },
+    "willow-realtime-decoder-latency-d5": {
+      "reason": "Bound wording in the excerpt does not bound this value (checked in the bound audit).",
+      "patch": {
+        "boundChecked": true
+      }
+    },
+    "iss-average-altitude": {
+      "reason": "Bound wording in the excerpt does not bound this value (checked in the bound audit).",
+      "patch": {
+        "boundChecked": true
+      }
+    },
+    "intel-pentium-pro-initial-clock": {
+      "reason": "Unsourced sentence removed from the notes (lot-2 review m4).",
+      "patch": {
+        "confidenceNotes": "Quote assembles the chip label and the value from the same poster column (verified by text bounding boxes); not a datasheet. . Pentium Pro was also sold at lower speeds; the poster gives 200 MHz only."
+      }
+    },
+    "lto9-native-transfer-rate": {
+      "reason": "Note no longer claims an 'up to' figure absent from the excerpt (lot-2 review m16).",
+      "patch": {
+        "confidenceNotes": "Program-level figure; IBM half-height LTO-9 drives are rated 300 MB/s native (IBM TS4300 docs, Table 3)."
+      }
+    },
+    "arm-neoverse-n2-l1d-load-latency": {
+      "reason": "Era not stated by the cited source (Issue 5.0, 2022, r0p3): set to unknown (lot-2 review m6).",
+      "patch": {
+        "era": null
+      }
+    },
+    "arm-cortex-a520-l2-hit-latency": {
+      "reason": "Same selection rule as L1 (top of the normal case): 12 cycles, published range 10–12 (lot-2 review m9).",
+      "patch": {
+        "value": 12,
+        "low": 10,
+        "high": 12
+      }
+    },
+    "pcie3-lane-rate": {
+      "reason": "Unsourced derived figure ('about 1 GB/s per direction') removed from the conditions (lot-2 review m7).",
+      "patch": {
+        "conditionsFr": "Spécification PCI Express Base 3.0 (novembre 2010), codage 128b/130b ; 8 GT/s par voie.",
+        "conditionsEn": "PCI Express Base 3.0 specification (November 2010), 128b/130b encoding; 8 GT/s per lane."
+      }
     }
   },
   "sourcePatches": {

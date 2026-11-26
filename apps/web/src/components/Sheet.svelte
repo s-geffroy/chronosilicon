@@ -32,8 +32,9 @@
     <dl>
       <dt>{t('sheet.value')}</dt>
       <dd data-testid="sheet-value">{formatValue(m.value, m.unit, lang)}</dd>
-      {#if m.low !== null && m.high !== null}
-        <dt>{t('sheet.interval')}</dt><dd>{formatValue(m.low, m.unit, lang)} – {formatValue(m.high, m.unit, lang)}</dd>
+      {#if m.low !== null || m.high !== null}
+        <dt>{t('sheet.interval')}</dt>
+        <dd data-testid="sheet-interval">{#if m.low !== null && m.high !== null}{formatValue(m.low, m.unit, lang)} – {formatValue(m.high, m.unit, lang)}{:else if m.low !== null}≥ {formatValue(m.low, m.unit, lang)}{:else if m.high !== null}≤ {formatValue(m.high, m.unit, lang)}{/if}</dd>
       {/if}
       {#if sub}
         <dt>{t('sheet.subjective', { f: formatFrequency(app.s.frequencyHz, lang) })}</dt>

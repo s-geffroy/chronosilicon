@@ -281,3 +281,10 @@ test('no horizontal page overflow on any view (responsive)', async ({ page }) =>
     expect(sw, r).toBeLessThanOrEqual(cw);
   }
 });
+
+test('sheet shows one-sided bounds as ≥ / ≤ (review lot 2, m1)', async ({ page }) => {
+  await page.goto('./#/timeline?lang=en&level=scientific&sel=hbm3e-micron-stack-bandwidth-m1');
+  await expect(page.getByTestId('sheet-interval')).toHaveText(/^≥ 1\.2 TB\/s$/);
+  await page.goto('./#/timeline?lang=en&level=scientific&sel=android-pro-audio-rtl-max-analog-m1');
+  await expect(page.getByTestId('sheet-interval')).toHaveText(/^≤ 20 ms$/);
+});

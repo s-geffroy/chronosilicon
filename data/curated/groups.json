@@ -96,8 +96,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Définitions différentes : meilleur cas chez Intel, load-to-use chez AMD, latence de chargement sur succès L1 chez Arm (Cortex-A520 : plage de 2 à 4 cycles, borne haute retenue). Cycles propres à chaque cœur : à fréquences différentes, un même nombre de cycles ne dure pas le même temps physique.",
-        "en": "Different definitions: best case for Intel, load-to-use for AMD, L1-hit load latency for Arm (Cortex-A520: range 2 to 4 cycles, upper bound retained). Each core's own cycles: at different frequencies the same cycle count is not the same physical time."
+        "fr": "Définitions différentes : meilleur cas chez Intel, load-to-use chez AMD, latence de chargement sur succès L1 chez Arm. Le Cortex-A520 est un petit cœur à haute efficacité énergétique, non comparable aux gros cœurs (cas normal de 4 cycles, meilleur cas 2). Cycles propres à chaque cœur : à fréquences différentes, un même nombre de cycles ne dure pas le même temps physique.",
+        "en": "Different definitions: best case for Intel, load-to-use for AMD, L1-hit load latency for Arm. The Cortex-A520 is a small high-efficiency core, not comparable to big cores (normal case 4 cycles, best case 2). Each core's own cycles: at different frequencies the same cycle count is not the same physical time."
       }
     },
     {
@@ -204,8 +204,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Une fréquence n'est pas une performance : le travail par cycle (IPC), le nombre de cœurs et la mémoire varient entre générations. Le i9-14900K a une fréquence de base et une fréquence turbo maximale, opportuniste.",
-        "en": "A frequency is not a performance: work per cycle (IPC), core count and memory differ between generations. The i9-14900K has a base and an opportunistic maximum turbo frequency."
+        "fr": "Une fréquence n'est pas une performance : le travail par cycle (IPC), le nombre de cœurs et la mémoire varient entre générations. Valeurs de nature différente : fréquences initiales d'une affiche Intel (1974–1995), jalon de l'Athlon à 1 GHz (pas sa fréquence de lancement), fréquence de lancement du Pentium 4, puis fréquence de base et turbo maximal opportuniste du i9-14900K.",
+        "en": "A frequency is not a performance: work per cycle (IPC), core count and memory differ between generations. Values of different nature: initial frequencies from an Intel poster (1974–1995), the Athlon 1 GHz milestone (not its launch frequency), the Pentium 4 launch frequency, then the base and opportunistic maximum turbo frequency of the i9-14900K."
       }
     },
     {
@@ -267,8 +267,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Valeurs crête constructeur, non mesurées : HBM pour les accélérateurs de centre de données, GDDR6X/GDDR7 pour les cartes grand public (RTX). La valeur B200 est calculée depuis le total d'un DGX B200 (8 GPU). Une bande passante ne se compare pas à une latence.",
-        "en": "Vendor peak values, not measurements: HBM for data-centre accelerators, GDDR6X/GDDR7 for consumer cards (RTX). The B200 value is computed from a DGX B200 total (8 GPUs). A bandwidth does not compare to a latency."
+        "fr": "Valeurs constructeur (crête lorsque c'est indiqué), non mesurées : HBM pour les accélérateurs de centre de données, GDDR6X/GDDR7 pour les cartes grand public (RTX). La valeur B200 est calculée depuis le total d'un DGX B200 (8 GPU). Une bande passante ne se compare pas à une latence.",
+        "en": "Vendor values (peak where stated), not measurements: HBM for data-centre accelerators, GDDR6X/GDDR7 for consumer cards (RTX). The B200 value is computed from a DGX B200 total (8 GPUs). A bandwidth does not compare to a latency."
       }
     },
     {
@@ -325,8 +325,8 @@
       ],
       "comparability": "same-source",
       "note": {
-        "fr": "Même guide d'optimisation Arm, mais des plages : L1 de 2 à 4 cycles (borne haute retenue), L2 de 10 à 12 cycles (11 = bas du cas normal).",
-        "en": "Same Arm optimization guide, but ranges: L1 2 to 4 cycles (upper bound retained), L2 10 to 12 cycles (11 = low end of the normal case)."
+        "fr": "Même guide d'optimisation Arm ; règle unique : haut du cas normal de chaque niveau. L1 : 4 cycles (plage 2 à 4), L2 : 12 cycles (plage 10 à 12).",
+        "en": "Same Arm optimization guide; single rule: top of each level's normal case. L1: 4 cycles (range 2 to 4), L2: 12 cycles (range 10 to 12)."
       }
     },
     {
@@ -345,8 +345,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Résultats LINPACK (1993) puis HPL en double précision, soumis pour des systèmes différents. Rmax mesure un seul benchmark dense, pas la performance d'applications réelles. Les fréquences et le nombre de cœurs ont changé en même temps.",
-        "en": "LINPACK (1993) then double-precision HPL results, submitted for different systems. Rmax measures a single dense benchmark, not real application performance. Frequencies and core counts changed at the same time."
+        "fr": "Résultats LINPACK (1993) puis HPL en double précision, publiés pour des systèmes différents. Rmax mesure un seul benchmark dense, pas la performance d'applications réelles. Les fréquences et le nombre de cœurs ont changé en même temps.",
+        "en": "LINPACK (1993) then double-precision HPL results, published for different systems. Rmax measures a single dense benchmark, not real application performance. Frequencies and core counts changed at the same time."
       }
     },
     {
@@ -366,8 +366,8 @@
       ],
       "comparability": "same-definition",
       "note": {
-        "fr": "Même benchmark (HPL, double précision) et même liste ; Rmax mesuré contre Rpeak théorique (voir les fiches). Le classement est celui du TOP500, pas une mesure de performance générale.",
-        "en": "Same benchmark (HPL, double precision) and same list; measured Rmax versus theoretical Rpeak (see sheets). The ranking is TOP500's, not a measure of general performance."
+        "fr": "Même benchmark (HPL, double précision) et même liste. Exception assumée à la règle « jamais classé par valeur » (ADR-0006) : l'ordre affiché est le rang publié par le TOP500, pas une mesure de performance générale. Rpeak théorique : voir les fiches Rpeak correspondantes (une par système).",
+        "en": "Same benchmark (HPL, double precision) and same list. Accepted exception to the 'never ranked by value' rule (ADR-0006): the order shown is the rank published by TOP500, not a measure of general performance. Theoretical Rpeak: see the corresponding Rpeak sheets (one per system)."
       }
     },
     {
@@ -375,8 +375,8 @@
       "kind": "comparison",
       "quantityKind": "duration",
       "label": {
-        "fr": "Durée d'une porte à deux qubits (CZ), processeurs supraconducteurs",
-        "en": "Two-qubit (CZ) gate duration, superconducting processors"
+        "fr": "Durée d'une porte à deux qubits, processeurs supraconducteurs",
+        "en": "Two-qubit gate duration, superconducting processors"
       },
       "members": [
         "willow-cz-gate-duration-m1",
@@ -384,8 +384,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Processeurs, calibrations et articles différents ; la valeur IBM est un instantané de calibration d'un sous-ensemble de qubits. Une porte plus courte n'est pas forcément plus fidèle.",
-        "en": "Different processors, calibrations and papers; the IBM value is a calibration snapshot of a qubit subset. A shorter gate is not necessarily higher fidelity."
+        "fr": "Processeurs, calibrations et articles différents : médiane d'un sous-ensemble de qubits choisis (IBM, instantané de calibration) contre durée fixée par conception (Google). Une porte plus courte n'est pas forcément plus fidèle.",
+        "en": "Different processors, calibrations and papers: median over a selected qubit subset (IBM, calibration snapshot) versus a duration fixed by design (Google). A shorter gate is not necessarily higher fidelity."
       }
     },
     {
@@ -421,8 +421,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Valeurs constructeur de nature différente : maximum (« atteint »), « jusqu'à » et borne basse (« plus de »).",
-        "en": "Vendor values of different nature: maximum ('reaches'), 'up to' and lower bound ('more than')."
+        "fr": "Valeurs constructeur de nature différente : maximum (« atteint »), « jusqu'à » et borne basse (« plus de »). « Par pile » est déduit de l'interface de 1 024 broches pour Samsung HBM3, et de « per placement » pour Micron. Années non publiées par ces pages.",
+        "en": "Vendor values of different nature: maximum ('reaches'), 'up to' and lower bound ('more than'). 'Per stack' is inferred from the 1,024-pin interface for Samsung HBM3 and from 'per placement' for Micron. Years not given by these pages."
       }
     },
     {

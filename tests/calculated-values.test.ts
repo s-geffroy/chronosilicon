@@ -58,8 +58,8 @@ describe('calculated values are reproducible from their inputs', () => {
   for (const m of calculated) {
     it(`${m.phenomenonId}`, () => {
       const expected = ORACLE[m.phenomenonId]!();
-      // Stored values may be rounded by the source extraction (e.g. 16.667 ms): ≤ 5e-5 relative.
-      expect(Math.abs(m.valueSI - expected) / expected).toBeLessThan(5e-5);
+      // Full precision is required (CS-03): only floating-point noise is tolerated.
+      expect(Math.abs(m.valueSI - expected) / expected).toBeLessThan(1e-12);
     });
   }
 });

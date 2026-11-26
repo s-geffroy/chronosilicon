@@ -30,6 +30,9 @@ Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant 
 - Grandeur `compute_rate` (flop/s) : TOP500 de 1993 à 2026 ; 7 nouveaux groupes de comparaison ; observateur « cycle de correction d'erreurs quantique ».
 - Définitions des types de provenance (ADR-0005) ; test de précédence de curation.
 
+### Corrigé (mineurs de la revue du lot 2)
+- Audit des bornes sur tout le corpus (11 encodées), alerte de curation et test associé ; fiche affichant ≥/≤ ; conversions décimales exactes ; oracle des calculs à 1e-12 ; notes de groupes et observateur précisés ; ères et affirmations non sourcées retirées.
+
 ### Modifié
 - Remplacement du squelette Jekyll du VPS par la chaîne Node/Vite (ADR-0001).
 

@@ -16,3 +16,5 @@
      - les hypothèses sont affichées : fréquence supposée constante, moyenne de population, etc.
   5. Le corpus publié inclut `groups` et `observers` résolus. Sa version passe à `0.2.0+<hash>`.
 - Conséquences : l'ajout d'un groupe ou d'un observateur est une modification de données relue comme telle. Le regroupement par « phénomène commun » au niveau de l'ontologie reste possible plus tard, sans casser ce format.
+
+- Exception assumée (2026-11-26, revue du lot 2, m11) : dans un groupe dont tous les membres ont la même année, l'ordre curé s'applique. Pour `cmp-top500-2026-11-top5`, c'est le rang publié par le TOP500, et la note le dit explicitement.

@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "corpusVersion": "0.3.0+ffa8784e8668",
+  "corpusVersion": "0.3.0+0f81ced4ba34",
   "inputs": {
     "data/sources/sources.json": "71566c6bfd2b20268b40497da849c4e1e54c372aa776b2fcd7b16a24aab5cbad",
     "data/curated/phenomena.json": "310ade2c3fda90b9eae3f0f7198f49a9187144ba6a379dac436e93312145e0f0",
-    "data/curated/measurements.json": "640eff3563f38909aa37c5d8e0bb030f15a87109c0cad55fc00a79f9e3e89ff1",
-    "data/curated/groups.json": "8a865eb6d3d7cef220becf6a74d024d0eb143b160606957b6d4d829c105f4810",
-    "data/curated/observers.json": "88e35c1c8c3611aeb0db9f9101a43a6d88c83a982b6addd987f6093906ce9399",
+    "data/curated/measurements.json": "abc6bda67c70915b0954ba68dddda6ad4807dfa4ef362a3860f9c075df465e78",
+    "data/curated/groups.json": "e92645735c03499001dbde8be08971777d1e16926e910ca94164f464278be2d1",
+    "data/curated/observers.json": "16d7b09cf5d838bfe153241917bbf4054df8f57f3a7a354d4638a0bdb20b55bd",
     "data/curated/scenarios.json": "c922b1ea2e636abf6eddcc895126dcebb879f675478a61a7406101a603f2b0de"
   },
   "phenomena": [
@@ -2901,7 +2901,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-initial-rto",
-      "notes": "RFC 2988 previously used 3 s (see RFC 6298 Appendix A).",
+      "notes": "RFC 2988 previously used 3 s (see RFC 6298 Appendix A). | Decision: Bound wording in the excerpt does not bound this value (checked in the bound audit).",
       "quantityKind": "duration",
       "valueSI": 1,
       "lowSI": null,
@@ -2913,7 +2913,7 @@
       "configuration": null,
       "value": 1,
       "unit": "s",
-      "low": null,
+      "low": 1,
       "high": null,
       "conditions": {
         "fr": "Règle de niveau SHOULD de la RFC 6298, appliquée à chaque calcul du RTO.",
@@ -2932,10 +2932,10 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-min-rto",
-      "notes": "Normative recommendation, not a measurement of deployed behaviour. | Verifier: Claim about lower minimums in deployed stacks is flagged unsourced; omitted from short conditions.",
+      "notes": "Normative recommendation, not a measurement of deployed behaviour. | Verifier: Claim about lower minimums in deployed stacks is flagged unsourced; omitted from short conditions. | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "duration",
       "valueSI": 1,
-      "lowSI": null,
+      "lowSI": 1,
       "highSI": null
     },
     {
@@ -2944,7 +2944,7 @@
       "configuration": null,
       "value": 60,
       "unit": "s",
-      "low": null,
+      "low": 60,
       "high": null,
       "conditions": {
         "fr": "Un plafond PEUT être imposé au RTO, à condition qu'il soit d'au moins 60 s.",
@@ -2963,10 +2963,10 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-max-rto-floor",
-      "notes": "It is a floor for the cap, not a typical value.",
+      "notes": "It is a floor for the cap, not a typical value. | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "duration",
       "valueSI": 60,
-      "lowSI": null,
+      "lowSI": 60,
       "highSI": null
     },
     {
@@ -3038,7 +3038,7 @@
       "value": 4,
       "unit": "us",
       "low": null,
-      "high": null,
+      "high": 4,
       "conditions": {
         "fr": "Compteur de 32 bits incrémenté en général au moins une fois toutes les 4 µs environ ; ni temps réel ni précis.",
         "en": "32-bit counter that typically increments at least once every roughly 4 µs; neither realtime nor precise."
@@ -3056,11 +3056,11 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-isn-clock-tick",
-      "notes": "Approximate by the source's own wording ('roughly').",
+      "notes": "Approximate by the source's own wording ('roughly'). | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "duration",
       "valueSI": 0.000004,
       "lowSI": null,
-      "highSI": null
+      "highSI": 0.000004
     },
     {
       "id": "nr-urllc-user-plane-latency-target-m1",
@@ -3193,7 +3193,7 @@
       "value": 50,
       "unit": "ms",
       "low": null,
-      "high": null,
+      "high": 50,
       "conditions": {
         "fr": "Objectif de RTT plan usager allant jusqu'à 50 ms pour les systèmes satellites en orbite basse.",
         "en": "User-plane RTT target of up to 50 ms for LEO satellite systems."
@@ -3211,11 +3211,11 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ntn-leo-user-plane-rtt-target",
-      "notes": "Target ceiling.",
+      "notes": "Target ceiling. | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "duration",
       "valueSI": 0.05,
       "lowSI": null,
-      "highSI": null
+      "highSI": 0.05
     },
     {
       "id": "ethernet-min-frame-size-m1",
@@ -3280,7 +3280,7 @@
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ethernet-min-frame-wire-time-1g",
       "notes": "Cross-check: at 10 Mbit/s, 1/(672e-7 s) = 14 880.95 frames/s, matching RFC 2544 Appendix B '64 14880' for Ethernet. Line rate is a nominal parameter, not sourced from IEEE 802.3. | Verifier: Arithmetic correct. RFC 2544 Appendix B tabulates 10 Mbit/s Ethernet only; the rate is a parameter not from the source. Conditions should carry the caveat now only in confidenceNotes.",
       "quantityKind": "duration",
-      "valueSI": 6.720000000000001e-7,
+      "valueSI": 6.72e-7,
       "lowSI": null,
       "highSI": null
     },
@@ -3445,7 +3445,7 @@
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-westeurope-francecentral",
       "notes": "Columns: Belgium Central, France Central, France South, Spain Central, Switzerland North, Switzerland West, West Europe. | Verifier: 'Amsterdam area to Paris area' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
-      "valueSI": 0.013000000000000001,
+      "valueSI": 0.013,
       "lowSI": null,
       "highSI": null
     },
@@ -3569,7 +3569,7 @@
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-voluntary-blink-duration",
       "notes": "Spontaneous blinks are generally reported as shorter, but no source for that was consulted here: do not use 572 ms as 'a blink' without the word 'voluntary'. | Verifier: Read via WebFetch (PMC HTML; curl got a reCAPTCHA page). Values confirmed; only the s.e. attribution of ±25 is an inference. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
-      "valueSI": 0.5720000000000001,
+      "valueSI": 0.572,
       "lowSI": null,
       "highSI": null
     },
@@ -4034,7 +4034,7 @@
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-xeon5500-local-dram-latency",
       "notes": "Intel calls these 'examples of the approximate latency values'. No protocol. | Verifier: 'two sockets' retiré : non dit par la source.",
       "quantityKind": "duration",
-      "valueSI": 5.0000000000000004e-8,
+      "valueSI": 5e-8,
       "lowSI": null,
       "highSI": null
     },
@@ -4065,7 +4065,7 @@
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-xeon5500-remote-dram-latency",
       "notes": "Approximate, see the previous item.",
       "quantityKind": "duration",
-      "valueSI": 9.000000000000001e-8,
+      "valueSI": 9e-8,
       "lowSI": null,
       "highSI": null
     },
@@ -4127,9 +4127,9 @@
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-sandybridge-c6-exit-latency",
       "notes": "Intel: 'not processor specifications but estimates derived from empirical measurements'. The column headers mix 'typical' and 'worst case'. C1 = 1 µs in the same table. | Verifier: low/high correspondent à deux réglages, pas à une incertitude ; la seconde colonne est intitulée 'Worst Case' par Intel.",
       "quantityKind": "duration",
-      "valueSI": 0.00018099999999999998,
+      "valueSI": 0.000181,
       "lowSI": 0.000104,
-      "highSI": 0.00018099999999999998
+      "highSI": 0.000181
     },
     {
       "id": "intel-sandybridge-c1-exit-latency-m1",
@@ -4199,7 +4199,7 @@
       "configuration": null,
       "value": 14,
       "unit": "cycles",
-      "low": null,
+      "low": 14,
       "high": null,
       "conditions": {
         "fr": "AMD Zen 4, L2 de 1 Mo à 8 voies par cœur (512 Ko sur certaines configurations) ; au moins 14 cycles.",
@@ -4218,10 +4218,10 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen4-l2-load-to-use",
-      "notes": "Lower bound, variable latency. | Verifier: URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 57647_1.00.pdf (même publication et révision que la source déclarée).",
+      "notes": "Lower bound, variable latency. | Verifier: URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 57647_1.00.pdf (même publication et révision que la source déclarée). | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "cycle_count",
       "valueSI": 14,
-      "lowSI": null,
+      "lowSI": 14,
       "highSI": null
     },
     {
@@ -4292,7 +4292,7 @@
       "configuration": null,
       "value": 14,
       "unit": "cycles",
-      "low": null,
+      "low": 14,
       "high": null,
       "conditions": {
         "fr": "AMD Zen 5, L2 de 1 Mo à 16 voies par cœur ; au moins 14 cycles.",
@@ -4311,10 +4311,10 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen5-l2-load-to-use",
-      "notes": "Lower bound. | Verifier: URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 58455_1.00.pdf (même publication et révision que la source déclarée).",
+      "notes": "Lower bound. | Verifier: URL Bugzilla inaccessible (403, défi anti-robot). Vérifié sur une copie équivalente : archive kib.kiev.ua contenant 58455_1.00.pdf (même publication et révision que la source déclarée). | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "cycle_count",
       "valueSI": 14,
-      "lowSI": null,
+      "lowSI": 14,
       "highSI": null
     },
     {
@@ -4747,7 +4747,7 @@
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#ddr4-8gb-trfc1-micron",
       "notes": "Read by column: 2Gb/4Gb/8Gb/16Gb.",
       "quantityKind": "duration",
-      "valueSI": 3.5000000000000004e-7,
+      "valueSI": 3.5e-7,
       "lowSI": null,
       "highSI": null
     },
@@ -5031,7 +5031,7 @@
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#linux-default-timer-slack",
       "notes": "Confirmed in the source: init/init_task.c line 185 '.timer_slack_ns = 50000, /* 50 usec default slack */' (src-linux-init-task).",
       "quantityKind": "duration",
-      "valueSI": 0.000049999999999999996,
+      "valueSI": 0.00005,
       "lowSI": null,
       "highSI": null
     },
@@ -5124,9 +5124,9 @@
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#slingshot-rosetta-switch-latency",
       "notes": "n not given in the text. The quote joins PDF lines. HPC/interconnect: possible overlap with the network agent. | Verifier: L'extrait tronquait 'except for a few outliers', ce qui rendait low/high plus stricts que la source. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
-      "valueSI": 3.5000000000000004e-7,
-      "lowSI": 3.0000000000000004e-7,
-      "highSI": 4.0000000000000003e-7
+      "valueSI": 3.5e-7,
+      "lowSI": 3e-7,
+      "highSI": 4e-7
     },
     {
       "id": "pcie4-lane-rate-m1",
@@ -5184,7 +5184,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie5-lane-rate",
-      "notes": "Secondary hosting of the PCI-SIG press release. | Verifier: '128b/130b encoding' absent de la source : retiré.",
+      "notes": "Secondary hosting of the PCI-SIG press release. | Verifier: '128b/130b encoding' absent de la source : retiré. | Decision: Bound wording in the excerpt does not bound this value (checked in the bound audit).",
       "quantityKind": "transfer_rate",
       "valueSI": 32000000000,
       "lowSI": null,
@@ -5197,7 +5197,7 @@
       "value": 128,
       "unit": "GB/s",
       "low": null,
-      "high": null,
+      "high": 128,
       "conditions": {
         "fr": "Lien x16 PCIe 5.0, valeur « jusqu'à » annoncée ; le sens n'est pas précisé, mais la même dépêche donne 64 GB/s pour le x16, ce qui est cohérent avec un total des deux sens.",
         "en": "PCIe 5.0 x16 link, 'up to' figure; direction not stated, but the same release gives 64 GB/s for x16, consistent with a two-direction total."
@@ -5215,11 +5215,11 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie5-x16-bandwidth",
-      "notes": "The release does not say 'bidirectional' explicitly; the per-direction interpretation rests on the analyst quote in the same text and on NVIDIA's 'PCIe Gen5: 128GB/s' for H100 (src-nvidia-h100). Display as total, not per direction. | Verifier: Le libellé affirmait « deux sens » comme un fait sourcé ; c'est une déduction. La référence à la page NVIDIA H100 n'éclaire pas le sens.",
+      "notes": "The release does not say 'bidirectional' explicitly; the per-direction interpretation rests on the analyst quote in the same text and on NVIDIA's 'PCIe Gen5: 128GB/s' for H100 (src-nvidia-h100). Display as total, not per direction. | Verifier: Le libellé affirmait « deux sens » comme un fait sourcé ; c'est une déduction. La référence à la page NVIDIA H100 n'éclaire pas le sens. | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "throughput",
       "valueSI": 128000000000,
       "lowSI": null,
-      "highSI": null
+      "highSI": 128000000000
     },
     {
       "id": "pcie6-lane-rate-m1",
@@ -5246,7 +5246,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie6-lane-rate",
-      "notes": "Secondary hosting of the PCI-SIG press release (Business Wire original returned 403).",
+      "notes": "Secondary hosting of the PCI-SIG press release (Business Wire original returned 403). | Decision: Bound wording in the excerpt does not bound this value (checked in the bound audit).",
       "quantityKind": "transfer_rate",
       "valueSI": 64000000000,
       "lowSI": null,
@@ -5259,7 +5259,7 @@
       "value": 256,
       "unit": "GB/s",
       "low": null,
-      "high": null,
+      "high": 256,
       "conditions": {
         "fr": "Lien x16 PCIe 6.0, valeur « jusqu'à » annoncée ; le sens n'est pas précisé par la source.",
         "en": "PCIe 6.0 x16 link, 'up to' figure; direction not stated in the source."
@@ -5277,11 +5277,11 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie6-x16-bandwidth",
-      "notes": "Direction not stated in this text; same convention as the PCIe 5.0 '128 GB/s' figure (2x per generation). | Verifier: « deux sens / 128 GB/s par sens » non sourcé ici.",
+      "notes": "Direction not stated in this text; same convention as the PCIe 5.0 '128 GB/s' figure (2x per generation). | Verifier: « deux sens / 128 GB/s par sens » non sourcé ici. | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "throughput",
       "valueSI": 256000000000,
       "lowSI": null,
-      "highSI": null
+      "highSI": 256000000000
     },
     {
       "id": "cxl3-data-rate-m1",
@@ -5432,7 +5432,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb32-20g-rate",
-      "notes": "Verifier: Ère 2017 absente de la page.",
+      "notes": "Verifier: Ère 2017 absente de la page. | Decision: Bound wording in the excerpt does not bound this value (checked in the bound audit).",
       "quantityKind": "throughput",
       "valueSI": 2500000000,
       "lowSI": null,
@@ -5445,7 +5445,7 @@
       "value": 80,
       "unit": "Gbit/s",
       "low": null,
-      "high": null,
+      "high": 80,
       "conditions": {
         "fr": "USB4, fonctionnement sur deux voies, jusqu'à 80 Gbit/s avec des câbles certifiés 80 Gbit/s.",
         "en": "USB4 two-lane operation, up to 80 Gbps over 80 Gbps certified cables."
@@ -5463,11 +5463,11 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb4-80g-rate",
-      "notes": "Page gives no year and no 40 Gbps figure; era 2022 is not from this page (unverified, can be set to null). | Verifier: « USB4 Version 2.0 » absent de la page ; ère 2022 non sourcée.",
+      "notes": "Page gives no year and no 40 Gbps figure; era 2022 is not from this page (unverified, can be set to null). | Verifier: « USB4 Version 2.0 » absent de la page ; ère 2022 non sourcée. | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "throughput",
       "valueSI": 10000000000,
       "lowSI": null,
-      "highSI": null
+      "highSI": 10000000000
     },
     {
       "id": "usb-fs-frame-m1",
@@ -5636,7 +5636,7 @@
       "value": 8000,
       "unit": "Hz",
       "low": null,
-      "high": null,
+      "high": 8000,
       "conditions": {
         "fr": "Point de terminaison interrupt high-speed avec bInterval = 1, soit une période de 125 µs ; borne supérieure.",
         "en": "High-speed interrupt endpoint with bInterval = 1, i.e. a 125 µs period; upper bound."
@@ -5659,11 +5659,11 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-hs-max-polling-rate",
-      "notes": "Upper bound set by the spec; the '8000 Hz mouse' marketing figure matches but was not checked against a product.",
+      "notes": "Upper bound set by the spec; the '8000 Hz mouse' marketing figure matches but was not checked against a product. | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "frequency",
       "valueSI": 8000,
       "lowSI": null,
-      "highSI": null
+      "highSI": 8000
     },
     {
       "id": "hdmi-8k60-refresh-m1",
@@ -5790,7 +5790,7 @@
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#frame-time-60hz",
       "notes": "Verifier: Calcul juste ; la remarque sur 59,94 Hz n'est pas dans la source. | Decision: Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
       "quantityKind": "duration",
-      "valueSI": 0.01666666666666667,
+      "valueSI": 0.016666666666666666,
       "lowSI": null,
       "highSI": null
     },
@@ -5826,7 +5826,7 @@
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#frame-time-120hz",
       "notes": "Decision: Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
       "quantityKind": "duration",
-      "valueSI": 0.008333333333333335,
+      "valueSI": 0.008333333333333333,
       "lowSI": null,
       "highSI": null
     },
@@ -6337,7 +6337,7 @@
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdd-7200rpm-half-rotation",
       "notes": "Decision: Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
       "quantityKind": "duration",
-      "valueSI": 0.0041666666666666675,
+      "valueSI": 0.004166666666666667,
       "lowSI": null,
       "highSI": null
     },
@@ -6373,7 +6373,7 @@
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdd-7200rpm-full-rotation",
       "notes": "Decision: Stored at full precision (review m-1: rounding only at display, CS-03); extraction had rounded the calculated value.",
       "quantityKind": "duration",
-      "valueSI": 0.008333333333333335,
+      "valueSI": 0.008333333333333333,
       "lowSI": null,
       "highSI": null
     },
@@ -6474,7 +6474,7 @@
       "id": "solidigm-p5520-4k-qd16-latency-derived-m1",
       "phenomenonId": "solidigm-p5520-4k-qd16-latency-derived",
       "configuration": null,
-      "value": 68.464,
+      "value": 68.46384253316218,
       "unit": "us",
       "low": null,
       "high": null,
@@ -6500,9 +6500,9 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#solidigm-p5520-4k-qd16-latency-derived",
-      "notes": "Assumes QD16 is total outstanding I/Os (number of jobs not stated); if several jobs each at QD16, real latency is higher. | Verifier: Hypothèse QD16 = total des E/S en vol signalée. | Decision: Input is the 233,700 IOPS (4 KiB, QD16) documented in the cited Solidigm brief (review M-2). Value recomputed to 5 significant digits (16 / 233700 s = 68.464 µs) instead of the extraction's rounded 68.5 µs (calculated-value oracle).",
+      "notes": "Assumes QD16 is total outstanding I/Os (number of jobs not stated); if several jobs each at QD16, real latency is higher. | Verifier: Hypothèse QD16 = total des E/S en vol signalée. | Decision: Input is the 233,700 IOPS (4 KiB, QD16) documented in the cited Solidigm brief (review M-2). Value stored at full precision (16 / 233700 s = 68.4638… µs) instead of the extraction's rounded 68.5 µs (calculated-value oracle, tolerance 1e-12).",
       "quantityKind": "duration",
-      "valueSI": 0.000068464,
+      "valueSI": 0.00006846384253316217,
       "lowSI": null,
       "highSI": null
     },
@@ -6880,7 +6880,7 @@
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#willow-cz-gate-duration",
       "notes": "Pulse duration set by the experimenters, not an error-rate figure. | Verifier: Value and quote exact; only the 'Willow' name is unsourced. The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere.",
       "quantityKind": "duration",
-      "valueSI": 4.2000000000000006e-8,
+      "valueSI": 4.2e-8,
       "lowSI": null,
       "highSI": null
     },
@@ -6911,7 +6911,7 @@
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#willow-single-qubit-gate-duration",
       "notes": "The same section gives 35 ns (π) and 18 ns (π/2) for another configuration; the 25 ns value is the one stated for the 105-qubit processor. | Verifier: The 35/18 ns values are for the 72-qubit processor (confidenceNotes say 'another configuration'). The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere.",
       "quantityKind": "duration",
-      "valueSI": 2.5000000000000002e-8,
+      "valueSI": 2.5e-8,
       "lowSI": null,
       "highSI": null
     },
@@ -6940,7 +6940,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#willow-realtime-decoder-latency-d5",
-      "notes": "Average only; decoder latency definition (time from end of final cycle to decoder output) is in Sec. V. | Verifier: Label said 'Google Willow' while the experiment is on the 72-qubit processor (conditions were right). The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere.",
+      "notes": "Average only; decoder latency definition (time from end of final cycle to decoder output) is in Sec. V. | Verifier: Label said 'Google Willow' while the experiment is on the 72-qubit processor (conditions were right). The paper (arXiv v1) never uses the name 'Willow'; label should not add it unless sourced elsewhere. | Decision: Bound wording in the excerpt does not bound this value (checked in the bound audit).",
       "quantityKind": "duration",
       "valueSI": 0.000063,
       "lowSI": null,
@@ -6973,7 +6973,7 @@
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#heron-r1-median-t1",
       "notes": "Calibration snapshot: IBM values drift daily; other Heron papers report 145-187 µs. Subset chosen among best qubits, so slightly optimistic. | Verifier: The 16 June 2024 date is given for the whole-device Fig. 10, not explicitly for the subset medians; 'backend calibration data' and 'standard relaxation experiments' are not in the paper.",
       "quantityKind": "duration",
-      "valueSI": 0.00017999999999999998,
+      "valueSI": 0.00018,
       "lowSI": null,
       "highSI": null
     },
@@ -7264,7 +7264,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#iss-average-altitude",
-      "notes": "Approximate; one-way light time at zenith ≈ 1.4 ms. | Verifier: 'varies with drag and reboosts' is not in the source; removed.",
+      "notes": "Approximate; one-way light time at zenith ≈ 1.4 ms. | Verifier: 'varies with drag and reboosts' is not in the source; removed. | Decision: Bound wording in the excerpt does not bound this value (checked in the bound audit).",
       "quantityKind": "distance",
       "valueSI": 420000,
       "lowSI": null,
@@ -7706,7 +7706,7 @@
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#starlink-satellite-hop-latency-usvi-2025-07",
       "notes": "Mean, not median; estimate of the satellite segment only (excludes PoP-to-server path). Quote is the flattened HTML text of the Table III row. | Verifier: Protocol matches Sec. IV-A. arXiv v3 is dated 23 Jan 2026 (source publishedDate '2025' is the measurement year).",
       "quantityKind": "duration",
-      "valueSI": 0.043000000000000003,
+      "valueSI": 0.043,
       "lowSI": null,
       "highSI": null
     },
@@ -8032,7 +8032,7 @@
         "fr": "TOP500 de juin 1993, rang 1 : CM-5/1024, Thinking Machines Corporation (Los Alamos National Laboratory, États-Unis) ; 1 024 cœurs ; Rmax = meilleure performance LINPACK en FP64 obtenue, en Gflop/s.",
         "en": "TOP500 June 1993, rank 1: CM-5/1024, Thinking Machines Corporation (Los Alamos National Laboratory, USA); 1,024 cores; Rmax = best LINPACK FP64 performance achieved, in Gflop/s."
       },
-      "protocol": "Rmax as listed in the TOP500 list: best LINPACK performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page.",
+      "protocol": "Rules cited are those of the current TOP500 Linpack page, not dated 1993; the 1993 run used LINPACK. Rmax as listed in the TOP500 list: best LINPACK performance achieved (for problem size Nmax). Rules stated on the current TOP500 Linpack page (https://www.top500.org/project/linpack/): LU factorisation with partial pivoting, operation count 2/3 n^3 + O(n^2) double-precision flops; excludes Strassen-type fast multiplication, solving in lower than full 64-bit precision then refining iteratively, and integer emulation of floating point. Hardware: the listed system and core count. Nmax, software stack and number of runs are not given on the list page.",
       "provenanceType": "measured",
       "verificationStatus": "qualified",
       "sourceIds": [
@@ -8045,7 +8045,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#top500-1993-06-r1-cm5-rmax",
-      "notes": "Vendor/site-submitted benchmark result; not an independent measurement. LINPACK benchmark only, not representative of application performance. First TOP500 list; value on the page in GFlop/s (Rpeak 131.00 GFlop/s on the same row, not extracted). | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. Label/conditions: neither source says the 1993 result was obtained with HPL (the TOP500 Linpack page only names 'the LINPACK Benchmark'); 'HPL' replaced by 'LINPACK'. The Linpack rules page is current and is not dated to 1993. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "notes": "Vendor/site-submitted benchmark result; not an independent measurement. LINPACK benchmark only, not representative of application performance. First TOP500 list; value on the page in GFlop/s (Rpeak 131.00 GFlop/s on the same row, not extracted). | Verifier: Protocol fix: the source does not say the run is 'submitted by the site'; the rules come from the TOP500 Linpack page, not from the list page. confidenceNotes 'audited by the TOP500 editors' is not stated in the sources read. Label/conditions: neither source says the 1993 result was obtained with HPL (the TOP500 Linpack page only names 'the LINPACK Benchmark'); 'HPL' replaced by 'LINPACK'. The Linpack rules page is current and is not dated to 1993. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit). Protocol states that the cited rules are the current ones, not dated 1993 (lot-2 review m10).",
       "quantityKind": "compute_rate",
       "valueSI": 59700000000,
       "lowSI": null,
@@ -8133,12 +8133,12 @@
       ],
       "locator": "§3.10 Load instructions, Table 3-13 \"AArch64 Load instructions\", PDF pp. 28-29 (register-offset rows on p. 29)",
       "quote": "Load register, register offset, LDR, LDRB, 4 3 L -",
-      "era": 2020,
+      "era": null,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#arm-neoverse-n2-l1d-load-latency",
-      "notes": "Quote condensed from table columns (whitespace collapsed). Execution latency of the instruction on an L1 hit, i.e. load-to-use; the guide gives no L2/SLC latency. | Verifier: Value confirmed. Revision fix: the guide (Issue 5.0, 31 Oct 2022) is the 'First release for r0p3', not r0p0-r0p2. Register-offset rows are on PDF p. 29, the table starts p. 28.",
+      "notes": "Quote condensed from table columns (whitespace collapsed). Execution latency of the instruction on an L1 hit, i.e. load-to-use; the guide gives no L2/SLC latency. | Verifier: Value confirmed. Revision fix: the guide (Issue 5.0, 31 Oct 2022) is the 'First release for r0p3', not r0p0-r0p2. Register-offset rows are on PDF p. 29, the table starts p. 28. | Decision: Era not stated by the cited source (Issue 5.0, 2022, r0p3): set to unknown (lot-2 review m6).",
       "quantityKind": "cycle_count",
       "valueSI": 4,
       "lowSI": null,
@@ -8210,7 +8210,7 @@
       "id": "arm-cortex-a520-l2-hit-latency-m1",
       "phenomenonId": "arm-cortex-a520-l2-hit-latency",
       "configuration": null,
-      "value": 11,
+      "value": 12,
       "unit": "cycles",
       "low": 10,
       "high": 12,
@@ -8231,9 +8231,9 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#arm-cortex-a520-l2-hit-latency",
-      "notes": "Central value 11 chosen by the extractor inside the stated 11-12 normal range; low/high carry the full 10-12 range. L2 configuration (size, shared or not) not stated in the table. | Verifier: Point chosen in a range; this is stated in conditions, and low/high (10/12) are given.",
+      "notes": "Central value 11 chosen by the extractor inside the stated 11-12 normal range; low/high carry the full 10-12 range. L2 configuration (size, shared or not) not stated in the table. | Verifier: Point chosen in a range; this is stated in conditions, and low/high (10/12) are given. | Decision: Same selection rule as L1 (top of the normal case): 12 cycles, published range 10–12 (lot-2 review m9).",
       "quantityKind": "cycle_count",
-      "valueSI": 11,
+      "valueSI": 12,
       "lowSI": 10,
       "highSI": 12
     },
@@ -8417,7 +8417,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#intel-pentium-pro-initial-clock",
-      "notes": "Quote assembles the chip label and the value from the same poster column (verified by text bounding boxes); not a datasheet. Later speed grades were faster. Pentium Pro was also sold at lower speeds; the poster gives 200 MHz only. | Verifier: Value confirmed (PDF obtained via WebFetch, curl got HTTP 403). Conditions fix: '(first shipped speed grade)' is an interpretation not stated on the poster; the poster only gives a year per chip, not an introduction date wording.",
+      "notes": "Quote assembles the chip label and the value from the same poster column (verified by text bounding boxes); not a datasheet. . Pentium Pro was also sold at lower speeds; the poster gives 200 MHz only. | Verifier: Value confirmed (PDF obtained via WebFetch, curl got HTTP 403). Conditions fix: '(first shipped speed grade)' is an interpretation not stated on the poster; the poster only gives a year per chip, not an introduction date wording. | Decision: Unsourced sentence removed from the notes (lot-2 review m4).",
       "quantityKind": "frequency",
       "valueSI": 200000000,
       "lowSI": null,
@@ -8711,8 +8711,8 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Linux « avoid indirect branch speculation » (correctif Retpoline, introduit en 4.14, parade contre Spectre v2), Intel Xeon E5-2630 v3 ; « environ 30 cycles » ajoutés à chaque saut ou appel indirect (valeur approchée).",
-        "en": "Linux 'avoid indirect branch speculation' (Retpoline patch, introduced in 4.14, Spectre v2 mitigation), Intel Xeon E5-2630 v3; 'around 30 cycles' added to each indirect jump or call (approximate)."
+        "fr": "Linux « avoid indirect branch speculation » (correctif Retpoline, introduit en 4.14, parade contre Spectre v2), Intel Xeon E5-2630 v3 ; « environ 30 cycles » ajoutés à chaque saut ou appel indirect (valeur approchée) ; résultats du tableau 3 obtenus avec PCID activé (serveur HP DL160 G9, noyaux 3.0 à 4.20).",
+        "en": "Linux 'avoid indirect branch speculation' (Retpoline patch, introduced in 4.14, Spectre v2 mitigation), Intel Xeon E5-2630 v3; 'around 30 cycles' added to each indirect jump or call (approximate); Table 3 results obtained with PCID enabled (HP DL160 G9 server, kernels 3.0 to 4.20)."
       },
       "protocol": null,
       "provenanceType": "estimated",
@@ -8727,7 +8727,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#linux-retpoline-indirect-branch-cost",
-      "notes": "Quote cut at the table cell line break; the cell continues \"indirect jump or call.\". Approximate value from a summary table; method for this specific figure not detailed in the table. | Verifier: Protocol fix: the shared protocol text described the KPTI footnote, which does not apply here; the paper gives no method for the 30-cycle figure. Consider provenanceType 'estimated' ('around'). | Decision: The paper states 'around 30 cycles' without a measurement method for this figure: classified as an estimate (lot-2 verifier recommendation, 2026-11-26).",
+      "notes": "Quote cut at the table cell line break; the cell continues \"indirect jump or call.\". Approximate value from a summary table; method for this specific figure not detailed in the table. | Verifier: Protocol fix: the shared protocol text described the KPTI footnote, which does not apply here; the paper gives no method for the 30-cycle figure. Consider provenanceType 'estimated' ('around'). | Decision: The paper states 'around 30 cycles' without a measurement method for this figure: classified as an estimate (lot-2 verifier recommendation, 2026-11-26). Context kept in conditions after removing the protocol (lot-2 review, section 4).",
       "quantityKind": "cycle_count",
       "valueSI": 30,
       "lowSI": null,
@@ -8822,7 +8822,7 @@
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#solidigm-ps1010-random-read-latency",
       "notes": "Conditions of measurement not on the page; secondary sources call it 'Up to 60 µs'. Usually such ratings are QD1 4 KB, but this is not stated here. | Verifier: Page rendered in a real browser (values are injected by JS; curl gets '-'). Spec block shows one configuration at a time (default E3.S 7.5 mm, 15.36 TB); other capacities not checked, so 'all capacities on the same page' is not established. The 'Latency Sequential Rating' row shows the same 60μs / 7μs. The downloadable spec sheet (XLS) labels the rows 'Latency - Read' / 'Latency - Write', with no '(typ.)', unlike the sequential rows.",
       "quantityKind": "duration",
-      "valueSI": 0.000059999999999999995,
+      "valueSI": 0.00006,
       "lowSI": null,
       "highSI": null
     },
@@ -9052,7 +9052,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#lto9-native-transfer-rate",
-      "notes": "Program-level 'up to' figure; IBM half-height LTO-9 drives are rated 300 MB/s native (IBM TS4300 docs, Table 3). | Verifier: IBM TS4300 Table 3 confirms half-height LTO 9 native 300 MB/s (L9); full-height (Table 2) 400 MB/s (L9).",
+      "notes": "Program-level figure; IBM half-height LTO-9 drives are rated 300 MB/s native (IBM TS4300 docs, Table 3). | Verifier: IBM TS4300 Table 3 confirms half-height LTO 9 native 300 MB/s (L9); full-height (Table 2) 400 MB/s (L9). | Decision: Note no longer claims an 'up to' figure absent from the excerpt (lot-2 review m16).",
       "quantityKind": "throughput",
       "valueSI": 400000000,
       "lowSI": null,
@@ -9129,8 +9129,8 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Spécification PCI Express Base 3.0 (novembre 2010), codage 128b/130b ; 8 GT/s par voie, environ 1 Go/s par sens sur une voie.",
-        "en": "PCI Express Base 3.0 specification (November 2010), 128b/130b encoding; 8 GT/s per lane, about 1 GB/s per direction on one lane."
+        "fr": "Spécification PCI Express Base 3.0 (novembre 2010), codage 128b/130b ; 8 GT/s par voie.",
+        "en": "PCI Express Base 3.0 specification (November 2010), 128b/130b encoding; 8 GT/s per lane."
       },
       "protocol": null,
       "provenanceType": "documented",
@@ -9145,7 +9145,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#pcie3-lane-rate",
-      "notes": "Faithful reprint of the PCI-SIG press release; pcisig.com itself could not be fetched by the tool. | Verifier: Secondary reprint of the PCI-SIG press release; pcisig.com not retried.",
+      "notes": "Faithful reprint of the PCI-SIG press release; pcisig.com itself could not be fetched by the tool. | Verifier: Secondary reprint of the PCI-SIG press release; pcisig.com not retried. | Decision: Unsourced derived figure ('about 1 GB/s per direction') removed from the conditions (lot-2 review m7).",
       "quantityKind": "transfer_rate",
       "valueSI": 8000000000,
       "lowSI": null,
@@ -9488,7 +9488,7 @@
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-h200x8-llama2-70b-server-ttft-mean",
       "notes": "397,824,116 ns rounded. Submitter-run; latency is under a server load near the target QPS, not unloaded. | Verifier: System JSON checked: 8x H200-SXM-141GB, Xeon Platinum 8480C, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8, closed. Protocol field consistent. 'Audited by MLCommons' (confidenceNotes) is not stated in the log. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
       "quantityKind": "duration",
-      "valueSI": 0.39780000000000004,
+      "valueSI": 0.3978,
       "lowSI": null,
       "highSI": null
     },
@@ -9643,7 +9643,7 @@
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-b200x8-llama31-405b-server-tpot-mean",
       "notes": "87,022,478 ns rounded.",
       "quantityKind": "duration",
-      "valueSI": 0.08700000000000001,
+      "valueSI": 0.087,
       "lowSI": null,
       "highSI": null
     },
@@ -9840,7 +9840,7 @@
       "value": 6.944444444444445,
       "unit": "ms",
       "low": null,
-      "high": null,
+      "high": 6.944444444444445,
       "conditions": {
         "fr": "Durée d'une période de rafraîchissement à exactement 144 Hz, calculée (seuil minimal de fréquence maximale du palier AdaptiveSync Display).",
         "en": "One refresh period at exactly 144 Hz, calculated (AdaptiveSync Display tier minimum for the maximum rate)."
@@ -9863,11 +9863,11 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#frame-time-144hz",
-      "notes": "Verifier: Calculation checked. | Decision: Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value.",
+      "notes": "Verifier: Calculation checked. | Decision: Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value. Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "duration",
       "valueSI": 0.006944444444444445,
       "lowSI": null,
-      "highSI": null
+      "highSI": 0.006944444444444445
     },
     {
       "id": "frame-time-240hz-m1",
@@ -9901,7 +9901,7 @@
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#frame-time-240hz",
       "notes": "Verifier: Calculation checked. | Decision: Stored at full precision (rounding only at display, CS-03); extraction had rounded the calculated value.",
       "quantityKind": "duration",
-      "valueSI": 0.0041666666666666675,
+      "valueSI": 0.004166666666666667,
       "lowSI": null,
       "highSI": null
     },
@@ -9956,12 +9956,12 @@
       ],
       "locator": "Ultra High Speed HDMI Cable paragraph",
       "quote": "It is applicable for system configurations supporting up to 48Gbps maximum bandwidth.",
-      "era": 2017,
+      "era": null,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#hdmi21-max-bandwidth",
-      "notes": "The page is now the HDMI 2.2 overview; the sentence describes the 48G cable class of HDMI 2.1. | Verifier: The page states the 48 Gbps limit for the cable class, not directly 'HDMI 2.1 maximum bandwidth'; 'gross link rate (FRL)' is not stated for this figure. Era '2017' (HDMI 2.1 release) is not given on the page, which says market entry 2020. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3).",
+      "notes": "The page is now the HDMI 2.2 overview; the sentence describes the 48G cable class of HDMI 2.1. | Verifier: The page states the 48 Gbps limit for the cable class, not directly 'HDMI 2.1 maximum bandwidth'; 'gross link rate (FRL)' is not stated for this figure. Era '2017' (HDMI 2.1 release) is not given on the page, which says market entry 2020. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3). Era 2017 is not stated by the cited page: set to unknown (lot-2 review m15).",
       "quantityKind": "throughput",
       "valueSI": 6000000000,
       "lowSI": null,
@@ -11685,8 +11685,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Définitions différentes : meilleur cas chez Intel, load-to-use chez AMD, latence de chargement sur succès L1 chez Arm (Cortex-A520 : plage de 2 à 4 cycles, borne haute retenue). Cycles propres à chaque cœur : à fréquences différentes, un même nombre de cycles ne dure pas le même temps physique.",
-        "en": "Different definitions: best case for Intel, load-to-use for AMD, L1-hit load latency for Arm (Cortex-A520: range 2 to 4 cycles, upper bound retained). Each core's own cycles: at different frequencies the same cycle count is not the same physical time."
+        "fr": "Définitions différentes : meilleur cas chez Intel, load-to-use chez AMD, latence de chargement sur succès L1 chez Arm. Le Cortex-A520 est un petit cœur à haute efficacité énergétique, non comparable aux gros cœurs (cas normal de 4 cycles, meilleur cas 2). Cycles propres à chaque cœur : à fréquences différentes, un même nombre de cycles ne dure pas le même temps physique.",
+        "en": "Different definitions: best case for Intel, load-to-use for AMD, L1-hit load latency for Arm. The Cortex-A520 is a small high-efficiency core, not comparable to big cores (normal case 4 cycles, best case 2). Each core's own cycles: at different frequencies the same cycle count is not the same physical time."
       }
     },
     {
@@ -11793,8 +11793,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Une fréquence n'est pas une performance : le travail par cycle (IPC), le nombre de cœurs et la mémoire varient entre générations. Le i9-14900K a une fréquence de base et une fréquence turbo maximale, opportuniste.",
-        "en": "A frequency is not a performance: work per cycle (IPC), core count and memory differ between generations. The i9-14900K has a base and an opportunistic maximum turbo frequency."
+        "fr": "Une fréquence n'est pas une performance : le travail par cycle (IPC), le nombre de cœurs et la mémoire varient entre générations. Valeurs de nature différente : fréquences initiales d'une affiche Intel (1974–1995), jalon de l'Athlon à 1 GHz (pas sa fréquence de lancement), fréquence de lancement du Pentium 4, puis fréquence de base et turbo maximal opportuniste du i9-14900K.",
+        "en": "A frequency is not a performance: work per cycle (IPC), core count and memory differ between generations. Values of different nature: initial frequencies from an Intel poster (1974–1995), the Athlon 1 GHz milestone (not its launch frequency), the Pentium 4 launch frequency, then the base and opportunistic maximum turbo frequency of the i9-14900K."
       }
     },
     {
@@ -11856,8 +11856,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Valeurs crête constructeur, non mesurées : HBM pour les accélérateurs de centre de données, GDDR6X/GDDR7 pour les cartes grand public (RTX). La valeur B200 est calculée depuis le total d'un DGX B200 (8 GPU). Une bande passante ne se compare pas à une latence.",
-        "en": "Vendor peak values, not measurements: HBM for data-centre accelerators, GDDR6X/GDDR7 for consumer cards (RTX). The B200 value is computed from a DGX B200 total (8 GPUs). A bandwidth does not compare to a latency."
+        "fr": "Valeurs constructeur (crête lorsque c'est indiqué), non mesurées : HBM pour les accélérateurs de centre de données, GDDR6X/GDDR7 pour les cartes grand public (RTX). La valeur B200 est calculée depuis le total d'un DGX B200 (8 GPU). Une bande passante ne se compare pas à une latence.",
+        "en": "Vendor values (peak where stated), not measurements: HBM for data-centre accelerators, GDDR6X/GDDR7 for consumer cards (RTX). The B200 value is computed from a DGX B200 total (8 GPUs). A bandwidth does not compare to a latency."
       }
     },
     {
@@ -11914,8 +11914,8 @@
       ],
       "comparability": "same-source",
       "note": {
-        "fr": "Même guide d'optimisation Arm, mais des plages : L1 de 2 à 4 cycles (borne haute retenue), L2 de 10 à 12 cycles (11 = bas du cas normal).",
-        "en": "Same Arm optimization guide, but ranges: L1 2 to 4 cycles (upper bound retained), L2 10 to 12 cycles (11 = low end of the normal case)."
+        "fr": "Même guide d'optimisation Arm ; règle unique : haut du cas normal de chaque niveau. L1 : 4 cycles (plage 2 à 4), L2 : 12 cycles (plage 10 à 12).",
+        "en": "Same Arm optimization guide; single rule: top of each level's normal case. L1: 4 cycles (range 2 to 4), L2: 12 cycles (range 10 to 12)."
       }
     },
     {
@@ -11934,8 +11934,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Résultats LINPACK (1993) puis HPL en double précision, soumis pour des systèmes différents. Rmax mesure un seul benchmark dense, pas la performance d'applications réelles. Les fréquences et le nombre de cœurs ont changé en même temps.",
-        "en": "LINPACK (1993) then double-precision HPL results, submitted for different systems. Rmax measures a single dense benchmark, not real application performance. Frequencies and core counts changed at the same time."
+        "fr": "Résultats LINPACK (1993) puis HPL en double précision, publiés pour des systèmes différents. Rmax mesure un seul benchmark dense, pas la performance d'applications réelles. Les fréquences et le nombre de cœurs ont changé en même temps.",
+        "en": "LINPACK (1993) then double-precision HPL results, published for different systems. Rmax measures a single dense benchmark, not real application performance. Frequencies and core counts changed at the same time."
       }
     },
     {
@@ -11955,8 +11955,8 @@
       ],
       "comparability": "same-definition",
       "note": {
-        "fr": "Même benchmark (HPL, double précision) et même liste ; Rmax mesuré contre Rpeak théorique (voir les fiches). Le classement est celui du TOP500, pas une mesure de performance générale.",
-        "en": "Same benchmark (HPL, double precision) and same list; measured Rmax versus theoretical Rpeak (see sheets). The ranking is TOP500's, not a measure of general performance."
+        "fr": "Même benchmark (HPL, double précision) et même liste. Exception assumée à la règle « jamais classé par valeur » (ADR-0006) : l'ordre affiché est le rang publié par le TOP500, pas une mesure de performance générale. Rpeak théorique : voir les fiches Rpeak correspondantes (une par système).",
+        "en": "Same benchmark (HPL, double precision) and same list. Accepted exception to the 'never ranked by value' rule (ADR-0006): the order shown is the rank published by TOP500, not a measure of general performance. Theoretical Rpeak: see the corresponding Rpeak sheets (one per system)."
       }
     },
     {
@@ -11964,8 +11964,8 @@
       "kind": "comparison",
       "quantityKind": "duration",
       "label": {
-        "fr": "Durée d'une porte à deux qubits (CZ), processeurs supraconducteurs",
-        "en": "Two-qubit (CZ) gate duration, superconducting processors"
+        "fr": "Durée d'une porte à deux qubits, processeurs supraconducteurs",
+        "en": "Two-qubit gate duration, superconducting processors"
       },
       "members": [
         "willow-cz-gate-duration-m1",
@@ -11973,8 +11973,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Processeurs, calibrations et articles différents ; la valeur IBM est un instantané de calibration d'un sous-ensemble de qubits. Une porte plus courte n'est pas forcément plus fidèle.",
-        "en": "Different processors, calibrations and papers; the IBM value is a calibration snapshot of a qubit subset. A shorter gate is not necessarily higher fidelity."
+        "fr": "Processeurs, calibrations et articles différents : médiane d'un sous-ensemble de qubits choisis (IBM, instantané de calibration) contre durée fixée par conception (Google). Une porte plus courte n'est pas forcément plus fidèle.",
+        "en": "Different processors, calibrations and papers: median over a selected qubit subset (IBM, calibration snapshot) versus a duration fixed by design (Google). A shorter gate is not necessarily higher fidelity."
       }
     },
     {
@@ -12010,8 +12010,8 @@
       ],
       "comparability": "heterogeneous",
       "note": {
-        "fr": "Valeurs constructeur de nature différente : maximum (« atteint »), « jusqu'à » et borne basse (« plus de »).",
-        "en": "Vendor values of different nature: maximum ('reaches'), 'up to' and lower bound ('more than')."
+        "fr": "Valeurs constructeur de nature différente : maximum (« atteint »), « jusqu'à » et borne basse (« plus de »). « Par pile » est déduit de l'interface de 1 024 broches pour Samsung HBM3, et de « per placement » pour Micron. Années non publiées par ces pages.",
+        "en": "Vendor values of different nature: maximum ('reaches'), 'up to' and lower bound ('more than'). 'Per stack' is inferred from the 1,024-pin interface for Samsung HBM3 and from 'per placement' for Micron. Years not given by these pages."
       }
     },
     {
@@ -12153,7 +12153,7 @@
         "fr": "Référence : période d'image à 60 Hz exactement.",
         "en": "Reference: frame period at exactly 60 Hz."
       },
-      "referenceSI": 0.01666666666666667
+      "referenceSI": 0.016666666666666666
     },
     {
       "id": "obs-quantum-qec-cycle",
@@ -12161,12 +12161,12 @@
       "measurementId": "willow-surface-code-cycle-time-m1",
       "frequencyHz": null,
       "label": {
-        "fr": "Processeur quantique Google (72 qubits, code de surface de distance 5) : un cycle de correction d'erreurs (1,1 µs) = 1 seconde subjective",
-        "en": "Google quantum processor (72 qubits, distance-5 surface code): one error-correction cycle (1.1 µs) = 1 subjective second"
+        "fr": "Processeur supraconducteur Google de 72 qubits (2024) : un cycle de code de surface (1,1 µs) = 1 seconde subjective",
+        "en": "Google 72-qubit superconducting processor (2024): one surface-code cycle (1.1 µs) = 1 subjective second"
       },
       "assumptions": {
-        "fr": "Référence tirée d'une seule expérience publiée ; la latence du décodeur (63 µs) n'est pas incluse. Ce n'est pas une horloge, et un cycle n'est pas comparable à un cycle de CPU.",
-        "en": "Reference from a single published experiment; decoder latency (63 µs) is not included. This is not a clock, and one cycle is not comparable to a CPU cycle."
+        "fr": "Paramètre de fonctionnement de cette seule expérience (distance 5), donné à 2 chiffres significatifs. Un cycle est un tour d'extraction de syndrome : la correction attend le décodeur (63 µs en moyenne), non inclus. Ce n'est pas une horloge, et un cycle n'est pas comparable à un cycle de CPU.",
+        "en": "Operating parameter of this single experiment (distance 5), given to 2 significant digits. A cycle is one round of syndrome extraction: correction waits for the decoder (63 µs on average), not included. This is not a clock, and one cycle is not comparable to a CPU cycle."
       },
       "referenceSI": 0.0000011
     }

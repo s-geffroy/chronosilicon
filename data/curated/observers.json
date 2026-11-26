@@ -120,12 +120,12 @@
       "measurementId": "willow-surface-code-cycle-time-m1",
       "frequencyHz": null,
       "label": {
-        "fr": "Processeur quantique Google (72 qubits, code de surface de distance 5) : un cycle de correction d'erreurs (1,1 µs) = 1 seconde subjective",
-        "en": "Google quantum processor (72 qubits, distance-5 surface code): one error-correction cycle (1.1 µs) = 1 subjective second"
+        "fr": "Processeur supraconducteur Google de 72 qubits (2024) : un cycle de code de surface (1,1 µs) = 1 seconde subjective",
+        "en": "Google 72-qubit superconducting processor (2024): one surface-code cycle (1.1 µs) = 1 subjective second"
       },
       "assumptions": {
-        "fr": "Référence tirée d'une seule expérience publiée ; la latence du décodeur (63 µs) n'est pas incluse. Ce n'est pas une horloge, et un cycle n'est pas comparable à un cycle de CPU.",
-        "en": "Reference from a single published experiment; decoder latency (63 µs) is not included. This is not a clock, and one cycle is not comparable to a CPU cycle."
+        "fr": "Paramètre de fonctionnement de cette seule expérience (distance 5), donné à 2 chiffres significatifs. Un cycle est un tour d'extraction de syndrome : la correction attend le décodeur (63 µs en moyenne), non inclus. Ce n'est pas une horloge, et un cycle n'est pas comparable à un cycle de CPU.",
+        "en": "Operating parameter of this single experiment (distance 5), given to 2 significant digits. A cycle is one round of syndrome extraction: correction waits for the decoder (63 µs on average), not included. This is not a clock, and one cycle is not comparable to a CPU cycle."
       }
     }
   ]

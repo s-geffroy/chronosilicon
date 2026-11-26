@@ -47,9 +47,17 @@ interface UnitDef {
   readonly kind: QuantityKind;
   /** Multiply a value in this unit by `factor` to obtain the base unit. */
   readonly factor: number;
+  /**
+   * For decimal sub-multiples, divide by this exact integer instead of
+   * multiplying by an inexact 10^-k (43 ms → 0.043 s, not 0.043000000000000003).
+   */
+  readonly divisor?: number;
 }
 
-const U = (kind: QuantityKind, factor: number): UnitDef => ({ kind, factor });
+const U = (kind: QuantityKind, factor: number): UnitDef =>
+  factor < 1 && Number.isInteger(Math.round(1 / factor)) && Math.abs(1 / factor - Math.round(1 / factor)) < 1e-6
+    ? { kind, factor, divisor: Math.round(1 / factor) }
+    : { kind, factor };
 
 export const UNITS: Readonly<Record<string, UnitDef>> = {
   // duration
@@ -155,7 +163,7 @@ export function toSI(value: number, unit: string, expected: QuantityKind): numbe
   if (def.kind !== expected) {
     throw new DimensionError(`Unit "${unit}" is a ${def.kind}, expected ${expected}`);
   }
-  const out = value * def.factor;
+  const out = def.divisor !== undefined ? value / def.divisor : value * def.factor;
   assertFinite(out, 'converted value');
   return out;
 }
@@ -168,7 +176,7 @@ export function fromSI(valueSI: number, unit: string, expected: QuantityKind): n
   if (def.kind !== expected) {
     throw new DimensionError(`Unit "${unit}" is a ${def.kind}, expected ${expected}`);
   }
-  return valueSI / def.factor;
+  return def.divisor !== undefined ? valueSI * def.divisor : valueSI / def.factor;
 }
 
 /**

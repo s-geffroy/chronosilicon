@@ -154,7 +154,7 @@ for (const f of rawFiles) {
       low: (pick('low', it.low ?? null) ?? null) as number | null,
       high: (pick('high', it.high ?? null) ?? null) as number | null,
       // The verifier's bilingual conditions already integrate its 'conditions' fix.
-      conditions: { fr: v?.conditionsFr ?? it.conditions, en: v?.conditionsEn ?? it.conditions },
+      conditions: { fr: String(pick('conditionsFr', v?.conditionsFr ?? it.conditions)), en: String(pick('conditionsEn', v?.conditionsEn ?? it.conditions)) },
       protocol,
       provenanceType,
       verificationStatus: status,
@@ -169,6 +169,11 @@ for (const f of rawFiles) {
       rawRef: `data/raw/${f}#${it.id}`,
       notes: clip([pick('confidenceNotes', it.confidenceNotes) as string | null, v?.notes ? `Verifier: ${v.notes}` : null, d ? `Decision: ${d.reason}` : null].filter(Boolean).join(' | ') || null, 1000),
     });
+    // Bound wording in the excerpt without an encoded bound → flagged for review.
+    const lowV = pick('low', it.low ?? null), highV = pick('high', it.high ?? null);
+    if (/\b(up to|down to|at least|more than|less than|no less than|below|above)\b|[≤≥<>]/i.test(String(pick('quote', it.quote) ?? '')) && lowV === null && highV === null && patch['boundChecked'] !== true) {
+      why.push('WARNING: bound wording in the excerpt but no low/high encoded');
+    }
     report.push(`${it.id}\t${status}\t${why.join('; ')}`);
   }
 }
