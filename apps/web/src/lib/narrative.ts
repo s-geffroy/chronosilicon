@@ -16,8 +16,14 @@ export type LineKind = 'event' | 'gap';
 
 export interface JournalLine {
   readonly kind: LineKind;
-  /** Physical time of the line (s): event time, or end of the gap. */
+  /** Physical time of the line (s): event time, or START of the gap. */
   readonly physical: number;
+  /** Gap lines only: physical end of the gap (s) and its exact duration (s). */
+  readonly physicalEnd: number | null;
+  readonly gapSeconds: number | null;
+  /** Gap lines only: task ids running / waiting for a resource during the whole gap. */
+  readonly running: readonly string[];
+  readonly waiting: readonly string[];
   /** Subjective time at that instant for the observer. */
   readonly subjective: number;
   /** Event sequence number for event lines (traceability to the simulator log). */
@@ -32,17 +38,29 @@ export function narrate(result: SimulationResult, observer: Observer, lang: Lang
   let prev: bigint | null = null;
   for (const e of result.events) {
     if (prev !== null && e.time > prev) {
-      const gapS = fsToSeconds(e.time - prev);
-      const running = [...result.tasks.values()].filter((t) => t.start !== null && t.end !== null && t.start <= prev! && t.end >= e.time).map((t) => t.id);
+      const p0 = prev;
+      const gap = e.time - p0;
+      const gapS = fsToSeconds(gap);
+      const tasks = [...result.tasks.values()];
+      // Running during the whole gap: started at or before its start, not ended before its end.
+      const running = tasks.filter((t) => t.start !== null && t.end !== null && t.start <= p0 && t.end >= e.time).map((t) => t.id);
+      // Waiting for a resource: ready at or before the gap, started at or after its end.
+      const waiting = tasks.filter((t) => t.ready !== null && t.start !== null && t.ready <= p0 && t.start >= e.time).map((t) => t.id);
+      const waitingText = waiting.length ? translate(lang, 'journal.waiting', { tasks: waiting.map(label).join(', ') }) : '';
       lines.push({
         kind: 'gap',
-        physical: fsToSeconds(e.time),
-        subjective: subj(fsToSeconds(e.time)),
+        physical: fsToSeconds(p0),
+        physicalEnd: fsToSeconds(e.time),
+        gapSeconds: gapS,
+        running,
+        waiting,
+        subjective: subj(fsToSeconds(p0)),
         seq: null,
         text: translate(lang, running.length ? 'journal.gapRunning' : 'journal.gapIdle', {
           t: formatCalendar(subj(gapS), lang),
           p: formatPhysicalDuration(gapS, lang),
-          tasks: running.join(', '),
+          tasks: running.map(label).join(', '),
+          waiting: waitingText,
         }),
       });
     }
@@ -50,6 +68,10 @@ export function narrate(result: SimulationResult, observer: Observer, lang: Lang
     lines.push({
       kind: 'event',
       physical: s,
+      physicalEnd: null,
+      gapSeconds: null,
+      running: [],
+      waiting: [],
       subjective: subj(s),
       seq: e.seq,
       text: translate(lang, `journal.${e.kind}`, { task: label(e.taskId), res: e.resourceId ?? '—' }),

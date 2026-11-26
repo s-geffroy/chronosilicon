@@ -30,10 +30,11 @@
   </label>
   <p class="help"><strong>{t('sim.excluded')} :</strong> {def.excluded[lang]}</p>
   <h2>{t('imm.entry')}</h2>
+  <p class="help">{t('imm.when')} · {t('imm.real')}</p>
   <ol class="journal" data-testid="journal">
     {#each lines as l, i (i)}
       <li class="j-{l.kind}">
-        <span class="j-when">{formatCalendar(l.subjective, lang)}<span class="help"> · {t('imm.real')} {formatPhysicalDuration(l.physical, lang)}</span></span>
+        <span class="j-when">{formatCalendar(l.subjective, lang)}<span class="help"> · {formatPhysicalDuration(l.physical, lang)}{#if l.physicalEnd !== null} → {formatPhysicalDuration(l.physicalEnd, lang)}{/if}</span></span>
         <span class="j-text">{l.text}</span>
       </li>
     {/each}

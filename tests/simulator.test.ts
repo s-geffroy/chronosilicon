@@ -85,7 +85,7 @@ describe('invariants', () => {
         if (t.releaseSeconds !== undefined) expect(tr.start! >= fs(t.releaseSeconds)).toBe(true);
         // causality includes the lag
         for (const d of t.dependencies) expect(tr.start! >= res.tasks.get(d.predecessor)!.end! + fs(d.lagSeconds)).toBe(true);
-        // work conservation: each task runs exactly its fixed duration
+        // each task runs exactly its fixed duration (no stretching, no shortening)
         expect(tr.end! - tr.start!).toBe(fs((t.duration as { seconds: number }).seconds));
       }
       // occupancy reconstructed from the task intervals, independently of the engine counters
@@ -154,6 +154,18 @@ describe('rejections', () => {
     const e = validateScenario(scen([task('a', 1, { priority: NaN, cancelAtSeconds: -1 })],
       [{ id: 'r', kind: 'cpu', capacity: 1 }, { id: 'r', kind: 'cpu', capacity: 2 }], { maxEvents: NaN })).join();
     expect(e).toMatch(/duplicate resource/); expect(e).toMatch(/priority/); expect(e).toMatch(/cancellation/); expect(e).toMatch(/maxEvents/);
+  });
+  it('cycle detection is iterative (20 000 tasks declared in reverse order)', () => {
+    const ts = Array.from({ length: 20_000 }, (_, i) => task(`t${i}`, 1, i < 19_999 ? { dependencies: [after(`t${i + 1}`)] } : {}));
+    expect(validateScenario(scen(ts))).toEqual([]);
+    ts[19_999] = task('t19999', 1, { dependencies: [after('t0')] });
+    expect(validateScenario(scen(ts)).join()).toMatch(/dependency cycle/);
+  });
+  it('event limit boundary: exactly maxEvents events pass, one fewer fails', () => {
+    // The limit counts QUEUED events (ready, end, cancel); starts are immediate: 2 tasks → 4.
+    const ts = [task('a', 1), task('b', 1)];
+    expect(() => simulate(scen(ts, [], { maxEvents: 4 }))).not.toThrow();
+    expect(() => simulate(scen(ts, [], { maxEvents: 3 }))).toThrow(/event limit/);
   });
   it('long cancellation cascades do not overflow the stack', () => {
     const ts = Array.from({ length: 20_000 }, (_, i) => task(`t${i}`, 1, i ? { dependencies: [after(`t${i - 1}`)] } : { cancelAtSeconds: 0.5 }));

@@ -71,6 +71,7 @@ export interface Scenario {
   readonly seed: number;
   readonly resources: readonly Resource[];
   readonly tasks: readonly Task[];
+  /** Limit on QUEUED events processed (ready, end, cancel); starts are immediate. */
   readonly maxEvents?: number;
 }
 
@@ -153,25 +154,39 @@ export function validateScenario(s: Scenario): string[] {
     if (t.cancelAtSeconds !== undefined && !(Number.isFinite(t.cancelAtSeconds) && t.cancelAtSeconds >= 0)) errs.push(`task ${t.id}: invalid cancellation time`);
     if (!Number.isFinite(t.priority)) errs.push(`task ${t.id}: priority must be finite`);
   }
-  // Cycle detection (DFS) — an impossible causal chain is a deadlock.
+  // Cycle detection: iterative DFS with colours (no recursion; O(V+E)).
   const byId = new Map(s.tasks.map((t) => [t.id, t]));
-  const state = new Map<string, 0 | 1 | 2>();
-  const visit = (id: string, stack: string[]): void => {
-    const st = state.get(id) ?? 0;
-    if (st === 2) return;
-    if (st === 1) { errs.push(`dependency cycle: ${[...stack, id].join(' → ')}`); return; }
-    state.set(id, 1);
-    for (const d of byId.get(id)?.dependencies ?? []) if (byId.has(d.predecessor)) visit(d.predecessor, [...stack, id]);
-    state.set(id, 2);
-  };
-  for (const t of s.tasks) visit(t.id, []);
+  const colour = new Map<string, 0 | 1 | 2>();
+  const parent = new Map<string, string>();
+  for (const root of s.tasks) {
+    if ((colour.get(root.id) ?? 0) !== 0) continue;
+    const stack: Array<{ id: string; i: number }> = [{ id: root.id, i: 0 }];
+    colour.set(root.id, 1);
+    while (stack.length) {
+      const top = stack[stack.length - 1]!;
+      const deps = byId.get(top.id)!.dependencies.filter((d) => byId.has(d.predecessor));
+      if (top.i >= deps.length) { colour.set(top.id, 2); stack.pop(); continue; }
+      const next = deps[top.i++]!.predecessor;
+      const c = colour.get(next) ?? 0;
+      if (c === 1) {
+        const cycle = [next];
+        for (let x = top.id; x !== next && x !== undefined; x = parent.get(x)!) cycle.push(x);
+        errs.push(`dependency cycle: ${cycle.reverse().join(' → ')}`);
+        if (errs.length > 50) return errs;
+      } else if (c === 0) {
+        colour.set(next, 1);
+        parent.set(next, top.id);
+        stack.push({ id: next, i: 0 });
+      }
+    }
+  }
   return errs;
 }
 
 interface QueueItem { time: Fs; prio: number; order: number; kind: EventKind; taskId: string }
 const KIND_ORDER: Record<EventKind, number> = { cancel: 0, end: 1, ready: 2, start: 3 };
 
-/** Binary min-heap ordered by (time, priority, kind, stable id). */
+/** Binary min-heap ordered by (time, event type, priority, declaration order). */
 class EventQueue {
   private h: QueueItem[] = [];
   private static less(a: QueueItem, b: QueueItem): boolean {

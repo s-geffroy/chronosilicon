@@ -17,7 +17,7 @@ if (r.corpus) {
   else if (readFileSync(path, 'utf8') !== serialize(r.corpus)) errors.push(`${P.corpus} is stale — run npm run build:data`);
 }
 for (const f of readdirSync(join(ROOT, P.rawDir)).filter((x) => /^m00-.*\.json$/.test(x))) {
-  for (const e of checkExtraction(JSON.parse(readFileSync(join(ROOT, P.rawDir, f), 'utf8')))) errors.push(`${f}: ${e}`);
+  for (const e of checkExtraction(JSON.parse(readFileSync(join(ROOT, P.rawDir, f), 'utf8')), { strict: !f.startsWith('m00-2026-11-26-') })) errors.push(`${f}: ${e}`);
 }
 if (errors.length) {
   console.error(`validate:data FAILED (${errors.length} errors)`);

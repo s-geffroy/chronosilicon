@@ -260,11 +260,16 @@ test('V5 laboratory: browser measurement labelled as such, raw samples exported;
   await page.getByTestId('lab-run-timer').click();
   await expect(page.getByTestId('lab-n')).toHaveText(/^\d+$/);
   await expect(page.getByTestId('lab-result')).toContainText('Hyndman-Fan type 7');
+  await expect(page.getByTestId('lab-result')).toContainText('of clock steps');
   const [dl] = await Promise.all([page.waitForEvent('download'), page.getByTestId('lab-export').click()]);
   const json = JSON.parse(readFileSync((await dl.path())!, 'utf8'));
   expect(json.samples.length).toBe(json.summary.n);
   expect(json.samples.every((x: number) => Number.isFinite(x) && x > 0)).toBe(true);
   expect(json.summary.quantiles[0].value).toBeLessThanOrEqual(json.summary.quantiles[2].value);
+  // call cost: only a median with its resolution, or "not resolved" — never quantiles of batch means
+  await page.getByTestId('lab-run-now').click();
+  await expect(page.getByTestId('lab-percall')).toHaveText(/±|Not resolved/, { timeout: 20_000 });
+  await expect(page.getByTestId('lab-result')).not.toContainText('P99');
 });
 
 test('no horizontal page overflow on any view (responsive)', async ({ page }) => {

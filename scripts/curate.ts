@@ -46,6 +46,9 @@ interface Decisions {
 const readJson = <T>(rel: string): T => JSON.parse(readFileSync(join(ROOT, rel), 'utf8')) as T;
 const rawFiles = readdirSync(join(ROOT, P.rawDir)).filter((f) => /^m00-.*\.json$/.test(f)).sort();
 const verdictFiles = readdirSync(join(ROOT, P.rawDir)).filter((f) => /^verify-.*\.json$/.test(f)).sort();
+// Any other JSON in data/raw would be silently ignored: refuse instead (review G4/G5 MAJ-3).
+const unknownRaw = readdirSync(join(ROOT, P.rawDir)).filter((f) => f.endsWith('.json') && !/^(m00-|verify-)/.test(f));
+if (unknownRaw.length) throw new Error(`data/raw: unrecognised files ${unknownRaw.join(', ')} (expected m00-*.json extractions or verify-*.json verdicts)`);
 const decisionsFile = readJson<Decisions>('data/curated/decisions.json');
 const decisions = decisionsFile.decisions;
 const sourcePatches = decisionsFile.sourcePatches ?? {};
