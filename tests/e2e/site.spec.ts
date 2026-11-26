@@ -138,6 +138,12 @@ test('accessibility: no axe violations (WCAG 2.1 AA) on main views', async ({ pa
     const res = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
     expect(res.violations.map((v) => `${r}: ${v.id} (${v.nodes.length})`)).toEqual([]);
   }
+  if (firstDuration) {
+    await page.goto(`./#/timeline?lang=en&level=scientific&sel=${firstDuration.id}`);
+    await expect(page.getByTestId('sheet')).toBeVisible();
+    const res = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
+    expect(res.violations.map((v) => `sheet: ${v.id} (${v.nodes.length})`)).toEqual([]);
+  }
 });
 
 test('internal navigation links all resolve', async ({ page }) => {

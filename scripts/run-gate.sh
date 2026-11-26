@@ -4,7 +4,8 @@
 # Meant to run inside the 'node' tool container:
 #   sudo appctl run node sh scripts/run-gate.sh G1
 set -u
-export NO_COLOR=1 FORCE_COLOR=0
+export NO_COLOR=1
+unset FORCE_COLOR
 GATE="${1:?gate name}"
 DIR="docs/reports/logs/${GATE}"
 mkdir -p "$DIR"

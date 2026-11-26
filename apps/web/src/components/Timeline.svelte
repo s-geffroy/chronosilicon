@@ -59,8 +59,9 @@
   const open = (m: NormalizedMeasurement) => app.set({ selected: m.id }, true);
   const label = (m: NormalizedMeasurement) => phenomenonOf(m).label[lang];
   const domainName = (m: NormalizedMeasurement) => t(`domain.${phenomenonOf(m).domain}`);
-  const rowAria = (m: NormalizedMeasurement) =>
-    `${label(m)} — ${formatPhysicalDuration(m.valueSI, lang)} ; ${t('axis.subjective')} ${formatCalendar(subj(m.valueSI), lang)} ; ${domainName(m)} ; ${t(`prov.${m.provenanceType}`)}`;
+  /** Extra details for assistive tech, appended after the visible text (WCAG 2.5.3). */
+  const rowDetails = (m: NormalizedMeasurement) =>
+    `; ${t('axis.physical')} ${formatPhysicalDuration(m.valueSI, lang)} ; ${t('axis.subjective')} ${formatCalendar(subj(m.valueSI), lang)}`;
 </script>
 
 <section aria-labelledby="tl-h" data-testid="timeline">
@@ -128,7 +129,7 @@
         <ol class="rows" data-testid="chart-rows">
           {#each positive as m (m.id)}
             <li>
-              <button type="button" class="row dom-{phenomenonOf(m).domain}" onclick={() => open(m)} aria-label={rowAria(m)} data-id={m.id}>
+              <button type="button" class="row dom-{phenomenonOf(m).domain}" onclick={() => open(m)} data-id={m.id}>
                 <span class="row-label">
                   <span class="lbl">{label(m)}</span>
                   <span class="meta">{domainName(m)} · {t(`prov.${m.provenanceType}`)}</span>
@@ -141,6 +142,7 @@
                   <span class="dot prov-{m.provenanceType}" style:left="{scale(axisValue(m.valueSI))}%"></span>
                   <span class="val" style:left="{Math.min(scale(axisValue(m.valueSI)), 70)}%">{fmtAxis(m.valueSI)}</span>
                 </span>
+                <span class="sr-only">{rowDetails(m)}</span>
               </button>
             </li>
           {/each}
