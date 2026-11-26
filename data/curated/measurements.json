@@ -1,0 +1,3711 @@
+{
+  "schemaVersion": "1.0.0",
+  "measurements": [
+    {
+      "id": "caesium-hyperfine-frequency-m1",
+      "phenomenonId": "caesium-hyperfine-frequency",
+      "configuration": null,
+      "value": 9192631770,
+      "unit": "Hz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Exact by definition (SI 2019); unperturbed ground-state hyperfine transition of the caesium-133 atom.",
+        "en": "Exact by definition (SI 2019); unperturbed ground-state hyperfine transition of the caesium-133 atom."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-bipm-si-brochure"
+      ],
+      "locator": "Table 1 (seven defining constants), PDF p. 14; definition of the second, §2.3.1, PDF p. 16",
+      "quote": "The effect of this definition is that the second is equal to the duration of 9 192 631 770 periods",
+      "era": 2019,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#caesium-hyperfine-frequency",
+      "notes": "Exact value. Cross-checked on src-bipm-second-page."
+    },
+    {
+      "id": "caesium-period-m1",
+      "phenomenonId": "caesium-period",
+      "configuration": null,
+      "value": 0.10878277570776666,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Derived from the exact SI definition.",
+        "en": "Derived from the exact SI definition."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-bipm-si-brochure"
+      ],
+      "locator": "PDF p. 16",
+      "quote": "the second is equal to the duration of 9 192 631 770 periods",
+      "era": 2019,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "T = 1 / 9 192 631 770 Hz = 1.0878277570776666e-10 s; input: caesium-hyperfine-frequency",
+        "inputs": [
+          "caesium-hyperfine-frequency-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#caesium-period",
+      "notes": "Exact up to floating-point rounding."
+    },
+    {
+      "id": "speed-of-light-vacuum-m1",
+      "phenomenonId": "speed-of-light-vacuum",
+      "configuration": null,
+      "value": 299792458,
+      "unit": "m/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Exact by definition (defining constant of the SI).",
+        "en": "Exact by definition (defining constant of the SI)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-bipm-si-brochure"
+      ],
+      "locator": "Table 1, PDF p. 14; §2.3.1 definition of the metre, PDF p. 16",
+      "quote": "This definition implies the exact relation c = 299 792 458 m s−1.",
+      "era": 1983,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#speed-of-light-vacuum",
+      "notes": "Also NIST CODATA 2022: '299 792 458 m s-1', uncertainty '(exact)' (src-nist-codata-c)."
+    },
+    {
+      "id": "light-distance-per-ns-m1",
+      "phenomenonId": "light-distance-per-ns",
+      "configuration": null,
+      "value": 0.299792458,
+      "unit": "m",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Vacuum. In optical fibre or copper, propagation is slower (group index not sourced here, see excluded).",
+        "en": "Vacuum. In optical fibre or copper, propagation is slower (group index not sourced here, see excluded)."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-bipm-si-brochure"
+      ],
+      "locator": "PDF p. 16",
+      "quote": "This definition implies the exact relation c = 299 792 458 m s−1.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "d = c x 1e-9 s = 299 792 458 m/s x 1e-9 s; input: speed-of-light-vacuum",
+        "inputs": [
+          "speed-of-light-vacuum-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#light-distance-per-ns",
+      "notes": "Exact."
+    },
+    {
+      "id": "astronomical-unit-m1",
+      "phenomenonId": "astronomical-unit",
+      "configuration": null,
+      "value": 149597870700,
+      "unit": "m",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Conventional exact length (IAU 2012 Resolution B2), accepted for use with the SI. Not the instantaneous Earth-Sun distance.",
+        "en": "Conventional exact length (IAU 2012 Resolution B2), accepted for use with the SI. Not the instantaneous Earth-Sun distance."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-bipm-si-brochure"
+      ],
+      "locator": "Table 8 (Non-SI units), PDF p. 30",
+      "quote": "astronomical unit (j)   au         1 au = 149 597 870 700 m",
+      "era": 2012,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#astronomical-unit",
+      "notes": "The IAU PDF itself could not be fetched (see excluded); the BIPM brochure is an authoritative secondary carrier of the same exact value."
+    },
+    {
+      "id": "astronomical-unit-light-time-m1",
+      "phenomenonId": "astronomical-unit-light-time",
+      "configuration": null,
+      "value": 499.00478383615643,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Vacuum, 1 au exactly; approximates Sun-Earth one-way light time (real distance varies over the year).",
+        "en": "Vacuum, 1 au exactly; approximates Sun-Earth one-way light time (real distance varies over the year)."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-bipm-si-brochure"
+      ],
+      "locator": "Table 8 PDF p. 30; Table 1 PDF p. 14",
+      "quote": "1 au = 149 597 870 700 m",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 149 597 870 700 m / 299 792 458 m/s; inputs: astronomical-unit, speed-of-light-vacuum",
+        "inputs": [
+          "astronomical-unit-m1",
+          "speed-of-light-vacuum-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#astronomical-unit-light-time",
+      "notes": "About 8 min 19 s."
+    },
+    {
+      "id": "earth-moon-semimajor-axis-m1",
+      "phenomenonId": "earth-moon-semimajor-axis",
+      "configuration": null,
+      "value": 384400,
+      "unit": "km",
+      "low": 357000,
+      "high": 407000,
+      "conditions": {
+        "fr": "Semimajor axis (0.3844 x 10^6 km). low/high: the fact sheet's stated rough range of the actual Earth-Moon distance over a year (footnote).",
+        "en": "Semimajor axis (0.3844 x 10^6 km). low/high: the fact sheet's stated rough range of the actual Earth-Moon distance over a year (footnote)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nasa-moon-factsheet"
+      ],
+      "locator": "Orbital parameters table, row 'Semimajor axis (10^6 km)'; footnote to perigee/apogee",
+      "quote": "Semimajor axis (106 km) | 0.3844",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#earth-moon-semimajor-axis",
+      "notes": "Range quote: 'the distance from the Moon to Earth roughly ranges from 357,000 km to 407,000 km'. Mean perigee 0.3633 and mean apogee 0.4055 x 10^6 km also listed. Semimajor axis is not strictly the time-averaged distance."
+    },
+    {
+      "id": "earth-moon-light-time-one-way-m1",
+      "phenomenonId": "earth-moon-light-time-one-way",
+      "configuration": null,
+      "value": 1.2822203819416964,
+      "unit": "s",
+      "low": 1.1908,
+      "high": 1.3576,
+      "conditions": {
+        "fr": "Vacuum, centre-to-centre distance equal to the semimajor axis; low/high from the 357,000-407,000 km range. Ignores ground-station and surface offsets.",
+        "en": "Vacuum, centre-to-centre distance equal to the semimajor axis; low/high from the 357,000-407,000 km range. Ignores ground-station and surface offsets."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nasa-moon-factsheet"
+      ],
+      "locator": "Orbital parameters table + footnote",
+      "quote": "Semimajor axis (106 km) | 0.3844",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 384 400 000 m / 299 792 458 m/s; low = 357e6/c; high = 407e6/c; inputs: earth-moon-semimajor-axis, speed-of-light-vacuum",
+        "inputs": [
+          "earth-moon-semimajor-axis-m1",
+          "speed-of-light-vacuum-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#earth-moon-light-time-one-way",
+      "notes": "Round trip = 2.5644 s. No primary Apollo communications document was consulted for a measured round-trip value."
+    },
+    {
+      "id": "earth-mars-distance-min-m1",
+      "phenomenonId": "earth-mars-distance-min",
+      "configuration": null,
+      "value": 54600000,
+      "unit": "km",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Fact sheet 'Distance from Earth: Minimum (10^6 km) 54.6'. Close oppositions only; most oppositions are farther.",
+        "en": "Fact sheet 'Distance from Earth: Minimum (10^6 km) 54.6'. Close oppositions only; most oppositions are farther."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nasa-mars-factsheet"
+      ],
+      "locator": "Mars Observational Parameters, 'Distance from Earth', row 'Minimum (10^6 km)'",
+      "quote": "Minimum (106 km) 54.6",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#earth-mars-distance-min",
+      "notes": "Quote reconstructed from table cells label + value."
+    },
+    {
+      "id": "earth-mars-distance-max-m1",
+      "phenomenonId": "earth-mars-distance-max",
+      "configuration": null,
+      "value": 401400000,
+      "unit": "km",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Near solar conjunction (radio links are then generally disrupted by the Sun).",
+        "en": "Near solar conjunction (radio links are then generally disrupted by the Sun)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nasa-mars-factsheet"
+      ],
+      "locator": "Mars Observational Parameters, 'Distance from Earth', row 'Maximum (10^6 km)'",
+      "quote": "Maximum (106 km) 401.4",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#earth-mars-distance-max",
+      "notes": "Quote reconstructed from table cells label + value."
+    },
+    {
+      "id": "earth-mars-light-time-min-m1",
+      "phenomenonId": "earth-mars-light-time-min",
+      "configuration": null,
+      "value": 182.125995978191,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Vacuum, Earth-Mars distance 54.6e6 km (fact-sheet minimum); about 3.0 min.",
+        "en": "Vacuum, Earth-Mars distance 54.6e6 km (fact-sheet minimum); about 3.0 min."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nasa-mars-factsheet"
+      ],
+      "locator": "Mars Observational Parameters, 'Distance from Earth'",
+      "quote": "Minimum (106 km) 54.6",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 54.6e9 m / 299 792 458 m/s; inputs: earth-mars-distance-min, speed-of-light-vacuum",
+        "inputs": [
+          "earth-mars-distance-min-m1",
+          "speed-of-light-vacuum-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#earth-mars-light-time-min",
+      "notes": "NASA Goddard outreach page gives rounded 'about four minutes' and 'around 24 minutes'; its 24 min does not match its own 250 million miles (about 22.4 min), so the calculated range is preferred."
+    },
+    {
+      "id": "earth-mars-light-time-max-m1",
+      "phenomenonId": "earth-mars-light-time-max",
+      "configuration": null,
+      "value": 1338.9262781253824,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Vacuum, Earth-Mars distance 401.4e6 km (fact-sheet maximum, near solar conjunction); about 22.3 min.",
+        "en": "Vacuum, Earth-Mars distance 401.4e6 km (fact-sheet maximum, near solar conjunction); about 22.3 min."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nasa-mars-factsheet"
+      ],
+      "locator": "Mars Observational Parameters, 'Distance from Earth'",
+      "quote": "Maximum (106 km) 401.4",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 401.4e9 m / 299 792 458 m/s; inputs: earth-mars-distance-max, speed-of-light-vacuum",
+        "inputs": [
+          "earth-mars-distance-max-m1",
+          "speed-of-light-vacuum-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#earth-mars-light-time-max",
+      "notes": "NASA Goddard outreach page gives rounded 'about four minutes' and 'around 24 minutes'; its 24 min does not match its own 250 million miles (about 22.4 min), so the calculated range is preferred."
+    },
+    {
+      "id": "voyager1-distance-2026-11-18-m1",
+      "phenomenonId": "voyager1-distance-2026-11-18",
+      "configuration": null,
+      "value": 25902000000,
+      "unit": "km",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Snapshot dated Wednesday, Nov. 18, 2026, 2:16:07 a.m. PST. Increases continuously and oscillates with Earth's orbital motion.",
+        "en": "Snapshot dated Wednesday, Nov. 18, 2026, 2:16:07 a.m. PST. Increases continuously and oscillates with Earth's orbital motion."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nasa-voyager-where"
+      ],
+      "locator": "Main text, Voyager 1 distance statement",
+      "quote": "16.094 billion miles (25.902 billion kilometers) away from Earth.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#voyager1-distance-2026-11-18",
+      "notes": "Must always be cited with its date. The page calls it about one light-day."
+    },
+    {
+      "id": "voyager1-light-time-2026-11-18-m1",
+      "phenomenonId": "voyager1-light-time-2026-11-18",
+      "configuration": null,
+      "value": 86399.77193822534,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Vacuum, distance of 25.902e9 km on 2026-11-18 02:16:07 PST; about 24.0 h.",
+        "en": "Vacuum, distance of 25.902e9 km on 2026-11-18 02:16:07 PST; about 24.0 h."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nasa-voyager-where"
+      ],
+      "locator": "Main text",
+      "quote": "the distance light travels in 24 hours, also known as one light-day",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 25.902e12 m / 299 792 458 m/s; inputs: voyager1-distance-2026-11-18, speed-of-light-vacuum",
+        "inputs": [
+          "voyager1-distance-2026-11-18-m1",
+          "speed-of-light-vacuum-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#voyager1-light-time-2026-11-18",
+      "notes": "Consistent with the page's own 'one light-day' statement. Precision limited to 5 significant figures by the distance."
+    },
+    {
+      "id": "tcp-initial-rto-m1",
+      "phenomenonId": "tcp-initial-rto",
+      "configuration": null,
+      "value": 1,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Before any RTT measurement; SHOULD-level requirement of RFC 6298. Implementations may differ.",
+        "en": "Before any RTT measurement; SHOULD-level requirement of RFC 6298. Implementations may differ."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-rfc6298"
+      ],
+      "locator": "Section 2, rule (2.1)",
+      "quote": "the sender SHOULD set RTO <- 1 second",
+      "era": 2011,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-initial-rto",
+      "notes": "RFC 2988 previously used 3 s (see RFC 6298 Appendix A)."
+    },
+    {
+      "id": "tcp-min-rto-m1",
+      "phenomenonId": "tcp-min-rto",
+      "configuration": null,
+      "value": 1,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "SHOULD-level rule of RFC 6298. Some widely used stacks use a lower minimum (not sourced here).",
+        "en": "SHOULD-level rule of RFC 6298. Some widely used stacks use a lower minimum (not sourced here)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-rfc6298"
+      ],
+      "locator": "Section 2, rule (2.4)",
+      "quote": "Whenever RTO is computed, if it is less than 1 second, then the RTO SHOULD be rounded up to 1 second.",
+      "era": 2011,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-min-rto",
+      "notes": "Normative recommendation, not a measurement of deployed behaviour."
+    },
+    {
+      "id": "tcp-max-rto-floor-m1",
+      "phenomenonId": "tcp-max-rto-floor",
+      "configuration": null,
+      "value": 60,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "An upper bound MAY be placed on RTO, provided it is at least 60 s.",
+        "en": "An upper bound MAY be placed on RTO, provided it is at least 60 s."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-rfc6298"
+      ],
+      "locator": "Section 2, rule (2.5)",
+      "quote": "A maximum value MAY be placed on RTO provided it is at least 60 seconds.",
+      "era": 2011,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-max-rto-floor",
+      "notes": "It is a floor for the cap, not a typical value."
+    },
+    {
+      "id": "tcp-rto-after-syn-timeout-m1",
+      "phenomenonId": "tcp-rto-after-syn-timeout",
+      "configuration": null,
+      "value": 3,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "If the timer expired awaiting the ACK of a SYN and RTO < 3 s, RTO is reset to 3 s once data transmission begins.",
+        "en": "If the timer expired awaiting the ACK of a SYN and RTO < 3 s, RTO is reset to 3 s once data transmission begins."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-rfc6298"
+      ],
+      "locator": "Section 5, rule (5.7)",
+      "quote": "the RTO MUST be re-initialized to 3 seconds when data transmission begins",
+      "era": 2011,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-rto-after-syn-timeout",
+      "notes": "Backoff itself is doubling (rule 5.5)."
+    },
+    {
+      "id": "tcp-msl-m1",
+      "phenomenonId": "tcp-msl",
+      "configuration": null,
+      "value": 2,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Value assumed by the TCP specification; explicitly an engineering choice. TIME-WAIT lasts 2 MSL.",
+        "en": "Value assumed by the TCP specification; explicitly an engineering choice. TIME-WAIT lasts 2 MSL."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-rfc9293"
+      ],
+      "locator": "Section 3.4.2 'Knowing When to Keep Quiet'",
+      "quote": "For this specification the MSL is taken to be 2 minutes.",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-msl",
+      "notes": "Same value as RFC 793 (1981). Implementations often use shorter TIME-WAIT (not sourced here)."
+    },
+    {
+      "id": "tcp-isn-clock-tick-m1",
+      "phenomenonId": "tcp-isn-clock-tick",
+      "configuration": null,
+      "value": 4,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "32-bit counter that 'typically' increments at least once every roughly 4 us; not assumed realtime nor precise.",
+        "en": "32-bit counter that 'typically' increments at least once every roughly 4 us; not assumed realtime nor precise."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-rfc9293"
+      ],
+      "locator": "Section 3.4.1 'Initial Sequence Number Selection'",
+      "quote": "This clock is a 32-bit counter that typically increments at least once every roughly 4 microseconds",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#tcp-isn-clock-tick",
+      "notes": "Approximate by the source's own wording ('roughly')."
+    },
+    {
+      "id": "nr-urllc-user-plane-latency-target-m1",
+      "phenomenonId": "nr-urllc-user-plane-latency-target",
+      "configuration": null,
+      "value": 0.5,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Design target, one way, UL and DL each; L2/L3 SDU ingress to egress over the radio interface, no DRX; considered an average value. Analytical evaluation.",
+        "en": "Design target, one way, UL and DL each; L2/L3 SDU ingress to egress over the radio interface, no DRX; considered an average value. Analytical evaluation."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-3gpp-tr38913"
+      ],
+      "locator": "Section 7.5 'User plane latency', p. 24",
+      "quote": "For URLLC, the target for user plane latency should be 0.5ms for UL, and 0.5ms for DL.",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#nr-urllc-user-plane-latency-target",
+      "notes": "Target, not a measured deployed latency."
+    },
+    {
+      "id": "nr-urllc-reliability-latency-m1",
+      "phenomenonId": "nr-urllc-reliability-latency",
+      "configuration": null,
+      "value": 1,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Success probability 1-10^-5 for a 32-byte packet within 1 ms user-plane latency.",
+        "en": "Success probability 1-10^-5 for a 32-byte packet within 1 ms user-plane latency."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-3gpp-tr38913"
+      ],
+      "locator": "Section 7.9 'Reliability', p. 25",
+      "quote": "A general URLLC reliability requirement for one transmission of a packet is 1-10-5 for 32 bytes with a user plane latency of 1ms.",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#nr-urllc-reliability-latency",
+      "notes": "Quote as extracted by pdftotext ('1-10-5' = 1-10^-5)."
+    },
+    {
+      "id": "nr-embb-user-plane-latency-target-m1",
+      "phenomenonId": "nr-embb-user-plane-latency-target",
+      "configuration": null,
+      "value": 4,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Design target, UL and DL each; same definition as 7.5.",
+        "en": "Design target, UL and DL each; same definition as 7.5."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-3gpp-tr38913"
+      ],
+      "locator": "Section 7.5, p. 24",
+      "quote": "For eMBB, the target for user plane latency should be 4ms for UL, and 4ms for DL.",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#nr-embb-user-plane-latency-target",
+      "notes": "Target."
+    },
+    {
+      "id": "ntn-geo-user-plane-rtt-target-m1",
+      "phenomenonId": "ntn-geo-user-plane-rtt-target",
+      "configuration": null,
+      "value": 600,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Upper target when a GEO satellite link is involved; MEO up to 180 ms, LEO up to 50 ms in the same sentence.",
+        "en": "Upper target when a GEO satellite link is involved; MEO up to 180 ms, LEO up to 50 ms in the same sentence."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-3gpp-tr38913"
+      ],
+      "locator": "Section 7.5, p. 24",
+      "quote": "the target for user plane RTT can be as high as 600ms for GEO satellite systems",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ntn-geo-user-plane-rtt-target",
+      "notes": "A target ceiling, not a measurement."
+    },
+    {
+      "id": "ntn-leo-user-plane-rtt-target-m1",
+      "phenomenonId": "ntn-leo-user-plane-rtt-target",
+      "configuration": null,
+      "value": 50,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Upper target for LEO satellite systems.",
+        "en": "Upper target for LEO satellite systems."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-3gpp-tr38913"
+      ],
+      "locator": "Section 7.5, p. 24",
+      "quote": "up to 180ms for MEO satellite systems, and up to 50ms for LEO satellite systems.",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ntn-leo-user-plane-rtt-target",
+      "notes": "Target ceiling."
+    },
+    {
+      "id": "ethernet-min-frame-size-m1",
+      "phenomenonId": "ethernet-min-frame-size",
+      "configuration": null,
+      "value": 64,
+      "unit": "B",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Frame from destination address to FCS, excluding preamble and inter-frame gap.",
+        "en": "Frame from destination address to FCS, excluding preamble and inter-frame gap."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-rfc2544"
+      ],
+      "locator": "Section 9.1 'Frame sizes to be used on Ethernet'",
+      "quote": "64, 128, 256, 512, 1024, 1280, 1518 / These sizes include the maximum and minimum frame sizes permitted by the Ethernet standard",
+      "era": 1999,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ethernet-min-frame-size",
+      "notes": "64 as the minimum is inferred from the list including the minimum; IEEE 802.3 itself (minFrameSize) could not be consulted."
+    },
+    {
+      "id": "ethernet-min-frame-wire-time-1g-m1",
+      "phenomenonId": "ethernet-min-frame-wire-time-1g",
+      "configuration": null,
+      "value": 672,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "64-byte frame + 64-bit preamble + 96-bit gap = 672 bits at a nominal 1e9 bit/s. Frame alone: 512 ns.",
+        "en": "64-byte frame + 64-bit preamble + 96-bit gap = 672 bits at a nominal 1e9 bit/s. Frame alone: 512 ns."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-rfc2544"
+      ],
+      "locator": "Appendix B 'Ethernet size'",
+      "quote": "Preamble 64 bits / Frame 8 x N bits / Gap  96 bits",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = (64 bits preamble + 8 x 64 bits frame + 96 bits gap) / 1e9 bit/s = 672 bits / 1e9 bit/s; inputs: ethernet-min-frame-size, RFC 2544 Appendix B (preamble 64 bits, gap 96 bits)",
+        "inputs": [
+          "ethernet-min-frame-size-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ethernet-min-frame-wire-time-1g",
+      "notes": "Cross-check: at 10 Mbit/s, 1/(672e-7 s) = 14 880.95 frames/s, matching RFC 2544 Appendix B '64 14880' for Ethernet. Line rate is a nominal parameter, not sourced from IEEE 802.3."
+    },
+    {
+      "id": "ethernet-min-frame-wire-time-10g-m1",
+      "phenomenonId": "ethernet-min-frame-wire-time-10g",
+      "configuration": null,
+      "value": 67.2,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "672 bits at a nominal 1e10 bit/s. Frame alone: 51.2 ns.",
+        "en": "672 bits at a nominal 1e10 bit/s. Frame alone: 51.2 ns."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-rfc2544"
+      ],
+      "locator": "Appendix B 'Ethernet size'",
+      "quote": "Preamble 64 bits / Frame 8 x N bits / Gap  96 bits",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 672 bits / 1e10 bit/s; inputs: ethernet-min-frame-size, RFC 2544 Appendix B (preamble 64 bits, gap 96 bits)",
+        "inputs": [
+          "ethernet-min-frame-size-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ethernet-min-frame-wire-time-10g",
+      "notes": "Assumes the 10 Mbit/s-era preamble/gap structure carries over to 10GbE (true for the nominal minimum IPG but not checked against IEEE 802.3 clauses for 10G/100G)."
+    },
+    {
+      "id": "ethernet-min-frame-wire-time-100g-m1",
+      "phenomenonId": "ethernet-min-frame-wire-time-100g",
+      "configuration": null,
+      "value": 6.72,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "672 bits at a nominal 1e11 bit/s. Frame alone: 5.12 ns. Ignores 64b/66b line coding overhead.",
+        "en": "672 bits at a nominal 1e11 bit/s. Frame alone: 5.12 ns. Ignores 64b/66b line coding overhead."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-rfc2544"
+      ],
+      "locator": "Appendix B 'Ethernet size'",
+      "quote": "Preamble 64 bits / Frame 8 x N bits / Gap  96 bits",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 672 bits / 1e11 bit/s; inputs: ethernet-min-frame-size, RFC 2544 Appendix B",
+        "inputs": [
+          "ethernet-min-frame-size-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#ethernet-min-frame-wire-time-100g",
+      "notes": "Same caveat as the 10G item; 1 bit at 100 Gbit/s lasts 10 ps."
+    },
+    {
+      "id": "azure-rtt-eastus-westeurope-m1",
+      "phenomenonId": "azure-rtt-eastus-westeurope",
+      "configuration": null,
+      "value": 83,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "P50 of 1-minute probe measurements on the Azure backbone, 30-day window ending 2026-07-30; source East US (Virginia), destination West Europe (Netherlands). Reverse direction listed as 85 ms.",
+        "en": "P50 of 1-minute probe measurements on the Azure backbone, 30-day window ending 2026-07-30; source East US (Virginia), destination West Europe (Netherlands). Reverse direction listed as 85 ms."
+      },
+      "protocol": "As reported by the source: P50 of 1-minute probe measurements on the Azure backbone, 30-day window ending 2026-07-30; source East US (Virginia), destination West Europe (Netherlands). Reverse direction listed as 85 ms.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-azure-latency"
+      ],
+      "locator": "Europe > Western Europe tab, row 'East US', column 'West Europe'",
+      "quote": "| East US | 90 | 88 | 84 | 81 | 98 | 90 | 83 |",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-westeurope",
+      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: 'The measurements are collected in 1-minute intervals'."
+    },
+    {
+      "id": "azure-rtt-eastus-westus-m1",
+      "phenomenonId": "azure-rtt-eastus-westus",
+      "configuration": null,
+      "value": 69,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "P50, 30-day window ending 2026-07-30; Azure backbone.",
+        "en": "P50, 30-day window ending 2026-07-30; Azure backbone."
+      },
+      "protocol": "As reported by the source: P50, 30-day window ending 2026-07-30; Azure backbone.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-azure-latency"
+      ],
+      "locator": "Americas > West US tab, row 'East US', column 'West US'",
+      "quote": "| East US | 52 | 69 | 71 | 58 |",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-westus",
+      "notes": "Columns: West Central US, West US, West US 2, West US 3."
+    },
+    {
+      "id": "azure-rtt-westeurope-francecentral-m1",
+      "phenomenonId": "azure-rtt-westeurope-francecentral",
+      "configuration": null,
+      "value": 13,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "P50, 30-day window ending 2026-07-30; Amsterdam area to Paris area regions.",
+        "en": "P50, 30-day window ending 2026-07-30; Amsterdam area to Paris area regions."
+      },
+      "protocol": "As reported by the source: P50, 30-day window ending 2026-07-30; Amsterdam area to Paris area regions.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-azure-latency"
+      ],
+      "locator": "Europe > Western Europe tab, row 'West Europe', column 'France Central'",
+      "quote": "| West Europe | 8 | 13 | 22 | 27 | 17 | 20 |  |",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-westeurope-francecentral",
+      "notes": "Columns: Belgium Central, France Central, France South, Spain Central, Switzerland North, Switzerland West, West Europe."
+    },
+    {
+      "id": "azure-rtt-eastus-australiaeast-m1",
+      "phenomenonId": "azure-rtt-eastus-australiaeast",
+      "configuration": null,
+      "value": 201,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "P50, 30-day window ending 2026-07-30; Virginia to New South Wales regions.",
+        "en": "P50, 30-day window ending 2026-07-30; Virginia to New South Wales regions."
+      },
+      "protocol": "As reported by the source: P50, 30-day window ending 2026-07-30; Virginia to New South Wales regions.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-azure-latency"
+      ],
+      "locator": "APAC > Australia / New Zealand tab, row 'East US', column 'Australia East'",
+      "quote": "| East US | 200 | 200 | 201 | 212 | 183 |",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-australiaeast",
+      "notes": "Columns: Australia Central, Australia Central 2, Australia East, Australia Southeast, New Zealand North."
+    },
+    {
+      "id": "human-simple-visual-reaction-time-m1",
+      "phenomenonId": "human-simple-visual-reaction-time",
+      "configuration": null,
+      "value": 213,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Community sample, n=1469, ages 18-65; lateralised visual stimuli, mouse-button press with dominant index finger; 231 ms uncorrected, 213 ms after subtracting measured display+mouse delay (averaged 17.8 ms).",
+        "en": "Community sample, n=1469, ages 18-65; lateralised visual stimuli, mouse-button press with dominant index finger; 231 ms uncorrected, 213 ms after subtracting measured display+mouse delay (averaged 17.8 ms)."
+      },
+      "protocol": "As reported by the source: Community sample, n=1469, ages 18-65; lateralised visual stimuli, mouse-button press with dominant index finger; 231 ms uncorrected, 213 ms after subtracting measured display+mouse delay (averaged 17.8 ms).",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-woods-2015-srt"
+      ],
+      "locator": "Abstract (Experiment 1); Methods (hardware delay)",
+      "quote": "Mean SRT latencies were short (231, 213 ms when corrected for hardware delays)",
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-simple-visual-reaction-time",
+      "notes": "Mean of subject means; Experiment 2 (n=189, ages 18-82, other lab) was about 7 ms slower. Latency rises with age."
+    },
+    {
+      "id": "human-stimulus-detection-time-m1",
+      "phenomenonId": "human-stimulus-detection-time",
+      "configuration": null,
+      "value": 131,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Same sample (n=1469); estimated by subtracting finger-tapping movement-initiation time from SRT. Derived estimate, not directly observed.",
+        "en": "Same sample (n=1469); estimated by subtracting finger-tapping movement-initiation time from SRT. Derived estimate, not directly observed."
+      },
+      "protocol": "As reported by the source: Same sample (n=1469); estimated by subtracting finger-tapping movement-initiation time from SRT. Derived estimate, not directly observed.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-woods-2015-srt"
+      ],
+      "locator": "Abstract",
+      "quote": "SDT latencies averaged 131 ms and were unaffected by age.",
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stimulus-detection-time",
+      "notes": "Model-dependent subtraction method."
+    },
+    {
+      "id": "human-voluntary-blink-duration-m1",
+      "phenomenonId": "human-voluntary-blink-duration",
+      "configuration": null,
+      "value": 572,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 M, 14 F), aged 25-63 (mean 35); high-speed video at 600 fps. Mean ± 25 ms (s.e. per Table 1 caption). Closing phase 76 ± 2 ms, closed 58 ± 4 ms.",
+        "en": "Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 M, 14 F), aged 25-63 (mean 35); high-speed video at 600 fps. Mean ± 25 ms (s.e. per Table 1 caption). Closing phase 76 ± 2 ms, closed 58 ± 4 ms."
+      },
+      "protocol": "As reported by the source: Voluntary (not spontaneous) blinks; 25 healthy volunteers (11 M, 14 F), aged 25-63 (mean 35); high-speed video at 600 fps. Mean ± 25 ms (s.e. per Table 1 caption). Closing phase 76 ± 2 ms, closed 58 ± 4 ms.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-kwon-2013-blink"
+      ],
+      "locator": "Results; Table 1",
+      "quote": "one voluntary blink took 572 ± 25 ms",
+      "era": 2013,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-voluntary-blink-duration",
+      "notes": "Spontaneous blinks are generally reported as shorter, but no source for that was consulted here: do not use 572 ms as 'a blink' without the word 'voluntary'."
+    },
+    {
+      "id": "human-voluntary-blink-closing-phase-m1",
+      "phenomenonId": "human-voluntary-blink-closing-phase",
+      "configuration": null,
+      "value": 76,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Same study: n=25, 600 fps; mean ± 2 ms (s.e.).",
+        "en": "Same study: n=25, 600 fps; mean ± 2 ms (s.e.)."
+      },
+      "protocol": "As reported by the source: Same study: n=25, 600 fps; mean ± 2 ms (s.e.).",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-kwon-2013-blink"
+      ],
+      "locator": "Table 1",
+      "quote": "Closing phase: 76 ± 2 ms",
+      "era": 2013,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-voluntary-blink-closing-phase",
+      "notes": "Quote is the WebFetch rendering of a table cell (label + value), not a running-text sentence."
+    },
+    {
+      "id": "human-flicker-fusion-uniform-m1",
+      "phenomenonId": "human-flicker-fusion-uniform",
+      "configuration": null,
+      "value": 65,
+      "unit": "Hz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Spatially uniform modulated light; n=10 subjects; DLP projector setup. Sensitivity 'drops to zero near 65 Hz'.",
+        "en": "Spatially uniform modulated light; n=10 subjects; DLP projector setup. Sensitivity 'drops to zero near 65 Hz'."
+      },
+      "protocol": "As reported by the source: Spatially uniform modulated light; n=10 subjects; DLP projector setup. Sensitivity 'drops to zero near 65 Hz'.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-davis-2015-flicker"
+      ],
+      "locator": "Results",
+      "quote": "Sensitivity drops to zero near 65 Hz.",
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-flicker-fusion-uniform",
+      "notes": "Small sample; 'near' is approximate. Classic CFF depends on luminance, eccentricity and contrast."
+    },
+    {
+      "id": "human-flicker-artifact-edge-median-m1",
+      "phenomenonId": "human-flicker-artifact-edge-median",
+      "configuration": null,
+      "value": 500,
+      "unit": "Hz",
+      "low": null,
+      "high": 800,
+      "conditions": {
+        "fr": "Modulated light containing a high-spatial-frequency edge (eye movements across it); n=10; median viewer; several viewers above 800 Hz (high).",
+        "en": "Modulated light containing a high-spatial-frequency edge (eye movements across it); n=10; median viewer; several viewers above 800 Hz (high)."
+      },
+      "protocol": "As reported by the source: Modulated light containing a high-spatial-frequency edge (eye movements across it); n=10; median viewer; several viewers above 800 Hz (high).",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-davis-2015-flicker"
+      ],
+      "locator": "Results; Abstract",
+      "quote": "For the median viewer, flicker artifacts disappear only over 500 Hz",
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-flicker-artifact-edge-median",
+      "notes": "n=10, two subjects are authors; single study, not replicated in the sources consulted. 'high' is a lower bound for some viewers, not a maximum."
+    },
+    {
+      "id": "human-stylus-latency-jnd-large-box-m1",
+      "phenomenonId": "human-stylus-latency-jnd-large-box",
+      "configuration": null,
+      "value": 6,
+      "unit": "ms",
+      "low": 2,
+      "high": 16,
+      "conditions": {
+        "fr": "n=16 naive adults (24-52 y); High Performance Stylus System with 1 ms baseline; JND by PEST adaptive procedure; task: dragging a stylus with a large box around the nib.",
+        "en": "n=16 naive adults (24-52 y); High Performance Stylus System with 1 ms baseline; JND by PEST adaptive procedure; task: dragging a stylus with a large box around the nib."
+      },
+      "protocol": "As reported by the source: n=16 naive adults (24-52 y); High Performance Stylus System with 1 ms baseline; JND by PEST adaptive procedure; task: dragging a stylus with a large box around the nib.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-ng-2014-stylus"
+      ],
+      "locator": "Results, Figure 9 caption",
+      "quote": "Results ranged from 2 to 16 milliseconds, with a median latency of 6 milliseconds.",
+      "era": 2014,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stylus-latency-jnd-large-box",
+      "notes": "Internal inconsistency: the running text gives 'range 2 - 7' for the large box and '2 - 16' for the small box, opposite to the figure captions. Median values are consistent."
+    },
+    {
+      "id": "human-stylus-latency-jnd-small-box-m1",
+      "phenomenonId": "human-stylus-latency-jnd-small-box",
+      "configuration": null,
+      "value": 2,
+      "unit": "ms",
+      "low": 2,
+      "high": 7,
+      "conditions": {
+        "fr": "Same study, n=16; small box around the nib; 1 ms baseline.",
+        "en": "Same study, n=16; small box around the nib; 1 ms baseline."
+      },
+      "protocol": "As reported by the source: Same study, n=16; small box around the nib; 1 ms baseline.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-ng-2014-stylus"
+      ],
+      "locator": "Results, Figure 10 caption; Abstract",
+      "quote": "Results ranged from 2 to 7 milliseconds, with a median latency of 2 milliseconds.",
+      "era": 2014,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stylus-latency-jnd-small-box",
+      "notes": "Abstract: '~1 versus 2 milliseconds while dragging'. Same range inconsistency as above."
+    },
+    {
+      "id": "human-stylus-latency-jnd-scribbling-m1",
+      "phenomenonId": "human-stylus-latency-jnd-scribbling",
+      "configuration": null,
+      "value": 40,
+      "unit": "ms",
+      "low": 10,
+      "high": 70,
+      "conditions": {
+        "fr": "Same study, n=16; scribbling task with a 7 ms baseline latency.",
+        "en": "Same study, n=16; scribbling task with a 7 ms baseline latency."
+      },
+      "protocol": "As reported by the source: Same study, n=16; scribbling task with a 7 ms baseline latency.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-ng-2014-stylus"
+      ],
+      "locator": "Results, Figure 11",
+      "quote": "discriminate between the 7-millisecond baseline latency and a median of 40 milliseconds (Figure 11; range 10 - 70 milliseconds)",
+      "era": 2014,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stylus-latency-jnd-scribbling",
+      "notes": "Quote joined across a line break in the PDF."
+    },
+    {
+      "id": "intel-skylake-client-l1d-latency-m1",
+      "phenomenonId": "intel-skylake-client-l1d-latency",
+      "configuration": null,
+      "value": 4,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Skylake client microarchitecture, 32 KB/8-way L1D, fastest latency (best case); Intel note: software-visible latency varies with access patterns",
+        "en": "Skylake client microarchitecture, 32 KB/8-way L1D, fastest latency (best case); Intel note: software-visible latency varies with access patterns"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol1-051"
+      ],
+      "locator": "Table 2-16 'Cache Parameters of the Skylake Client Microarchitecture', p. 2-36",
+      "quote": "First Level Data     32 KB/ 8           64       4 cycle",
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-skylake-client-l1d-latency",
+      "notes": "Vendor best case. Quote is a pdftotext line with the column spacing reduced."
+    },
+    {
+      "id": "intel-skylake-client-l2-latency-m1",
+      "phenomenonId": "intel-skylake-client-l2-latency",
+      "configuration": null,
+      "value": 12,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Skylake client, 256 KB/4-way L2, fastest latency",
+        "en": "Skylake client, 256 KB/4-way L2, fastest latency"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol1-051"
+      ],
+      "locator": "Table 2-16, p. 2-36",
+      "quote": "Second Level        256KB/4            64       12 cycle",
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-skylake-client-l2-latency",
+      "notes": "Best case."
+    },
+    {
+      "id": "intel-skylake-client-l3-latency-m1",
+      "phenomenonId": "intel-skylake-client-l3-latency",
+      "configuration": null,
+      "value": 44,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Skylake client, shared L3 up to 2 MB per core; fastest latency; L3 latency depends on core/uncore clock ratio",
+        "en": "Skylake client, shared L3 up to 2 MB per core; fastest latency; L3 latency depends on core/uncore clock ratio"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol1-051"
+      ],
+      "locator": "Table 2-16, p. 2-36, row 'Third Level (Shared L3)'",
+      "quote": "per core/Up          64         44              32",
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-skylake-client-l3-latency",
+      "notes": "The row is split across lines in the extraction. Value in core cycles."
+    },
+    {
+      "id": "intel-icelake-client-l1d-latency-m1",
+      "phenomenonId": "intel-icelake-client-l1d-latency",
+      "configuration": null,
+      "value": 5,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Ice Lake client (Sunny Cove), 48 KB/8-way DCU",
+        "en": "Ice Lake client (Sunny Cove), 48 KB/8-way DCU"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol1-051"
+      ],
+      "locator": "Table 2-9 'Cache Parameters of the Ice Lake Client Microarchitecture', p. 2-21",
+      "quote": "Level              48KB/8            64            5",
+      "era": 2019,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-icelake-client-l1d-latency",
+      "notes": "Extraction splits the row. Note 1 of the table: software-visible latency/bandwidth will vary."
+    },
+    {
+      "id": "intel-icelake-client-l2-latency-m1",
+      "phenomenonId": "intel-icelake-client-l2-latency",
+      "configuration": null,
+      "value": 13,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Ice Lake client, 512 KB/8-way MLC",
+        "en": "Ice Lake client, 512 KB/8-way MLC"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol1-051"
+      ],
+      "locator": "Table 2-9, p. 2-21",
+      "quote": "Level            512KB/8            64           13",
+      "era": 2019,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-icelake-client-l2-latency",
+      "notes": "The manual gives the Ice Lake LLC latency as 'xx' (depends on core count), so it is not given here."
+    },
+    {
+      "id": "intel-haswell-l3-latency-m1",
+      "phenomenonId": "intel-haswell-l3-latency",
+      "configuration": null,
+      "value": 34,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Haswell microarchitecture; the value is given as approximate ('~34'); L3 latency varies with the core/uncore clock ratio",
+        "en": "Haswell microarchitecture; the value is given as approximate ('~34'); L3 latency varies with the core/uncore clock ratio"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol2-051"
+      ],
+      "locator": "Table 1-4 'Cache Parameters of the Haswell Microarchitecture', p. 1-5",
+      "quote": "Varies            64            ~34        Varies",
+      "era": 2013,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-haswell-l3-latency",
+      "notes": "Approximate according to Intel itself (tilde). Same table: L1D 4 cycles, L2 11 cycles."
+    },
+    {
+      "id": "intel-sandybridge-llc-latency-m1",
+      "phenomenonId": "intel-sandybridge-llc-latency",
+      "configuration": null,
+      "value": 26,
+      "unit": "cycles",
+      "low": 26,
+      "high": 31,
+      "conditions": {
+        "fr": "Second-generation Intel Core (Sandy Bridge); best-case lookup latency; varies with product segment and SKU",
+        "en": "Second-generation Intel Core (Sandy Bridge); best-case lookup latency; varies with product segment and SKU"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol2-051"
+      ],
+      "locator": "Table 2-6 'Lookup Order and Load Latency', p. 2-11",
+      "quote": "Third Level (LLC)                                      26-312",
+      "era": 2011,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-sandybridge-llc-latency",
+      "notes": "The '2' at the end is footnote 2 stuck to 31 by the extraction: the range is 26-31. 'value' is the lower bound."
+    },
+    {
+      "id": "intel-sandybridge-other-core-dirty-hit-m1",
+      "phenomenonId": "intel-sandybridge-other-core-dirty-hit",
+      "configuration": null,
+      "value": 60,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Sandy Bridge; line modified in another core's L2/L1 ('dirty hit'); 43 cycles for a clean hit",
+        "en": "Sandy Bridge; line modified in another core's L2/L1 ('dirty hit'); 43 cycles for a clean hit"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol2-051"
+      ],
+      "locator": "Table 2-6, p. 2-11",
+      "quote": "cores if applicable                • 60 - dirty hit",
+      "era": 2011,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-sandybridge-other-core-dirty-hit",
+      "notes": "Best-case figure."
+    },
+    {
+      "id": "intel-xeon5500-local-dram-latency-m1",
+      "phenomenonId": "intel-xeon5500-local-dram-latency",
+      "configuration": null,
+      "value": 50,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Intel Xeon processor 5500 series (Nehalem-EP, two sockets), L2 miss served by DRAM attached to the local memory controller",
+        "en": "Intel Xeon processor 5500 series (Nehalem-EP, two sockets), L2 miss served by DRAM attached to the local memory controller"
+      },
+      "protocol": null,
+      "provenanceType": "estimated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol1-051"
+      ],
+      "locator": "Table 22-7 'Approximate Latency of L2 Misses of Intel Xeon Processor 5500', p. 22-23",
+      "quote": "Local DRAM                                                                           ~ 50 ns",
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-xeon5500-local-dram-latency",
+      "notes": "Intel calls these 'examples of the approximate latency values'. No protocol."
+    },
+    {
+      "id": "intel-xeon5500-remote-dram-latency-m1",
+      "phenomenonId": "intel-xeon5500-remote-dram-latency",
+      "configuration": null,
+      "value": 90,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Xeon 5500, DRAM attached to the other socket's memory controller (NUMA remote)",
+        "en": "Xeon 5500, DRAM attached to the other socket's memory controller (NUMA remote)"
+      },
+      "protocol": null,
+      "provenanceType": "estimated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol1-051"
+      ],
+      "locator": "Table 22-7, p. 22-23",
+      "quote": "Remote DRAM                                                                          ~ 90 ns",
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-xeon5500-remote-dram-latency",
+      "notes": "Approximate, see the previous item."
+    },
+    {
+      "id": "intel-xeon5500-l3-hit-exclusive-m1",
+      "phenomenonId": "intel-xeon5500-l3-hit-exclusive",
+      "configuration": null,
+      "value": 42,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Xeon 5500 (Nehalem), L2 miss served by the L3, line in exclusive state",
+        "en": "Xeon 5500 (Nehalem), L2 miss served by the L3, line in exclusive state"
+      },
+      "protocol": null,
+      "provenanceType": "estimated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol1-051"
+      ],
+      "locator": "Table 22-7, p. 22-23",
+      "quote": "L3 hit, Line exclusive                                                               ~ 42 cycles",
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-xeon5500-l3-hit-exclusive",
+      "notes": "Approximate."
+    },
+    {
+      "id": "intel-sandybridge-c6-exit-latency-m1",
+      "phenomenonId": "intel-sandybridge-c6-exit-latency",
+      "configuration": null,
+      "value": 181,
+      "unit": "us",
+      "low": 104,
+      "high": 181,
+      "conditions": {
+        "fr": "Processors with CPUID 06_2AH (Sandy Bridge client), slow VR configuration; 181 µs with MSR_POWER_CTL[4]=0, 104 µs with fast interrupt break mode (bit 4 = 1)",
+        "en": "Processors with CPUID 06_2AH (Sandy Bridge client), slow VR configuration; 181 µs with MSR_POWER_CTL[4]=0, 104 µs with fast interrupt break mode (bit 4 = 1)"
+      },
+      "protocol": null,
+      "provenanceType": "estimated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol1-051"
+      ],
+      "locator": "Table 16-2 'C-State Total Processor Exit Latency for Client Systems with Slow VR', p. 16-18",
+      "quote": "C6                                 181 μs                                            104 μs",
+      "era": 2011,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-sandybridge-c6-exit-latency",
+      "notes": "Intel: 'not processor specifications but estimates derived from empirical measurements'. The column headers mix 'typical' and 'worst case'. C1 = 1 µs in the same table."
+    },
+    {
+      "id": "intel-sandybridge-c1-exit-latency-m1",
+      "phenomenonId": "intel-sandybridge-c1-exit-latency",
+      "configuration": null,
+      "value": 1,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "CPUID 06_2AH, slow VR, both MSR_POWER_CTL[4] settings",
+        "en": "CPUID 06_2AH, slow VR, both MSR_POWER_CTL[4] settings"
+      },
+      "protocol": null,
+      "provenanceType": "estimated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-orm-vol1-051"
+      ],
+      "locator": "Table 16-2, p. 16-18",
+      "quote": "C1                                  1 μs                                              1 μs",
+      "era": 2011,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-sandybridge-c1-exit-latency",
+      "notes": "Intel estimate, not a specification."
+    },
+    {
+      "id": "amd-zen4-l1d-load-to-use-m1",
+      "phenomenonId": "amd-zen4-l1d-load-to-use",
+      "configuration": null,
+      "value": 4,
+      "unit": "cycles",
+      "low": 4,
+      "high": 5,
+      "conditions": {
+        "fr": "AMD Zen 4, 32 KB 8-way L1D; 4 cycles for simple addressing modes, 5 for complex ones; FPU: 7-8 cycles",
+        "en": "AMD Zen 4, 32 KB 8-way L1D; 4 cycles for simple addressing modes, 5 for complex ones; FPU: 7-8 cycles"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-amd-zen4-sog"
+      ],
+      "locator": "Section 2.6.2 'L1 Data Cache' (PDF p. 16); see also section 2.12",
+      "quote": "The L1 data cache has a 4- or 5- cycle integer load-to-use latency, and a 7- or 8-cycle FPU load-to-use latency.",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen4-l1d-load-to-use",
+      "notes": "The quote joins two lines of the PDF."
+    },
+    {
+      "id": "amd-zen4-l2-load-to-use-m1",
+      "phenomenonId": "amd-zen4-l2-load-to-use",
+      "configuration": null,
+      "value": 14,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "AMD Zen 4, 1 MB 8-way L2 per core (512 KB on some configurations); 'no less than' 14 cycles",
+        "en": "AMD Zen 4, 1 MB 8-way L2 per core (512 KB on some configurations); 'no less than' 14 cycles"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-amd-zen4-sog"
+      ],
+      "locator": "Section 2.6.3 'L2 Cache' (PDF p. 18)",
+      "quote": "with a variable load-to-use latency of no less than 14 cycles",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen4-l2-load-to-use",
+      "notes": "Lower bound, variable latency."
+    },
+    {
+      "id": "amd-zen4-l3-load-to-use-m1",
+      "phenomenonId": "amd-zen4-l3-load-to-use",
+      "configuration": null,
+      "value": 50,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "AMD Zen 4, up to 32 MB L3 shared by 8 cores (CCX); AMD calls it an 'average' with no protocol; 'may vary by product' (section 2.12)",
+        "en": "AMD Zen 4, up to 32 MB L3 shared by 8 cores (CCX); AMD calls it an 'average' with no protocol; 'may vary by product' (section 2.12)"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-amd-zen4-sog"
+      ],
+      "locator": "Section 2.6.4 'L3 Cache' (PDF p. 18)",
+      "quote": "The L3 has an average load-to-use latency of 50 cycles.",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen4-l3-load-to-use",
+      "notes": "Statistic with no n and no method: treat it as a single value."
+    },
+    {
+      "id": "amd-zen5-l1d-load-to-use-m1",
+      "phenomenonId": "amd-zen5-l1d-load-to-use",
+      "configuration": null,
+      "value": 4,
+      "unit": "cycles",
+      "low": 4,
+      "high": 5,
+      "conditions": {
+        "fr": "AMD Zen 5, 48 KB 12-way L1D; FPU: 7-8 cycles",
+        "en": "AMD Zen 5, 48 KB 12-way L1D; FPU: 7-8 cycles"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-amd-zen5-sog"
+      ],
+      "locator": "Section 2.6.2 'L1 Data Cache' (printed p. 20)",
+      "quote": "has a 4- or 5- cycle integer load-to-use latency, and a 7- or 8-cycle FPU load-to-use latency",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen5-l1d-load-to-use",
+      "notes": null
+    },
+    {
+      "id": "amd-zen5-l2-load-to-use-m1",
+      "phenomenonId": "amd-zen5-l2-load-to-use",
+      "configuration": null,
+      "value": 14,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "AMD Zen 5, 1 MB 16-way L2 per core; 'no less than' 14 cycles",
+        "en": "AMD Zen 5, 1 MB 16-way L2 per core; 'no less than' 14 cycles"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-amd-zen5-sog"
+      ],
+      "locator": "Section 2.6.3 'L2 Cache' (printed p. 23)",
+      "quote": "1 Mbyte with a variable load-to-use latency of no less than 14 cycles",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen5-l2-load-to-use",
+      "notes": "Lower bound."
+    },
+    {
+      "id": "amd-zen5-l3-load-to-use-m1",
+      "phenomenonId": "amd-zen5-l3-load-to-use",
+      "configuration": null,
+      "value": 46,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "AMD Zen 5, L3 up to 96 MB depending on SoC, shared within a CCX; average, 'may vary by product'",
+        "en": "AMD Zen 5, L3 up to 96 MB depending on SoC, shared within a CCX; average, 'may vary by product'"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-amd-zen5-sog"
+      ],
+      "locator": "Section 2.6.4 'L3 Cache' (printed p. 23)",
+      "quote": "The L3 has an average load-to-use latency of 46 cycles.",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#amd-zen5-l3-load-to-use",
+      "notes": "Average with no n and no method."
+    },
+    {
+      "id": "x86-add-r64-latency-alderlake-p-m1",
+      "phenomenonId": "x86-add-r64-latency-alderlake-p",
+      "configuration": null,
+      "value": 1,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Alder Lake-P (Golden Cove P-core); register-register operand form; measured throughput 0.20 cycles/instr",
+        "en": "Alder Lake-P (Golden Cove P-core); register-register operand form; measured throughput 0.20 cycles/instr"
+      },
+      "protocol": "As reported by the source: Alder Lake-P (Golden Cove P-core); register-register operand form; measured throughput 0.20 cycles/instr",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-uops-info"
+      ],
+      "locator": "https://uops.info/html-instr/ADD_01_R64_R64.html, section 'Alder Lake-P' > Measurements > Latencies",
+      "quote": "Latency operand 1 → 1: 1",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-add-r64-latency-alderlake-p",
+      "notes": "Zen 4 and Zen 5 also give 1 cycle on the same page."
+    },
+    {
+      "id": "x86-imul-r64-latency-alderlake-p-m1",
+      "phenomenonId": "x86-imul-r64-latency-alderlake-p",
+      "configuration": null,
+      "value": 3,
+      "unit": "cycles",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Alder Lake-P; 64-bit register two-operand multiply; throughput 1.00",
+        "en": "Alder Lake-P; 64-bit register two-operand multiply; throughput 1.00"
+      },
+      "protocol": "As reported by the source: Alder Lake-P; 64-bit register two-operand multiply; throughput 1.00",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-uops-info"
+      ],
+      "locator": "https://uops.info/html-instr/IMUL_R64_R64.html, section 'Alder Lake-P'",
+      "quote": "Latency operand 1 → 1: 3",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-imul-r64-latency-alderlake-p",
+      "notes": "Same value (3) measured on Skylake, Zen 4 and Zen 5, and documented by AMD (Zen 4 SOG §2.10: '64 bits × 64 bits with 3 cycle latency')."
+    },
+    {
+      "id": "x86-div-r64-latency-alderlake-p-m1",
+      "phenomenonId": "x86-div-r64-latency-alderlake-p",
+      "configuration": null,
+      "value": 14,
+      "unit": "cycles",
+      "low": 14,
+      "high": 18,
+      "conditions": {
+        "fr": "Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand→result pair; measured throughput 10 cycles",
+        "en": "Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand→result pair; measured throughput 10 cycles"
+      },
+      "protocol": "As reported by the source: Alder Lake-P; 128/64-bit unsigned division; 14 to 18 cycles depending on the operand→result pair; measured throughput 10 cycles",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-uops-info"
+      ],
+      "locator": "https://uops.info/html-instr/DIV_R64.html, section 'Alder Lake-P'",
+      "quote": "Latency operand 1 → 2: 14 ... Latency operand 1 → 3: 18",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-div-r64-latency-alderlake-p",
+      "notes": "The quote joins two consecutive entries with '...'."
+    },
+    {
+      "id": "x86-div-r64-latency-skylake-m1",
+      "phenomenonId": "x86-div-r64-latency-skylake",
+      "configuration": null,
+      "value": 35,
+      "unit": "cycles",
+      "low": 32,
+      "high": 90,
+      "conditions": {
+        "fr": "Skylake client; latency depends on operand values (bounds measured: operand 1→2 '35 ≤ lat ≤ 90'; other pairs 32-87, operand 3: 5-75); microcoded (32 MS uops)",
+        "en": "Skylake client; latency depends on operand values (bounds measured: operand 1→2 '35 ≤ lat ≤ 90'; other pairs 32-87, operand 3: 5-75); microcoded (32 MS uops)"
+      },
+      "protocol": "As reported by the source: Skylake client; latency depends on operand values (bounds measured: operand 1→2 '35 ≤ lat ≤ 90'; other pairs 32-87, operand 3: 5-75); microcoded (32 MS uops)",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-uops-info"
+      ],
+      "locator": "https://uops.info/html-instr/DIV_R64.html, section 'Skylake'",
+      "quote": "Latency operand 1 → 2: 35 ≤ lat ≤ 90",
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-div-r64-latency-skylake",
+      "notes": "uops.info gives bounds, not a single value; 'value' is the lower bound of the main entry. The contrast with Ice Lake/Alder Lake (14-18) is the useful point."
+    },
+    {
+      "id": "x86-div-r64-latency-zen4-m1",
+      "phenomenonId": "x86-div-r64-latency-zen4",
+      "configuration": null,
+      "value": 10,
+      "unit": "cycles",
+      "low": 10,
+      "high": 18,
+      "conditions": {
+        "fr": "AMD Zen 4; depends on operand values; uops.info: 9-19 cycles depending on the operand pair; Agner Fog: 10-18; AMD: 8 cycles + 1 per 9 bits of quotient",
+        "en": "AMD Zen 4; depends on operand values; uops.info: 9-19 cycles depending on the operand pair; Agner Fog: 10-18; AMD: 8 cycles + 1 per 9 bits of quotient"
+      },
+      "protocol": "As reported by the source: AMD Zen 4; depends on operand values; uops.info: 9-19 cycles depending on the operand pair; Agner Fog: 10-18; AMD: 8 cycles + 1 per 9 bits of quotient",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-agner-instr-tables"
+      ],
+      "locator": "AMD Zen 4 section, integer instruction table, row 'DIV r64/m64', printed p. 127",
+      "quote": "DIV                    r64/m64     2     10-18     7-12",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-div-r64-latency-zen4",
+      "notes": "Two independent measurements (Agner Fog, uops.info) and AMD documentation agree on the order of magnitude. Agner columns: Ops=2, latency 10-18, reciprocal throughput 7-12."
+    },
+    {
+      "id": "intel-core-i9-14900k-max-turbo-m1",
+      "phenomenonId": "intel-core-i9-14900k-max-turbo",
+      "configuration": null,
+      "value": 6,
+      "unit": "GHz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Core i9-14900K (Raptor Lake Refresh, Intel 7, 24 cores), launched Q4'23; 'Max Turbo Frequency' (best cores, favourable conditions)",
+        "en": "Core i9-14900K (Raptor Lake Refresh, Intel 7, 24 cores), launched Q4'23; 'Max Turbo Frequency' (best cores, favourable conditions)"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-ark-i9-14900k"
+      ],
+      "locator": "Specifications > CPU Specifications > Max Turbo Frequency",
+      "quote": "Max Turbo Frequency: 6 GHz",
+      "era": 2023,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-core-i9-14900k-max-turbo",
+      "notes": "The quote is the field label plus its value. Same page: P-core max turbo 5.6 GHz, E-core base 2.4 GHz."
+    },
+    {
+      "id": "intel-core-i9-14900k-pcore-base-m1",
+      "phenomenonId": "intel-core-i9-14900k-pcore-base",
+      "configuration": null,
+      "value": 3.2,
+      "unit": "GHz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Core i9-14900K, P-core base frequency",
+        "en": "Core i9-14900K, P-core base frequency"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-ark-i9-14900k"
+      ],
+      "locator": "Specifications > CPU Specifications > Performance-core Base Frequency",
+      "quote": "Performance-core Base Frequency: 3.2 GHz",
+      "era": 2023,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-core-i9-14900k-pcore-base",
+      "notes": null
+    },
+    {
+      "id": "intel-8086-initial-clock-m1",
+      "phenomenonId": "intel-8086-initial-clock",
+      "configuration": null,
+      "value": 5,
+      "unit": "MHz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Intel 8086, introduced June 1978, 29,000 transistors, 3 µm",
+        "en": "Intel 8086, introduced June 1978, 29,000 transistors, 3 µm"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-vault-8086"
+      ],
+      "locator": "Article body, specifications line",
+      "quote": "Introduction date: June 1978; Initial Clock Speed: 5 MHz; Number of transistors: 29,000",
+      "era": 1978,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-8086-initial-clock",
+      "notes": "Initial frequency; faster versions followed."
+    },
+    {
+      "id": "intel-pentium4-launch-clock-m1",
+      "phenomenonId": "intel-pentium4-launch-clock",
+      "configuration": null,
+      "value": 1.5,
+      "unit": "GHz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Pentium 4 (Willamette), 0.18 µm, 400 MHz system bus; introduced at 1.4 and 1.5 GHz on 20 Nov 2000",
+        "en": "Pentium 4 (Willamette), 0.18 µm, 400 MHz system bus; introduced at 1.4 and 1.5 GHz on 20 Nov 2000"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-pr-p4-2000"
+      ],
+      "locator": "Press release, paragraph 1",
+      "quote": "The Pentium 4 processor is being introduced today at 1.5 and 1.4 GHz speeds.",
+      "era": 2000,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-pentium4-launch-clock",
+      "notes": "The later P4 models (3.8 GHz) could not be confirmed: legacy ark pages return 404."
+    },
+    {
+      "id": "intel-4004-min-clock-period-m1",
+      "phenomenonId": "intel-4004-min-clock-period",
+      "configuration": null,
+      "value": 1.35,
+      "unit": "us",
+      "low": 1.35,
+      "high": 2,
+      "conditions": {
+        "fr": "Intel 4004, A.C. characteristics, TA = 0-70 °C, VSS-VDD = 15 V ± 5%; tCY min 1.35 µs, max 2.0 µs",
+        "en": "Intel 4004, A.C. characteristics, TA = 0-70 °C, VSS-VDD = 15 V ± 5%; tCY min 1.35 µs, max 2.0 µs"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-pyntel4004-hw"
+      ],
+      "locator": "'4004 Hardware Characteristics', A.C. Characteristics table, row tCY",
+      "quote": "t_CY | Clock Period | 1.35 | | 2.0 | µsec",
+      "era": 1971,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-4004-min-clock-period",
+      "notes": "WEAK: third-party transcription that does not cite its source; the original Intel datasheet could not be read (bitsavers 403, IEEE Milestones copy 404, intel.com 4004 pages 404). To be replaced by the Intel MCS-4 datasheet."
+    },
+    {
+      "id": "intel-4004-max-clock-frequency-m1",
+      "phenomenonId": "intel-4004-max-clock-frequency",
+      "configuration": null,
+      "value": 740.7,
+      "unit": "kHz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "1 / tCY min; same conditions as the source item",
+        "en": "1 / tCY min; same conditions as the source item"
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-pyntel4004-hw"
+      ],
+      "locator": "Derived from the A.C. Characteristics table, row tCY",
+      "quote": "t_CY | Clock Period | 1.35 | | 2.0 | µsec",
+      "era": 1971,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "f = 1 / tCY_min = 1 / 1.35 µs = 740.7 kHz; input: intel-4004-min-clock-period",
+        "inputs": [
+          "intel-4004-min-clock-period-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-4004-max-clock-frequency",
+      "notes": "Matches the commonly cited 740 kHz, but rests on the weak input above. Intel's own figures disagree (108 kHz in old pressroom timelines, 750 kHz reportedly in the 50th-anniversary material); none of those Intel documents could be read."
+    },
+    {
+      "id": "ddr5-5600b-taa-micron-m1",
+      "phenomenonId": "ddr5-5600b-taa-micron",
+      "configuration": null,
+      "value": 16,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Micron MT60B2G8RZ-56B:D (16Gb DDR5, x8), 5600 MT/s, CL-nRCD-nRP 46-45-45; tRCD = tRP = 16.000 ns too; same 16.000 ns at 6400 (52-52-52) and 7200 (58-58-58)",
+        "en": "Micron MT60B2G8RZ-56B:D (16Gb DDR5, x8), 5600 MT/s, CL-nRCD-nRP 46-45-45; tRCD = tRP = 16.000 ns too; same 16.000 ns at 6400 (52-52-52) and 7200 (58-58-58)"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-micron-ddr5-16gb-revd"
+      ],
+      "locator": "Table 2 'Part Numbers and Timing Parameters', p. 2",
+      "quote": "MT60B2G8RZ-56B:D  2Gb x8  0.357ns/  46-45-45  16.000  16.000  16.000  Production",
+      "era": 2023,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#ddr5-5600b-taa-micron",
+      "notes": "Quote condensed from columns (spaces reduced). Component timing, not a measured end-to-end latency."
+    },
+    {
+      "id": "ddr4-3200-cl-micron-m1",
+      "phenomenonId": "ddr4-3200-cl-micron",
+      "configuration": null,
+      "value": 13.75,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Micron 8Gb DDR4, speed grade -062E, 3200 MT/s, 22-22-22; tRCD = tRP = 13.75 ns",
+        "en": "Micron 8Gb DDR4, speed grade -062E, 3200 MT/s, 22-22-22; tRCD = tRP = 13.75 ns"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-micron-ddr4-8gb"
+      ],
+      "locator": "Table 1 'Key Timing Parameters', p. 1",
+      "quote": "-062E                      3200                  22-22-22                      13.75",
+      "era": 2018,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#ddr4-3200-cl-micron",
+      "notes": "Component timing."
+    },
+    {
+      "id": "ddr4-trefi-micron-m1",
+      "phenomenonId": "ddr4-trefi-micron",
+      "configuration": null,
+      "value": 7.8125,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "DDR4, 8,192 REFRESH commands per 64 ms between 0 and 85 °C (1x mode); 3.90625 µs between 85 and 95 °C",
+        "en": "DDR4, 8,192 REFRESH commands per 64 ms between 0 and 85 °C (1x mode); 3.90625 µs between 85 and 95 °C"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-micron-ddr4-8gb"
+      ],
+      "locator": "Command/state description (around p. 21) and Table 51 'tREFI and tRFC Parameters', p. 149",
+      "quote": "8,192 refresh commands within 64ms between 0 oC and 85 oC. This allows for a tREFI of 7.8125μs",
+      "era": 2018,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#ddr4-trefi-micron",
+      "notes": "Table 51 gives the truncated value 7.8 µs."
+    },
+    {
+      "id": "ddr4-8gb-trfc1-micron-m1",
+      "phenomenonId": "ddr4-8gb-trfc1-micron",
+      "configuration": null,
+      "value": 350,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "8Gb DDR4 die, 1x refresh mode (4Gb: 260 ns, 16Gb: 550 ns)",
+        "en": "8Gb DDR4 die, 1x refresh mode (4Gb: 260 ns, 16Gb: 550 ns)"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-micron-ddr4-8gb"
+      ],
+      "locator": "Table 51 'tREFI and tRFC Parameters', p. 149",
+      "quote": "tRFC1                                     160             260                         350                        550                      ns",
+      "era": 2018,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#ddr4-8gb-trfc1-micron",
+      "notes": "Read by column: 2Gb/4Gb/8Gb/16Gb."
+    },
+    {
+      "id": "dram-latency-epyc-7702-measured-m1",
+      "phenomenonId": "dram-latency-epyc-7702-measured",
+      "configuration": null,
+      "value": 110,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "2-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal core frequency (2.0 GHz) = 220 cycles, transparent huge pages, caches flushed; minimum of 3 internal runs × 4 sizes × 10 repetitions",
+        "en": "2-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal core frequency (2.0 GHz) = 220 cycles, transparent huge pages, caches flushed; minimum of 3 internal runs × 4 sizes × 10 repetitions"
+      },
+      "protocol": "As reported by the source: 2-socket AMD EPYC 7702, local CCX, BenchIT x86-membench pointer chasing, nominal core frequency (2.0 GHz) = 220 cycles, transparent huge pages, caches flushed; minimum of 3 internal runs × 4 sizes × 10 repetitions",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-velten-icpe22"
+      ],
+      "locator": "Section 6.1 'Latencies' and Table 2",
+      "quote": "We measure a latency of about 220 cycles (110 ns) for the Rome system, and 200 cycles (80 ns) for CLX.",
+      "era": 2019,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#dram-latency-epyc-7702-measured",
+      "notes": "The paper notes that the DIMMs, I/O p-states and uncore frequency influence the value. The quote joins two PDF lines."
+    },
+    {
+      "id": "dram-latency-xeon-6248-measured-m1",
+      "phenomenonId": "dram-latency-xeon-6248-measured",
+      "configuration": null,
+      "value": 80,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "2-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled for the latency benchmark, BenchIT pointer chasing; 200 cycles",
+        "en": "2-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled for the latency benchmark, BenchIT pointer chasing; 200 cycles"
+      },
+      "protocol": "As reported by the source: 2-socket Xeon Gold 6248, same SNC, uncore fixed at 2400 MHz, hardware prefetchers disabled for the latency benchmark, BenchIT pointer chasing; 200 cycles",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-velten-icpe22"
+      ],
+      "locator": "Section 6.1 and Table 3",
+      "quote": "200 cycles (80 ns) for CLX",
+      "era": 2019,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#dram-latency-xeon-6248-measured",
+      "notes": "Other SNC: 86.4 ns (Table 3)."
+    },
+    {
+      "id": "dram-latency-pentiumpro-lmbench-1995-m1",
+      "phenomenonId": "dram-latency-pentiumpro-lmbench-1995",
+      "configuration": null,
+      "value": 179,
+      "unit": "ns",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Intel Alder motherboard, Pentium Pro 200 MHz, Linux 1.3.37 (Table 1); lmbench memory-read latency (strided load chain)",
+        "en": "Intel Alder motherboard, Pentium Pro 200 MHz, Linux 1.3.37 (Table 1); lmbench memory-read latency (strided load chain)"
+      },
+      "protocol": "As reported by the source: Intel Alder motherboard, Pentium Pro 200 MHz, Linux 1.3.37 (Table 1); lmbench memory-read latency (strided load chain)",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-lmbench-1996"
+      ],
+      "locator": "Table 6 'Cache and memory latency (ns)', row Linux/i686",
+      "quote": "Linux/i686           5   10   8K 30 256K             179",
+      "era": 1995,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#dram-latency-pentiumpro-lmbench-1995",
+      "notes": "The paper itself warns that some results were donated by users and recommends checking them; it says the clock rate was computed (footnote 3)."
+    },
+    {
+      "id": "apple-m4-memory-bandwidth-m1",
+      "phenomenonId": "apple-m4-memory-bandwidth",
+      "configuration": null,
+      "value": 120,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Apple M4 chip (10-core CPU), MacBook Pro 14-inch M4 2024; peak vendor figure, unified memory",
+        "en": "Apple M4 chip (10-core CPU), MacBook Pro 14-inch M4 2024; peak vendor figure, unified memory"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-apple-mbp14-m4-specs"
+      ],
+      "locator": "Tech Specs > Chip",
+      "quote": "120GB/s memory bandwidth",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#apple-m4-memory-bandwidth",
+      "notes": "Apple publishes no CPU frequency and no latency (see excluded)."
+    },
+    {
+      "id": "linux-config-hz-default-m1",
+      "phenomenonId": "linux-config-hz-default",
+      "configuration": null,
+      "value": 250,
+      "unit": "Hz",
+      "low": 100,
+      "high": 1000,
+      "conditions": {
+        "fr": "Kconfig choices 100, 250 (default), 300 and 1000 Hz; distributions often change the default",
+        "en": "Kconfig choices 100, 250 (default), 300 and 1000 Hz; distributions often change the default"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-linux-kconfig-hz"
+      ],
+      "locator": "kernel/Kconfig.hz, choice 'Timer frequency'",
+      "quote": "prompt \"Timer frequency\"\n\tdefault HZ_250",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#linux-config-hz-default",
+      "notes": "Confirmed by time(7): 'can be 100, 250 (the default) or 1000' (src-man-time7), plus 300 since 2.6.20."
+    },
+    {
+      "id": "linux-tick-period-hz1000-m1",
+      "phenomenonId": "linux-tick-period-hz1000",
+      "configuration": null,
+      "value": 1,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "CONFIG_HZ=1000 (Kconfig: 'preferred choice for desktop systems')",
+        "en": "CONFIG_HZ=1000 (Kconfig: 'preferred choice for desktop systems')"
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-linux-kconfig-hz"
+      ],
+      "locator": "kernel/Kconfig.hz, config HZ_1000",
+      "quote": "1000 Hz is the preferred choice for desktop systems",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "T = 1 / HZ = 1 / 1000 Hz = 1 ms; input: linux-config-hz-default (option HZ_1000)",
+        "inputs": [
+          "linux-config-hz-default-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#linux-tick-period-hz1000",
+      "notes": "4 ms at HZ=250, 10 ms at HZ=100. Tickless kernels (NO_HZ) do not tick at a fixed rate."
+    },
+    {
+      "id": "linux-eevdf-base-slice-v6-12-m1",
+      "phenomenonId": "linux-eevdf-base-slice-v6-12",
+      "configuration": null,
+      "value": 0.75,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "sysctl_sched_base_slice = 750000 ns before CPU-count scaling; effective value 0.75 ms × (1 + ilog(ncpus)) with the default logarithmic scaling",
+        "en": "sysctl_sched_base_slice = 750000 ns before CPU-count scaling; effective value 0.75 ms × (1 + ilog(ncpus)) with the default logarithmic scaling"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-linux-fair-c-v6-12"
+      ],
+      "locator": "kernel/sched/fair.c, lines 73-76",
+      "quote": "(default: 0.75 msec * (1 + ilog(ncpus)), units: nanoseconds)",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#linux-eevdf-base-slice-v6-12",
+      "notes": "Source code, not a document. kernel.org docs (sched-design-CFS) name base_slice_ns but give no value."
+    },
+    {
+      "id": "linux-eevdf-base-slice-master-m1",
+      "phenomenonId": "linux-eevdf-base-slice-master",
+      "configuration": null,
+      "value": 0.7,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "kernel/sched/fair.c on master (Makefile 7.4-rc4, 2026-11): 700000 ns × (1 + ilog(ncpus))",
+        "en": "kernel/sched/fair.c on master (Makefile 7.4-rc4, 2026-11): 700000 ns × (1 + ilog(ncpus))"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-linux-fair-c-master"
+      ],
+      "locator": "kernel/sched/fair.c, lines 83-85",
+      "quote": "(default: 0.70 msec * (1 + ilog(ncpus)), units: nanoseconds)",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#linux-eevdf-base-slice-master",
+      "notes": "The default went from 0.75 to 0.70 ms between 6.12 and master: the value depends on the version. The commit that made the change was not identified."
+    },
+    {
+      "id": "linux-default-timer-slack-m1",
+      "phenomenonId": "linux-default-timer-slack",
+      "configuration": null,
+      "value": 50,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Value for init (PID 1), inherited by its descendants; adjustable with prctl(PR_SET_TIMERSLACK); does not apply to real-time threads",
+        "en": "Value for init (PID 1), inherited by its descendants; adjustable with prctl(PR_SET_TIMERSLACK); does not apply to real-time threads"
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-man-pr-set-timerslack"
+      ],
+      "locator": "PR_SET_TIMERSLACK(2const), DESCRIPTION",
+      "quote": "The timer slack values of init(1) (PID 1), the ancestor of all processes, are 50,000 nanoseconds (50 microseconds).",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#linux-default-timer-slack",
+      "notes": "Confirmed in the source: init/init_task.c line 185 '.timer_slack_ns = 50000, /* 50 usec default slack */' (src-linux-init-task)."
+    },
+    {
+      "id": "lmbench-null-syscall-linux-pentiumpro-m1",
+      "phenomenonId": "lmbench-null-syscall-linux-pentiumpro",
+      "configuration": null,
+      "value": 3,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Linux 1.3.37, Pentium Pro 200 MHz; write of one word to /dev/null in a loop",
+        "en": "Linux 1.3.37, Pentium Pro 200 MHz; write of one word to /dev/null in a loop"
+      },
+      "protocol": "As reported by the source: Linux 1.3.37, Pentium Pro 200 MHz; write of one word to /dev/null in a loop",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-lmbench-1996"
+      ],
+      "locator": "Table 7 'Simple system call time (microseconds)', row Linux/i686; method in section 6.3",
+      "quote": "Linux/i686                                  3",
+      "era": 1995,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#lmbench-null-syscall-linux-pentiumpro",
+      "notes": "Historical. No recent measurement with a published protocol was found within budget."
+    },
+    {
+      "id": "lmbench-context-switch-linux-pentiumpro-m1",
+      "phenomenonId": "lmbench-context-switch-linux-pentiumpro",
+      "configuration": null,
+      "value": 6,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB)",
+        "en": "Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB)"
+      },
+      "protocol": "As reported by the source: Linux 1.3.37, Pentium Pro 200 MHz; 2 processes, 0 KB working set (18 µs at 32 KB)",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-lmbench-1996"
+      ],
+      "locator": "Table 10 'Context switch time (microseconds)', row Linux/i686, column 2 processes 0KB",
+      "quote": "Linux/i686             6        18       7      101",
+      "era": 1995,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#lmbench-context-switch-linux-pentiumpro",
+      "notes": "Historical."
+    },
+    {
+      "id": "slingshot-rosetta-switch-latency-m1",
+      "phenomenonId": "slingshot-rosetta-switch-latency",
+      "configuration": null,
+      "value": 350,
+      "unit": "ns",
+      "low": 300,
+      "high": 400,
+      "conditions": {
+        "fr": "Rosetta switch, RoCE traffic from standard NICs; computed as the 2-hop minus 1-hop latency; mean and median",
+        "en": "Rosetta switch, RoCE traffic from standard NICs; computed as the 2-hop minus 1-hop latency; mean and median"
+      },
+      "protocol": "As reported by the source: Rosetta switch, RoCE traffic from standard NICs; computed as the 2-hop minus 1-hop latency; mean and median",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-desensi-slingshot"
+      ],
+      "locator": "Section II-A, Fig. 2 'Distribution of switch latency for RoCE traffic'",
+      "quote": "We observe that ROSETTA has a mean and median latency of 350 nanoseconds, with all the distribution lying between 300 and 400 nanoseconds",
+      "era": 2020,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#slingshot-rosetta-switch-latency",
+      "notes": "n not given in the text. The quote joins PDF lines. HPC/interconnect: possible overlap with the network agent."
+    },
+    {
+      "id": "osu-latency-crossroads-8b-m1",
+      "phenomenonId": "osu-latency-crossroads-8b",
+      "configuration": null,
+      "value": 1.61,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Crossroads (ATS-3), 2 nodes, 1 rank per node, 8-byte message, osu_latency; the page names neither the interconnect, nor the MPI library, nor n",
+        "en": "Crossroads (ATS-3), 2 nodes, 1 rank per node, 8-byte message, osu_latency; the page names neither the interconnect, nor the MPI library, nor n"
+      },
+      "protocol": "As reported by the source: Crossroads (ATS-3), 2 nodes, 1 rank per node, 8-byte message, osu_latency; the page names neither the interconnect, nor the MPI library, nor n",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-lanl-osumb"
+      ],
+      "locator": "Table 4.7 (example results, Crossroads)",
+      "quote": "8 B ... 1.61 us",
+      "era": 2023,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#osu-latency-crossroads-8b",
+      "notes": "Conditions incomplete: the interconnect does not appear on the page, so this is not a measurement with a full protocol."
+    },
+    {
+      "id": "pcie4-lane-rate-m1",
+      "phenomenonId": "pcie4-lane-rate",
+      "configuration": null,
+      "value": 16,
+      "unit": "GT/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "PCI Express 4.0 Base Specification Version 1.0; raw signaling rate per lane, per direction, before 128b/130b encoding overhead.",
+        "en": "PCI Express 4.0 Base Specification Version 1.0; raw signaling rate per lane, per direction, before 128b/130b encoding overhead."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-dr-pcie4"
+      ],
+      "locator": "Press release body, 4th paragraph",
+      "quote": "delivers high performance 16GT/s data rates with flexible lane width configurations",
+      "era": 2017,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie4-lane-rate",
+      "notes": "Press-release text read on a third-party reproduction because pcisig.com refused the request (403). No x16 GB/s value in this release."
+    },
+    {
+      "id": "pcie5-lane-rate-m1",
+      "phenomenonId": "pcie5-lane-rate",
+      "configuration": null,
+      "value": 32,
+      "unit": "GT/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "PCI Express 5.0 Base Specification; raw bit rate per lane, 128b/130b encoding.",
+        "en": "PCI Express 5.0 Base Specification; raw bit rate per lane, 128b/130b encoding."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-dr-pcie5"
+      ],
+      "locator": "Press release, highlights list",
+      "quote": "Delivers 32 GT/s raw bit rate and up to 128 GB/s via x16 configuration",
+      "era": 2019,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie5-lane-rate",
+      "notes": "Secondary hosting of the PCI-SIG press release."
+    },
+    {
+      "id": "pcie5-x16-bandwidth-m1",
+      "phenomenonId": "pcie5-x16-bandwidth",
+      "configuration": null,
+      "value": 128,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "x16 link; figure counts both directions combined (about 64 GB/s per direction, cf. a quote in the same release: 'doubles that again to 64 GB/second').",
+        "en": "x16 link; figure counts both directions combined (about 64 GB/s per direction, cf. a quote in the same release: 'doubles that again to 64 GB/second')."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-dr-pcie5"
+      ],
+      "locator": "Press release, highlights list",
+      "quote": "Delivers 32 GT/s raw bit rate and up to 128 GB/s via x16 configuration",
+      "era": 2019,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie5-x16-bandwidth",
+      "notes": "The release does not say 'bidirectional' explicitly; the per-direction interpretation rests on the analyst quote in the same text and on NVIDIA's 'PCIe Gen5: 128GB/s' for H100 (src-nvidia-h100). Display as total, not per direction."
+    },
+    {
+      "id": "pcie6-lane-rate-m1",
+      "phenomenonId": "pcie6-lane-rate",
+      "configuration": null,
+      "value": 64,
+      "unit": "GT/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "PCI Express 6.0 specification; PAM4 signaling, FLIT mode.",
+        "en": "PCI Express 6.0 specification; PAM4 signaling, FLIT mode."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-dr-pcie6"
+      ],
+      "locator": "Press release, feature list",
+      "quote": "64 GT/s raw data rate and up to 256 GB/s via x16 configuration",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie6-lane-rate",
+      "notes": "Secondary hosting of the PCI-SIG press release (Business Wire original returned 403)."
+    },
+    {
+      "id": "pcie6-x16-bandwidth-m1",
+      "phenomenonId": "pcie6-x16-bandwidth",
+      "configuration": null,
+      "value": 256,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "x16 link, both directions combined (about 128 GB/s per direction).",
+        "en": "x16 link, both directions combined (about 128 GB/s per direction)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-dr-pcie6"
+      ],
+      "locator": "Press release, feature list",
+      "quote": "64 GT/s raw data rate and up to 256 GB/s via x16 configuration",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie6-x16-bandwidth",
+      "notes": "Direction not stated in this text; same convention as the PCIe 5.0 '128 GB/s' figure (2x per generation)."
+    },
+    {
+      "id": "cxl3-data-rate-m1",
+      "phenomenonId": "cxl3-data-rate",
+      "configuration": null,
+      "value": 64,
+      "unit": "GT/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Compute Express Link 3.0; per lane, built on PCIe 6.0 electricals.",
+        "en": "Compute Express Link 3.0; per lane, built on PCIe 6.0 electricals."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-cxl3-pr"
+      ],
+      "locator": "p.1, highlights bullet 1",
+      "quote": "CXL 3.0 specification doubles the data rate to 64GTs with no added latency over CXL 2.0.",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#cxl3-data-rate",
+      "notes": "'64GTs' is written without slash in the source. The 'no added latency' claim is not quantified."
+    },
+    {
+      "id": "usb-low-speed-rate-m1",
+      "phenomenonId": "usb-low-speed-rate",
+      "configuration": null,
+      "value": 1.5,
+      "unit": "Mbit/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "USB 1.x/2.0 low-speed mode (keyboards, mice of the USB 1.x era).",
+        "en": "USB 1.x/2.0 low-speed mode (keyboards, mice of the USB 1.x era)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usb20-spec"
+      ],
+      "locator": "Section 7.1 introduction bullet list, p. 17 (PDF p. 45)",
+      "quote": "A limited capability low-speed signaling mode is also defined at 1.5 Mb/s.",
+      "era": 1996,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-low-speed-rate",
+      "notes": null
+    },
+    {
+      "id": "usb-full-speed-rate-m1",
+      "phenomenonId": "usb-full-speed-rate",
+      "configuration": null,
+      "value": 12,
+      "unit": "Mbit/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "USB 1.x/2.0 full-speed signaling bit rate (gross, not payload).",
+        "en": "USB 1.x/2.0 full-speed signaling bit rate (gross, not payload)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usb20-spec"
+      ],
+      "locator": "p. 17 (PDF p. 45)",
+      "quote": "The USB full-speed signaling bit rate is 12 Mb/s.",
+      "era": 1996,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-full-speed-rate",
+      "notes": null
+    },
+    {
+      "id": "usb-high-speed-rate-m1",
+      "phenomenonId": "usb-high-speed-rate",
+      "configuration": null,
+      "value": 480,
+      "unit": "Mbit/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "USB 2.0 high-speed signaling bit rate (gross).",
+        "en": "USB 2.0 high-speed signaling bit rate (gross)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usb20-spec"
+      ],
+      "locator": "p. 17 (PDF p. 45)",
+      "quote": "The USB high-speed signaling bit rate is 480 Mb/s.",
+      "era": 2000,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-high-speed-rate",
+      "notes": null
+    },
+    {
+      "id": "usb32-20g-rate-m1",
+      "phenomenonId": "usb32-20g-rate",
+      "configuration": null,
+      "value": 20,
+      "unit": "Gbit/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "USB 3.2, two lanes of 10 Gbps over USB Type-C.",
+        "en": "USB 3.2, two lanes of 10 Gbps over USB Type-C."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usbif-usb32"
+      ],
+      "locator": "USB 3.2 overview page, key characteristics",
+      "quote": "allowing for up to two lanes of 10Gbps operation to realize a 20Gbps data transfer rate",
+      "era": 2017,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb32-20g-rate",
+      "notes": null
+    },
+    {
+      "id": "usb4-80g-rate-m1",
+      "phenomenonId": "usb4-80g-rate",
+      "configuration": null,
+      "value": 80,
+      "unit": "Gbit/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "USB4 two-lane operation over 80 Gbps certified cables (USB4 Version 2.0 capability).",
+        "en": "USB4 two-lane operation over 80 Gbps certified cables (USB4 Version 2.0 capability)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usbif-usb4"
+      ],
+      "locator": "USB4 page, Key characteristics, bullet 1",
+      "quote": "Two-lane operation using existing USB Type-C cables and up to 80 Gbps operation over 80 Gbps certified cables",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb4-80g-rate",
+      "notes": "Page gives no year and no 40 Gbps figure; era 2022 is not from this page (unverified, can be set to null)."
+    },
+    {
+      "id": "usb-fs-frame-m1",
+      "phenomenonId": "usb-fs-frame",
+      "configuration": null,
+      "value": 1,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "USB full-speed and low-speed bus time base (Start-of-Frame every 1 ms).",
+        "en": "USB full-speed and low-speed bus time base (Start-of-Frame every 1 ms)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usb20-spec"
+      ],
+      "locator": "Section 5.3.3 Frames and Microframes, p. 36 (PDF p. 64)",
+      "quote": "USB establishes a 1 millisecond time base called a frame on a full-/low-speed bus",
+      "era": 1996,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-fs-frame",
+      "notes": null
+    },
+    {
+      "id": "usb-hs-microframe-m1",
+      "phenomenonId": "usb-hs-microframe",
+      "configuration": null,
+      "value": 125,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "USB 2.0 high-speed bus time base.",
+        "en": "USB 2.0 high-speed bus time base."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usb20-spec"
+      ],
+      "locator": "Section 5.3.3, p. 36 (PDF p. 64)",
+      "quote": "a 125 µs time base called a microframe on a high-speed bus",
+      "era": 2000,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-hs-microframe",
+      "notes": null
+    },
+    {
+      "id": "usb-fs-interrupt-min-period-m1",
+      "phenomenonId": "usb-fs-interrupt-min-period",
+      "configuration": null,
+      "value": 1,
+      "unit": "ms",
+      "low": 1,
+      "high": 255,
+      "conditions": {
+        "fr": "USB 2.0 spec, full-speed interrupt endpoint (typical of HID mice/keyboards); requested period 1 to 255 ms. The host only guarantees the interval is no longer than requested.",
+        "en": "USB 2.0 spec, full-speed interrupt endpoint (typical of HID mice/keyboards); requested period 1 to 255 ms. The host only guarantees the interval is no longer than requested."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usb20-spec"
+      ],
+      "locator": "Section 5.7.4 Interrupt Transfer Bus Access Constraints, p. 51 (PDF p. 79)",
+      "quote": "A full-speed endpoint can specify a desired period from 1 ms to 255 ms.",
+      "era": 1996,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-fs-interrupt-min-period",
+      "notes": null
+    },
+    {
+      "id": "usb-ls-interrupt-min-period-m1",
+      "phenomenonId": "usb-ls-interrupt-min-period",
+      "configuration": null,
+      "value": 10,
+      "unit": "ms",
+      "low": 10,
+      "high": 255,
+      "conditions": {
+        "fr": "USB 2.0 spec, low-speed interrupt endpoint.",
+        "en": "USB 2.0 spec, low-speed interrupt endpoint."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usb20-spec"
+      ],
+      "locator": "Section 5.7.4, p. 51 (PDF p. 79)",
+      "quote": "Low-speed endpoints are limited to specifying only 10 ms to 255 ms.",
+      "era": 1996,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-ls-interrupt-min-period",
+      "notes": null
+    },
+    {
+      "id": "usb-fs-max-polling-rate-m1",
+      "phenomenonId": "usb-fs-max-polling-rate",
+      "configuration": null,
+      "value": 1000,
+      "unit": "Hz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Full-speed interrupt endpoint polled at its shortest allowed period (1 ms); the usual '1000 Hz' gaming-mouse figure.",
+        "en": "Full-speed interrupt endpoint polled at its shortest allowed period (1 ms); the usual '1000 Hz' gaming-mouse figure."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usb20-spec"
+      ],
+      "locator": "Section 5.7.4, p. 51 (PDF p. 79)",
+      "quote": "A full-speed endpoint can specify a desired period from 1 ms to 255 ms.",
+      "era": 1996,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "f = 1 / T_min = 1 / 1 ms = 1000 Hz; input item: usb-fs-interrupt-min-period",
+        "inputs": [
+          "usb-fs-interrupt-min-period-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-fs-max-polling-rate",
+      "notes": "Upper bound; actual rate depends on the bInterval chosen by the device and on the host."
+    },
+    {
+      "id": "usb-hs-max-polling-rate-m1",
+      "phenomenonId": "usb-hs-max-polling-rate",
+      "configuration": null,
+      "value": 8000,
+      "unit": "Hz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "High-speed interrupt endpoint with bInterval = 1, i.e. period (2^(1-1)) x 125 µs = 125 µs.",
+        "en": "High-speed interrupt endpoint with bInterval = 1, i.e. period (2^(1-1)) x 125 µs = 125 µs."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-usb20-spec"
+      ],
+      "locator": "Section 5.7.4, p. 51 (PDF p. 79)",
+      "quote": "up to the shortest period defined by the USB (125 µs microframe or 1 ms frame)",
+      "era": 2000,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "T = 2^(bInterval-1) x 125 µs with bInterval = 1 -> 125 µs; f = 1/125 µs = 8000 Hz; input items: usb-hs-microframe (and formula in Section 5.7.4)",
+        "inputs": [
+          "usb-hs-microframe-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#usb-hs-max-polling-rate",
+      "notes": "Upper bound set by the spec; the '8000 Hz mouse' marketing figure matches but was not checked against a product."
+    },
+    {
+      "id": "hdmi-8k60-refresh-m1",
+      "phenomenonId": "hdmi-8k60-refresh",
+      "configuration": null,
+      "value": 60,
+      "unit": "Hz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Video format 8K at 60 Hz supported by HDMI 2.2 (also by HDMI 2.1).",
+        "en": "Video format 8K at 60 Hz supported by HDMI 2.2 (also by HDMI 2.1)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-hdmi-spec"
+      ],
+      "locator": "Spec page, introduction",
+      "quote": "supports a range of higher video resolutions and refresh rates including 8K60 and 4K120",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdmi-8k60-refresh",
+      "notes": "'8K60' notation: 60 = refresh rate in Hz. This is a format supported by the interface, not a display property."
+    },
+    {
+      "id": "hdmi-4k120-refresh-m1",
+      "phenomenonId": "hdmi-4k120-refresh",
+      "configuration": null,
+      "value": 120,
+      "unit": "Hz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Video format 4K at 120 Hz supported by HDMI 2.2.",
+        "en": "Video format 4K at 120 Hz supported by HDMI 2.2."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-hdmi-spec"
+      ],
+      "locator": "Spec page, introduction",
+      "quote": "supports a range of higher video resolutions and refresh rates including 8K60 and 4K120",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdmi-4k120-refresh",
+      "notes": null
+    },
+    {
+      "id": "hdmi22-bandwidth-m1",
+      "phenomenonId": "hdmi22-bandwidth",
+      "configuration": null,
+      "value": 96,
+      "unit": "Gbit/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "HDMI 2.2 with Ultra96 cable, Fixed Rate Link.",
+        "en": "HDMI 2.2 with Ultra96 cable, Fixed Rate Link."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-hdmi-spec"
+      ],
+      "locator": "Spec page, HDMI 2.2 overview",
+      "quote": "Higher 96Gbps bandwidth and next-gen HDMI Fixed Rate Link technology",
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdmi22-bandwidth",
+      "notes": "Era not on the page."
+    },
+    {
+      "id": "frame-time-60hz-m1",
+      "phenomenonId": "frame-time-60hz",
+      "configuration": null,
+      "value": 16.667,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "One refresh period at exactly 60 Hz (some broadcast-derived timings use 59.94 Hz, i.e. 16.683 ms).",
+        "en": "One refresh period at exactly 60 Hz (some broadcast-derived timings use 59.94 Hz, i.e. 16.683 ms)."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-hdmi-spec"
+      ],
+      "locator": "Spec page, introduction",
+      "quote": "supports a range of higher video resolutions and refresh rates including 8K60 and 4K120",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "T = 1 / 60 Hz = 16.667 ms; input item: hdmi-8k60-refresh",
+        "inputs": [
+          "hdmi-8k60-refresh-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#frame-time-60hz",
+      "notes": null
+    },
+    {
+      "id": "frame-time-120hz-m1",
+      "phenomenonId": "frame-time-120hz",
+      "configuration": null,
+      "value": 8.333,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "One refresh period at 120 Hz.",
+        "en": "One refresh period at 120 Hz."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-hdmi-spec"
+      ],
+      "locator": "Spec page, introduction",
+      "quote": "supports a range of higher video resolutions and refresh rates including 8K60 and 4K120",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "T = 1 / 120 Hz = 8.333 ms; input item: hdmi-4k120-refresh",
+        "inputs": [
+          "hdmi-4k120-refresh-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#frame-time-120hz",
+      "notes": null
+    },
+    {
+      "id": "h100-sxm-hbm-bandwidth-m1",
+      "phenomenonId": "h100-sxm-hbm-bandwidth",
+      "configuration": null,
+      "value": 3350,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "NVIDIA H100 SXM, 80 GB HBM3; peak theoretical. Source value 3.35 TB/s, converted to GB/s (x1000).",
+        "en": "NVIDIA H100 SXM, 80 GB HBM3; peak theoretical. Source value 3.35 TB/s, converted to GB/s (x1000)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nvidia-h100"
+      ],
+      "locator": "Specifications table, row 'GPU Memory Bandwidth', column H100 SXM",
+      "quote": "GPU Memory 80GB 94GB GPU Memory Bandwidth 3.35TB/s 3.9TB/s",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#h100-sxm-hbm-bandwidth",
+      "notes": "Quote is flattened table text (columns SXM, NVL). Era 2022 is launch year, not on page."
+    },
+    {
+      "id": "h100-sxm-nvlink-bandwidth-m1",
+      "phenomenonId": "h100-sxm-nvlink-bandwidth",
+      "configuration": null,
+      "value": 900,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "H100 SXM, NVLink 4th generation, per GPU, aggregate of all links, both directions as marketed. Same row gives PCIe Gen5: 128 GB/s.",
+        "en": "H100 SXM, NVLink 4th generation, per GPU, aggregate of all links, both directions as marketed. Same row gives PCIe Gen5: 128 GB/s."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nvidia-h100"
+      ],
+      "locator": "Specifications table, row 'Interconnect', column H100 SXM",
+      "quote": "Interconnect NVIDIA NVLink™: 900GB/s PCIe Gen5: 128GB/s",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#h100-sxm-nvlink-bandwidth",
+      "notes": "Page does not say whether 900 GB/s is bidirectional; NVIDIA convention is total bidirectional. Do not divide without a source."
+    },
+    {
+      "id": "b200-nvlink-gpu-to-gpu-m1",
+      "phenomenonId": "b200-nvlink-gpu-to-gpu",
+      "configuration": null,
+      "value": 1800,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "HGX B200 (8 Blackwell GPUs), NVLink 5th generation, per GPU; 1.8 TB/s converted. Total NVLink bandwidth 14.4 TB/s for 8 GPUs.",
+        "en": "HGX B200 (8 Blackwell GPUs), NVLink 5th generation, per GPU; 1.8 TB/s converted. Total NVLink bandwidth 14.4 TB/s for 8 GPUs."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nvidia-hgx"
+      ],
+      "locator": "HGX specifications table, row 'NVLink GPU-to-GPU Bandwidth', column HGX B200",
+      "quote": "NVLink GPU-to-GPU Bandwidth 1.8 TB/s 1.8 TB/s Total NVLink Bandwidth 14.4 TB/s 14.4 TB/s",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#b200-nvlink-gpu-to-gpu",
+      "notes": "Columns identified as HGX B300 then HGX B200 from the 'Total Memory 2.1 TB 1.4 TB' row. Era not on page."
+    },
+    {
+      "id": "dgx-b200-total-hbm-bandwidth-m1",
+      "phenomenonId": "dgx-b200-total-hbm-bandwidth",
+      "configuration": null,
+      "value": 64000,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "DGX B200 system with 8 Blackwell GPUs, 1,440 GB HBM3e total; 64 TB/s converted. System total, not per GPU.",
+        "en": "DGX B200 system with 8 Blackwell GPUs, 1,440 GB HBM3e total; 64 TB/s converted. System total, not per GPU."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nvidia-dgxb200"
+      ],
+      "locator": "Specifications, row 'GPU Memory'",
+      "quote": "GPU 8x NVIDIA Blackwell GPUs GPU Memory 1,440 GB total, 64 TB/s HBM3e bandwidth",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#dgx-b200-total-hbm-bandwidth",
+      "notes": null
+    },
+    {
+      "id": "b200-per-gpu-hbm-bandwidth-m1",
+      "phenomenonId": "b200-per-gpu-hbm-bandwidth",
+      "configuration": null,
+      "value": 8000,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "B200 GPU as configured in DGX B200; even split of the system figure.",
+        "en": "B200 GPU as configured in DGX B200; even split of the system figure."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-nvidia-dgxb200"
+      ],
+      "locator": "Specifications, row 'GPU Memory'",
+      "quote": "GPU 8x NVIDIA Blackwell GPUs GPU Memory 1,440 GB total, 64 TB/s HBM3e bandwidth",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "64 TB/s / 8 GPUs = 8 TB/s = 8000 GB/s; input item: dgx-b200-total-hbm-bandwidth",
+        "inputs": [
+          "dgx-b200-total-hbm-bandwidth-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#b200-per-gpu-hbm-bandwidth",
+      "notes": "Assumes identical GPUs and that the system figure is a plain sum; no per-GPU NVIDIA statement was read in this task."
+    },
+    {
+      "id": "mi300x-hbm-bandwidth-m1",
+      "phenomenonId": "mi300x-hbm-bandwidth",
+      "configuration": null,
+      "value": 5300,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "AMD Instinct MI300X OAM, 192 GB HBM3; peak theoretical; 5.3 TB/s converted.",
+        "en": "AMD Instinct MI300X OAM, 192 GB HBM3; peak theoretical; 5.3 TB/s converted."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-amd-mi300x"
+      ],
+      "locator": "Specifications, Memory section",
+      "quote": "Peak Memory Bandwidth 5.3 TB/s Memory ECC Support Yes (Full-Chip)",
+      "era": 2023,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#mi300x-hbm-bandwidth",
+      "notes": "Era not on page."
+    },
+    {
+      "id": "mi300x-peak-engine-clock-m1",
+      "phenomenonId": "mi300x-peak-engine-clock",
+      "configuration": null,
+      "value": 2100,
+      "unit": "MHz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "AMD Instinct MI300X, peak (boost) engine clock.",
+        "en": "AMD Instinct MI300X, peak (boost) engine clock."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-amd-mi300x"
+      ],
+      "locator": "Specifications, General/Performance section",
+      "quote": "Peak Engine Clock 2100 MHz",
+      "era": 2023,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#mi300x-peak-engine-clock",
+      "notes": null
+    },
+    {
+      "id": "tpu-v5p-hbm-bandwidth-m1",
+      "phenomenonId": "tpu-v5p-hbm-bandwidth",
+      "configuration": null,
+      "value": 2765,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Cloud TPU v5p, per chip, 95 GiB usable HBM (96 GiB physical).",
+        "en": "Cloud TPU v5p, per chip, 95 GiB usable HBM (96 GiB physical)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-gcloud-tpuv5p"
+      ],
+      "locator": "System architecture / key specifications table, row 'HBM bandwidth per chip (GBps)'",
+      "quote": "HBM capacity per chip (GiB) 95 HBM bandwidth per chip (GBps) 2765",
+      "era": 2023,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#tpu-v5p-hbm-bandwidth",
+      "notes": null
+    },
+    {
+      "id": "tpu-v5p-ici-bandwidth-m1",
+      "phenomenonId": "tpu-v5p-ici-bandwidth",
+      "configuration": null,
+      "value": 1200,
+      "unit": "GB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Cloud TPU v5p, per chip, bidirectional, 3D torus topology.",
+        "en": "Cloud TPU v5p, per chip, bidirectional, 3D torus topology."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-gcloud-tpuv5p"
+      ],
+      "locator": "Key specifications table, row 'Bidirectional inter-chip interconnect (ICI) bandwidth per chip (GBps)'",
+      "quote": "Bidirectional inter-chip interconnect (ICI) bandwidth per chip (GBps) 1200",
+      "era": 2023,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#tpu-v5p-ici-bandwidth",
+      "notes": null
+    },
+    {
+      "id": "mlperf-llama2-70b-server-ttft-m1",
+      "phenomenonId": "mlperf-llama2-70b-server-ttft",
+      "configuration": null,
+      "value": 2000,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "MLPerf Inference, Datacenter suite, Closed division, Conversational (Server); TTFT = time to first token. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value.",
+        "en": "MLPerf Inference, Datacenter suite, Closed division, Conversational (Server); TTFT = time to first token. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-mlperf-inference-rules"
+      ],
+      "locator": "Section 'Constraints for the Closed division', Datacenter table, column 'Server latency constraint', row Llama2-70b",
+      "quote": "Conversational category: TTFT/TPOT: 2000 ms/200 ms.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#mlperf-llama2-70b-server-ttft",
+      "notes": "Rules evolve per round; values read on master at commit ff7edba (2026-08-20). Era = rules version date, not model release."
+    },
+    {
+      "id": "mlperf-llama2-70b-server-tpot-m1",
+      "phenomenonId": "mlperf-llama2-70b-server-tpot",
+      "configuration": null,
+      "value": 200,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "MLPerf Inference, Datacenter suite, Closed division, Conversational (Server); TPOT = average interval between generated tokens. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value.",
+        "en": "MLPerf Inference, Datacenter suite, Closed division, Conversational (Server); TPOT = average interval between generated tokens. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-mlperf-inference-rules"
+      ],
+      "locator": "Section 'Constraints for the Closed division', Datacenter table, column 'Server latency constraint', row Llama2-70b",
+      "quote": "Conversational category: TTFT/TPOT: 2000 ms/200 ms.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#mlperf-llama2-70b-server-tpot",
+      "notes": "Rules evolve per round; values read on master at commit ff7edba (2026-08-20). Era = rules version date, not model release."
+    },
+    {
+      "id": "mlperf-llama2-70b-interactive-ttft-m1",
+      "phenomenonId": "mlperf-llama2-70b-interactive-ttft",
+      "configuration": null,
+      "value": 450,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "MLPerf Inference, Datacenter suite, Closed division, Interactive; TTFT = time to first token. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value.",
+        "en": "MLPerf Inference, Datacenter suite, Closed division, Interactive; TTFT = time to first token. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-mlperf-inference-rules"
+      ],
+      "locator": "Section 'Constraints for the Closed division', Datacenter table, column 'Server latency constraint', row Llama2-70b",
+      "quote": "Interactive category: TTFT/TPOT: 450 ms/40 ms.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#mlperf-llama2-70b-interactive-ttft",
+      "notes": "Rules evolve per round; values read on master at commit ff7edba (2026-08-20). Era = rules version date, not model release."
+    },
+    {
+      "id": "mlperf-llama2-70b-interactive-tpot-m1",
+      "phenomenonId": "mlperf-llama2-70b-interactive-tpot",
+      "configuration": null,
+      "value": 40,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "MLPerf Inference, Datacenter suite, Closed division, Interactive; TPOT = average interval between generated tokens. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value.",
+        "en": "MLPerf Inference, Datacenter suite, Closed division, Interactive; TPOT = average interval between generated tokens. Constraint applies at the 99th-percentile tail latency (Scenarios table: Server/Interactive tail latency 99%). It is a pass/fail bound, not a measured value."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-mlperf-inference-rules"
+      ],
+      "locator": "Section 'Constraints for the Closed division', Datacenter table, column 'Server latency constraint', row Llama2-70b",
+      "quote": "Interactive category: TTFT/TPOT: 450 ms/40 ms.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#mlperf-llama2-70b-interactive-tpot",
+      "notes": "Rules evolve per round; values read on master at commit ff7edba (2026-08-20). Era = rules version date, not model release."
+    },
+    {
+      "id": "exos-x20-spindle-frequency-m1",
+      "phenomenonId": "exos-x20-spindle-frequency",
+      "configuration": null,
+      "value": 120,
+      "unit": "Hz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Seagate Exos X20 18/20 TB (ST20000NM007D etc.), 7,200 RPM.",
+        "en": "Seagate Exos X20 18/20 TB (ST20000NM007D etc.), 7,200 RPM."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-seagate-exos-x20"
+      ],
+      "locator": "Specifications table, Performance, row 'Spindle Speed (RPM)', p.2",
+      "quote": "Spindle Speed (RPM) 7,200 RPM",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "7200 rev/min / 60 s/min = 120 rev/s = 120 Hz; input: documented 7,200 RPM (this source)",
+        "inputs": [
+          "const:documented-in-cited-source"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#exos-x20-spindle-frequency",
+      "notes": "Only conversion RPM -> Hz; unit enum has no RPM."
+    },
+    {
+      "id": "exos-x20-average-latency-m1",
+      "phenomenonId": "exos-x20-average-latency",
+      "configuration": null,
+      "value": 4.16,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Seagate Exos X20 18/20 TB, all SATA/SAS variants; manufacturer 'Average Latency', i.e. half-rotation time at 7,200 RPM; excludes seek time.",
+        "en": "Seagate Exos X20 18/20 TB, all SATA/SAS variants; manufacturer 'Average Latency', i.e. half-rotation time at 7,200 RPM; excludes seek time."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-seagate-exos-x20"
+      ],
+      "locator": "Specifications table, Performance, row 'Average Latency (ms)', p.2",
+      "quote": "Average Latency (ms) 4.16",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#exos-x20-average-latency",
+      "notes": "Matches the half-rotation calculation (item hdd-7200rpm-half-rotation) to 3 significant figures, confirming its meaning. Seek time is not given in this data sheet."
+    },
+    {
+      "id": "hdd-7200rpm-half-rotation-m1",
+      "phenomenonId": "hdd-7200rpm-half-rotation",
+      "configuration": null,
+      "value": 4.1667,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Any disk at 7,200 RPM, uniformly random target sector; excludes seek and transfer.",
+        "en": "Any disk at 7,200 RPM, uniformly random target sector; excludes seek and transfer."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-seagate-exos-x20"
+      ],
+      "locator": "Specifications table, p.2",
+      "quote": "Spindle Speed (RPM) 7,200 RPM",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 0.5 x 60 s / 7200 = 4.1667 ms; input item: exos-x20-spindle-frequency",
+        "inputs": [
+          "exos-x20-spindle-frequency-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdd-7200rpm-half-rotation",
+      "notes": null
+    },
+    {
+      "id": "hdd-7200rpm-full-rotation-m1",
+      "phenomenonId": "hdd-7200rpm-full-rotation",
+      "configuration": null,
+      "value": 8.3333,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Any disk at 7,200 RPM; worst-case rotational wait.",
+        "en": "Any disk at 7,200 RPM; worst-case rotational wait."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-seagate-exos-x20"
+      ],
+      "locator": "Specifications table, p.2",
+      "quote": "Spindle Speed (RPM) 7,200 RPM",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 60 s / 7200 = 8.3333 ms; input item: exos-x20-spindle-frequency",
+        "inputs": [
+          "exos-x20-spindle-frequency-m1"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#hdd-7200rpm-full-rotation",
+      "notes": null
+    },
+    {
+      "id": "exos-x20-sustained-transfer-m1",
+      "phenomenonId": "exos-x20-sustained-transfer",
+      "configuration": null,
+      "value": 285,
+      "unit": "MB/s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Seagate Exos X20 18/20 TB, outer diameter (OD); 285 MB/s = 272 MiB/s.",
+        "en": "Seagate Exos X20 18/20 TB, outer diameter (OD); 285 MB/s = 272 MiB/s."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-seagate-exos-x20"
+      ],
+      "locator": "Specifications table, Performance, row 'Max. Sustained Transfer Rate OD', p.2",
+      "quote": "Max. Sustained Transfer Rate OD (MB/s, MiB/s) 285/272",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#exos-x20-sustained-transfer",
+      "notes": null
+    },
+    {
+      "id": "samsung-990pro-qd1-read-latency-derived-m1",
+      "phenomenonId": "samsung-990pro-qd1-read-latency-derived",
+      "configuration": null,
+      "value": 45.45,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Samsung 990 PRO 1 TB and 2 TB, PCIe 4.0 x4, random read, QD1, 1 thread, rated 'up to' 22K IOPS; IOmeter 1.1.0, Ryzen 7 5800X, Windows 10 Pro, SSD as secondary drive. Block size not stated in the data sheet (random IOPS conventionally 4 KB).",
+        "en": "Samsung 990 PRO 1 TB and 2 TB, PCIe 4.0 x4, random read, QD1, 1 thread, rated 'up to' 22K IOPS; IOmeter 1.1.0, Ryzen 7 5800X, Windows 10 Pro, SSD as secondary drive. Block size not stated in the data sheet (random IOPS conventionally 4 KB)."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-samsung-990pro-ds"
+      ],
+      "locator": "Technical Specifications table, Performance (Up to.) 2) 3) 4), row 'QD 1 / Thread 1 / Ran. Read'; Test Configuration page",
+      "quote": "QD 1 Ran. Read 22K IOPS 22K IOPS",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "Little's law at queue depth 1: mean latency = QD / IOPS = 1 / 22,000 s = 45.45 µs (lower bound since 22K is an 'up to' figure)",
+        "inputs": [
+          "const:documented-in-cited-source"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#samsung-990pro-qd1-read-latency-derived",
+      "notes": "Derived, not a published latency. Block size missing in the source. Quote is flattened table text."
+    },
+    {
+      "id": "optane-p5800x-4k-qd1-p99-read-m1",
+      "phenomenonId": "optane-p5800x-4k-qd1-p99-read",
+      "configuration": null,
+      "value": 6,
+      "unit": "us",
+      "low": null,
+      "high": 6,
+      "conditions": {
+        "fr": "Intel Optane SSD P5800X (3D XPoint, PCIe 4.0 x4), 4 KiB random read, QD1, 99th percentile QoS; specified as '< 6 µs' (upper bound).",
+        "en": "Intel Optane SSD P5800X (3D XPoint, PCIe 4.0 x4), 4 KiB random read, QD1, 99th percentile QoS; specified as '< 6 µs' (upper bound)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-intel-p5800x-brief"
+      ],
+      "locator": "Specification table, QoS section, p.2",
+      "quote": "4KRR, QD=1, 99% • < 6μs",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#optane-p5800x-4k-qd1-p99-read",
+      "notes": "Upper bound, not a typical value; n and method not given in the brief (refers to Intel Performance Index). Product discontinued. Read on a third-party CDN copy of the Intel PDF."
+    },
+    {
+      "id": "solidigm-p5620-qd1-write-p999999-m1",
+      "phenomenonId": "solidigm-p5620-qd1-write-p999999",
+      "configuration": null,
+      "value": 137,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; Xeon Gold 6254 x2, CentOS 8.2 (kernel 5.4.49), C-states and HT off, fio. Block size not stated in this footnote.",
+        "en": "Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; Xeon Gold 6254 x2, CentOS 8.2 (kernel 5.4.49), C-states and HT off, fio. Block size not stated in this footnote."
+      },
+      "protocol": "As reported by the source: Solidigm D7-P5620 3.2 TB, 100% random write, QD1, 99.9999th percentile; Xeon Gold 6254 x2, CentOS 8.2 (kernel 5.4.49), C-states and HT off, fio. Block size not stated in this footnote.",
+      "provenanceType": "measured",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-solidigm-p5520-brief"
+      ],
+      "locator": "Footnote [5]",
+      "quote": "Latency for the two drives measured was 137usec and 586usec respectively on 6 9s latency for 100% QD1 random write IO.",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#solidigm-p5620-qd1-write-p999999",
+      "notes": "Vendor-run measurement; n (I/O count) not given. 586 µs is the older D7-P4610 in the same test."
+    },
+    {
+      "id": "solidigm-p5520-4k-qd16-latency-derived-m1",
+      "phenomenonId": "solidigm-p5520-4k-qd16-latency-derived",
+      "configuration": null,
+      "value": 68.5,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Solidigm D7-P5520 7.68 TB, measured 233.7K random-read IOPS, 4 KB, QD16; Ice Lake test server, fio.",
+        "en": "Solidigm D7-P5520 7.68 TB, measured 233.7K random-read IOPS, 4 KB, QD16; Ice Lake test server, fio."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-solidigm-p5520-brief"
+      ],
+      "locator": "Footnote [7]",
+      "quote": "Measured results of 233.7 and 206 RR KIOPS respectively using 4 KB transfer size and QD16",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "Little's law: mean latency = QD / IOPS = 16 / 233,700 s = 68.5 µs",
+        "inputs": [
+          "const:documented-in-cited-source"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#solidigm-p5520-4k-qd16-latency-derived",
+      "notes": "Assumes QD16 is total outstanding I/Os (number of jobs not stated); if several jobs each at QD16, real latency is higher."
+    }
+  ]
+}

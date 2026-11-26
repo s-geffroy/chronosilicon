@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "corpusVersion": "0.1.0+e7f90e472a8a",
+  "inputs": {
+    "data/sources/sources.json": "595204f180628a5611f681a9886c62910c76076113d61b992e4e966a4393eabe",
+    "data/curated/phenomena.json": "aee114ad68f86a8bb573da383908abf169906d00f98ec43e908e45477d99fa89",
+    "data/curated/measurements.json": "636ea804abada1df8f29f0c8dcf321d05ebdccd9b86b1f2d28d9c9a12f6459be"
+  },
+  "phenomena": [],
+  "measurements": [],
+  "sources": []
+}

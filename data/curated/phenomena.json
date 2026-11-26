@@ -1,0 +1,1335 @@
+{
+  "schemaVersion": "1.0.0",
+  "phenomena": [
+    {
+      "id": "caesium-hyperfine-frequency",
+      "domain": "physics",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de la transition hyperfine du césium 133 (définit la seconde)",
+        "en": "Caesium-133 hyperfine transition frequency (defines the second)"
+      },
+      "description": null
+    },
+    {
+      "id": "caesium-period",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une période du rayonnement de référence du césium 133",
+        "en": "One period of the caesium-133 reference radiation"
+      },
+      "description": null
+    },
+    {
+      "id": "speed-of-light-vacuum",
+      "domain": "physics",
+      "quantityKind": "speed",
+      "label": {
+        "fr": "Vitesse de la lumière dans le vide",
+        "en": "Speed of light in vacuum"
+      },
+      "description": null
+    },
+    {
+      "id": "light-distance-per-ns",
+      "domain": "physics",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Distance parcourue par la lumière dans le vide en 1 ns",
+        "en": "Distance travelled by light in vacuum in 1 ns"
+      },
+      "description": null
+    },
+    {
+      "id": "astronomical-unit",
+      "domain": "space",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Unité astronomique",
+        "en": "Astronomical unit"
+      },
+      "description": null
+    },
+    {
+      "id": "astronomical-unit-light-time",
+      "domain": "space",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps-lumière pour une unité astronomique",
+        "en": "Light time for one astronomical unit"
+      },
+      "description": null
+    },
+    {
+      "id": "earth-moon-semimajor-axis",
+      "domain": "space",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Demi-grand axe de l'orbite lunaire",
+        "en": "Earth-Moon orbit semimajor axis"
+      },
+      "description": null
+    },
+    {
+      "id": "earth-moon-light-time-one-way",
+      "domain": "space",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps-lumière Terre-Lune, aller simple (demi-grand axe)",
+        "en": "Earth-Moon one-way light time (semimajor axis)"
+      },
+      "description": null
+    },
+    {
+      "id": "earth-mars-distance-min",
+      "domain": "space",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Distance minimale Terre-Mars",
+        "en": "Minimum Earth-Mars distance"
+      },
+      "description": null
+    },
+    {
+      "id": "earth-mars-distance-max",
+      "domain": "space",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Distance maximale Terre-Mars",
+        "en": "Maximum Earth-Mars distance"
+      },
+      "description": null
+    },
+    {
+      "id": "earth-mars-light-time-min",
+      "domain": "space",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps-lumière Terre-Mars, aller simple, à la distance minimale",
+        "en": "Earth-Mars one-way light time at minimum distance"
+      },
+      "description": null
+    },
+    {
+      "id": "earth-mars-light-time-max",
+      "domain": "space",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps-lumière Terre-Mars, aller simple, à la distance maximale",
+        "en": "Earth-Mars one-way light time at maximum distance"
+      },
+      "description": null
+    },
+    {
+      "id": "voyager1-distance-2026-11-18",
+      "domain": "space",
+      "quantityKind": "distance",
+      "label": {
+        "fr": "Distance de Voyager 1 à la Terre (18 novembre 2026)",
+        "en": "Voyager 1 distance from Earth (18 Nov 2026)"
+      },
+      "description": null
+    },
+    {
+      "id": "voyager1-light-time-2026-11-18",
+      "domain": "space",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps-lumière aller simple vers Voyager 1 (18 novembre 2026)",
+        "en": "Voyager 1 one-way light time (18 Nov 2026)"
+      },
+      "description": null
+    },
+    {
+      "id": "tcp-initial-rto",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Délai initial de retransmission TCP (RTO)",
+        "en": "TCP initial retransmission timeout"
+      },
+      "description": null
+    },
+    {
+      "id": "tcp-min-rto",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Délai minimal de retransmission TCP (RTO)",
+        "en": "TCP minimum retransmission timeout"
+      },
+      "description": null
+    },
+    {
+      "id": "tcp-max-rto-floor",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Plafond minimal autorisé pour le RTO TCP",
+        "en": "Lowest permitted cap on TCP RTO"
+      },
+      "description": null
+    },
+    {
+      "id": "tcp-rto-after-syn-timeout",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "RTO TCP après expiration d'un SYN",
+        "en": "TCP RTO after a SYN timeout"
+      },
+      "description": null
+    },
+    {
+      "id": "tcp-msl",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée de vie maximale d'un segment TCP (MSL)",
+        "en": "TCP Maximum Segment Lifetime (MSL)"
+      },
+      "description": null
+    },
+    {
+      "id": "tcp-isn-clock-tick",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Pas de l'horloge des numéros de séquence initiaux TCP",
+        "en": "TCP initial sequence number clock tick"
+      },
+      "description": null
+    },
+    {
+      "id": "nr-urllc-user-plane-latency-target",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Objectif de latence plan usager 5G NR URLLC",
+        "en": "5G NR URLLC user-plane latency target"
+      },
+      "description": null
+    },
+    {
+      "id": "nr-urllc-reliability-latency",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence associée à l'exigence de fiabilité 5G NR URLLC",
+        "en": "5G NR URLLC reliability latency bound"
+      },
+      "description": null
+    },
+    {
+      "id": "nr-embb-user-plane-latency-target",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Objectif de latence plan usager 5G NR eMBB",
+        "en": "5G NR eMBB user-plane latency target"
+      },
+      "description": null
+    },
+    {
+      "id": "ntn-geo-user-plane-rtt-target",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Objectif de RTT plan usager par satellite géostationnaire",
+        "en": "Satellite (GEO) user-plane RTT target"
+      },
+      "description": null
+    },
+    {
+      "id": "ntn-leo-user-plane-rtt-target",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Objectif de RTT plan usager par satellite en orbite basse",
+        "en": "Satellite (LEO) user-plane RTT target"
+      },
+      "description": null
+    },
+    {
+      "id": "ethernet-min-frame-size",
+      "domain": "network",
+      "quantityKind": "data_size",
+      "label": {
+        "fr": "Taille minimale d'une trame Ethernet",
+        "en": "Minimum Ethernet frame size"
+      },
+      "description": null
+    },
+    {
+      "id": "ethernet-min-frame-wire-time-1g",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'occupation du lien par une trame Ethernet minimale à 1 Gbit/s (préambule et intervalle compris)",
+        "en": "Wire time of a minimum Ethernet frame at 1 Gbit/s (with preamble and gap)"
+      },
+      "description": null
+    },
+    {
+      "id": "ethernet-min-frame-wire-time-10g",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'occupation du lien par une trame Ethernet minimale à 10 Gbit/s (préambule et intervalle compris)",
+        "en": "Wire time of a minimum Ethernet frame at 10 Gbit/s (with preamble and gap)"
+      },
+      "description": null
+    },
+    {
+      "id": "ethernet-min-frame-wire-time-100g",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'occupation du lien par une trame Ethernet minimale à 100 Gbit/s (préambule et intervalle compris)",
+        "en": "Wire time of a minimum Ethernet frame at 100 Gbit/s (with preamble and gap)"
+      },
+      "description": null
+    },
+    {
+      "id": "azure-rtt-eastus-westeurope",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "RTT médian Azure East US vers West Europe (transatlantique)",
+        "en": "Median RTT Azure East US to West Europe (transatlantic)"
+      },
+      "description": null
+    },
+    {
+      "id": "azure-rtt-eastus-westus",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "RTT médian Azure East US vers West US (transcontinental)",
+        "en": "Median RTT Azure East US to West US (transcontinental)"
+      },
+      "description": null
+    },
+    {
+      "id": "azure-rtt-westeurope-francecentral",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "RTT médian Azure West Europe vers France Central",
+        "en": "Median RTT Azure West Europe to France Central"
+      },
+      "description": null
+    },
+    {
+      "id": "azure-rtt-eastus-australiaeast",
+      "domain": "network",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "RTT médian Azure East US vers Australia East",
+        "en": "Median RTT Azure East US to Australia East"
+      },
+      "description": null
+    },
+    {
+      "id": "human-simple-visual-reaction-time",
+      "domain": "human",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de réaction simple visuel (moyenne, corrigée des délais matériels)",
+        "en": "Simple visual reaction time (mean, hardware-corrected)"
+      },
+      "description": null
+    },
+    {
+      "id": "human-stimulus-detection-time",
+      "domain": "human",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de détection d'un stimulus visuel (TR simple moins initiation du mouvement)",
+        "en": "Visual stimulus detection time (SRT minus movement initiation)"
+      },
+      "description": null
+    },
+    {
+      "id": "human-voluntary-blink-duration",
+      "domain": "human",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'un clignement volontaire des yeux",
+        "en": "Duration of a voluntary eye blink"
+      },
+      "description": null
+    },
+    {
+      "id": "human-voluntary-blink-closing-phase",
+      "domain": "human",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Phase de fermeture d'un clignement volontaire",
+        "en": "Closing phase of a voluntary blink"
+      },
+      "description": null
+    },
+    {
+      "id": "human-flicker-fusion-uniform",
+      "domain": "human",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Limite de fusion du papillotement en lumière uniforme",
+        "en": "Flicker fusion limit for uniform light"
+      },
+      "description": null
+    },
+    {
+      "id": "human-flicker-artifact-edge-median",
+      "domain": "human",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Visibilité des artefacts de papillotement avec un bord net (observateur médian)",
+        "en": "Flicker artefact visibility with a spatial edge (median viewer)"
+      },
+      "description": null
+    },
+    {
+      "id": "human-stylus-latency-jnd-large-box",
+      "domain": "human",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence de stylet juste perceptible en glisser (grande boîte, médiane)",
+        "en": "Just-noticeable stylus latency while dragging (large box, median)"
+      },
+      "description": null
+    },
+    {
+      "id": "human-stylus-latency-jnd-small-box",
+      "domain": "human",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence de stylet juste perceptible en glisser (petite boîte, médiane)",
+        "en": "Just-noticeable stylus latency while dragging (small box, median)"
+      },
+      "description": null
+    },
+    {
+      "id": "human-stylus-latency-jnd-scribbling",
+      "domain": "human",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence de stylet juste perceptible en gribouillage (médiane)",
+        "en": "Just-noticeable stylus latency while scribbling (median)"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-skylake-client-l1d-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence la plus courte du cache de données L1, Intel Skylake (client)",
+        "en": "L1 data cache fastest latency, Intel Skylake client"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-skylake-client-l2-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence la plus courte du cache L2, Intel Skylake (client)",
+        "en": "L2 cache fastest latency, Intel Skylake client"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-skylake-client-l3-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence la plus courte du cache L3 partagé, Intel Skylake (client)",
+        "en": "Shared L3 cache fastest latency, Intel Skylake client"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-icelake-client-l1d-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence du cache de données L1, Intel Ice Lake (client)",
+        "en": "L1 data cache latency, Intel Ice Lake client"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-icelake-client-l2-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence du cache L2 (MLC), Intel Ice Lake (client)",
+        "en": "L2 (MLC) latency, Intel Ice Lake client"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-haswell-l3-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence la plus courte du L3 partagé, Intel Haswell",
+        "en": "Shared L3 fastest latency, Intel Haswell"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-sandybridge-llc-latency",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence de chargement du cache de dernier niveau (LLC), Intel Sandy Bridge",
+        "en": "LLC load latency, Intel Sandy Bridge"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-sandybridge-other-core-dirty-hit",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence d'un chargement servi par le L1/L2 d'un autre cœur (ligne modifiée), Intel Sandy Bridge",
+        "en": "Load latency from another core's L1/L2 (dirty hit), Intel Sandy Bridge"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-xeon5500-local-dram-latency",
+      "domain": "memory",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence approximative de la DRAM locale, Intel Xeon 5500 (Nehalem)",
+        "en": "Approximate local DRAM latency, Intel Xeon 5500 (Nehalem)"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-xeon5500-remote-dram-latency",
+      "domain": "memory",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence approximative de la DRAM distante (autre socket), Intel Xeon 5500 (Nehalem)",
+        "en": "Approximate remote DRAM latency, Intel Xeon 5500 (Nehalem)"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-xeon5500-l3-hit-exclusive",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence approximative d'un succès en L3 (ligne exclusive), Intel Xeon 5500",
+        "en": "Approximate L3 hit latency (exclusive line), Intel Xeon 5500"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-sandybridge-c6-exit-latency",
+      "domain": "cpu",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence de sortie de l'état C6 (typique), Intel Sandy Bridge client, régulateur lent",
+        "en": "Package C6 exit latency (typical), Intel Sandy Bridge client, slow VR"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-sandybridge-c1-exit-latency",
+      "domain": "cpu",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence de sortie de l'état C1, Intel Sandy Bridge client",
+        "en": "C1 exit latency, Intel Sandy Bridge client"
+      },
+      "description": null
+    },
+    {
+      "id": "amd-zen4-l1d-load-to-use",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence load-to-use entière du cache L1D, AMD Zen 4",
+        "en": "L1D integer load-to-use latency, AMD Zen 4"
+      },
+      "description": null
+    },
+    {
+      "id": "amd-zen4-l2-load-to-use",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence load-to-use minimale du cache L2, AMD Zen 4",
+        "en": "L2 load-to-use latency (minimum), AMD Zen 4"
+      },
+      "description": null
+    },
+    {
+      "id": "amd-zen4-l3-load-to-use",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence load-to-use moyenne du cache L3, AMD Zen 4",
+        "en": "L3 average load-to-use latency, AMD Zen 4"
+      },
+      "description": null
+    },
+    {
+      "id": "amd-zen5-l1d-load-to-use",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence load-to-use entière du cache L1D, AMD Zen 5",
+        "en": "L1D integer load-to-use latency, AMD Zen 5"
+      },
+      "description": null
+    },
+    {
+      "id": "amd-zen5-l2-load-to-use",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence load-to-use minimale du cache L2, AMD Zen 5",
+        "en": "L2 load-to-use latency (minimum), AMD Zen 5"
+      },
+      "description": null
+    },
+    {
+      "id": "amd-zen5-l3-load-to-use",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence load-to-use moyenne du cache L3, AMD Zen 5",
+        "en": "L3 average load-to-use latency, AMD Zen 5"
+      },
+      "description": null
+    },
+    {
+      "id": "x86-add-r64-latency-alderlake-p",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence de ADD r64,r64, Intel Alder Lake-P",
+        "en": "ADD r64,r64 latency, Intel Alder Lake-P"
+      },
+      "description": null
+    },
+    {
+      "id": "x86-imul-r64-latency-alderlake-p",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence de IMUL r64,r64, Intel Alder Lake-P",
+        "en": "IMUL r64,r64 latency, Intel Alder Lake-P"
+      },
+      "description": null
+    },
+    {
+      "id": "x86-div-r64-latency-alderlake-p",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence de DIV r64 (division 64 bits non signée), Intel Alder Lake-P",
+        "en": "DIV r64 latency, Intel Alder Lake-P"
+      },
+      "description": null
+    },
+    {
+      "id": "x86-div-r64-latency-skylake",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence de DIV r64, Intel Skylake",
+        "en": "DIV r64 latency, Intel Skylake"
+      },
+      "description": null
+    },
+    {
+      "id": "x86-div-r64-latency-zen4",
+      "domain": "cpu",
+      "quantityKind": "cycle_count",
+      "label": {
+        "fr": "Latence de DIV r64, AMD Zen 4",
+        "en": "DIV r64 latency, AMD Zen 4"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-core-i9-14900k-max-turbo",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence turbo maximale, Intel Core i9-14900K",
+        "en": "Max turbo frequency, Intel Core i9-14900K"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-core-i9-14900k-pcore-base",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de base des cœurs performance, Intel Core i9-14900K",
+        "en": "Performance-core base frequency, Intel Core i9-14900K"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-8086-initial-clock",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d'horloge initiale de l'Intel 8086",
+        "en": "Initial clock speed, Intel 8086"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-pentium4-launch-clock",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence au lancement de l'Intel Pentium 4 (version la plus rapide)",
+        "en": "Launch clock speed, Intel Pentium 4 (top bin)"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-4004-min-clock-period",
+      "domain": "cpu",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Période d'horloge minimale (tCY) de l'Intel 4004",
+        "en": "Minimum clock period (tCY), Intel 4004"
+      },
+      "description": null
+    },
+    {
+      "id": "intel-4004-max-clock-frequency",
+      "domain": "cpu",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence d'horloge maximale de l'Intel 4004 (déduite de tCY)",
+        "en": "Maximum clock frequency, Intel 4004 (derived from tCY)"
+      },
+      "description": null
+    },
+    {
+      "id": "ddr5-5600b-taa-micron",
+      "domain": "memory",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence CAS tAA, DDR5-5600B (Micron 16 Gb, révision D)",
+        "en": "CAS latency tAA, DDR5-5600B (Micron 16Gb die D)"
+      },
+      "description": null
+    },
+    {
+      "id": "ddr4-3200-cl-micron",
+      "domain": "memory",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence CAS (CL en ns), DDR4-3200 -062E (Micron 8 Gb)",
+        "en": "CAS latency (CL in ns), DDR4-3200 -062E (Micron 8Gb)"
+      },
+      "description": null
+    },
+    {
+      "id": "ddr4-trefi-micron",
+      "domain": "memory",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Intervalle moyen de rafraîchissement tREFI, DDR4 (0 à 85 °C)",
+        "en": "Average refresh interval tREFI, DDR4 (0-85 °C)"
+      },
+      "description": null
+    },
+    {
+      "id": "ddr4-8gb-trfc1-micron",
+      "domain": "memory",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'un cycle de rafraîchissement tRFC1, DDR4 8 Gb",
+        "en": "Refresh cycle time tRFC1, DDR4 8Gb"
+      },
+      "description": null
+    },
+    {
+      "id": "dram-latency-epyc-7702-measured",
+      "domain": "memory",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence mesurée de lecture en mémoire principale locale, AMD EPYC 7702 (Rome)",
+        "en": "Measured local main-memory read latency, AMD EPYC 7702 (Rome)"
+      },
+      "description": null
+    },
+    {
+      "id": "dram-latency-xeon-6248-measured",
+      "domain": "memory",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence mesurée de lecture en mémoire principale locale, Intel Xeon Gold 6248 (Cascade Lake)",
+        "en": "Measured local main-memory read latency, Intel Xeon Gold 6248 (Cascade Lake)"
+      },
+      "description": null
+    },
+    {
+      "id": "dram-latency-pentiumpro-lmbench-1995",
+      "domain": "memory",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence mémoire mesurée, Pentium Pro 200 MHz sous Linux (lmbench, 1995)",
+        "en": "Measured memory latency, Pentium Pro 200 MHz under Linux (lmbench, 1995)"
+      },
+      "description": null
+    },
+    {
+      "id": "apple-m4-memory-bandwidth",
+      "domain": "memory",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante mémoire de l'Apple M4",
+        "en": "Memory bandwidth, Apple M4"
+      },
+      "description": null
+    },
+    {
+      "id": "linux-config-hz-default",
+      "domain": "os",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence par défaut de l'interruption d'horloge (CONFIG_HZ), Linux",
+        "en": "Default timer interrupt frequency (CONFIG_HZ), Linux"
+      },
+      "description": null
+    },
+    {
+      "id": "linux-tick-period-hz1000",
+      "domain": "os",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Période du tick d'horloge à HZ=1000",
+        "en": "Scheduler tick period at HZ=1000"
+      },
+      "description": null
+    },
+    {
+      "id": "linux-eevdf-base-slice-v6-12",
+      "domain": "os",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Tranche de temps de base par défaut de l'ordonnanceur EEVDF, Linux 6.12",
+        "en": "EEVDF base time slice default, Linux 6.12"
+      },
+      "description": null
+    },
+    {
+      "id": "linux-eevdf-base-slice-master",
+      "domain": "os",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Tranche de temps de base par défaut d'EEVDF, Linux master (7.4-rc4)",
+        "en": "EEVDF base time slice default, Linux master (7.4-rc4)"
+      },
+      "description": null
+    },
+    {
+      "id": "linux-default-timer-slack",
+      "domain": "os",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Marge de temporisation (timer slack) par défaut, Linux",
+        "en": "Default timer slack, Linux"
+      },
+      "description": null
+    },
+    {
+      "id": "lmbench-null-syscall-linux-pentiumpro",
+      "domain": "os",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'un appel système simple, Linux sur Pentium Pro 200 (lmbench, 1995)",
+        "en": "Simple system call time, Linux on Pentium Pro 200 (lmbench, 1995)"
+      },
+      "description": null
+    },
+    {
+      "id": "lmbench-context-switch-linux-pentiumpro",
+      "domain": "os",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'un changement de contexte (2 processus), Linux sur Pentium Pro 200 (lmbench, 1995)",
+        "en": "Context switch time, 2 processes, Linux on Pentium Pro 200 (lmbench, 1995)"
+      },
+      "description": null
+    },
+    {
+      "id": "slingshot-rosetta-switch-latency",
+      "domain": "distributed",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence d'un commutateur HPE Slingshot (Rosetta)",
+        "en": "Switch latency, HPE Slingshot Rosetta switch"
+      },
+      "description": null
+    },
+    {
+      "id": "osu-latency-crossroads-8b",
+      "domain": "distributed",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence MPI aller simple, 8 octets, LANL Crossroads (osu_latency)",
+        "en": "MPI ping-pong latency, 8 bytes, LANL Crossroads (osu_latency)"
+      },
+      "description": null
+    },
+    {
+      "id": "pcie4-lane-rate",
+      "domain": "interconnect",
+      "quantityKind": "transfer_rate",
+      "label": {
+        "fr": "Débit par voie PCIe 4.0",
+        "en": "PCIe 4.0 per-lane data rate"
+      },
+      "description": null
+    },
+    {
+      "id": "pcie5-lane-rate",
+      "domain": "interconnect",
+      "quantityKind": "transfer_rate",
+      "label": {
+        "fr": "Débit brut par voie PCIe 5.0",
+        "en": "PCIe 5.0 per-lane raw bit rate"
+      },
+      "description": null
+    },
+    {
+      "id": "pcie5-x16-bandwidth",
+      "domain": "interconnect",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante totale PCIe 5.0 x16 (deux sens)",
+        "en": "PCIe 5.0 x16 total bandwidth (both directions)"
+      },
+      "description": null
+    },
+    {
+      "id": "pcie6-lane-rate",
+      "domain": "interconnect",
+      "quantityKind": "transfer_rate",
+      "label": {
+        "fr": "Débit brut par voie PCIe 6.0",
+        "en": "PCIe 6.0 per-lane raw data rate"
+      },
+      "description": null
+    },
+    {
+      "id": "pcie6-x16-bandwidth",
+      "domain": "interconnect",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante totale PCIe 6.0 x16 (deux sens)",
+        "en": "PCIe 6.0 x16 total bandwidth (both directions)"
+      },
+      "description": null
+    },
+    {
+      "id": "cxl3-data-rate",
+      "domain": "interconnect",
+      "quantityKind": "transfer_rate",
+      "label": {
+        "fr": "Débit CXL 3.0",
+        "en": "CXL 3.0 data rate"
+      },
+      "description": null
+    },
+    {
+      "id": "usb-low-speed-rate",
+      "domain": "interconnect",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit de signalisation USB low-speed",
+        "en": "USB low-speed signaling rate"
+      },
+      "description": null
+    },
+    {
+      "id": "usb-full-speed-rate",
+      "domain": "interconnect",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit de signalisation USB full-speed",
+        "en": "USB full-speed signaling rate"
+      },
+      "description": null
+    },
+    {
+      "id": "usb-high-speed-rate",
+      "domain": "interconnect",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit de signalisation USB 2.0 high-speed",
+        "en": "USB 2.0 high-speed signaling rate"
+      },
+      "description": null
+    },
+    {
+      "id": "usb32-20g-rate",
+      "domain": "interconnect",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit USB 3.2 sur deux voies (20 Gbit/s)",
+        "en": "USB 3.2 two-lane transfer rate (20 Gbps)"
+      },
+      "description": null
+    },
+    {
+      "id": "usb4-80g-rate",
+      "domain": "interconnect",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit maximal USB4 (câbles 80 Gbit/s)",
+        "en": "USB4 maximum data rate (80 Gbps cables)"
+      },
+      "description": null
+    },
+    {
+      "id": "usb-fs-frame",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Période de trame USB full/low-speed",
+        "en": "USB full/low-speed frame period"
+      },
+      "description": null
+    },
+    {
+      "id": "usb-hs-microframe",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Période de micro-trame USB 2.0 high-speed",
+        "en": "USB 2.0 high-speed microframe period"
+      },
+      "description": null
+    },
+    {
+      "id": "usb-fs-interrupt-min-period",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Période d'interrogation minimale d'un point de terminaison interrupt USB full-speed",
+        "en": "USB full-speed interrupt endpoint shortest polling period"
+      },
+      "description": null
+    },
+    {
+      "id": "usb-ls-interrupt-min-period",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Période d'interrogation minimale d'un point de terminaison interrupt USB low-speed",
+        "en": "USB low-speed interrupt endpoint shortest polling period"
+      },
+      "description": null
+    },
+    {
+      "id": "usb-fs-max-polling-rate",
+      "domain": "peripheral",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence maximale d'interrogation interrupt USB full-speed",
+        "en": "Maximum USB full-speed interrupt polling rate"
+      },
+      "description": null
+    },
+    {
+      "id": "usb-hs-max-polling-rate",
+      "domain": "peripheral",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence maximale d'interrogation interrupt USB high-speed",
+        "en": "Maximum USB high-speed interrupt polling rate"
+      },
+      "description": null
+    },
+    {
+      "id": "hdmi-8k60-refresh",
+      "domain": "peripheral",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de rafraîchissement HDMI 8K60",
+        "en": "HDMI 8K60 refresh rate"
+      },
+      "description": null
+    },
+    {
+      "id": "hdmi-4k120-refresh",
+      "domain": "peripheral",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de rafraîchissement HDMI 4K120",
+        "en": "HDMI 4K120 refresh rate"
+      },
+      "description": null
+    },
+    {
+      "id": "hdmi22-bandwidth",
+      "domain": "peripheral",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante maximale HDMI 2.2",
+        "en": "HDMI 2.2 maximum bandwidth"
+      },
+      "description": null
+    },
+    {
+      "id": "frame-time-60hz",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'une image à 60 Hz",
+        "en": "Frame duration at 60 Hz"
+      },
+      "description": null
+    },
+    {
+      "id": "frame-time-120hz",
+      "domain": "peripheral",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'une image à 120 Hz",
+        "en": "Frame duration at 120 Hz"
+      },
+      "description": null
+    },
+    {
+      "id": "h100-sxm-hbm-bandwidth",
+      "domain": "accelerator",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante mémoire du GPU NVIDIA H100 SXM",
+        "en": "NVIDIA H100 SXM GPU memory bandwidth"
+      },
+      "description": null
+    },
+    {
+      "id": "h100-sxm-nvlink-bandwidth",
+      "domain": "accelerator",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante NVLink du NVIDIA H100 SXM",
+        "en": "NVIDIA H100 SXM NVLink bandwidth"
+      },
+      "description": null
+    },
+    {
+      "id": "b200-nvlink-gpu-to-gpu",
+      "domain": "accelerator",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante NVLink GPU à GPU du NVIDIA HGX B200",
+        "en": "NVIDIA HGX B200 NVLink GPU-to-GPU bandwidth"
+      },
+      "description": null
+    },
+    {
+      "id": "dgx-b200-total-hbm-bandwidth",
+      "domain": "accelerator",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante HBM3e cumulée du NVIDIA DGX B200 (8 GPU)",
+        "en": "NVIDIA DGX B200 aggregate HBM3e bandwidth (8 GPUs)"
+      },
+      "description": null
+    },
+    {
+      "id": "b200-per-gpu-hbm-bandwidth",
+      "domain": "accelerator",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante HBM3e par GPU NVIDIA B200 (dérivée)",
+        "en": "NVIDIA B200 per-GPU HBM3e bandwidth (derived)"
+      },
+      "description": null
+    },
+    {
+      "id": "mi300x-hbm-bandwidth",
+      "domain": "accelerator",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante mémoire crête de l'AMD Instinct MI300X",
+        "en": "AMD Instinct MI300X peak memory bandwidth"
+      },
+      "description": null
+    },
+    {
+      "id": "mi300x-peak-engine-clock",
+      "domain": "accelerator",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence crête du moteur de l'AMD Instinct MI300X",
+        "en": "AMD Instinct MI300X peak engine clock"
+      },
+      "description": null
+    },
+    {
+      "id": "tpu-v5p-hbm-bandwidth",
+      "domain": "accelerator",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante HBM par puce Google TPU v5p",
+        "en": "Google TPU v5p HBM bandwidth per chip"
+      },
+      "description": null
+    },
+    {
+      "id": "tpu-v5p-ici-bandwidth",
+      "domain": "accelerator",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Bande passante d'interconnexion inter-puces (ICI) par puce Google TPU v5p",
+        "en": "Google TPU v5p inter-chip interconnect (ICI) bandwidth per chip"
+      },
+      "description": null
+    },
+    {
+      "id": "mlperf-llama2-70b-server-ttft",
+      "domain": "ai",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Limite TTFT MLPerf Inference Llama2-70B, scénario Server",
+        "en": "MLPerf Inference Llama2-70B Server TTFT limit"
+      },
+      "description": null
+    },
+    {
+      "id": "mlperf-llama2-70b-server-tpot",
+      "domain": "ai",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Limite TPOT MLPerf Inference Llama2-70B, scénario Server",
+        "en": "MLPerf Inference Llama2-70B Server TPOT limit"
+      },
+      "description": null
+    },
+    {
+      "id": "mlperf-llama2-70b-interactive-ttft",
+      "domain": "ai",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Limite TTFT MLPerf Inference Llama2-70B, catégorie Interactive",
+        "en": "MLPerf Inference Llama2-70B Interactive TTFT limit"
+      },
+      "description": null
+    },
+    {
+      "id": "mlperf-llama2-70b-interactive-tpot",
+      "domain": "ai",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Limite TPOT MLPerf Inference Llama2-70B, catégorie Interactive",
+        "en": "MLPerf Inference Llama2-70B Interactive TPOT limit"
+      },
+      "description": null
+    },
+    {
+      "id": "exos-x20-spindle-frequency",
+      "domain": "storage",
+      "quantityKind": "frequency",
+      "label": {
+        "fr": "Fréquence de rotation de la broche du Seagate Exos X20",
+        "en": "Seagate Exos X20 spindle rotation frequency"
+      },
+      "description": null
+    },
+    {
+      "id": "exos-x20-average-latency",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence moyenne (rotationnelle) du Seagate Exos X20",
+        "en": "Seagate Exos X20 average (rotational) latency"
+      },
+      "description": null
+    },
+    {
+      "id": "hdd-7200rpm-half-rotation",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence rotationnelle moyenne à 7 200 tr/min (un demi-tour)",
+        "en": "Mean rotational latency at 7,200 RPM (half a revolution)"
+      },
+      "description": null
+    },
+    {
+      "id": "hdd-7200rpm-full-rotation",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'un tour complet à 7 200 tr/min",
+        "en": "One full revolution at 7,200 RPM"
+      },
+      "description": null
+    },
+    {
+      "id": "exos-x20-sustained-transfer",
+      "domain": "storage",
+      "quantityKind": "throughput",
+      "label": {
+        "fr": "Débit soutenu maximal du Seagate Exos X20 (pistes extérieures)",
+        "en": "Seagate Exos X20 maximum sustained transfer rate (outer diameter)"
+      },
+      "description": null
+    },
+    {
+      "id": "samsung-990pro-qd1-read-latency-derived",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence moyenne de lecture aléatoire du Samsung 990 PRO à QD1 (dérivée des IOPS)",
+        "en": "Samsung 990 PRO mean 4K random read latency at QD1 (derived from IOPS)"
+      },
+      "description": null
+    },
+    {
+      "id": "optane-p5800x-4k-qd1-p99-read",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence de lecture aléatoire 4K de l'Intel Optane SSD P5800X, QD1, 99e centile",
+        "en": "Intel Optane SSD P5800X 4K random read latency, QD1, 99th percentile"
+      },
+      "description": null
+    },
+    {
+      "id": "solidigm-p5620-qd1-write-p999999",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence d'écriture aléatoire du Solidigm D7-P5620, QD1, six neuf",
+        "en": "Solidigm D7-P5620 random write latency, QD1, six-nines"
+      },
+      "description": null
+    },
+    {
+      "id": "solidigm-p5520-4k-qd16-latency-derived",
+      "domain": "storage",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Latence moyenne de lecture aléatoire 4 Ko du Solidigm D7-P5520 à QD16 (dérivée)",
+        "en": "Solidigm D7-P5520 mean 4 KB random read latency at QD16 (derived)"
+      },
+      "description": null
+    }
+  ]
+}
