@@ -5,7 +5,7 @@
   import { app } from '../lib/app.svelte';
   import { corpus, phenomenonOf } from '../lib/corpus';
   import { PROVENANCES } from '../lib/url-state';
-  import { formatCalendar, formatCalendarShort, formatPhysicalDuration, formatValue } from '../lib/format';
+  import { formatCalendar, formatCalendarShort, formatLevel, formatPhysicalDuration, formatValue } from '../lib/format';
   import ObserverControl from './ObserverControl.svelte';
   import ExportPanel from './ExportPanel.svelte';
 
@@ -68,9 +68,16 @@
   const open = (m: NormalizedMeasurement) => app.set({ selected: m.id }, true);
   const label = (m: NormalizedMeasurement) => phenomenonOf(m).label[lang];
   const domainName = (m: NormalizedMeasurement) => t(`domain.${phenomenonOf(m).domain}`);
+  /** Dispersion always shown WITH its type (review of uncertainty, M1). */
+  const uncText = (m: NormalizedMeasurement) => {
+    const u = m.uncertainty!;
+    return u.type === 'confidence-interval'
+      ? `[${formatValue(u.low!, m.unit, lang)} – ${formatValue(u.high!, m.unit, lang)}] (${t('unc.short.confidence-interval', { level: formatLevel(u.level ?? 0, lang) })})`
+      : `± ${formatValue(u.value!, m.unit, lang)} (${t(`unc.short.${u.type}`)})`;
+  };
   /** Extra details for assistive tech, appended after the visible text (WCAG 2.5.3). */
   const rowDetails = (m: NormalizedMeasurement) =>
-    `; ${t('axis.physical')} ${formatPhysicalDuration(m.valueSI, lang)} ; ${t('axis.subjective')} ${formatCalendar(subj(m.valueSI), lang)}`;
+    `; ${t('axis.physical')} ${formatPhysicalDuration(m.valueSI, lang)}${m.uncertainty ? ` ${uncText(m)}` : ''} ; ${t('axis.subjective')} ${formatCalendar(subj(m.valueSI), lang)}`;
 </script>
 
 <section aria-labelledby="tl-h" data-testid="timeline">
@@ -173,7 +180,7 @@
             {#each positive as m (m.id)}
               <tr>
                 <th scope="row"><button type="button" class="link" onclick={() => open(m)}>{label(m)}</button></th>
-                <td>{formatValue(m.value, m.unit, lang)}{#if m.uncertainty?.value != null} ± {formatValue(m.uncertainty.value, m.unit, lang)}{/if}{#if m.low !== null && m.high !== null} ({formatValue(m.low, m.unit, lang)} – {formatValue(m.high, m.unit, lang)}){/if}</td>
+                <td>{formatValue(m.value, m.unit, lang)}{#if m.uncertainty}<span class="unc" data-testid="table-uncertainty">{uncText(m)}</span>{/if}{#if m.low !== null && m.high !== null} ({formatValue(m.low, m.unit, lang)} – {formatValue(m.high, m.unit, lang)}){/if}</td>
                 <td>{formatPhysicalDuration(m.valueSI, lang)}</td>
                 <td>{formatCalendar(subj(m.valueSI), lang)}</td>
                 <td>{domainName(m)}</td>

@@ -27,27 +27,71 @@
       }
     },
     "azure-rtt-eastus-westeurope": {
-      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009).",
       "patch": {
-        "protocol": "Azure backbone round-trip probes between region pairs; statistic: median (P50) over a 30-day window ending 2026-07-30. Not stated by the source: sample count, probe type, quantile method."
+        "protocol": "Azure backbone round-trip probes between region pairs; statistic: median (P50) over a 30-day window ending 2026-07-30. Not stated by the source: sample count, probe type, quantile method.",
+        "statistics": {
+          "sampleCount": null,
+          "sampleCountNote": "Number of probes not published by the source.",
+          "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+          "quantiles": [
+            {
+              "p": 0.5,
+              "value": 83
+            }
+          ]
+        }
       }
     },
     "azure-rtt-eastus-westus": {
-      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009).",
       "patch": {
-        "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated."
+        "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated.",
+        "statistics": {
+          "sampleCount": null,
+          "sampleCountNote": "Number of probes not published by the source.",
+          "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+          "quantiles": [
+            {
+              "p": 0.5,
+              "value": 69
+            }
+          ]
+        }
       }
     },
     "azure-rtt-westeurope-francecentral": {
-      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009).",
       "patch": {
-        "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated."
+        "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated.",
+        "statistics": {
+          "sampleCount": null,
+          "sampleCountNote": "Number of probes not published by the source.",
+          "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+          "quantiles": [
+            {
+              "p": 0.5,
+              "value": 13
+            }
+          ]
+        }
       }
     },
     "azure-rtt-eastus-australiaeast": {
-      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009).",
       "patch": {
-        "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated."
+        "protocol": "Same protocol as azure-rtt-eastus-westeurope (Azure backbone probes, 30-day P50, window ending 2026-07-30). Sample count and method not stated.",
+        "statistics": {
+          "sampleCount": null,
+          "sampleCountNote": "Number of probes not published by the source.",
+          "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+          "quantiles": [
+            {
+              "p": 0.5,
+              "value": 201
+            }
+          ]
+        }
       }
     },
     "human-simple-visual-reaction-time": {
@@ -337,9 +381,24 @@
       }
     },
     "mlperf-v50-h200x8-llama2-70b-server-ttft-mean": {
-      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "reason": "Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit). Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
       "patch": {
-        "confidenceNotes": "397,824,116 ns rounded. Submitter-run; latency is under a server load near the target QPS, not unloaded."
+        "confidenceNotes": "397,824,116 ns rounded. Submitter-run; latency is under a server load near the target QPS, not unloaded.",
+        "statistics": {
+          "sampleCount": null,
+          "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+          "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+          "quantiles": [
+            {
+              "p": 0.5,
+              "value": 358.6
+            },
+            {
+              "p": 0.99,
+              "value": 937.6
+            }
+          ]
+        }
       }
     },
     "android-low-latency-rtl-max": {
@@ -549,6 +608,154 @@
       "patch": {
         "conditionsFr": "Spécification PCI Express Base 3.0 (novembre 2010), codage 128b/130b ; 8 GT/s par voie.",
         "conditionsEn": "PCI Express Base 3.0 specification (November 2010), 128b/130b encoding; 8 GT/s per lane."
+      }
+    },
+    "cuda-null-kernel-launch-h100": {
+      "reason": "Published quantiles recorded as statistics (ADR-0009, review of uncertainty M3): Table III columns are avg, p50, p5, p95 (verifier evidence); n = 150 measured runs (Phase 2, W=50/R=150).",
+      "patch": {
+        "statistics": {
+          "sampleCount": 150,
+          "sampleCountNote": null,
+          "method": "Not stated by the source (quantiles as published in Table III).",
+          "quantiles": [
+            {
+              "p": 0.05,
+              "value": 4.26
+            },
+            {
+              "p": 0.5,
+              "value": 4.578
+            },
+            {
+              "p": 0.95,
+              "value": 5.396
+            }
+          ]
+        }
+      }
+    },
+    "cuda-null-kernel-launch-h200": {
+      "reason": "Published quantiles recorded as statistics (ADR-0009, review of uncertainty M3): Table III columns are avg, p50, p5, p95 (verifier evidence); n = 150 measured runs (Phase 2, W=50/R=150).",
+      "patch": {
+        "statistics": {
+          "sampleCount": 150,
+          "sampleCountNote": null,
+          "method": "Not stated by the source (quantiles as published in Table III).",
+          "quantiles": [
+            {
+              "p": 0.05,
+              "value": 4.177
+            },
+            {
+              "p": 0.5,
+              "value": 4.452
+            },
+            {
+              "p": 0.95,
+              "value": 4.909
+            }
+          ]
+        }
+      }
+    },
+    "mlperf-v50-h200x8-llama2-70b-server-tpot-mean": {
+      "reason": "Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
+      "patch": {
+        "statistics": {
+          "sampleCount": null,
+          "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+          "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+          "quantiles": [
+            {
+              "p": 0.5,
+              "value": 173.3
+            },
+            {
+              "p": 0.99,
+              "value": 181.9
+            }
+          ]
+        }
+      }
+    },
+    "mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean": {
+      "reason": "Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
+      "patch": {
+        "statistics": {
+          "sampleCount": null,
+          "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+          "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+          "quantiles": [
+            {
+              "p": 0.5,
+              "value": 74.0
+            },
+            {
+              "p": 0.99,
+              "value": 212.3
+            }
+          ]
+        }
+      }
+    },
+    "mlperf-v50-b200x8-llama2-70b-interactive-tpot-mean": {
+      "reason": "Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
+      "patch": {
+        "statistics": {
+          "sampleCount": null,
+          "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+          "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+          "quantiles": [
+            {
+              "p": 0.5,
+              "value": 36.4
+            },
+            {
+              "p": 0.99,
+              "value": 39.1
+            }
+          ]
+        }
+      }
+    },
+    "mlperf-v50-b200x8-llama31-405b-server-ttft-mean": {
+      "reason": "Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
+      "patch": {
+        "statistics": {
+          "sampleCount": null,
+          "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+          "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+          "quantiles": [
+            {
+              "p": 0.5,
+              "value": 1853.4
+            },
+            {
+              "p": 0.99,
+              "value": 4296.7
+            }
+          ]
+        }
+      }
+    },
+    "mlperf-v50-b200x8-llama31-405b-server-tpot-mean": {
+      "reason": "Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
+      "patch": {
+        "statistics": {
+          "sampleCount": null,
+          "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+          "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+          "quantiles": [
+            {
+              "p": 0.5,
+              "value": 87.2
+            },
+            {
+              "p": 0.99,
+              "value": 113.5
+            }
+          ]
+        }
       }
     }
   },

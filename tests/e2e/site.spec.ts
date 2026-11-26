@@ -140,6 +140,8 @@ test('exports JSON and CSV with versions, units and sources', async ({ page }) =
   const [dl2] = await Promise.all([page.waitForEvent('download'), page.getByTestId('export-csv').click()]);
   const csv = readFileSync((await dl2.path())!, 'utf8');
   expect(csv.split('\r\n')[0]).toContain('valueSI,siUnit');
+  expect(csv.split('\r\n')[0]).toContain('uncertaintyType,uncertaintyValue');
+  expect(csv.split('\r\n')[0]).toContain('quantiles,quantilesSI,statisticsN');
   expect(csv.trim().split('\r\n').length).toBe(corpus.measurements.length + 1);
 });
 
@@ -291,10 +293,24 @@ test('sheet shows one-sided bounds as ≥ / ≤ (review lot 2, m1)', async ({ pa
 
 test('sheet shows structured uncertainty with its type and the source wording (ADR-0009)', async ({ page }) => {
   await page.goto('./#/timeline?lang=en&level=scientific&sel=human-voluntary-blink-closing-phase-m1');
-  await expect(page.getByTestId('sheet-uncertainty')).toContainText('± 2 ms (standard error) · n = 25');
+  await expect(page.getByTestId('sheet-uncertainty')).toContainText(/± 2 ms \(standard error\)\s*· n = 25/);
   await expect(page.getByTestId('sheet-uncertainty')).toContainText('mean ± s.e.');
   await page.goto('./#/timeline?lang=fr&level=scientific&sel=willow-realtime-decoder-latency-d5-m1');
   await expect(page.getByTestId('sheet-uncertainty')).toContainText('non précisée par la source');
   await page.goto('./#/timeline?lang=en&level=scientific&sel=tcp-min-rto-m1');
   await expect(page.getByTestId('sheet-uncertainty')).toHaveText('Unknown (not published by the source).');
+  await page.goto('./#/timeline?lang=en&level=scientific&sel=gps-zenith-one-way-light-time-m1');
+  await expect(page.getByTestId('sheet-uncertainty')).toContainText('Not propagated');
+  await page.goto('./#/timeline?lang=en&level=scientific&sel=cuda-null-kernel-launch-h100-m1');
+  await expect(page.getByTestId('sheet-statistics')).toContainText(/P5 4\.26 µs · P50 4\.578 µs · P95 5\.396 µs\s*· n = 150/);
+  await page.goto('./#/timeline?lang=en&level=scientific&sel=mlperf-v50-h200x8-llama2-70b-server-ttft-mean-m1');
+  await expect(page.getByTestId('sheet-statistics')).toContainText('n not published');
+});
+
+test('table view shows every dispersion with its type (review of uncertainty, M1)', async ({ page }) => {
+  await page.goto('./#/timeline?lang=en&view=table');
+  const cells = page.getByTestId('table-uncertainty');
+  await expect(cells).toHaveCount(3);
+  await expect(page.getByTestId('duration-table')).toContainText('± 2 ms (standard error)');
+  await expect(page.getByTestId('duration-table')).toContainText('± 25 ms (unspecified ±)');
 });

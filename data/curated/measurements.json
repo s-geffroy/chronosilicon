@@ -861,10 +861,20 @@
       "quote": "| East US | 90 | 88 | 84 | 81 | 98 | 90 | 83 |",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of probes not published by the source.",
+        "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 83
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-westeurope",
-      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: 'The measurements are collected in 1-minute intervals'. | Verifier: 'Virginia' and 'Netherlands' are not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26)."
+      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: 'The measurements are collected in 1-minute intervals'. | Verifier: 'Virginia' and 'Netherlands' are not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009)."
     },
     {
       "id": "azure-rtt-eastus-westus-m1",
@@ -888,10 +898,20 @@
       "quote": "| East US | 52 | 69 | 71 | 58 |",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of probes not published by the source.",
+        "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 69
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-westus",
-      "notes": "Columns: West Central US, West US, West US 2, West US 3. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26)."
+      "notes": "Columns: West Central US, West US, West US 2, West US 3. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009)."
     },
     {
       "id": "azure-rtt-westeurope-francecentral-m1",
@@ -915,10 +935,20 @@
       "quote": "| West Europe | 8 | 13 | 22 | 27 | 17 | 20 |  |",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of probes not published by the source.",
+        "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 13
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-westeurope-francecentral",
-      "notes": "Columns: Belgium Central, France Central, France South, Spain Central, Switzerland North, Switzerland West, West Europe. | Verifier: 'Amsterdam area to Paris area' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26)."
+      "notes": "Columns: Belgium Central, France Central, France South, Spain Central, Switzerland North, Switzerland West, West Europe. | Verifier: 'Amsterdam area to Paris area' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009)."
     },
     {
       "id": "azure-rtt-eastus-australiaeast-m1",
@@ -942,10 +972,20 @@
       "quote": "| East US | 200 | 200 | 201 | 212 | 183 |",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of probes not published by the source.",
+        "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 201
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-australiaeast",
-      "notes": "Columns: Australia Central, Australia Central 2, Australia East, Australia Southeast, New Zealand North. | Verifier: 'Virginia to New South Wales' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26)."
+      "notes": "Columns: Australia Central, Australia Central 2, Australia East, Australia Southeast, New Zealand North. | Verifier: 'Virginia to New South Wales' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009)."
     },
     {
       "id": "human-simple-visual-reaction-time-m1",
@@ -6200,10 +6240,28 @@
       "quote": "H100 4.707 4.578 4.260 5.396",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": 150,
+        "sampleCountNote": null,
+        "method": "Not stated by the source (quantiles as published in Table III).",
+        "quantiles": [
+          {
+            "p": 0.05,
+            "value": 4.26
+          },
+          {
+            "p": 0.5,
+            "value": 4.578
+          },
+          {
+            "p": 0.95,
+            "value": 5.396
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#cuda-null-kernel-launch-h100",
-      "notes": "Quote is the H100 row of Table III (avg, p50, p5, p95). The null kernel is part of Phase 2, run with 50 warm-up + 150 measured iterations. Measured under nsys tracing. Preprint. | Verifier: The original protocol said n not stated for the null kernel; the paper states W=50/R=150 for Phase 2, which includes the null-kernel run."
+      "notes": "Quote is the H100 row of Table III (avg, p50, p5, p95). The null kernel is part of Phase 2, run with 50 warm-up + 150 measured iterations. Measured under nsys tracing. Preprint. | Verifier: The original protocol said n not stated for the null kernel; the paper states W=50/R=150 for Phase 2, which includes the null-kernel run. | Decision: Published quantiles recorded as statistics (ADR-0009, review of uncertainty M3): Table III columns are avg, p50, p5, p95 (verifier evidence); n = 150 measured runs (Phase 2, W=50/R=150)."
     },
     {
       "id": "cuda-null-kernel-launch-h200-m1",
@@ -6227,10 +6285,28 @@
       "quote": "H200 4.503 4.452 4.177 4.909",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": 150,
+        "sampleCountNote": null,
+        "method": "Not stated by the source (quantiles as published in Table III).",
+        "quantiles": [
+          {
+            "p": 0.05,
+            "value": 4.177
+          },
+          {
+            "p": 0.5,
+            "value": 4.452
+          },
+          {
+            "p": 0.95,
+            "value": 4.909
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#cuda-null-kernel-launch-h200",
-      "notes": "Same as the H100 value: Phase 2, 50 warm-up + 150 measured iterations; measured under nsys tracing. Preprint. | Verifier: Same correction as H100 on the repetition count."
+      "notes": "Same as the H100 value: Phase 2, 50 warm-up + 150 measured iterations; measured under nsys tracing. Preprint. | Verifier: Same correction as H100 on the repetition count. | Decision: Published quantiles recorded as statistics (ADR-0009, review of uncertainty M3): Table III columns are avg, p50, p5, p95 (verifier evidence); n = 150 measured runs (Phase 2, W=50/R=150)."
     },
     {
       "id": "rtx4090-memory-bandwidth-m1",
@@ -6389,10 +6465,24 @@
       "quote": "Mean First Token latency (ns)               : 397824116",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 358.6
+          },
+          {
+            "p": 0.99,
+            "value": 937.6
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-h200x8-llama2-70b-server-ttft-mean",
-      "notes": "397,824,116 ns rounded. Submitter-run; latency is under a server load near the target QPS, not unloaded. | Verifier: System JSON checked: 8x H200-SXM-141GB, Xeon Platinum 8480C, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8, closed. Protocol field consistent. 'Audited by MLCommons' (confidenceNotes) is not stated in the log. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit)."
+      "notes": "397,824,116 ns rounded. Submitter-run; latency is under a server load near the target QPS, not unloaded. | Verifier: System JSON checked: 8x H200-SXM-141GB, Xeon Platinum 8480C, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8, closed. Protocol field consistent. 'Audited by MLCommons' (confidenceNotes) is not stated in the log. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit). Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented."
     },
     {
       "id": "mlperf-v50-h200x8-llama2-70b-server-tpot-mean-m1",
@@ -6416,10 +6506,24 @@
       "quote": "Mean Time to Output Token (ns)               : 169962807",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 173.3
+          },
+          {
+            "p": 0.99,
+            "value": 181.9
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-h200x8-llama2-70b-server-tpot-mean",
-      "notes": "169,962,807 ns rounded. High value reflects very large batching to maximise throughput (33,071 tokens/s total) close to the 200 ms bound. | Verifier: The batching explanation in confidenceNotes is the extractor's interpretation, not in the log."
+      "notes": "169,962,807 ns rounded. High value reflects very large batching to maximise throughput (33,071 tokens/s total) close to the 200 ms bound. | Verifier: The batching explanation in confidenceNotes is the extractor's interpretation, not in the log. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented."
     },
     {
       "id": "mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean-m1",
@@ -6443,10 +6547,24 @@
       "quote": "Mean First Token latency (ns)               : 85598458",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 74
+          },
+          {
+            "p": 0.99,
+            "value": 212.3
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean",
-      "notes": "85,598,458 ns rounded. Corpus already holds the Interactive-category bounds; this is a measured value of a named system. | Verifier: System JSON: 'NVIDIA DGX B200 (8x B200-SXM-180GB, TensorRT)', Xeon Platinum 8570, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8. Protocol consistent."
+      "notes": "85,598,458 ns rounded. Corpus already holds the Interactive-category bounds; this is a measured value of a named system. | Verifier: System JSON: 'NVIDIA DGX B200 (8x B200-SXM-180GB, TensorRT)', Xeon Platinum 8570, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8. Protocol consistent. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented."
     },
     {
       "id": "mlperf-v50-b200x8-llama2-70b-interactive-tpot-mean-m1",
@@ -6470,10 +6588,24 @@
       "quote": "Mean Time to Output Token (ns)               : 36129344",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 36.4
+          },
+          {
+            "p": 0.99,
+            "value": 39.1
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-b200x8-llama2-70b-interactive-tpot-mean",
-      "notes": "36,129,344 ns rounded."
+      "notes": "36,129,344 ns rounded. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented."
     },
     {
       "id": "mlperf-v50-b200x8-llama31-405b-server-ttft-mean-m1",
@@ -6497,10 +6629,24 @@
       "quote": "Mean First Token latency (ns)               : 1860083007",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 1853.4
+          },
+          {
+            "p": 0.99,
+            "value": 4296.7
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-b200x8-llama31-405b-server-ttft-mean",
-      "notes": "1,860,083,007 ns rounded. | Verifier: 'Long-context prompts' is not stated in the summary log; removed."
+      "notes": "1,860,083,007 ns rounded. | Verifier: 'Long-context prompts' is not stated in the summary log; removed. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented."
     },
     {
       "id": "mlperf-v50-b200x8-llama31-405b-server-tpot-mean-m1",
@@ -6524,10 +6670,24 @@
       "quote": "Mean Time to Output Token (ns)               : 87022478",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 87.2
+          },
+          {
+            "p": 0.99,
+            "value": 113.5
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-b200x8-llama31-405b-server-tpot-mean",
-      "notes": "87,022,478 ns rounded."
+      "notes": "87,022,478 ns rounded. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented."
     },
     {
       "id": "android-pro-audio-rtl-max-analog-m1",

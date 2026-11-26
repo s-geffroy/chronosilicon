@@ -48,8 +48,11 @@ export function formatFrequency(hz: number, lang: Lang): string {
   return `${formatNumber(hz / f, lang)} ${u}`;
 }
 
+/** Display symbol of a stored unit ('us' is the ASCII spelling of µs). */
+export const displayUnit = (unit: string): string => (unit === 'us' ? 'µs' : unit);
+
 export function formatValue(value: number, unit: string, lang: Lang): string {
-  return `${formatNumber(value, lang, 6)} ${unit}`;
+  return `${formatNumber(value, lang, 6)} ${displayUnit(unit)}`;
 }
 
 /** Compact single-unit label for axis ticks, e.g. "2,8 h", "317 a" (narrow units). */
@@ -66,4 +69,9 @@ export function formatCalendarShort(seconds: number, lang: Lang): string {
     return `${formatNumber(v / 1e3, lang, 2)} k ${y}`;
   }
   return new Intl.NumberFormat(LOCALE[lang], { style: 'unit', unit: INTL_UNIT[first.unit], unitDisplay: 'narrow', maximumSignificantDigits: 2 }).format(v);
+}
+
+/** Confidence level as a percentage without misleading rounding (0.995 → "99.5"). */
+export function formatLevel(level: number, lang: Lang): string {
+  return new Intl.NumberFormat(LOCALE[lang], { maximumFractionDigits: 2 }).format(level * 100);
 }

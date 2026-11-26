@@ -139,6 +139,16 @@
                 "$ref": "measurements.schema.json#/$defs/uncertainty"
               }
             ]
+          },
+          "statistics": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "measurements.schema.json#/$defs/statistics"
+              }
+            ]
           }
         }
       }

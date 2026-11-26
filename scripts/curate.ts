@@ -166,7 +166,7 @@ for (const f of rawFiles) {
       quote: clip(pick('quote', it.quote) as string | null),
       era: Object.hasOwn(patch, 'era') ? (patch['era'] as number | null) : parseEra(pick('era', it.era)),
       uncertainty: (pick('uncertainty', it.uncertainty ?? null) ?? null) as Measurement['uncertainty'],
-      statistics: null,
+      statistics: (pick('statistics', (it as { statistics?: Measurement['statistics'] }).statistics ?? null) ?? null) as Measurement['statistics'],
       calculation: calculation ? { formula: calculation.formula, inputs: calculation.inputs.map((i) => (i.startsWith('src:') ? i : `${i}-m1`)) } : null,
       rawRef: `data/raw/${f}#${it.id}`,
       notes: clip([pick('confidenceNotes', it.confidenceNotes) as string | null, v?.notes ? `Verifier: ${v.notes}` : null, d ? `Decision: ${d.reason}` : null].filter(Boolean).join(' | ') || null, 1000),

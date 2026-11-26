@@ -3,7 +3,7 @@
   import { measurementById, phenomenonOf, sourceById } from '../lib/corpus';
   import { clockedObserver, toSubjective } from '@chronosilicon/observers';
   import { BASE_UNIT } from '@chronosilicon/metrology';
-  import { formatCalendar, formatFrequency, formatNumber, formatPhysicalDuration, formatValue } from '../lib/format';
+  import { formatCalendar, formatFrequency, formatLevel, formatNumber, formatPhysicalDuration, formatValue } from '../lib/format';
 
   const t = app.t;
   let dialog: HTMLDialogElement | undefined = $state();
@@ -57,15 +57,22 @@
       {/if}
       {#if level === 'scientific'}
         <dt>{t('sheet.protocol')}</dt><dd>{m.protocol ?? t('sheet.protocolNone')}</dd>
-        {#if m.statistics}<dt>n</dt><dd>{m.statistics.sampleCount} ({m.statistics.method})</dd>{/if}
         <dt>{t('sheet.uncertainty')}</dt>
         <dd data-testid="sheet-uncertainty">
           {#if m.uncertainty}
             {@const u = m.uncertainty}
-            {#if u.type === 'confidence-interval'}{formatValue(u.low!, m.unit, lang)} – {formatValue(u.high!, m.unit, lang)} ({t('unc.confidence-interval', { level: Math.round((u.level ?? 0) * 100) })}){:else}± {formatValue(u.value!, m.unit, lang)} ({t(`unc.${u.type}`)}){/if}{#if u.sampleCount !== null}{' · '}{t('unc.n', { n: u.sampleCount })}{/if}
-            <span class="help block">{t('unc.statement')} <q lang="en">{u.statement}</q> — {u.locator}</span>
-          {:else}{t('sheet.uncertaintyUnknown')}{/if}
+            {#if u.type === 'confidence-interval'}{formatValue(u.low!, m.unit, lang)} – {formatValue(u.high!, m.unit, lang)} ({t('unc.confidence-interval', { level: formatLevel(u.level ?? 0, lang) })}){:else}± {formatValue(u.value!, m.unit, lang)} ({t(`unc.${u.type}`)}){/if}{#if u.sampleCount !== null}<span class="unc">· {t('unc.n', { n: u.sampleCount })}</span>{/if}
+            <span class="help block">{t('unc.statement')} <span lang="en">{u.statement}</span> — {u.locator}</span>
+          {:else if m.provenanceType === 'calculated'}{t('unc.notPropagated')}{:else}{t('sheet.uncertaintyUnknown')}{/if}
         </dd>
+        {#if m.statistics}
+          <dt>{t('stats.label')}</dt>
+          <dd data-testid="sheet-statistics">
+            {m.statistics.quantiles.map((q) => `P${Math.round(q.p * 100)} ${formatValue(q.value, m.unit, lang)}`).join(' · ')}
+            · {m.statistics.sampleCount !== null ? t('unc.n', { n: m.statistics.sampleCount }) : t('stats.nUnknown')}
+            <span class="help block">{t('stats.method')} : <span lang="en">{m.statistics.method}</span>{#if m.statistics.sampleCountNote} — <span lang="en">{m.statistics.sampleCountNote}</span>{/if}</span>
+          </dd>
+        {/if}
         {#if m.quote}<dt>{t('sheet.quote')}</dt><dd><blockquote>{m.quote}</blockquote></dd>{/if}
         <dt>{t('sheet.raw')}</dt><dd class="mono">{m.rawRef}</dd>
         {#if m.notes}<dt>{t('sheet.notes')}</dt><dd>{#if lang === 'fr'}<span class="help">{t('sheet.notesLang')}</span> {/if}<span lang="en">{m.notes}</span></dd>{/if}

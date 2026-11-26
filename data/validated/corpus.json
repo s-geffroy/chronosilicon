@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "corpusVersion": "0.3.0+335bd3e25174",
+  "corpusVersion": "0.3.0+cc03f882e663",
   "inputs": {
     "data/sources/sources.json": "71566c6bfd2b20268b40497da849c4e1e54c372aa776b2fcd7b16a24aab5cbad",
     "data/curated/phenomena.json": "310ade2c3fda90b9eae3f0f7198f49a9187144ba6a379dac436e93312145e0f0",
-    "data/curated/measurements.json": "5d030a4b022666c3d5e10b7dcdf10a9afe61c400efec7c7d844be3bdb33a2469",
+    "data/curated/measurements.json": "4acffdfafe017a6ce3b4652cb5d979deec00627e5e191f0197b14e6ee6b16d48",
     "data/curated/groups.json": "e92645735c03499001dbde8be08971777d1e16926e910ca94164f464278be2d1",
     "data/curated/observers.json": "16d7b09cf5d838bfe153241917bbf4054df8f57f3a7a354d4638a0bdb20b55bd",
     "data/curated/scenarios.json": "c922b1ea2e636abf6eddcc895126dcebb879f675478a61a7406101a603f2b0de"
@@ -2432,6 +2432,7 @@
       "valueSI": 9192631770,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2469,6 +2470,7 @@
       "valueSI": 1.0878277570776666e-10,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2501,6 +2503,7 @@
       "valueSI": 299792458,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2538,6 +2541,7 @@
       "valueSI": 0.299792458,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2570,6 +2574,7 @@
       "valueSI": 149597870700,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2608,6 +2613,7 @@
       "valueSI": 499.00478383615643,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2640,6 +2646,7 @@
       "valueSI": 384400000,
       "lowSI": 357000000,
       "highSI": 407000000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2678,6 +2685,7 @@
       "valueSI": 1.2822203819416964,
       "lowSI": 1.1908,
       "highSI": 1.3576,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2710,6 +2718,7 @@
       "valueSI": 54600000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2742,6 +2751,7 @@
       "valueSI": 401400000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2780,6 +2790,7 @@
       "valueSI": 182.125995978191,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2818,6 +2829,7 @@
       "valueSI": 1338.9262781253824,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2850,6 +2862,7 @@
       "valueSI": 25902000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2888,6 +2901,7 @@
       "valueSI": 86399.77193822534,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2920,6 +2934,7 @@
       "valueSI": 1,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2952,6 +2967,7 @@
       "valueSI": 1,
       "lowSI": 1,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -2984,6 +3000,7 @@
       "valueSI": 60,
       "lowSI": 60,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3016,6 +3033,7 @@
       "valueSI": 3,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3048,6 +3066,7 @@
       "valueSI": 120,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3080,6 +3099,7 @@
       "valueSI": 0.000004,
       "lowSI": null,
       "highSI": 0.000004,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3112,6 +3132,7 @@
       "valueSI": 0.0005,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3144,6 +3165,7 @@
       "valueSI": 0.001,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3176,6 +3198,7 @@
       "valueSI": 0.004,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3208,6 +3231,7 @@
       "valueSI": 0.6,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3240,6 +3264,7 @@
       "valueSI": 0.05,
       "lowSI": null,
       "highSI": 0.05,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3272,6 +3297,7 @@
       "valueSI": 64,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3309,6 +3335,7 @@
       "valueSI": 6.72e-7,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3346,6 +3373,7 @@
       "valueSI": 6.72e-8,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3383,6 +3411,7 @@
       "valueSI": 6.72e-9,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3407,14 +3436,30 @@
       "quote": "| East US | 90 | 88 | 84 | 81 | 98 | 90 | 83 |",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of probes not published by the source.",
+        "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 83
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-westeurope",
-      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: 'The measurements are collected in 1-minute intervals'. | Verifier: 'Virginia' and 'Netherlands' are not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: 'The measurements are collected in 1-minute intervals'. | Verifier: 'Virginia' and 'Netherlands' are not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009).",
       "quantityKind": "duration",
       "valueSI": 0.083,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.5,
+          "value": 0.083
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -3439,14 +3484,30 @@
       "quote": "| East US | 52 | 69 | 71 | 58 |",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of probes not published by the source.",
+        "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 69
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-westus",
-      "notes": "Columns: West Central US, West US, West US 2, West US 3. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "notes": "Columns: West Central US, West US, West US 2, West US 3. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009).",
       "quantityKind": "duration",
       "valueSI": 0.069,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.5,
+          "value": 0.069
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -3471,14 +3532,30 @@
       "quote": "| West Europe | 8 | 13 | 22 | 27 | 17 | 20 |  |",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of probes not published by the source.",
+        "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 13
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-westeurope-francecentral",
-      "notes": "Columns: Belgium Central, France Central, France South, Spain Central, Switzerland North, Switzerland West, West Europe. | Verifier: 'Amsterdam area to Paris area' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "notes": "Columns: Belgium Central, France Central, France South, Spain Central, Switzerland North, Switzerland West, West Europe. | Verifier: 'Amsterdam area to Paris area' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009).",
       "quantityKind": "duration",
       "valueSI": 0.013,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.5,
+          "value": 0.013
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -3503,14 +3580,30 @@
       "quote": "| East US | 200 | 200 | 201 | 212 | 183 |",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of probes not published by the source.",
+        "method": "Median (P50) over a 30-day window of Azure backbone probes; method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 201
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-australiaeast",
-      "notes": "Columns: Australia Central, Australia Central 2, Australia East, Australia Southeast, New Zealand North. | Verifier: 'Virginia to New South Wales' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "notes": "Columns: Australia Central, Australia Central 2, Australia East, Australia Southeast, New Zealand North. | Verifier: 'Virginia to New South Wales' not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009).",
       "quantityKind": "duration",
       "valueSI": 0.201,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.5,
+          "value": 0.201
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -3543,6 +3636,7 @@
       "valueSI": 0.213,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3575,6 +3669,7 @@
       "valueSI": 0.131,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3616,6 +3711,7 @@
       "valueSI": 0.572,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": {
         "value": 0.025,
         "low": null,
@@ -3661,6 +3757,7 @@
       "valueSI": 0.076,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": {
         "value": 0.002,
         "low": null,
@@ -3697,6 +3794,7 @@
       "valueSI": 65,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3729,6 +3827,7 @@
       "valueSI": 500,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3761,6 +3860,7 @@
       "valueSI": 0.006,
       "lowSI": 0.002,
       "highSI": 0.016,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3793,6 +3893,7 @@
       "valueSI": 0.002,
       "lowSI": 0.002,
       "highSI": 0.007,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3825,6 +3926,7 @@
       "valueSI": 0.04,
       "lowSI": 0.01,
       "highSI": 0.07,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3857,6 +3959,7 @@
       "valueSI": 4,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3889,6 +3992,7 @@
       "valueSI": 12,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3921,6 +4025,7 @@
       "valueSI": 44,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3953,6 +4058,7 @@
       "valueSI": 5,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -3985,6 +4091,7 @@
       "valueSI": 13,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4017,6 +4124,7 @@
       "valueSI": 34,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4049,6 +4157,7 @@
       "valueSI": 26,
       "lowSI": 26,
       "highSI": 31,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4081,6 +4190,7 @@
       "valueSI": 60,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4113,6 +4223,7 @@
       "valueSI": 5e-8,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4145,6 +4256,7 @@
       "valueSI": 9e-8,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4177,6 +4289,7 @@
       "valueSI": 42,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4209,6 +4322,7 @@
       "valueSI": 0.000181,
       "lowSI": 0.000104,
       "highSI": 0.000181,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4241,6 +4355,7 @@
       "valueSI": 0.000001,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4273,6 +4388,7 @@
       "valueSI": 4,
       "lowSI": 4,
       "highSI": 5,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4305,6 +4421,7 @@
       "valueSI": 14,
       "lowSI": 14,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4337,6 +4454,7 @@
       "valueSI": 50,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4369,6 +4487,7 @@
       "valueSI": 4,
       "lowSI": 4,
       "highSI": 5,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4401,6 +4520,7 @@
       "valueSI": 14,
       "lowSI": 14,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4433,6 +4553,7 @@
       "valueSI": 46,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4465,6 +4586,7 @@
       "valueSI": 1,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4497,6 +4619,7 @@
       "valueSI": 3,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4529,6 +4652,7 @@
       "valueSI": 14,
       "lowSI": 14,
       "highSI": 18,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4561,6 +4685,7 @@
       "valueSI": 35,
       "lowSI": 32,
       "highSI": 90,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4593,6 +4718,7 @@
       "valueSI": 10,
       "lowSI": 10,
       "highSI": 18,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4625,6 +4751,7 @@
       "valueSI": 6000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4657,6 +4784,7 @@
       "valueSI": 3200000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4689,6 +4817,7 @@
       "valueSI": 5000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4721,6 +4850,7 @@
       "valueSI": 1500000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4753,6 +4883,7 @@
       "valueSI": 1.6e-8,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4785,6 +4916,7 @@
       "valueSI": 1.375e-8,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4817,6 +4949,7 @@
       "valueSI": 0.0000078125,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4849,6 +4982,7 @@
       "valueSI": 3.5e-7,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4881,6 +5015,7 @@
       "valueSI": 1.1e-7,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4913,6 +5048,7 @@
       "valueSI": 8e-8,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4945,6 +5081,7 @@
       "valueSI": 1.79e-7,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -4977,6 +5114,7 @@
       "valueSI": 120000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5009,6 +5147,7 @@
       "valueSI": 250,
       "lowSI": 100,
       "highSI": 1000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5046,6 +5185,7 @@
       "valueSI": 0.001,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5078,6 +5218,7 @@
       "valueSI": 0.00075,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5110,6 +5251,7 @@
       "valueSI": 0.0007,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5142,6 +5284,7 @@
       "valueSI": 0.00005,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5174,6 +5317,7 @@
       "valueSI": 0.000003,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5206,6 +5350,7 @@
       "valueSI": 0.000006,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5238,6 +5383,7 @@
       "valueSI": 3.5e-7,
       "lowSI": 3e-7,
       "highSI": 4e-7,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5270,6 +5416,7 @@
       "valueSI": 16000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5302,6 +5449,7 @@
       "valueSI": 32000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5334,6 +5482,7 @@
       "valueSI": 128000000000,
       "lowSI": null,
       "highSI": 128000000000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5366,6 +5515,7 @@
       "valueSI": 64000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5398,6 +5548,7 @@
       "valueSI": 256000000000,
       "lowSI": null,
       "highSI": 256000000000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5430,6 +5581,7 @@
       "valueSI": 64000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5462,6 +5614,7 @@
       "valueSI": 187500,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5494,6 +5647,7 @@
       "valueSI": 1500000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5526,6 +5680,7 @@
       "valueSI": 60000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5558,6 +5713,7 @@
       "valueSI": 2500000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5590,6 +5746,7 @@
       "valueSI": 10000000000,
       "lowSI": null,
       "highSI": 10000000000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5622,6 +5779,7 @@
       "valueSI": 0.001,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5654,6 +5812,7 @@
       "valueSI": 0.000125,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5686,6 +5845,7 @@
       "valueSI": 0.001,
       "lowSI": 0.001,
       "highSI": 0.255,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5718,6 +5878,7 @@
       "valueSI": 0.01,
       "lowSI": 0.01,
       "highSI": 0.255,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5755,6 +5916,7 @@
       "valueSI": 1000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5792,6 +5954,7 @@
       "valueSI": 8000,
       "lowSI": null,
       "highSI": 8000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5824,6 +5987,7 @@
       "valueSI": 60,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5856,6 +6020,7 @@
       "valueSI": 120,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5888,6 +6053,7 @@
       "valueSI": 12000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5925,6 +6091,7 @@
       "valueSI": 0.016666666666666666,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5962,6 +6129,7 @@
       "valueSI": 0.008333333333333333,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -5994,6 +6162,7 @@
       "valueSI": 3350000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6026,6 +6195,7 @@
       "valueSI": 900000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6058,6 +6228,7 @@
       "valueSI": 1800000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6090,6 +6261,7 @@
       "valueSI": 64000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6127,6 +6299,7 @@
       "valueSI": 8000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6159,6 +6332,7 @@
       "valueSI": 5300000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6191,6 +6365,7 @@
       "valueSI": 2100000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6223,6 +6398,7 @@
       "valueSI": 2765000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6255,6 +6431,7 @@
       "valueSI": 1200000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6287,6 +6464,7 @@
       "valueSI": 2,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6319,6 +6497,7 @@
       "valueSI": 0.2,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6351,6 +6530,7 @@
       "valueSI": 0.45,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6383,6 +6563,7 @@
       "valueSI": 0.04,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6420,6 +6601,7 @@
       "valueSI": 120,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6452,6 +6634,7 @@
       "valueSI": 0.0041600000000000005,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6489,6 +6672,7 @@
       "valueSI": 0.004166666666666667,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6526,6 +6710,7 @@
       "valueSI": 0.008333333333333333,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6558,6 +6743,7 @@
       "valueSI": 285000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6590,6 +6776,7 @@
       "valueSI": 0.000006,
       "lowSI": null,
       "highSI": 0.000006,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6622,6 +6809,7 @@
       "valueSI": 0.000137,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6659,6 +6847,7 @@
       "valueSI": 0.00006846384253316217,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6691,6 +6880,7 @@
       "valueSI": 1.8e-11,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6723,6 +6913,7 @@
       "valueSI": 3.7e-11,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6761,6 +6952,7 @@
       "valueSI": 275027502.750275,
       "lowSI": 267594327.0002676,
       "highSI": 282885431.40028286,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6793,6 +6985,7 @@
       "valueSI": 300000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6825,6 +7018,7 @@
       "valueSI": 500000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6857,6 +7051,7 @@
       "valueSI": 470000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6889,6 +7084,7 @@
       "valueSI": 650000000000,
       "lowSI": null,
       "highSI": 650000000000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6921,6 +7117,7 @@
       "valueSI": 1500000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6953,6 +7150,7 @@
       "valueSI": 0.0000011,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -6985,6 +7183,7 @@
       "valueSI": 0.000068,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7017,6 +7216,7 @@
       "valueSI": 0.000089,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7049,6 +7249,7 @@
       "valueSI": 4.2e-8,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7081,6 +7282,7 @@
       "valueSI": 2.5e-8,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7122,6 +7324,7 @@
       "valueSI": 0.000063,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": {
         "value": 0.000017,
         "low": null,
@@ -7158,6 +7361,7 @@
       "valueSI": 0.00018,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7190,6 +7394,7 @@
       "valueSI": 1.04e-7,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7222,6 +7427,7 @@
       "valueSI": 3.2e-8,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7254,6 +7460,7 @@
       "valueSI": 2.1e-10,
       "lowSI": 2.1e-10,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7286,6 +7493,7 @@
       "valueSI": 5e-9,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7318,6 +7526,7 @@
       "valueSI": 20200000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7357,6 +7566,7 @@
       "valueSI": 0.06737994723002672,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7389,6 +7599,7 @@
       "valueSI": 35786000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7428,6 +7639,7 @@
       "valueSI": 0.1193692471076107,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7460,6 +7672,7 @@
       "valueSI": 420000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7492,6 +7705,7 @@
       "valueSI": 9500000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7524,6 +7738,7 @@
       "valueSI": 31920,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7556,6 +7771,7 @@
       "valueSI": 5900000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7588,6 +7804,7 @@
       "valueSI": 19800,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7620,6 +7837,7 @@
       "valueSI": 50000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7652,6 +7870,7 @@
       "valueSI": 100000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7690,6 +7909,7 @@
       "valueSI": 8.4e-10,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7722,6 +7942,7 @@
       "valueSI": 1e-9,
       "lowSI": null,
       "highSI": 1e-9,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7754,6 +7975,7 @@
       "valueSI": 0.001,
       "lowSI": null,
       "highSI": 0.001,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7786,6 +8008,7 @@
       "valueSI": 3750000000,
       "lowSI": 3750000000,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7818,6 +8041,7 @@
       "valueSI": 0.0075,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7850,6 +8074,7 @@
       "valueSI": 4,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7882,6 +8107,7 @@
       "valueSI": 0.0257,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7914,6 +8140,7 @@
       "valueSI": 0.043,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7946,6 +8173,7 @@
       "valueSI": 2198400000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -7978,6 +8206,7 @@
       "valueSI": 2735820000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8010,6 +8239,7 @@
       "valueSI": 1809000000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8042,6 +8272,7 @@
       "valueSI": 2821100000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8074,6 +8305,7 @@
       "valueSI": 1353000000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8106,6 +8338,7 @@
       "valueSI": 2055719999999999700,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8138,6 +8371,7 @@
       "valueSI": 1012000000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8170,6 +8404,7 @@
       "valueSI": 1980010000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8202,6 +8437,7 @@
       "valueSI": 1000000000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8234,6 +8470,7 @@
       "valueSI": 1226280000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8266,6 +8503,7 @@
       "valueSI": 59700000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8298,6 +8536,7 @@
       "valueSI": 1026000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8330,6 +8569,7 @@
       "valueSI": 1102000000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8362,6 +8602,7 @@
       "valueSI": 4,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8394,6 +8635,7 @@
       "valueSI": 4,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8426,6 +8668,7 @@
       "valueSI": 4,
       "lowSI": 2,
       "highSI": 4,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8458,6 +8701,7 @@
       "valueSI": 12,
       "lowSI": 10,
       "highSI": 12,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8490,6 +8734,7 @@
       "valueSI": 2000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8522,6 +8767,7 @@
       "valueSI": 6000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8554,6 +8800,7 @@
       "valueSI": 16000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8586,6 +8833,7 @@
       "valueSI": 25000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8618,6 +8866,7 @@
       "valueSI": 66000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8650,6 +8899,7 @@
       "valueSI": 200000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8682,6 +8932,7 @@
       "valueSI": 1000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8714,6 +8965,7 @@
       "valueSI": 8000000,
       "lowSI": 4000000,
       "highSI": 8000000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8746,6 +8998,7 @@
       "valueSI": 1200000000000,
       "lowSI": 1200000000000,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8778,6 +9031,7 @@
       "valueSI": 1150000000,
       "lowSI": 1150000000,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8810,6 +9064,7 @@
       "valueSI": 1180000000000,
       "lowSI": null,
       "highSI": 1180000000000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8842,6 +9097,7 @@
       "valueSI": 819000000000,
       "lowSI": null,
       "highSI": 819000000000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8874,6 +9130,7 @@
       "valueSI": 1337500000,
       "lowSI": null,
       "highSI": 1337500000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8906,6 +9163,7 @@
       "valueSI": 400,
       "lowSI": 400,
       "highSI": 500,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8938,6 +9196,7 @@
       "valueSI": 100,
       "lowSI": null,
       "highSI": 100,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -8970,6 +9229,7 @@
       "valueSI": 30,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9002,6 +9262,7 @@
       "valueSI": 3.44e-7,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9034,6 +9295,7 @@
       "valueSI": 1000,
       "lowSI": 1000,
       "highSI": 4000,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9066,6 +9328,7 @@
       "valueSI": 0.00006,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9098,6 +9361,7 @@
       "valueSI": 0.000007,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9130,6 +9394,7 @@
       "valueSI": 14500000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9162,6 +9427,7 @@
       "valueSI": 0.002,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9199,6 +9465,7 @@
       "valueSI": 250,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9236,6 +9503,7 @@
       "valueSI": 90,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9273,6 +9541,7 @@
       "valueSI": 0.005555555555555556,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9305,6 +9574,7 @@
       "valueSI": 400000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9337,6 +9607,7 @@
       "valueSI": 45,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9369,6 +9640,7 @@
       "valueSI": 750000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9401,6 +9673,7 @@
       "valueSI": 8000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9433,6 +9706,7 @@
       "valueSI": 50000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9465,6 +9739,7 @@
       "valueSI": 100000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9497,6 +9772,7 @@
       "valueSI": 2.14e-7,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9529,6 +9805,7 @@
       "valueSI": 3.94e-7,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9553,14 +9830,46 @@
       "quote": "H100 4.707 4.578 4.260 5.396",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": 150,
+        "sampleCountNote": null,
+        "method": "Not stated by the source (quantiles as published in Table III).",
+        "quantiles": [
+          {
+            "p": 0.05,
+            "value": 4.26
+          },
+          {
+            "p": 0.5,
+            "value": 4.578
+          },
+          {
+            "p": 0.95,
+            "value": 5.396
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#cuda-null-kernel-launch-h100",
-      "notes": "Quote is the H100 row of Table III (avg, p50, p5, p95). The null kernel is part of Phase 2, run with 50 warm-up + 150 measured iterations. Measured under nsys tracing. Preprint. | Verifier: The original protocol said n not stated for the null kernel; the paper states W=50/R=150 for Phase 2, which includes the null-kernel run.",
+      "notes": "Quote is the H100 row of Table III (avg, p50, p5, p95). The null kernel is part of Phase 2, run with 50 warm-up + 150 measured iterations. Measured under nsys tracing. Preprint. | Verifier: The original protocol said n not stated for the null kernel; the paper states W=50/R=150 for Phase 2, which includes the null-kernel run. | Decision: Published quantiles recorded as statistics (ADR-0009, review of uncertainty M3): Table III columns are avg, p50, p5, p95 (verifier evidence); n = 150 measured runs (Phase 2, W=50/R=150).",
       "quantityKind": "duration",
       "valueSI": 0.000004707,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.05,
+          "value": 0.00000426
+        },
+        {
+          "p": 0.5,
+          "value": 0.000004578
+        },
+        {
+          "p": 0.95,
+          "value": 0.000005396
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -9585,14 +9894,46 @@
       "quote": "H200 4.503 4.452 4.177 4.909",
       "era": 2026,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": 150,
+        "sampleCountNote": null,
+        "method": "Not stated by the source (quantiles as published in Table III).",
+        "quantiles": [
+          {
+            "p": 0.05,
+            "value": 4.177
+          },
+          {
+            "p": 0.5,
+            "value": 4.452
+          },
+          {
+            "p": 0.95,
+            "value": 4.909
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#cuda-null-kernel-launch-h200",
-      "notes": "Same as the H100 value: Phase 2, 50 warm-up + 150 measured iterations; measured under nsys tracing. Preprint. | Verifier: Same correction as H100 on the repetition count.",
+      "notes": "Same as the H100 value: Phase 2, 50 warm-up + 150 measured iterations; measured under nsys tracing. Preprint. | Verifier: Same correction as H100 on the repetition count. | Decision: Published quantiles recorded as statistics (ADR-0009, review of uncertainty M3): Table III columns are avg, p50, p5, p95 (verifier evidence); n = 150 measured runs (Phase 2, W=50/R=150).",
       "quantityKind": "duration",
       "valueSI": 0.000004503,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.05,
+          "value": 0.000004177
+        },
+        {
+          "p": 0.5,
+          "value": 0.000004452
+        },
+        {
+          "p": 0.95,
+          "value": 0.000004909
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -9625,6 +9966,7 @@
       "valueSI": 1008000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9657,6 +9999,7 @@
       "valueSI": 1792000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9689,6 +10032,7 @@
       "valueSI": 34000000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9721,6 +10065,7 @@
       "valueSI": 81700000000000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9745,14 +10090,38 @@
       "quote": "Mean First Token latency (ns)               : 397824116",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 358.6
+          },
+          {
+            "p": 0.99,
+            "value": 937.6
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-h200x8-llama2-70b-server-ttft-mean",
-      "notes": "397,824,116 ns rounded. Submitter-run; latency is under a server load near the target QPS, not unloaded. | Verifier: System JSON checked: 8x H200-SXM-141GB, Xeon Platinum 8480C, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8, closed. Protocol field consistent. 'Audited by MLCommons' (confidenceNotes) is not stated in the log. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit).",
+      "notes": "397,824,116 ns rounded. Submitter-run; latency is under a server load near the target QPS, not unloaded. | Verifier: System JSON checked: 8x H200-SXM-141GB, Xeon Platinum 8480C, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8, closed. Protocol field consistent. 'Audited by MLCommons' (confidenceNotes) is not stated in the log. | Decision: Unsourced claim removed from the notes (lot-2 review M2: no consulted source states an audit). Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
       "quantityKind": "duration",
       "valueSI": 0.3978,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.5,
+          "value": 0.35860000000000003
+        },
+        {
+          "p": 0.99,
+          "value": 0.9376
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -9777,14 +10146,38 @@
       "quote": "Mean Time to Output Token (ns)               : 169962807",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 173.3
+          },
+          {
+            "p": 0.99,
+            "value": 181.9
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-h200x8-llama2-70b-server-tpot-mean",
-      "notes": "169,962,807 ns rounded. High value reflects very large batching to maximise throughput (33,071 tokens/s total) close to the 200 ms bound. | Verifier: The batching explanation in confidenceNotes is the extractor's interpretation, not in the log.",
+      "notes": "169,962,807 ns rounded. High value reflects very large batching to maximise throughput (33,071 tokens/s total) close to the 200 ms bound. | Verifier: The batching explanation in confidenceNotes is the extractor's interpretation, not in the log. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
       "quantityKind": "duration",
       "valueSI": 0.17,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.5,
+          "value": 0.1733
+        },
+        {
+          "p": 0.99,
+          "value": 0.1819
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -9809,14 +10202,38 @@
       "quote": "Mean First Token latency (ns)               : 85598458",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 74
+          },
+          {
+            "p": 0.99,
+            "value": 212.3
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean",
-      "notes": "85,598,458 ns rounded. Corpus already holds the Interactive-category bounds; this is a measured value of a named system. | Verifier: System JSON: 'NVIDIA DGX B200 (8x B200-SXM-180GB, TensorRT)', Xeon Platinum 8570, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8. Protocol consistent.",
+      "notes": "85,598,458 ns rounded. Corpus already holds the Interactive-category bounds; this is a measured value of a named system. | Verifier: System JSON: 'NVIDIA DGX B200 (8x B200-SXM-180GB, TensorRT)', Xeon Platinum 8570, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8. Protocol consistent. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
       "quantityKind": "duration",
       "valueSI": 0.0856,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.5,
+          "value": 0.074
+        },
+        {
+          "p": 0.99,
+          "value": 0.21230000000000002
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -9841,14 +10258,38 @@
       "quote": "Mean Time to Output Token (ns)               : 36129344",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 36.4
+          },
+          {
+            "p": 0.99,
+            "value": 39.1
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-b200x8-llama2-70b-interactive-tpot-mean",
-      "notes": "36,129,344 ns rounded.",
+      "notes": "36,129,344 ns rounded. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
       "quantityKind": "duration",
       "valueSI": 0.0361,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.5,
+          "value": 0.0364
+        },
+        {
+          "p": 0.99,
+          "value": 0.0391
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -9873,14 +10314,38 @@
       "quote": "Mean First Token latency (ns)               : 1860083007",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 1853.4
+          },
+          {
+            "p": 0.99,
+            "value": 4296.7
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-b200x8-llama31-405b-server-ttft-mean",
-      "notes": "1,860,083,007 ns rounded. | Verifier: 'Long-context prompts' is not stated in the summary log; removed.",
+      "notes": "1,860,083,007 ns rounded. | Verifier: 'Long-context prompts' is not stated in the summary log; removed. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
       "quantityKind": "duration",
       "valueSI": 1.8600999999999999,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.5,
+          "value": 1.8534000000000002
+        },
+        {
+          "p": 0.99,
+          "value": 4.2966999999999995
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -9905,14 +10370,38 @@
       "quote": "Mean Time to Output Token (ns)               : 87022478",
       "era": 2025,
       "uncertainty": null,
-      "statistics": null,
+      "statistics": {
+        "sampleCount": null,
+        "sampleCountNote": "Number of queries not published in mlperf_log_summary.txt; LoadGen requires at least 100 (min query count).",
+        "method": "MLPerf LoadGen latency percentiles (mlperf_log_summary.txt); interpolation method not stated.",
+        "quantiles": [
+          {
+            "p": 0.5,
+            "value": 87.2
+          },
+          {
+            "p": 0.99,
+            "value": 113.5
+          }
+        ]
+      },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-b200x8-llama31-405b-server-tpot-mean",
-      "notes": "87,022,478 ns rounded.",
+      "notes": "87,022,478 ns rounded. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
       "quantityKind": "duration",
       "valueSI": 0.087,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": [
+        {
+          "p": 0.5,
+          "value": 0.0872
+        },
+        {
+          "p": 0.99,
+          "value": 0.1135
+        }
+      ],
       "uncertaintySI": null
     },
     {
@@ -9945,6 +10434,7 @@
       "valueSI": 0.02,
       "lowSI": null,
       "highSI": 0.02,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -9977,6 +10467,7 @@
       "valueSI": 0.05,
       "lowSI": null,
       "highSI": 0.05,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -10009,6 +10500,7 @@
       "valueSI": 44100,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -10041,6 +10533,7 @@
       "valueSI": 48000,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -10073,6 +10566,7 @@
       "valueSI": 144,
       "lowSI": 144,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -10105,6 +10599,7 @@
       "valueSI": 240,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -10142,6 +10637,7 @@
       "valueSI": 0.006944444444444445,
       "lowSI": null,
       "highSI": 0.006944444444444445,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -10179,6 +10675,7 @@
       "valueSI": 0.004166666666666667,
       "lowSI": null,
       "highSI": null,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -10211,6 +10708,7 @@
       "valueSI": 0.005,
       "lowSI": null,
       "highSI": 0.005,
+      "quantilesSI": null,
       "uncertaintySI": null
     },
     {
@@ -10243,6 +10741,7 @@
       "valueSI": 6000000000,
       "lowSI": null,
       "highSI": 6000000000,
+      "quantilesSI": null,
       "uncertaintySI": null
     }
   ],

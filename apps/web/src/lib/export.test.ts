@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { csvEscape } from './export';
-import { formatCalendar, formatCalendarShort, formatPhysicalDuration } from './format';
+import { formatCalendar, formatCalendarShort, formatPhysicalDuration, formatValue } from './format';
 
 describe('CSV escaping', () => {
   it('quotes separators and doubles quotes', () => {
@@ -19,6 +19,9 @@ describe('CSV escaping', () => {
 const n = (s: string) => s.replace(/[\u00a0\u202f]/g, ' ');
 
 describe('display formatting', () => {
+  it('stored ASCII unit us is displayed as µs', () => {
+    expect(formatValue(63, 'us', 'en')).toBe('63 µs');
+  });
   it('physical durations use SI prefixes', () => {
     expect(formatPhysicalDuration(1e-7, 'en')).toBe('100 ns');
     expect(formatPhysicalDuration(0.25, 'fr')).toBe('250 ms');

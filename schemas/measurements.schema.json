@@ -24,14 +24,19 @@
       "type": "object",
       "required": [
         "sampleCount",
+        "sampleCountNote",
         "method",
         "quantiles"
       ],
       "additionalProperties": false,
       "properties": {
         "sampleCount": {
-          "type": "integer",
-          "minimum": 1
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "description": "Independent units behind the statistic as stated by the source (runs, subjects, queries). null only when the source does not publish it."
         },
         "method": {
           "type": "string",
@@ -58,8 +63,34 @@
               }
             }
           }
+        },
+        "sampleCountNote": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 3,
+          "description": "Required when sampleCount is null: what the source says (or not) about n."
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "sampleCount": {
+                "type": "null"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "sampleCountNote": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
     },
     "measurement": {
       "type": "object",
@@ -299,7 +330,66 @@
           "type": "string",
           "minLength": 2
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "confidence-interval"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "null"
+              },
+              "low": {
+                "type": "number"
+              },
+              "high": {
+                "type": "number"
+              },
+              "level": {
+                "type": "number"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "value": {
+                "type": "number"
+              },
+              "low": {
+                "type": "null"
+              },
+              "high": {
+                "type": "null"
+              },
+              "level": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "standard-error"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "sampleCount": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }

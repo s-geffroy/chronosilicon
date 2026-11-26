@@ -168,3 +168,4 @@ label.block input[type='number'] { width: 8rem; }
 .journal .j-when { font-family: var(--mono); font-size: 0.85rem; }
 .journal .j-gap .j-text { font-style: italic; color: var(--muted); }
 .buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0 0.75rem; }
+.unc { margin-left: 0.35em; }
