@@ -23,6 +23,6 @@ Backlog court, classé par valeur pédagogique (directive R1 v2.0 §6, v2.1). Mi
 
 ## Maintenance
 
-8. **Avant le 2027-01-31** : mettre à jour ESLint et typescript-eslint (versions publiées depuis plus de deux semaines), ou motiver une nouvelle exception.
+8. **À partir du 2026-12-07** (et avant le 2027-01-31) : passer typescript-eslint à la version 8.74.0 ou plus, puis retirer l'exception GHSA-g3hv-75wg-m249. ESLint 10.15.0 est déjà appliqué depuis le 2026-11-27.
 9. Vérifier le premier run de `pages.yml` à la prochaine publication (artefact unique, `publication:check`).
 10. **Droits (questions ouvertes, décision de l'utilisateur)** : une revue humaine de PUB-1, et le sort des extraits historiques du dépôt (`docs/audits/AUDIT-02/remediation/PUBLIC-CONTENT-OPTIONS.md`).

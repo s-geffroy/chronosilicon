@@ -9,8 +9,16 @@
       "range": ">=7.0.0 <11.0.1",
       "severity": "moderate",
       "scope": "dev",
-      "paths": ["eslint", "typescript-eslint", "@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "@typescript-eslint/type-utils", "@typescript-eslint/typescript-estree", "@typescript-eslint/utils"],
-      "reason": "Denial of service by glob-pattern amplification in minimatch, reached only through ESLint, which runs at development and CI time on the repository's own files with the repository's own patterns. minimatch is not in the production bundle (npm audit --omit=dev: 0). Fix available (eslint 10.15.0, typescript-eslint 8.74.0) but not applied: upgrading requires checking that those releases are at least two weeks old, which was not done. Decided in REMEDIATION-01 (2026-11-27); rewritten to the exact-match schema in REMEDIATION-02 without changing its scope or expiry.",
+      "paths": [
+        "eslint",
+        "typescript-eslint",
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/parser",
+        "@typescript-eslint/type-utils",
+        "@typescript-eslint/typescript-estree",
+        "@typescript-eslint/utils"
+      ],
+      "reason": "Denial of service by glob-pattern amplification in minimatch, reached only through ESLint, which runs at development and CI time on the repository's own files with the repository's own patterns. minimatch is not in the production bundle (npm audit --omit=dev: 0). Fix available (eslint 10.15.0, typescript-eslint 8.74.0) but not applied: upgrading requires checking that those releases are at least two weeks old, which was not done. Decided in REMEDIATION-01 (2026-11-27); rewritten to the exact-match schema in REMEDIATION-02 without changing its scope or expiry. Update 2026-11-27 (R1 lot 2): eslint upgraded to 10.15.0 (published 2026-11-13), which depends on minimatch 11.0.9: eslint is no longer affected. Remaining path: typescript-eslint 8.72.2 -> @typescript-eslint/typescript-estree -> minimatch 10.2.6; the fix (typescript-eslint 8.74.0, published 2026-11-23) becomes eligible under the two-week rule on 2026-12-07.",
       "decidedAt": "2026-11-27",
       "expires": "2027-01-31"
     }
