@@ -5,7 +5,7 @@ Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source cano
 ## REMEDIATION-01 : version candidate non publiée (2026-11-27)
 
 - AUDIT-01 (ChatGPT) a rendu son verdict : **NO-GO** pour l'acceptation intégrale, **GO** pour une remédiation contrôlée. Ses 18 constats AUD-001 à AUD-018 sont traités sur la branche `remediation-01` : 15 corrigés, 1 valeur retirée (AUD-013), 1 contesté avec démonstration (AUD-005), AUD-012 traité pour la publication future. Détail : `docs/audits/AUDIT-01/remediation/`.
-- Version candidate : tag `remediation-01-rc1`, code testé `a2c90ec`. Porte `remediation-01` PASS : 281 tests unitaires, 100 e2e sur l'artefact, porte de vulnérabilités.
+- Version candidate : tag `remediation-01-rc2`, code testé `9e28892` ; `rc1` est remplacé, car sa CI a échoué sur ENOENT dans `dist:manifest`. Porte `remediation-01` PASS : 281 tests unitaires, 100 e2e sur l'artefact, porte de vulnérabilités.
 - **Non publiée.** `main` et le site restent sur `491c989`. On attend AUDIT-02 et la décision de l'utilisateur, en particulier sur les extraits déjà publiés (`remediation/SOURCE-RIGHTS.md` §4).
 - Corpus de la version candidate : 238 valeurs qualifiées (5 contestées). Extraits tiers retenus pour 185 valeurs (ADR-0011).
 

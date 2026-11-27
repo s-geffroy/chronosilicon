@@ -2,7 +2,7 @@
 
 Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant qu'une version n'est pas validée par sa porte et publiée.
 
-## [Non publié] — REMEDIATION-01 (branche `remediation-01`, tag `remediation-01-rc1`)
+## [Non publié] — REMEDIATION-01 (branche `remediation-01`, tag `remediation-01-rc2`)
 
 ### Corrigé (AUDIT-01)
 - AUD-001, 006, 011 : domaines numériques (symétrie toSI/fromSI, finitude des conversions, moyenne robuste, quantiles triés).

@@ -13,7 +13,7 @@ Elle s'exécute avec `sudo appctl run node sh scripts/run-gate.sh remediation-01
 
 | Étape | Résultat | Détail |
 |---|---|---|
-| Commit | `a2c90ec8e2c8ca8bbf0cefcc1365bd60f22333c2`, `dirty=0` | `summary.txt` |
+| Commit | `9e28892475d5f06a06cb5315807198288a36f147`, `dirty=0` (porte rejouée ; un premier passage vert avait eu lieu sur `a2c90ec`) | `summary.txt` |
 | `npm ci` | PASS | lockfile inchangé |
 | `audit:gate` (AUD-014) | PASS | 0 avis en production ; 8 avis modérés en développement, couverts par une exception datée |
 | `lint` | PASS | ESLint 0 erreur |
@@ -27,7 +27,17 @@ Elle s'exécute avec `sudo appctl run node sh scripts/run-gate.sh remediation-01
 
 **Premier passage, sur `351de5c`.** Il a échoué à cause de 2 tests e2e en délai dépassé : l'audit d'accessibilité dans Firefox et WebKit, 37 s et 39 s pour une limite de 30 s, sans violation relevée. La charge de l'hôte était alors de 14 (`uptime`) pour 2 processeurs alloués. À la référence, ce test prenait déjà 25,4 s dans Firefox. Le délai de ce seul test est passé à 90 s, avec une justification en commentaire et sans changement des attentes (`a2c90ec`). Le second passage est vert. Le journal du premier passage n'a **pas** été conservé : le second passage l'a écrasé dans le même dossier. Les chiffres ci-dessus en ont été relevés avant cet écrasement. Seul le second passage figure dans `docs/reports/logs/remediation-01/`.
 
-## Contrôles complémentaires (`extra-checks.txt`)
+## CI GitHub : premier échec, puis correction
+
+- **Run 45975451663** (branche `remediation-01`, commit `ce7a0f1`) : **échec** à l'étape `npm run dist:manifest -- write`. Les étapes précédentes étaient vertes (`npm ci`, `audit:gate`, SBOM, lint, types, données, tests, build), et les e2e ont été sautés.
+- **Cause, reproduite localement** : sur un runner neuf, le dossier par défaut du manifeste (`.cache/`) n'existe pas, et `writeFileSync` lève `ENOENT`. Le défaut a été introduit par la correction d'AUD-018 et masqué localement, où `.cache/` existe.
+- **Correctif** : création du dossier (`9e28892`). La porte locale a été rejouée sur `9e28892` et elle est PASS.
+- **Leçon** : la porte locale ne remplace pas un clone neuf. La CI, elle, en est un.
+- Le résultat de la CI sur `9e28892` est consigné dans RELEASE-CANDIDATE.md.
+
+## Contrôles complémentaires (`extra-checks.txt`, exécutés sur `a2c90ec`)
+
+Hors documentation, `a2c90ec` et `9e28892` ne diffèrent que par `scripts/dist-manifest.ts`, qui ne touche ni aux données ni au build.
 
 | Contrôle | Résultat |
 |---|---|

@@ -1,6 +1,6 @@
 gate=remediation-01
-date_utc=2026-11-27T09:28:57Z
-commit=a2c90ec8e2c8ca8bbf0cefcc1365bd60f22333c2
+date_utc=2026-11-27T09:49:05Z
+commit=9e28892475d5f06a06cb5315807198288a36f147
 dirty=0
 node=v26.13.1 npm=11.20.0
 image=mcr.microsoft.com/playwright:v1.65.0-noble@sha256:9beb546099e11f52d62e505537914870e01a67e0e6b00ae41da4775324e73dbe

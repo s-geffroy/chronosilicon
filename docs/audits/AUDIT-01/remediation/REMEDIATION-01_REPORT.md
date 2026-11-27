@@ -12,7 +12,7 @@
   - 1 confirmé, avec la valeur retirée de la publication (AUD-013) ;
   - 1 contesté avec démonstration (AUD-005) ;
   - AUD-012 corrigé pour toute publication future ; le contenu déjà publié attend une décision de l'utilisateur.
-- **Version candidate** : tag `remediation-01-rc1`, **non publiée**. Code et données testés au commit `a2c90ec`.
+- **Version candidate** : tag `remediation-01-rc2`, **non publiée**. Code et données testés au commit `9e28892`. La candidate précédente, `rc1`, a échoué en CI à cause d'un défaut introduit par la correction d'AUD-018, corrigé depuis (TEST-RESULTS.md).
 - **Porte complète PASS** :
   - 281 tests unitaires (212 à la référence) ;
   - 100 tests e2e, exécutés sur l'artefact déployable ;

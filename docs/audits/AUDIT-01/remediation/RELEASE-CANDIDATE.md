@@ -5,19 +5,20 @@
 | Élément | Valeur |
 |---|---|
 | Branche | `remediation-01`, issue de `develop` (`7f519ef`). Sa seule différence avec `audit-01-baseline` était documentaire : `git diff --name-only audit-01-baseline 7f519ef` ne liste que `docs/`, `PROJECT_STATUS.md`, `NEXT_ACTIONS.md` et `CHANGELOG.md`. |
-| Tag candidat | `remediation-01-rc1`, annoté, sur le commit qui contient ce dossier |
-| Code et données testés | `a2c90ec8e2c8ca8bbf0cefcc1365bd60f22333c2` : porte `remediation-01` PASS, `dirty=0` |
-| Écart entre code testé et tag | Documentation et journaux uniquement. Vérification : `git diff --stat a2c90ec remediation-01-rc1 -- . ':!docs' ':!PROJECT_STATUS.md' ':!NEXT_ACTIONS.md' ':!CHANGELOG.md'` ne doit rien afficher. |
+| Tag candidat | **`remediation-01-rc2`**, annoté, sur le commit qui contient ce dossier. `remediation-01-rc1` (`ce7a0f1`) est **remplacé** : sa CI a échoué (`dist:manifest write`, ENOENT ; voir TEST-RESULTS.md). Le tag est conservé, sans déplacement. |
+| Code et données testés | `9e28892475d5f06a06cb5315807198288a36f147` : porte `remediation-01` PASS, `dirty=0`. CI GitHub : voir « CI » ci-dessous. |
+| Écart entre code testé et tag | Documentation et journaux uniquement. Vérification : `git diff --stat 9e28892 remediation-01-rc2 -- . ':!docs' ':!PROJECT_STATUS.md' ':!NEXT_ACTIONS.md' ':!CHANGELOG.md'` ne doit rien afficher. |
+| CI GitHub | `9e28892` : **success**, run 45976862562 (https://github.com/s-geffroy/chronosilicon/actions/runs/45976862562). Ce run comprend `audit:gate`, le SBOM, le build, `dist:manifest write`, les e2e sur l'artefact et `dist:manifest check`. Pour `rc1` (`ce7a0f1`) : run 45975451663 en échec. |
 | Publication | **Aucune** : `main` reste à `491c989` et le site sert toujours la référence |
 | Version du corpus | `0.3.0+965d1230a867` : 238 valeurs qualifiées (185 `withheld`, 53 `published`) |
 | Modèle du simulateur | 1.1.0 (ADR-0010) |
 
 ## Reproduire
 
-La procédure est celle de `docs/audits/AUDIT-01/evidence/REPRODUCIBILITY.md`, en remplaçant le tag `audit-01-baseline` par `remediation-01-rc1`, avec trois différences :
+La procédure est celle de `docs/audits/AUDIT-01/evidence/REPRODUCIBILITY.md`, en remplaçant le tag `audit-01-baseline` par `remediation-01-rc2`, avec trois différences :
 
 ```sh
-git clone https://github.com/s-geffroy/chronosilicon.git && cd chronosilicon && git checkout remediation-01-rc1
+git clone https://github.com/s-geffroy/chronosilicon.git && cd chronosilicon && git checkout remediation-01-rc2
 # conteneur : voir REPRODUCIBILITY.md §2 (fonction run)
 run "npm ci && sh scripts/run-gate.sh rc-repro"
 # attendu : docs/reports/logs/rc-repro/summary.txt -> overall=PASS
