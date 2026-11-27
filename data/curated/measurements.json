@@ -3747,7 +3747,7 @@
       },
       "protocol": null,
       "provenanceType": "calculated",
-      "verificationStatus": "qualified",
+      "verificationStatus": "contested",
       "sourceIds": [
         "src-solidigm-p5520-brief"
       ],
@@ -3763,7 +3763,7 @@
         ]
       },
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#solidigm-p5520-4k-qd16-latency-derived",
-      "notes": "Assumes QD16 is total outstanding I/Os (number of jobs not stated); if several jobs each at QD16, real latency is higher. | Verifier: Hypothèse QD16 = total des E/S en vol signalée. | Decision: Input is the 233,700 IOPS (4 KiB, QD16) documented in the cited Solidigm brief (review M-2). Value stored at full precision (16 / 233700 s = 68.4638… µs) instead of the extraction's rounded 68.5 µs (calculated-value oracle, tolerance 1e-12)."
+      "notes": "Assumes QD16 is total outstanding I/Os (number of jobs not stated); if several jobs each at QD16, real latency is higher. | Verifier: Hypothèse QD16 = total des E/S en vol signalée. | Decision: AUDIT-01 AUD-013 (REMEDIATION-01, 2026-11-27): Little's law needs the mean number of outstanding I/Os and a steady state. The primary source (footnote [7], re-read 2026-11-27) gives fio, 4 KB, QD16 and the system, but neither the job count, nor whether QD16 is per job or total, nor runtime, preconditioning or steady state. The derivation is therefore not established; withheld from publication (arithmetic kept below). Earlier: input is the 233,700 IOPS (4 KiB, QD16) documented in the cited Solidigm brief (review M-2). Value stored at full precision (16 / 233700 s = 68.4638… µs) instead of the extraction's rounded 68.5 µs (calculated-value oracle, tolerance 1e-12)."
     },
     {
       "id": "fdsoi28-ro-stage-delay-296k-1v-m1",

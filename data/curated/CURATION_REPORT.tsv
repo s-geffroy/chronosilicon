@@ -131,7 +131,7 @@ exos-x20-sustained-transfer	qualified	verdict confirmed (verify-2026-11-26-C.jso
 samsung-990pro-qd1-read-latency-derived	contested	verdict confirmed_with_fix (verify-2026-11-26-C.json); decision: Derived with Little's law from an 'up to' marketing IOPS figure with unstated block size: at most a lower bound on mean latency, misleading on a timeline of typical values.
 optane-p5800x-4k-qd1-p99-read	qualified	verdict confirmed_with_fix (verify-2026-11-26-C.json)
 solidigm-p5620-qd1-write-p999999	qualified	verdict confirmed (verify-2026-11-26-C.json)
-solidigm-p5520-4k-qd16-latency-derived	qualified	verdict confirmed (verify-2026-11-26-C.json)
+solidigm-p5520-4k-qd16-latency-derived	contested	verdict confirmed (verify-2026-11-26-C.json); decision: AUDIT-01 AUD-013 (REMEDIATION-01, 2026-11-27): Little's law needs the mean number of outstanding I/Os and a steady state. The primary source (footnote [7], re-read 2026-11-27) gives fio, 4 KB, QD16 and the system, but neither the job count, nor whether QD16 is per job or total, nor runtime, preconditioning or steady state. The derivation is therefore not established; withheld from publication (arithmetic kept below). Earlier: input is the 233,700 IOPS (4 KiB, QD16) documented in the cited Solidigm brief (review M-2). Value stored at full precision (16 / 233700 s = 68.4638… µs) instead of the extraction's rounded 68.5 µs (calculated-value oracle, tolerance 1e-12).
 fdsoi28-ro-stage-delay-296k-1v	qualified	verdict confirmed_with_fix (verify-2026-11-26b-A.json)
 fdsoi28-ro-stage-delay-4k-0v325	qualified	verdict confirmed_with_fix (verify-2026-11-26b-A.json)
 fdsoi28-ro101-frequency-296k-1v	qualified	verdict confirmed (verify-2026-11-26b-A.json)
