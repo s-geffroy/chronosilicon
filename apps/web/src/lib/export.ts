@@ -47,6 +47,8 @@ const CSV_COLUMNS = [
   'uncertaintyValueSI', 'uncertaintyLowSI', 'uncertaintyHighSI', 'uncertaintyStatement', 'quantiles', 'quantilesSI', 'statisticsN', 'statisticsNNote', 'statisticsMethod',
   'subjectiveSeconds', 'observerFrequencyHz', 'configuration', 'conditions', 'provenanceType',
   'verificationStatus', 'sourceIds', 'sourceUrls', 'locator', 'era', 'corpusVersion', 'appVersion',
+  // AUD-016: same traceability as the JSON export (appended, existing column order unchanged).
+  'schemaVersion', 'commit',
 ] as const;
 
 export function csvEscape(v: unknown): string {
@@ -100,6 +102,8 @@ export function buildCsvExport(ms: readonly NormalizedMeasurement[], ctx: Export
       era: m.era,
       corpusVersion: corpus.corpusVersion,
       appVersion: ctx.appVersion,
+      schemaVersion: corpus.schemaVersion,
+      commit: ctx.commit,
     };
     return CSV_COLUMNS.map((c) => csvEscape(row[c])).join(',');
   });

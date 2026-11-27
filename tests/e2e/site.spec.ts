@@ -144,6 +144,7 @@ test('exports JSON and CSV with versions, units and sources', async ({ page }) =
   expect(csv.split('\r\n')[0]).toContain('uncertaintyStatement,quantiles,quantilesSI,statisticsN,statisticsNNote,statisticsMethod');
   // one encoding for an unknown n: an empty cell, explained by statisticsNNote (final review, 9)
   expect(csv).not.toMatch(/,unknown,/);
+  expect(csv.split('\r\n')[0]).toMatch(/,corpusVersion,appVersion,schemaVersion,commit$/); // AUD-016
   expect(csv.trim().split('\r\n').length).toBe(corpus.measurements.length + 1);
 });
 
