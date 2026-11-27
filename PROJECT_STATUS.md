@@ -49,3 +49,4 @@ Voir `docs/audits/M00.md` §5 (R1 à R6). Les principaux :
 - marque non vérifiée dans les registres officiels ;
 - revue par des agents du même modèle ;
 - extraits courts de sources « reference-only » dans un dépôt public.
+- 2026-11-27 : dossier `…/CHRONOSILICON/2026-11-27_revue-finale` (https://drive.google.com/drive/folders/1_l8MvuKl9Ze_DLbLxLtjREVuDLboFzSd), 7 fichiers aux tailles concordantes ; le résumé de porte retéléchargé a le même SHA-256 (1a75d98b…). Archive locale : `docs/archives/2026-11-27_revue-finale/`.

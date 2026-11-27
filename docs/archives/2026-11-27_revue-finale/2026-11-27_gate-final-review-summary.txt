@@ -1,0 +1,15 @@
+gate=final-review
+date_utc=2026-11-27T07:34:02Z
+commit=715051ae878a5499c7f0fa370bca6c94783273e8
+dirty=0
+node=v26.13.1 npm=11.20.0
+image=mcr.microsoft.com/playwright:v1.65.0-noble@sha256:9beb546099e11f52d62e505537914870e01a67e0e6b00ae41da4775324e73dbe
+uname=Linux 6.8.0-147-generic x86_64
+ci=PASS
+lint=PASS
+typecheck=PASS
+validate:data=PASS
+test=PASS
+build=PASS
+test:e2e=PASS
+overall=PASS
