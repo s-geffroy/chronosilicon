@@ -2,11 +2,12 @@
 
 Ordre de priorité. Mis à jour le 2026-11-27.
 
-0. **[Arrêt — version candidate REMEDIATION-01]** Attendre AUDIT-02 et la décision de l'utilisateur. Ni publication ni fusion sur `main` sans autorisation explicite.
-   - **[Utilisateur]** Décider du traitement des extraits déjà publiés : site actuel, `data/raw` et `data/curated` dans le dépôt public, historique (`docs/audits/AUDIT-01/remediation/SOURCE-RIGHTS.md` §4).
-   - **[Utilisateur]** Faire relire la règle de droits par une personne qualifiée.
-   - **[Agent, après AUDIT-02]** Traiter les retours, puis exécuter la feuille de route P3 (`remediation/ROADMAP-P3.md`), dont trois items demandent une décision structurante.
-   - **[Agent, avant le 2027-01-31]** Mettre à jour eslint et typescript-eslint (versions publiées depuis plus de deux semaines), ou renouveler avec justification l'exception GHSA-g3hv-75wg-m249.
+0. **[Arrêt : version candidate REMEDIATION-02, `remediation-02-rc3`]** Attendre l'audit de clôture ciblé de ChatGPT et la décision de l'utilisateur. Aucune publication, fusion sur `main`, suppression ni réécriture d'historique sans autorisation explicite.
+   - **[Utilisateur]** Décider du traitement des contenus déjà publics : site en ligne (correctif de précaution S2 ou attente), `data/raw` et `data/curated`, historique Git (`docs/audits/AUDIT-02/remediation/PUBLIC-CONTENT-OPTIONS.md`).
+   - **[Utilisateur]** Faire relire PUB-1 et le registre `PUBLIC-TEXT-REGISTER.csv` par une personne qualifiée.
+   - **[Utilisateur]** Arbitrer le périmètre de P3 (`docs/audits/AUDIT-01/remediation/ROADMAP-P3.md`), séparément de la remédiation.
+   - **[Agent, avant le 2027-01-31]** Mettre à jour eslint et typescript-eslint (versions publiées depuis plus de deux semaines), ou soumettre une nouvelle exception motivée pour GHSA-g3hv-75wg-m249. Il n'y a pas de renouvellement automatique.
+   - **[Agent, à la première publication]** Vérifier le premier run de `pages.yml` (artefact unique, `publication:check`).
    Les points ci-dessous restent en attente et seront repriorisés par le plan P3.
 
 1. ~~Régler Pages et publier V1~~ : fait le 2026-11-26 (commit `7ca44b5`).

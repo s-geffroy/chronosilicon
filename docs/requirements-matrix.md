@@ -27,5 +27,6 @@ Statut d'une exigence : **réalisée** (preuve de test exécuté), **partielle**
 | V06 causalité | ADR-0010 (ordre, annulations, chemin critique) ; `simulator.test.ts`, `scenarios.test.ts`, exécution des scénarios à la construction |
 | V07 pédagogie | métaphore annoncée, distinction cycles / instructions / travail utile (convertisseur, fiche), espaces non réalisés signalés |
 | Droits des extraits (ADR-0011) | `publicView`, `tests/remediation-01-rights.test.ts` (garde sur le corpus publié), e2e « excerpts are withheld… » |
-| Sécurité (AUD-014) | `npm run audit:gate` (CI, Pages, porte locale), `security/audit-exceptions.json`, SBOM |
+| Sécurité (AUD-014, AUD02-001) | `npm run audit:gate` (CI, Pages, porte locale) à correspondance exacte par avis, `security/audit-exceptions.json` (schéma 2), `tests/audit-gate.test.ts`, SBOM |
+| Droits des extraits (AUD-012/017, AUD02-002) | Politique PUB-1 (`applyPublicationPolicy`), `data/publication/text-decisions.json`, `npm run publication:check` (porte, CI, Pages), `tests/remediation-02-publication.test.ts` |
 | V08 reproductibilité | artefact unique (`dist:manifest`, `E2E_PREBUILT=1`, AUD-018), lockfile, image épinglée, `validate:data` (dérivé à jour, raw immuable), logs `docs/reports/logs/` |

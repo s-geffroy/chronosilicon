@@ -72,7 +72,7 @@ Le même contrôle s'applique au **site construit** (`npm run publication:check`
 | Même contrôle sur le site en ligne (`491c989`) | **943** suites de 6 mots détectées (`logs/aud02-002-live-site-check.txt`) |
 
 Écarts avec rc2, sur 7 valeurs et 1 source :
-- 6 passages supplémentaires sont retirés. Ils étaient entre guillemets et comptaient 6 mots au sens de PUB-1, qui compte aussi les nombres et les unités, mais moins de 6 au sens de rc2, qui découpait sur les espaces. Une note d'accès de source est aussi retirée.
+- 5 passages supplémentaires sont retirés (notes de pcie3, pcie4, cxl3 et exos-x20 ; condition FR de hbm3e-pin-speed). Ils étaient entre guillemets et comptaient 6 mots au sens de PUB-1, qui compte aussi les nombres et les unités, mais moins de 6 au sens de rc2, qui découpait sur les espaces. Une note d'accès de source est aussi retirée.
 - Une condition (KPTI) voit son passage retiré élargi au mot qui précède.
 - **Aucune décision ne publie un passage que rc2 retirait.** Un test le vérifie avec `tests/fixtures/publication/rc2-redacted-spans.json`.
 

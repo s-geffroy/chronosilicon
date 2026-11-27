@@ -2,6 +2,15 @@
 
 Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant qu'une version n'est pas validée par sa porte et publiée.
 
+## [Non publié] — REMEDIATION-02 (branche `remediation-02`, tag `remediation-02-rc3`)
+
+### Corrigé (AUDIT-02)
+- AUD02-001 : porte de vulnérabilités à correspondance exacte par avis (`scripts/lib/audit-policy.ts`, exceptions au schéma 2, fixtures `npm audit`, 18 tests).
+- AUD02-002 : politique de publication PUB-1, qui remplace l'heuristique de guillemets. Champs publics explicites, décisions texte par texte (`data/publication/text-decisions.json`), contrôle global, contrôle du site construit (`npm run publication:check`, porte, CI, Pages). ADR-0011 amendée.
+
+### Modifié
+- Corpus publié `0.3.0+0c9ebc16ce31` : 5 courts passages et 1 note d'accès supplémentaires retirés.
+
 ## [Non publié] — REMEDIATION-01 (branche `remediation-01`, tag `remediation-01-rc2`)
 
 ### Corrigé (AUDIT-01)

@@ -1,0 +1,80 @@
+# Difference exacte rc2 -> code teste rc3
+# remediation-01-rc2 = 069cb225fd38685cd3b78bdbb45906483869ef8d ; code teste = 16093cf17296cf4499e62750284cc01d7a1f8c82
+# Fichiers hors documentation (git diff --name-status remediation-01-rc2 16093cf -- . ':!docs' ':!PROJECT_STATUS.md' ':!NEXT_ACTIONS.md' ':!CHANGELOG.md') :
+M	.github/workflows/ci.yml
+M	.github/workflows/pages.yml
+M	SECURITY.md
+A	data/publication/text-decisions.json
+M	data/validated/corpus.json
+M	package.json
+M	packages/ontology/src/index.ts
+M	packages/ontology/src/publication.ts
+M	scripts/audit-gate.ts
+A	scripts/check-public-text.ts
+A	scripts/lib/audit-policy.ts
+M	scripts/lib/corpus.ts
+M	scripts/run-gate.sh
+M	security/audit-exceptions.json
+A	tests/audit-gate.test.ts
+A	tests/fixtures/npm-audit/README.md
+A	tests/fixtures/npm-audit/advisory-without-url.all.json
+A	tests/fixtures/npm-audit/dangling-via.all.json
+A	tests/fixtures/npm-audit/high-on-allowed-advisory.all.json
+A	tests/fixtures/npm-audit/other-advisory-same-package.all.json
+A	tests/fixtures/npm-audit/production-advisory.prod.json
+A	tests/fixtures/npm-audit/range-changed.all.json
+A	tests/fixtures/npm-audit/real-2026-11-27.all.json
+A	tests/fixtures/npm-audit/real-2026-11-27.prod.json
+A	tests/fixtures/npm-audit/two-advisories-one-unknown.all.json
+A	tests/fixtures/npm-audit/unjustified-transitive.all.json
+A	tests/fixtures/npm-audit/unknown-report-version.all.json
+A	tests/fixtures/publication/rc2-redacted-spans.json
+M	tests/remediation-01-rights.test.ts
+A	tests/remediation-02-publication.test.ts
+
+# Moteurs et interface inchanges (sortie vide attendue) : git diff --stat remediation-01-rc2 16093cf -- packages/simulator packages/metrology packages/observers apps/web
+(fin)
+
+# Statistiques completes
+ .github/workflows/ci.yml                           |    2 +
+ .github/workflows/pages.yml                        |    2 +
+ PROJECT_STATUS.md                                  |    1 +
+ SECURITY.md                                        |    8 +-
+ data/publication/text-decisions.json               | 3712 ++++++++++++++++++++
+ data/validated/corpus.json                         |   42 +-
+ docs/adr/ADR-0011-droits-extraits-publics.md       |   10 +
+ .../AUDIT-02/remediation/PUBLIC-CONTENT-OPTIONS.md |   50 +
+ .../AUDIT-02/remediation/PUBLIC-TEXT-REGISTER.csv  |  410 +++
+ .../AUDIT-02/remediation/PUBLICATION-POLICY.md     |   86 +
+ .../AUDIT-02/remediation/draft-text-decisions.py   |   76 +
+ .../AUDIT-02/remediation/logs/aud02-001-after.txt  |   11 +
+ .../AUDIT-02/remediation/logs/aud02-001-before.txt |   11 +
+ .../remediation/logs/aud02-002-live-site-check.txt |   51 +
+ .../AUDIT-02/remediation/old-gate-harness.ts       |   34 +
+ .../AUDIT-02/remediation/run-gate-fixtures.sh      |    9 +
+ package.json                                       |    3 +-
+ packages/ontology/src/index.ts                     |    6 +-
+ packages/ontology/src/publication.ts               |  338 +-
+ scripts/audit-gate.ts                              |   57 +-
+ scripts/check-public-text.ts                       |   42 +
+ scripts/lib/audit-policy.ts                        |  156 +
+ scripts/lib/corpus.ts                              |   72 +-
+ scripts/run-gate.sh                                |    2 +-
+ security/audit-exceptions.json                     |   12 +-
+ tests/audit-gate.test.ts                           |   70 +
+ tests/fixtures/npm-audit/README.md                 |    4 +
+ .../npm-audit/advisory-without-url.all.json        |  204 ++
+ tests/fixtures/npm-audit/dangling-via.all.json     |  205 ++
+ .../npm-audit/high-on-allowed-advisory.all.json    |  205 ++
+ .../npm-audit/other-advisory-same-package.all.json |  203 ++
+ .../npm-audit/production-advisory.prod.json        |   50 +
+ tests/fixtures/npm-audit/range-changed.all.json    |  205 ++
+ tests/fixtures/npm-audit/real-2026-11-27.all.json  |  205 ++
+ tests/fixtures/npm-audit/real-2026-11-27.prod.json |   22 +
+ .../npm-audit/two-advisories-one-unknown.all.json  |  219 ++
+ .../npm-audit/unjustified-transitive.all.json      |  220 ++
+ .../npm-audit/unknown-report-version.all.json      |  205 ++
+ tests/fixtures/publication/rc2-redacted-spans.json |  130 +
+ tests/remediation-01-rights.test.ts                |   28 +-
+ tests/remediation-02-publication.test.ts           |  100 +
+ 41 files changed, 7328 insertions(+), 150 deletions(-)

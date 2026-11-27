@@ -2,6 +2,19 @@
 
 Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source canonique : GitHub `s-geffroy/chronosilicon`.
 
+## REMEDIATION-02 : version candidate rc3 non publiée (2026-11-27)
+
+- AUDIT-02 (ChatGPT, `2026-11-27_AUDIT-02`) : GO ciblé pour les moteurs et les cas testés ; NO-GO pour la clôture sans réserve (AUD02-001, droits partiels, pas de reproduction complète) ; G-FINAL NO-GO (P3).
+- **AUD02-001 corrigé** : la porte de vulnérabilités fait correspondre chaque avis à une exception exacte (GHSA, paquet, gravité, plage, portée, chemins transitifs, format). Avant : 6 faux PASS sur 11 fixtures ; après : 0.
+- **AUD02-002 traité** : politique de publication PUB-1 (champs publics explicites, 409 décisions texte par texte, contrôle global et contrôle du site construit `publication:check`). 0 fuite sur rc3 ; 943 suites de 6 mots détectées sur le site en ligne. Options pour les contenus déjà publics, non exécutées : `docs/audits/AUDIT-02/remediation/PUBLIC-CONTENT-OPTIONS.md`.
+- Version candidate : tag `remediation-02-rc3`, code testé `16093cf`.
+  - Porte officielle PASS sur clone neuf : 309 unitaires, 100 e2e sur l'artefact.
+  - CI verte (run 46008291593).
+  - Sondes de l'auditeur 18/18 sous Node 26.
+  - Moteurs et interface inchangés depuis rc2.
+- **Non publiée.** `main` et le site restent sur `491c989`. On attend l'audit de clôture (ChatGPT) et les décisions de l'utilisateur : contenus publics, relecture juridique, P3.
+- Corpus `0.3.0+0c9ebc16ce31` : 238 valeurs qualifiées, 185 `withheld`.
+
 ## REMEDIATION-01 : version candidate non publiée (2026-11-27)
 
 - AUDIT-01 (ChatGPT) a rendu son verdict : **NO-GO** pour l'acceptation intégrale, **GO** pour une remédiation contrôlée. Ses 18 constats AUD-001 à AUD-018 sont traités sur la branche `remediation-01` : 15 corrigés, 1 valeur retirée (AUD-013), 1 contesté avec démonstration (AUD-005), AUD-012 traité pour la publication future. Détail : `docs/audits/AUDIT-01/remediation/`.
