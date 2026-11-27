@@ -6,8 +6,8 @@
  * Usage: tsx scripts/dist-manifest.ts write|check [manifestPath]
  */
 import { createHash } from 'node:crypto';
-import { appendFileSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
-import { join, relative } from 'node:path';
+import { appendFileSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { dirname, join, relative } from 'node:path';
 import { ROOT } from './lib/corpus';
 
 const DIST = join(ROOT, 'apps/web/dist');
@@ -31,6 +31,8 @@ const current = () => files(DIST).map((f) => `${createHash('sha256').update(read
 
 if (mode === 'write') {
   const text = current();
+  // A fresh CI runner has no .cache/ (first CI run of remediation-01 failed with ENOENT).
+  mkdirSync(dirname(manifest), { recursive: true });
   writeFileSync(manifest, text);
   console.log(`dist-manifest: ${text.trim().split('\n').length} files\n${text}`);
   if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, `### Artefact (SHA-256)\n\n\`\`\`\n${text}\`\`\`\n`);
