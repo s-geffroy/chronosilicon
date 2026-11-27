@@ -36,6 +36,12 @@ Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant 
 ### Ajouté (incertitude structurée)
 - Champ `uncertainty` des mesures (ADR-0009) : écart-type, erreur-type, « ± » non précisé, intervalle de confiance ; formulation de la source, n, normalisation SI, invariants, affichage dans la fiche et le tableau, export CSV. Trois dispersions publiées renseignées ; statistiques publiées (n inconnu déclaré) pour 12 valeurs : CUDA, MLPerf, Azure. Revue du modèle intégrée (« ± » toujours typé, protocole exigé, règles conditionnelles, garde sur les données). Affichage « µs » corrigé.
 
+### Corrigé (revue finale du 2026-11-27)
+- Fiche : protocole, citation et localisateurs balisés `lang="en"` et signalés en FR ; extrait de source distingué du texte de curation ; étiquettes de percentiles exactes aux extrêmes.
+- Invariant « la formulation contient la valeur » par jeton numérique (et les deux bornes d'un intervalle) ; formulation du clignement réduite au fragment littéral.
+- CSV : un seul codage du n inconnu (cellule vide), colonnes `statisticsNNote`, `statisticsMethod`, `uncertaintyStatement`.
+- Documentation : règle sur n et la méthode alignée sur ADR-0009 (CONTRIBUTING, matrice V03) ; comptes périmés de PROJECT_STATUS et NEXT_ACTIONS corrigés.
+
 ### Modifié
 - Remplacement du squelette Jekyll du VPS par la chaîne Node/Vite (ADR-0001).
 

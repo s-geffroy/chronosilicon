@@ -36,3 +36,10 @@
   - incertitude élargie : à ajouter par ADR en exigeant le facteur k ; une incertitude-type au sens du GUM ne doit jamais être rangée en écart-type ;
   - ± asymétrique, ou ± exprimé en % : non représentables aujourd'hui, ils restent dans les conditions jusqu'à une ADR ;
   - tolérances des fiches techniques : non modélisées.
+
+## Amendement (2026-11-27, revue finale `docs/reports/review-2026-11-27-final.md`)
+
+- `statement` est un **fragment littéral unique** de la source (par exemple la cellule « 76 ± 2 »). Le texte qui type la dispersion (légende « mean ± s.e. ») est cité dans `locator`, et non accolé à la formulation.
+- L'invariant « la formulation contient la valeur » compare des **nombres entiers en tant que jetons** : 2 ne se trouve ni dans « n=25 » ni dans « 2.5 ». Pour un intervalle de confiance, les deux bornes doivent figurer dans la formulation.
+- Affichage FR : un extrait de source en anglais porte « (extrait de la source, en anglais) », un texte de curation (protocole, méthode) porte « (texte de curation en anglais) ». Les deux sont balisés `lang="en"`, de même que la citation et les localisateurs. Les percentiles s'étiquettent avec `formatLevel` (P99,9 et non P100).
+- CSV : un n inconnu est une cellule vide dans `uncertaintyN` comme dans `statisticsN`. `statisticsNNote` en donne la raison ; `uncertaintyStatement` et `statisticsMethod` reprennent ce qu'affiche la fiche.

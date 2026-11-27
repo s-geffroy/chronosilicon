@@ -123,7 +123,7 @@
       }
     },
     "human-voluntary-blink-closing-phase": {
-      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26). Published dispersion recorded as structured uncertainty (ADR-0009), from the source wording checked by the verifier.",
+      "reason": "Protocol written explicitly from the verified source description (review M-1, 2026-11-26). Published dispersion recorded as structured uncertainty (ADR-0009), from the source wording checked by the verifier. Statement reduced to the literal cell '76 ± 2'; the caption that types it as s.e. is quoted in the locator (final review, 2026-11-27).",
       "patch": {
         "protocol": "Kwon et al. 2013, same protocol (n = 25, 600 fps video); closing-phase duration, mean ± s.e.",
         "uncertainty": {
@@ -133,8 +133,8 @@
           "high": null,
           "level": null,
           "sampleCount": 25,
-          "statement": "76 ± 2 ms; Table 1 caption: 'our values are mean ± s.e.'",
-          "locator": "Table 1, row \"This study (2013), 600 fps, n=25\""
+          "statement": "76 ± 2",
+          "locator": "Table 1, row \"This study (2013), 600 fps, n=25\"; caption: \"our values are mean ± s.e.\""
         }
       }
     },

@@ -141,7 +141,9 @@ test('exports JSON and CSV with versions, units and sources', async ({ page }) =
   const csv = readFileSync((await dl2.path())!, 'utf8');
   expect(csv.split('\r\n')[0]).toContain('valueSI,siUnit');
   expect(csv.split('\r\n')[0]).toContain('uncertaintyType,uncertaintyValue');
-  expect(csv.split('\r\n')[0]).toContain('quantiles,quantilesSI,statisticsN');
+  expect(csv.split('\r\n')[0]).toContain('uncertaintyStatement,quantiles,quantilesSI,statisticsN,statisticsNNote,statisticsMethod');
+  // one encoding for an unknown n: an empty cell, explained by statisticsNNote (final review, 9)
+  expect(csv).not.toMatch(/,unknown,/);
   expect(csv.trim().split('\r\n').length).toBe(corpus.measurements.length + 1);
 });
 
@@ -295,8 +297,15 @@ test('sheet shows structured uncertainty with its type and the source wording (A
   await page.goto('./#/timeline?lang=en&level=scientific&sel=human-voluntary-blink-closing-phase-m1');
   await expect(page.getByTestId('sheet-uncertainty')).toContainText(/± 2 ms \(standard error\)\s*· n = 25/);
   await expect(page.getByTestId('sheet-uncertainty')).toContainText('mean ± s.e.');
+  await expect(page.getByTestId('sheet-uncertainty')).not.toContainText('source excerpt');
+  await expect(page.getByTestId('sheet-protocol')).not.toContainText('curation text');
+  await expect(page.getByTestId('sheet-protocol').locator('[lang="en"]')).toContainText('Kwon et al. 2013');
   await page.goto('./#/timeline?lang=fr&level=scientific&sel=willow-realtime-decoder-latency-d5-m1');
   await expect(page.getByTestId('sheet-uncertainty')).toContainText('non précisée par la source');
+  // FR interface: English source excerpt and curation text are announced, never silently mixed (final review, 1 and 3)
+  await expect(page.getByTestId('sheet-uncertainty')).toContainText('(extrait de la source, en anglais)');
+  await expect(page.getByTestId('sheet-protocol')).toContainText('(texte de curation en anglais)');
+  await expect(page.getByTestId('sheet-statistics')).toHaveCount(0);
   await page.goto('./#/timeline?lang=en&level=scientific&sel=tcp-min-rto-m1');
   await expect(page.getByTestId('sheet-uncertainty')).toHaveText('Unknown (not published by the source).');
   await page.goto('./#/timeline?lang=en&level=scientific&sel=gps-zenith-one-way-light-time-m1');

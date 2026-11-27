@@ -106,6 +106,13 @@ describe('invariants', () => {
     expect(checkInvariants(a).join()).toMatch(/one-sided bound/);
     const b = mk(); b.measurements[0].uncertainty = u({ statement: 'mean ± sd' });
     expect(checkInvariants(b).join()).toMatch(/must contain the dispersion value/);
+    // the value must appear as a whole number: 2 inside "n=25" or "2.5" does not count (final review, 8)
+    const b2 = mk(); b2.measurements[0].uncertainty = u({ value: 2, statement: '76 ± 2.5, n=25' });
+    expect(checkInvariants(b2).join()).toMatch(/must contain the dispersion value/);
+    const b3 = mk(); b3.measurements[0].uncertainty = u({ value: 2, statement: '76 ± 2 (n=25)' });
+    expect(checkInvariants(b3).join()).not.toMatch(/must contain the dispersion value/);
+    const b4 = mk(); b4.measurements[0].uncertainty = u({ type: 'confidence-interval', value: null, low: 0.5, high: 3, level: 0.95, statement: '95% CI 0.5 to 2' });
+    expect(checkInvariants(b4).join()).toMatch(/must contain the dispersion value/);
     const c = mk(); c.measurements[0].uncertainty = u({ type: 'confidence-interval', value: null, low: 1, high: 1, level: 0.95, statement: 'CI 1 to 1' });
     expect(checkInvariants(c).join()).toMatch(/degenerate/);
     const e = mk(); e.measurements[0].statistics = { sampleCount: null, sampleCountNote: null, method: 'm', quantiles: [{ p: 0.5, value: 1 }] };

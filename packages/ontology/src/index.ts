@@ -260,6 +260,12 @@ export interface InvariantInput {
  * Semantic invariants not expressible in JSON Schema (CS-04, CS-11 V00–V04).
  * Returns the list of violations; empty list = pass.
  */
+/** True if `text` contains `x` as a whole number token (not as part of a longer number such as 25 in 125 or 2.5). */
+function containsNumber(text: string, x: number): boolean {
+  const lit = String(x).replace('.', '[.,]');
+  return new RegExp(`(^|[^0-9.,])${lit}(?![0-9]|[.,][0-9])`).test(text);
+}
+
 export function checkInvariants({ sources, phenomena, measurements }: InvariantInput): string[] {
   const errors: string[] = [];
   const dup = (kind: string, ids: string[]) => {
@@ -298,7 +304,10 @@ export function checkInvariants({ sources, phenomena, measurements }: InvariantI
       errors.push(`${at}: uncertainty and statistics disagree on n`);
     }
     if (u && (m.low === m.value || m.high === m.value)) errors.push(`${at}: a ± dispersion on a one-sided bound is not meaningful`);
-    if (u && !u.statement.includes(String(u.value ?? u.low ?? ''))) errors.push(`${at}: the source wording must contain the dispersion value`);
+    if (u) {
+      const needed = u.type === 'confidence-interval' ? [u.low, u.high] : [u.value];
+      if (!needed.every((x) => x !== null && containsNumber(u.statement, x))) errors.push(`${at}: the source wording must contain the dispersion value`);
+    }
     if (u) {
       if (u.type === 'confidence-interval') {
         if (u.low === null || u.high === null || u.level === null || u.value !== null) errors.push(`${at}: a confidence interval needs low, high and level, and no ± value`);

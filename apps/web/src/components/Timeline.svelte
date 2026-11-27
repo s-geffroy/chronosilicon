@@ -72,7 +72,7 @@
   const uncText = (m: NormalizedMeasurement) => {
     const u = m.uncertainty!;
     return u.type === 'confidence-interval'
-      ? `[${formatValue(u.low!, m.unit, lang)} – ${formatValue(u.high!, m.unit, lang)}] (${t('unc.short.confidence-interval', { level: formatLevel(u.level ?? 0, lang) })})`
+      ? `[${formatValue(u.low!, m.unit, lang)} – ${formatValue(u.high!, m.unit, lang)}] (${t('unc.short.confidence-interval', { level: formatLevel(u.level!, lang) })})`
       : `± ${formatValue(u.value!, m.unit, lang)} (${t(`unc.short.${u.type}`)})`;
   };
   /** Extra details for assistive tech, appended after the visible text (WCAG 2.5.3). */

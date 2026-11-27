@@ -44,7 +44,7 @@ export function buildJsonExport(ms: readonly NormalizedMeasurement[], ctx: Expor
 const CSV_COLUMNS = [
   'id', 'label', 'domain', 'quantityKind', 'value', 'unit', 'valueSI', 'siUnit', 'low', 'high',
   'uncertaintyType', 'uncertaintyValue', 'uncertaintyLow', 'uncertaintyHigh', 'uncertaintyLevel', 'uncertaintyN',
-  'uncertaintyValueSI', 'uncertaintyLowSI', 'uncertaintyHighSI', 'quantiles', 'quantilesSI', 'statisticsN',
+  'uncertaintyValueSI', 'uncertaintyLowSI', 'uncertaintyHighSI', 'uncertaintyStatement', 'quantiles', 'quantilesSI', 'statisticsN', 'statisticsNNote', 'statisticsMethod',
   'subjectiveSeconds', 'observerFrequencyHz', 'configuration', 'conditions', 'provenanceType',
   'verificationStatus', 'sourceIds', 'sourceUrls', 'locator', 'era', 'corpusVersion', 'appVersion',
 ] as const;
@@ -81,9 +81,13 @@ export function buildCsvExport(ms: readonly NormalizedMeasurement[], ctx: Export
       uncertaintyValueSI: m.uncertaintySI?.value ?? null,
       uncertaintyLowSI: m.uncertaintySI?.low ?? null,
       uncertaintyHighSI: m.uncertaintySI?.high ?? null,
+      uncertaintyStatement: m.uncertainty ? `${m.uncertainty.statement} (${m.uncertainty.locator})` : null,
       quantiles: m.statistics ? m.statistics.quantiles.map((q) => `p${q.p}=${q.value}`).join(' ') : null,
       quantilesSI: m.quantilesSI ? m.quantilesSI.map((q) => `p${q.p}=${q.value}`).join(' ') : null,
-      statisticsN: m.statistics ? (m.statistics.sampleCount ?? 'unknown') : null,
+      // n unknown is an empty cell, as for uncertaintyN; statisticsNNote says why.
+      statisticsN: m.statistics?.sampleCount ?? null,
+      statisticsNNote: m.statistics?.sampleCountNote ?? null,
+      statisticsMethod: m.statistics?.method ?? null,
       subjectiveSeconds: subjectiveFor(m, ctx.frequencyHz),
       observerFrequencyHz: ctx.frequencyHz,
       configuration: m.configuration,

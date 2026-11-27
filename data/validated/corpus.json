@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "corpusVersion": "0.3.0+cc03f882e663",
+  "corpusVersion": "0.3.0+b82951f47093",
   "inputs": {
     "data/sources/sources.json": "71566c6bfd2b20268b40497da849c4e1e54c372aa776b2fcd7b16a24aab5cbad",
     "data/curated/phenomena.json": "310ade2c3fda90b9eae3f0f7198f49a9187144ba6a379dac436e93312145e0f0",
-    "data/curated/measurements.json": "4acffdfafe017a6ce3b4652cb5d979deec00627e5e191f0197b14e6ee6b16d48",
+    "data/curated/measurements.json": "b90c82b31a1fb964c061319766d7efc315521a6b59a08df7c7cc0106e43aaff8",
     "data/curated/groups.json": "e92645735c03499001dbde8be08971777d1e16926e910ca94164f464278be2d1",
     "data/curated/observers.json": "16d7b09cf5d838bfe153241917bbf4054df8f57f3a7a354d4638a0bdb20b55bd",
     "data/curated/scenarios.json": "c922b1ea2e636abf6eddcc895126dcebb879f675478a61a7406101a603f2b0de"
@@ -3746,13 +3746,13 @@
         "high": null,
         "level": null,
         "sampleCount": 25,
-        "statement": "76 ± 2 ms; Table 1 caption: 'our values are mean ± s.e.'",
-        "locator": "Table 1, row \"This study (2013), 600 fps, n=25\""
+        "statement": "76 ± 2",
+        "locator": "Table 1, row \"This study (2013), 600 fps, n=25\"; caption: \"our values are mean ± s.e.\""
       },
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-voluntary-blink-closing-phase",
-      "notes": "Quote is the WebFetch rendering of a table cell (label + value), not a running-text sentence. | Verifier: Quote is a table-cell reconstruction, as disclosed. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). Published dispersion recorded as structured uncertainty (ADR-0009), from the source wording checked by the verifier.",
+      "notes": "Quote is the WebFetch rendering of a table cell (label + value), not a running-text sentence. | Verifier: Quote is a table-cell reconstruction, as disclosed. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). Published dispersion recorded as structured uncertainty (ADR-0009), from the source wording checked by the verifier. Statement reduced to the literal cell '76 ± 2'; the caption that types it as s.e. is quoted in the locator (final review, 2026-11-27).",
       "quantityKind": "duration",
       "valueSI": 0.076,
       "lowSI": null,

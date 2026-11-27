@@ -21,7 +21,7 @@ Statut d'une exigence : **réalisée** (preuve de test exécuté), **partielle**
 | V00 sources | `data/raw/verify-*.json` (vérification indépendante), `scripts/curate.ts`, registre `data/sources/sources.json` |
 | V01 dimensions | `schemas/*.schema.json`, `checkInvariants` (unité ↔ grandeur), `metrology.test.ts`, `data-pipeline.test.ts` |
 | V02 métrologie | invariant « measured ⇒ protocol » ; statut documenté / mesuré / estimé affiché |
-| V03 statistiques | invariant « statistiques ⇒ protocole, n, méthode, quantiles ordonnés » ; incertitude structurée (ADR-0009 : type, n, formulation de la source, invariants) ; aucune distribution inventée |
+| V03 statistiques | invariant « statistiques ⇒ protocole, méthode (ou « non publiée » déclarée), n ou `sampleCountNote` si la source ne le publie pas, quantiles ordonnés » ; incertitude structurée (ADR-0009 : type, n, formulation de la source, invariants) ; aucune distribution inventée |
 | V04 architecture | conditions et configuration obligatoires par valeur ; cycles non convertis sans fréquence |
 | V05 mathématique | `oracle-cs03.test.ts`, `observers.test.ts` (identité, A→B→A, monotonie, limites, segments) |
 | V06 causalité | `simulator.test.ts`, `scenarios.test.ts`, exécution des scénarios à la construction |

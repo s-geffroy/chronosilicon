@@ -186,6 +186,7 @@ const fr = {
   'obs.cyclesNote':
     'Les cycles théoriques d’un cœur cadencé ne sont pas des instructions et ne mesurent pas le travail utile.',
   'sheet.notesLang': '(texte de curation en anglais)',
+  'sheet.sourceLang': '(extrait de la source, en anglais)',
   'sim.heading': 'Simulation à événements discrets',
   'sim.intro':
     'Un moteur abstrait, pas une émulation : chaque durée est une valeur qualifiée du corpus, enchaînée selon des dépendances et des ressources à capacité. Les étapes concurrentes ne s’additionnent pas : on calcule le chemin critique.',
@@ -466,6 +467,7 @@ const en: Record<MessageKey, string> = {
   'obs.cyclesNote':
     'The theoretical cycles of a clocked core are not instructions and do not measure useful work.',
   'sheet.notesLang': '(curation text in English)',
+  'sheet.sourceLang': '(source excerpt, in English)',
   'sim.heading': 'Discrete-event simulation',
   'sim.intro':
     'An abstract engine, not an emulator: every duration is a qualified corpus value, chained by dependencies and capacity-limited resources. Concurrent steps are not added up: the critical path is computed.',

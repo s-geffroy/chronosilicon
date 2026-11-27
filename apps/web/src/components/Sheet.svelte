@@ -56,24 +56,24 @@
         {#if m.calculation}<dt>{t('sheet.calculation')}</dt><dd class="mono">{m.calculation.formula}</dd>{/if}
       {/if}
       {#if level === 'scientific'}
-        <dt>{t('sheet.protocol')}</dt><dd>{m.protocol ?? t('sheet.protocolNone')}</dd>
+        <dt>{t('sheet.protocol')}</dt><dd data-testid="sheet-protocol">{#if m.protocol}{#if lang === 'fr'}<span class="help">{t('sheet.notesLang')}</span> {/if}<span lang="en">{m.protocol}</span>{:else}{t('sheet.protocolNone')}{/if}</dd>
         <dt>{t('sheet.uncertainty')}</dt>
         <dd data-testid="sheet-uncertainty">
           {#if m.uncertainty}
             {@const u = m.uncertainty}
-            {#if u.type === 'confidence-interval'}{formatValue(u.low!, m.unit, lang)} – {formatValue(u.high!, m.unit, lang)} ({t('unc.confidence-interval', { level: formatLevel(u.level ?? 0, lang) })}){:else}± {formatValue(u.value!, m.unit, lang)} ({t(`unc.${u.type}`)}){/if}{#if u.sampleCount !== null}<span class="unc">· {t('unc.n', { n: u.sampleCount })}</span>{/if}
-            <span class="help block">{t('unc.statement')}{#if lang === 'fr'} {t('sheet.notesLang')}{/if} <span lang="en">{u.statement}</span> — {u.locator}</span>
+            {#if u.type === 'confidence-interval'}{formatValue(u.low!, m.unit, lang)} – {formatValue(u.high!, m.unit, lang)} ({t('unc.confidence-interval', { level: formatLevel(u.level!, lang) })}){:else}± {formatValue(u.value!, m.unit, lang)} ({t(`unc.${u.type}`)}){/if}{#if u.sampleCount !== null}<span class="unc">· {t('unc.n', { n: u.sampleCount })}</span>{/if}
+            <span class="help block">{t('unc.statement')}{#if lang === 'fr'} {t('sheet.sourceLang')}{/if} <span lang="en">{u.statement}</span> — <span lang="en">{u.locator}</span></span>
           {:else if m.provenanceType === 'calculated'}{t('unc.notPropagated')}{:else}{t('sheet.uncertaintyUnknown')}{/if}
         </dd>
         {#if m.statistics}
           <dt>{t('stats.label')}</dt>
           <dd data-testid="sheet-statistics">
-            {m.statistics.quantiles.map((q) => `P${Math.round(q.p * 100)} ${formatValue(q.value, m.unit, lang)}`).join(' · ')}
+            {m.statistics.quantiles.map((q) => `P${formatLevel(q.p, lang)} ${formatValue(q.value, m.unit, lang)}`).join(' · ')}
             · {m.statistics.sampleCount !== null ? t('unc.n', { n: m.statistics.sampleCount }) : t('stats.nUnknown')}
             <span class="help block">{t('stats.method')} :{#if lang === 'fr'} {t('sheet.notesLang')}{/if} <span lang="en">{m.statistics.method}</span>{#if m.statistics.sampleCountNote} — <span lang="en">{m.statistics.sampleCountNote}</span>{/if}</span>
           </dd>
         {/if}
-        {#if m.quote}<dt>{t('sheet.quote')}</dt><dd><blockquote>{m.quote}</blockquote></dd>{/if}
+        {#if m.quote}<dt>{t('sheet.quote')}</dt><dd><blockquote lang="en">{m.quote}</blockquote></dd>{/if}
         <dt>{t('sheet.raw')}</dt><dd class="mono">{m.rawRef}</dd>
         {#if m.notes}<dt>{t('sheet.notes')}</dt><dd>{#if lang === 'fr'}<span class="help">{t('sheet.notesLang')}</span> {/if}<span lang="en">{m.notes}</span></dd>{/if}
       {/if}
@@ -84,7 +84,7 @@
       {#if s}
         <div class="source" data-testid="sheet-source">
           <p><cite>{s.title}</cite>{s.author ? ` — ${s.author}` : ''} · {s.publisher}{s.publishedDate ? ` · ${s.publishedDate}` : ''}{s.version ? ` · ${s.version}` : ''}</p>
-          <p>{t('sheet.locator')} : {m.locator}</p>
+          <p>{t('sheet.locator')} : <span lang="en">{m.locator}</span></p>
           <p>{t('sheet.accessed')} {s.accessedAt} · {t('sheet.license')} : {s.license}</p>
           <p><a href={s.url} rel="noopener noreferrer" target="_blank">{t('sheet.link')}</a>{s.doi ? ` · DOI ${s.doi}` : ''}</p>
         </div>
