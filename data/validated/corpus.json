@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "corpusVersion": "0.3.0+b82951f47093",
+  "corpusVersion": "0.3.0+6d8a68dd47cf",
   "inputs": {
     "data/sources/sources.json": "71566c6bfd2b20268b40497da849c4e1e54c372aa776b2fcd7b16a24aab5cbad",
     "data/curated/phenomena.json": "310ade2c3fda90b9eae3f0f7198f49a9187144ba6a379dac436e93312145e0f0",
     "data/curated/measurements.json": "b90c82b31a1fb964c061319766d7efc315521a6b59a08df7c7cc0106e43aaff8",
-    "data/curated/groups.json": "e92645735c03499001dbde8be08971777d1e16926e910ca94164f464278be2d1",
+    "data/curated/groups.json": "30480b338290a48e54f9b8c58303368f37749d28bd5d906eb7804378c0c72772",
     "data/curated/observers.json": "16d7b09cf5d838bfe153241917bbf4054df8f57f3a7a354d4638a0bdb20b55bd",
     "data/curated/scenarios.json": "c922b1ea2e636abf6eddcc895126dcebb879f675478a61a7406101a603f2b0de"
   },
@@ -12381,7 +12381,7 @@
         "intel-skylake-client-l2-latency-m1",
         "intel-skylake-client-l3-latency-m1"
       ],
-      "comparability": "same-protocol",
+      "comparability": "same-source",
       "note": {
         "fr": "Latences « les plus courtes » publiées par Intel (meilleur cas) dans une même table du manuel d'optimisation.",
         "en": "Fastest (best-case) latencies published by Intel in a single table of the optimization manual."
@@ -12399,7 +12399,7 @@
         "intel-icelake-client-l1d-latency-m1",
         "intel-icelake-client-l2-latency-m1"
       ],
-      "comparability": "same-protocol",
+      "comparability": "same-source",
       "note": {
         "fr": "Intel ne publie pas de latence L3 chiffrée pour Ice Lake client dans ce manuel (valeur « xx ») : le niveau est absent, pas estimé.",
         "en": "Intel gives no numeric L3 latency for Ice Lake client in this manual ('xx'): the level is missing, not estimated."
@@ -12651,10 +12651,10 @@
         "azure-rtt-eastus-westeurope-m1",
         "azure-rtt-eastus-australiaeast-m1"
       ],
-      "comparability": "same-protocol",
+      "comparability": "same-source",
       "note": {
-        "fr": "Même source et même méthode (médiane sur 30 jours, réseau dorsal Azure) ; n non publié.",
-        "en": "Same source and method (30-day median, Azure backbone); n not published."
+        "fr": "Même page source ; chaque valeur est donnée comme la médiane sur 30 jours du réseau dorsal Azure, mais la page ne décrit pas un protocole de sonde unique (type de sonde, nombre de mesures non publiés) : comparabilité « même source », pas « même protocole » (AUDIT-01, AUD-010).",
+        "en": "Same source page; each value is given as the 30-day median on the Azure backbone, but the page does not describe one probe protocol (probe type and count not published): comparability is 'same source', not 'same protocol' (AUDIT-01, AUD-010)."
       }
     },
     {

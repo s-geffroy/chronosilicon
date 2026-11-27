@@ -198,7 +198,10 @@ test('V2 comparison: ordered by year, comparability and frequency warning shown'
   expect(years[0]).toBe('1974');
   await page.getByTestId('cmp-select').selectOption('cmp-azure-rtt');
   await expect(page).toHaveURL(/g=cmp-azure-rtt/);
-  await expect(page.getByTestId('cmp-note')).toContainText('same source and same method');
+  // AUD-010 (REMEDIATION-01): the group was reclassified 'same-source' — the page gives no single probe protocol.
+  // The former expectation ('same source and same method') asserted the unfounded claim.
+  await expect(page.getByTestId('cmp-note')).toContainText('same source document');
+  await expect(page.getByTestId('cmp-note')).toContainText('not \'same protocol\'');
 });
 
 test('V2 observers: same physical duration, several frames (CS-07)', async ({ page }) => {

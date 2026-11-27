@@ -119,6 +119,11 @@ export interface Group {
   readonly members: readonly string[];
   readonly comparability: Comparability;
   readonly note: I18nText;
+  /**
+   * Required for `same-protocol` (AUD-010): where the source states that every
+   * member was obtained with one protocol. Sharing a source is not enough.
+   */
+  readonly protocolEvidence?: { readonly sourceId: string; readonly locator: string; readonly statement: string };
 }
 
 export interface ObserverDef {
@@ -217,6 +222,24 @@ export function checkV2Invariants(
     if (g.comparability === 'same-protocol' || g.comparability === 'same-source') {
       const srcs = new Set(g.members.map((id) => byId.get(id)?.sourceIds.join('+')));
       if (srcs.size > 1) errors.push(`group ${g.id}: declared ${g.comparability} but members cite different sources`);
+    }
+    if (g.comparability === 'same-protocol') {
+      // AUD-010: one source can describe several protocols, so same sources do not imply one protocol.
+      const ev = g.protocolEvidence;
+      if (!ev || !ev.locator.trim() || !ev.statement.trim()) {
+        errors.push(`group ${g.id}: same-protocol requires protocolEvidence (source, locator, statement)`);
+      } else {
+        for (const id of g.members) {
+          const m = byId.get(id);
+          if (m && !m.sourceIds.includes(ev.sourceId)) errors.push(`group ${g.id}: member ${id} does not cite the protocolEvidence source ${ev.sourceId}`);
+        }
+      }
+      for (const id of g.members) {
+        const m = byId.get(id);
+        if (m && !m.protocol) errors.push(`group ${g.id}: same-protocol member ${id} has no protocol`);
+      }
+    } else if (g.protocolEvidence) {
+      errors.push(`group ${g.id}: protocolEvidence is only meaningful for same-protocol`);
     }
     for (const id of g.members) {
       const m = byId.get(id);
@@ -328,7 +351,8 @@ export function checkInvariants({ sources, phenomena, measurements }: InvariantI
     if (m.provenanceType === 'calculated') {
       if (!m.calculation) errors.push(`${at}: calculated value without calculation`);
       else for (const i of m.calculation.inputs) {
-        if (i.startsWith('src:')) {
+        if (i === m.id) errors.push(`${at}: calculation uses itself as an input (AUD-009)`);
+        else if (i.startsWith('src:')) {
           if (!m.sourceIds.includes(i.slice(4))) errors.push(`${at}: calculation input ${i} is not a cited source`);
         } else if (!measIds.has(i)) errors.push(`${at}: calculation input ${i} unresolved`);
         else if (m.verificationStatus === 'qualified' && measurements.find((x) => x.id === i)?.verificationStatus !== 'qualified') {
@@ -344,7 +368,40 @@ export function checkInvariants({ sources, phenomena, measurements }: InvariantI
       if (!m.locator.trim()) errors.push(`${at}: qualified value without locator`);
     }
   }
+  for (const c of calculationCycles(measurements)) errors.push(`calculation cycle: ${c.join(' -> ')} (AUD-009)`);
   return errors;
+}
+
+/**
+ * Cycles in the graph "calculated value -> its measurement inputs" (AUD-009).
+ * Iterative three-colour DFS (no recursion); self-loops are reported by the
+ * caller with a dedicated message and skipped here. Each cycle is reported once,
+ * starting from the node where it was closed.
+ */
+export function calculationCycles(measurements: readonly Pick<Measurement, 'id' | 'calculation'>[]): string[][] {
+  const edges = new Map<string, string[]>();
+  for (const m of measurements) {
+    edges.set(m.id, (m.calculation?.inputs ?? []).filter((i) => !i.startsWith('src:') && i !== m.id));
+  }
+  const colour = new Map<string, 0 | 1 | 2>();
+  const cycles: string[][] = [];
+  for (const root of edges.keys()) {
+    if (colour.get(root)) continue;
+    const stack: Array<{ id: string; next: number }> = [{ id: root, next: 0 }];
+    const path: string[] = [root];
+    colour.set(root, 1);
+    while (stack.length) {
+      const top = stack[stack.length - 1]!;
+      const out = edges.get(top.id) ?? [];
+      if (top.next >= out.length) { colour.set(top.id, 2); stack.pop(); path.pop(); continue; }
+      const n = out[top.next++]!;
+      if (!edges.has(n)) continue; // unresolved input: reported elsewhere
+      const c = colour.get(n) ?? 0;
+      if (c === 1) cycles.push([...path.slice(path.indexOf(n)), n]);
+      else if (c === 0) { colour.set(n, 1); stack.push({ id: n, next: 0 }); path.push(n); }
+    }
+  }
+  return cycles;
 }
 
 /** Derives SI-normalised measurements (pure; throws on dimensional errors). */

@@ -21,7 +21,17 @@
           "label": { "$ref": "common.schema.json#/$defs/i18nText" },
           "members": { "type": "array", "minItems": 2, "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/id" } },
           "comparability": { "enum": ["same-protocol", "same-source", "same-definition", "heterogeneous"] },
-          "note": { "$ref": "common.schema.json#/$defs/i18nText" }
+          "note": { "$ref": "common.schema.json#/$defs/i18nText" },
+          "protocolEvidence": {
+            "type": "object",
+            "required": ["sourceId", "locator", "statement"],
+            "additionalProperties": false,
+            "properties": {
+              "sourceId": { "$ref": "common.schema.json#/$defs/id" },
+              "locator": { "type": "string", "minLength": 1 },
+              "statement": { "type": "string", "minLength": 1 }
+            }
+          }
         }
       }
     }
