@@ -2433,7 +2433,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "caesium-period-m1",
@@ -2471,7 +2474,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "speed-of-light-vacuum-m1",
@@ -2504,7 +2510,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "light-distance-per-ns-m1",
@@ -2542,7 +2551,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "astronomical-unit-m1",
@@ -2575,7 +2587,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "astronomical-unit-light-time-m1",
@@ -2614,7 +2629,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "earth-moon-semimajor-axis-m1",
@@ -2647,7 +2665,10 @@
       "lowSI": 357000000,
       "highSI": 407000000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "earth-moon-light-time-one-way-m1",
@@ -2686,7 +2707,10 @@
       "lowSI": 1.1908,
       "highSI": 1.3576,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "earth-mars-distance-min-m1",
@@ -2719,7 +2743,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "earth-mars-distance-max-m1",
@@ -2752,7 +2779,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "earth-mars-light-time-min-m1",
@@ -2791,7 +2821,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "earth-mars-light-time-max-m1",
@@ -2830,7 +2863,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "voyager1-distance-2026-11-18-m1",
@@ -2851,7 +2887,7 @@
         "src-nasa-voyager-where"
       ],
       "locator": "Main text, Voyager 1 distance statement",
-      "quote": "16.094 billion miles (25.902 billion kilometers) away from Earth.",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -2863,7 +2899,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "voyager1-light-time-2026-11-18-m1",
@@ -2884,7 +2927,7 @@
         "src-nasa-voyager-where"
       ],
       "locator": "Main text",
-      "quote": "the distance light travels in 24 hours, also known as one light-day",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -2902,7 +2945,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "tcp-initial-rto-m1",
@@ -2935,7 +2985,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "tcp-min-rto-m1",
@@ -2968,7 +3021,10 @@
       "lowSI": 1,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "tcp-max-rto-floor-m1",
@@ -3001,7 +3057,10 @@
       "lowSI": 60,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "tcp-rto-after-syn-timeout-m1",
@@ -3034,7 +3093,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "tcp-msl-m1",
@@ -3067,7 +3129,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "tcp-isn-clock-tick-m1",
@@ -3100,7 +3165,10 @@
       "lowSI": null,
       "highSI": 0.000004,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "nr-urllc-user-plane-latency-target-m1",
@@ -3121,7 +3189,7 @@
         "src-3gpp-tr38913"
       ],
       "locator": "Section 7.5 'User plane latency', p. 24",
-      "quote": "For URLLC, the target for user plane latency should be 0.5ms for UL, and 0.5ms for DL.",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -3133,7 +3201,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "nr-urllc-reliability-latency-m1",
@@ -3154,7 +3229,7 @@
         "src-3gpp-tr38913"
       ],
       "locator": "Section 7.9 'Reliability', p. 25",
-      "quote": "A general URLLC reliability requirement for one transmission of a packet is 1-10-5 for 32 bytes with a user plane latency of 1ms.",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -3166,7 +3241,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "nr-embb-user-plane-latency-target-m1",
@@ -3187,7 +3269,7 @@
         "src-3gpp-tr38913"
       ],
       "locator": "Section 7.5, p. 24",
-      "quote": "For eMBB, the target for user plane latency should be 4ms for UL, and 4ms for DL.",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -3199,7 +3281,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ntn-geo-user-plane-rtt-target-m1",
@@ -3220,7 +3309,7 @@
         "src-3gpp-tr38913"
       ],
       "locator": "Section 7.5, p. 24",
-      "quote": "the target for user plane RTT can be as high as 600ms for GEO satellite systems",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -3232,7 +3321,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ntn-leo-user-plane-rtt-target-m1",
@@ -3253,7 +3349,7 @@
         "src-3gpp-tr38913"
       ],
       "locator": "Section 7.5, p. 24",
-      "quote": "up to 180ms for MEO satellite systems, and up to 50ms for LEO satellite systems.",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -3265,7 +3361,14 @@
       "lowSI": null,
       "highSI": 0.05,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ethernet-min-frame-size-m1",
@@ -3298,7 +3401,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "ethernet-min-frame-wire-time-1g-m1",
@@ -3336,7 +3442,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "ethernet-min-frame-wire-time-10g-m1",
@@ -3374,7 +3483,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "ethernet-min-frame-wire-time-100g-m1",
@@ -3412,7 +3524,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "azure-rtt-eastus-westeurope-m1",
@@ -3433,7 +3548,7 @@
         "src-azure-latency"
       ],
       "locator": "Europe > Western Europe tab, row 'East US', column 'West Europe'",
-      "quote": "| East US | 90 | 88 | 84 | 81 | 98 | 90 | 83 |",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": {
@@ -3449,7 +3564,7 @@
       },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#azure-rtt-eastus-westeurope",
-      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: 'The measurements are collected in 1-minute intervals'. | Verifier: 'Virginia' and 'Netherlands' are not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009).",
+      "notes": "n of probes not given; private backbone, not public Internet. Methodology quote: […]. | Verifier: 'Virginia' and 'Netherlands' are not stated on the page. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26). The published value is a median (P50): recorded as statistics with n unknown and explained (data guard, ADR-0009).",
       "quantityKind": "duration",
       "valueSI": 0.083,
       "lowSI": null,
@@ -3460,7 +3575,15 @@
           "value": 0.083
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "azure-rtt-eastus-westus-m1",
@@ -3481,7 +3604,7 @@
         "src-azure-latency"
       ],
       "locator": "Americas > West US tab, row 'East US', column 'West US'",
-      "quote": "| East US | 52 | 69 | 71 | 58 |",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": {
@@ -3508,7 +3631,14 @@
           "value": 0.069
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "azure-rtt-westeurope-francecentral-m1",
@@ -3529,7 +3659,7 @@
         "src-azure-latency"
       ],
       "locator": "Europe > Western Europe tab, row 'West Europe', column 'France Central'",
-      "quote": "| West Europe | 8 | 13 | 22 | 27 | 17 | 20 |  |",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": {
@@ -3556,7 +3686,14 @@
           "value": 0.013
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "azure-rtt-eastus-australiaeast-m1",
@@ -3577,7 +3714,7 @@
         "src-azure-latency"
       ],
       "locator": "APAC > Australia / New Zealand tab, row 'East US', column 'Australia East'",
-      "quote": "| East US | 200 | 200 | 201 | 212 | 183 |",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": {
@@ -3604,7 +3741,14 @@
           "value": 0.201
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "human-simple-visual-reaction-time-m1",
@@ -3637,7 +3781,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "human-stimulus-detection-time-m1",
@@ -3670,7 +3817,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "human-voluntary-blink-duration-m1",
@@ -3691,7 +3841,7 @@
         "src-kwon-2013-blink"
       ],
       "locator": "Results; Table 1",
-      "quote": "one voluntary blink took 572 ± 25 ms",
+      "quote": null,
       "era": 2013,
       "uncertainty": {
         "type": "unspecified-plus-minus",
@@ -3700,7 +3850,7 @@
         "high": null,
         "level": null,
         "sampleCount": 25,
-        "statement": "one voluntary blink took 572 ± 25 ms",
+        "statement": null,
         "locator": "Results, running text"
       },
       "statistics": null,
@@ -3716,6 +3866,14 @@
         "value": 0.025,
         "low": null,
         "high": null
+      },
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "uncertainty.statement"
+        ]
       }
     },
     {
@@ -3737,7 +3895,7 @@
         "src-kwon-2013-blink"
       ],
       "locator": "Table 1",
-      "quote": "Closing phase: 76 ± 2 ms",
+      "quote": null,
       "era": 2013,
       "uncertainty": {
         "type": "standard-error",
@@ -3746,7 +3904,7 @@
         "high": null,
         "level": null,
         "sampleCount": 25,
-        "statement": "76 ± 2",
+        "statement": null,
         "locator": "Table 1, row \"This study (2013), 600 fps, n=25\"; caption: \"our values are mean ± s.e.\""
       },
       "statistics": null,
@@ -3762,6 +3920,14 @@
         "value": 0.002,
         "low": null,
         "high": null
+      },
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "uncertainty.statement"
+        ]
       }
     },
     {
@@ -3795,7 +3961,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "human-flicker-artifact-edge-median-m1",
@@ -3828,7 +3997,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "human-stylus-latency-jnd-large-box-m1",
@@ -3849,7 +4021,7 @@
         "src-ng-2014-stylus"
       ],
       "locator": "Results, Figure 9 caption",
-      "quote": "Results ranged from 2 to 16 milliseconds, with a median latency of 6 milliseconds.",
+      "quote": null,
       "era": 2014,
       "uncertainty": null,
       "statistics": null,
@@ -3861,7 +4033,14 @@
       "lowSI": 0.002,
       "highSI": 0.016,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "human-stylus-latency-jnd-small-box-m1",
@@ -3882,19 +4061,27 @@
         "src-ng-2014-stylus"
       ],
       "locator": "Results, Figure 10 caption; Abstract",
-      "quote": "Results ranged from 2 to 7 milliseconds, with a median latency of 2 milliseconds.",
+      "quote": null,
       "era": 2014,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-A_physics_space_human_network.json#human-stylus-latency-jnd-small-box",
-      "notes": "Abstract: '~1 versus 2 milliseconds while dragging'. Same range inconsistency as above. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "notes": "Abstract: […]. Same range inconsistency as above. | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "duration",
       "valueSI": 0.002,
       "lowSI": 0.002,
       "highSI": 0.007,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "human-stylus-latency-jnd-scribbling-m1",
@@ -3915,7 +4102,7 @@
         "src-ng-2014-stylus"
       ],
       "locator": "Results, Figure 11",
-      "quote": "discriminate between the 7-millisecond baseline latency and a median of 40 milliseconds (Figure 11; range 10 - 70 milliseconds)",
+      "quote": null,
       "era": 2014,
       "uncertainty": null,
       "statistics": null,
@@ -3927,7 +4114,14 @@
       "lowSI": 0.01,
       "highSI": 0.07,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-skylake-client-l1d-latency-m1",
@@ -3948,7 +4142,7 @@
         "src-intel-orm-vol1-051"
       ],
       "locator": "Table 2-16 'Cache Parameters of the Skylake Client Microarchitecture', p. 2-36",
-      "quote": "First Level Data     32 KB/ 8           64       4 cycle",
+      "quote": null,
       "era": 2015,
       "uncertainty": null,
       "statistics": null,
@@ -3960,7 +4154,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-skylake-client-l2-latency-m1",
@@ -3981,7 +4182,7 @@
         "src-intel-orm-vol1-051"
       ],
       "locator": "Table 2-16, p. 2-36",
-      "quote": "Second Level        256KB/4            64       12 cycle",
+      "quote": null,
       "era": 2015,
       "uncertainty": null,
       "statistics": null,
@@ -3993,7 +4194,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-skylake-client-l3-latency-m1",
@@ -4014,19 +4222,27 @@
         "src-intel-orm-vol1-051"
       ],
       "locator": "Table 2-16, p. 2-36, row 'Third Level (Shared L3)'",
-      "quote": "per core/Up          64         44              32",
+      "quote": null,
       "era": 2015,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-skylake-client-l3-latency",
-      "notes": "The row is split across lines in the extraction. Value in core cycles. | Verifier: La mention 'L3 latency depends on core/uncore clock ratio' vient de la note de la table Haswell (vol. 2), pas de la table Skylake.",
+      "notes": "The row is split across lines in the extraction. Value in core cycles. | Verifier: La mention […] vient de la note de la table Haswell (vol. 2), pas de la table Skylake.",
       "quantityKind": "cycle_count",
       "valueSI": 44,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "intel-icelake-client-l1d-latency-m1",
@@ -4047,7 +4263,7 @@
         "src-intel-orm-vol1-051"
       ],
       "locator": "Table 2-9 'Cache Parameters of the Ice Lake Client Microarchitecture', p. 2-21",
-      "quote": "Level              48KB/8            64            5",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -4059,7 +4275,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-icelake-client-l2-latency-m1",
@@ -4080,7 +4303,7 @@
         "src-intel-orm-vol1-051"
       ],
       "locator": "Table 2-9, p. 2-21",
-      "quote": "Level            512KB/8            64           13",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -4092,7 +4315,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-haswell-l3-latency-m1",
@@ -4113,7 +4343,7 @@
         "src-intel-orm-vol2-051"
       ],
       "locator": "Table 1-4 'Cache Parameters of the Haswell Microarchitecture', p. 1-5",
-      "quote": "Varies            64            ~34        Varies",
+      "quote": null,
       "era": 2013,
       "uncertainty": null,
       "statistics": null,
@@ -4125,7 +4355,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-sandybridge-llc-latency-m1",
@@ -4146,7 +4383,7 @@
         "src-intel-orm-vol2-051"
       ],
       "locator": "Table 2-6 'Lookup Order and Load Latency', p. 2-11",
-      "quote": "Third Level (LLC)                                      26-312",
+      "quote": null,
       "era": 2011,
       "uncertainty": null,
       "statistics": null,
@@ -4158,7 +4395,14 @@
       "lowSI": 26,
       "highSI": 31,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-sandybridge-other-core-dirty-hit-m1",
@@ -4179,7 +4423,7 @@
         "src-intel-orm-vol2-051"
       ],
       "locator": "Table 2-6, p. 2-11",
-      "quote": "cores if applicable                • 60 - dirty hit",
+      "quote": null,
       "era": 2011,
       "uncertainty": null,
       "statistics": null,
@@ -4191,7 +4435,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-xeon5500-local-dram-latency-m1",
@@ -4212,19 +4463,27 @@
         "src-intel-orm-vol1-051"
       ],
       "locator": "Table 22-7 'Approximate Latency of L2 Misses of Intel Xeon Processor 5500', p. 22-23",
-      "quote": "Local DRAM                                                                           ~ 50 ns",
+      "quote": null,
       "era": 2009,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-xeon5500-local-dram-latency",
-      "notes": "Intel calls these 'examples of the approximate latency values'. No protocol. | Verifier: 'two sockets' retiré : non dit par la source.",
+      "notes": "Intel calls these […]. No protocol. | Verifier: 'two sockets' retiré : non dit par la source.",
       "quantityKind": "duration",
       "valueSI": 5e-8,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "intel-xeon5500-remote-dram-latency-m1",
@@ -4245,7 +4504,7 @@
         "src-intel-orm-vol1-051"
       ],
       "locator": "Table 22-7, p. 22-23",
-      "quote": "Remote DRAM                                                                          ~ 90 ns",
+      "quote": null,
       "era": 2009,
       "uncertainty": null,
       "statistics": null,
@@ -4257,7 +4516,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-xeon5500-l3-hit-exclusive-m1",
@@ -4278,7 +4544,7 @@
         "src-intel-orm-vol1-051"
       ],
       "locator": "Table 22-7, p. 22-23",
-      "quote": "L3 hit, Line exclusive                                                               ~ 42 cycles",
+      "quote": null,
       "era": 2009,
       "uncertainty": null,
       "statistics": null,
@@ -4290,7 +4556,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-sandybridge-c6-exit-latency-m1",
@@ -4311,19 +4584,27 @@
         "src-intel-orm-vol1-051"
       ],
       "locator": "Table 16-2 'C-State Total Processor Exit Latency for Client Systems with Slow VR', p. 16-18",
-      "quote": "C6                                 181 μs                                            104 μs",
+      "quote": null,
       "era": 2011,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#intel-sandybridge-c6-exit-latency",
-      "notes": "Intel: 'not processor specifications but estimates derived from empirical measurements'. The column headers mix 'typical' and 'worst case'. C1 = 1 µs in the same table. | Verifier: low/high correspondent à deux réglages, pas à une incertitude ; la seconde colonne est intitulée 'Worst Case' par Intel.",
+      "notes": "Intel: […]. The column headers mix 'typical' and 'worst case'. C1 = 1 µs in the same table. | Verifier: low/high correspondent à deux réglages, pas à une incertitude ; la seconde colonne est intitulée 'Worst Case' par Intel.",
       "quantityKind": "duration",
       "valueSI": 0.000181,
       "lowSI": 0.000104,
       "highSI": 0.000181,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "intel-sandybridge-c1-exit-latency-m1",
@@ -4344,7 +4625,7 @@
         "src-intel-orm-vol1-051"
       ],
       "locator": "Table 16-2, p. 16-18",
-      "quote": "C1                                  1 μs                                              1 μs",
+      "quote": null,
       "era": 2011,
       "uncertainty": null,
       "statistics": null,
@@ -4356,7 +4637,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "amd-zen4-l1d-load-to-use-m1",
@@ -4377,7 +4665,7 @@
         "src-amd-zen4-sog"
       ],
       "locator": "Section 2.6.2 'L1 Data Cache' (PDF p. 16); see also section 2.12",
-      "quote": "The L1 data cache has a 4- or 5- cycle integer load-to-use latency, and a 7- or 8-cycle FPU load-to-use latency.",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -4389,7 +4677,14 @@
       "lowSI": 4,
       "highSI": 5,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "amd-zen4-l2-load-to-use-m1",
@@ -4410,7 +4705,7 @@
         "src-amd-zen4-sog"
       ],
       "locator": "Section 2.6.3 'L2 Cache' (PDF p. 18)",
-      "quote": "with a variable load-to-use latency of no less than 14 cycles",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -4422,7 +4717,14 @@
       "lowSI": 14,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "amd-zen4-l3-load-to-use-m1",
@@ -4443,7 +4745,7 @@
         "src-amd-zen4-sog"
       ],
       "locator": "Section 2.6.4 'L3 Cache' (PDF p. 18)",
-      "quote": "The L3 has an average load-to-use latency of 50 cycles.",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -4455,7 +4757,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "amd-zen5-l1d-load-to-use-m1",
@@ -4476,7 +4785,7 @@
         "src-amd-zen5-sog"
       ],
       "locator": "Section 2.6.2 'L1 Data Cache' (printed p. 20)",
-      "quote": "has a 4- or 5- cycle integer load-to-use latency, and a 7- or 8-cycle FPU load-to-use latency",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -4488,7 +4797,14 @@
       "lowSI": 4,
       "highSI": 5,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "amd-zen5-l2-load-to-use-m1",
@@ -4509,7 +4825,7 @@
         "src-amd-zen5-sog"
       ],
       "locator": "Section 2.6.3 'L2 Cache' (printed p. 23)",
-      "quote": "1 Mbyte with a variable load-to-use latency of no less than 14 cycles",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -4521,7 +4837,14 @@
       "lowSI": 14,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "amd-zen5-l3-load-to-use-m1",
@@ -4542,7 +4865,7 @@
         "src-amd-zen5-sog"
       ],
       "locator": "Section 2.6.4 'L3 Cache' (printed p. 23)",
-      "quote": "The L3 has an average load-to-use latency of 46 cycles.",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -4554,7 +4877,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "x86-add-r64-latency-alderlake-p-m1",
@@ -4575,7 +4905,7 @@
         "src-uops-info"
       ],
       "locator": "https://uops.info/html-instr/ADD_01_R64_R64.html, section 'Alder Lake-P' > Measurements > Latencies",
-      "quote": "Latency operand 1 → 1: 1",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
@@ -4587,7 +4917,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "x86-imul-r64-latency-alderlake-p-m1",
@@ -4608,19 +4945,27 @@
         "src-uops-info"
       ],
       "locator": "https://uops.info/html-instr/IMUL_R64_R64.html, section 'Alder Lake-P'",
-      "quote": "Latency operand 1 → 1: 3",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-B_cpu_memory_os_hpc.json#x86-imul-r64-latency-alderlake-p",
-      "notes": "Same value (3) measured on Skylake, Zen 4 and Zen 5, and documented by AMD (Zen 4 SOG §2.10: '64 bits × 64 bits with 3 cycle latency'). | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
+      "notes": "Same value (3) measured on Skylake, Zen 4 and Zen 5, and documented by AMD (Zen 4 SOG §2.10: […]). | Decision: Protocol written explicitly from the verified source description (review M-1, 2026-11-26).",
       "quantityKind": "cycle_count",
       "valueSI": 3,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "x86-div-r64-latency-alderlake-p-m1",
@@ -4641,7 +4986,7 @@
         "src-uops-info"
       ],
       "locator": "https://uops.info/html-instr/DIV_R64.html, section 'Alder Lake-P'",
-      "quote": "Latency operand 1 → 2: 14 ... Latency operand 1 → 3: 18",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
@@ -4653,7 +4998,14 @@
       "lowSI": 14,
       "highSI": 18,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "x86-div-r64-latency-skylake-m1",
@@ -4674,7 +5026,7 @@
         "src-uops-info"
       ],
       "locator": "https://uops.info/html-instr/DIV_R64.html, section 'Skylake'",
-      "quote": "Latency operand 1 → 2: 35 ≤ lat ≤ 90",
+      "quote": null,
       "era": 2015,
       "uncertainty": null,
       "statistics": null,
@@ -4686,7 +5038,14 @@
       "lowSI": 32,
       "highSI": 90,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "x86-div-r64-latency-zen4-m1",
@@ -4707,7 +5066,7 @@
         "src-agner-instr-tables"
       ],
       "locator": "AMD Zen 4 section, integer instruction table, row 'DIV r64/m64', printed p. 127",
-      "quote": "DIV                    r64/m64     2     10-18     7-12",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -4719,7 +5078,14 @@
       "lowSI": 10,
       "highSI": 18,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-core-i9-14900k-max-turbo-m1",
@@ -4740,7 +5106,7 @@
         "src-intel-ark-i9-14900k"
       ],
       "locator": "Specifications > CPU Specifications > Max Turbo Frequency",
-      "quote": "Max Turbo Frequency: 6 GHz",
+      "quote": null,
       "era": 2023,
       "uncertainty": null,
       "statistics": null,
@@ -4752,7 +5118,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-core-i9-14900k-pcore-base-m1",
@@ -4773,7 +5146,7 @@
         "src-intel-ark-i9-14900k"
       ],
       "locator": "Specifications > CPU Specifications > Performance-core Base Frequency",
-      "quote": "Performance-core Base Frequency: 3.2 GHz",
+      "quote": null,
       "era": 2023,
       "uncertainty": null,
       "statistics": null,
@@ -4785,7 +5158,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-8086-initial-clock-m1",
@@ -4806,7 +5186,7 @@
         "src-intel-vault-8086"
       ],
       "locator": "Article body, specifications line",
-      "quote": "Introduction date: June 1978; Initial Clock Speed: 5 MHz; Number of transistors: 29,000",
+      "quote": null,
       "era": 1978,
       "uncertainty": null,
       "statistics": null,
@@ -4818,7 +5198,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-pentium4-launch-clock-m1",
@@ -4839,7 +5226,7 @@
         "src-intel-pr-p4-2000"
       ],
       "locator": "Press release, paragraph 1",
-      "quote": "The Pentium 4 processor is being introduced today at 1.5 and 1.4 GHz speeds.",
+      "quote": null,
       "era": 2000,
       "uncertainty": null,
       "statistics": null,
@@ -4851,7 +5238,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ddr5-5600b-taa-micron-m1",
@@ -4872,7 +5266,7 @@
         "src-micron-ddr5-16gb-revd"
       ],
       "locator": "Table 2 'Part Numbers and Timing Parameters', p. 2",
-      "quote": "MT60B2G8RZ-56B:D  2Gb x8  0.357ns/  46-45-45  16.000  16.000  16.000  Production",
+      "quote": null,
       "era": 2023,
       "uncertainty": null,
       "statistics": null,
@@ -4884,7 +5278,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ddr4-3200-cl-micron-m1",
@@ -4905,7 +5306,7 @@
         "src-micron-ddr4-8gb"
       ],
       "locator": "Table 1 'Key Timing Parameters', p. 1",
-      "quote": "-062E                      3200                  22-22-22                      13.75",
+      "quote": null,
       "era": 2018,
       "uncertainty": null,
       "statistics": null,
@@ -4917,7 +5318,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ddr4-trefi-micron-m1",
@@ -4938,7 +5346,7 @@
         "src-micron-ddr4-8gb"
       ],
       "locator": "Command/state description (around p. 21) and Table 51 'tREFI and tRFC Parameters', p. 149",
-      "quote": "8,192 refresh commands within 64ms between 0 oC and 85 oC. This allows for a tREFI of 7.8125μs",
+      "quote": null,
       "era": 2018,
       "uncertainty": null,
       "statistics": null,
@@ -4950,7 +5358,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ddr4-8gb-trfc1-micron-m1",
@@ -4971,7 +5386,7 @@
         "src-micron-ddr4-8gb"
       ],
       "locator": "Table 51 'tREFI and tRFC Parameters', p. 149",
-      "quote": "tRFC1                                     160             260                         350                        550                      ns",
+      "quote": null,
       "era": 2018,
       "uncertainty": null,
       "statistics": null,
@@ -4983,7 +5398,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "dram-latency-epyc-7702-measured-m1",
@@ -5004,7 +5426,7 @@
         "src-velten-icpe22"
       ],
       "locator": "Section 6.1 'Latencies' and Table 2",
-      "quote": "We measure a latency of about 220 cycles (110 ns) for the Rome system, and 200 cycles (80 ns) for CLX.",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -5016,7 +5438,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "dram-latency-xeon-6248-measured-m1",
@@ -5037,7 +5466,7 @@
         "src-velten-icpe22"
       ],
       "locator": "Section 6.1 and Table 3",
-      "quote": "200 cycles (80 ns) for CLX",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -5049,7 +5478,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "dram-latency-pentiumpro-lmbench-1995-m1",
@@ -5070,7 +5506,7 @@
         "src-lmbench-1996"
       ],
       "locator": "Table 6 'Cache and memory latency (ns)', row Linux/i686",
-      "quote": "Linux/i686           5   10   8K 30 256K             179",
+      "quote": null,
       "era": 1995,
       "uncertainty": null,
       "statistics": null,
@@ -5082,7 +5518,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "apple-m4-memory-bandwidth-m1",
@@ -5103,7 +5546,7 @@
         "src-apple-mbp14-m4-specs"
       ],
       "locator": "Tech Specs > Chip",
-      "quote": "120GB/s memory bandwidth",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -5115,7 +5558,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "linux-config-hz-default-m1",
@@ -5148,7 +5598,10 @@
       "lowSI": 100,
       "highSI": 1000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "linux-tick-period-hz1000-m1",
@@ -5186,7 +5639,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "linux-eevdf-base-slice-v6-12-m1",
@@ -5219,7 +5675,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "linux-eevdf-base-slice-master-m1",
@@ -5252,7 +5711,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "linux-default-timer-slack-m1",
@@ -5285,7 +5747,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "lmbench-null-syscall-linux-pentiumpro-m1",
@@ -5306,7 +5771,7 @@
         "src-lmbench-1996"
       ],
       "locator": "Table 7 'Simple system call time (microseconds)', row Linux/i686; method in section 6.3",
-      "quote": "Linux/i686                                  3",
+      "quote": null,
       "era": 1995,
       "uncertainty": null,
       "statistics": null,
@@ -5318,7 +5783,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "lmbench-context-switch-linux-pentiumpro-m1",
@@ -5339,7 +5811,7 @@
         "src-lmbench-1996"
       ],
       "locator": "Table 10 'Context switch time (microseconds)', row Linux/i686, column 2 processes 0KB",
-      "quote": "Linux/i686             6        18       7      101",
+      "quote": null,
       "era": 1995,
       "uncertainty": null,
       "statistics": null,
@@ -5351,7 +5823,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "slingshot-rosetta-switch-latency-m1",
@@ -5372,7 +5851,7 @@
         "src-desensi-slingshot"
       ],
       "locator": "Section II-A, Fig. 2 'Distribution of switch latency for RoCE traffic'",
-      "quote": "We observe that ROSETTA has a mean and median latency of 350 nanoseconds, with all the distribution lying between 300 and 400 nanoseconds, except for a few outliers.",
+      "quote": null,
       "era": 2020,
       "uncertainty": null,
       "statistics": null,
@@ -5384,7 +5863,14 @@
       "lowSI": 3e-7,
       "highSI": 4e-7,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "pcie4-lane-rate-m1",
@@ -5405,7 +5891,7 @@
         "src-dr-pcie4"
       ],
       "locator": "Press release body, 4th paragraph",
-      "quote": "delivers high performance 16GT/s data rates with flexible lane width configurations",
+      "quote": null,
       "era": 2017,
       "uncertainty": null,
       "statistics": null,
@@ -5417,7 +5903,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "pcie5-lane-rate-m1",
@@ -5438,7 +5931,7 @@
         "src-dr-pcie5"
       ],
       "locator": "Press release, highlights list",
-      "quote": "Delivers 32 GT/s raw bit rate and up to 128 GB/s via x16 configuration",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -5450,7 +5943,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "pcie5-x16-bandwidth-m1",
@@ -5471,7 +5971,7 @@
         "src-dr-pcie5"
       ],
       "locator": "Press release, highlights list",
-      "quote": "Delivers 32 GT/s raw bit rate and up to 128 GB/s via x16 configuration",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -5483,7 +5983,14 @@
       "lowSI": null,
       "highSI": 128000000000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "pcie6-lane-rate-m1",
@@ -5504,7 +6011,7 @@
         "src-dr-pcie6"
       ],
       "locator": "Press release, feature list",
-      "quote": "64 GT/s raw data rate and up to 256 GB/s via x16 configuration",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -5516,7 +6023,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "pcie6-x16-bandwidth-m1",
@@ -5537,19 +6051,27 @@
         "src-dr-pcie6"
       ],
       "locator": "Press release, feature list",
-      "quote": "64 GT/s raw data rate and up to 256 GB/s via x16 configuration",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie6-x16-bandwidth",
-      "notes": "Direction not stated in this text; same convention as the PCIe 5.0 '128 GB/s' figure (2x per generation). | Verifier: « deux sens / 128 GB/s par sens » non sourcé ici. | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
+      "notes": "Direction not stated in this text; same convention as the PCIe 5.0 '128 GB/s' figure (2x per generation). | Verifier: […] non sourcé ici. | Decision: Bound stated by the source, encoded in low/high (bound audit, lot-2 review M3 follow-up).",
       "quantityKind": "throughput",
       "valueSI": 256000000000,
       "lowSI": null,
       "highSI": 256000000000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "cxl3-data-rate-m1",
@@ -5570,7 +6092,7 @@
         "src-cxl3-pr"
       ],
       "locator": "p.1, highlights bullet 2 (also 'Doubles the bandwidth to 64GTs' in the feature list)",
-      "quote": "CXL 3.0 specification doubles the data rate to 64GTs with no added latency over CXL 2.0.",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -5582,7 +6104,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb-low-speed-rate-m1",
@@ -5603,7 +6132,7 @@
         "src-usb20-spec"
       ],
       "locator": "Section 4.2.1 Electrical, bullet list, p. 17 (PDF p. 45)",
-      "quote": "A limited capability low-speed signaling mode is also defined at 1.5 Mb/s.",
+      "quote": null,
       "era": 1996,
       "uncertainty": null,
       "statistics": null,
@@ -5615,7 +6144,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb-full-speed-rate-m1",
@@ -5636,7 +6172,7 @@
         "src-usb20-spec"
       ],
       "locator": "Section 4.2.1 Electrical, p. 17 (PDF p. 45)",
-      "quote": "The USB full-speed signaling bit rate is 12 Mb/s.",
+      "quote": null,
       "era": 1996,
       "uncertainty": null,
       "statistics": null,
@@ -5648,7 +6184,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb-high-speed-rate-m1",
@@ -5669,7 +6212,7 @@
         "src-usb20-spec"
       ],
       "locator": "p. 17 (PDF p. 45)",
-      "quote": "The USB high-speed signaling bit rate is 480 Mb/s.",
+      "quote": null,
       "era": 2000,
       "uncertainty": null,
       "statistics": null,
@@ -5681,7 +6224,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb32-20g-rate-m1",
@@ -5702,7 +6252,7 @@
         "src-usbif-usb32"
       ],
       "locator": "USB 3.2 overview page, key characteristics",
-      "quote": "allowing for up to two lanes of 10Gbps operation to realize a 20Gbps data transfer rate",
+      "quote": null,
       "era": 2017,
       "uncertainty": null,
       "statistics": null,
@@ -5714,7 +6264,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb4-80g-rate-m1",
@@ -5735,7 +6292,7 @@
         "src-usbif-usb4"
       ],
       "locator": "USB4 page, Key characteristics, bullet 1",
-      "quote": "Two-lane operation using existing USB Type-C cables and up to 80 Gbps operation over 80 Gbps certified cables",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -5747,7 +6304,14 @@
       "lowSI": null,
       "highSI": 10000000000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb-fs-frame-m1",
@@ -5768,7 +6332,7 @@
         "src-usb20-spec"
       ],
       "locator": "Section 5.3.3 Frames and Microframes, p. 36 (PDF p. 64)",
-      "quote": "USB establishes a 1 millisecond time base called a frame on a full-/low-speed bus",
+      "quote": null,
       "era": 1996,
       "uncertainty": null,
       "statistics": null,
@@ -5780,7 +6344,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb-hs-microframe-m1",
@@ -5801,7 +6372,7 @@
         "src-usb20-spec"
       ],
       "locator": "Section 5.3.3, p. 36 (PDF p. 64)",
-      "quote": "a 125 µs time base called a microframe on a high-speed bus",
+      "quote": null,
       "era": 2000,
       "uncertainty": null,
       "statistics": null,
@@ -5813,7 +6384,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb-fs-interrupt-min-period-m1",
@@ -5834,7 +6412,7 @@
         "src-usb20-spec"
       ],
       "locator": "Section 5.7.4 Interrupt Transfer Bus Access Constraints, p. 51 (PDF p. 79)",
-      "quote": "A full-speed endpoint can specify a desired period from 1 ms to 255 ms.",
+      "quote": null,
       "era": 1996,
       "uncertainty": null,
       "statistics": null,
@@ -5846,7 +6424,14 @@
       "lowSI": 0.001,
       "highSI": 0.255,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb-ls-interrupt-min-period-m1",
@@ -5867,7 +6452,7 @@
         "src-usb20-spec"
       ],
       "locator": "Section 5.7.4, p. 51 (PDF p. 79)",
-      "quote": "Low-speed endpoints are limited to specifying only 10 ms to 255 ms.",
+      "quote": null,
       "era": 1996,
       "uncertainty": null,
       "statistics": null,
@@ -5879,7 +6464,14 @@
       "lowSI": 0.01,
       "highSI": 0.255,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb-fs-max-polling-rate-m1",
@@ -5900,7 +6492,7 @@
         "src-usb20-spec"
       ],
       "locator": "Section 5.7.4, p. 51 (PDF p. 79)",
-      "quote": "A full-speed endpoint can specify a desired period from 1 ms to 255 ms.",
+      "quote": null,
       "era": 1996,
       "uncertainty": null,
       "statistics": null,
@@ -5917,7 +6509,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "usb-hs-max-polling-rate-m1",
@@ -5938,7 +6537,7 @@
         "src-usb20-spec"
       ],
       "locator": "Section 5.7.4, p. 51 (PDF p. 79)",
-      "quote": "up to the shortest period defined by the USB (125 µs microframe or 1 ms frame)",
+      "quote": null,
       "era": 2000,
       "uncertainty": null,
       "statistics": null,
@@ -5955,7 +6554,14 @@
       "lowSI": null,
       "highSI": 8000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hdmi-8k60-refresh-m1",
@@ -5976,7 +6582,7 @@
         "src-hdmi-spec"
       ],
       "locator": "Spec page, introduction",
-      "quote": "supports a range of higher video resolutions and refresh rates including 8K60 and 4K120",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -5988,7 +6594,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hdmi-4k120-refresh-m1",
@@ -6009,7 +6622,7 @@
         "src-hdmi-spec"
       ],
       "locator": "Spec page, introduction",
-      "quote": "supports a range of higher video resolutions and refresh rates including 8K60 and 4K120",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -6021,7 +6634,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hdmi22-bandwidth-m1",
@@ -6042,7 +6662,7 @@
         "src-hdmi-spec"
       ],
       "locator": "Spec page, HDMI 2.2 overview",
-      "quote": "Higher 96Gbps bandwidth and next-gen HDMI Fixed Rate Link technology",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": null,
@@ -6054,7 +6674,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "frame-time-60hz-m1",
@@ -6075,7 +6702,7 @@
         "src-hdmi-spec"
       ],
       "locator": "Spec page, introduction",
-      "quote": "supports a range of higher video resolutions and refresh rates including 8K60 and 4K120",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -6092,7 +6719,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "frame-time-120hz-m1",
@@ -6113,7 +6747,7 @@
         "src-hdmi-spec"
       ],
       "locator": "Spec page, introduction",
-      "quote": "supports a range of higher video resolutions and refresh rates including 8K60 and 4K120",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -6130,7 +6764,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "h100-sxm-hbm-bandwidth-m1",
@@ -6151,7 +6792,7 @@
         "src-nvidia-h100"
       ],
       "locator": "Specifications table, row 'GPU Memory Bandwidth', column H100 SXM",
-      "quote": "GPU Memory 80GB 94GB GPU Memory Bandwidth 3.35TB/s 3.9TB/s",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -6163,7 +6804,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "h100-sxm-nvlink-bandwidth-m1",
@@ -6184,19 +6832,27 @@
         "src-nvidia-h100"
       ],
       "locator": "Specifications table, row 'Interconnect', column H100 SXM",
-      "quote": "Interconnect NVIDIA NVLink™: 900GB/s PCIe Gen5: 128GB/s",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#h100-sxm-nvlink-bandwidth",
-      "notes": "Page does not say whether 900 GB/s is bidirectional; NVIDIA convention is total bidirectional. Do not divide without a source. | Verifier: « aggregate of all links, both directions as marketed » non sourcé.",
+      "notes": "Page does not say whether 900 GB/s is bidirectional; NVIDIA convention is total bidirectional. Do not divide without a source. | Verifier: […] non sourcé.",
       "quantityKind": "throughput",
       "valueSI": 900000000000,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "b200-nvlink-gpu-to-gpu-m1",
@@ -6217,19 +6873,27 @@
         "src-nvidia-hgx"
       ],
       "locator": "HGX specifications table, row 'NVLink GPU-to-GPU Bandwidth', column HGX B200",
-      "quote": "NVLink GPU-to-GPU Bandwidth 1.8 TB/s 1.8 TB/s Total NVLink Bandwidth 14.4 TB/s 14.4 TB/s",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#b200-nvlink-gpu-to-gpu",
-      "notes": "Columns identified as HGX B300 then HGX B200 from the 'Total Memory 2.1 TB 1.4 TB' row. Era not on page. | Verifier: Ère 2024 absente de la page.",
+      "notes": "Columns identified as HGX B300 then HGX B200 from the […] row. Era not on page. | Verifier: Ère 2024 absente de la page.",
       "quantityKind": "throughput",
       "valueSI": 1800000000000,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "dgx-b200-total-hbm-bandwidth-m1",
@@ -6250,7 +6914,7 @@
         "src-nvidia-dgxb200"
       ],
       "locator": "Specifications, row 'GPU Memory'",
-      "quote": "GPU 8x NVIDIA Blackwell GPUs GPU Memory 1,440 GB total, 64 TB/s HBM3e bandwidth",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -6262,7 +6926,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "b200-per-gpu-hbm-bandwidth-m1",
@@ -6283,7 +6954,7 @@
         "src-nvidia-dgxb200"
       ],
       "locator": "Specifications, row 'GPU Memory'",
-      "quote": "GPU 8x NVIDIA Blackwell GPUs GPU Memory 1,440 GB total, 64 TB/s HBM3e bandwidth",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -6300,7 +6971,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "mi300x-hbm-bandwidth-m1",
@@ -6321,7 +6999,7 @@
         "src-amd-mi300x"
       ],
       "locator": "Specifications, Memory section",
-      "quote": "Peak Memory Bandwidth 5.3 TB/s Memory ECC Support Yes (Full-Chip)",
+      "quote": null,
       "era": 2023,
       "uncertainty": null,
       "statistics": null,
@@ -6333,7 +7011,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "mi300x-peak-engine-clock-m1",
@@ -6354,7 +7039,7 @@
         "src-amd-mi300x"
       ],
       "locator": "Specifications, General/Performance section",
-      "quote": "Peak Engine Clock 2100 MHz",
+      "quote": null,
       "era": 2023,
       "uncertainty": null,
       "statistics": null,
@@ -6366,7 +7051,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "tpu-v5p-hbm-bandwidth-m1",
@@ -6399,7 +7091,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "tpu-v5p-ici-bandwidth-m1",
@@ -6432,7 +7127,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "mlperf-llama2-70b-server-ttft-m1",
@@ -6465,7 +7163,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "mlperf-llama2-70b-server-tpot-m1",
@@ -6498,7 +7199,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "mlperf-llama2-70b-interactive-ttft-m1",
@@ -6531,7 +7235,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "mlperf-llama2-70b-interactive-tpot-m1",
@@ -6564,7 +7271,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "exos-x20-spindle-frequency-m1",
@@ -6585,7 +7295,7 @@
         "src-seagate-exos-x20"
       ],
       "locator": "Specifications table, Performance, row 'Spindle Speed (RPM)', p.2",
-      "quote": "Spindle Speed (RPM) 7,200 RPM",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
@@ -6602,7 +7312,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "exos-x20-average-latency-m1",
@@ -6623,7 +7340,7 @@
         "src-seagate-exos-x20"
       ],
       "locator": "Specifications table, Performance, row 'Average Latency (ms)', p.2",
-      "quote": "Average Latency (ms) 4.16",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
@@ -6635,7 +7352,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hdd-7200rpm-half-rotation-m1",
@@ -6656,7 +7380,7 @@
         "src-seagate-exos-x20"
       ],
       "locator": "Specifications table, p.2",
-      "quote": "Spindle Speed (RPM) 7,200 RPM",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
@@ -6673,7 +7397,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hdd-7200rpm-full-rotation-m1",
@@ -6694,7 +7425,7 @@
         "src-seagate-exos-x20"
       ],
       "locator": "Specifications table, p.2",
-      "quote": "Spindle Speed (RPM) 7,200 RPM",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
@@ -6711,7 +7442,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "exos-x20-sustained-transfer-m1",
@@ -6732,7 +7470,7 @@
         "src-seagate-exos-x20"
       ],
       "locator": "Specifications table, Performance, row 'Max. Sustained Transfer Rate OD', p.2",
-      "quote": "Max. Sustained Transfer Rate OD (MB/s, MiB/s) 285/272",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
@@ -6744,7 +7482,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "optane-p5800x-4k-qd1-p99-read-m1",
@@ -6765,7 +7510,7 @@
         "src-intel-p5800x-brief"
       ],
       "locator": "Specifications table, QoS section, PDF p.4",
-      "quote": "4KRR, QD=1, 99% • < 6μs",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
@@ -6777,7 +7522,14 @@
       "lowSI": null,
       "highSI": 0.000006,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "solidigm-p5620-qd1-write-p999999-m1",
@@ -6798,7 +7550,7 @@
         "src-solidigm-p5520-brief"
       ],
       "locator": "Footnote [5]",
-      "quote": "Latency for the two drives measured was 137usec and 586usec respectively on 6 9s latency for 100% QD1 random write IO.",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -6810,7 +7562,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "solidigm-p5520-4k-qd16-latency-derived-m1",
@@ -6831,7 +7590,7 @@
         "src-solidigm-p5520-brief"
       ],
       "locator": "Footnote [7]",
-      "quote": "Measured results of 233.7 and 206 RR KIOPS respectively using 4 KB transfer size and QD16",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -6848,7 +7607,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "fdsoi28-ro-stage-delay-296k-1v-m1",
@@ -6869,7 +7635,7 @@
         "src-m01a-fdsoi28-ro-2018"
       ],
       "locator": "Table II (comparison of RO performance at 296 K and 4.3 K), row T = 296 K, VDD = 1 V",
-      "quote": "0.216 0 296 1 18 885 1.29",
+      "quote": null,
       "era": 2018,
       "uncertainty": null,
       "statistics": null,
@@ -6881,7 +7647,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "fdsoi28-ro-stage-delay-4k-0v325-m1",
@@ -6902,7 +7675,7 @@
         "src-m01a-fdsoi28-ro-2018"
       ],
       "locator": "Abstract; Sec. III and Table III (row VDD = 0.325 V)",
-      "quote": "excellent RO performance with tP=37ps and ISTAT=7nA/stage are demonstrated at VDD = 0.325V",
+      "quote": null,
       "era": 2018,
       "uncertainty": null,
       "statistics": null,
@@ -6914,7 +7687,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "fdsoi28-ro101-frequency-296k-1v-m1",
@@ -6935,7 +7715,7 @@
         "src-m01a-fdsoi28-ro-2018"
       ],
       "locator": "Sec. II (101 identical stages) and Table II",
-      "quote": "The RO consists of 101 identical stages together with an enabling two-way AND gate.",
+      "quote": null,
       "era": 2018,
       "uncertainty": null,
       "statistics": null,
@@ -6953,7 +7733,14 @@
       "lowSI": 267594327.0002676,
       "highSI": 282885431.40028286,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ihp-sg13g2-hbt-ft-m1",
@@ -6974,19 +7761,27 @@
         "src-m01a-ihp-open-pdk-general"
       ],
       "locator": "Process specifications, 1. General Information (SG13G2 paragraph)",
-      "quote": "SG13G2 has the same device portfolio as SG13S but much higher bipolar performance with f T = 300 GHz and 500 GHz maximum oscillation frequency.",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#ihp-sg13g2-hbt-ft",
-      "notes": "Foundry peak figure; circuits run far below fT. Same figures in the Europractice brochure. | Verifier: 'peak value' is not on the cited PDK page (the Europractice brochure says 'peak fT/fmax values of 300 GHz/500 GHz'). Removed from conditions or cite the brochure.",
+      "notes": "Foundry peak figure; circuits run far below fT. Same figures in the Europractice brochure. | Verifier: 'peak value' is not on the cited PDK page (the Europractice brochure says […]). Removed from conditions or cite the brochure.",
       "quantityKind": "frequency",
       "valueSI": 300000000000,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "ihp-sg13g2-hbt-fmax-m1",
@@ -7007,7 +7802,7 @@
         "src-m01a-ihp-open-pdk-general"
       ],
       "locator": "Process specifications, 1. General Information (SG13G2 paragraph)",
-      "quote": "f T = 300 GHz and 500 GHz maximum oscillation frequency",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -7019,7 +7814,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ihp-sg13g3-hbt-ft-m1",
@@ -7040,19 +7842,27 @@
         "src-m01a-europractice-ihp-2026"
       ],
       "locator": "p. 2, technology table, column \"0.13µm SG13G3\"",
-      "quote": "fT= 470 GHz, fmax = 650 GHz",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#ihp-sg13g3-hbt-ft",
-      "notes": "MPW broker brochure relaying IHP figures; offered only for research and prototyping. | Verifier: Brochure (broker) relays IHP figures. Note the brochure also says 'cut-off frequencies of up to 500 GHz' in its sidebar, inconsistent with 470 GHz; table value used.",
+      "notes": "MPW broker brochure relaying IHP figures; offered only for research and prototyping. | Verifier: Brochure (broker) relays IHP figures. Note the brochure also says […] in its sidebar, inconsistent with 470 GHz; table value used.",
       "quantityKind": "frequency",
       "valueSI": 470000000000,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "ihp-sg13g3-hbt-fmax-m1",
@@ -7073,7 +7883,7 @@
         "src-m01a-europractice-ihp-2026"
       ],
       "locator": "p. 2, SG13G3Cu description paragraph and technology table column \"0.13µm SG13G3\"",
-      "quote": "up to 650 GHz maximum oscillation",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -7085,7 +7895,14 @@
       "lowSI": null,
       "highSI": 650000000000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ngc-inp-hemt-25nm-fmax-m1",
@@ -7106,19 +7923,27 @@
         "src-m01a-semitoday-ngc-inp-2015"
       ],
       "locator": "News item, paragraph on device characterisation",
-      "quote": "Extrapolating the data to unity gain gave a maximum oscillation frequency (fMAX) of 1.5THz.",
+      "quote": null,
       "era": 2015,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#ngc-inp-hemt-25nm-fmax",
-      "notes": "Secondary source (trade press) for X. B. Mei et al., IEEE EDL 2015 (paywalled, not read). Extrapolated, not directly observed. Some secondary sources give a 32 nm node for the same work. | Verifier: Protocol claimed 'on-wafer S-parameter measurements' and that fT was also extrapolated: the item says neither (on-wafer only for the amplifier figure). Value consistent between text and Table 1 (fmax 1.5 THz). Extrapolated, not observed: provenance better 'estimated' (or keep 'measured' with explicit extrapolation). Table 1 dates 25 nm process to 2013. Actual page title: 'Direct demonstration of 1THz performance in InP HEMTs' (source title in file differs). Primary IEEE EDL paper not read.",
+      "notes": "Secondary source (trade press) for X. B. Mei et al., IEEE EDL 2015 (paywalled, not read). Extrapolated, not directly observed. Some secondary sources give a 32 nm node for the same work. | Verifier: Protocol claimed 'on-wafer S-parameter measurements' and that fT was also extrapolated: the item says neither (on-wafer only for the amplifier figure). Value consistent between text and Table 1 (fmax 1.5 THz). Extrapolated, not observed: provenance better 'estimated' (or keep 'measured' with explicit extrapolation). Table 1 dates 25 nm process to 2013. Actual page title: […] (source title in file differs). Primary IEEE EDL paper not read.",
       "quantityKind": "frequency",
       "valueSI": 1500000000000,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "willow-surface-code-cycle-time-m1",
@@ -7151,7 +7976,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "willow-mean-t1-m1",
@@ -7184,7 +8012,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "willow-mean-t2-cpmg-m1",
@@ -7217,7 +8048,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "willow-cz-gate-duration-m1",
@@ -7250,7 +8084,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "willow-single-qubit-gate-duration-m1",
@@ -7283,7 +8120,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "willow-realtime-decoder-latency-d5-m1",
@@ -7329,6 +8169,9 @@
         "value": 0.000017,
         "low": null,
         "high": null
+      },
+      "excerpt": {
+        "status": "published"
       }
     },
     {
@@ -7350,7 +8193,7 @@
         "src-m01a-heron-krylov-2024"
       ],
       "locator": "Sec. III \"Device details\", paragraph after Fig. 10 (k = 1 subset)",
-      "quote": "median properties: T1 = 180µs, T2 = 150µs",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -7362,7 +8205,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "heron-r1-cz-gate-length-m1",
@@ -7383,7 +8233,7 @@
         "src-m01a-heron-krylov-2024"
       ],
       "locator": "Sec. III \"Device details\" (k = 1 subset)",
-      "quote": "two-qubit gate error 0.24% and length 104ns",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -7395,7 +8245,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "heron-r1-single-qubit-gate-length-m1",
@@ -7416,7 +8273,7 @@
         "src-m01a-heron-krylov-2024"
       ],
       "locator": "Sec. III \"Device details\" (k = 1 subset)",
-      "quote": "single-qubit gate error 0.022% and length 32ns",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -7428,7 +8285,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "imec-sot-mram-switching-time-m1",
@@ -7449,7 +8313,7 @@
         "src-m01a-imec-sot-mram-2018"
       ],
       "locator": "Abstract; results paragraph discussing Fig. 6",
-      "quote": "SOT demonstrates reliable switching down to 210 ps with",
+      "quote": null,
       "era": 2018,
       "uncertainty": null,
       "statistics": null,
@@ -7461,7 +8325,14 @@
       "lowSI": 2.1e-10,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "imec-stt-mram-min-pulse-m1",
@@ -7482,7 +8353,7 @@
         "src-m01a-imec-sot-mram-2018"
       ],
       "locator": "Results paragraph discussing Fig. 6",
-      "quote": "In STT case, τp is limited to 5ns to avoid breakdown",
+      "quote": null,
       "era": 2018,
       "uncertainty": null,
       "statistics": null,
@@ -7494,7 +8365,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "gps-orbit-altitude-m1",
@@ -7527,7 +8405,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "gps-zenith-one-way-light-time-m1",
@@ -7567,7 +8448,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "geo-orbit-altitude-m1",
@@ -7588,7 +8472,7 @@
         "src-m01a-esa-types-of-orbits"
       ],
       "locator": "Section \"Geostationary orbit (GEO)\"",
-      "quote": "they travel at about 3 km per second at an altitude of 35 786 km",
+      "quote": null,
       "era": 2020,
       "uncertainty": null,
       "statistics": null,
@@ -7600,7 +8484,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "geo-one-way-light-time-subsatellite-m1",
@@ -7622,7 +8513,7 @@
         "src-m01a-nist-codata-c"
       ],
       "locator": "Section \"Geostationary orbit (GEO)\"; NIST CODATA (c)",
-      "quote": "at an altitude of 35 786 km",
+      "quote": null,
       "era": 2020,
       "uncertainty": null,
       "statistics": null,
@@ -7640,7 +8531,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "iss-average-altitude-m1",
@@ -7673,7 +8571,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "new-horizons-distance-2026-06-m1",
@@ -7706,7 +8607,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "new-horizons-signal-time-2026-06-m1",
@@ -7739,7 +8643,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "pluto-mean-distance-sun-m1",
@@ -7772,7 +8679,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "sun-pluto-light-time-m1",
@@ -7805,7 +8715,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "ethernet-400gbe-rate-m1",
@@ -7826,7 +8739,7 @@
         "src-m01a-ieee-800gbe-2024"
       ],
       "locator": "Article, historical paragraph",
-      "quote": "and then 200 GbE and 400 GbE in 2017",
+      "quote": null,
       "era": 2017,
       "uncertainty": null,
       "statistics": null,
@@ -7838,7 +8751,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ethernet-800gbe-rate-m1",
@@ -7859,7 +8779,7 @@
         "src-m01a-ieee-800gbe-2024"
       ],
       "locator": "Article title and introduction",
-      "quote": "This culminated this year with the introduction of 800 GbE.",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -7871,7 +8791,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ethernet-min-frame-wire-time-800g-m1",
@@ -7910,7 +8837,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "white-rabbit-sync-accuracy-m1",
@@ -7931,7 +8861,7 @@
         "src-m01a-cern-white-rabbit"
       ],
       "locator": "Home page, main features list",
-      "quote": "sub-nanosecond accuracy and picoseconds precision of synchronization",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -7943,7 +8873,14 @@
       "lowSI": null,
       "highSI": 1e-9,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ntp-lan-typical-accuracy-m1",
@@ -7964,7 +8901,7 @@
         "src-m01a-ntp-4-2-8-docs"
       ],
       "locator": "Documentation index, introduction",
-      "quote": "It provides accuracies typically less than a millisecond on LANs and up to a few milliseconds on WANs.",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -7976,7 +8913,14 @@
       "lowSI": null,
       "highSI": 0.001,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "wifi7-max-throughput-m1",
@@ -7997,7 +8941,7 @@
         "src-m01a-ieee-tgbe-update"
       ],
       "locator": "TGbe update page, project scope",
-      "quote": "capable of supporting a maximum throughput of at least 30 Gbps",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -8009,7 +8953,14 @@
       "lowSI": 3750000000,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ble-min-connection-interval-m1",
@@ -8030,7 +8981,7 @@
         "src-m01a-ti-swru271i"
       ],
       "locator": "Sec. 5.2.1.1 \"Connection Parameters\"",
-      "quote": "The connection interval can range from a minimum value of 6 (7.5 ms) to a maximum of 3200 (4.0 seconds).",
+      "quote": null,
       "era": 2020,
       "uncertainty": null,
       "statistics": null,
@@ -8042,7 +8993,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "ble-max-connection-interval-m1",
@@ -8063,7 +9021,7 @@
         "src-m01a-ti-swru271i"
       ],
       "locator": "Sec. 5.2.1.1 \"Connection Parameters\"",
-      "quote": "to a maximum of 3200 (4.0 seconds)",
+      "quote": null,
       "era": 2020,
       "uncertainty": null,
       "statistics": null,
@@ -8075,7 +9033,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "starlink-us-median-peak-hour-latency-m1",
@@ -8096,19 +9061,27 @@
         "src-m01a-starlink-network-update"
       ],
       "locator": "Section \"Network latency\"",
-      "quote": "As of June 2025, Starlink is delivering median peak-hour latency of 25.7 milliseconds (ms) across all customers in the United States",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-A_logic_emerging_space_network.json#starlink-us-median-peak-hour-latency",
-      "notes": "Vendor self-report; exact endpoint of \"the internet\" and peak-hour definition not given; no independent audit. | Verifier: Page read in the shared browser. Protocol matches ('anonymized measurements from millions of Starlink routers every 15 seconds'; RTT router→internet→response). Page shows no publication date.",
+      "notes": "Vendor self-report; exact endpoint of \"the internet\" and peak-hour definition not given; no independent audit. | Verifier: Page read in the shared browser. Protocol matches ([…]; RTT router→internet→response). Page shows no publication date.",
       "quantityKind": "duration",
       "valueSI": 0.0257,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "starlink-satellite-hop-latency-usvi-2025-07-m1",
@@ -8129,7 +9102,7 @@
         "src-m01a-starlink-ipv6-2025"
       ],
       "locator": "Sec. IV-A (setup), IV-B, Table III",
-      "quote": "U.S. Virgin Islands 54 43",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": null,
@@ -8141,7 +9114,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2026-11-r1-lineshine-rmax-m1",
@@ -8162,7 +9142,7 @@
         "src-m01b-top500-2026-11"
       ],
       "locator": "Table \"TOP500 November 2026\", rank 1 row (columns Rmax, Rpeak)",
-      "quote": "National Supercomputing Centre in Shenzhen (NSCS) China 13,789,440 2,198.40 2,735.82",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -8174,7 +9154,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2026-11-r1-lineshine-rpeak-m1",
@@ -8195,7 +9182,7 @@
         "src-m01b-top500-2026-11"
       ],
       "locator": "Table \"TOP500 November 2026\", rank 1 row (columns Rmax, Rpeak)",
-      "quote": "National Supercomputing Centre in Shenzhen (NSCS) China 13,789,440 2,198.40 2,735.82",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -8207,7 +9194,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2026-11-r2-el-capitan-rmax-m1",
@@ -8228,7 +9222,7 @@
         "src-m01b-top500-2026-11"
       ],
       "locator": "Table \"TOP500 November 2026\", rank 2 row (columns Rmax, Rpeak)",
-      "quote": "HPE DOE/NNSA/LLNL United States 11,340,000 1,809.00 2,821.10",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -8240,7 +9234,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2026-11-r2-el-capitan-rpeak-m1",
@@ -8261,7 +9262,7 @@
         "src-m01b-top500-2026-11"
       ],
       "locator": "Table \"TOP500 November 2026\", rank 2 row (columns Rmax, Rpeak)",
-      "quote": "HPE DOE/NNSA/LLNL United States 11,340,000 1,809.00 2,821.10",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -8273,7 +9274,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2026-11-r3-frontier-rmax-m1",
@@ -8294,7 +9302,7 @@
         "src-m01b-top500-2026-11"
       ],
       "locator": "Table \"TOP500 November 2026\", rank 3 row (columns Rmax, Rpeak)",
-      "quote": "DOE/SC/Oak Ridge National Laboratory United States 9,066,176 1,353.00 2,055.72",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -8306,7 +9314,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2026-11-r3-frontier-rpeak-m1",
@@ -8327,7 +9342,7 @@
         "src-m01b-top500-2026-11"
       ],
       "locator": "Table \"TOP500 November 2026\", rank 3 row (columns Rmax, Rpeak)",
-      "quote": "DOE/SC/Oak Ridge National Laboratory United States 9,066,176 1,353.00 2,055.72",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -8339,7 +9354,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2026-11-r4-aurora-rmax-m1",
@@ -8360,7 +9382,7 @@
         "src-m01b-top500-2026-11"
       ],
       "locator": "Table \"TOP500 November 2026\", rank 4 row (columns Rmax, Rpeak)",
-      "quote": "Intel DOE/SC/Argonne National Laboratory United States 9,264,128 1,012.00 1,980.01",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -8372,7 +9394,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2026-11-r4-aurora-rpeak-m1",
@@ -8393,7 +9422,7 @@
         "src-m01b-top500-2026-11"
       ],
       "locator": "Table \"TOP500 November 2026\", rank 4 row (columns Rmax, Rpeak)",
-      "quote": "Intel DOE/SC/Argonne National Laboratory United States 9,264,128 1,012.00 1,980.01",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -8405,7 +9434,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2026-11-r5-jupiter-booster-rmax-m1",
@@ -8426,7 +9462,7 @@
         "src-m01b-top500-2026-11"
       ],
       "locator": "Table \"TOP500 November 2026\", rank 5 row (columns Rmax, Rpeak)",
-      "quote": "Bull EuroHPC/FZJ Germany 4,801,344 1,000.00 1,226.28",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -8438,7 +9474,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2026-11-r5-jupiter-booster-rpeak-m1",
@@ -8459,7 +9502,7 @@
         "src-m01b-top500-2026-11"
       ],
       "locator": "Table \"TOP500 November 2026\", rank 5 row (columns Rmax, Rpeak)",
-      "quote": "Bull EuroHPC/FZJ Germany 4,801,344 1,000.00 1,226.28",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": null,
@@ -8471,7 +9514,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-1993-06-r1-cm5-rmax-m1",
@@ -8492,7 +9542,7 @@
         "src-m01b-top500-1993-06"
       ],
       "locator": "Table \"TOP500 June 1993\", rank 1 row (columns Rmax, Rpeak)",
-      "quote": "1 CM-5/1024, Thinking Machines Corporation Los Alamos National Laboratory United States 1,024 59.70 131.00",
+      "quote": null,
       "era": 1993,
       "uncertainty": null,
       "statistics": null,
@@ -8504,7 +9554,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2008-06-r1-roadrunner-rmax-m1",
@@ -8525,7 +9582,7 @@
         "src-m01b-top500-2008-06"
       ],
       "locator": "Table \"TOP500 June 2008\", rank 1 row (columns Rmax, Rpeak)",
-      "quote": "Voltaire Infiniband, IBM DOE/NNSA/LANL United States 122,400 1,026.00 1,375.78",
+      "quote": null,
       "era": 2008,
       "uncertainty": null,
       "statistics": null,
@@ -8537,7 +9594,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "top500-2022-06-r1-frontier-rmax-m1",
@@ -8558,7 +9622,7 @@
         "src-m01b-top500-2022-06"
       ],
       "locator": "Table \"TOP500 June 2022\", rank 1 row (columns Rmax, Rpeak)",
-      "quote": "Slingshot-11, HPE DOE/SC/Oak Ridge National Laboratory United States 8,730,112 1,102.00 1,685.65",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -8570,7 +9634,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "arm-neoverse-n2-l1d-load-latency-m1",
@@ -8591,7 +9662,7 @@
         "src-m01b-arm-neoverse-n2-sog"
       ],
       "locator": "§3.10 Load instructions, Table 3-13 \"AArch64 Load instructions\", PDF pp. 28-29 (register-offset rows on p. 29)",
-      "quote": "Load register, register offset, LDR, LDRB, 4 3 L -",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -8603,7 +9674,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "arm-neoverse-v3-l1d-load-latency-m1",
@@ -8624,7 +9702,7 @@
         "src-m01b-arm-neoverse-v3-sog"
       ],
       "locator": "§3.8 Load instructions, Table 3-7 \"AArch64 Load instructions\", PDF p. 18",
-      "quote": "Load register, unscaled immed LDUR, LDURB, 4 3 L -",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -8636,7 +9714,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "arm-cortex-a520-l1-hit-latency-m1",
@@ -8657,7 +9742,7 @@
         "src-m01b-arm-cortex-a520-sog"
       ],
       "locator": "§4.11 Cache access latencies, Table 4-1 \"Cortex-A520 cache access latencies\", PDF p. 77",
-      "quote": "L1 cache hit 2-4 cycles (2 is best case, 4 is normal case)",
+      "quote": null,
       "era": 2023,
       "uncertainty": null,
       "statistics": null,
@@ -8669,7 +9754,14 @@
       "lowSI": 2,
       "highSI": 4,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "arm-cortex-a520-l2-hit-latency-m1",
@@ -8690,7 +9782,7 @@
         "src-m01b-arm-cortex-a520-sog"
       ],
       "locator": "§4.11 Cache access latencies, Table 4-1, PDF p. 77",
-      "quote": "L2 cache hit 10-12 cycles (10 is best case, 11-12 is normal",
+      "quote": null,
       "era": 2023,
       "uncertainty": null,
       "statistics": null,
@@ -8702,7 +9794,14 @@
       "lowSI": 10,
       "highSI": 12,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-8080-initial-clock-m1",
@@ -8723,7 +9822,7 @@
         "src-m01b-intel-chips-timeline-poster"
       ],
       "locator": "Timeline poster, column \"1974 Intel 8080\", line \"Initial clock speed\"",
-      "quote": "Initial clock speed: 2MHz",
+      "quote": null,
       "era": 1974,
       "uncertainty": null,
       "statistics": null,
@@ -8735,7 +9834,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-80286-initial-clock-m1",
@@ -8756,7 +9862,7 @@
         "src-m01b-intel-chips-timeline-poster"
       ],
       "locator": "Timeline poster, column \"1982 Intel 286\", line \"Initial clock speed\"",
-      "quote": "Initial clock speed: 6MHz",
+      "quote": null,
       "era": 1982,
       "uncertainty": null,
       "statistics": null,
@@ -8768,7 +9874,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-80386-initial-clock-m1",
@@ -8789,7 +9902,7 @@
         "src-m01b-intel-chips-timeline-poster"
       ],
       "locator": "Timeline poster, column \"1985 Intel386\", line \"Initial clock speed\"",
-      "quote": "Initial clock speed: 16MHz",
+      "quote": null,
       "era": 1985,
       "uncertainty": null,
       "statistics": null,
@@ -8801,7 +9914,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-80486-initial-clock-m1",
@@ -8822,7 +9942,7 @@
         "src-m01b-intel-chips-timeline-poster"
       ],
       "locator": "Timeline poster, column \"1989 Intel486\", line \"Initial clock speed\"",
-      "quote": "Initial clock speed: 25MHz",
+      "quote": null,
       "era": 1989,
       "uncertainty": null,
       "statistics": null,
@@ -8834,7 +9954,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-pentium-initial-clock-m1",
@@ -8855,7 +9982,7 @@
         "src-m01b-intel-chips-timeline-poster"
       ],
       "locator": "Timeline poster, column \"1993 Intel Pentium\", line \"Initial clock speed\"",
-      "quote": "Initial clock speed: 66MHz",
+      "quote": null,
       "era": 1993,
       "uncertainty": null,
       "statistics": null,
@@ -8867,7 +9994,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "intel-pentium-pro-initial-clock-m1",
@@ -8888,7 +10022,7 @@
         "src-m01b-intel-chips-timeline-poster"
       ],
       "locator": "Timeline poster, column \"1995 Intel Pentium Pro\", line \"Initial clock speed\"",
-      "quote": "Initial clock speed: 200MHz",
+      "quote": null,
       "era": 1995,
       "uncertainty": null,
       "statistics": null,
@@ -8900,7 +10034,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "amd-athlon-1ghz-2000-m1",
@@ -8921,7 +10062,7 @@
         "src-m01b-amd-pr-athlon-1ghz"
       ],
       "locator": "Press release headline and subtitle",
-      "quote": "announces 1GHz (1,000 MHz) AMD Athlon™ processor",
+      "quote": null,
       "era": 2000,
       "uncertainty": null,
       "statistics": null,
@@ -8933,7 +10074,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "motorola-mc68000-8mhz-max-frequency-m1",
@@ -8954,7 +10102,7 @@
         "src-m01b-motorola-m68000um"
       ],
       "locator": "§10.8 AC electrical specifications - clock timing, row \"Frequency of Operation\", PDF p. 151 (manual p. 10-8)",
-      "quote": "Frequency of Operation 4.0 8.0 4.0 10.0 4.0 12.5",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -8966,7 +10114,14 @@
       "lowSI": 4000000,
       "highSI": 8000000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hbm3e-micron-stack-bandwidth-m1",
@@ -8987,7 +10142,7 @@
         "src-m01b-micron-hbm3e"
       ],
       "locator": "FAQ \"What is the bandwidth of Micron’s HBM3E?\"",
-      "quote": "deliver an industry-leading bandwidth of more than 1.2 TB/s per placement",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -8999,7 +10154,14 @@
       "lowSI": 1200000000000,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hbm3e-micron-pin-speed-m1",
@@ -9020,7 +10182,7 @@
         "src-m01b-micron-hbm3e"
       ],
       "locator": "FAQ \"What is the data rate of Micron’s HBM3E\"",
-      "quote": "deliver an industry-leading pin speed of greater than 9.2Gbps",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -9032,7 +10194,14 @@
       "lowSI": 1150000000,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hbm3e-samsung-12h-stack-bandwidth-m1",
@@ -9053,7 +10222,7 @@
         "src-m01b-samsung-hbm3e"
       ],
       "locator": "Product page, introduction paragraph",
-      "quote": "Its 12-layer stack offers up to 1,180GB/s bandwidth at 9.2Gbps",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -9065,7 +10234,14 @@
       "lowSI": null,
       "highSI": 1180000000000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hbm3-samsung-stack-bandwidth-m1",
@@ -9086,7 +10262,7 @@
         "src-m01b-samsung-hbm3-icebolt"
       ],
       "locator": "Product page, section \"Breakthrough speed, breathtaking performance\"",
-      "quote": "with processing speeds up to 6.4Gbps and bandwidth that reaches 819GB/s",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -9098,7 +10274,14 @@
       "lowSI": null,
       "highSI": 819000000000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "lpddr5x-samsung-pin-speed-m1",
@@ -9119,19 +10302,27 @@
         "src-m01b-samsung-lpddr5x"
       ],
       "locator": "Product page, section \"Bar-raising speed\"",
-      "quote": "showcasing a remarkable upgrade to up to 10.7 Gbps data processing speeds",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-B_cpu_memory_os_hpc_history.json#lpddr5x-samsung-pin-speed",
-      "notes": "Vendor marketing; \"Gbps\" read as per-pin data rate (not stated explicitly). Introduction year of the 10.7 Gb/s part not given on the page. | Verifier: Value confirmed. Conditions fix: '(fastest bin advertised on the page at access date)' is not in the source; the page does not say 'per pin'.",
+      "notes": "Vendor marketing; \"Gbps\" read as per-pin data rate (not stated explicitly). Introduction year of the 10.7 Gb/s part not given on the page. | Verifier: Value confirmed. Conditions fix: […] is not in the source; the page does not say 'per pin'.",
       "quantityKind": "throughput",
       "valueSI": 1337500000,
       "lowSI": null,
       "highSI": 1337500000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "linux-kpti-entry-exit-cost-haswell-m1",
@@ -9142,8 +10333,8 @@
       "low": 400,
       "high": 500,
       "conditions": {
-        "fr": "Intel Xeon E5-2630 v3, Linux avec KPTI (introduit après la 4.14), avec ou sans PCID ; la borne basse du coût constant de KPTI par entrée et sortie du noyau est « de l’ordre de 400 à 500 cycles » ; la valeur 400 est le bas de cette plage ; coût dominé par deux écritures de CR3 d’environ 200 cycles chacune.",
-        "en": "Intel Xeon E5-2630 v3, Linux with KPTI (introduced after 4.14), with or without PCID; the lower bound of KPTI's constant cost per kernel entry and exit is 'on the order of 400–500 cycles'; value 400 = low end of that range; mainly two CR3 writes of around 200 cycles each."
+        "fr": "Intel Xeon E5-2630 v3, Linux avec KPTI (introduit après la 4.14), avec ou sans PCID ; la borne basse du coût constant de KPTI par entrée et sortie du noyau est […] ; la valeur 400 est le bas de cette plage ; coût dominé par deux écritures de CR3 d’environ 200 cycles chacune.",
+        "en": "Intel Xeon E5-2630 v3, Linux with KPTI (introduced after 4.14), with or without PCID; the lower bound of KPTI's constant cost per kernel entry and exit is […]; value 400 = low end of that range; mainly two CR3 writes of around 200 cycles each."
       },
       "protocol": "KPTI constant cost measured by comparing an empty system call with and without the KPTI patch, measuring cycles spent in the MMU TLB miss handler, and subtracting that increase from the overall latency increase (footnote 1). HP DL160 G9 server, Intel Xeon E5-2630 v3 2.40 GHz, 128 GB DDR4 1866 MHz; Ubuntu-configured Linux kernels 3.0 to 4.20. The paper's general LEBench method (10,000 repetitions, K-best K=5, 5% tolerance) is described for its microbenchmarks; the paper does not say it was applied to this empty-system-call figure.",
       "provenanceType": "measured",
@@ -9152,7 +10343,7 @@
         "src-m01b-ren-sosp19"
       ],
       "locator": "§4.1.1 \"Remove Kernel Mappings in Userspace\", p. 7, and footnote 1",
-      "quote": "With KPTI, the lower-bound of the constant cost is on the order of 400–500 cycles",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -9164,7 +10355,16 @@
       "lowSI": 400,
       "highSI": 500,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "conditions.fr",
+          "conditions.en"
+        ]
+      }
     },
     {
       "id": "linux-kernel-entry-exit-no-kpti-haswell-m1",
@@ -9185,7 +10385,7 @@
         "src-m01b-ren-sosp19"
       ],
       "locator": "Section 4.1.1 \"Remove Kernel Mappings in Userspace\", page 7",
-      "quote": "whereas without KPTI, the kernel entry and exit overhead is less than 100 cycles",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -9197,7 +10397,14 @@
       "lowSI": null,
       "highSI": 100,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "linux-retpoline-indirect-branch-cost-m1",
@@ -9218,7 +10425,7 @@
         "src-m01b-ren-sosp19"
       ],
       "locator": "Table 3 \"Summary of root causes\", row \"Avoid indirect branch speculation (§4.1.2)\", p. 5",
-      "quote": "Adds around 30 cycles to each",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -9230,7 +10437,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "linux-read-syscall-baseline-haswell-m1",
@@ -9251,7 +10465,7 @@
         "src-m01b-ren-sosp19"
       ],
       "locator": "§4.1.1 and Figure 3 discussion, p. 7",
-      "quote": "For the shortest read test with a baseline latency of 344ns, the PCID optimization reduces the slowdown from 113% to 47%",
+      "quote": null,
       "era": 2019,
       "uncertainty": null,
       "statistics": null,
@@ -9263,7 +10477,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "linux-minor-page-fault-sandybridge-m1",
@@ -9284,7 +10505,7 @@
         "src-m01b-becker-arxiv1811"
       ],
       "locator": "Table 2 \"Penalties for system in Table 1\", row \"minor page fault\", p. 2",
-      "quote": "minor page fault most frequent ≈1,000 .. 4,000",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -9296,7 +10517,14 @@
       "lowSI": 1000,
       "highSI": 4000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "solidigm-ps1010-random-read-latency-m1",
@@ -9317,19 +10545,27 @@
         "src-m01c-solidigm-ps1010-page"
       ],
       "locator": "Specifications block (default E3.S 7.5MM / 15.36TB view), 'Latency Random Rating (Read / Write)'",
-      "quote": "60μs / 7μs",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#solidigm-ps1010-random-read-latency",
-      "notes": "Conditions of measurement not on the page; secondary sources call it 'Up to 60 µs'. Usually such ratings are QD1 4 KB, but this is not stated here. | Verifier: Page rendered in a real browser (values are injected by JS; curl gets '-'). Spec block shows one configuration at a time (default E3.S 7.5 mm, 15.36 TB); other capacities not checked, so 'all capacities on the same page' is not established. The 'Latency Sequential Rating' row shows the same 60μs / 7μs. The downloadable spec sheet (XLS) labels the rows 'Latency - Read' / 'Latency - Write', with no '(typ.)', unlike the sequential rows.",
+      "notes": "Conditions of measurement not on the page; secondary sources call it 'Up to 60 µs'. Usually such ratings are QD1 4 KB, but this is not stated here. | Verifier: Page rendered in a real browser (values are injected by JS; curl gets '-'). Spec block shows one configuration at a time (default E3.S 7.5 mm, 15.36 TB); other capacities not checked, so […] is not established. The 'Latency Sequential Rating' row shows the same 60μs / 7μs. The downloadable spec sheet (XLS) labels the rows 'Latency - Read' / 'Latency - Write', with no '(typ.)', unlike the sequential rows.",
       "quantityKind": "duration",
       "valueSI": 0.00006,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "solidigm-ps1010-random-write-latency-m1",
@@ -9350,19 +10586,27 @@
         "src-m01c-solidigm-ps1010-page"
       ],
       "locator": "Specifications block (default E3.S 7.5MM / 15.36TB view), 'Latency Random Rating (Read / Write)'",
-      "quote": "60μs / 7μs",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#solidigm-ps1010-random-write-latency",
-      "notes": "StorageReview reproduces '8 µs' for write in its spec table; the Solidigm page read on 2026-11-26 says 7 µs. | Verifier: Page rendered in a real browser (values are injected by JS; curl gets '-'). Spec block shows one configuration at a time (default E3.S 7.5 mm, 15.36 TB); other capacities not checked, so 'all capacities on the same page' is not established. The 'Latency Sequential Rating' row shows the same 60μs / 7μs. The downloadable spec sheet (XLS) labels the rows 'Latency - Read' / 'Latency - Write', with no '(typ.)', unlike the sequential rows. The write-cache explanation in the original conditions is not on the page and was removed.",
+      "notes": "StorageReview reproduces '8 µs' for write in its spec table; the Solidigm page read on 2026-11-26 says 7 µs. | Verifier: Page rendered in a real browser (values are injected by JS; curl gets '-'). Spec block shows one configuration at a time (default E3.S 7.5 mm, 15.36 TB); other capacities not checked, so […] is not established. The 'Latency Sequential Rating' row shows the same 60μs / 7μs. The downloadable spec sheet (XLS) labels the rows 'Latency - Read' / 'Latency - Write', with no '(typ.)', unlike the sequential rows. The write-cache explanation in the original conditions is not on the page and was removed.",
       "quantityKind": "duration",
       "valueSI": 0.000007,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "kioxia-cm7r-seq-read-measured-m1",
@@ -9383,7 +10627,7 @@
         "src-m01c-kioxia-cm7-namespace-brief"
       ],
       "locator": "Test Results Snapshot (p.1) and results table (p.4)",
-      "quote": "~14.5 GB/s average",
+      "quote": null,
       "era": 2023,
       "uncertainty": null,
       "statistics": null,
@@ -9395,7 +10639,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "exos-15e900-average-latency-m1",
@@ -9416,7 +10667,7 @@
         "src-m01c-seagate-exos15e900-ds"
       ],
       "locator": "Specifications table, row 'Average Latency (ms)' (p.1 and p.2)",
-      "quote": "Average Latency (ms)",
+      "quote": null,
       "era": 2017,
       "uncertainty": null,
       "statistics": null,
@@ -9428,7 +10679,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hdd-15k-spindle-frequency-m1",
@@ -9449,7 +10707,7 @@
         "src-m01c-seagate-exos15e900-ds"
       ],
       "locator": "Product description, p.1",
-      "quote": "than any other 15K hard drive",
+      "quote": null,
       "era": 2017,
       "uncertainty": null,
       "statistics": null,
@@ -9466,7 +10724,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hdd-5400rpm-spindle-frequency-m1",
@@ -9487,7 +10752,7 @@
         "src-m01c-seagate-barracuda25-ds"
       ],
       "locator": "Specifications table, row 'Spindle Speed (RPM)'",
-      "quote": "5400RPM",
+      "quote": null,
       "era": 2016,
       "uncertainty": null,
       "statistics": null,
@@ -9504,7 +10769,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hdd-5400rpm-half-rotation-m1",
@@ -9525,7 +10797,7 @@
         "src-m01c-seagate-barracuda25-ds"
       ],
       "locator": "Specifications table, row 'Spindle Speed (RPM)'",
-      "quote": "5400RPM",
+      "quote": null,
       "era": 2016,
       "uncertainty": null,
       "statistics": null,
@@ -9542,7 +10814,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "lto9-native-transfer-rate-m1",
@@ -9563,7 +10842,7 @@
         "src-m01c-lto-org-lto9"
       ],
       "locator": "LTO-9 specifications",
-      "quote": "400 MB/s (native)",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
@@ -9575,7 +10854,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "lto9-average-space-record-time-m1",
@@ -9586,8 +10872,8 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Lecteur IBM LTO 9 pleine hauteur dans une bibliothèque TS4300 ; « temps moyen de positionnement sur un enregistrement depuis le point de chargement » selon IBM (65 s en demi-hauteur).",
-        "en": "IBM full-height LTO 9 drive in a TS4300 library; 'average space record time from load point' per IBM (65 s for half-height drives)."
+        "fr": "Lecteur IBM LTO 9 pleine hauteur dans une bibliothèque TS4300 ; […] selon IBM (65 s en demi-hauteur).",
+        "en": "IBM full-height LTO 9 drive in a TS4300 library; […] per IBM (65 s for half-height drives)."
       },
       "protocol": null,
       "provenanceType": "documented",
@@ -9596,19 +10882,29 @@
         "src-m01c-ibm-ts4300-drives"
       ],
       "locator": "Table 2, 'Drive information and performance specification for full-height drives', LTO 9 column",
-      "quote": "Average space record time from load point",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#lto9-average-space-record-time",
-      "notes": "Cell alignment resolved from the HTML 'headers' attributes (cell entry__3 = LTO 9 column); not ambiguous. | Verifier: The documented URL returned 403 to curl and to the browser; the IBM Docs content API (same page, official) returned the HTML table. Parsed with cell 'headers' attributes: alignment is unambiguous. The gloss 'i.e. the mean seek to a file' is not in the source and was removed.",
+      "notes": "Cell alignment resolved from the HTML 'headers' attributes (cell entry__3 = LTO 9 column); not ambiguous. | Verifier: The documented URL returned 403 to curl and to the browser; the IBM Docs content API (same page, official) returned the HTML table. Parsed with cell 'headers' attributes: alignment is unambiguous. The gloss […] is not in the source and was removed.",
       "quantityKind": "duration",
       "valueSI": 45,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes",
+          "conditions.fr",
+          "conditions.en"
+        ]
+      }
     },
     {
       "id": "sata-rev3-line-rate-m1",
@@ -9629,7 +10925,7 @@
         "src-m01c-sataio-newsletter-2009"
       ],
       "locator": "Newsletter article on the release of Serial ATA Revision 3.0",
-      "quote": "doubles transfer speeds from 3Gb/s to 6Gb/s",
+      "quote": null,
       "era": 2009,
       "uncertainty": null,
       "statistics": null,
@@ -9641,7 +10937,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "pcie3-lane-rate-m1",
@@ -9662,7 +10965,7 @@
         "src-m01c-designreuse-pcie3-pr"
       ],
       "locator": "Press release body, 'BEAVERTON, Ore. -- November 19, 2010'",
-      "quote": "a new 128b/130b encoding scheme and a data rate of 8 gigatransfers per second (GT/s)",
+      "quote": null,
       "era": 2010,
       "uncertainty": null,
       "statistics": null,
@@ -9674,7 +10977,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "infiniband-ndr-port-rate-m1",
@@ -9695,7 +11005,7 @@
         "src-m01c-nvidia-qm97x0-manual"
       ],
       "locator": "Introduction",
-      "quote": "64 ports of NDR 400Gb/s InfiniBand per port in a 1U standard chassis design",
+      "quote": null,
       "era": 2021,
       "uncertainty": null,
       "statistics": null,
@@ -9707,7 +11017,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "infiniband-xdr-port-rate-m1",
@@ -9728,7 +11045,7 @@
         "src-m01c-nvidia-quantum-x800-page"
       ],
       "locator": "Product page, switch section",
-      "quote": "144 ports of 800 Gb/s connectivity per port",
+      "quote": null,
       "era": 2024,
       "uncertainty": null,
       "statistics": null,
@@ -9740,7 +11057,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "cxl-asic-expander-latency-mlc-m1",
@@ -9773,7 +11097,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "cxl-fpga-expander-latency-mlc-m1",
@@ -9806,7 +11133,10 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     },
     {
       "id": "cuda-null-kernel-launch-h100-m1",
@@ -9827,7 +11157,7 @@
         "src-m01c-arxiv-2603-12465"
       ],
       "locator": "Table III 'Null-kernel T_sys^floor (μs) measured in isolation', Section V-C",
-      "quote": "H100 4.707 4.578 4.260 5.396",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": {
@@ -9870,7 +11200,14 @@
           "value": 0.000005396
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "cuda-null-kernel-launch-h200-m1",
@@ -9891,7 +11228,7 @@
         "src-m01c-arxiv-2603-12465"
       ],
       "locator": "Table III, Section V-C",
-      "quote": "H200 4.503 4.452 4.177 4.909",
+      "quote": null,
       "era": 2026,
       "uncertainty": null,
       "statistics": {
@@ -9934,7 +11271,14 @@
           "value": 0.000004909
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "rtx4090-memory-bandwidth-m1",
@@ -9955,19 +11299,27 @@
         "src-m01c-nvidia-ada-whitepaper"
       ],
       "locator": "Appendix A, Table 2 'GeForce RTX 4090 vs RTX 3090 Ti vs 2080 Ti', row Memory Bandwidth (RTX 4090 column)",
-      "quote": "Memory Bandwidth              616 GB/sec             1008 GB/sec                 1008 GB/sec",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#rtx4090-memory-bandwidth",
-      "notes": "Third column is the RTX 4090; the text also rounds it to '1 TB/sec'. 384 bit x 21 Gbit/s / 8 = 1008 GB/s. | Verifier: 3090 Ti and 4090 both 1008 GB/sec, so column alignment does not affect the value. Memory text: 'RTX 4090 offers 1 TB/sec of peak'.",
+      "notes": "Third column is the RTX 4090; the text also rounds it to '1 TB/sec'. 384 bit x 21 Gbit/s / 8 = 1008 GB/s. | Verifier: 3090 Ti and 4090 both 1008 GB/sec, so column alignment does not affect the value. Memory text: […].",
       "quantityKind": "throughput",
       "valueSI": 1008000000000,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "rtx5090-memory-bandwidth-m1",
@@ -9988,7 +11340,7 @@
         "src-m01c-nvidia-rtx-blackwell-whitepaper"
       ],
       "locator": "GDDR7 memory section, p.13 (Table 1, p.15)",
-      "quote": "The GeForce RTX 5090 ships with 28 Gbps GDDR7 memory and delivers 1.792 TB/sec peak",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": null,
@@ -10000,7 +11352,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "h100-sxm-fp64-peak-m1",
@@ -10021,7 +11380,7 @@
         "src-m01c-nvidia-h100-page"
       ],
       "locator": "Specifications table, row FP64, H100 SXM column",
-      "quote": "34 teraFLOPS",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -10033,7 +11392,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "mi300x-fp64-vector-peak-m1",
@@ -10054,7 +11420,7 @@
         "src-m01c-rocm-mi300-docs"
       ],
       "locator": "Table 'Peak-performance capabilities of the MI300X for different data types', row Vector FP64",
-      "quote": "Peak-performance capabilities of the MI300X for different data types",
+      "quote": null,
       "era": 2023,
       "uncertainty": null,
       "statistics": null,
@@ -10066,7 +11432,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "mlperf-v50-h200x8-llama2-70b-server-ttft-mean-m1",
@@ -10087,7 +11460,7 @@
         "src-m01c-mlperf-v50-h200-llama2-server"
       ],
       "locator": "mlperf_log_summary.txt, 'Additional Stats'",
-      "quote": "Mean First Token latency (ns)               : 397824116",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": {
@@ -10122,7 +11495,14 @@
           "value": 0.9376
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "mlperf-v50-h200x8-llama2-70b-server-tpot-mean-m1",
@@ -10143,7 +11523,7 @@
         "src-m01c-mlperf-v50-h200-llama2-server"
       ],
       "locator": "mlperf_log_summary.txt, 'Additional Stats'",
-      "quote": "Mean Time to Output Token (ns)               : 169962807",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": {
@@ -10178,7 +11558,14 @@
           "value": 0.1819
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean-m1",
@@ -10199,7 +11586,7 @@
         "src-m01c-mlperf-v50-b200-llama2-interactive"
       ],
       "locator": "mlperf_log_summary.txt, 'Additional Stats'",
-      "quote": "Mean First Token latency (ns)               : 85598458",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": {
@@ -10219,7 +11606,7 @@
       },
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean",
-      "notes": "85,598,458 ns rounded. Corpus already holds the Interactive-category bounds; this is a measured value of a named system. | Verifier: System JSON: 'NVIDIA DGX B200 (8x B200-SXM-180GB, TensorRT)', Xeon Platinum 8570, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8. Protocol consistent. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
+      "notes": "85,598,458 ns rounded. Corpus already holds the Interactive-category bounds; this is a measured value of a named system. | Verifier: System JSON: […], Xeon Platinum 8570, Ubuntu 24.04, TensorRT 10.8, CUDA 12.8. Protocol consistent. | Decision: Published LoadGen percentiles recorded as statistics (review of uncertainty M3); the number of queries is not in the summary, so n is unknown and explained, never invented.",
       "quantityKind": "duration",
       "valueSI": 0.0856,
       "lowSI": null,
@@ -10234,7 +11621,15 @@
           "value": 0.21230000000000002
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "mlperf-v50-b200x8-llama2-70b-interactive-tpot-mean-m1",
@@ -10255,7 +11650,7 @@
         "src-m01c-mlperf-v50-b200-llama2-interactive"
       ],
       "locator": "mlperf_log_summary.txt, 'Additional Stats'",
-      "quote": "Mean Time to Output Token (ns)               : 36129344",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": {
@@ -10290,7 +11685,14 @@
           "value": 0.0391
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "mlperf-v50-b200x8-llama31-405b-server-ttft-mean-m1",
@@ -10311,7 +11713,7 @@
         "src-m01c-mlperf-v50-b200-llama31-405b-server"
       ],
       "locator": "mlperf_log_summary.txt, 'Additional Stats'",
-      "quote": "Mean First Token latency (ns)               : 1860083007",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": {
@@ -10346,7 +11748,14 @@
           "value": 4.2966999999999995
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "mlperf-v50-b200x8-llama31-405b-server-tpot-mean-m1",
@@ -10367,7 +11776,7 @@
         "src-m01c-mlperf-v50-b200-llama31-405b-server"
       ],
       "locator": "mlperf_log_summary.txt, 'Additional Stats'",
-      "quote": "Mean Time to Output Token (ns)               : 87022478",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": {
@@ -10402,7 +11811,14 @@
           "value": 0.1135
         }
       ],
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "android-pro-audio-rtl-max-analog-m1",
@@ -10423,19 +11839,27 @@
         "src-m01c-android16-cdd"
       ],
       "locator": "Section 5.6 Audio Latency, RTL requirements table",
-      "quote": "FEATURE_AUDIO_PRO 20 5 analog (if supported)",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#android-pro-audio-rtl-max-analog",
-      "notes": "Upper bound required for certification, not a measured device latency. Quote is the flattened table row (RTL ms, MAD ms, path). | Verifier: Table marked 'Start of requirements changed in Android 16'. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3).",
+      "notes": "Upper bound required for certification, not a measured device latency. Quote is the flattened table row (RTL ms, MAD ms, path). | Verifier: Table marked […]. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3).",
       "quantityKind": "duration",
       "valueSI": 0.02,
       "lowSI": null,
       "highSI": 0.02,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "android-low-latency-rtl-max-m1",
@@ -10456,7 +11880,7 @@
         "src-m01c-android16-cdd"
       ],
       "locator": "Section 5.6 Audio Latency, RTL requirements table",
-      "quote": "FEATURE_AUDIO_LOW_LATENCY 50 10 at least one path",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": null,
@@ -10468,7 +11892,14 @@
       "lowSI": null,
       "highSI": 0.05,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "audio-sample-rate-44100-m1",
@@ -10489,7 +11920,7 @@
         "src-m01c-android16-cdd"
       ],
       "locator": "Section 5.4.2 Capture for Voice Recognition, [C-1-1]",
-      "quote": "audio source at one of the sampling rates, 44100 and 48000",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": null,
@@ -10501,7 +11932,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "audio-sample-rate-48000-m1",
@@ -10522,19 +11960,27 @@
         "src-m01c-android16-cdd"
       ],
       "locator": "Section 5.4.2 Capture for Voice Recognition, [C-1-1]",
-      "quote": "audio source at one of the sampling rates, 44100 and 48000",
+      "quote": null,
       "era": 2025,
       "uncertainty": null,
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#audio-sample-rate-48000",
-      "notes": "AES5 (professional 48 kHz) not consulted. | Verifier: The 'only shared-mode rate above 44.1 kHz' remark refers to a SHOULD-level glitch-test list in 7.8.4; reworded.",
+      "notes": "AES5 (professional 48 kHz) not consulted. | Verifier: The […] remark refers to a SHOULD-level glitch-test list in 7.8.4; reworded.",
       "quantityKind": "frequency",
       "valueSI": 48000,
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
     },
     {
       "id": "vesa-adaptivesync-min-max-refresh-m1",
@@ -10555,7 +12001,7 @@
         "src-m01c-vesa-adaptivesync-cts-r11"
       ],
       "locator": "Table 2-1 'Mandates that Vary by Logo Performance Tier', p.22",
-      "quote": "Adaptive-Sync operation maximum                            ≥ 144 Hz",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -10567,7 +12013,14 @@
       "lowSI": 144,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "vesa-adaptivesync-display240-tier-m1",
@@ -10588,7 +12041,7 @@
         "src-m01c-vesa-adaptivesync-cts-r11"
       ],
       "locator": "Section 2.4 'VESA CERTIFIED Compliance Program', p.25; Table 2-1 note a, p.22",
-      "quote": "such as AdaptiveSync Display144 or Display240",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -10600,7 +12053,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "frame-time-144hz-m1",
@@ -10621,7 +12081,7 @@
         "src-m01c-vesa-adaptivesync-cts-r11"
       ],
       "locator": "Table 2-1, p.22",
-      "quote": "Adaptive-Sync operation maximum                            ≥ 144 Hz",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -10638,7 +12098,14 @@
       "lowSI": null,
       "highSI": 0.006944444444444445,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "frame-time-240hz-m1",
@@ -10659,7 +12126,7 @@
         "src-m01c-vesa-adaptivesync-cts-r11"
       ],
       "locator": "Section 2.4, p.25",
-      "quote": "such as AdaptiveSync Display144 or Display240",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -10676,7 +12143,14 @@
       "lowSI": null,
       "highSI": null,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "vesa-adaptivesync-g2g-average-max-m1",
@@ -10697,7 +12171,7 @@
         "src-m01c-vesa-adaptivesync-cts-r11"
       ],
       "locator": "Table 2-1, p.22",
-      "quote": "≤ 5-ms average over the 64 tests",
+      "quote": null,
       "era": 2022,
       "uncertainty": null,
       "statistics": null,
@@ -10709,7 +12183,14 @@
       "lowSI": null,
       "highSI": 0.005,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     },
     {
       "id": "hdmi21-max-bandwidth-m1",
@@ -10730,7 +12211,7 @@
         "src-m01c-hdmi-spec-page"
       ],
       "locator": "Ultra High Speed HDMI Cable paragraph",
-      "quote": "It is applicable for system configurations supporting up to 48Gbps maximum bandwidth.",
+      "quote": null,
       "era": null,
       "uncertainty": null,
       "statistics": null,
@@ -10742,7 +12223,14 @@
       "lowSI": null,
       "highSI": 6000000000,
       "quantilesSI": null,
-      "uncertaintySI": null
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     }
   ],
   "sources": [

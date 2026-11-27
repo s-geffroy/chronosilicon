@@ -49,6 +49,8 @@ const CSV_COLUMNS = [
   'verificationStatus', 'sourceIds', 'sourceUrls', 'locator', 'era', 'corpusVersion', 'appVersion',
   // AUD-016: same traceability as the JSON export (appended, existing column order unchanged).
   'schemaVersion', 'commit',
+  // AUD-012/017: whether verbatim source text was withheld from this row and from the JSON export.
+  'excerptStatus',
 ] as const;
 
 export function csvEscape(v: unknown): string {
@@ -83,7 +85,7 @@ export function buildCsvExport(ms: readonly NormalizedMeasurement[], ctx: Export
       uncertaintyValueSI: m.uncertaintySI?.value ?? null,
       uncertaintyLowSI: m.uncertaintySI?.low ?? null,
       uncertaintyHighSI: m.uncertaintySI?.high ?? null,
-      uncertaintyStatement: m.uncertainty ? `${m.uncertainty.statement} (${m.uncertainty.locator})` : null,
+      uncertaintyStatement: m.uncertainty && m.uncertainty.statement !== null ? `${m.uncertainty.statement} (${m.uncertainty.locator})` : null,
       quantiles: m.statistics ? m.statistics.quantiles.map((q) => `p${q.p}=${q.value}`).join(' ') : null,
       quantilesSI: m.quantilesSI ? m.quantilesSI.map((q) => `p${q.p}=${q.value}`).join(' ') : null,
       // n unknown is an empty cell, as for uncertaintyN; statisticsNNote says why.
@@ -104,6 +106,7 @@ export function buildCsvExport(ms: readonly NormalizedMeasurement[], ctx: Export
       appVersion: ctx.appVersion,
       schemaVersion: corpus.schemaVersion,
       commit: ctx.commit,
+      excerptStatus: m.excerpt?.status ?? null,
     };
     return CSV_COLUMNS.map((c) => csvEscape(row[c])).join(',');
   });

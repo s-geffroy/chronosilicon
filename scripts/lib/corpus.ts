@@ -7,8 +7,7 @@ import { Ajv2020 } from 'ajv/dist/2020.js';
 import { simulate, SIMULATOR_MODEL_VERSION } from '@chronosilicon/simulator';
 import {
   SCHEMA_VERSION, checkInvariants, checkScenarios, checkV2Invariants, normalize, resolveObservers,
-  type Corpus, type Evidence, type Group, type Measurement, type ObserverDef, type Phenomenon, type ScenarioDef,
-} from '@chronosilicon/ontology';
+  type Corpus, type Evidence, type Group, type Measurement, type ObserverDef, type Phenomenon, type ScenarioDef, publicView } from '@chronosilicon/ontology';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const P = {
@@ -99,7 +98,8 @@ export function runPipeline(): PipelineResult {
     corpusVersion: `0.3.0+${sha256(Object.values(inputs).join('')).slice(0, 12)}`,
     inputs,
     phenomena: ph.phenomena.filter((p) => usedPh.has(p.id)),
-    measurements: normalized,
+    // AUD-012/017 (ADR-0011): verbatim third-party text only where every cited source allows redistribution.
+    measurements: publicView(normalized, s.sources),
     sources: s.sources.filter((x) => usedSrc.has(x.id)),
     groups: gr.groups,
     observers: resolveObservers(ob.observers, normalized),

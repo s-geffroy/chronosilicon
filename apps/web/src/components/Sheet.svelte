@@ -62,7 +62,7 @@
           {#if m.uncertainty}
             {@const u = m.uncertainty}
             {#if u.type === 'confidence-interval'}{formatValue(u.low!, m.unit, lang)} – {formatValue(u.high!, m.unit, lang)} ({t('unc.confidence-interval', { level: formatLevel(u.level!, lang) })}){:else}± {formatValue(u.value!, m.unit, lang)} ({t(`unc.${u.type}`)}){/if}{#if u.sampleCount !== null}<span class="unc">· {t('unc.n', { n: u.sampleCount })}</span>{/if}
-            <span class="help block">{t('unc.statement')}{#if lang === 'fr'} {t('sheet.sourceLang')}{/if} <span lang="en">{u.statement}</span> — <span lang="en">{u.locator}</span></span>
+            <span class="help block">{#if u.statement !== null}{t('unc.statement')}{#if lang === 'fr'} {t('sheet.sourceLang')}{/if} <span lang="en">{u.statement}</span>{:else}{t('sheet.excerptWithheldShort')}{/if} — <span lang="en">{u.locator}</span></span>
           {:else if m.provenanceType === 'calculated'}{t('unc.notPropagated')}{:else}{t('sheet.uncertaintyUnknown')}{/if}
         </dd>
         {#if m.statistics}
@@ -73,7 +73,8 @@
             <span class="help block">{t('stats.method')} :{#if lang === 'fr'} {t('sheet.notesLang')}{/if} <span lang="en">{m.statistics.method}</span>{#if m.statistics.sampleCountNote} — <span lang="en">{m.statistics.sampleCountNote}</span>{/if}</span>
           </dd>
         {/if}
-        {#if m.quote}<dt>{t('sheet.quote')}</dt><dd><blockquote lang="en">{m.quote}</blockquote></dd>{/if}
+        {#if m.quote}<dt>{t('sheet.quote')}</dt><dd><blockquote lang="en">{m.quote}</blockquote></dd>
+        {:else if m.excerpt?.status === 'withheld'}<dt>{t('sheet.quote')}</dt><dd data-testid="sheet-excerpt-withheld">{t('sheet.excerptWithheld')}</dd>{/if}
         <dt>{t('sheet.raw')}</dt><dd class="mono">{m.rawRef}</dd>
         {#if m.notes}<dt>{t('sheet.notes')}</dt><dd>{#if lang === 'fr'}<span class="help">{t('sheet.notesLang')}</span> {/if}<span lang="en">{m.notes}</span></dd>{/if}
       {/if}

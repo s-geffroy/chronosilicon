@@ -187,6 +187,9 @@ const fr = {
     'Les cycles théoriques d’un cœur cadencé ne sont pas des instructions et ne mesurent pas le travail utile.',
   'sheet.notesLang': '(texte de curation en anglais)',
   'sheet.sourceLang': '(extrait de la source, en anglais)',
+  'sheet.excerptWithheld':
+    'Extrait non reproduit : le droit de redistribution d’au moins une source n’est pas établi. La valeur, la source et sa localisation restent publiées ; les passages cités remplacés par « […] » se lisent dans la source.',
+  'sheet.excerptWithheldShort': 'Formulation de la source non reproduite (droit de redistribution non établi)',
   'sim.heading': 'Simulation à événements discrets',
   'sim.intro':
     'Un moteur abstrait, pas une émulation : chaque durée est une valeur qualifiée du corpus, enchaînée selon des dépendances et des ressources à capacité. Les étapes concurrentes ne s’additionnent pas : on calcule le chemin critique.',
@@ -468,6 +471,9 @@ const en: Record<MessageKey, string> = {
     'The theoretical cycles of a clocked core are not instructions and do not measure useful work.',
   'sheet.notesLang': '(curation text in English)',
   'sheet.sourceLang': '(source excerpt, in English)',
+  'sheet.excerptWithheld':
+    'Excerpt not reproduced: the redistribution right of at least one source is not established. The value, the source and its locator remain published; quoted passages replaced by “[…]” can be read in the source.',
+  'sheet.excerptWithheldShort': 'Source wording not reproduced (redistribution right not established)',
   'sim.heading': 'Discrete-event simulation',
   'sim.intro':
     'An abstract engine, not an emulator: every duration is a qualified corpus value, chained by dependencies and capacity-limited resources. Concurrent steps are not added up: the critical path is computed.',

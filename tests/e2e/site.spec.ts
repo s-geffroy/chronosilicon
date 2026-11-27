@@ -144,7 +144,7 @@ test('exports JSON and CSV with versions, units and sources', async ({ page }) =
   expect(csv.split('\r\n')[0]).toContain('uncertaintyStatement,quantiles,quantilesSI,statisticsN,statisticsNNote,statisticsMethod');
   // one encoding for an unknown n: an empty cell, explained by statisticsNNote (final review, 9)
   expect(csv).not.toMatch(/,unknown,/);
-  expect(csv.split('\r\n')[0]).toMatch(/,corpusVersion,appVersion,schemaVersion,commit$/); // AUD-016
+  expect(csv.split('\r\n')[0]).toMatch(/,corpusVersion,appVersion,schemaVersion,commit,excerptStatus$/); // AUD-016, AUD-017
   expect(csv.trim().split('\r\n').length).toBe(corpus.measurements.length + 1);
 });
 
@@ -318,6 +318,19 @@ test('sheet shows structured uncertainty with its type and the source wording (A
   await expect(page.getByTestId('sheet-statistics')).toContainText(/P5 4\.26 µs · P50 4\.578 µs · P95 5\.396 µs\s*· n = 150/);
   await page.goto('./#/timeline?lang=en&level=scientific&sel=mlperf-v50-h200x8-llama2-70b-server-ttft-mean-m1');
   await expect(page.getByTestId('sheet-statistics')).toContainText('n not published');
+});
+
+test('excerpts are withheld when redistribution is not established (AUD-012/017)', async ({ page }) => {
+  await page.goto('./#/timeline?lang=en&level=scientific&sel=nr-urllc-user-plane-latency-target-m1');
+  await expect(page.getByTestId('sheet-excerpt-withheld')).toContainText('Excerpt not reproduced');
+  await expect(page.getByTestId('sheet')).not.toContainText('the target for user plane latency should be');
+  await page.keyboard.press('Escape');
+  await expect(page.getByTestId('sheet')).not.toBeVisible();
+  const [dl] = await Promise.all([page.waitForEvent('download'), page.getByTestId('export-json').click()]);
+  const json = JSON.parse(readFileSync((await dl.path())!, 'utf8'));
+  const m = json.measurements.find((x: { id: string }) => x.id === 'nr-urllc-user-plane-latency-target-m1');
+  expect(m.quote).toBeNull();
+  expect(m.excerpt.status).toBe('withheld');
 });
 
 test('table view shows every dispersion with its type (review of uncertainty, M1)', async ({ page }) => {

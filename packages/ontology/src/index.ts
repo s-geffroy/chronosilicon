@@ -67,8 +67,11 @@ export interface Uncertainty {
   readonly high: number | null;
   readonly level: number | null;
   readonly sampleCount: number | null;
-  /** Literal wording of the source, e.g. "mean ± s.e.". */
-  readonly statement: string;
+  /**
+   * Literal wording of the source, e.g. "mean ± s.e.". Always present in curated
+   * data; null only in the public view when the excerpt is withheld (AUD-012).
+   */
+  readonly statement: string | null;
   readonly locator: string;
 }
 
@@ -106,7 +109,13 @@ export interface NormalizedMeasurement extends Measurement {
   readonly uncertaintySI: { readonly value: number | null; readonly low: number | null; readonly high: number | null } | null;
   /** SI-normalised quantiles of published statistics, null if none. */
   readonly quantilesSI: ReadonlyArray<{ readonly p: number; readonly value: number }> | null;
+  /** Set by publicView (AUD-012/017): whether verbatim third-party text is published. */
+  readonly excerpt?: ExcerptStatus;
 }
+
+export type ExcerptStatus =
+  | { readonly status: 'published' }
+  | { readonly status: 'withheld'; readonly reason: 'redistribution-not-established'; readonly redacted: readonly string[] };
 
 export type Comparability = 'same-protocol' | 'same-source' | 'same-definition' | 'heterogeneous';
 
@@ -329,7 +338,8 @@ export function checkInvariants({ sources, phenomena, measurements }: InvariantI
     if (u && (m.low === m.value || m.high === m.value)) errors.push(`${at}: a ± dispersion on a one-sided bound is not meaningful`);
     if (u) {
       const needed = u.type === 'confidence-interval' ? [u.low, u.high] : [u.value];
-      if (!needed.every((x) => x !== null && containsNumber(u.statement, x))) errors.push(`${at}: the source wording must contain the dispersion value`);
+      if (u.statement === null) errors.push(`${at}: curated uncertainty needs the source wording (statement)`);
+      else if (!needed.every((x) => x !== null && containsNumber(u.statement!, x))) errors.push(`${at}: the source wording must contain the dispersion value`);
     }
     if (u) {
       if (u.type === 'confidence-interval') {
@@ -425,3 +435,5 @@ export function normalize(phenomena: readonly Phenomenon[], measurements: readon
     };
   });
 }
+
+export { publicView, quotedSpans, MIN_REDACTED_WORDS, ALLOWED_UNDER_REVIEW } from './publication';
