@@ -29,8 +29,6 @@ REVIEW = {
  ('measurement:hbm3-samsung-stack-bandwidth-m1','conditions.en',"with processing speeds 'up to' 6"): ('publish','fact','Rate with its qualifier.'),
  ('measurement:linux-kpti-entry-exit-cost-haswell-m1','conditions.en',"is 'on the order of 400–500 cycles'"): ('redact','third-party-excerpt','Six-word quoted passage, already redacted in rc2: kept redacted (no review decision publishes what rc2 withheld). The value itself stays in the value field.'),
  ('measurement:hbm3e-micron-stack-bandwidth-m1','conditions.en',"'more than' 1.2 TB/s"): ('publish','fact','Bandwidth with its qualifier (found once overlaps crossing quoted spans were merged).'),
- # R1 lot 2026-11-27 (ADR-0012).
- ('measurement:ind-led-lamp-lifetime-m1','conditions.en',"lamps 'appear to be capable of at least 25,000 hours of operation'"): ('redact','third-party-excerpt','Ten-word passage of the source sentence: withheld (source redistribution unknown); the value stays in the value field.'),
  # The five residuals named in AUD02-002 (REMEDIATION-01 register: withheldStillPublicInCandidate).
  ('measurement:mi300x-fp64-vector-peak-m1','locator',"'Peak-performance capabilities of the MI300X for different data types'"): ('publish','locating-label','Residual 5/5. Table caption, needed to find the value; it is also the (withheld) quote, which is only the caption: no running text is reproduced.'),
  ('measurement:solidigm-ps1010-random-read-latency-m1','locator',"'Latency Random Rating (Read / Write)'"): ('publish','locating-label','Residual 2/5. Row label of the specification block; the withheld quote is that label plus the values.'),
