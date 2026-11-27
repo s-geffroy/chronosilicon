@@ -7,6 +7,7 @@ Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source cano
 - **Développement arrêté.** ChatGPT réalise un audit indépendant (A01 à A17). Le mainteneur ne modifie ni le corpus, ni `main`, ni le site, et ne corrige rien par anticipation.
 - État de référence : tag `audit-01-baseline` = `491c989d46d0d75ecedd9741ef4b6586892b80ae`, publié et vérifié (`version.json` ; 6 fichiers sur 6 identiques au build reproduit depuis un clone neuf).
 - Dossier probatoire : `docs/audits/AUDIT-01/evidence/` ; transmission : `docs/audits/AUDIT-01/AUDIT-01_HANDOVER.md` ; copie Drive : `…/CHRONOSILICON/2026-11-27_AUDIT-01/00_EVIDENCE_CLAUDE/` (https://drive.google.com/drive/folders/12NiViPhoKclCGxEQaX2SmjQotdn7EeJV).
+- Dépôt Drive vérifié le 2026-11-27 : 29 fichiers, à savoir le dossier `evidence/` complet avec ses journaux, `AUDIT-01_HANDOVER.md`, `chronosilicon-audit-01-baseline.zip` (`git archive` du tag, SHA-256 28b997b8…) et `DEPOSIT-SHA256SUMS.txt`. Toutes les tailles concordent ; le ZIP et `evidence/SHA256SUMS.txt`, retéléchargés, ont la même empreinte SHA-256.
 - Le dossier est commité sur `develop` seulement, après le tag. Reprise : à réception du rapport indépendant et du plan de remédiation.
 
 ## État des portes
