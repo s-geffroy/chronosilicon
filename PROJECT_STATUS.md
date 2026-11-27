@@ -4,10 +4,16 @@ Mise à jour : 2026-11-27. Référence canonique : GitHub `s-geffroy/chronosilic
 
 ## En ligne
 
-- **Site** : https://s-geffroy.github.io/chronosilicon/ sert encore **`491c989`** (V5, référence d'AUDIT-01).
-- **PUBLICATION-01 (D18 = B)** : la version candidate `publication-01-rc5` (tag sur `c2f191e`, porte sur clone neuf PASS, CI verte) est **prête, mais pas publiée**. La session de l'agent n'a pas la permission de pousser sur `main` ; la publication attend l'utilisateur.
+- **Site** : https://s-geffroy.github.io/chronosilicon/ sert **`e48db4e`**, c'est-à-dire R1 v2.1 avec le statut de prototype de PUBLICATION-01. Publié le 2026-11-27 par deux avances rapides de `main` (rc5, puis R1 v2.1), runs Pages 46023767047 et 46023822104 en succès.
+- **Vérifié après déploiement** :
+  - `version.json` ;
+  - fichiers servis identiques à une reconstruction du même commit ;
+  - `publication:check` OK sur les fichiers servis ;
+  - parcours FR/EN sans erreur de console.
 
-## En cours : branche `editorial-r1c` (R1 v2.1)
+  Rapport : `docs/publication/PUBLICATION-01/PUBLICATION-01_REPORT.md`.
+
+## Publié : R1 v2.1 (branche `editorial-r1c`)
 
 - **Atlas transversal**. Douze univers, avec une projection éditoriale qui permet plusieurs univers par phénomène, sans dupliquer de mesure. Nouveaux domaines : biologie, astronomie, industrie, vie quotidienne, chimie, cognition, transports, nature, géologie. Provenances `conventional` et `illustrative`, signalées dans l'interface.
 - **Chronologie universelle** de 10⁻¹⁸ à 10¹⁸ s :

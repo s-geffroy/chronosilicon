@@ -2,9 +2,9 @@
 
 Backlog court, classé par valeur pédagogique (directive R1 v2.0 §6, v2.1). Mis à jour le 2026-11-27. L'ancienne liste est archivée dans `docs/archives/NEXT_ACTIONS_2026-11-27_avant-R1.md`.
 
-## Bloquant
+## Publication
 
-1. **[Utilisateur] Publier.** La session de l'agent ne peut pas pousser sur `main` (permission refusée). Il faut soit l'autoriser, soit lancer soi-même l'avance rapide (`git push origin <commit>:refs/heads/main`) : d'abord rc5 (PUBLICATION-01), puis `editorial-r1c` une fois sa CI verte.
+1. PUBLICATION-01 et R1 v2.1 sont publiées (`e48db4e`, 2026-11-27). La session de l'agent n'a pas la permission de pousser sur `main` : les publications suivantes passent par une commande de l'utilisateur ou par une permission accordée.
 
 ## Contenu
 
