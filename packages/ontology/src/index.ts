@@ -9,27 +9,45 @@ export const SCHEMA_VERSION = '1.0.0' as const;
 export type Domain =
   | 'physics' | 'logic' | 'cpu' | 'memory' | 'accelerator' | 'interconnect' | 'storage' | 'os'
   | 'network' | 'distributed' | 'ai' | 'peripheral' | 'human' | 'space' | 'emerging'
-  | 'biology' | 'astronomy' | 'industry' | 'everyday';
+  | 'biology' | 'astronomy' | 'industry' | 'everyday'
+  | 'chemistry' | 'cognition' | 'transport' | 'nature' | 'geology';
 
 export const DOMAINS: readonly Domain[] = [
   'physics', 'logic', 'cpu', 'memory', 'accelerator', 'interconnect', 'storage', 'os',
   'network', 'distributed', 'ai', 'peripheral', 'human', 'space', 'emerging',
   'biology', 'astronomy', 'industry', 'everyday',
+  'chemistry', 'cognition', 'transport', 'nature', 'geology',
 ];
 
 /**
  * Universes (ADR-0012, editorial scope R1 = C): the atlas compares phenomena from very
  * different worlds on one time scale. Each domain belongs to exactly one universe.
  */
-export type Universe = 'computing' | 'physics' | 'astronomy' | 'biology' | 'physiology' | 'industry' | 'everyday';
-export const UNIVERSES: readonly Universe[] = ['computing', 'physics', 'astronomy', 'biology', 'physiology', 'industry', 'everyday'];
+export type Universe =
+  | 'computing' | 'physics' | 'chemistry' | 'biology' | 'physiology' | 'cognition' | 'everyday'
+  | 'transport' | 'industry' | 'nature' | 'history-geology' | 'astronomy';
+/** The twelve universes of directive R1 v2.1, in display order. */
+export const UNIVERSES: readonly Universe[] = [
+  'computing', 'physics', 'chemistry', 'biology', 'physiology', 'cognition', 'everyday',
+  'transport', 'industry', 'nature', 'history-geology', 'astronomy',
+];
 export const UNIVERSE_OF: Readonly<Record<Domain, Universe>> = {
   logic: 'computing', cpu: 'computing', memory: 'computing', accelerator: 'computing', interconnect: 'computing',
   storage: 'computing', os: 'computing', network: 'computing', distributed: 'computing', ai: 'computing',
   peripheral: 'computing', emerging: 'computing',
   physics: 'physics', space: 'astronomy', astronomy: 'astronomy', biology: 'biology', human: 'physiology',
-  industry: 'industry', everyday: 'everyday',
+  industry: 'industry', everyday: 'everyday', chemistry: 'chemistry', cognition: 'cognition',
+  transport: 'transport', nature: 'nature', geology: 'history-geology',
 };
+
+/**
+ * Editorial projection (directive v2.1): a phenomenon keeps its canonical domain and may be shown
+ * in several universes; the first one is its main universe (colour). Without an override, the
+ * universe of its domain.
+ */
+export function universesOf(domain: Domain, override: readonly Universe[] | undefined): Universe[] {
+  return override && override.length ? [...override] : [UNIVERSE_OF[domain]];
+}
 
 /** How a value came to be — orthogonal to its verification status. */
 /**
@@ -65,6 +83,8 @@ export interface Phenomenon {
   readonly quantityKind: QuantityKind;
   readonly label: I18nText;
   readonly description: I18nText | null;
+  /** Public corpus only: universes shown for this phenomenon, main first (editorial projection, v2.1). */
+  readonly universes?: readonly Universe[];
 }
 
 export interface Statistics {

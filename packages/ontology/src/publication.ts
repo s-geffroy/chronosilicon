@@ -68,7 +68,7 @@ export const PUBLIC_FIELDS: { readonly [section: string]: FieldSpec } = {
   },
   group: { id: 'fact', kind: 'fact', quantityKind: 'fact', label: I18N, members: 'fact', comparability: 'fact',
     protocolEvidence: { sourceId: 'fact', locator: 'text', statement: 'third' }, note: I18N },
-  phenomenon: { id: 'fact', domain: 'fact', quantityKind: 'fact', label: I18N, description: I18N },
+  phenomenon: { id: 'fact', domain: 'fact', quantityKind: 'fact', label: I18N, description: I18N, universes: 'fact' },
   observer: { id: 'fact', kind: 'fact', measurementId: 'fact', frequencyHz: 'fact', label: I18N, assumptions: I18N, referenceSI: 'fact' },
   scenario: {
     id: 'fact', label: I18N, description: I18N, excluded: I18N,

@@ -6968,6 +6968,803 @@
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#hdmi21-max-bandwidth",
       "notes": "The page is now the HDMI 2.2 overview; the sentence describes the 48G cable class of HDMI 2.1. | Verifier: The page states the 48 Gbps limit for the cable class, not directly 'HDMI 2.1 maximum bandwidth'; 'gross link rate (FRL)' is not stated for this figure. Era '2017' (HDMI 2.1 release) is not given on the page, which says market entry 2020. | Decision: Bound encoded in low/high so the interface shows it (lot-2 review M3). Era 2017 is not stated by the cited page: set to unknown (lot-2 review m15)."
+    },
+    {
+      "id": "phys-planck-time-m1",
+      "phenomenonId": "phys-planck-time",
+      "configuration": null,
+      "value": 5.391247e-44,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Unite de temps naturelle construite a partir des constantes fondamentales (racine de hbar G / c^5) ; echelle en dessous de laquelle la physique actuelle ne sait plus decrire le temps. Ce n'est pas un evenement observe.",
+        "en": "Natural unit of time built from fundamental constants (sqrt(hbar G / c^5)); the scale below which current physics cannot describe time. Not an observed event."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nist-codata2022-planck-time"
+      ],
+      "locator": "NIST CODATA value page 'Planck time', Numerical value line",
+      "quote": "Numerical value 5.391 247 x 10-44 s",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#phys-planck-time",
+      "notes": "CODATA 2022 recommended value. Standard uncertainty 0.000 060 x 10^-44 s, relative standard uncertainty 1.1 x 10^-5 (dominated by the uncertainty of G). Derived constant, not a measured duration of any process."
+    },
+    {
+      "id": "phys-muon-mean-lifetime-m1",
+      "phenomenonId": "phys-muon-mean-lifetime",
+      "configuration": null,
+      "value": 2.1969811,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Duree de vie moyenne d'un muon au repos avant sa desintegration (surtout en electron et deux neutrinos). Les muons crees par les rayons cosmiques vivent plus longtemps vus du sol, a cause de la dilatation relativiste du temps.",
+        "en": "Average lifetime of a muon at rest before it decays (mostly into an electron and two neutrinos). Muons created by cosmic rays live longer as seen from the ground because of relativistic time dilation."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-pdg2024-leptons"
+      ],
+      "locator": "PDG 2024 Summary Tables, Leptons, mu block, page 1",
+      "quote": "Mean life τ = (2.1969811 ± 0.0000022) × 10−6 s",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#phys-muon-mean-lifetime",
+      "notes": "PDG 2024 world average of experimental measurements; uncertainty ±0.0000022e-6 s (about 1 ppm). Value stored in microseconds (2.1969811 us = 2.1969811e-6 s). | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "phys-free-neutron-mean-lifetime-m1",
+      "phenomenonId": "phys-free-neutron-mean-lifetime",
+      "configuration": null,
+      "value": 878.4,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Duree de vie moyenne d'un neutron hors d'un noyau atomique avant sa desintegration en proton, electron et antineutrino (environ un quart d'heure). Les neutrons lies dans des noyaux stables ne se desintegrent pas.",
+        "en": "Average lifetime of a neutron outside an atomic nucleus before it decays into a proton, an electron and an antineutrino (about a quarter of an hour). Neutrons bound in stable nuclei do not decay."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-pdg2024-baryons"
+      ],
+      "locator": "PDG 2024 Summary Tables, Baryons, n block (N baryons)",
+      "quote": "Mean life τ = 878.4 ± 0.5 s (S = 1.8)",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#phys-free-neutron-mean-lifetime",
+      "notes": "PDG 2024 average, uncertainty ±0.5 s already inflated by scale factor S = 1.8, which PDG uses when input measurements are mutually inconsistent. The measurements of this quantity are known to disagree between experimental methods (the 'neutron lifetime puzzle'); the size of that discrepancy was not sourced here, so treat the last digit with caution. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "phys-carbon-14-half-life-m1",
+      "phenomenonId": "phys-carbon-14-half-life",
+      "configuration": null,
+      "value": 5700,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps au bout duquel la moitie des atomes de carbone 14 d'un echantillon se sont desintegres en azote 14 ; c'est l'horloge de la datation au radiocarbone.",
+        "en": "Time for half of a sample of carbon-14 atoms to decay into nitrogen-14; the clock behind radiocarbon dating."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-lnhb-c14"
+      ],
+      "locator": "LNHB Table de Radionucleides C-14, section 2 'Nuclear Data', page 1",
+      "quote": "T1/2 (14 C )    :   5700         (30)    a",
+      "era": 2012,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#phys-carbon-14-half-life",
+      "notes": "DDEP/LNHB recommended value 5700 a with standard uncertainty 30 a (notation '(30)'). Radiocarbon laboratories conventionally report ages with the older 'Libby' half-life of 5568 a; that convention was not sourced here and is not this value. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "phys-uranium-238-half-life-m1",
+      "phenomenonId": "phys-uranium-238-half-life",
+      "configuration": null,
+      "value": 4468000000,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps au bout duquel la moitie d'un echantillon d'uranium 238 s'est desintegree (surtout par emission alpha) ; c'est a peu pres l'age de la Terre, d'ou son usage pour dater les roches les plus anciennes.",
+        "en": "Time for half of a sample of uranium-238 to decay (mainly by alpha emission); about the age of the Earth, which is why U-238 is used to date the oldest rocks."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-lnhb-u238"
+      ],
+      "locator": "LNHB Table de Radionucleides U-238, section 2 'Nuclear Data', page 1",
+      "quote": "T1/2 (238 U )     :   4,468      (5)    109 a",
+      "era": 2006,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#phys-uranium-238-half-life",
+      "notes": "DDEP/LNHB recommended value 4.468 x 10^9 a, standard uncertainty 0.005 x 10^9 a. The quote is copied from the PDF text layer where the superscript of 10^9 is flattened to '109' and the French decimal comma is used. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "astro-light-time-earth-moon-m1",
+      "phenomenonId": "astro-light-time-earth-moon",
+      "configuration": null,
+      "value": 1.282,
+      "unit": "s",
+      "low": 1.212,
+      "high": 1.353,
+      "conditions": {
+        "fr": "Temps mis par la lumiere (ou un signal radio) pour parcourir la distance moyenne Terre-Lune (demi-grand axe 384 400 km), aller simple. Bas/haut : Lune au perigee (363 300 km) et a l'apogee (405 500 km).",
+        "en": "Time for light (or a radio signal) to cross the mean Earth-Moon distance (semimajor axis 384 400 km), one way. Low/high: Moon at perigee (363 300 km) and apogee (405 500 km)."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "rejected",
+      "sourceIds": [
+        "src-nssdc-moon",
+        "src-nist-codata2022-c"
+      ],
+      "locator": "NASA Moon Fact Sheet, orbital parameters table (Semimajor axis, Perigee, Apogee rows)",
+      "quote": "Semimajor axis (106 km) | 0.3844",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = d / c (d (semimajor axis) = 3.844e+08 m; d (perigee) = 3.633e+08 m; d (apogee) = 4.055e+08 m; c = 2.99792e+08 m/s; c = 299 792 458 m/s)",
+        "inputs": [
+          "src:src-nist-codata2022-c",
+          "src:src-nssdc-moon"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-light-time-earth-moon",
+      "notes": "Calculated: 384 400 000 m / 299 792 458 m/s = 1.2822 s (perigee 1.2118 s, apogee 1.3526 s), rounded to 1 ms. Centre-to-centre distances; real surface-to-surface signal paths are slightly shorter. The '106' in the quote is the fact sheet's 10^6 with its superscript flattened. Perigee/apogee values carry an asterisk on the fact sheet (footnote not read). | Decision: Duplicate (R1 lot 2026-11-27): the corpus already has earth-moon-light-time-one-way, calculated from the same NASA semimajor axis. Not duplicated (directive R1 v2.1)."
+    },
+    {
+      "id": "astro-light-time-sun-earth-m1",
+      "phenomenonId": "astro-light-time-sun-earth",
+      "configuration": null,
+      "value": 499,
+      "unit": "s",
+      "low": 490.7,
+      "high": 507.4,
+      "conditions": {
+        "fr": "Temps mis par la lumiere du Soleil pour atteindre la Terre a la distance moyenne (demi-grand axe de l'orbite terrestre, 149,598 millions de km) : environ 8 min 19 s. Bas/haut : Terre au perihelie (debut janvier) et a l'aphelie (debut juillet).",
+        "en": "Time for sunlight to reach Earth at the mean Sun-Earth distance (Earth's orbital semimajor axis, 149.598 million km): about 8 min 19 s. Low/high: Earth at perihelion (early January) and aphelion (early July)."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "rejected",
+      "sourceIds": [
+        "src-nssdc-earth",
+        "src-nist-codata2022-c"
+      ],
+      "locator": "NASA Earth Fact Sheet, orbital parameters (Semimajor axis, Perihelion, Aphelion rows)",
+      "quote": "Semimajor axis (106 km)         149.598",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = d / c (d (semimajor axis) = 1.49598e+11 m; d (perihelion) = 1.47095e+11 m; d (aphelion) = 1.521e+11 m; c = 2.99792e+08 m/s; c = 299 792 458 m/s)",
+        "inputs": [
+          "src:src-nist-codata2022-c",
+          "src:src-nssdc-earth"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-light-time-sun-earth",
+      "notes": "Calculated: 149 598 000 000 m / 299 792 458 m/s = 499.005 s (perihelion 147.095e9 m -> 490.66 s; aphelion 152.100e9 m -> 507.35 s), rounded to 0.1 s. The IAU 2012 exact astronomical unit (149 597 870 700 m) would give the same value to 0.1 s, but the IAU resolution PDF could not be opened (HTTP 404/502), so the NASA semimajor axis is used. Month names for perihelion/aphelion are general knowledge, not read on the source; remove if strictness requires. | Decision: Duplicate (R1 lot 2026-11-27): the corpus already has astronomical-unit-light-time. Not duplicated (directive R1 v2.1)."
+    },
+    {
+      "id": "astro-earth-sidereal-rotation-m1",
+      "phenomenonId": "astro-earth-sidereal-rotation",
+      "configuration": null,
+      "value": 23.9345,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps mis par la Terre pour faire un tour par rapport aux etoiles lointaines : environ 23 h 56 min, soit a peu pres 4 minutes de moins que le jour solaire de 24 h, car la Terre avance aussi sur son orbite.",
+        "en": "Time for Earth to turn once relative to distant stars: about 23 h 56 min, roughly 4 minutes shorter than the 24 h solar day because Earth also moves along its orbit."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nssdc-earth"
+      ],
+      "locator": "NASA Earth Fact Sheet, 'Sidereal rotation period (hrs)' row",
+      "quote": "Sidereal rotation period (hrs)   23.9345",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-earth-sidereal-rotation",
+      "notes": "Fact-sheet value given to 4 decimals of an hour (~0.2 s resolution); no uncertainty stated. Earth's rotation varies by milliseconds over days to decades, far below this precision. Same sheet gives 'Length of day (hrs) 24.0000' for the mean solar day. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "astro-tropical-year-m1",
+      "phenomenonId": "astro-tropical-year",
+      "configuration": null,
+      "value": 365.242,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps entre deux retours successifs au meme point des saisons (par exemple d'un equinoxe de printemps au suivant) ; c'est l'annee que les calendriers cherchent a suivre.",
+        "en": "Time between two successive identical seasonal points (e.g. spring equinox to spring equinox); the year calendars try to follow."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nssdc-earth"
+      ],
+      "locator": "NASA Earth Fact Sheet, 'Tropical orbit period (days)' row",
+      "quote": "Tropical orbit period (days)    365.242",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-tropical-year",
+      "notes": "Given to 3 decimals of a day; no uncertainty stated. Distinct from the sidereal year (365.256 d on the same sheet), which is measured against the stars; the difference comes from the precession of Earth's axis. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "astro-synodic-month-m1",
+      "phenomenonId": "astro-synodic-month",
+      "configuration": null,
+      "value": 29.53,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps moyen entre deux phases identiques de la Lune (par exemple d'une pleine Lune a la suivante). L'orbite mesuree par rapport aux etoiles (siderale) est plus courte : 27,3217 j.",
+        "en": "Average time between two identical Moon phases (e.g. full Moon to full Moon). The orbit measured against the stars (sidereal) is shorter: 27.3217 d."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nssdc-moon"
+      ],
+      "locator": "NASA Moon Fact Sheet, orbital parameters, 'Synodic period (days)' row",
+      "quote": "Synodic period (days) | 29.53",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-synodic-month",
+      "notes": "Mean value, 2 decimals, no uncertainty stated. Individual lunations vary by several hours around the mean (amount not sourced here). The 27.3217 d sidereal figure is the 'Revolution period (days)' row of the same sheet. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "astro-halley-orbital-period-m1",
+      "phenomenonId": "astro-halley-orbital-period",
+      "configuration": null,
+      "value": 76.1,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps mis par la comete 1P/Halley pour faire le tour du Soleil ; dernier passage au plus pres du Soleil (perihelie) le 9 fevrier 1986.",
+        "en": "Time for comet 1P/Halley to go once around the Sun; last closest approach to the Sun (perihelion) on 1986-02-09."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nssdc-comets"
+      ],
+      "locator": "NASA Comet Fact Sheet, row '1P Halley', column 'Orbital Period (yrs.)'",
+      "quote": "1P Halley 76.1 yrs. 1986-02-09 0.587 AU 17.94 AU 0.967 162.2 deg.",
+      "era": 2016,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-halley-orbital-period",
+      "notes": "Osculating period for the 1986 apparition; the period changes from one passage to the next because of planetary perturbations and outgassing (range not sourced here). Quote reassembled from table cells split across lines in the page text. Sheet last updated 2016. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "astro-jupiter-orbital-period-m1",
+      "phenomenonId": "astro-jupiter-orbital-period",
+      "configuration": null,
+      "value": 4332.589,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps mis par Jupiter pour faire le tour du Soleil par rapport aux etoiles (periode siderale) : environ 11,86 annees terrestres.",
+        "en": "Time for Jupiter to orbit the Sun once relative to the stars (sidereal period): about 11.86 Earth years."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nssdc-jupiter"
+      ],
+      "locator": "NASA Jupiter Fact Sheet, 'Sidereal orbit period (days)' row (Jupiter column)",
+      "quote": "Sidereal orbit period (days) | 4,332.589 | 365.256 | 11.862",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-jupiter-orbital-period",
+      "notes": "No uncertainty stated. The row lists Jupiter, Earth and the Jupiter/Earth ratio (11.862). Tropical period on the same sheet: 4,330.595 d. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "astro-sun-galactic-orbit-m1",
+      "phenomenonId": "astro-sun-galactic-orbit",
+      "configuration": null,
+      "value": 230000000,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps approximatif mis par le Soleil (et tout le Systeme solaire) pour faire un tour complet autour du centre de notre Galaxie.",
+        "en": "Approximate time for the Sun (and the Solar System) to complete one trip around the centre of our Galaxy."
+      },
+      "protocol": null,
+      "provenanceType": "estimated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nasa-sun-facts"
+      ],
+      "locator": "NASA 'Our Sun: Facts', section 'Orbit and Rotation'",
+      "quote": "it takes about 230 million years for the Sun to make one complete trip around the Milky Way.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-sun-galactic-orbit",
+      "notes": "Rounded order-of-magnitude estimate ('about'); depends on the adopted Sun-centre distance and circular speed. An independent popular source, NRAO 'Ask an Astronomer' (J. Mangum, 2015, src-nrao-galactic-orbit), states 'about 226 million years'. Other published estimates spread further (roughly 220-250 Myr in secondary press found during search) but no primary paper was opened, so low/high are left null rather than invented. Low confidence on any digit beyond the first two."
+    },
+    {
+      "id": "astro-age-of-earth-m1",
+      "phenomenonId": "astro-age-of-earth",
+      "configuration": null,
+      "value": 4540000000,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps ecoule depuis la formation de la Terre et des autres corps solides du Systeme solaire, determine a partir des isotopes du plomb des plus vieux minerais terrestres et des meteorites.",
+        "en": "Time since Earth and the other solid bodies of the Solar System formed, determined from lead isotopes in Earth's oldest lead ores and in meteorites."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-usgs-age-earth"
+      ],
+      "locator": "USGS 'Geologic Time: Age of the Earth', final paragraphs",
+      "quote": "an age for the Earth and meteorites, and hence the Solar System, of 4.54 billion years with an uncertainty of less than 1 percent.",
+      "era": 2007,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-age-of-earth",
+      "notes": "USGS states uncertainty below 1 % (i.e. under about ±0.045 billion years); no exact interval given, so low/high left null. Page last updated 2007; it summarises Dalrymple (1991). The same page gives a meteorite formation span of 4.53-4.58 billion years. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented. | Decision: Bound wording checked (R1 lot 2026-11-27): \"less than 1 percent\" bounds the uncertainty of 4.54 Gyr, not the value; no interval is published, so low/high stay null."
+    },
+    {
+      "id": "astro-age-of-universe-m1",
+      "phenomenonId": "astro-age-of-universe",
+      "configuration": null,
+      "value": 13787000000,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps ecoule depuis le Big Bang, deduit de la carte du fond diffus cosmologique du satellite Planck, en supposant le modele cosmologique standard (Lambda-CDM de base), combine aux donnees de lentillage et d'oscillations acoustiques des baryons.",
+        "en": "Time since the Big Bang inferred from the Planck satellite's map of the cosmic microwave background, assuming the standard cosmological model (base Lambda-CDM), combined with lensing and baryon acoustic oscillation data."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-planck2018-vi"
+      ],
+      "locator": "Planck 2018 VI, Table 2, row 'Age [Gyr]', column TT,TE,EE+lowE+lensing+BAO",
+      "quote": "Age [Gyr] . . . . . . . 13.830 ± 0.037 ... 13.797 ± 0.023 13.787 ± 0.020",
+      "era": 2018,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-age-of-universe",
+      "notes": "68 % interval ±0.020 Gyr (13.787 ± 0.020 x 10^9 a). Model-dependent inference, not a direct measurement: the Planck-only baseline (TT,TE,EE+lowE+lensing) gives 13.797 ± 0.023 Gyr in the same table, and the 'Hubble tension' (disagreement between early- and late-Universe H0 values) means a different model could shift the age; not quantified here. Quote abridged with '...' between table columns. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "ind-model-t-assembly-before-line-m1",
+      "phenomenonId": "ind-model-t-assembly-before-line",
+      "configuration": null,
+      "value": 12.5,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps par voiture à l'usine Ford de Highland Park avant la chaîne mobile, quand les ouvriers venaient à une voiture immobile (avant 1913).",
+        "en": "Time per car at Ford's Highland Park plant before the moving assembly line, when workers came to a car that stayed in place (before 1913)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-thf-k12-assembly-line"
+      ],
+      "locator": "K-12 Research Guide: Assembly Line, answer text",
+      "quote": "an extraordinary improvement over 12½ hours per car under the old stationary assembly methods",
+      "era": 1913,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#ind-model-t-assembly-before-line",
+      "notes": "Historical figure from a museum educational page, not the original Ford time study. Widely repeated; the museum is the best accessible source."
+    },
+    {
+      "id": "ind-model-t-assembly-moving-line-m1",
+      "phenomenonId": "ind-model-t-assembly-moving-line",
+      "configuration": null,
+      "value": 93,
+      "unit": "min",
+      "low": 90,
+      "high": 93,
+      "conditions": {
+        "fr": "Cadence atteinte quand les lignes séparées de Ford ont été réunies en chaînes mobiles continues (1913 à début 1914). Le musée donne 93 minutes ; la page d'histoire de Ford arrondit à quatre-vingt-dix minutes.",
+        "en": "Rate reached once Ford's separate lines were merged into continuous moving lines (1913 to early 1914). The museum says 93 minutes; Ford's own history page rounds it to ninety minutes."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-thf-k12-assembly-line"
+      ],
+      "locator": "K-12 Research Guide: Assembly Line, answer text; cross-check src-ford-moving-assembly-line ('built in only ninety minutes')",
+      "quote": "A Model T was being produced every 93 minutes",
+      "era": 1914,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#ind-model-t-assembly-moving-line",
+      "notes": "Two sources (museum, manufacturer) agree on about 90 minutes. Both are secondary, and 'produced every 93 minutes' may be a production interval rather than the work time on one car. Other secondary sources give under 3 h or under 2 h for earlier stages."
+    },
+    {
+      "id": "ind-concrete-28-day-test-age-m1",
+      "phenomenonId": "ind-concrete-28-day-test-age",
+      "configuration": null,
+      "value": 28,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Les éprouvettes de béton sont conservées en laboratoire puis écrasées à un âge d'essai, typiquement 28 jours, fixé par les cahiers des charges routiers américains (AASHTO T22). Certains cahiers des charges retiennent 56 ou 90 jours.",
+        "en": "Concrete cylinders are cured in the laboratory and crushed at a test age that is typically 28 days, set by US paving specifications (AASHTO T22). Some specifications use 56 or 90 days."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-fhwa-mct-strength-testing"
+      ],
+      "locator": "HIF-18-001, page 1, first paragraph, item 1 'Cylinders'",
+      "quote": "cured in water/moist room under standard laboratory conditions (73.5˚±3.5˚F) until test age, typically 28 days",
+      "era": 2017,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#ind-concrete-28-day-test-age",
+      "notes": "Convention well established in practice; the source is FHWA, not the standard text itself (AASHTO/ASTM/EN standards were not opened)."
+    },
+    {
+      "id": "ind-led-lamp-lifetime-m1",
+      "phenomenonId": "ind-led-lamp-lifetime",
+      "configuration": null,
+      "value": 25000,
+      "unit": "h",
+      "low": 25000,
+      "high": null,
+      "conditions": {
+        "fr": "Borne basse : les lampes LED intégrées semblent capables d'au moins 25 000 heures de fonctionnement. La durée de vie se définit en général comme le temps avant que la lumière baisse à 70 % (L70), pas avant l'extinction. Environ 2,9 ans si elle reste allumée en continu.",
+        "en": "Lower bound: integrated LED lamps 'appear to be capable of at least 25,000 hours of operation'. Lifetime is usually defined as the time until light output drops to 70% (L70), not until the lamp goes dark. About 2.9 years if lit non-stop."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-doe-led-luminaire-lifetime-2014"
+      ],
+      "locator": "Section 1.2 'What makes LED-based luminaires different?'",
+      "quote": "integrated lamps appear to be capable of at least 25,000 hours of operation",
+      "era": 2014,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#ind-led-lamp-lifetime",
+      "notes": "Hedged wording ('appear to be capable of at least'). It is a floor, not a rated life; products are sold with ratings of 15,000 to 50,000 h, but those figures were not sourced here. A current energy.gov consumer page ('up to 25 times longer than incandescent') returned 404."
+    },
+    {
+      "id": "ind-new-drug-development-m1",
+      "phenomenonId": "ind-new-drug-development",
+      "configuration": null,
+      "value": 15,
+      "unit": "a",
+      "low": null,
+      "high": 15,
+      "conditions": {
+        "fr": "Haut de la fourchette pour le parcours de la découverte au médicament autorisé (États-Unis). Beaucoup de candidats échouent en route ; la valeur est un plafond, pas une moyenne.",
+        "en": "Upper end of the journey from discovery to an approved medicine (US). Many candidates fail along the way; the value is a ceiling, not an average."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ncats-drugdev"
+      ],
+      "locator": "Page introduction",
+      "quote": "A new drug’s journey from the lab to the medicine cabinet can take up to 15 years.",
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#ind-new-drug-development",
+      "notes": "Agency summary, not a study. Other NIH materials (not opened) give about 13 or 14 years or '10 to 15 years'. No low bound sourced, so low is null."
+    },
+    {
+      "id": "day-football-match-m1",
+      "phenomenonId": "day-football-match",
+      "configuration": null,
+      "value": 90,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Deux mi-temps de 45 minutes. Le temps additionnel, la pause (15 min au plus) et une éventuelle prolongation s'y ajoutent.",
+        "en": "Two halves of 45 minutes. Stoppage time, the half-time break (up to 15 min) and any extra time come on top."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ifab-law7"
+      ],
+      "locator": "Law 7.1 'Periods of play'",
+      "quote": "A match lasts for two equal halves of 45 minutes",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-football-match",
+      "notes": "Rule of the game (conventional). Explanation: 2 × 45 min = 90 min of regulation play; real elapsed time is longer. | Maintainer curation 2026-11-27: two halves of 45 min (Law 7.1); stoppage time and extra time excluded."
+    },
+    {
+      "id": "day-100m-world-record-men-m1",
+      "phenomenonId": "day-100m-world-record-men",
+      "configuration": null,
+      "value": 9.58,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Usain Bolt, Olympiastadion de Berlin, 16 août 2009, chronométrage électronique.",
+        "en": "Usain Bolt, Berlin Olympiastadion, 16 August 2009, electronic timing."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-wa-100m-men"
+      ],
+      "locator": "All-time top list, rank 1",
+      "quote": "9.58 Usain BOLT 16 AUG 2009 Olympiastadion, Berlin (GER)",
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-100m-world-record-men",
+      "notes": "Official federation data. Quote is a table row (cells joined), not a sentence. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "day-marathon-best-men-m1",
+      "phenomenonId": "day-marathon-best-men",
+      "configuration": null,
+      "value": 7170,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "1 h 59 min 30 s par Sabastian Kimaru Sawe, Londres, 26 avril 2026. Exprimé en secondes.",
+        "en": "1:59:30 by Sabastian Kimaru Sawe, London, 26 April 2026. Shown in seconds (1 h 59 min 30 s)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-wa-marathon-men"
+      ],
+      "locator": "All-time top list, rank 1",
+      "quote": "1:59:30 Sabastian Kimaru SAWE 26 APR 2026 London (GBR)",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-marathon-best-men",
+      "notes": "Measured mark converted to seconds. Top of the all-time list; whether it is already ratified as the world record was not confirmed (the world-records page rendered empty). Label it 'fastest' rather than 'world record' until ratification is checked. | Maintainer curation 2026-11-27: 1:59:30 converted to seconds (unit conversion, not a calculation)."
+    },
+    {
+      "id": "day-handwashing-m1",
+      "phenomenonId": "day-handwashing",
+      "configuration": null,
+      "value": 20,
+      "unit": "s",
+      "low": 20,
+      "high": null,
+      "conditions": {
+        "fr": "Recommandation de santé publique : au moins 20 secondes de frottement avec du savon.",
+        "en": "Public-health recommendation: at least 20 seconds of scrubbing with soap."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-cdc-clean-hands"
+      ],
+      "locator": "Section 'How it works'",
+      "quote": "Scrub your hands for at least 20 seconds.",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-handwashing",
+      "notes": "Recommendation (minimum), not a measurement. Page date not shown; era is approximate."
+    },
+    {
+      "id": "day-tooth-brushing-m1",
+      "phenomenonId": "day-tooth-brushing",
+      "configuration": null,
+      "value": 2,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Recommandation : deux fois par jour, environ 2 minutes à chaque fois.",
+        "en": "Recommended: twice a day, about 2 minutes each time."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nhs-teeth"
+      ],
+      "locator": "How to keep your teeth clean, brushing advice",
+      "quote": "Brush your teeth twice a day for about 2 minutes each time.",
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-tooth-brushing",
+      "notes": "Health-service recommendation."
+    },
+    {
+      "id": "day-soft-boiled-egg-m1",
+      "phenomenonId": "day-soft-boiled-egg",
+      "configuration": null,
+      "value": 7,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Dans sa coquille, dans l'eau bouillante. Le temps réel dépend de la taille de l'œuf, de sa température de départ et de l'altitude ; la source ne donne pas de fourchette.",
+        "en": "In its shell, in boiling water. Actual time depends on egg size, starting temperature and altitude; the source does not give a range."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-clemson-eggs"
+      ],
+      "locator": "Section 'Cooked Eggs'",
+      "quote": "Soft-Cooked Eggs: Cook 7 minutes in the shell in boiling water.",
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-soft-boiled-egg",
+      "notes": "Single extension-service value given with food-safety intent; cooking sites commonly give shorter times (4 to 6 min, not sourced here). Low/high left null because no sourced range. | Maintainer curation 2026-11-27: single cooking time recommended by the source (food-safety guidance): conventional, no range."
+    },
+    {
+      "id": "day-espresso-extraction-m1",
+      "phenomenonId": "day-espresso-extraction",
+      "configuration": null,
+      "value": 25,
+      "unit": "s",
+      "low": 20,
+      "high": 30,
+      "conditions": {
+        "fr": "Temps de percolation de la certification « Espresso Italiano » : 25 s ± 5 s, à 9 bar ± 1, pour environ 25 ml dans la tasse.",
+        "en": "Percolation time in the 'Espresso Italiano' certification: 25 s ± 5 s, at 9 bar ± 1, for about 25 ml in the cup."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-inei-brochure"
+      ],
+      "locator": "Brochure, table of espresso parameters ('Percolation time')",
+      "quote": "Percolation time 25 seconds ± 5 seconds",
+      "era": 2007,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-espresso-extraction",
+      "notes": "Certification parameter from a private institute, read on a third-party-hosted copy of the brochure (original site not reached). low/high derived from the stated ± 5 s tolerance."
+    },
+    {
+      "id": "day-legal-work-week-france-m1",
+      "phenomenonId": "day-legal-work-week-france",
+      "configuration": null,
+      "value": 35,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Par semaine, salarié du secteur privé à temps complet. C'est le seuil des heures supplémentaires, pas un maximum.",
+        "en": "Per week, private-sector employee working full time. It is the threshold for overtime, not a maximum."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-servicepublic-duree-travail"
+      ],
+      "locator": "Section 'Durée légale'",
+      "quote": "La durée légale du travail pour un temps complet du salarié du secteur privée est fixée à : 35 heures par semaine",
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-legal-work-week-france",
+      "notes": "Legal rule. Quote joins a sentence and the bullet that follows it on the page."
+    },
+    {
+      "id": "day-max-work-day-france-m1",
+      "phenomenonId": "day-max-work-day-france",
+      "configuration": null,
+      "value": 10,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Travail effectif par jour, règle générale pour les salariés du privé ; des dérogations existent.",
+        "en": "Actual work per day, general rule for private-sector employees; derogations exist."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-servicepublic-duree-travail"
+      ],
+      "locator": "Section 'Durées maximales' (daily maximum)",
+      "quote": "ne doit pas dépasser la durée maximale de 10 heures par jour",
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-max-work-day-france",
+      "notes": "Legal rule; exceptions not detailed here."
     }
   ]
 }

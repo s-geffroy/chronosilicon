@@ -1,33 +1,56 @@
 <script lang="ts">
-  import { scaleLog } from 'd3-scale';
   import { DOMAINS, UNIVERSES, UNIVERSE_OF, type Domain, type NormalizedMeasurement, type ProvenanceType, type Universe } from '@chronosilicon/ontology';
   import { clockedObserver, toSubjective } from '@chronosilicon/observers';
   import { app } from '../lib/app.svelte';
   import { corpus, phenomenonOf } from '../lib/corpus';
   import { PROVENANCES } from '../lib/url-state';
-  import { formatCalendar, formatCalendarShort, formatLevel, formatPhysicalDuration, formatValue } from '../lib/format';
+  import { formatCalendar, formatDecade, formatDecadeSubjective, formatFrequency, pow10, formatLevel, formatPhysicalDuration, formatValue } from '../lib/format';
   import ObserverControl from './ObserverControl.svelte';
   import ExportPanel from './ExportPanel.svelte';
+  import { BANDS, axisWindow, bandOf, bandWindow, clampZoom, decades, labelStep, position } from '../lib/timescale';
 
   const t = app.t;
   const lang = $derived(app.s.lang);
   const observer = $derived(clockedObserver(app.s.frequencyHz));
 
   const presentDomains: Domain[] = DOMAINS.filter((d) => corpus.measurements.some((m) => phenomenonOf(m).domain === d));
-  // ADR-0012: universes group domains, so phenomena from different worlds can be compared at a glance.
-  const presentUniverses: Universe[] = UNIVERSES.filter((u) => presentDomains.some((d) => UNIVERSE_OF[d] === u));
-  const domainsOf = (u: Universe) => presentDomains.filter((d) => UNIVERSE_OF[d] === u);
-  const universeOf = (m: NormalizedMeasurement) => UNIVERSE_OF[phenomenonOf(m).domain];
+  // ADR-0012 / R1 v2.1: twelve universes; a phenomenon may belong to several (editorial projection), the first is its colour.
+  const universesOfM = (m: NormalizedMeasurement): readonly Universe[] => phenomenonOf(m).universes ?? [UNIVERSE_OF[phenomenonOf(m).domain]];
+  const universeOf = (m: NormalizedMeasurement) => universesOfM(m)[0]!;
+  const presentUniverses: Universe[] = UNIVERSES.filter((u) => corpus.measurements.some((m) => universesOfM(m).includes(u)));
   const presentProv: ProvenanceType[] = PROVENANCES.filter((p) => corpus.measurements.some((m) => m.provenanceType === p));
 
   const activeDomains = $derived(app.s.domains ?? presentDomains);
   const activeProv = $derived(app.s.provenance ?? presentProv);
+  const activeUniverses = $derived(app.s.universes ?? presentUniverses);
+  /** Accent- and case-insensitive search on both languages. */
+  const fold = (x: string) => x.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const query = $derived(fold(app.s.query));
 
   const filtered = $derived(
-    corpus.measurements.filter((m) => activeDomains.includes(phenomenonOf(m).domain) && activeProv.includes(m.provenanceType)),
+    corpus.measurements.filter((m) =>
+      activeDomains.includes(phenomenonOf(m).domain) && activeProv.includes(m.provenanceType)
+      && universesOfM(m).some((u) => activeUniverses.includes(u))
+      && (!query || fold(`${phenomenonOf(m).label.fr} ${phenomenonOf(m).label.en}`).includes(query))),
   );
   const durations = $derived(filtered.filter((m) => m.quantityKind === 'duration').sort((a, b) => a.valueSI - b.valueSI));
   const positive = $derived(durations.filter((m) => m.valueSI > 0));
+
+  // Universal window [-18, 18] decades, extended by any qualified duration (never drops one).
+  const win = axisWindow(corpus.measurements.filter((m) => m.quantityKind === 'duration').flatMap((m) => [m.valueSI, m.lowSI ?? 0, m.highSI ?? 0]));
+  const zoom = $derived(app.s.zoom ? clampZoom(app.s.zoom, win) : win);
+  const inZoom = (sec: number) => sec >= 10 ** zoom[0] && sec <= 10 ** zoom[1];
+  const shown = $derived(positive.filter((m) => inZoom(m.valueSI)));
+  const pos = (sec: number) => position(sec, zoom);
+  const decs = $derived(decades(zoom));
+  const step = $derived(labelStep(zoom));
+  const lf = $derived(Math.log10(app.s.frequencyHz));
+  const bandsShown = $derived(BANDS.map((b) => ({ ...b, a: Math.max(pos(b.lo), 0), z: b.hi === Infinity ? 100 : pos(b.hi) })).filter((b) => b.z > b.a));
+  const setZoom = (z: [number, number] | null) => app.set({ zoom: z === null || (z[0] === win[0] && z[1] === win[1]) ? null : clampZoom(z, win) });
+  const toggleUniverse = (u: Universe) => {
+    const next = activeUniverses.includes(u) ? activeUniverses.filter((x) => x !== u) : [...activeUniverses, u];
+    app.set({ universes: next.length === presentUniverses.length ? null : presentUniverses.filter((x) => next.includes(x)) });
+  };
   const zeros = $derived(durations.filter((m) => m.valueSI === 0));
   const cycles = $derived(filtered.filter((m) => m.quantityKind === 'cycle_count'));
   const others = $derived(filtered.filter((m) => m.quantityKind !== 'duration' && m.quantityKind !== 'cycle_count'));
@@ -37,27 +60,8 @@
     app.s.axis === 'physical' ? seconds : toSubjective(seconds, observer).subjectiveSeconds;
   const subj = (seconds: number) => toSubjective(seconds, observer).subjectiveSeconds;
 
-  const scale = $derived.by(() => {
-    const vals = positive.flatMap((m) => [m.lowSI && m.lowSI > 0 ? m.lowSI : m.valueSI, m.highSI ?? m.valueSI]).map(axisValue);
-    const lo = vals.length ? Math.min(...vals) : 1e-9;
-    const hi = vals.length ? Math.max(...vals) : 1;
-    const d0 = 10 ** Math.floor(Math.log10(lo));
-    const d1 = 10 ** Math.ceil(Math.log10(hi === lo ? hi * 10 : hi));
-    return scaleLog().domain([d0, d1]).range([0, 100]);
-  });
-  /** Real decade ticks, recomputed when the reference frame changes. */
-  const tickStep = $derived.by(() => {
-    const [d0, d1] = scale.domain() as [number, number];
-    return Math.max(1, Math.ceil((Math.log10(d1) - Math.log10(d0)) / 10));
-  });
-  const ticks = $derived.by(() => {
-    const [d0, d1] = scale.domain() as [number, number];
-    const out: number[] = [];
-    for (let e = Math.round(Math.log10(d0)); e <= Math.round(Math.log10(d1)); e += tickStep) out.push(10 ** e);
-    return out;
-  });
-  const tickFactor = $derived(new Intl.NumberFormat(lang === 'fr' ? 'fr-FR' : 'en-GB').format(10 ** tickStep));
-  const tickLabel = (v: number) => (app.s.axis === 'physical' ? formatPhysicalDuration(v, lang) : formatCalendarShort(v, lang));
+  const physLabel = (e: number) => formatDecade(e, lang);
+  const subjLabel = (e: number) => formatDecadeSubjective(10 ** (e + lf), lang);
   /** '≤' / '≥' when the source gives only one bound (review m-3). */
   const boundPrefix = (m: NormalizedMeasurement) => (m.high !== null && m.low === null && m.high === m.value ? '≤ ' : m.low !== null && m.high === null && m.low === m.value ? '≥ ' : '');
   const fmtAxis = (seconds: number) => {
@@ -105,14 +109,33 @@
   </div>
 
   <div class="universes" role="group" aria-label={t('universe.label')} data-testid="universes">
-    <button type="button" class="uni-btn" aria-pressed={app.s.domains === null} onclick={() => app.set({ domains: null })}>{t('universe.all')}</button>
+    <button type="button" class="uni-btn" aria-pressed={app.s.universes === null} onclick={() => app.set({ universes: null })}>{t('universe.all')}</button>
     {#each presentUniverses as u (u)}
-      {@const ds = domainsOf(u)}
-      {@const on = app.s.domains !== null && ds.every((d) => activeDomains.includes(d)) && activeDomains.every((d) => ds.includes(d))}
-      <button type="button" class="uni-btn uni-{u}" aria-pressed={on} onclick={() => app.set({ domains: on ? null : ds })} data-testid={`universe-${u}`}>
+      <button type="button" class="uni-btn uni-{u}" aria-pressed={app.s.universes !== null && activeUniverses.includes(u)} onclick={() => toggleUniverse(u)} data-testid={`universe-${u}`}>
         <span class="swatch" aria-hidden="true"></span>{t(`universe.${u}`)}
       </button>
     {/each}
+  </div>
+
+  <div class="tl-tools">
+    <label class="search">
+      <span>{t('timeline.search')}</span>
+      <input type="search" value={app.s.query} oninput={(e) => app.set({ query: e.currentTarget.value.slice(0, 60) })} placeholder={t('timeline.searchHint')} data-testid="search" />
+    </label>
+    <fieldset class="zoom">
+      <legend>{t('timeline.zoom')}</legend>
+      <label>{t('timeline.zoomFrom')}
+        <select value={zoom[0]} onchange={(e) => setZoom([Number(e.currentTarget.value), zoom[1]])} data-testid="zoom-from">
+          {#each decades(win).slice(0, -1) as e (e)}<option value={e}>{pow10(e)} s · {physLabel(e)}</option>{/each}
+        </select>
+      </label>
+      <label>{t('timeline.zoomTo')}
+        <select value={zoom[1]} onchange={(e) => setZoom([zoom[0], Number(e.currentTarget.value)])} data-testid="zoom-to">
+          {#each decades(win).slice(1) as e (e)}<option value={e}>{pow10(e)} s · {physLabel(e)}</option>{/each}
+        </select>
+      </label>
+      <button type="button" class="link" onclick={() => setZoom(null)} disabled={app.s.zoom === null} data-testid="zoom-reset">{t('timeline.zoomReset')}</button>
+    </fieldset>
   </div>
 
   <details class="filters">
@@ -152,33 +175,51 @@
   {#if positive.length > 0}
     {#if app.s.view === 'chart'}
       <figure class="chart" aria-describedby="axis-cap">
-        <div class="axis" aria-hidden="true">
-          {#each ticks as tk (tk)}
-            <span class="tick" style:left="{scale(tk)}%">{tickLabel(tk)}</span>
+        <div class="bands" role="group" aria-label={t('timeline.bands')} data-testid="bands">
+          {#each bandsShown as b (b.id)}
+            <button type="button" class="band band-{b.id}" style:left="{b.a}%" style:width="{b.z - b.a}%" title={t(`band.${b.id}`)}
+              onclick={() => setZoom(bandWindow(b, win))} data-testid={`band-${b.id}`}><span>{t(`band.${b.id}`)}</span></button>
           {/each}
         </div>
+        <div class="axis" aria-hidden="true">
+          {#each decs as e (e)}{#if (e - zoom[0]) % step === 0}<span class="tick" style:left="{pos(10 ** e)}%">{physLabel(e)}</span>{/if}{/each}
+        </div>
+        <div class="axis axis-subj" aria-hidden="true">
+          {#each decs as e (e)}{#if (e - zoom[0]) % step === 0}<span class="tick" style:left="{pos(10 ** e)}%">{subjLabel(e)}</span>{/if}{/each}
+        </div>
         <ol class="rows" data-testid="chart-rows">
-          {#each positive as m (m.id)}
+          {#each shown as m (m.id)}
             <li>
-              <button type="button" class="row dom-{phenomenonOf(m).domain} uni-{universeOf(m)}" onclick={() => open(m)} data-id={m.id}>
+              <button type="button" class="row dom-{phenomenonOf(m).domain} uni-{universeOf(m)}" onclick={() => open(m)} data-id={m.id} data-band={bandOf(m.valueSI)}>
                 <span class="row-label">
                   <span class="lbl">{label(m)}</span>
-                  <span class="meta">{t(`universe.${universeOf(m)}`)} · {domainName(m)} · <span class:flag={m.provenanceType === 'conventional' || m.provenanceType === 'illustrative'}>{t(`prov.${m.provenanceType}`)}</span></span>
+                  <span class="meta">{t(`universe.${universeOf(m)}`)} · <span class:flag={m.provenanceType === 'conventional' || m.provenanceType === 'illustrative'}>{t(`prov.${m.provenanceType}`)}</span></span>
                 </span>
                 <span class="track">
-                  {#each ticks as tk (tk)}<span class="grid" style:left="{scale(tk)}%"></span>{/each}
+                  {#each decs as e (e)}<span class="grid" style:left="{pos(10 ** e)}%"></span>{/each}
                   {#if m.lowSI !== null && m.highSI !== null && m.lowSI > 0}
-                    <span class="interval" style:left="{scale(axisValue(m.lowSI))}%" style:width="{Math.max(0.5, scale(axisValue(m.highSI)) - scale(axisValue(m.lowSI)))}%" title={t('timeline.interval', { low: fmtAxis(m.lowSI), high: fmtAxis(m.highSI) })}></span>
+                    <span class="interval" style:left="{pos(m.lowSI)}%" style:width="{Math.max(0.5, pos(m.highSI) - pos(m.lowSI))}%" title={t('timeline.interval', { low: fmtAxis(m.lowSI), high: fmtAxis(m.highSI) })}></span>
                   {/if}
-                  <span class="dot prov-{m.provenanceType}" style:left="{scale(axisValue(m.valueSI))}%"></span>
-                  <span class="val" style:left="{Math.min(scale(axisValue(m.valueSI)), 70)}%">{boundPrefix(m)}{fmtAxis(m.valueSI)}</span>
+                  <span class="dot prov-{m.provenanceType}" style:left="{pos(m.valueSI)}%"></span>
+                  <span class="val" style:left="{Math.min(pos(m.valueSI), 62)}%">{boundPrefix(m)}{app.s.axis === 'physical' ? `${formatPhysicalDuration(m.valueSI, lang)} · ${formatCalendar(subj(m.valueSI), lang)}` : `${formatCalendar(subj(m.valueSI), lang)} · ${formatPhysicalDuration(m.valueSI, lang)}`}</span>
                 </span>
                 <span class="sr-only">{rowDetails(m)}</span>
               </button>
             </li>
           {/each}
         </ol>
-        <figcaption id="axis-cap">{t('axis.caption', { factor: tickFactor })} {t(`axis.${app.s.axis}`)}.</figcaption>
+        <ul class="legend" aria-label={t('legend.label')}>
+          <li><span class="dot prov-documented"></span>{t('prov.documented')}</li>
+          <li><span class="dot prov-measured"></span>{t('prov.measured')}</li>
+          <li><span class="dot prov-calculated"></span>{t('prov.calculated')}</li>
+          <li><span class="dot prov-conventional"></span>{t('prov.conventional')}</li>
+          <li><span class="dot prov-illustrative"></span>{t('prov.illustrative')}</li>
+          <li><span class="interval"></span>{t('legend.interval')}</li>
+        </ul>
+        <figcaption id="axis-cap">
+          {t('timeline.caption', { from: physLabel(zoom[0]), to: physLabel(zoom[1]), f: formatFrequency(app.s.frequencyHz, lang) })}
+          {#if shown.length < positive.length}<span data-testid="outside"> {t('timeline.outside', { n: positive.length - shown.length })}</span>{/if}
+        </figcaption>
       </figure>
     {:else}
       <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
@@ -192,7 +233,7 @@
             </tr>
           </thead>
           <tbody>
-            {#each positive as m (m.id)}
+            {#each shown as m (m.id)}
               <tr>
                 <th scope="row"><button type="button" class="link" onclick={() => open(m)}>{label(m)}</button></th>
                 <td>{formatValue(m.value, m.unit, lang)}{#if m.uncertainty}<span class="unc" data-testid="table-uncertainty">{uncText(m)}</span>{/if}{#if m.low !== null && m.high !== null} ({formatValue(m.low, m.unit, lang)} – {formatValue(m.high, m.unit, lang)}){/if}</td>

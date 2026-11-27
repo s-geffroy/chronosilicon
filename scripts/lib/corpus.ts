@@ -7,7 +7,7 @@ import { Ajv2020 } from 'ajv/dist/2020.js';
 import { simulate, SIMULATOR_MODEL_VERSION } from '@chronosilicon/simulator';
 import {
   SCHEMA_VERSION, checkInvariants, checkScenarios, checkV2Invariants, normalize, resolveObservers,
-  type Corpus, type Evidence, type Group, type Measurement, type ObserverDef, type Phenomenon, type ScenarioDef, applyPublicationPolicy, type Finding, type TextDecision } from '@chronosilicon/ontology';
+  type Corpus, type Evidence, type Group, type Measurement, type ObserverDef, type Phenomenon, type ScenarioDef, type Universe, UNIVERSES, universesOf, applyPublicationPolicy, type Finding, type TextDecision } from '@chronosilicon/ontology';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const P = {
@@ -21,6 +21,7 @@ export const P = {
   rawDir: 'data/raw',
   rawManifest: 'data/raw/MANIFEST.sha256',
   textDecisions: 'data/publication/text-decisions.json',
+  universes: 'data/editorial/universes.json',
 } as const;
 
 export const sha256 = (buf: Buffer | string) => createHash('sha256').update(buf).digest('hex');
@@ -113,14 +114,22 @@ export function runPipeline(): PipelineResult {
   const usedPh = new Set(qualified.map((m) => m.phenomenonId));
   const usedSrc = new Set(qualified.flatMap((m) => m.sourceIds));
   const inputs: Record<string, string> = {};
-  for (const rel of [P.sources, P.phenomena, P.measurements, P.groups, P.observers, P.scenarios, P.textDecisions]) inputs[rel] = sha256(read(rel));
+  for (const rel of [P.sources, P.phenomena, P.measurements, P.groups, P.observers, P.scenarios, P.textDecisions, P.universes]) inputs[rel] = sha256(read(rel));
+  // Editorial projection (directive R1 v2.1): universes per phenomenon, main first.
+  const proj = (readJson(P.universes) as { overrides: Record<string, Universe[]> }).overrides;
+  for (const [id, us] of Object.entries(proj)) {
+    if (!ph.phenomena.some((p) => p.id === id)) errors.push(`${P.universes}: unknown phenomenon ${id}`);
+    for (const u of us) if (!UNIVERSES.includes(u)) errors.push(`${P.universes}: ${id}: unknown universe ${u}`);
+    if (new Set(us).size !== us.length || us.length === 0) errors.push(`${P.universes}: ${id}: empty or duplicated universes`);
+  }
+  if (errors.length) return { errors, corpus: null, stats: {} };
   const notQualified = ms.measurements.filter((m) => m.verificationStatus !== 'qualified');
   // AUD-012/017, AUD02-002 (ADR-0011): publication policy PUB-1, explicit fields and text-by-text decisions.
   const pub = applyPublicationPolicy({
     measurements: normalized,
     sources: s.sources.filter((x) => usedSrc.has(x.id)),
     groups: gr.groups,
-    phenomena: ph.phenomena.filter((p) => usedPh.has(p.id)),
+    phenomena: ph.phenomena.filter((p) => usedPh.has(p.id)).map((p) => ({ ...p, universes: universesOf(p.domain, proj[p.id]) })),
     observers: resolveObservers(ob.observers, normalized),
     scenarios: sc.scenarios,
     withheld: notQualified.map((m) => ({

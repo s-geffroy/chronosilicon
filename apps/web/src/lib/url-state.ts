@@ -3,7 +3,7 @@
  * parameters are read back; anything invalid falls back to the default and is
  * never trusted (CS-10). No personal data.
  */
-import { DOMAINS, type Domain, type ProvenanceType } from '@chronosilicon/ontology';
+import { DOMAINS, UNIVERSES, type Domain, type ProvenanceType, type Universe } from '@chronosilicon/ontology';
 import { LANGS, type Lang } from './i18n';
 
 export const ROUTES = ['timeline', 'converter', 'architecture', 'observers', 'simulation', 'immersion', 'comparison', 'laboratory', 'about'] as const;
@@ -23,6 +23,12 @@ export interface UrlState {
   view: View;
   domains: Domain[] | null; // null = all
   provenance: ProvenanceType[] | null; // null = all
+  /** Universes shown on the chronology (R1 v2.1); null = all. */
+  universes: Universe[] | null;
+  /** Zoom of the chronology in decades [from, to] (log10 s); null = whole window. */
+  zoom: [number, number] | null;
+  /** Free-text search on labels (trimmed, at most 60 characters). */
+  query: string;
   selected: string | null;
   /** Comparison/hierarchy group (validated id). */
   group: string | null;
@@ -43,6 +49,9 @@ export const DEFAULT_STATE: Readonly<UrlState> = Object.freeze({
   view: 'chart',
   domains: null,
   provenance: null,
+  universes: null,
+  zoom: null,
+  query: '',
   selected: null,
   group: null,
   observed: null,
@@ -63,6 +72,14 @@ function pickList<T extends string>(v: string | null, allowed: readonly T[]): T[
   return items.length ? [...new Set(items)] : null;
 }
 
+/** "a_b" with integer decades in [-60, 60]. */
+function zoomOrNull(v: string | null): [number, number] | null {
+  const m = v === null ? null : /^(-?\d{1,2})_(-?\d{1,2})$/.exec(v);
+  if (!m) return null;
+  const a = Number(m[1]), b = Number(m[2]);
+  return Math.abs(a) <= 60 && Math.abs(b) <= 60 && a < b ? [a, b] : null;
+}
+const queryOf = (v: string | null) => (v ?? '').replace(/[\u0000-\u001f]/g, '').trim().slice(0, 60);
 const capOrNull = (v: string | null) => (v !== null && /^\d{1,2}$/.test(v) && Number(v) >= 1 && Number(v) <= 64 ? Number(v) : null);
 const idOrNull = (v: string | null) => (v !== null && ID.test(v) ? v : null);
 
@@ -83,6 +100,9 @@ export function parseHash(hash: string, fallbackLang: Lang = 'fr'): UrlState {
     view: pick(q.get('view'), ['chart', 'table'] as const, DEFAULT_STATE.view),
     domains: pickList(q.get('d'), DOMAINS),
     provenance: pickList(q.get('p'), PROVENANCES),
+    universes: pickList(q.get('u'), UNIVERSES),
+    zoom: zoomOrNull(q.get('z')),
+    query: queryOf(q.get('q')),
     selected: sel !== null && ID.test(sel) ? sel : null,
     group: idOrNull(q.get('g')),
     observed: idOrNull(q.get('m')),
@@ -100,6 +120,9 @@ export function serializeHash(s: UrlState, appVersion: string): string {
   if (s.view !== DEFAULT_STATE.view) q.set('view', s.view);
   if (s.domains !== null) q.set('d', s.domains.join(','));
   if (s.provenance !== null) q.set('p', s.provenance.join(','));
+  if (s.universes !== null) q.set('u', s.universes.join(','));
+  if (s.zoom !== null) q.set('z', `${s.zoom[0]}_${s.zoom[1]}`);
+  if (s.query) q.set('q', s.query);
   if (s.selected) q.set('sel', s.selected);
   if (s.group) q.set('g', s.group);
   if (s.observed) q.set('m', s.observed);

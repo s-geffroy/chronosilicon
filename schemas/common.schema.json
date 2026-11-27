@@ -12,7 +12,7 @@
       "properties": { "fr": { "type": "string", "minLength": 1 }, "en": { "type": "string", "minLength": 1 } }
     },
     "domain": {
-      "enum": ["physics", "logic", "cpu", "memory", "accelerator", "interconnect", "storage", "os", "network", "distributed", "ai", "peripheral", "human", "space", "emerging", "biology", "astronomy", "industry", "everyday"]
+      "enum": ["physics", "logic", "cpu", "memory", "accelerator", "interconnect", "storage", "os", "network", "distributed", "ai", "peripheral", "human", "space", "emerging", "biology", "astronomy", "industry", "everyday", "chemistry", "cognition", "transport", "nature", "geology"]
     },
     "quantityKind": {
       "enum": ["duration", "frequency", "throughput", "transfer_rate", "distance", "speed", "data_size", "cycle_count", "compute_rate"]

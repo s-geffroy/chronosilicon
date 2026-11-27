@@ -32,3 +32,20 @@ describe('shareable URL state', () => {
     expect(parseHash('', 'en')).toEqual({ ...DEFAULT_STATE, lang: 'en' });
   });
 });
+
+describe('R1 v2.1: universes, zoom and search are shareable and validated', () => {
+  it('round-trips universes, zoom and query', () => {
+    const s = { ...DEFAULT_STATE, universes: ['biology' as const, 'history-geology' as const], zoom: [-9, -3] as [number, number], query: 'cœur' };
+    const back = parseHash(serializeHash(s, 'x'));
+    expect(back.universes).toEqual(['biology', 'history-geology']);
+    expect(back.zoom).toEqual([-9, -3]);
+    expect(back.query).toBe('cœur');
+  });
+  it('rejects invalid values', () => {
+    expect(parseHash('#/timeline?u=bogus').universes).toBeNull();
+    expect(parseHash('#/timeline?z=3_1').zoom).toBeNull();
+    expect(parseHash('#/timeline?z=-99_2').zoom).toBeNull();
+    expect(parseHash('#/timeline?z=a_b').zoom).toBeNull();
+    expect(parseHash(`#/timeline?q=${'x'.repeat(100)}`).query).toHaveLength(60);
+  });
+});

@@ -2450,6 +2450,296 @@
         "en": "Ultra High Speed HDMI Cable maximum bandwidth (introduced with HDMI 2.1)"
       },
       "description": null
+    },
+    {
+      "id": "phys-planck-time",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de Planck",
+        "en": "Planck time"
+      },
+      "description": null
+    },
+    {
+      "id": "phys-muon-mean-lifetime",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Duree de vie moyenne du muon (au repos)",
+        "en": "Muon mean lifetime (at rest)"
+      },
+      "description": null
+    },
+    {
+      "id": "phys-free-neutron-mean-lifetime",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Duree de vie moyenne du neutron libre",
+        "en": "Free neutron mean lifetime"
+      },
+      "description": null
+    },
+    {
+      "id": "phys-carbon-14-half-life",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Demi-vie du carbone 14",
+        "en": "Carbon-14 half-life"
+      },
+      "description": null
+    },
+    {
+      "id": "phys-uranium-238-half-life",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Demi-vie de l'uranium 238",
+        "en": "Uranium-238 half-life"
+      },
+      "description": null
+    },
+    {
+      "id": "astro-light-time-earth-moon",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de trajet de la lumiere Terre-Lune (distance moyenne)",
+        "en": "Light travel time Earth-Moon (mean distance)"
+      },
+      "description": null
+    },
+    {
+      "id": "astro-light-time-sun-earth",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de trajet de la lumiere Soleil-Terre (distance moyenne)",
+        "en": "Light travel time Sun-Earth (mean distance)"
+      },
+      "description": null
+    },
+    {
+      "id": "astro-earth-sidereal-rotation",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Jour sideral terrestre (rotation par rapport aux etoiles)",
+        "en": "Earth sidereal day (rotation relative to the stars)"
+      },
+      "description": null
+    },
+    {
+      "id": "astro-tropical-year",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Annee tropique (cycle des saisons)",
+        "en": "Tropical year (cycle of the seasons)"
+      },
+      "description": null
+    },
+    {
+      "id": "astro-synodic-month",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Mois synodique (d'une nouvelle Lune a la suivante)",
+        "en": "Synodic month (new Moon to new Moon)"
+      },
+      "description": null
+    },
+    {
+      "id": "astro-halley-orbital-period",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Periode orbitale de la comete de Halley",
+        "en": "Orbital period of Halley's Comet"
+      },
+      "description": null
+    },
+    {
+      "id": "astro-jupiter-orbital-period",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Annee de Jupiter (tour du Soleil)",
+        "en": "Jupiter's year (orbit around the Sun)"
+      },
+      "description": null
+    },
+    {
+      "id": "astro-sun-galactic-orbit",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Orbite du Soleil autour du centre de la Voie lactee (« année galactique »)",
+        "en": "Sun's orbit around the centre of the Milky Way ('galactic year')"
+      },
+      "description": null
+    },
+    {
+      "id": "astro-age-of-earth",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Age de la Terre",
+        "en": "Age of the Earth"
+      },
+      "description": null
+    },
+    {
+      "id": "astro-age-of-universe",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Age de l'Univers",
+        "en": "Age of the Universe"
+      },
+      "description": null
+    },
+    {
+      "id": "ind-model-t-assembly-before-line",
+      "domain": "industry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Assembler une Ford T avec l'ancienne méthode à poste fixe",
+        "en": "Building one Ford Model T with the old stationary method"
+      },
+      "description": null
+    },
+    {
+      "id": "ind-model-t-assembly-moving-line",
+      "domain": "industry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Assembler une Ford T sur la chaîne de montage mobile",
+        "en": "Building one Ford Model T on the moving assembly line"
+      },
+      "description": null
+    },
+    {
+      "id": "ind-concrete-28-day-test-age",
+      "domain": "industry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Âge standard du béton pour l'essai de résistance",
+        "en": "Standard age of concrete for the strength test"
+      },
+      "description": null
+    },
+    {
+      "id": "ind-led-lamp-lifetime",
+      "domain": "industry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée de fonctionnement d'une lampe LED",
+        "en": "Operating life of an LED lamp"
+      },
+      "description": null
+    },
+    {
+      "id": "ind-new-drug-development",
+      "domain": "industry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Développer un nouveau médicament, du laboratoire à la pharmacie",
+        "en": "Developing a new drug, from the lab to the pharmacy"
+      },
+      "description": null
+    },
+    {
+      "id": "day-football-match",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Un match de football, temps réglementaire",
+        "en": "A football (soccer) match, regulation time"
+      },
+      "description": null
+    },
+    {
+      "id": "day-100m-world-record-men",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Record du monde du 100 m masculin",
+        "en": "Men's 100 m world record"
+      },
+      "description": null
+    },
+    {
+      "id": "day-marathon-best-men",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Marathon masculin le plus rapide",
+        "en": "Fastest men's marathon"
+      },
+      "description": null
+    },
+    {
+      "id": "day-handwashing",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Se frotter les mains au lavage",
+        "en": "Scrubbing your hands when washing"
+      },
+      "description": null
+    },
+    {
+      "id": "day-tooth-brushing",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Se brosser les dents",
+        "en": "Brushing your teeth"
+      },
+      "description": null
+    },
+    {
+      "id": "day-soft-boiled-egg",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Cuire un œuf à la coque",
+        "en": "Cooking a soft-boiled egg"
+      },
+      "description": null
+    },
+    {
+      "id": "day-espresso-extraction",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Extraire un espresso italien certifié",
+        "en": "Pouring a certified Italian espresso"
+      },
+      "description": null
+    },
+    {
+      "id": "day-legal-work-week-france",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée légale du travail à temps plein en France",
+        "en": "Legal full-time working week in France"
+      },
+      "description": null
+    },
+    {
+      "id": "day-max-work-day-france",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée maximale d'une journée de travail en France",
+        "en": "Maximum working day in France"
+      },
+      "description": null
     }
   ]
 }

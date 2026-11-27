@@ -1,0 +1,24 @@
+{
+  "_comment": "Editorial projection (directive R1 v2.1, ADR-0012): universes shown for a phenomenon, main universe first. A phenomenon not listed here takes the universe of its canonical domain (UNIVERSE_OF). Never duplicates or moves a measurement.",
+  "schemaVersion": 1,
+  "overrides": {
+    "human-simple-visual-reaction-time": ["cognition", "physiology"],
+    "human-stimulus-detection-time": ["cognition", "physiology"],
+    "human-flicker-fusion-uniform": ["cognition", "physiology"],
+    "human-flicker-artifact-edge-median": ["cognition", "computing"],
+    "human-stylus-latency-jnd-large-box": ["cognition", "computing"],
+    "human-stylus-latency-jnd-small-box": ["cognition", "computing"],
+    "human-stylus-latency-jnd-scribbling": ["cognition", "computing"],
+    "human-voluntary-blink-duration": ["physiology", "everyday"],
+    "human-voluntary-blink-closing-phase": ["physiology"],
+    "voyager1-distance-2026-11-18": ["astronomy", "transport"],
+    "voyager1-light-time-2026-11-18": ["astronomy", "transport"],
+    "new-horizons-distance-2026-06": ["astronomy", "transport"],
+    "new-horizons-signal-time-2026-06": ["astronomy", "transport"],
+    "iss-average-altitude": ["transport", "astronomy"],
+    "gps-orbit-altitude": ["transport", "computing"],
+    "gps-zenith-one-way-light-time": ["transport", "computing"],
+    "geo-orbit-altitude": ["transport", "computing"],
+    "geo-one-way-light-time-subsatellite": ["transport", "computing"]
+  }
+}

@@ -758,6 +758,20 @@
           ]
         }
       }
+    },
+    "astro-light-time-earth-moon": {
+      "status": "rejected",
+      "reason": "Duplicate (R1 lot 2026-11-27): the corpus already has earth-moon-light-time-one-way, calculated from the same NASA semimajor axis. Not duplicated (directive R1 v2.1)."
+    },
+    "astro-light-time-sun-earth": {
+      "status": "rejected",
+      "reason": "Duplicate (R1 lot 2026-11-27): the corpus already has astronomical-unit-light-time. Not duplicated (directive R1 v2.1)."
+    },
+    "astro-age-of-earth": {
+      "reason": "Bound wording checked (R1 lot 2026-11-27): \"less than 1 percent\" bounds the uncertainty of 4.54 Gyr, not the value; no interval is published, so low/high stay null.",
+      "patch": {
+        "boundChecked": true
+      }
     }
   },
   "sourcePatches": {

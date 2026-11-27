@@ -1,14 +1,15 @@
 {
   "schemaVersion": "1.0.0",
-  "corpusVersion": "0.3.0+0c9ebc16ce31",
+  "corpusVersion": "0.3.0+705b959a961b",
   "inputs": {
-    "data/sources/sources.json": "71566c6bfd2b20268b40497da849c4e1e54c372aa776b2fcd7b16a24aab5cbad",
-    "data/curated/phenomena.json": "310ade2c3fda90b9eae3f0f7198f49a9187144ba6a379dac436e93312145e0f0",
-    "data/curated/measurements.json": "a62c7169bd829fb495294a0dd4a54fbd54a8aff3621bfd1cf889c1409be06fa6",
+    "data/sources/sources.json": "c96c7c6820dca46f5ef7f122bbeed80a69926dd245d7e1066285e1619f640c44",
+    "data/curated/phenomena.json": "afc3558ea3665be1278345b1911c6cb35ad1f319b7b3d1978e3ea85b5d79bc48",
+    "data/curated/measurements.json": "1404c250672f860499d7ad95031eeb32086838235f46f90890d3987d77a55ebb",
     "data/curated/groups.json": "30480b338290a48e54f9b8c58303368f37749d28bd5d906eb7804378c0c72772",
     "data/curated/observers.json": "16d7b09cf5d838bfe153241917bbf4054df8f57f3a7a354d4638a0bdb20b55bd",
     "data/curated/scenarios.json": "c922b1ea2e636abf6eddcc895126dcebb879f675478a61a7406101a603f2b0de",
-    "data/publication/text-decisions.json": "b564f7ab36474e50b4f168dd6c262b7cf870dbe8de61e453f17b44baf3f2b0a8"
+    "data/publication/text-decisions.json": "8770e728b15b1f69060e4d2c46906b0a6dee8f9210f38afc4b91ab1eb62db378",
+    "data/editorial/universes.json": "27477c8f9b5f6adbe88f7240326f7540b2ff6e7bf7b9a8b105be4c08c88356b6"
   },
   "phenomena": [
     {
@@ -19,7 +20,10 @@
         "fr": "Fréquence de la transition hyperfine du césium 133 (définit la seconde)",
         "en": "Caesium-133 hyperfine transition frequency (defines the second)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "physics"
+      ]
     },
     {
       "id": "caesium-period",
@@ -29,7 +33,10 @@
         "fr": "Une période du rayonnement de référence du césium 133",
         "en": "One period of the caesium-133 reference radiation"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "physics"
+      ]
     },
     {
       "id": "speed-of-light-vacuum",
@@ -39,7 +46,10 @@
         "fr": "Vitesse de la lumière dans le vide",
         "en": "Speed of light in vacuum"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "physics"
+      ]
     },
     {
       "id": "light-distance-per-ns",
@@ -49,7 +59,10 @@
         "fr": "Distance parcourue par la lumière dans le vide en 1 ns",
         "en": "Distance travelled by light in vacuum in 1 ns"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "physics"
+      ]
     },
     {
       "id": "astronomical-unit",
@@ -59,7 +72,10 @@
         "fr": "Unité astronomique",
         "en": "Astronomical unit"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
     },
     {
       "id": "astronomical-unit-light-time",
@@ -69,7 +85,10 @@
         "fr": "Temps-lumière pour une unité astronomique",
         "en": "Light time for one astronomical unit"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
     },
     {
       "id": "earth-moon-semimajor-axis",
@@ -79,7 +98,10 @@
         "fr": "Demi-grand axe de l'orbite lunaire",
         "en": "Earth-Moon orbit semimajor axis"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
     },
     {
       "id": "earth-moon-light-time-one-way",
@@ -89,7 +111,10 @@
         "fr": "Temps-lumière Terre-Lune, aller simple (demi-grand axe)",
         "en": "Earth-Moon one-way light time (semimajor axis)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
     },
     {
       "id": "earth-mars-distance-min",
@@ -99,7 +124,10 @@
         "fr": "Distance minimale Terre-Mars",
         "en": "Minimum Earth-Mars distance"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
     },
     {
       "id": "earth-mars-distance-max",
@@ -109,7 +137,10 @@
         "fr": "Distance maximale Terre-Mars",
         "en": "Maximum Earth-Mars distance"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
     },
     {
       "id": "earth-mars-light-time-min",
@@ -119,7 +150,10 @@
         "fr": "Temps-lumière Terre-Mars, aller simple, à la distance minimale",
         "en": "Earth-Mars one-way light time at minimum distance"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
     },
     {
       "id": "earth-mars-light-time-max",
@@ -129,7 +163,10 @@
         "fr": "Temps-lumière Terre-Mars, aller simple, à la distance maximale",
         "en": "Earth-Mars one-way light time at maximum distance"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
     },
     {
       "id": "voyager1-distance-2026-11-18",
@@ -139,7 +176,11 @@
         "fr": "Distance de Voyager 1 à la Terre (18 novembre 2026)",
         "en": "Voyager 1 distance from Earth (18 Nov 2026)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy",
+        "transport"
+      ]
     },
     {
       "id": "voyager1-light-time-2026-11-18",
@@ -149,7 +190,11 @@
         "fr": "Temps-lumière aller simple vers Voyager 1 (18 novembre 2026)",
         "en": "Voyager 1 one-way light time (18 Nov 2026)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy",
+        "transport"
+      ]
     },
     {
       "id": "tcp-initial-rto",
@@ -159,7 +204,10 @@
         "fr": "Délai initial de retransmission TCP (RTO)",
         "en": "TCP initial retransmission timeout"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "tcp-min-rto",
@@ -169,7 +217,10 @@
         "fr": "Délai minimal de retransmission TCP (RTO)",
         "en": "TCP minimum retransmission timeout"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "tcp-max-rto-floor",
@@ -179,7 +230,10 @@
         "fr": "Plafond minimal autorisé pour le RTO TCP",
         "en": "Lowest permitted cap on TCP RTO"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "tcp-rto-after-syn-timeout",
@@ -189,7 +243,10 @@
         "fr": "RTO TCP après expiration d'un SYN",
         "en": "TCP RTO after a SYN timeout"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "tcp-msl",
@@ -199,7 +256,10 @@
         "fr": "Durée de vie maximale d'un segment TCP (MSL)",
         "en": "TCP Maximum Segment Lifetime (MSL)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "tcp-isn-clock-tick",
@@ -209,7 +269,10 @@
         "fr": "Pas de l'horloge des numéros de séquence initiaux TCP",
         "en": "TCP initial sequence number clock tick"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "nr-urllc-user-plane-latency-target",
@@ -219,7 +282,10 @@
         "fr": "Objectif de latence plan usager 5G NR URLLC",
         "en": "5G NR URLLC user-plane latency target"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "nr-urllc-reliability-latency",
@@ -229,7 +295,10 @@
         "fr": "Latence associée à l'exigence de fiabilité 5G NR URLLC",
         "en": "5G NR URLLC reliability latency bound"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "nr-embb-user-plane-latency-target",
@@ -239,7 +308,10 @@
         "fr": "Objectif de latence plan usager 5G NR eMBB",
         "en": "5G NR eMBB user-plane latency target"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ntn-geo-user-plane-rtt-target",
@@ -249,7 +321,10 @@
         "fr": "Objectif de RTT plan usager par satellite géostationnaire",
         "en": "Satellite (GEO) user-plane RTT target"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ntn-leo-user-plane-rtt-target",
@@ -259,7 +334,10 @@
         "fr": "Objectif de RTT plan usager par satellite en orbite basse",
         "en": "Satellite (LEO) user-plane RTT target"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ethernet-min-frame-size",
@@ -269,7 +347,10 @@
         "fr": "Taille minimale d'une trame Ethernet",
         "en": "Minimum Ethernet frame size"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ethernet-min-frame-wire-time-1g",
@@ -279,7 +360,10 @@
         "fr": "Durée d'occupation du lien par une trame Ethernet minimale à 1 Gbit/s (préambule et intervalle compris)",
         "en": "Wire time of a minimum Ethernet frame at 1 Gbit/s (with preamble and gap)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ethernet-min-frame-wire-time-10g",
@@ -289,7 +373,10 @@
         "fr": "Durée d'occupation du lien par une trame Ethernet minimale à 10 Gbit/s (préambule et intervalle compris)",
         "en": "Wire time of a minimum Ethernet frame at 10 Gbit/s (with preamble and gap)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ethernet-min-frame-wire-time-100g",
@@ -299,7 +386,10 @@
         "fr": "Durée d'occupation du lien par une trame Ethernet minimale à 100 Gbit/s (préambule et intervalle compris)",
         "en": "Wire time of a minimum Ethernet frame at 100 Gbit/s (with preamble and gap)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "azure-rtt-eastus-westeurope",
@@ -309,7 +399,10 @@
         "fr": "RTT médian Azure East US vers West Europe (transatlantique)",
         "en": "Median RTT Azure East US to West Europe (transatlantic)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "azure-rtt-eastus-westus",
@@ -319,7 +412,10 @@
         "fr": "RTT médian Azure East US vers West US (transcontinental)",
         "en": "Median RTT Azure East US to West US (transcontinental)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "azure-rtt-westeurope-francecentral",
@@ -329,7 +425,10 @@
         "fr": "RTT médian Azure West Europe vers France Central",
         "en": "Median RTT Azure West Europe to France Central"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "azure-rtt-eastus-australiaeast",
@@ -339,7 +438,10 @@
         "fr": "RTT médian Azure East US vers Australia East",
         "en": "Median RTT Azure East US to Australia East"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "human-simple-visual-reaction-time",
@@ -349,7 +451,11 @@
         "fr": "Temps de réaction simple visuel (moyenne, corrigée des délais matériels)",
         "en": "Simple visual reaction time (mean, hardware-corrected)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "cognition",
+        "physiology"
+      ]
     },
     {
       "id": "human-stimulus-detection-time",
@@ -359,7 +465,11 @@
         "fr": "Temps de détection d'un stimulus visuel (TR simple moins initiation du mouvement)",
         "en": "Visual stimulus detection time (SRT minus movement initiation)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "cognition",
+        "physiology"
+      ]
     },
     {
       "id": "human-voluntary-blink-duration",
@@ -369,7 +479,11 @@
         "fr": "Durée d'un clignement volontaire des yeux",
         "en": "Duration of a voluntary eye blink"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "physiology",
+        "everyday"
+      ]
     },
     {
       "id": "human-voluntary-blink-closing-phase",
@@ -379,7 +493,10 @@
         "fr": "Phase de fermeture d'un clignement volontaire",
         "en": "Closing phase of a voluntary blink"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "physiology"
+      ]
     },
     {
       "id": "human-flicker-fusion-uniform",
@@ -389,7 +506,11 @@
         "fr": "Limite de fusion du papillotement en lumière uniforme",
         "en": "Flicker fusion limit for uniform light"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "cognition",
+        "physiology"
+      ]
     },
     {
       "id": "human-flicker-artifact-edge-median",
@@ -399,7 +520,11 @@
         "fr": "Visibilité des artefacts de papillotement avec un bord net (observateur médian)",
         "en": "Flicker artefact visibility with a spatial edge (median viewer)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "cognition",
+        "computing"
+      ]
     },
     {
       "id": "human-stylus-latency-jnd-large-box",
@@ -409,7 +534,11 @@
         "fr": "Latence de stylet juste perceptible en glisser (grande boîte, médiane)",
         "en": "Just-noticeable stylus latency while dragging (large box, median)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "cognition",
+        "computing"
+      ]
     },
     {
       "id": "human-stylus-latency-jnd-small-box",
@@ -419,7 +548,11 @@
         "fr": "Latence de stylet juste perceptible en glisser (petite boîte, médiane)",
         "en": "Just-noticeable stylus latency while dragging (small box, median)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "cognition",
+        "computing"
+      ]
     },
     {
       "id": "human-stylus-latency-jnd-scribbling",
@@ -429,7 +562,11 @@
         "fr": "Latence de stylet juste perceptible en gribouillage (médiane)",
         "en": "Just-noticeable stylus latency while scribbling (median)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "cognition",
+        "computing"
+      ]
     },
     {
       "id": "intel-skylake-client-l1d-latency",
@@ -439,7 +576,10 @@
         "fr": "Latence la plus courte du cache de données L1, Intel Skylake (client)",
         "en": "L1 data cache fastest latency, Intel Skylake client"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-skylake-client-l2-latency",
@@ -449,7 +589,10 @@
         "fr": "Latence la plus courte du cache L2, Intel Skylake (client)",
         "en": "L2 cache fastest latency, Intel Skylake client"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-skylake-client-l3-latency",
@@ -459,7 +602,10 @@
         "fr": "Latence la plus courte du cache L3 partagé, Intel Skylake (client)",
         "en": "Shared L3 cache fastest latency, Intel Skylake client"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-icelake-client-l1d-latency",
@@ -469,7 +615,10 @@
         "fr": "Latence du cache de données L1, Intel Ice Lake (client)",
         "en": "L1 data cache latency, Intel Ice Lake client"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-icelake-client-l2-latency",
@@ -479,7 +628,10 @@
         "fr": "Latence du cache L2 (MLC), Intel Ice Lake (client)",
         "en": "L2 (MLC) latency, Intel Ice Lake client"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-haswell-l3-latency",
@@ -489,7 +641,10 @@
         "fr": "Latence la plus courte du L3 partagé, Intel Haswell",
         "en": "Shared L3 fastest latency, Intel Haswell"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-sandybridge-llc-latency",
@@ -499,7 +654,10 @@
         "fr": "Latence de chargement du cache de dernier niveau (LLC), Intel Sandy Bridge",
         "en": "LLC load latency, Intel Sandy Bridge"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-sandybridge-other-core-dirty-hit",
@@ -509,7 +667,10 @@
         "fr": "Latence d'un chargement servi par le L1/L2 d'un autre cœur (ligne modifiée), Intel Sandy Bridge",
         "en": "Load latency from another core's L1/L2 (dirty hit), Intel Sandy Bridge"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-xeon5500-local-dram-latency",
@@ -519,7 +680,10 @@
         "fr": "Latence approximative de la DRAM locale, Intel Xeon 5500 (Nehalem)",
         "en": "Approximate local DRAM latency, Intel Xeon 5500 (Nehalem)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-xeon5500-remote-dram-latency",
@@ -529,7 +693,10 @@
         "fr": "Latence approximative de la DRAM distante (autre socket), Intel Xeon 5500 (Nehalem)",
         "en": "Approximate remote DRAM latency, Intel Xeon 5500 (Nehalem)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-xeon5500-l3-hit-exclusive",
@@ -539,7 +706,10 @@
         "fr": "Latence approximative d'un succès en L3 (ligne exclusive), Intel Xeon 5500",
         "en": "Approximate L3 hit latency (exclusive line), Intel Xeon 5500"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-sandybridge-c6-exit-latency",
@@ -549,7 +719,10 @@
         "fr": "Latence de sortie de l'état C6 (typique), Intel Sandy Bridge client, régulateur lent",
         "en": "Package C6 exit latency (typical), Intel Sandy Bridge client, slow VR"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-sandybridge-c1-exit-latency",
@@ -559,7 +732,10 @@
         "fr": "Latence de sortie de l'état C1, Intel Sandy Bridge client",
         "en": "C1 exit latency, Intel Sandy Bridge client"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "amd-zen4-l1d-load-to-use",
@@ -569,7 +745,10 @@
         "fr": "Latence load-to-use entière du cache L1D, AMD Zen 4",
         "en": "L1D integer load-to-use latency, AMD Zen 4"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "amd-zen4-l2-load-to-use",
@@ -579,7 +758,10 @@
         "fr": "Latence load-to-use minimale du cache L2, AMD Zen 4",
         "en": "L2 load-to-use latency (minimum), AMD Zen 4"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "amd-zen4-l3-load-to-use",
@@ -589,7 +771,10 @@
         "fr": "Latence load-to-use moyenne du cache L3, AMD Zen 4",
         "en": "L3 average load-to-use latency, AMD Zen 4"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "amd-zen5-l1d-load-to-use",
@@ -599,7 +784,10 @@
         "fr": "Latence load-to-use entière du cache L1D, AMD Zen 5",
         "en": "L1D integer load-to-use latency, AMD Zen 5"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "amd-zen5-l2-load-to-use",
@@ -609,7 +797,10 @@
         "fr": "Latence load-to-use minimale du cache L2, AMD Zen 5",
         "en": "L2 load-to-use latency (minimum), AMD Zen 5"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "amd-zen5-l3-load-to-use",
@@ -619,7 +810,10 @@
         "fr": "Latence load-to-use moyenne du cache L3, AMD Zen 5",
         "en": "L3 average load-to-use latency, AMD Zen 5"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "x86-add-r64-latency-alderlake-p",
@@ -629,7 +823,10 @@
         "fr": "Latence de ADD r64,r64, Intel Alder Lake-P",
         "en": "ADD r64,r64 latency, Intel Alder Lake-P"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "x86-imul-r64-latency-alderlake-p",
@@ -639,7 +836,10 @@
         "fr": "Latence de IMUL r64,r64, Intel Alder Lake-P",
         "en": "IMUL r64,r64 latency, Intel Alder Lake-P"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "x86-div-r64-latency-alderlake-p",
@@ -649,7 +849,10 @@
         "fr": "Latence de DIV r64 (division 64 bits non signée), Intel Alder Lake-P",
         "en": "DIV r64 latency, Intel Alder Lake-P"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "x86-div-r64-latency-skylake",
@@ -659,7 +862,10 @@
         "fr": "Latence de DIV r64, Intel Skylake",
         "en": "DIV r64 latency, Intel Skylake"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "x86-div-r64-latency-zen4",
@@ -669,7 +875,10 @@
         "fr": "Latence de DIV r64, AMD Zen 4",
         "en": "DIV r64 latency, AMD Zen 4"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-core-i9-14900k-max-turbo",
@@ -679,7 +888,10 @@
         "fr": "Fréquence turbo maximale, Intel Core i9-14900K",
         "en": "Max turbo frequency, Intel Core i9-14900K"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-core-i9-14900k-pcore-base",
@@ -689,7 +901,10 @@
         "fr": "Fréquence de base des cœurs performance, Intel Core i9-14900K",
         "en": "Performance-core base frequency, Intel Core i9-14900K"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-8086-initial-clock",
@@ -699,7 +914,10 @@
         "fr": "Fréquence d'horloge initiale de l'Intel 8086",
         "en": "Initial clock speed, Intel 8086"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-pentium4-launch-clock",
@@ -709,7 +927,10 @@
         "fr": "Fréquence au lancement de l'Intel Pentium 4 (version la plus rapide)",
         "en": "Launch clock speed, Intel Pentium 4 (top bin)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ddr5-5600b-taa-micron",
@@ -719,7 +940,10 @@
         "fr": "Latence CAS tAA, DDR5-5600B (Micron 16 Gb, révision D)",
         "en": "CAS latency tAA, DDR5-5600B (Micron 16Gb die D)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ddr4-3200-cl-micron",
@@ -729,7 +953,10 @@
         "fr": "Latence CAS (CL en ns), DDR4-3200 -062E (Micron 8 Gb)",
         "en": "CAS latency (CL in ns), DDR4-3200 -062E (Micron 8Gb)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ddr4-trefi-micron",
@@ -739,7 +966,10 @@
         "fr": "Intervalle moyen de rafraîchissement tREFI, DDR4 (0 à 85 °C)",
         "en": "Average refresh interval tREFI, DDR4 (0-85 °C)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ddr4-8gb-trfc1-micron",
@@ -749,7 +979,10 @@
         "fr": "Durée d'un cycle de rafraîchissement tRFC1, DDR4 8 Gb",
         "en": "Refresh cycle time tRFC1, DDR4 8Gb"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "dram-latency-epyc-7702-measured",
@@ -759,7 +992,10 @@
         "fr": "Latence mesurée de lecture en mémoire principale locale, AMD EPYC 7702 (Rome)",
         "en": "Measured local main-memory read latency, AMD EPYC 7702 (Rome)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "dram-latency-xeon-6248-measured",
@@ -769,7 +1005,10 @@
         "fr": "Latence mesurée de lecture en mémoire principale locale, Intel Xeon Gold 6248 (Cascade Lake)",
         "en": "Measured local main-memory read latency, Intel Xeon Gold 6248 (Cascade Lake)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "dram-latency-pentiumpro-lmbench-1995",
@@ -779,7 +1018,10 @@
         "fr": "Latence mémoire mesurée, Pentium Pro 200 MHz sous Linux (lmbench, 1995)",
         "en": "Measured memory latency, Pentium Pro 200 MHz under Linux (lmbench, 1995)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "apple-m4-memory-bandwidth",
@@ -789,7 +1031,10 @@
         "fr": "Bande passante mémoire de l'Apple M4",
         "en": "Memory bandwidth, Apple M4"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "linux-config-hz-default",
@@ -799,7 +1044,10 @@
         "fr": "Fréquence par défaut de l'interruption d'horloge (CONFIG_HZ), Linux",
         "en": "Default timer interrupt frequency (CONFIG_HZ), Linux"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "linux-tick-period-hz1000",
@@ -809,7 +1057,10 @@
         "fr": "Période du tick d'horloge à HZ=1000",
         "en": "Scheduler tick period at HZ=1000"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "linux-eevdf-base-slice-v6-12",
@@ -819,7 +1070,10 @@
         "fr": "Tranche de temps de base par défaut de l'ordonnanceur EEVDF, Linux 6.12",
         "en": "EEVDF base time slice default, Linux 6.12"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "linux-eevdf-base-slice-master",
@@ -829,7 +1083,10 @@
         "fr": "Tranche de temps de base par défaut d'EEVDF, Linux master (7.4-rc4)",
         "en": "EEVDF base time slice default, Linux master (7.4-rc4)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "linux-default-timer-slack",
@@ -839,7 +1096,10 @@
         "fr": "Marge de temporisation (timer slack) par défaut, Linux",
         "en": "Default timer slack, Linux"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "lmbench-null-syscall-linux-pentiumpro",
@@ -849,7 +1109,10 @@
         "fr": "Durée d'un appel système simple, Linux sur Pentium Pro 200 (lmbench, 1995)",
         "en": "Simple system call time, Linux on Pentium Pro 200 (lmbench, 1995)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "lmbench-context-switch-linux-pentiumpro",
@@ -859,7 +1122,10 @@
         "fr": "Durée d'un changement de contexte (2 processus), Linux sur Pentium Pro 200 (lmbench, 1995)",
         "en": "Context switch time, 2 processes, Linux on Pentium Pro 200 (lmbench, 1995)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "slingshot-rosetta-switch-latency",
@@ -869,7 +1135,10 @@
         "fr": "Latence d'un commutateur HPE Slingshot (Rosetta)",
         "en": "Switch latency, HPE Slingshot Rosetta switch"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "pcie4-lane-rate",
@@ -879,7 +1148,10 @@
         "fr": "Débit par voie PCIe 4.0",
         "en": "PCIe 4.0 per-lane data rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "pcie5-lane-rate",
@@ -889,7 +1161,10 @@
         "fr": "Débit brut par voie PCIe 5.0",
         "en": "PCIe 5.0 per-lane raw bit rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "pcie5-x16-bandwidth",
@@ -899,7 +1174,10 @@
         "fr": "Bande passante PCIe 5.0 x16 (maximum annoncé, deux sens déduits)",
         "en": "PCIe 5.0 x16 bandwidth (up to, both directions inferred)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "pcie6-lane-rate",
@@ -909,7 +1187,10 @@
         "fr": "Débit brut par voie PCIe 6.0",
         "en": "PCIe 6.0 per-lane raw data rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "pcie6-x16-bandwidth",
@@ -919,7 +1200,10 @@
         "fr": "Bande passante PCIe 6.0 x16 (maximum annoncé)",
         "en": "PCIe 6.0 x16 bandwidth (up to)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "cxl3-data-rate",
@@ -929,7 +1213,10 @@
         "fr": "Débit CXL 3.0",
         "en": "CXL 3.0 data rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb-low-speed-rate",
@@ -939,7 +1226,10 @@
         "fr": "Débit de signalisation USB low-speed",
         "en": "USB low-speed signaling rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb-full-speed-rate",
@@ -949,7 +1239,10 @@
         "fr": "Débit de signalisation USB full-speed",
         "en": "USB full-speed signaling rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb-high-speed-rate",
@@ -959,7 +1252,10 @@
         "fr": "Débit de signalisation USB 2.0 high-speed",
         "en": "USB 2.0 high-speed signaling rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb32-20g-rate",
@@ -969,7 +1265,10 @@
         "fr": "Débit USB 3.2 sur deux voies (20 Gbit/s)",
         "en": "USB 3.2 two-lane transfer rate (20 Gbps)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb4-80g-rate",
@@ -979,7 +1278,10 @@
         "fr": "Débit maximal USB4 (câbles 80 Gbit/s)",
         "en": "USB4 maximum data rate (80 Gbps cables)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb-fs-frame",
@@ -989,7 +1291,10 @@
         "fr": "Période de trame USB full/low-speed",
         "en": "USB full/low-speed frame period"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb-hs-microframe",
@@ -999,7 +1304,10 @@
         "fr": "Période de micro-trame USB 2.0 high-speed",
         "en": "USB 2.0 high-speed microframe period"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb-fs-interrupt-min-period",
@@ -1009,7 +1317,10 @@
         "fr": "Période d'interrogation minimale d'un point de terminaison interrupt USB full-speed",
         "en": "USB full-speed interrupt endpoint shortest polling period"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb-ls-interrupt-min-period",
@@ -1019,7 +1330,10 @@
         "fr": "Période d'interrogation minimale d'un point de terminaison interrupt USB low-speed",
         "en": "USB low-speed interrupt endpoint shortest polling period"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb-fs-max-polling-rate",
@@ -1029,7 +1343,10 @@
         "fr": "Fréquence maximale d'interrogation interrupt USB full-speed",
         "en": "Maximum USB full-speed interrupt polling rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "usb-hs-max-polling-rate",
@@ -1039,7 +1356,10 @@
         "fr": "Fréquence maximale d'interrogation interrupt USB high-speed",
         "en": "Maximum USB high-speed interrupt polling rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hdmi-8k60-refresh",
@@ -1049,7 +1369,10 @@
         "fr": "Fréquence de rafraîchissement HDMI 8K60",
         "en": "HDMI 8K60 refresh rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hdmi-4k120-refresh",
@@ -1059,7 +1382,10 @@
         "fr": "Fréquence de rafraîchissement HDMI 4K120",
         "en": "HDMI 4K120 refresh rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hdmi22-bandwidth",
@@ -1069,7 +1395,10 @@
         "fr": "Bande passante maximale HDMI 2.2",
         "en": "HDMI 2.2 maximum bandwidth"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "frame-time-60hz",
@@ -1079,7 +1408,10 @@
         "fr": "Durée d'une image à 60 Hz",
         "en": "Frame duration at 60 Hz"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "frame-time-120hz",
@@ -1089,7 +1421,10 @@
         "fr": "Durée d'une image à 120 Hz",
         "en": "Frame duration at 120 Hz"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "h100-sxm-hbm-bandwidth",
@@ -1099,7 +1434,10 @@
         "fr": "Bande passante mémoire du GPU NVIDIA H100 SXM",
         "en": "NVIDIA H100 SXM GPU memory bandwidth"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "h100-sxm-nvlink-bandwidth",
@@ -1109,7 +1447,10 @@
         "fr": "Bande passante NVLink du NVIDIA H100 SXM",
         "en": "NVIDIA H100 SXM NVLink bandwidth"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "b200-nvlink-gpu-to-gpu",
@@ -1119,7 +1460,10 @@
         "fr": "Bande passante NVLink GPU à GPU du NVIDIA HGX B200",
         "en": "NVIDIA HGX B200 NVLink GPU-to-GPU bandwidth"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "dgx-b200-total-hbm-bandwidth",
@@ -1129,7 +1473,10 @@
         "fr": "Bande passante HBM3e cumulée du NVIDIA DGX B200 (8 GPU)",
         "en": "NVIDIA DGX B200 aggregate HBM3e bandwidth (8 GPUs)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "b200-per-gpu-hbm-bandwidth",
@@ -1139,7 +1486,10 @@
         "fr": "Bande passante HBM3e par GPU NVIDIA B200 (dérivée)",
         "en": "NVIDIA B200 per-GPU HBM3e bandwidth (derived)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mi300x-hbm-bandwidth",
@@ -1149,7 +1499,10 @@
         "fr": "Bande passante mémoire crête de l'AMD Instinct MI300X",
         "en": "AMD Instinct MI300X peak memory bandwidth"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mi300x-peak-engine-clock",
@@ -1159,7 +1512,10 @@
         "fr": "Fréquence crête du moteur de l'AMD Instinct MI300X",
         "en": "AMD Instinct MI300X peak engine clock"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "tpu-v5p-hbm-bandwidth",
@@ -1169,7 +1525,10 @@
         "fr": "Bande passante HBM par puce Google TPU v5p",
         "en": "Google TPU v5p HBM bandwidth per chip"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "tpu-v5p-ici-bandwidth",
@@ -1179,7 +1538,10 @@
         "fr": "Bande passante d'interconnexion inter-puces (ICI) par puce Google TPU v5p",
         "en": "Google TPU v5p inter-chip interconnect (ICI) bandwidth per chip"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mlperf-llama2-70b-server-ttft",
@@ -1189,7 +1551,10 @@
         "fr": "Limite TTFT MLPerf Inference Llama2-70B, scénario Server",
         "en": "MLPerf Inference Llama2-70B Server TTFT limit"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mlperf-llama2-70b-server-tpot",
@@ -1199,7 +1564,10 @@
         "fr": "Limite TPOT MLPerf Inference Llama2-70B, scénario Server",
         "en": "MLPerf Inference Llama2-70B Server TPOT limit"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mlperf-llama2-70b-interactive-ttft",
@@ -1209,7 +1577,10 @@
         "fr": "Limite TTFT MLPerf Inference Llama2-70B, catégorie Interactive",
         "en": "MLPerf Inference Llama2-70B Interactive TTFT limit"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mlperf-llama2-70b-interactive-tpot",
@@ -1219,7 +1590,10 @@
         "fr": "Limite TPOT MLPerf Inference Llama2-70B, catégorie Interactive",
         "en": "MLPerf Inference Llama2-70B Interactive TPOT limit"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "exos-x20-spindle-frequency",
@@ -1229,7 +1603,10 @@
         "fr": "Fréquence de rotation de la broche du Seagate Exos X20",
         "en": "Seagate Exos X20 spindle rotation frequency"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "exos-x20-average-latency",
@@ -1239,7 +1616,10 @@
         "fr": "Latence moyenne (rotationnelle) du Seagate Exos X20",
         "en": "Seagate Exos X20 average (rotational) latency"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hdd-7200rpm-half-rotation",
@@ -1249,7 +1629,10 @@
         "fr": "Latence rotationnelle moyenne à 7 200 tr/min (un demi-tour)",
         "en": "Mean rotational latency at 7,200 RPM (half a revolution)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hdd-7200rpm-full-rotation",
@@ -1259,7 +1642,10 @@
         "fr": "Durée d'un tour complet à 7 200 tr/min",
         "en": "One full revolution at 7,200 RPM"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "exos-x20-sustained-transfer",
@@ -1269,7 +1655,10 @@
         "fr": "Débit soutenu maximal du Seagate Exos X20 (pistes extérieures)",
         "en": "Seagate Exos X20 maximum sustained transfer rate (outer diameter)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "optane-p5800x-4k-qd1-p99-read",
@@ -1279,7 +1668,10 @@
         "fr": "Latence de lecture aléatoire 4K de l'Intel Optane SSD P5800X, QD1, 99e centile",
         "en": "Intel Optane SSD P5800X 4K random read latency, QD1, 99th percentile"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "solidigm-p5620-qd1-write-p999999",
@@ -1289,7 +1681,10 @@
         "fr": "Latence d'écriture aléatoire du Solidigm D7-P5620, QD1, six neuf",
         "en": "Solidigm D7-P5620 random write latency, QD1, six-nines"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "fdsoi28-ro-stage-delay-296k-1v",
@@ -1299,7 +1694,10 @@
         "fr": "Délai par étage d’un oscillateur en anneau, FD-SOI 28 nm, 296 K, 1,0 V",
         "en": "Ring-oscillator delay per stage, 28 nm FD-SOI, 296 K, 1.0 V"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "fdsoi28-ro-stage-delay-4k-0v325",
@@ -1309,7 +1707,10 @@
         "fr": "Délai par étage d’un oscillateur en anneau, FD-SOI 28 nm, 4,3 K, 0,325 V sous polarisation arrière directe",
         "en": "Ring-oscillator delay per stage, 28 nm FD-SOI, 4.3 K, 0.325 V with forward body bias"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "fdsoi28-ro101-frequency-296k-1v",
@@ -1319,7 +1720,10 @@
         "fr": "Fréquence d’oscillation de l’anneau à 101 étages, FD-SOI 28 nm, 296 K, 1,0 V",
         "en": "Oscillation frequency of the 101-stage ring oscillator, 28 nm FD-SOI, 296 K, 1.0 V"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ihp-sg13g2-hbt-ft",
@@ -1329,7 +1733,10 @@
         "fr": "Fréquence de transition fT du TBH SiGe, IHP SG13G2 (BiCMOS 0,13 µm)",
         "en": "SiGe HBT transit frequency fT, IHP SG13G2 (0.13 µm BiCMOS)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ihp-sg13g2-hbt-fmax",
@@ -1339,7 +1746,10 @@
         "fr": "Fréquence maximale d’oscillation fmax du TBH SiGe, IHP SG13G2",
         "en": "SiGe HBT maximum oscillation frequency fmax, IHP SG13G2"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ihp-sg13g3-hbt-ft",
@@ -1349,7 +1759,10 @@
         "fr": "Fréquence de transition fT du TBH SiGe, IHP SG13G3",
         "en": "SiGe HBT transit frequency fT, IHP SG13G3"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ihp-sg13g3-hbt-fmax",
@@ -1359,7 +1772,10 @@
         "fr": "Fréquence maximale d’oscillation fmax du TBH SiGe, IHP SG13G3",
         "en": "SiGe HBT maximum oscillation frequency fmax, IHP SG13G3"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ngc-inp-hemt-25nm-fmax",
@@ -1369,7 +1785,10 @@
         "fr": "Fréquence maximale d’oscillation fmax d’un HEMT InP à grille de 25 nm (Northrop Grumman, 2015)",
         "en": "Maximum oscillation frequency fmax of a 25 nm InP HEMT (Northrop Grumman, 2015)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "willow-surface-code-cycle-time",
@@ -1379,7 +1798,10 @@
         "fr": "Durée d’un cycle de correction d’erreurs (code de surface), processeur supraconducteur Google de 72 qubits",
         "en": "Surface-code error-correction cycle time, Google 72-qubit superconducting processor"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "willow-mean-t1",
@@ -1389,7 +1811,10 @@
         "fr": "Temps de relaxation T1 moyen des qubits, processeur Google de 105 qubits",
         "en": "Mean qubit energy-relaxation time T1, Google 105-qubit processor"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "willow-mean-t2-cpmg",
@@ -1399,7 +1824,10 @@
         "fr": "Temps de cohérence T2 (CPMG) moyen des qubits, processeur Google de 105 qubits",
         "en": "Mean qubit coherence time T2 (CPMG), Google 105-qubit processor"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "willow-cz-gate-duration",
@@ -1409,7 +1837,10 @@
         "fr": "Durée d’une porte CZ à deux qubits, processeur Google de 105 qubits",
         "en": "Two-qubit CZ gate duration, Google 105-qubit processor"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "willow-single-qubit-gate-duration",
@@ -1419,7 +1850,10 @@
         "fr": "Durée d’une rotation XY à un qubit, processeur Google de 105 qubits",
         "en": "Single-qubit XY rotation duration, Google 105-qubit processor"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "willow-realtime-decoder-latency-d5",
@@ -1429,7 +1863,10 @@
         "fr": "Latence moyenne du décodeur temps réel, code de surface de distance 5, processeur Google de 72 qubits",
         "en": "Average real-time decoder latency, distance-5 surface code, Google 72-qubit processor"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "heron-r1-median-t1",
@@ -1439,7 +1876,10 @@
         "fr": "T1 médian des qubits, IBM Heron R1 (ibm_montecarlo, sous-ensemble de 57 qubits)",
         "en": "Median qubit T1, IBM Heron R1 (ibm_montecarlo, 57-qubit subset)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "heron-r1-cz-gate-length",
@@ -1449,7 +1889,10 @@
         "fr": "Durée de la porte à deux qubits, IBM Heron R1 (ibm_montecarlo)",
         "en": "Two-qubit gate length, IBM Heron R1 (ibm_montecarlo)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "heron-r1-single-qubit-gate-length",
@@ -1459,7 +1902,10 @@
         "fr": "Durée d’une porte à un qubit, IBM Heron R1 (ibm_montecarlo)",
         "en": "Single-qubit gate length, IBM Heron R1 (ibm_montecarlo)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "imec-sot-mram-switching-time",
@@ -1469,7 +1915,10 @@
         "fr": "Temps de commutation le plus court rapporté, SOT-MRAM imec",
         "en": "Shortest reported switching time, imec SOT-MRAM"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "imec-stt-mram-min-pulse",
@@ -1479,7 +1928,10 @@
         "fr": "Impulsion d’écriture STT la plus courte testée sur la même jonction imec (limitée pour éviter le claquage)",
         "en": "Shortest STT write pulse tested on the same imec MTJ (limited to avoid breakdown)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "gps-orbit-altitude",
@@ -1489,7 +1941,11 @@
         "fr": "Altitude de l’orbite des satellites GPS (orbite moyenne)",
         "en": "GPS satellite orbit altitude (MEO)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "transport",
+        "computing"
+      ]
     },
     {
       "id": "gps-zenith-one-way-light-time",
@@ -1499,7 +1955,11 @@
         "fr": "Temps de trajet d’un signal depuis un satellite GPS au zénith",
         "en": "One-way signal time from a GPS satellite at zenith"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "transport",
+        "computing"
+      ]
     },
     {
       "id": "geo-orbit-altitude",
@@ -1509,7 +1969,11 @@
         "fr": "Altitude de l’orbite géostationnaire",
         "en": "Geostationary orbit altitude"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "transport",
+        "computing"
+      ]
     },
     {
       "id": "geo-one-way-light-time-subsatellite",
@@ -1519,7 +1983,11 @@
         "fr": "Temps de trajet aller d’un signal entre le point subsatellite et un satellite géostationnaire",
         "en": "One-way signal time between the sub-satellite point and a geostationary satellite"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "transport",
+        "computing"
+      ]
     },
     {
       "id": "iss-average-altitude",
@@ -1529,7 +1997,11 @@
         "fr": "Altitude moyenne de la Station spatiale internationale",
         "en": "International Space Station average altitude"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "transport",
+        "astronomy"
+      ]
     },
     {
       "id": "new-horizons-distance-2026-06",
@@ -1539,7 +2011,11 @@
         "fr": "Distance de New Horizons à la Terre, juin 2026",
         "en": "New Horizons distance from Earth, June 2026"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy",
+        "transport"
+      ]
     },
     {
       "id": "new-horizons-signal-time-2026-06",
@@ -1549,7 +2025,11 @@
         "fr": "Temps de trajet aller d’un signal radio de New Horizons vers la Terre, juin 2026",
         "en": "One-way radio signal time from New Horizons to Earth, June 2026"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy",
+        "transport"
+      ]
     },
     {
       "id": "pluto-mean-distance-sun",
@@ -1559,7 +2039,10 @@
         "fr": "Distance moyenne Soleil–Pluton",
         "en": "Mean Sun–Pluto distance"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
     },
     {
       "id": "sun-pluto-light-time",
@@ -1569,7 +2052,10 @@
         "fr": "Temps de trajet de la lumière du Soleil jusqu’à Pluton (distance moyenne)",
         "en": "Sunlight travel time from the Sun to Pluto (mean distance)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
     },
     {
       "id": "ethernet-400gbe-rate",
@@ -1579,7 +2065,10 @@
         "fr": "Débit de l’Ethernet 400 gigabits",
         "en": "400 Gigabit Ethernet data rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ethernet-800gbe-rate",
@@ -1589,7 +2078,10 @@
         "fr": "Débit de l’Ethernet 800 gigabits",
         "en": "800 Gigabit Ethernet data rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ethernet-min-frame-wire-time-800g",
@@ -1599,7 +2091,10 @@
         "fr": "Durée de transmission d’une trame Ethernet minimale à 800 Gbit/s",
         "en": "Wire time of a minimum Ethernet frame at 800 Gbit/s"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "white-rabbit-sync-accuracy",
@@ -1609,7 +2104,10 @@
         "fr": "Précision de synchronisation temporelle de White Rabbit (extension de PTP)",
         "en": "White Rabbit (PTP extension) time synchronisation accuracy"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ntp-lan-typical-accuracy",
@@ -1619,7 +2117,10 @@
         "fr": "Précision typique de NTP sur un réseau local",
         "en": "Typical NTP accuracy on a LAN"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "wifi7-max-throughput",
@@ -1629,7 +2130,10 @@
         "fr": "Débit maximal visé par l’IEEE 802.11be",
         "en": "IEEE 802.11be target maximum throughput"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ble-min-connection-interval",
@@ -1639,7 +2143,10 @@
         "fr": "Intervalle de connexion minimal du Bluetooth LE (guide TI CC2540/41)",
         "en": "Bluetooth LE minimum connection interval (TI CC2540/41 guide)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "ble-max-connection-interval",
@@ -1649,7 +2156,10 @@
         "fr": "Intervalle de connexion maximal du Bluetooth LE",
         "en": "Bluetooth LE maximum connection interval"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "starlink-us-median-peak-hour-latency",
@@ -1659,7 +2169,10 @@
         "fr": "Latence médiane de Starlink aux heures de pointe, États-Unis (juin 2025)",
         "en": "Starlink median peak-hour latency, United States (June 2025)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "starlink-satellite-hop-latency-usvi-2025-07",
@@ -1669,7 +2182,10 @@
         "fr": "Latence du saut satellite Starlink, îles Vierges américaines (juillet 2025, moyenne)",
         "en": "Starlink satellite-hop latency, U.S. Virgin Islands (July 2025, mean)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2026-11-r1-lineshine-rmax",
@@ -1679,7 +2195,10 @@
         "fr": "Rmax HPL de LineShine (TOP500 de novembre 2026, n° 1)",
         "en": "HPL Rmax, LineShine (TOP500 November 2026, #1)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2026-11-r1-lineshine-rpeak",
@@ -1689,7 +2208,10 @@
         "fr": "Performance crête théorique Rpeak de LineShine (TOP500 de novembre 2026, n° 1)",
         "en": "Theoretical peak Rpeak, LineShine (TOP500 November 2026, #1)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2026-11-r2-el-capitan-rmax",
@@ -1699,7 +2221,10 @@
         "fr": "Rmax HPL de El Capitan (TOP500 de novembre 2026, n° 2)",
         "en": "HPL Rmax, El Capitan (TOP500 November 2026, #2)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2026-11-r2-el-capitan-rpeak",
@@ -1709,7 +2234,10 @@
         "fr": "Performance crête théorique Rpeak de El Capitan (TOP500 de novembre 2026, n° 2)",
         "en": "Theoretical peak Rpeak, El Capitan (TOP500 November 2026, #2)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2026-11-r3-frontier-rmax",
@@ -1719,7 +2247,10 @@
         "fr": "Rmax HPL de Frontier (TOP500 de novembre 2026, n° 3)",
         "en": "HPL Rmax, Frontier (TOP500 November 2026, #3)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2026-11-r3-frontier-rpeak",
@@ -1729,7 +2260,10 @@
         "fr": "Performance crête théorique Rpeak de Frontier (TOP500 de novembre 2026, n° 3)",
         "en": "Theoretical peak Rpeak, Frontier (TOP500 November 2026, #3)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2026-11-r4-aurora-rmax",
@@ -1739,7 +2273,10 @@
         "fr": "Rmax HPL de Aurora (TOP500 de novembre 2026, n° 4)",
         "en": "HPL Rmax, Aurora (TOP500 November 2026, #4)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2026-11-r4-aurora-rpeak",
@@ -1749,7 +2286,10 @@
         "fr": "Performance crête théorique Rpeak de Aurora (TOP500 de novembre 2026, n° 4)",
         "en": "Theoretical peak Rpeak, Aurora (TOP500 November 2026, #4)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2026-11-r5-jupiter-booster-rmax",
@@ -1759,7 +2299,10 @@
         "fr": "Rmax HPL de JUPITER Booster (TOP500 de novembre 2026, n° 5)",
         "en": "HPL Rmax, JUPITER Booster (TOP500 November 2026, #5)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2026-11-r5-jupiter-booster-rpeak",
@@ -1769,7 +2312,10 @@
         "fr": "Performance crête théorique Rpeak de JUPITER Booster (TOP500 de novembre 2026, n° 5)",
         "en": "Theoretical peak Rpeak, JUPITER Booster (TOP500 November 2026, #5)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-1993-06-r1-cm5-rmax",
@@ -1779,7 +2325,10 @@
         "fr": "Rmax LINPACK du CM-5/1024 (Thinking Machines) (TOP500 de juin 1993, n° 1)",
         "en": "LINPACK Rmax, CM-5/1024 (Thinking Machines) (TOP500 June 1993, #1)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2008-06-r1-roadrunner-rmax",
@@ -1789,7 +2338,10 @@
         "fr": "Rmax HPL de Roadrunner (TOP500 de juin 2008, n° 1)",
         "en": "HPL Rmax, Roadrunner (TOP500 June 2008, #1)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "top500-2022-06-r1-frontier-rmax",
@@ -1799,7 +2351,10 @@
         "fr": "Rmax HPL de Frontier (TOP500 de juin 2022, n° 1)",
         "en": "HPL Rmax, Frontier (TOP500 June 2022, #1)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "arm-neoverse-n2-l1d-load-latency",
@@ -1809,7 +2364,10 @@
         "fr": "Latence de chargement sur succès L1D, Arm Neoverse N2 (LDR, décalage registre)",
         "en": "Load latency on L1D hit, Arm Neoverse N2 (LDR register offset)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "arm-neoverse-v3-l1d-load-latency",
@@ -1819,7 +2377,10 @@
         "fr": "Latence de chargement sur succès L1D, Arm Neoverse V3 (LDUR)",
         "en": "Load latency on L1D hit, Arm Neoverse V3 (LDUR)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "arm-cortex-a520-l1-hit-latency",
@@ -1829,7 +2390,10 @@
         "fr": "Latence d’un succès en cache L1, Arm Cortex-A520",
         "en": "L1 cache hit latency, Arm Cortex-A520"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "arm-cortex-a520-l2-hit-latency",
@@ -1839,7 +2403,10 @@
         "fr": "Latence d’un succès en cache L2, Arm Cortex-A520",
         "en": "L2 cache hit latency, Arm Cortex-A520"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-8080-initial-clock",
@@ -1849,7 +2416,10 @@
         "fr": "Fréquence d’horloge initiale de l’Intel 8080",
         "en": "Initial clock speed, Intel 8080"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-80286-initial-clock",
@@ -1859,7 +2429,10 @@
         "fr": "Fréquence d’horloge initiale de l’Intel 286 (80286)",
         "en": "Initial clock speed, Intel 286"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-80386-initial-clock",
@@ -1869,7 +2442,10 @@
         "fr": "Fréquence d’horloge initiale de l’Intel386 (80386)",
         "en": "Initial clock speed, Intel386"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-80486-initial-clock",
@@ -1879,7 +2455,10 @@
         "fr": "Fréquence d’horloge initiale de l’Intel486 (80486)",
         "en": "Initial clock speed, Intel486"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-pentium-initial-clock",
@@ -1889,7 +2468,10 @@
         "fr": "Fréquence d’horloge initiale de l’Intel Pentium",
         "en": "Initial clock speed, Intel Pentium"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "intel-pentium-pro-initial-clock",
@@ -1899,7 +2481,10 @@
         "fr": "Fréquence d’horloge initiale de l’Intel Pentium Pro",
         "en": "Initial clock speed, Intel Pentium Pro"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "amd-athlon-1ghz-2000",
@@ -1909,7 +2494,10 @@
         "fr": "Fréquence du premier AMD Athlon à 1 GHz (mars 2000)",
         "en": "Clock frequency of the first 1 GHz AMD Athlon (March 2000)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "motorola-mc68000-8mhz-max-frequency",
@@ -1919,7 +2507,10 @@
         "fr": "Fréquence de fonctionnement maximale du MC68000, version 8 MHz",
         "en": "Maximum operating frequency, MC68000 8 MHz grade"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hbm3e-micron-stack-bandwidth",
@@ -1929,7 +2520,10 @@
         "fr": "Débit par pile HBM3E (Micron, 8 et 12 couches)",
         "en": "Bandwidth per HBM3E stack (Micron 8-high / 12-high)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hbm3e-micron-pin-speed",
@@ -1939,7 +2533,10 @@
         "fr": "Débit par broche, HBM3E Micron",
         "en": "Pin data rate, Micron HBM3E"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hbm3e-samsung-12h-stack-bandwidth",
@@ -1949,7 +2546,10 @@
         "fr": "Débit par pile HBM3E à 12 couches (Samsung)",
         "en": "Bandwidth per HBM3E 12-high stack (Samsung)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hbm3-samsung-stack-bandwidth",
@@ -1959,7 +2559,10 @@
         "fr": "Débit par pile HBM3 (Samsung Icebolt)",
         "en": "Bandwidth per HBM3 stack (Samsung Icebolt)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "lpddr5x-samsung-pin-speed",
@@ -1969,7 +2572,10 @@
         "fr": "Débit par broche, LPDDR5X Samsung",
         "en": "Data rate per pin, Samsung LPDDR5X"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "linux-kpti-entry-exit-cost-haswell",
@@ -1979,7 +2585,10 @@
         "fr": "Surcoût constant de KPTI par entrée et sortie du noyau (Xeon E5-2630 v3)",
         "en": "Constant cost of KPTI per kernel entry and exit (Xeon E5-2630 v3)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "linux-kernel-entry-exit-no-kpti-haswell",
@@ -1989,7 +2598,10 @@
         "fr": "Coût d’entrée et de sortie du noyau sans KPTI (Xeon E5-2630 v3)",
         "en": "Kernel entry and exit overhead without KPTI (Xeon E5-2630 v3)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "linux-retpoline-indirect-branch-cost",
@@ -1999,7 +2611,10 @@
         "fr": "Surcoût par saut ou appel indirect avec la parade Spectre v2 (Xeon E5-2630 v3)",
         "en": "Added cost per indirect jump or call with Spectre v2 mitigation (Xeon E5-2630 v3)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "linux-read-syscall-baseline-haswell",
@@ -2009,7 +2624,10 @@
         "fr": "Latence du plus court test read() sans KPTI (Xeon E5-2630 v3)",
         "en": "Latency of the shortest read() test without KPTI (Xeon E5-2630 v3)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "linux-minor-page-fault-sandybridge",
@@ -2019,7 +2637,10 @@
         "fr": "Coût d’un défaut de page mineur (Core i7-2640M, Linux 3.16)",
         "en": "Minor page fault cost (Core i7-2640M, Linux 3.16)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "solidigm-ps1010-random-read-latency",
@@ -2029,7 +2650,10 @@
         "fr": "Latence de lecture aléatoire nominale du Solidigm D7-PS1010",
         "en": "Solidigm D7-PS1010 random read latency (rated)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "solidigm-ps1010-random-write-latency",
@@ -2039,7 +2663,10 @@
         "fr": "Latence d'écriture aléatoire nominale du Solidigm D7-PS1010",
         "en": "Solidigm D7-PS1010 random write latency (rated)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "kioxia-cm7r-seq-read-measured",
@@ -2049,7 +2676,10 @@
         "fr": "Débit de lecture séquentielle mesuré du KIOXIA CM7-R",
         "en": "KIOXIA CM7-R sequential read throughput, measured"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "exos-15e900-average-latency",
@@ -2059,7 +2689,10 @@
         "fr": "Latence moyenne du Seagate Exos 15E900 (constructeur)",
         "en": "Seagate Exos 15E900 average latency (manufacturer)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hdd-15k-spindle-frequency",
@@ -2069,7 +2702,10 @@
         "fr": "Fréquence de rotation d'un disque dur à 15 000 tr/min (Exos 15E900)",
         "en": "Rotation frequency of a 15K RPM hard drive (Exos 15E900)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hdd-5400rpm-spindle-frequency",
@@ -2079,7 +2715,10 @@
         "fr": "Fréquence de rotation d'un disque dur à 5400 tr/min (BarraCuda 2,5 pouces)",
         "en": "Rotation frequency of a 5400 RPM hard drive (BarraCuda 2.5)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hdd-5400rpm-half-rotation",
@@ -2089,7 +2728,10 @@
         "fr": "Latence rotationnelle moyenne à 5400 tr/min (demi-tour)",
         "en": "Average rotational latency at 5400 RPM (half revolution)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "lto9-native-transfer-rate",
@@ -2099,7 +2741,10 @@
         "fr": "Débit natif de la bande LTO-9",
         "en": "LTO-9 native transfer rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "lto9-average-space-record-time",
@@ -2109,7 +2754,10 @@
         "fr": "Temps moyen de positionnement sur un enregistrement depuis le début de bande (LTO-9)",
         "en": "LTO-9 average time to locate a record from load point"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "sata-rev3-line-rate",
@@ -2119,7 +2767,10 @@
         "fr": "Débit de ligne de SATA révision 3.0 (SATA 6 Gbit/s)",
         "en": "SATA Revision 3.0 (SATA 6Gb/s) line rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "pcie3-lane-rate",
@@ -2129,7 +2780,10 @@
         "fr": "Débit par voie de PCI Express 3.0",
         "en": "PCI Express 3.0 per-lane data rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "infiniband-ndr-port-rate",
@@ -2139,7 +2793,10 @@
         "fr": "Débit par port InfiniBand NDR (NVIDIA Quantum-2 QM9700)",
         "en": "InfiniBand NDR port rate (NVIDIA Quantum-2 QM9700)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "infiniband-xdr-port-rate",
@@ -2149,7 +2806,10 @@
         "fr": "Débit par port du commutateur InfiniBand NVIDIA Quantum-X800",
         "en": "NVIDIA Quantum-X800 InfiniBand switch port rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "cxl-asic-expander-latency-mlc",
@@ -2159,7 +2819,10 @@
         "fr": "Latence moyenne mesurée d'un extenseur mémoire CXL (ASIC, CXL-A)",
         "en": "CXL memory expander (ASIC, CXL-A) average access latency, measured"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "cxl-fpga-expander-latency-mlc",
@@ -2169,7 +2832,10 @@
         "fr": "Latence moyenne mesurée d'un extenseur mémoire CXL (FPGA, CXL-C)",
         "en": "CXL memory expander (FPGA, CXL-C) average access latency, measured"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "cuda-null-kernel-launch-h100",
@@ -2179,7 +2845,10 @@
         "fr": "Latence de lancement d'un noyau CUDA vide sur H100, mesurée (moyenne)",
         "en": "CUDA null-kernel launch latency on H100, measured (mean)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "cuda-null-kernel-launch-h200",
@@ -2189,7 +2858,10 @@
         "fr": "Latence de lancement d'un noyau CUDA vide sur H200 NVL, mesurée (moyenne)",
         "en": "CUDA null-kernel launch latency on H200 NVL, measured (mean)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "rtx4090-memory-bandwidth",
@@ -2199,7 +2871,10 @@
         "fr": "Bande passante mémoire crête de la GeForce RTX 4090",
         "en": "GeForce RTX 4090 peak memory bandwidth"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "rtx5090-memory-bandwidth",
@@ -2209,7 +2884,10 @@
         "fr": "Bande passante mémoire crête de la GeForce RTX 5090",
         "en": "GeForce RTX 5090 peak memory bandwidth"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "h100-sxm-fp64-peak",
@@ -2219,7 +2897,10 @@
         "fr": "Débit crête FP64 (vectoriel) du NVIDIA H100 SXM",
         "en": "NVIDIA H100 SXM peak FP64 (vector) rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mi300x-fp64-vector-peak",
@@ -2229,7 +2910,10 @@
         "fr": "Débit crête FP64 vectoriel de l'AMD Instinct MI300X",
         "en": "AMD Instinct MI300X peak FP64 vector rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mlperf-v50-h200x8-llama2-70b-server-ttft-mean",
@@ -2239,7 +2923,10 @@
         "fr": "MLPerf v5.0 Llama 2 70B, scénario Server : temps moyen jusqu'au premier token, 8 H200",
         "en": "MLPerf v5.0 Llama 2 70B Server: mean time to first token, 8x H200"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mlperf-v50-h200x8-llama2-70b-server-tpot-mean",
@@ -2249,7 +2936,10 @@
         "fr": "MLPerf v5.0 Llama 2 70B, scénario Server : temps moyen par token de sortie, 8 H200",
         "en": "MLPerf v5.0 Llama 2 70B Server: mean time per output token, 8x H200"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean",
@@ -2259,7 +2949,10 @@
         "fr": "MLPerf v5.0 Llama 2 70B Interactive : temps moyen jusqu'au premier token, DGX B200",
         "en": "MLPerf v5.0 Llama 2 70B Interactive: mean time to first token, DGX B200"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mlperf-v50-b200x8-llama2-70b-interactive-tpot-mean",
@@ -2269,7 +2962,10 @@
         "fr": "MLPerf v5.0 Llama 2 70B Interactive : temps moyen par token de sortie, DGX B200",
         "en": "MLPerf v5.0 Llama 2 70B Interactive: mean time per output token, DGX B200"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mlperf-v50-b200x8-llama31-405b-server-ttft-mean",
@@ -2279,7 +2975,10 @@
         "fr": "MLPerf v5.0 Llama 3.1 405B, scénario Server : temps moyen jusqu'au premier token, DGX B200",
         "en": "MLPerf v5.0 Llama 3.1 405B Server: mean time to first token, DGX B200"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "mlperf-v50-b200x8-llama31-405b-server-tpot-mean",
@@ -2289,7 +2988,10 @@
         "fr": "MLPerf v5.0 Llama 3.1 405B, scénario Server : temps moyen par token de sortie, DGX B200",
         "en": "MLPerf v5.0 Llama 3.1 405B Server: mean time per output token, DGX B200"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "android-pro-audio-rtl-max-analog",
@@ -2299,7 +3001,10 @@
         "fr": "Latence audio aller-retour maximale exigée pour l'audio pro Android (voie analogique)",
         "en": "Android pro-audio maximum round-trip audio latency (analog path)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "android-low-latency-rtl-max",
@@ -2309,7 +3014,10 @@
         "fr": "Latence audio aller-retour maximale exigée pour l'audio basse latence Android",
         "en": "Android low-latency audio maximum round-trip latency"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "audio-sample-rate-44100",
@@ -2319,7 +3027,10 @@
         "fr": "Fréquence d'échantillonnage audio de 44,1 kHz",
         "en": "Audio sampling rate 44.1 kHz"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "audio-sample-rate-48000",
@@ -2329,7 +3040,10 @@
         "fr": "Fréquence d'échantillonnage audio de 48 kHz",
         "en": "Audio sampling rate 48 kHz"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "vesa-adaptivesync-min-max-refresh",
@@ -2339,7 +3053,10 @@
         "fr": "VESA AdaptiveSync Display : fréquence de rafraîchissement maximale minimale exigée",
         "en": "VESA AdaptiveSync Display: minimum required maximum refresh rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "vesa-adaptivesync-display240-tier",
@@ -2349,7 +3066,10 @@
         "fr": "Palier AdaptiveSync Display240 de VESA (fréquence de rafraîchissement)",
         "en": "VESA AdaptiveSync Display240 tier refresh rate"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "frame-time-144hz",
@@ -2359,7 +3079,10 @@
         "fr": "Durée d'une image à 144 Hz",
         "en": "Frame time at 144 Hz"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "frame-time-240hz",
@@ -2369,7 +3092,10 @@
         "fr": "Durée d'une image à 240 Hz",
         "en": "Frame time at 240 Hz"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "vesa-adaptivesync-g2g-average-max",
@@ -2379,7 +3105,10 @@
         "fr": "Temps de réponse gris à gris moyen maximal exigé par VESA AdaptiveSync Display",
         "en": "VESA AdaptiveSync Display maximum average grey-to-grey response time"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
     },
     {
       "id": "hdmi21-max-bandwidth",
@@ -2389,7 +3118,361 @@
         "fr": "Bande passante maximale du câble Ultra High Speed HDMI (introduit avec HDMI 2.1)",
         "en": "Ultra High Speed HDMI Cable maximum bandwidth (introduced with HDMI 2.1)"
       },
-      "description": null
+      "description": null,
+      "universes": [
+        "computing"
+      ]
+    },
+    {
+      "id": "phys-planck-time",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de Planck",
+        "en": "Planck time"
+      },
+      "description": null,
+      "universes": [
+        "physics"
+      ]
+    },
+    {
+      "id": "phys-muon-mean-lifetime",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Duree de vie moyenne du muon (au repos)",
+        "en": "Muon mean lifetime (at rest)"
+      },
+      "description": null,
+      "universes": [
+        "physics"
+      ]
+    },
+    {
+      "id": "phys-free-neutron-mean-lifetime",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Duree de vie moyenne du neutron libre",
+        "en": "Free neutron mean lifetime"
+      },
+      "description": null,
+      "universes": [
+        "physics"
+      ]
+    },
+    {
+      "id": "phys-carbon-14-half-life",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Demi-vie du carbone 14",
+        "en": "Carbon-14 half-life"
+      },
+      "description": null,
+      "universes": [
+        "physics"
+      ]
+    },
+    {
+      "id": "phys-uranium-238-half-life",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Demi-vie de l'uranium 238",
+        "en": "Uranium-238 half-life"
+      },
+      "description": null,
+      "universes": [
+        "physics"
+      ]
+    },
+    {
+      "id": "astro-earth-sidereal-rotation",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Jour sideral terrestre (rotation par rapport aux etoiles)",
+        "en": "Earth sidereal day (rotation relative to the stars)"
+      },
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
+    },
+    {
+      "id": "astro-tropical-year",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Annee tropique (cycle des saisons)",
+        "en": "Tropical year (cycle of the seasons)"
+      },
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
+    },
+    {
+      "id": "astro-synodic-month",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Mois synodique (d'une nouvelle Lune a la suivante)",
+        "en": "Synodic month (new Moon to new Moon)"
+      },
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
+    },
+    {
+      "id": "astro-halley-orbital-period",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Periode orbitale de la comete de Halley",
+        "en": "Orbital period of Halley's Comet"
+      },
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
+    },
+    {
+      "id": "astro-jupiter-orbital-period",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Annee de Jupiter (tour du Soleil)",
+        "en": "Jupiter's year (orbit around the Sun)"
+      },
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
+    },
+    {
+      "id": "astro-sun-galactic-orbit",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Orbite du Soleil autour du centre de la Voie lactee (« année galactique »)",
+        "en": "Sun's orbit around the centre of the Milky Way ('galactic year')"
+      },
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
+    },
+    {
+      "id": "astro-age-of-earth",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Age de la Terre",
+        "en": "Age of the Earth"
+      },
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
+    },
+    {
+      "id": "astro-age-of-universe",
+      "domain": "astronomy",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Age de l'Univers",
+        "en": "Age of the Universe"
+      },
+      "description": null,
+      "universes": [
+        "astronomy"
+      ]
+    },
+    {
+      "id": "ind-model-t-assembly-before-line",
+      "domain": "industry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Assembler une Ford T avec l'ancienne méthode à poste fixe",
+        "en": "Building one Ford Model T with the old stationary method"
+      },
+      "description": null,
+      "universes": [
+        "industry"
+      ]
+    },
+    {
+      "id": "ind-model-t-assembly-moving-line",
+      "domain": "industry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Assembler une Ford T sur la chaîne de montage mobile",
+        "en": "Building one Ford Model T on the moving assembly line"
+      },
+      "description": null,
+      "universes": [
+        "industry"
+      ]
+    },
+    {
+      "id": "ind-concrete-28-day-test-age",
+      "domain": "industry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Âge standard du béton pour l'essai de résistance",
+        "en": "Standard age of concrete for the strength test"
+      },
+      "description": null,
+      "universes": [
+        "industry"
+      ]
+    },
+    {
+      "id": "ind-led-lamp-lifetime",
+      "domain": "industry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée de fonctionnement d'une lampe LED",
+        "en": "Operating life of an LED lamp"
+      },
+      "description": null,
+      "universes": [
+        "industry"
+      ]
+    },
+    {
+      "id": "ind-new-drug-development",
+      "domain": "industry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Développer un nouveau médicament, du laboratoire à la pharmacie",
+        "en": "Developing a new drug, from the lab to the pharmacy"
+      },
+      "description": null,
+      "universes": [
+        "industry"
+      ]
+    },
+    {
+      "id": "day-football-match",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Un match de football, temps réglementaire",
+        "en": "A football (soccer) match, regulation time"
+      },
+      "description": null,
+      "universes": [
+        "everyday"
+      ]
+    },
+    {
+      "id": "day-100m-world-record-men",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Record du monde du 100 m masculin",
+        "en": "Men's 100 m world record"
+      },
+      "description": null,
+      "universes": [
+        "everyday"
+      ]
+    },
+    {
+      "id": "day-marathon-best-men",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Marathon masculin le plus rapide",
+        "en": "Fastest men's marathon"
+      },
+      "description": null,
+      "universes": [
+        "everyday"
+      ]
+    },
+    {
+      "id": "day-handwashing",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Se frotter les mains au lavage",
+        "en": "Scrubbing your hands when washing"
+      },
+      "description": null,
+      "universes": [
+        "everyday"
+      ]
+    },
+    {
+      "id": "day-tooth-brushing",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Se brosser les dents",
+        "en": "Brushing your teeth"
+      },
+      "description": null,
+      "universes": [
+        "everyday"
+      ]
+    },
+    {
+      "id": "day-soft-boiled-egg",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Cuire un œuf à la coque",
+        "en": "Cooking a soft-boiled egg"
+      },
+      "description": null,
+      "universes": [
+        "everyday"
+      ]
+    },
+    {
+      "id": "day-espresso-extraction",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Extraire un espresso italien certifié",
+        "en": "Pouring a certified Italian espresso"
+      },
+      "description": null,
+      "universes": [
+        "everyday"
+      ]
+    },
+    {
+      "id": "day-legal-work-week-france",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée légale du travail à temps plein en France",
+        "en": "Legal full-time working week in France"
+      },
+      "description": null,
+      "universes": [
+        "everyday"
+      ]
+    },
+    {
+      "id": "day-max-work-day-france",
+      "domain": "everyday",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée maximale d'une journée de travail en France",
+        "en": "Maximum working day in France"
+      },
+      "description": null,
+      "universes": [
+        "everyday"
+      ]
     }
   ],
   "measurements": [
@@ -12182,6 +13265,1040 @@
           "quote"
         ]
       }
+    },
+    {
+      "id": "phys-planck-time-m1",
+      "phenomenonId": "phys-planck-time",
+      "configuration": null,
+      "value": 5.391247e-44,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Unite de temps naturelle construite a partir des constantes fondamentales (racine de hbar G / c^5) ; echelle en dessous de laquelle la physique actuelle ne sait plus decrire le temps. Ce n'est pas un evenement observe.",
+        "en": "Natural unit of time built from fundamental constants (sqrt(hbar G / c^5)); the scale below which current physics cannot describe time. Not an observed event."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nist-codata2022-planck-time"
+      ],
+      "locator": "NIST CODATA value page 'Planck time', Numerical value line",
+      "quote": null,
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#phys-planck-time",
+      "notes": "CODATA 2022 recommended value. Standard uncertainty 0.000 060 x 10^-44 s, relative standard uncertainty 1.1 x 10^-5 (dominated by the uncertainty of G). Derived constant, not a measured duration of any process.",
+      "quantityKind": "duration",
+      "valueSI": 5.391247e-44,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "phys-muon-mean-lifetime-m1",
+      "phenomenonId": "phys-muon-mean-lifetime",
+      "configuration": null,
+      "value": 2.1969811,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Duree de vie moyenne d'un muon au repos avant sa desintegration (surtout en electron et deux neutrinos). Les muons crees par les rayons cosmiques vivent plus longtemps vus du sol, a cause de la dilatation relativiste du temps.",
+        "en": "Average lifetime of a muon at rest before it decays (mostly into an electron and two neutrinos). Muons created by cosmic rays live longer as seen from the ground because of relativistic time dilation."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-pdg2024-leptons"
+      ],
+      "locator": "PDG 2024 Summary Tables, Leptons, mu block, page 1",
+      "quote": null,
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#phys-muon-mean-lifetime",
+      "notes": "PDG 2024 world average of experimental measurements; uncertainty ±0.0000022e-6 s (about 1 ppm). Value stored in microseconds (2.1969811 us = 2.1969811e-6 s). | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 0.0000021969811,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "phys-free-neutron-mean-lifetime-m1",
+      "phenomenonId": "phys-free-neutron-mean-lifetime",
+      "configuration": null,
+      "value": 878.4,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Duree de vie moyenne d'un neutron hors d'un noyau atomique avant sa desintegration en proton, electron et antineutrino (environ un quart d'heure). Les neutrons lies dans des noyaux stables ne se desintegrent pas.",
+        "en": "Average lifetime of a neutron outside an atomic nucleus before it decays into a proton, an electron and an antineutrino (about a quarter of an hour). Neutrons bound in stable nuclei do not decay."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-pdg2024-baryons"
+      ],
+      "locator": "PDG 2024 Summary Tables, Baryons, n block (N baryons)",
+      "quote": null,
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#phys-free-neutron-mean-lifetime",
+      "notes": "PDG 2024 average, uncertainty ±0.5 s already inflated by scale factor S = 1.8, which PDG uses when input measurements are mutually inconsistent. The measurements of this quantity are known to disagree between experimental methods (the 'neutron lifetime puzzle'); the size of that discrepancy was not sourced here, so treat the last digit with caution. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 878.4,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "phys-carbon-14-half-life-m1",
+      "phenomenonId": "phys-carbon-14-half-life",
+      "configuration": null,
+      "value": 5700,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps au bout duquel la moitie des atomes de carbone 14 d'un echantillon se sont desintegres en azote 14 ; c'est l'horloge de la datation au radiocarbone.",
+        "en": "Time for half of a sample of carbon-14 atoms to decay into nitrogen-14; the clock behind radiocarbon dating."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-lnhb-c14"
+      ],
+      "locator": "LNHB Table de Radionucleides C-14, section 2 'Nuclear Data', page 1",
+      "quote": null,
+      "era": 2012,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#phys-carbon-14-half-life",
+      "notes": "DDEP/LNHB recommended value 5700 a with standard uncertainty 30 a (notation '(30)'). Radiocarbon laboratories conventionally report ages with the older 'Libby' half-life of 5568 a; that convention was not sourced here and is not this value. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 179878320000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "phys-uranium-238-half-life-m1",
+      "phenomenonId": "phys-uranium-238-half-life",
+      "configuration": null,
+      "value": 4468000000,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps au bout duquel la moitie d'un echantillon d'uranium 238 s'est desintegree (surtout par emission alpha) ; c'est a peu pres l'age de la Terre, d'ou son usage pour dater les roches les plus anciennes.",
+        "en": "Time for half of a sample of uranium-238 to decay (mainly by alpha emission); about the age of the Earth, which is why U-238 is used to date the oldest rocks."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-lnhb-u238"
+      ],
+      "locator": "LNHB Table de Radionucleides U-238, section 2 'Nuclear Data', page 1",
+      "quote": null,
+      "era": 2006,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#phys-uranium-238-half-life",
+      "notes": "DDEP/LNHB recommended value 4.468 x 10^9 a, standard uncertainty 0.005 x 10^9 a. The quote is copied from the PDF text layer where the superscript of 10^9 is flattened to '109' and the French decimal comma is used. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 140999356800000000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "astro-earth-sidereal-rotation-m1",
+      "phenomenonId": "astro-earth-sidereal-rotation",
+      "configuration": null,
+      "value": 23.9345,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps mis par la Terre pour faire un tour par rapport aux etoiles lointaines : environ 23 h 56 min, soit a peu pres 4 minutes de moins que le jour solaire de 24 h, car la Terre avance aussi sur son orbite.",
+        "en": "Time for Earth to turn once relative to distant stars: about 23 h 56 min, roughly 4 minutes shorter than the 24 h solar day because Earth also moves along its orbit."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nssdc-earth"
+      ],
+      "locator": "NASA Earth Fact Sheet, 'Sidereal rotation period (hrs)' row",
+      "quote": "Sidereal rotation period (hrs)   23.9345",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-earth-sidereal-rotation",
+      "notes": "Fact-sheet value given to 4 decimals of an hour (~0.2 s resolution); no uncertainty stated. Earth's rotation varies by milliseconds over days to decades, far below this precision. Same sheet gives 'Length of day (hrs) 24.0000' for the mean solar day. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 86164.2,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "astro-tropical-year-m1",
+      "phenomenonId": "astro-tropical-year",
+      "configuration": null,
+      "value": 365.242,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps entre deux retours successifs au meme point des saisons (par exemple d'un equinoxe de printemps au suivant) ; c'est l'annee que les calendriers cherchent a suivre.",
+        "en": "Time between two successive identical seasonal points (e.g. spring equinox to spring equinox); the year calendars try to follow."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nssdc-earth"
+      ],
+      "locator": "NASA Earth Fact Sheet, 'Tropical orbit period (days)' row",
+      "quote": "Tropical orbit period (days)    365.242",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-tropical-year",
+      "notes": "Given to 3 decimals of a day; no uncertainty stated. Distinct from the sidereal year (365.256 d on the same sheet), which is measured against the stars; the difference comes from the precession of Earth's axis. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 31556908.8,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "astro-synodic-month-m1",
+      "phenomenonId": "astro-synodic-month",
+      "configuration": null,
+      "value": 29.53,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps moyen entre deux phases identiques de la Lune (par exemple d'une pleine Lune a la suivante). L'orbite mesuree par rapport aux etoiles (siderale) est plus courte : 27,3217 j.",
+        "en": "Average time between two identical Moon phases (e.g. full Moon to full Moon). The orbit measured against the stars (sidereal) is shorter: 27.3217 d."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nssdc-moon"
+      ],
+      "locator": "NASA Moon Fact Sheet, orbital parameters, 'Synodic period (days)' row",
+      "quote": "Synodic period (days) | 29.53",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-synodic-month",
+      "notes": "Mean value, 2 decimals, no uncertainty stated. Individual lunations vary by several hours around the mean (amount not sourced here). The 27.3217 d sidereal figure is the 'Revolution period (days)' row of the same sheet. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 2551392,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "astro-halley-orbital-period-m1",
+      "phenomenonId": "astro-halley-orbital-period",
+      "configuration": null,
+      "value": 76.1,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps mis par la comete 1P/Halley pour faire le tour du Soleil ; dernier passage au plus pres du Soleil (perihelie) le 9 fevrier 1986.",
+        "en": "Time for comet 1P/Halley to go once around the Sun; last closest approach to the Sun (perihelion) on 1986-02-09."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nssdc-comets"
+      ],
+      "locator": "NASA Comet Fact Sheet, row '1P Halley', column 'Orbital Period (yrs.)'",
+      "quote": "1P Halley 76.1 yrs. 1986-02-09 0.587 AU 17.94 AU 0.967 162.2 deg.",
+      "era": 2016,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-halley-orbital-period",
+      "notes": "Osculating period for the 1986 apparition; the period changes from one passage to the next because of planetary perturbations and outgassing (range not sourced here). Quote reassembled from table cells split across lines in the page text. Sheet last updated 2016. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 2401533360,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "astro-jupiter-orbital-period-m1",
+      "phenomenonId": "astro-jupiter-orbital-period",
+      "configuration": null,
+      "value": 4332.589,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps mis par Jupiter pour faire le tour du Soleil par rapport aux etoiles (periode siderale) : environ 11,86 annees terrestres.",
+        "en": "Time for Jupiter to orbit the Sun once relative to the stars (sidereal period): about 11.86 Earth years."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nssdc-jupiter"
+      ],
+      "locator": "NASA Jupiter Fact Sheet, 'Sidereal orbit period (days)' row (Jupiter column)",
+      "quote": "Sidereal orbit period (days) | 4,332.589 | 365.256 | 11.862",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-jupiter-orbital-period",
+      "notes": "No uncertainty stated. The row lists Jupiter, Earth and the Jupiter/Earth ratio (11.862). Tropical period on the same sheet: 4,330.595 d. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 374335689.6,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "astro-sun-galactic-orbit-m1",
+      "phenomenonId": "astro-sun-galactic-orbit",
+      "configuration": null,
+      "value": 230000000,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps approximatif mis par le Soleil (et tout le Systeme solaire) pour faire un tour complet autour du centre de notre Galaxie.",
+        "en": "Approximate time for the Sun (and the Solar System) to complete one trip around the centre of our Galaxy."
+      },
+      "protocol": null,
+      "provenanceType": "estimated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nasa-sun-facts"
+      ],
+      "locator": "NASA 'Our Sun: Facts', section 'Orbit and Rotation'",
+      "quote": "it takes about 230 million years for the Sun to make one complete trip around the Milky Way.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-sun-galactic-orbit",
+      "notes": "Rounded order-of-magnitude estimate ('about'); depends on the adopted Sun-centre distance and circular speed. An independent popular source, NRAO 'Ask an Astronomer' (J. Mangum, 2015, src-nrao-galactic-orbit), states 'about 226 million years'. Other published estimates spread further (roughly 220-250 Myr in secondary press found during search) but no primary paper was opened, so low/high are left null rather than invented. Low confidence on any digit beyond the first two.",
+      "quantityKind": "duration",
+      "valueSI": 7258248000000000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "astro-age-of-earth-m1",
+      "phenomenonId": "astro-age-of-earth",
+      "configuration": null,
+      "value": 4540000000,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps ecoule depuis la formation de la Terre et des autres corps solides du Systeme solaire, determine a partir des isotopes du plomb des plus vieux minerais terrestres et des meteorites.",
+        "en": "Time since Earth and the other solid bodies of the Solar System formed, determined from lead isotopes in Earth's oldest lead ores and in meteorites."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-usgs-age-earth"
+      ],
+      "locator": "USGS 'Geologic Time: Age of the Earth', final paragraphs",
+      "quote": "an age for the Earth and meteorites, and hence the Solar System, of 4.54 billion years with an uncertainty of less than 1 percent.",
+      "era": 2007,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-age-of-earth",
+      "notes": "USGS states uncertainty below 1 % (i.e. under about ±0.045 billion years); no exact interval given, so low/high left null. Page last updated 2007; it summarises Dalrymple (1991). The same page gives a meteorite formation span of 4.53-4.58 billion years. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented. | Decision: Bound wording checked (R1 lot 2026-11-27): \"less than 1 percent\" bounds the uncertainty of 4.54 Gyr, not the value; no interval is published, so low/high stay null.",
+      "quantityKind": "duration",
+      "valueSI": 143271504000000000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "astro-age-of-universe-m1",
+      "phenomenonId": "astro-age-of-universe",
+      "configuration": null,
+      "value": 13787000000,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps ecoule depuis le Big Bang, deduit de la carte du fond diffus cosmologique du satellite Planck, en supposant le modele cosmologique standard (Lambda-CDM de base), combine aux donnees de lentillage et d'oscillations acoustiques des baryons.",
+        "en": "Time since the Big Bang inferred from the Planck satellite's map of the cosmic microwave background, assuming the standard cosmological model (base Lambda-CDM), combined with lensing and baryon acoustic oscillation data."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-planck2018-vi"
+      ],
+      "locator": "Planck 2018 VI, Table 2, row 'Age [Gyr]', column TT,TE,EE+lowE+lensing+BAO",
+      "quote": null,
+      "era": 2018,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-age-of-universe",
+      "notes": "68 % interval ±0.020 Gyr (13.787 ± 0.020 x 10^9 a). Model-dependent inference, not a direct measurement: the Planck-only baseline (TT,TE,EE+lowE+lensing) gives 13.797 ± 0.023 Gyr in the same table, and the 'Hubble tension' (disagreement between early- and late-Universe H0 values) means a different model could shift the age; not quantified here. Quote abridged with '...' between table columns. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 435084631200000000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "ind-model-t-assembly-before-line-m1",
+      "phenomenonId": "ind-model-t-assembly-before-line",
+      "configuration": null,
+      "value": 12.5,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps par voiture à l'usine Ford de Highland Park avant la chaîne mobile, quand les ouvriers venaient à une voiture immobile (avant 1913).",
+        "en": "Time per car at Ford's Highland Park plant before the moving assembly line, when workers came to a car that stayed in place (before 1913)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-thf-k12-assembly-line"
+      ],
+      "locator": "K-12 Research Guide: Assembly Line, answer text",
+      "quote": null,
+      "era": 1913,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#ind-model-t-assembly-before-line",
+      "notes": "Historical figure from a museum educational page, not the original Ford time study. Widely repeated; the museum is the best accessible source.",
+      "quantityKind": "duration",
+      "valueSI": 45000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "ind-model-t-assembly-moving-line-m1",
+      "phenomenonId": "ind-model-t-assembly-moving-line",
+      "configuration": null,
+      "value": 93,
+      "unit": "min",
+      "low": 90,
+      "high": 93,
+      "conditions": {
+        "fr": "Cadence atteinte quand les lignes séparées de Ford ont été réunies en chaînes mobiles continues (1913 à début 1914). Le musée donne 93 minutes ; la page d'histoire de Ford arrondit à quatre-vingt-dix minutes.",
+        "en": "Rate reached once Ford's separate lines were merged into continuous moving lines (1913 to early 1914). The museum says 93 minutes; Ford's own history page rounds it to ninety minutes."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-thf-k12-assembly-line"
+      ],
+      "locator": "K-12 Research Guide: Assembly Line, answer text; cross-check src-ford-moving-assembly-line ('built in only ninety minutes')",
+      "quote": null,
+      "era": 1914,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#ind-model-t-assembly-moving-line",
+      "notes": "Two sources (museum, manufacturer) agree on about 90 minutes. Both are secondary, and 'produced every 93 minutes' may be a production interval rather than the work time on one car. Other secondary sources give under 3 h or under 2 h for earlier stages.",
+      "quantityKind": "duration",
+      "valueSI": 5580,
+      "lowSI": 5400,
+      "highSI": 5580,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "ind-concrete-28-day-test-age-m1",
+      "phenomenonId": "ind-concrete-28-day-test-age",
+      "configuration": null,
+      "value": 28,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Les éprouvettes de béton sont conservées en laboratoire puis écrasées à un âge d'essai, typiquement 28 jours, fixé par les cahiers des charges routiers américains (AASHTO T22). Certains cahiers des charges retiennent 56 ou 90 jours.",
+        "en": "Concrete cylinders are cured in the laboratory and crushed at a test age that is typically 28 days, set by US paving specifications (AASHTO T22). Some specifications use 56 or 90 days."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-fhwa-mct-strength-testing"
+      ],
+      "locator": "HIF-18-001, page 1, first paragraph, item 1 'Cylinders'",
+      "quote": "cured in water/moist room under standard laboratory conditions (73.5˚±3.5˚F) until test age, typically 28 days",
+      "era": 2017,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#ind-concrete-28-day-test-age",
+      "notes": "Convention well established in practice; the source is FHWA, not the standard text itself (AASHTO/ASTM/EN standards were not opened).",
+      "quantityKind": "duration",
+      "valueSI": 2419200,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "ind-led-lamp-lifetime-m1",
+      "phenomenonId": "ind-led-lamp-lifetime",
+      "configuration": null,
+      "value": 25000,
+      "unit": "h",
+      "low": 25000,
+      "high": null,
+      "conditions": {
+        "fr": "Borne basse : les lampes LED intégrées semblent capables d'au moins 25 000 heures de fonctionnement. La durée de vie se définit en général comme le temps avant que la lumière baisse à 70 % (L70), pas avant l'extinction. Environ 2,9 ans si elle reste allumée en continu.",
+        "en": "Lower bound: integrated LED […]. Lifetime is usually defined as the time until light output drops to 70% (L70), not until the lamp goes dark. About 2.9 years if lit non-stop."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-doe-led-luminaire-lifetime-2014"
+      ],
+      "locator": "Section 1.2 'What makes LED-based luminaires different?'",
+      "quote": null,
+      "era": 2014,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#ind-led-lamp-lifetime",
+      "notes": "Hedged wording ([…]). It is a floor, not a rated life; products are sold with ratings of 15,000 to 50,000 h, but those figures were not sourced here. A current energy.gov consumer page ([…]) returned 404.",
+      "quantityKind": "duration",
+      "valueSI": 90000000,
+      "lowSI": 90000000,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "conditions.en",
+          "quote",
+          "notes"
+        ]
+      }
+    },
+    {
+      "id": "ind-new-drug-development-m1",
+      "phenomenonId": "ind-new-drug-development",
+      "configuration": null,
+      "value": 15,
+      "unit": "a",
+      "low": null,
+      "high": 15,
+      "conditions": {
+        "fr": "Haut de la fourchette pour le parcours de la découverte au médicament autorisé (États-Unis). Beaucoup de candidats échouent en route ; la valeur est un plafond, pas une moyenne.",
+        "en": "Upper end of the journey from discovery to an approved medicine (US). Many candidates fail along the way; the value is a ceiling, not an average."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ncats-drugdev"
+      ],
+      "locator": "Page introduction",
+      "quote": "A new drug’s journey from the lab to the medicine cabinet can take up to 15 years.",
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#ind-new-drug-development",
+      "notes": "Agency summary, not a study. Other NIH materials (not opened) give about 13 or 14 years or '10 to 15 years'. No low bound sourced, so low is null.",
+      "quantityKind": "duration",
+      "valueSI": 473364000,
+      "lowSI": null,
+      "highSI": 473364000,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "day-football-match-m1",
+      "phenomenonId": "day-football-match",
+      "configuration": null,
+      "value": 90,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Deux mi-temps de 45 minutes. Le temps additionnel, la pause (15 min au plus) et une éventuelle prolongation s'y ajoutent.",
+        "en": "Two halves of 45 minutes. Stoppage time, the half-time break (up to 15 min) and any extra time come on top."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ifab-law7"
+      ],
+      "locator": "Law 7.1 'Periods of play'",
+      "quote": null,
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-football-match",
+      "notes": "Rule of the game (conventional). Explanation: 2 × 45 min = 90 min of regulation play; real elapsed time is longer. | Maintainer curation 2026-11-27: two halves of 45 min (Law 7.1); stoppage time and extra time excluded.",
+      "quantityKind": "duration",
+      "valueSI": 5400,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "day-100m-world-record-men-m1",
+      "phenomenonId": "day-100m-world-record-men",
+      "configuration": null,
+      "value": 9.58,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Usain Bolt, Olympiastadion de Berlin, 16 août 2009, chronométrage électronique.",
+        "en": "Usain Bolt, Berlin Olympiastadion, 16 August 2009, electronic timing."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-wa-100m-men"
+      ],
+      "locator": "All-time top list, rank 1",
+      "quote": null,
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-100m-world-record-men",
+      "notes": "Official federation data. Quote is a table row (cells joined), not a sentence. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented.",
+      "quantityKind": "duration",
+      "valueSI": 9.58,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "day-marathon-best-men-m1",
+      "phenomenonId": "day-marathon-best-men",
+      "configuration": null,
+      "value": 7170,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "1 h 59 min 30 s par Sabastian Kimaru Sawe, Londres, 26 avril 2026. Exprimé en secondes.",
+        "en": "1:59:30 by Sabastian Kimaru Sawe, London, 26 April 2026. Shown in seconds (1 h 59 min 30 s)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-wa-marathon-men"
+      ],
+      "locator": "All-time top list, rank 1",
+      "quote": null,
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-marathon-best-men",
+      "notes": "Measured mark converted to seconds. Top of the all-time list; whether it is already ratified as the world record was not confirmed (the world-records page rendered empty). Label it 'fastest' rather than 'world record' until ratification is checked. | Maintainer curation 2026-11-27: 1:59:30 converted to seconds (unit conversion, not a calculation).",
+      "quantityKind": "duration",
+      "valueSI": 7170,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "day-handwashing-m1",
+      "phenomenonId": "day-handwashing",
+      "configuration": null,
+      "value": 20,
+      "unit": "s",
+      "low": 20,
+      "high": null,
+      "conditions": {
+        "fr": "Recommandation de santé publique : au moins 20 secondes de frottement avec du savon.",
+        "en": "Public-health recommendation: at least 20 seconds of scrubbing with soap."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-cdc-clean-hands"
+      ],
+      "locator": "Section 'How it works'",
+      "quote": "Scrub your hands for at least 20 seconds.",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-handwashing",
+      "notes": "Recommendation (minimum), not a measurement. Page date not shown; era is approximate.",
+      "quantityKind": "duration",
+      "valueSI": 20,
+      "lowSI": 20,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "day-tooth-brushing-m1",
+      "phenomenonId": "day-tooth-brushing",
+      "configuration": null,
+      "value": 2,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Recommandation : deux fois par jour, environ 2 minutes à chaque fois.",
+        "en": "Recommended: twice a day, about 2 minutes each time."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nhs-teeth"
+      ],
+      "locator": "How to keep your teeth clean, brushing advice",
+      "quote": null,
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-tooth-brushing",
+      "notes": "Health-service recommendation.",
+      "quantityKind": "duration",
+      "valueSI": 120,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "day-soft-boiled-egg-m1",
+      "phenomenonId": "day-soft-boiled-egg",
+      "configuration": null,
+      "value": 7,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Dans sa coquille, dans l'eau bouillante. Le temps réel dépend de la taille de l'œuf, de sa température de départ et de l'altitude ; la source ne donne pas de fourchette.",
+        "en": "In its shell, in boiling water. Actual time depends on egg size, starting temperature and altitude; the source does not give a range."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-clemson-eggs"
+      ],
+      "locator": "Section 'Cooked Eggs'",
+      "quote": null,
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-soft-boiled-egg",
+      "notes": "Single extension-service value given with food-safety intent; cooking sites commonly give shorter times (4 to 6 min, not sourced here). Low/high left null because no sourced range. | Maintainer curation 2026-11-27: single cooking time recommended by the source (food-safety guidance): conventional, no range.",
+      "quantityKind": "duration",
+      "valueSI": 420,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "day-espresso-extraction-m1",
+      "phenomenonId": "day-espresso-extraction",
+      "configuration": null,
+      "value": 25,
+      "unit": "s",
+      "low": 20,
+      "high": 30,
+      "conditions": {
+        "fr": "Temps de percolation de la certification « Espresso Italiano » : 25 s ± 5 s, à 9 bar ± 1, pour environ 25 ml dans la tasse.",
+        "en": "Percolation time in the 'Espresso Italiano' certification: 25 s ± 5 s, at 9 bar ± 1, for about 25 ml in the cup."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-inei-brochure"
+      ],
+      "locator": "Brochure, table of espresso parameters ('Percolation time')",
+      "quote": null,
+      "era": 2007,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-espresso-extraction",
+      "notes": "Certification parameter from a private institute, read on a third-party-hosted copy of the brochure (original site not reached). low/high derived from the stated ± 5 s tolerance.",
+      "quantityKind": "duration",
+      "valueSI": 25,
+      "lowSI": 20,
+      "highSI": 30,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "day-legal-work-week-france-m1",
+      "phenomenonId": "day-legal-work-week-france",
+      "configuration": null,
+      "value": 35,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Par semaine, salarié du secteur privé à temps complet. C'est le seuil des heures supplémentaires, pas un maximum.",
+        "en": "Per week, private-sector employee working full time. It is the threshold for overtime, not a maximum."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-servicepublic-duree-travail"
+      ],
+      "locator": "Section 'Durée légale'",
+      "quote": "La durée légale du travail pour un temps complet du salarié du secteur privée est fixée à : 35 heures par semaine",
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-legal-work-week-france",
+      "notes": "Legal rule. Quote joins a sentence and the bullet that follows it on the page.",
+      "quantityKind": "duration",
+      "valueSI": 126000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "day-max-work-day-france-m1",
+      "phenomenonId": "day-max-work-day-france",
+      "configuration": null,
+      "value": 10,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Travail effectif par jour, règle générale pour les salariés du privé ; des dérogations existent.",
+        "en": "Actual work per day, general rule for private-sector employees; derogations exist."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-servicepublic-duree-travail"
+      ],
+      "locator": "Section 'Durées maximales' (daily maximum)",
+      "quote": "ne doit pas dépasser la durée maximale de 10 heures par jour",
+      "era": 2025,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-max-work-day-france",
+      "notes": "Legal rule; exceptions not detailed here.",
+      "quantityKind": "duration",
+      "valueSI": 36000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
     }
   ],
   "sources": [
@@ -13804,6 +15921,366 @@
       "redistribution": "reference-only",
       "accessNotes": "The hdmi2_1 URL now serves the HDMI 2.2 overview page; the 48 Gbps sentence refers to the Ultra High Speed HDMI Cable introduced with HDMI 2.1.",
       "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nist-codata2022-planck-time",
+      "title": "CODATA Value: Planck time",
+      "author": null,
+      "publisher": "NIST Physical Measurement Laboratory (CODATA 2022 recommended values)",
+      "url": "https://physics.nist.gov/cgi-bin/cuu/Value?plkt",
+      "doi": null,
+      "publishedDate": "2024",
+      "version": "CODATA 2022",
+      "accessedAt": "2026-11-27",
+      "license": "not stated on page (NIST Standard Reference Data; may be subject to SRD Act terms)",
+      "redistribution": "unknown",
+      "accessNotes": "WebFetch of HTML page, 2026-11-27; value, standard uncertainty and 'Source: 2022 CODATA' read on page",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-pdg2024-leptons",
+      "title": "Review of Particle Physics, Summary Tables: Leptons",
+      "author": "S. Navas et al. (Particle Data Group)",
+      "publisher": "Particle Data Group / Phys. Rev. D 110, 030001 (2024)",
+      "url": "https://pdg.lbl.gov/2024/tables/rpp2024-sum-leptons.pdf",
+      "doi": "10.1103/PhysRevD.110.030001",
+      "publishedDate": "2024-05-31",
+      "version": "RPP 2024",
+      "accessedAt": "2026-11-27",
+      "license": "not stated in the fetched PDF",
+      "redistribution": "unknown",
+      "accessNotes": "WebFetch downloaded PDF (82.5 KB), read rendered page 1; PDF footer 'Created: 5/31/2024 10:12'. A newer PDG edition may exist; not checked",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-pdg2024-baryons",
+      "title": "Review of Particle Physics, Summary Tables: Baryons",
+      "author": "S. Navas et al. (Particle Data Group)",
+      "publisher": "Particle Data Group / Phys. Rev. D 110, 030001 (2024)",
+      "url": "https://pdg.lbl.gov/2024/tables/rpp2024-sum-baryons.pdf",
+      "doi": "10.1103/PhysRevD.110.030001",
+      "publishedDate": "2024",
+      "version": "RPP 2024",
+      "accessedAt": "2026-11-27",
+      "license": "not stated in the fetched PDF",
+      "redistribution": "unknown",
+      "accessNotes": "WebFetch downloaded PDF (332 KB), text extracted with pdftotext; neutron block, line […]. A newer PDG edition may exist; not checked",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-lnhb-c14",
+      "title": "Table de Radionucléides: C-14",
+      "author": "V.P. Chechev, M.M. Bé (KRI, LNHB)",
+      "publisher": "LNE-LNHB/CEA (Laboratoire National Henri Becquerel), DDEP evaluation",
+      "url": "http://www.lnhb.fr/nuclides/C-14_tables.pdf",
+      "doi": null,
+      "publishedDate": "2012-10-29",
+      "version": "evaluation 11/07/1998 - 29/10/2012",
+      "accessedAt": "2026-11-27",
+      "license": "not stated",
+      "redistribution": "unknown",
+      "accessNotes": "WebFetch downloaded PDF, text extracted with pdftotext; section 2 Nuclear Data",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-lnhb-u238",
+      "title": "Table de Radionucléides: U-238",
+      "author": "V. Chisté, M.M. Bé (LNE-LNHB)",
+      "publisher": "LNE-LNHB/CEA (Laboratoire National Henri Becquerel), DDEP evaluation",
+      "url": "http://www.lnhb.fr/nuclides/U-238_tables.pdf",
+      "doi": null,
+      "publishedDate": "2006-04-24",
+      "version": "evaluation 12/12/2005 - 24/4/2006",
+      "accessedAt": "2026-11-27",
+      "license": "not stated",
+      "redistribution": "unknown",
+      "accessNotes": "WebFetch downloaded PDF, text extracted with pdftotext; section 2 Nuclear Data",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nssdc-earth",
+      "title": "Earth Fact Sheet",
+      "author": "David R. Williams",
+      "publisher": "NASA Goddard Space Flight Center, NSSDCA",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "doi": null,
+      "publishedDate": "2024-11-15",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "No licence stated on page; NASA Goddard (NSSDCA) US federal government work, public domain under US law",
+      "redistribution": "allowed",
+      "accessNotes": "WebFetch of HTML page (two passes), 2026-11-27; 'Last updated: 15 November 2024, DRW'",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nssdc-moon",
+      "title": "Moon Fact Sheet",
+      "author": "David R. Williams",
+      "publisher": "NASA Goddard Space Flight Center, NSSDCA",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+      "doi": null,
+      "publishedDate": "2024-01-11",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "No licence stated on page; NASA Goddard (NSSDCA) US federal government work, public domain under US law",
+      "redistribution": "allowed",
+      "accessNotes": "WebFetch of HTML page, 2026-11-27; 'Last Updated: 11 January 2024, DRW'",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nssdc-jupiter",
+      "title": "Jupiter Fact Sheet",
+      "author": "David R. Williams",
+      "publisher": "NASA Goddard Space Flight Center, NSSDCA",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+      "doi": null,
+      "publishedDate": "2024-10-02",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "No licence stated on page; NASA Goddard (NSSDCA) US federal government work, public domain under US law",
+      "redistribution": "allowed",
+      "accessNotes": "WebFetch of HTML page, 2026-11-27; 'Last Updated: 2 October 2024, DRW'",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nssdc-comets",
+      "title": "Comet Fact Sheet",
+      "author": "David R. Williams",
+      "publisher": "NASA Goddard Space Flight Center, NSSDCA",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/cometfact.html",
+      "doi": null,
+      "publishedDate": "2016-01-04",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "No licence stated on page; NASA Goddard (NSSDCA) US federal government work, public domain under US law",
+      "redistribution": "allowed",
+      "accessNotes": "WebFetch of HTML page, 2026-11-27; 'Last Updated: 04 January 2016, DRW'",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nasa-sun-facts",
+      "title": "Our Sun: Facts",
+      "author": null,
+      "publisher": "NASA Science (science.nasa.gov)",
+      "url": "https://science.nasa.gov/sun/facts/",
+      "doi": null,
+      "publishedDate": "2026-09-17",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "No licence stated for text; NASA text is a US federal work (public domain). The Milky Way illustration in the same section is credited NASA/Adler/U. Chicago/Wesleyan/JPL-Caltech and is NOT reused",
+      "redistribution": "allowed",
+      "accessNotes": "WebFetch of HTML page, 2026-11-27; page last updated Sep 17, 2026; text only",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-usgs-age-earth",
+      "title": "Geologic Time: Age of the Earth",
+      "author": null,
+      "publisher": "U.S. Geological Survey",
+      "url": "https://pubs.usgs.gov/gip/geotime/age.html",
+      "doi": null,
+      "publishedDate": "2007-07-09",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "No licence stated on page; USGS US federal government work, public domain",
+      "redistribution": "allowed",
+      "accessNotes": "WebFetch returned 403; page downloaded with curl (HTTP 200) on 2026-11-27 and read as text; 'Last updated July 9, 2007'",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-planck2018-vi",
+      "title": "Planck 2018 results. VI. Cosmological parameters",
+      "author": "Planck Collaboration (N. Aghanim et al.)",
+      "publisher": "Astronomy & Astrophysics 641, A6 (2020); arXiv:1807.06209",
+      "url": "https://arxiv.org/abs/1807.06209",
+      "doi": "10.1051/0004-6361/201833910",
+      "publishedDate": "2020-09",
+      "version": "arXiv v4",
+      "accessedAt": "2026-11-27",
+      "license": "arXiv nonexclusive distribution license 1.0 (as shown on arXiv abstract page)",
+      "redistribution": "reference-only",
+      "accessNotes": "Abstract page via WebFetch; full PDF (arxiv.org/pdf/1807.06209, 8.9 MB) downloaded by WebFetch and text extracted with pdftotext; Table 2 read. A&A HTML returned 403",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-thf-k12-assembly-line",
+      "title": "K-12 Research Guide: Assembly Line",
+      "author": null,
+      "publisher": "The Henry Ford (museum), Ask Us / K-12 research guide",
+      "url": "https://askus.thehenryford.org/K12/faq/433848",
+      "doi": null,
+      "publishedDate": "2026-02-26 (last updated)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated (Springshare footer: 'All rights reserved')",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened with WebFetch on 2026-11-27; sentence read on page.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-fhwa-mct-strength-testing",
+      "title": "Concrete Strength Testing Practices for Acceptance: Observations from the FHWA Mobile Concrete Trailer (HIF-18-001)",
+      "author": null,
+      "publisher": "U.S. Department of Transportation, Federal Highway Administration",
+      "url": "https://www.fhwa.dot.gov/PAVEMENT/concrete/trailer/resources/hif18001.pdf",
+      "doi": null,
+      "publishedDate": "2017-11-29 (PDF creation date)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; US federal government work (public domain)",
+      "redistribution": "allowed",
+      "accessNotes": "Downloaded via WebFetch on 2026-11-27, text extracted with pdftotext; page 1, first paragraph.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-doe-led-luminaire-lifetime-2014",
+      "title": "LED Luminaire Lifetime: Recommendations for Testing and Reporting, Third Edition",
+      "author": "Next Generation Lighting Industry Alliance, LED Systems Reliability Consortium",
+      "publisher": "U.S. Department of Energy (Solid-State Lighting Program), hosted on energy.gov",
+      "url": "https://www.energy.gov/sites/prod/files/2015/01/f19/led_luminaire_lifetime_guide_sept2014.pdf",
+      "doi": null,
+      "publishedDate": "2014-09",
+      "version": "Third edition",
+      "accessedAt": "2026-11-27",
+      "license": "not stated (industry consortium document published with DOE support; not clearly a pure federal work)",
+      "redistribution": "unknown",
+      "accessNotes": "Downloaded with curl on 2026-11-27, text extracted with pdftotext; section 1.2.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-ncats-drugdev",
+      "title": "Our Impact on Drug Discovery and Development",
+      "author": null,
+      "publisher": "National Center for Advancing Translational Sciences (NCATS), U.S. National Institutes of Health",
+      "url": "https://ncats.nih.gov/preclinical/drugdev",
+      "doi": null,
+      "publishedDate": "2025-09-09 (last updated)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; US federal government work (public domain)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with WebFetch on 2026-11-27.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-ifab-law7",
+      "title": "Laws of the Game, Law 7 - The Duration of the Match",
+      "author": null,
+      "publisher": "The International Football Association Board (IFAB)",
+      "url": "https://www.theifab.com/laws/latest/the-duration-of-the-match/",
+      "doi": null,
+      "publishedDate": null,
+      "version": "latest (online, 2026)",
+      "accessedAt": "2026-11-27",
+      "license": "The IFAB 2026 All Rights Reserved",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened with WebFetch on 2026-11-27; Law 7.1 and 7.2.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-wa-100m-men",
+      "title": "All-time top lists: 100 metres, men, senior",
+      "author": null,
+      "publisher": "World Athletics",
+      "url": "https://worldathletics.org/records/all-time-toplists/sprints/100-metres/all/men/senior",
+      "doi": null,
+      "publishedDate": null,
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "2026 World Athletics. All Rights Reserved.",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened with WebFetch on 2026-11-27; top row of the list. The world-records page itself rendered an empty table to the fetcher.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-wa-marathon-men",
+      "title": "All-time top lists: Marathon, men, senior",
+      "author": null,
+      "publisher": "World Athletics",
+      "url": "https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior",
+      "doi": null,
+      "publishedDate": null,
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "2026 World Athletics. All Rights Reserved.",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened with WebFetch on 2026-11-27; top row of the list.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-cdc-clean-hands",
+      "title": "About Handwashing (Clean Hands)",
+      "author": null,
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "url": "https://www.cdc.gov/clean-hands/about/index.html",
+      "doi": null,
+      "publishedDate": null,
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated on page; US federal government work (public domain)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with WebFetch on 2026-11-27; section 'How it works'.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nhs-teeth",
+      "title": "How to keep your teeth clean",
+      "author": null,
+      "publisher": "NHS (UK National Health Service)",
+      "url": "https://www.nhs.uk/live-well/healthy-teeth-and-gums/how-to-keep-your-teeth-clean/",
+      "doi": null,
+      "publishedDate": "2025-06-30 (last reviewed)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Crown copyright (no other licence statement on page)",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened with WebFetch on 2026-11-27.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-clemson-eggs",
+      "title": "Safe Handling of Eggs (HGIC fact sheet)",
+      "author": "Pamela Schmutz; E.H. Hoyle",
+      "publisher": "Clemson University Cooperative Extension, Home & Garden Information Center",
+      "url": "https://hgic.clemson.edu/factsheet/safe-handling-of-eggs/",
+      "doi": null,
+      "publishedDate": "2025-05-16 (updated; first published 1999-02)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Copyright 2026 Clemson University; no open licence stated",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened with WebFetch on 2026-11-27; section 'Cooked Eggs'.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-inei-brochure",
+      "title": "The Certified Italian Espresso and Cappuccino",
+      "author": "Luigi Odello; Carlo Odello",
+      "publisher": "Istituto Nazionale Espresso Italiano (Italian Espresso National Institute); printed by Centro Studi Assaggiatori",
+      "url": "https://www.nespressoguide.com/files/File/istituzionale_inei_hq_en.pdf",
+      "doi": null,
+      "publishedDate": "2007-09-14 (PDF creation date)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "(c) Luigi Odello e Carlo Odello",
+      "redistribution": "reference-only",
+      "accessNotes": "Downloaded via WebFetch on 2026-11-27 and read with pdftotext. This is a third-party-hosted copy of the INEI brochure; the original on espressoitaliano.org was not reached.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-servicepublic-duree-travail",
+      "title": "Durée de travail du salarié à temps plein",
+      "author": null,
+      "publisher": "Service-Public.gouv.fr (Direction de l'information légale et administrative, République française)",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1911",
+      "doi": null,
+      "publishedDate": "2025-09-25 (Vérifié le)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Licence Ouverte etalab-2.0 (site footer)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with WebFetch on 2026-11-27 (after redirect from service-public.fr).",
+      "verificationStatus": "qualified"
     }
   ],
   "groups": [
@@ -14722,6 +17199,24 @@
       },
       "status": "contested",
       "reason": "The NVIDIA page does not state whether 296 TFLOPS FP64 is per GPU or for the 8-GPU HGX board (the table mixes per-GPU and total rows): not comparable, withheld (lot-2 verifier note)."
+    },
+    {
+      "id": "astro-light-time-earth-moon-m1",
+      "label": {
+        "fr": "Temps de trajet de la lumiere Terre-Lune (distance moyenne)",
+        "en": "Light travel time Earth-Moon (mean distance)"
+      },
+      "status": "rejected",
+      "reason": "Duplicate (R1 lot 2026-11-27): the corpus already has earth-moon-light-time-one-way, calculated from the same NASA semimajor axis. Not duplicated (directive R1 v2.1)."
+    },
+    {
+      "id": "astro-light-time-sun-earth-m1",
+      "label": {
+        "fr": "Temps de trajet de la lumiere Soleil-Terre (distance moyenne)",
+        "en": "Light travel time Sun-Earth (mean distance)"
+      },
+      "status": "rejected",
+      "reason": "Duplicate (R1 lot 2026-11-27): the corpus already has astronomical-unit-light-time. Not duplicated (directive R1 v2.1)."
     }
   ]
 }

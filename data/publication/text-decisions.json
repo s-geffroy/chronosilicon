@@ -347,6 +347,33 @@
    "basis": "rule:locator-label"
   },
   {
+   "scope": "measurement:astro-age-of-universe-m1",
+   "field": "locator",
+   "text": "'Age [Gyr]'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:astro-age-of-universe-m1",
+   "field": "notes",
+   "text": "'...'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:astro-age-of-universe-m1",
+   "field": "notes",
+   "text": "'Hubble tension'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
    "scope": "measurement:audio-sample-rate-44100-m1",
    "field": "notes",
    "text": "'standard PCM rate'",
@@ -598,6 +625,69 @@
    "decision": "redact",
    "ground": "third-party-excerpt",
    "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:day-espresso-extraction-m1",
+   "field": "conditions.en",
+   "text": "'Espresso Italiano'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:day-espresso-extraction-m1",
+   "field": "conditions.fr",
+   "text": "« Espresso Italiano »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:day-espresso-extraction-m1",
+   "field": "locator",
+   "text": "'Percolation time'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:day-football-match-m1",
+   "field": "locator",
+   "text": "'Periods of play'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:day-marathon-best-men-m1",
+   "field": "notes",
+   "text": "'fastest'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:day-marathon-best-men-m1",
+   "field": "notes",
+   "text": "'world record'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:day-soft-boiled-egg-m1",
+   "field": "locator",
+   "text": "'Cooked Eggs'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
   },
   {
    "scope": "measurement:ddr4-3200-cl-micron-m1",
@@ -1383,6 +1473,61 @@
    "scope": "measurement:imec-sot-mram-switching-time-m1",
    "field": "notes",
    "text": "'down to 210 ps'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ind-led-lamp-lifetime-m1",
+   "field": "conditions.en",
+   "text": "lamps 'appear to be capable of at least 25,000 hours of operation'",
+   "kind": "overlap",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "review",
+   "note": "Ten-word passage of the source sentence: withheld (source redistribution unknown); the value stays in the value field."
+  },
+  {
+   "scope": "measurement:ind-led-lamp-lifetime-m1",
+   "field": "locator",
+   "text": "'What makes LED-based luminaires different?'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ind-led-lamp-lifetime-m1",
+   "field": "notes",
+   "text": "'appear to be capable of at least'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:ind-led-lamp-lifetime-m1",
+   "field": "notes",
+   "text": "'up to 25 times longer than incandescent'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:ind-model-t-assembly-moving-line-m1",
+   "field": "locator",
+   "text": "'built in only ninety minutes'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ind-model-t-assembly-moving-line-m1",
+   "field": "notes",
+   "text": "'produced every 93 minutes'",
    "kind": "quoted",
    "decision": "publish",
    "ground": "term",
@@ -2610,6 +2755,69 @@
    "basis": "rule:quoted-6-words"
   },
   {
+   "scope": "measurement:phys-carbon-14-half-life-m1",
+   "field": "locator",
+   "text": "'Nuclear Data'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:phys-carbon-14-half-life-m1",
+   "field": "notes",
+   "text": "'(30)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:phys-carbon-14-half-life-m1",
+   "field": "notes",
+   "text": "'Libby'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:phys-free-neutron-mean-lifetime-m1",
+   "field": "notes",
+   "text": "'neutron lifetime puzzle'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:phys-planck-time-m1",
+   "field": "locator",
+   "text": "'Planck time'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:phys-uranium-238-half-life-m1",
+   "field": "locator",
+   "text": "'Nuclear Data'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:phys-uranium-238-half-life-m1",
+   "field": "notes",
+   "text": "'109'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
    "scope": "measurement:rtx4090-memory-bandwidth-m1",
    "field": "locator",
    "text": "'GeForce RTX 4090 vs RTX 3090 Ti vs 2080 Ti'",
@@ -3511,6 +3719,24 @@
    "basis": "rule:quoted-6-words"
   },
   {
+   "scope": "phenomenon:astro-sun-galactic-orbit",
+   "field": "label.en",
+   "text": "'galactic year'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "phenomenon:astro-sun-galactic-orbit",
+   "field": "label.fr",
+   "text": "« année galactique »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
    "scope": "source:src-agner-instr-tables",
    "field": "license",
    "text": "'Public distribution and mirroring is not allowed'",
@@ -3523,6 +3749,15 @@
    "scope": "source:src-azure-latency",
    "field": "accessNotes",
    "text": "'source row x destination column'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-clemson-eggs",
+   "field": "accessNotes",
+   "text": "'Cooked Eggs'",
    "kind": "quoted",
    "decision": "publish",
    "ground": "locating-label",
@@ -3655,6 +3890,33 @@
    "basis": "rule:licence-notice"
   },
   {
+   "scope": "source:src-nist-codata2022-planck-time",
+   "field": "accessNotes",
+   "text": "'Source: 2022 CODATA'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-pdg2024-baryons",
+   "field": "accessNotes",
+   "text": "'Mean life τ = 878.4 ± 0.5 s (S = 1.8)'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "source:src-pdg2024-leptons",
+   "field": "accessNotes",
+   "text": "'Created: 5/31/2024 10:12'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
    "scope": "source:src-seagate-exos-x20",
    "field": "license",
    "text": "'© 2021 Seagate Technology LLC. All rights reserved.'",
@@ -3667,6 +3929,15 @@
    "scope": "source:src-solidigm-p5520-brief",
    "field": "license",
    "text": "'© Solidigm 2022. All rights reserved.'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "attribution",
+   "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "source:src-thf-k12-assembly-line",
+   "field": "license",
+   "text": "'All rights reserved'",
    "kind": "quoted",
    "decision": "publish",
    "ground": "attribution",

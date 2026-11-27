@@ -75,3 +75,46 @@ export function formatCalendarShort(seconds: number, lang: Lang): string {
 export function formatLevel(level: number, lang: Lang): string {
   return new Intl.NumberFormat(LOCALE[lang], { maximumFractionDigits: 2 }).format(level * 100);
 }
+
+const SUP: Record<string, string> = { '-': '⁻', '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹' };
+/** 10 to an integer power in superscript: pow10(-18) = "10⁻¹⁸". */
+export const pow10 = (e: number): string => `10${String(e).replace(/./g, (c) => SUP[c] ?? c)}`;
+
+/**
+ * Readable label of a decade 10^e seconds for the universal chronology (R1 v2.1):
+ * SI prefixes below one second ("100 ps"), then minutes, hours, days, years, and powers of ten
+ * of years beyond 10 000 ("10⁶ a"). Never "1E18" or long digit strings.
+ */
+export function formatDecade(e: number, lang: Lang): string {
+  const s = 10 ** e;
+  const y = lang === 'fr' ? 'a' : 'y';
+  if (e < 0) {
+    const prefixes: Array<[string, number]> = [['as', -18], ['fs', -15], ['ps', -12], ['ns', -9], ['µs', -6], ['ms', -3]];
+    const [u, p] = prefixes.find(([, p]) => e >= p && e < p + 3) ?? ['as', -18];
+    return e < -18 ? `${pow10(e)} s` : `${10 ** (e - p)} ${u}`;
+  }
+  if (s < 60) return `${s} s`;
+  if (s < 3600) return `${formatNumber(s / 60, lang, 2)} min`;
+  if (s < 86_400) return `${formatNumber(s / 3600, lang, 2)} h`;
+  if (s < 31_557_600) return `${formatNumber(s / 86_400, lang, 2)} ${lang === 'fr' ? 'j' : 'd'}`;
+  const years = s / 31_557_600;
+  if (years < 1e4) return `${formatNumber(years, lang, 2)} ${y}`;
+  return `${sci(years, lang)} ${y}`;
+}
+
+/** "3,2 × 10¹⁰" (two significant digits), or "10⁶" when the mantissa is 1. */
+function sci(v: number, lang: Lang): string {
+  let k = Math.floor(Math.log10(v));
+  let m = Number((v / 10 ** k).toPrecision(2));
+  if (m >= 10) { m /= 10; k += 1; }
+  return m === 1 ? pow10(k) : `${formatNumber(m, lang, 2)} × ${pow10(k)}`;
+}
+
+/** Same, for a subjective duration in seconds (any real exponent). */
+export function formatDecadeSubjective(seconds: number, lang: Lang): string {
+  const years = seconds / 31_557_600;
+  const y = lang === 'fr' ? 'a' : 'y';
+  if (years >= 1e4) return `${sci(years, lang)} ${y}`;
+  if (seconds < 1e-3) return `${sci(seconds, lang)} s`;
+  return formatCalendarShort(seconds, lang);
+}

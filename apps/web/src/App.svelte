@@ -32,6 +32,7 @@
   <div class="brand">
     <p class="name">{t('app.title')}</p>
     <p class="tagline">{t('app.tagline')}</p>
+    <p class="signature">{t('app.subtitle')}</p>
   </div>
   <div class="global-controls">
     <label>
