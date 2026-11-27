@@ -5,8 +5,11 @@ Lire avant toute modification : `PROJECT_STATUS.md`, `NEXT_ACTIONS.md`,
 `docs/CS-14_Contrat.md`, `docs/adr/`.
 
 ## Projet
-- Atlas pedagogique statique des echelles de temps informatiques, FR/EN.
-  TypeScript strict + Svelte + Vite + D3, monorepo npm workspaces.
+- Atlas interactif et pedagogique des echelles de temps, FR/EN : comparer sur
+  une meme echelle des phenomenes informatiques, physiques, biologiques,
+  physiologiques, industriels, astronomiques et de la vie courante (ADR-0012,
+  R1 = C). Ne pas privilegier l'informatique ; enrichir le corpus par lots
+  equilibres. TypeScript strict + Svelte + Vite + D3, monorepo npm workspaces.
 - **D1 a D17 sont validees et figees.** On ne les rouvre pas sans decision
   explicite de l'utilisateur. Les choix mineurs passent par une ADR dans
   `docs/adr/`.
@@ -15,8 +18,13 @@ Lire avant toute modification : `PROJECT_STATUS.md`, `NEXT_ACTIONS.md`,
   acceptee sans son rapport `docs/reports/G*.md`.
 - **Aucune donnee, mesure, distribution, test ou publication inventes.** Toute
   valeur a une source consultee, un localisateur, des conditions, une unite et
-  un statut. Une valeur inconnue reste inconnue (null explicite). Les valeurs
-  illustratives vont dans `tests/fixtures/` uniquement.
+  un statut. Une valeur inconnue reste inconnue (null explicite). Intervalle
+  quand la variabilite est significative. Durees conventionnelles
+  (`conventional`) et ordres de grandeur illustratifs (`illustrative`, avec
+  plage) admis s'ils sont sources et signales (ADR-0012).
+- Gouvernance proportionnee (ADR-0012) : pas de certification ni d'audit
+  systematique ; la porte automatique et l'accord de l'utilisateur pour publier
+  suffisent.
 - `data/raw/` est immuable (MANIFEST.sha256) ; `data/curated/` est derive par
   `scripts/curate.ts` ; `data/validated/corpus.json` est derive par
   `npm run build:data`.

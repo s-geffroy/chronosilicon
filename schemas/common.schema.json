@@ -12,12 +12,12 @@
       "properties": { "fr": { "type": "string", "minLength": 1 }, "en": { "type": "string", "minLength": 1 } }
     },
     "domain": {
-      "enum": ["physics", "logic", "cpu", "memory", "accelerator", "interconnect", "storage", "os", "network", "distributed", "ai", "peripheral", "human", "space", "emerging"]
+      "enum": ["physics", "logic", "cpu", "memory", "accelerator", "interconnect", "storage", "os", "network", "distributed", "ai", "peripheral", "human", "space", "emerging", "biology", "astronomy", "industry", "everyday"]
     },
     "quantityKind": {
       "enum": ["duration", "frequency", "throughput", "transfer_rate", "distance", "speed", "data_size", "cycle_count", "compute_rate"]
     },
-    "provenanceType": { "enum": ["measured", "documented", "calculated", "estimated", "illustrative"] },
+    "provenanceType": { "enum": ["measured", "documented", "calculated", "estimated", "conventional", "illustrative"] },
     "verificationStatus": { "enum": ["pending", "qualified", "contested", "rejected"] },
     "redistribution": { "enum": ["allowed", "reference-only", "unknown"] }
   }

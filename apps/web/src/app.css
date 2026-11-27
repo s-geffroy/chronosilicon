@@ -104,6 +104,16 @@ legend { font-size: 0.85rem; color: var(--muted); padding: 0 0.25rem; }
 .dot { position: absolute; top: 40%; width: 0.7rem; height: 0.7rem; margin-left: -0.35rem; transform: translateY(-50%); background: var(--dot); border-radius: 50%; }
 .dot.prov-calculated { border-radius: 0; transform: translateY(-50%) rotate(45deg); }
 .dot.prov-measured { background: none; border: 2px solid var(--dot); }
+/* ADR-0012: one colour per universe (Okabe-Ito palette, colour-blind safe); shape still encodes provenance. */
+.uni-computing { --dot: #0072b2; } .uni-physics { --dot: #cc79a7; } .uni-astronomy { --dot: #56b4e9; }
+.uni-biology { --dot: #009e73; } .uni-physiology { --dot: #d55e00; } .uni-industry { --dot: #6b6b6b; } .uni-everyday { --dot: #e69f00; }
+.dot.prov-conventional { border-radius: 0.1rem; }
+.dot.prov-illustrative { background: none; border: 2px dashed var(--dot); }
+.universes { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.75rem 0; }
+.uni-btn { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; background: none; color: var(--fg); font-size: 0.9rem; }
+.uni-btn[aria-pressed='true'] { border-color: var(--fg); font-weight: 600; }
+.uni-btn .swatch { width: 0.7rem; height: 0.7rem; border-radius: 50%; background: var(--dot); }
+.meta .flag, dd.flag { font-style: italic; }
 .val { position: absolute; bottom: -0.1rem; font-size: 0.72rem; color: var(--muted); white-space: nowrap; padding-left: 0.5rem; }
 figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; }
 

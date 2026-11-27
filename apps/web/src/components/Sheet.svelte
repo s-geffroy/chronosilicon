@@ -49,6 +49,9 @@
       <dt>{t('sheet.conditions')}</dt><dd>{m.conditions[lang]}</dd>
       {#if m.configuration}<dt>{t('sheet.configuration')}</dt><dd>{m.configuration}</dd>{/if}
       <dt>{t('sheet.provenance')}</dt><dd>{t(`prov.${m.provenanceType}`)} · {t('sheet.verification')} : {t(`ver.${m.verificationStatus}`)}</dd>
+      {#if m.provenanceType === 'conventional' || m.provenanceType === 'illustrative'}
+        <dd class="flag" data-testid="sheet-flag">{t(m.provenanceType === 'conventional' ? 'sheet.conventionalNote' : 'sheet.illustrativeNote')}</dd>
+      {/if}
       {#if m.era !== null}<dt>{t('sheet.era')}</dt><dd>{m.era}</dd>{/if}
       {#if level !== 'explore'}
         <dt>{t('sheet.si')}</dt>

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { scaleLog } from 'd3-scale';
-  import { DOMAINS, type Domain, type NormalizedMeasurement, type ProvenanceType } from '@chronosilicon/ontology';
+  import { DOMAINS, UNIVERSES, UNIVERSE_OF, type Domain, type NormalizedMeasurement, type ProvenanceType, type Universe } from '@chronosilicon/ontology';
   import { clockedObserver, toSubjective } from '@chronosilicon/observers';
   import { app } from '../lib/app.svelte';
   import { corpus, phenomenonOf } from '../lib/corpus';
@@ -14,6 +14,10 @@
   const observer = $derived(clockedObserver(app.s.frequencyHz));
 
   const presentDomains: Domain[] = DOMAINS.filter((d) => corpus.measurements.some((m) => phenomenonOf(m).domain === d));
+  // ADR-0012: universes group domains, so phenomena from different worlds can be compared at a glance.
+  const presentUniverses: Universe[] = UNIVERSES.filter((u) => presentDomains.some((d) => UNIVERSE_OF[d] === u));
+  const domainsOf = (u: Universe) => presentDomains.filter((d) => UNIVERSE_OF[d] === u);
+  const universeOf = (m: NormalizedMeasurement) => UNIVERSE_OF[phenomenonOf(m).domain];
   const presentProv: ProvenanceType[] = PROVENANCES.filter((p) => corpus.measurements.some((m) => m.provenanceType === p));
 
   const activeDomains = $derived(app.s.domains ?? presentDomains);
@@ -100,6 +104,17 @@
     </fieldset>
   </div>
 
+  <div class="universes" role="group" aria-label={t('universe.label')} data-testid="universes">
+    <button type="button" class="uni-btn" aria-pressed={app.s.domains === null} onclick={() => app.set({ domains: null })}>{t('universe.all')}</button>
+    {#each presentUniverses as u (u)}
+      {@const ds = domainsOf(u)}
+      {@const on = app.s.domains !== null && ds.every((d) => activeDomains.includes(d)) && activeDomains.every((d) => ds.includes(d))}
+      <button type="button" class="uni-btn uni-{u}" aria-pressed={on} onclick={() => app.set({ domains: on ? null : ds })} data-testid={`universe-${u}`}>
+        <span class="swatch" aria-hidden="true"></span>{t(`universe.${u}`)}
+      </button>
+    {/each}
+  </div>
+
   <details class="filters">
     <summary>{t('filter.domains')} · {t('filter.provenance')}</summary>
     <fieldset>
@@ -145,10 +160,10 @@
         <ol class="rows" data-testid="chart-rows">
           {#each positive as m (m.id)}
             <li>
-              <button type="button" class="row dom-{phenomenonOf(m).domain}" onclick={() => open(m)} data-id={m.id}>
+              <button type="button" class="row dom-{phenomenonOf(m).domain} uni-{universeOf(m)}" onclick={() => open(m)} data-id={m.id}>
                 <span class="row-label">
                   <span class="lbl">{label(m)}</span>
-                  <span class="meta">{domainName(m)} · {t(`prov.${m.provenanceType}`)}</span>
+                  <span class="meta">{t(`universe.${universeOf(m)}`)} · {domainName(m)} · <span class:flag={m.provenanceType === 'conventional' || m.provenanceType === 'illustrative'}>{t(`prov.${m.provenanceType}`)}</span></span>
                 </span>
                 <span class="track">
                   {#each ticks as tk (tk)}<span class="grid" style:left="{scale(tk)}%"></span>{/each}

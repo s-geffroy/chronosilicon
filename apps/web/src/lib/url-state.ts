@@ -12,7 +12,7 @@ export type Level = 'explore' | 'technical' | 'scientific';
 export const LEVELS: readonly Level[] = ['explore', 'technical', 'scientific'];
 export type Axis = 'physical' | 'subjective';
 export type View = 'chart' | 'table';
-export const PROVENANCES: readonly ProvenanceType[] = ['measured', 'documented', 'calculated', 'estimated'];
+export const PROVENANCES: readonly ProvenanceType[] = ['measured', 'documented', 'calculated', 'estimated', 'conventional', 'illustrative'];
 
 export interface UrlState {
   route: Route;

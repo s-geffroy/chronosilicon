@@ -52,9 +52,11 @@ describe('invariants', () => {
     const e = checkInvariants(d).join();
     expect(e).toMatch(/unknown source/); expect(e).toMatch(/unknown phenomenon/); expect(e).toMatch(/duplicate measurement/);
   });
-  it('illustrative values are refused', () => {
-    const d = base(); d.measurements[0].provenanceType = 'illustrative';
-    expect(checkInvariants(d).join()).toMatch(/illustrative/);
+  // ADR-0012 (R1 = C) changed this rule: illustrative values were refused; they are now admitted
+  // when flagged and given with a range.
+  it('illustrative values need a range', () => {
+    const d = base(); d.measurements[0].provenanceType = 'illustrative'; d.measurements[0].low = null; d.measurements[0].high = null;
+    expect(checkInvariants(d).join()).toMatch(/illustrative value needs a range/);
   });
   it('measured values need a protocol; statistics need ordered quantiles', () => {
     const d = base(); d.measurements[0].provenanceType = 'measured'; d.measurements[0].protocol = null;

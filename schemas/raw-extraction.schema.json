@@ -112,7 +112,9 @@
               "measured",
               "documented",
               "calculated",
-              "estimated"
+              "estimated",
+              "conventional",
+              "illustrative"
             ]
           },
           "sourceId": {

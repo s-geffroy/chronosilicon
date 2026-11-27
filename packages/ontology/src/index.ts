@@ -8,15 +8,36 @@ export const SCHEMA_VERSION = '1.0.0' as const;
 
 export type Domain =
   | 'physics' | 'logic' | 'cpu' | 'memory' | 'accelerator' | 'interconnect' | 'storage' | 'os'
-  | 'network' | 'distributed' | 'ai' | 'peripheral' | 'human' | 'space' | 'emerging';
+  | 'network' | 'distributed' | 'ai' | 'peripheral' | 'human' | 'space' | 'emerging'
+  | 'biology' | 'astronomy' | 'industry' | 'everyday';
 
 export const DOMAINS: readonly Domain[] = [
   'physics', 'logic', 'cpu', 'memory', 'accelerator', 'interconnect', 'storage', 'os',
   'network', 'distributed', 'ai', 'peripheral', 'human', 'space', 'emerging',
+  'biology', 'astronomy', 'industry', 'everyday',
 ];
 
+/**
+ * Universes (ADR-0012, editorial scope R1 = C): the atlas compares phenomena from very
+ * different worlds on one time scale. Each domain belongs to exactly one universe.
+ */
+export type Universe = 'computing' | 'physics' | 'astronomy' | 'biology' | 'physiology' | 'industry' | 'everyday';
+export const UNIVERSES: readonly Universe[] = ['computing', 'physics', 'astronomy', 'biology', 'physiology', 'industry', 'everyday'];
+export const UNIVERSE_OF: Readonly<Record<Domain, Universe>> = {
+  logic: 'computing', cpu: 'computing', memory: 'computing', accelerator: 'computing', interconnect: 'computing',
+  storage: 'computing', os: 'computing', network: 'computing', distributed: 'computing', ai: 'computing',
+  peripheral: 'computing', emerging: 'computing',
+  physics: 'physics', space: 'astronomy', astronomy: 'astronomy', biology: 'biology', human: 'physiology',
+  industry: 'industry', everyday: 'everyday',
+};
+
 /** How a value came to be — orthogonal to its verification status. */
-export type ProvenanceType = 'measured' | 'documented' | 'calculated' | 'estimated' | 'illustrative';
+/**
+ * `conventional`: a duration fixed by a rule, standard or recommendation (a football match, the 28-day
+ * concrete test); `illustrative`: a typical everyday order of magnitude, given with a range (ADR-0012).
+ * Both stay sourced and are flagged as such in the interface.
+ */
+export type ProvenanceType = 'measured' | 'documented' | 'calculated' | 'estimated' | 'conventional' | 'illustrative';
 export type VerificationStatus = 'pending' | 'qualified' | 'contested' | 'rejected';
 export type Redistribution = 'allowed' | 'reference-only' | 'unknown';
 
@@ -328,7 +349,8 @@ export function checkInvariants({ sources, phenomena, measurements }: InvariantI
     if (m.low !== null && m.high !== null && m.low > m.high) errors.push(`${at}: low > high`);
     if (m.low !== null && m.value < m.low) errors.push(`${at}: value < low`);
     if (m.high !== null && m.value > m.high) errors.push(`${at}: value > high`);
-    if (m.provenanceType === 'illustrative') errors.push(`${at}: illustrative values are not admissible in the corpus`);
+    // ADR-0012: illustrative values are admitted, flagged, and must carry their range.
+    if (m.provenanceType === 'illustrative' && (m.low === null || m.high === null)) errors.push(`${at}: an illustrative value needs a range (low and high)`);
     if (m.provenanceType === 'measured' && !m.protocol) errors.push(`${at}: measured value without protocol`);
     const u = m.uncertainty;
     if ((u || m.statistics) && !m.protocol) errors.push(`${at}: published dispersion or statistics require a protocol (CS-04)`);

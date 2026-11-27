@@ -24,14 +24,15 @@ describe('contribute:check (G5: contribution quality)', () => {
     expect(checkExtraction(f).join()).toMatch(/formula and at least one input/);
   });
   it('accepts a complete extraction', () => expect(checkExtraction(ok())).toEqual([]));
-  it('rejects missing locator, unknown unit, unknown source, illustrative values', () => {
+  it('rejects missing locator, unknown unit, unknown source, unknown provenance', () => {
     const a = ok(); delete (a.items[0] as Record<string, unknown>).locator;
     expect(checkExtraction(a).join()).toMatch(/locator/);
     const b = ok(); b.items[0]!.unit = 'parsec/fortnight';
     expect(checkExtraction(b).join()).toMatch(/unknown unit/);
     const c = ok(); c.items[0]!.sourceId = 'src-nope';
     expect(checkExtraction(c).join()).toMatch(/unknown source/);
-    const d = ok(); d.items[0]!.provenanceType = 'illustrative';
+    // ADR-0012: 'illustrative' is now an admitted provenance; an unknown one is still refused.
+    const d = ok(); d.items[0]!.provenanceType = 'guessed';
     expect(checkExtraction(d).length).toBeGreaterThan(0);
   });
   it('rejects calculated values without calculation, and over-long quotes', () => {
