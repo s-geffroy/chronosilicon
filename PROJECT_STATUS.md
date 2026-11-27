@@ -38,6 +38,7 @@ Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source cano
 - 2026-11-26 : dossier `…/CHRONOSILICON/2026-11-26_lot2_corpus-239-valeurs` (https://drive.google.com/drive/folders/1WmZ9aqK6QkJ4jLb4CR9Epo0VYThf96tR). 6 fichiers ; les tailles concordent ; le SHA-256 du rapport G0-lot2 retéléchargé est identique (665adc21…). Archive locale : `docs/archives/2026-11-26_lot2/`.
 - 2026-11-26 : réponses aux mineurs du lot 2 et état associé, ajoutés au dossier Drive du lot 2 (tailles concordantes, 4102 et 4109 octets). Archive locale : `docs/archives/2026-11-26_lot2-mineurs/`.
 - 2026-11-26 : dossier `…/CHRONOSILICON/2026-11-26_incertitude-structuree` (https://drive.google.com/drive/folders/1J70nzEXWGyZICk6_pZmz77eBGSilz4wE), 5 fichiers aux tailles concordantes. Archive locale : `docs/archives/2026-11-26_incertitude/`.
+- 2026-11-27 : dossier `…/CHRONOSILICON/2026-11-27_revue-finale` (https://drive.google.com/drive/folders/1_l8MvuKl9Ze_DLbLxLtjREVuDLboFzSd), 7 fichiers aux tailles concordantes ; le résumé de porte retéléchargé a le même SHA-256 (1a75d98b…). Archive locale : `docs/archives/2026-11-27_revue-finale/`.
 
 ## Décisions non validées par l'utilisateur
 
@@ -49,4 +50,3 @@ Voir `docs/audits/M00.md` §5 (R1 à R6). Les principaux :
 - marque non vérifiée dans les registres officiels ;
 - revue par des agents du même modèle ;
 - extraits courts de sources « reference-only » dans un dépôt public.
-- 2026-11-27 : dossier `…/CHRONOSILICON/2026-11-27_revue-finale` (https://drive.google.com/drive/folders/1_l8MvuKl9Ze_DLbLxLtjREVuDLboFzSd), 7 fichiers aux tailles concordantes ; le résumé de porte retéléchargé a le même SHA-256 (1a75d98b…). Archive locale : `docs/archives/2026-11-27_revue-finale/`.
