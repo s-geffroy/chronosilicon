@@ -1,0 +1,39 @@
+$ npm run test
+
+> chronosilicon@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /work/.cache/r02/fresh4
+
+ ✓ tests/simulator.test.ts (42 tests) 339ms
+ ✓ tests/data-pipeline.test.ts (18 tests) 49ms
+ ✓ tests/observers.test.ts (29 tests) 44ms
+ ✓ apps/web/src/lib/narrative.test.ts (56 tests) 43ms
+ ✓ tests/remediation-02-publication.test.ts (12 tests) 14ms
+ ✓ tests/metrology.test.ts (17 tests) 22ms
+ ✓ apps/web/src/lib/v2.test.ts (15 tests) 6ms
+ ✓ tests/audit-gate.test.ts (18 tests) 9ms
+ ✓ apps/web/src/lib/scenarios.test.ts (12 tests) 11ms
+ ✓ tests/calculated-values.test.ts (29 tests) 5ms
+ ✓ tests/remediation-01-data.test.ts (7 tests) 6ms
+ ✓ tests/stats.test.ts (8 tests) 5ms
+ ✓ tests/remediation-01-rights.test.ts (4 tests) 6ms
+ ✓ apps/web/src/lib/remediation-01.test.ts (5 tests) 74ms
+ ✓ tests/contribute-check.test.ts (4 tests) 404ms
+ ✓ tests/oracle-cs03.test.ts (15 tests) 6ms
+ ✓ tests/curation.test.ts (3 tests) 4ms
+ ✓ apps/web/src/lib/export.test.ts (6 tests) 20ms
+ ✓ apps/web/src/lib/url-state.test.ts (4 tests) 6ms
+ ✓ apps/web/src/lib/i18n.test.ts (3 tests) 27ms
+ ✓ tests/published-dispersion.test.ts (1 test) 4ms
+ ✓ tests/curation-report.test.ts (1 test) 4ms
+
+ Test Files  22 passed (22)
+      Tests  309 passed (309)
+   Start at  14:44:39
+   Duration  5.78s (transform 35%, tests 33%, import 29%, worker 3%)
+
+    Isolate  22 workers spawned · ~100ms startup each (spawn + environment, per file)
+             at least ~2.10s faster with isolate: false — reuses workers across files instead of one per file
+

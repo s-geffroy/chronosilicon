@@ -2,7 +2,7 @@
 
 Ordre de priorité. Mis à jour le 2026-11-27.
 
-0. **[Arrêt : version candidate REMEDIATION-02, `remediation-02-rc3`]** Attendre l'audit de clôture ciblé de ChatGPT et la décision de l'utilisateur. Aucune publication, fusion sur `main`, suppression ni réécriture d'historique sans autorisation explicite.
+0. **[Arrêt : version candidate REMEDIATION-02, `remediation-02-rc4`]** Attendre l'audit de clôture ciblé de ChatGPT et la décision de l'utilisateur. Aucune publication, fusion sur `main`, suppression ni réécriture d'historique sans autorisation explicite.
    - **[Utilisateur]** Décider du traitement des contenus déjà publics : site en ligne (correctif de précaution S2 ou attente), `data/raw` et `data/curated`, historique Git (`docs/audits/AUDIT-02/remediation/PUBLIC-CONTENT-OPTIONS.md`).
    - **[Utilisateur]** Faire relire PUB-1 et le registre `PUBLIC-TEXT-REGISTER.csv` par une personne qualifiée.
    - **[Utilisateur]** Arbitrer le périmètre de P3 (`docs/audits/AUDIT-01/remediation/ROADMAP-P3.md`), séparément de la remédiation.

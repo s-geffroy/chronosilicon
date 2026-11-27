@@ -60,7 +60,7 @@
 
 | Réserve | Réponse |
 |---|---|
-| Reproduction complète non réalisée | Porte officielle rejouée sur un **clone neuf** depuis GitHub, au commit `16093cf`, dans l'image CI (Node 26.13.1) : PASS, 309 unitaires, 100 e2e sur l'artefact. Les 18 sondes de l'auditeur passent sur ce clone sous Node 26 : 18/18 (`TEST-RESULTS.md`). **Cette validation reste interne** ; elle ne remplace pas une reproduction indépendante. |
+| Reproduction complète non réalisée | Porte officielle rejouée sur un **clone neuf** depuis GitHub, aux commits `16093cf` (rc3) et `9227a8e` (rc4), dans l'image CI (Node 26.13.1) : PASS, 309 unitaires, 100 e2e sur l'artefact. Les 18 sondes de l'auditeur passent sur ces clones sous Node 26 : 18/18 (`TEST-RESULTS.md`). **Cette validation reste interne** ; elle ne remplace pas une reproduction indépendante. |
 | AUD-009 : DFS multi-cycle inspecté mais non testé | Déjà testé dans `tests/remediation-01-data.test.ts`, qui rejette un cycle de 2 et un cycle de 3 valeurs. Inchangé. |
 | AUD-016 et AUD-017 : export réel et interface non exécutés | Les e2e exécutent l'export JSON et CSV et la fiche sur l'artefact construit. Le contrôle `publication:check` porte sur le bundle qui produit ces exports. |
 | AUD-018 : `pages.yml` jamais exécuté | Il ne l'est toujours pas, puisqu'il ne tourne que sur `main`. La même séquence, complétée de `publication:check`, tourne dans `ci.yml`. |

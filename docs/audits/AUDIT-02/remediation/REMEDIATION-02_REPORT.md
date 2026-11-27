@@ -12,8 +12,9 @@
 | AUD02-001, porte de vulnérabilités | Confirmé, corrigé | Correspondance exacte par avis. Avant : 6 faux PASS sur 11 fixtures ; après : seul le rapport réel passe. 18 tests. |
 | AUD02-002, heuristique d'extraits | Confirmé, traité | Politique PUB-1 : champs publics explicites, 409 décisions texte par texte, contrôle global et contrôle du site construit, 0 fuite. Options pour les contenus déjà publics. |
 
-- **Version candidate** : `remediation-02-rc3`, **non publiée**.
-  - Code testé : `16093cf`. Porte officielle PASS sur clone neuf, CI verte (run 46008291593), sondes de l'auditeur 18/18 sous Node 26.
+- **Version candidate** : `remediation-02-rc4`, **non publiée**.
+  - Code testé : `9227a8e`. Porte officielle PASS sur clone neuf, CI verte (run 46009666098), sondes de l'auditeur 18/18 sous Node 26.
+  - **rc3 est remplacée** : la CI de son commit de tag (`5ebefa4`) a échoué au lint, sur le script de sondes de l'auditeur ajouté après le code testé. C'est mon erreur de procédure : j'ai posé le tag sans attendre la CI de ce commit. Le tag rc3 n'a pas été déplacé.
 - **Inchangés depuis rc2** :
   - moteurs (simulateur, métrologie, observateurs) et interface ;
   - D1–D17 ;
@@ -59,10 +60,10 @@
 | PUBLICATION-POLICY.md, PUBLIC-TEXT-REGISTER.csv, draft-text-decisions.py | Politique PUB-1, registre des 409 décisions, générateur du brouillon |
 | PUBLIC-CONTENT-OPTIONS.md | État vérifié et options pour le site, le dépôt et l'historique |
 | RELEASE-CANDIDATE.md | Identification de rc3, procédure, risques |
-| RC2-RC3-DIFF.txt | Différence exacte entre rc2 et le code testé |
+| RC2-RC4-DIFF.txt (et RC2-RC3-DIFF.txt, pour rc3) | Différence exacte entre rc2 et le code testé |
 | old-gate-harness.ts, run-gate-fixtures.sh, logs/ | Preuves d'AUD02-001 et d'AUD02-002, journaux des sondes |
 | probes/ | Sondes de l'auditeur, non modifiées, avec leurs empreintes |
 | sbom.cdx.json | SBOM CycloneDX 1.5 (197 composants) |
 | SHA256SUMS.txt | Empreintes des fichiers ci-dessus |
 
-Journaux de la porte : `docs/reports/logs/rc3-fresh/`.
+Journaux de la porte : `docs/reports/logs/rc4-fresh/` (et `rc3-fresh/`).

@@ -1,0 +1,6 @@
+$ npm run validate:data
+
+> chronosilicon@0.1.0 validate:data
+> tsx scripts/validate-data.ts
+
+validate:data OK {"sources":120,"phenomena":245,"measurements":245,"qualified":238,"pending":2,"contested":5,"rejected":0,"qualifiedPhenomena":238,"groups":22,"observers":9,"scenarios":5}

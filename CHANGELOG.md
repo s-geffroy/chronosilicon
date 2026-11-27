@@ -2,7 +2,7 @@
 
 Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant qu'une version n'est pas validée par sa porte et publiée.
 
-## [Non publié] — REMEDIATION-02 (branche `remediation-02`, tag `remediation-02-rc3`)
+## [Non publié] — REMEDIATION-02 (branche `remediation-02`, tag `remediation-02-rc4` ; `rc3` remplacée, CI en échec au lint)
 
 ### Corrigé (AUDIT-02)
 - AUD02-001 : porte de vulnérabilités à correspondance exacte par avis (`scripts/lib/audit-policy.ts`, exceptions au schéma 2, fixtures `npm audit`, 18 tests).

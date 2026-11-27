@@ -1,0 +1,41 @@
+# Difference exacte rc2 -> code teste rc4
+# remediation-01-rc2 = 069cb225fd38685cd3b78bdbb45906483869ef8d ; code teste = 9227a8e0f3d310831ea2e6866a66dc692ed3f1e8
+# Fichiers hors documentation :
+M	.github/workflows/ci.yml
+M	.github/workflows/pages.yml
+M	SECURITY.md
+A	data/publication/text-decisions.json
+M	data/validated/corpus.json
+M	eslint.config.js
+M	package.json
+M	packages/ontology/src/index.ts
+M	packages/ontology/src/publication.ts
+M	scripts/audit-gate.ts
+A	scripts/check-public-text.ts
+A	scripts/lib/audit-policy.ts
+M	scripts/lib/corpus.ts
+M	scripts/run-gate.sh
+M	security/audit-exceptions.json
+A	tests/audit-gate.test.ts
+A	tests/fixtures/npm-audit/README.md
+A	tests/fixtures/npm-audit/advisory-without-url.all.json
+A	tests/fixtures/npm-audit/dangling-via.all.json
+A	tests/fixtures/npm-audit/high-on-allowed-advisory.all.json
+A	tests/fixtures/npm-audit/other-advisory-same-package.all.json
+A	tests/fixtures/npm-audit/production-advisory.prod.json
+A	tests/fixtures/npm-audit/range-changed.all.json
+A	tests/fixtures/npm-audit/real-2026-11-27.all.json
+A	tests/fixtures/npm-audit/real-2026-11-27.prod.json
+A	tests/fixtures/npm-audit/two-advisories-one-unknown.all.json
+A	tests/fixtures/npm-audit/unjustified-transitive.all.json
+A	tests/fixtures/npm-audit/unknown-report-version.all.json
+A	tests/fixtures/publication/rc2-redacted-spans.json
+M	tests/remediation-01-rights.test.ts
+A	tests/remediation-02-publication.test.ts
+
+# Moteurs et interface (sortie vide attendue) :
+(fin)
+
+# rc3 (code teste 16093cf) -> rc4 (9227a8e), hors documentation :
+ eslint.config.js | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)

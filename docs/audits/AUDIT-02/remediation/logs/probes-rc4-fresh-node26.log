@@ -1,0 +1,20 @@
+$ TYPESCRIPT_PATH=<clone>/node_modules/typescript node probes-rc2.cjs <clone>   # clone neuf 9227a8e, Node v26.13.1
+{"id":"001","pass":true,"result":true}
+{"id":"002","pass":true,"result":true}
+{"id":"003","pass":true,"result":true}
+{"id":"004","pass":true,"result":true}
+{"id":"005","pass":true,"result":true}
+{"id":"006","pass":true,"result":true}
+{"id":"007","pass":true,"result":true}
+{"id":"008","pass":true,"result":true}
+{"id":"009","pass":true,"result":true}
+{"id":"010","pass":true,"result":true}
+{"id":"011","pass":true,"result":true}
+{"id":"012/017-public-quotes","pass":true,"result":true}
+{"id":"013","pass":true,"result":true}
+{"id":"015","pass":true,"result":true}
+{"id":"input hashes","pass":true,"result":true}
+{"id":"curated invariants","pass":true,"result":true}
+{"id":"control serial","pass":true,"result":true}
+{"id":"control parallel","pass":true,"result":true}
+failures=0

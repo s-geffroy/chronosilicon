@@ -1,0 +1,6 @@
+$ npm run audit:gate
+
+> chronosilicon@0.1.0 audit:gate
+> tsx scripts/audit-gate.ts
+
+audit:gate OK production=0 dev={"moderate":8} advisories=GHSA-g3hv-75wg-m249 exceptions=1

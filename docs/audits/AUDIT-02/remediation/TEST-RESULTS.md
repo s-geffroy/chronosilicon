@@ -10,31 +10,34 @@
 ## 1. Porte officielle sur clone neuf
 
 ```sh
-git clone https://github.com/s-geffroy/chronosilicon.git fresh && cd fresh && git checkout 16093cf
-npm ci && sh scripts/run-gate.sh rc3-fresh      # dans le conteneur
+git clone https://github.com/s-geffroy/chronosilicon.git fresh && cd fresh && git checkout 9227a8e
+npm ci && sh scripts/run-gate.sh rc4-fresh      # dans le conteneur
 ```
 
-- **Commit** `16093cf17296cf4499e62750284cc01d7a1f8c82`, `dirty=0`, porte du 2026-11-27T13:34:54Z.
+- **Version candidate rc4** : commit `9227a8e0f3d310831ea2e6866a66dc692ed3f1e8`, `dirty=0`, porte du 2026-11-27T13:44:23Z, journaux `docs/reports/logs/rc4-fresh/`. Résultat identique à rc3 : toutes les étapes PASS, 309 unitaires, 100 e2e.
+- **Version remplacée rc3** : commit `16093cf17296cf4499e62750284cc01d7a1f8c82`, `dirty=0`, porte du 2026-11-27T13:34:54Z. Le détail ci-dessous vaut pour les deux.
 - Étapes : `ci audit:gate lint typecheck validate:data test build publication:check dist:manifest-write test:e2e dist:manifest-check`. **Toutes PASS**, `overall=PASS`.
 - `audit:gate OK production=0 dev={"moderate":8} advisories=GHSA-g3hv-75wg-m249 exceptions=1`.
 - Unitaires : **309** tests, 22 fichiers. On en comptait 281 en rc2 : 18 tests ont été ajoutés pour la porte de vulnérabilités et 12 pour la politique de publication ; 2 tests unitaires de l'ancienne heuristique ont été retirés, car remplacés.
 - `publication:check OK policy=PUB-1 files=6/6 withheldTexts=386 window=6 words`.
 - E2E : **100** tests sur l'artefact construit une seule fois (`E2E_PREBUILT=1`), en 2,3 min.
 - Manifeste de l'artefact : vérifié après les e2e ; SHA-256 du manifeste : `6ff91fa6…17ca`.
-- Journaux : `docs/reports/logs/rc3-fresh/`.
+- Journaux : `docs/reports/logs/rc3-fresh/` et `docs/reports/logs/rc4-fresh/`.
 
 ## 2. CI GitHub
 
 | Commit | Run | Résultat |
 |---|---|---|
-| `16093cf` | 46008291593 | **success**. Il contient `publication:check` et la nouvelle porte. |
+| `16093cf` (code testé de rc3) | 46008291593 | **success**. Il contient `publication:check` et la nouvelle porte. |
+| `5ebefa4` (commit du tag rc3) | 46009305550 | **failure** au lint : `probes-rc2.cjs` utilise `require()`. Le fichier avait été ajouté après `16093cf`, et le tag a été posé sans attendre la CI de son commit. **rc3 est remplacée.** |
+| `9227a8e` (code testé de rc4 : exclusion du lint pour la preuve tierce) | 46009666098 | **success** |
 
 ## 3. Sondes de l'auditeur (AUDIT-02)
 
 - **Script** : `probes/probes-rc2.cjs` de ChatGPT, non modifié. SHA-256 `f6769ef6…4255`, conforme à `AUDIT-02-SHA256SUMS.txt`.
-- **Exécution** : sur le clone neuf, sous **Node 26.13.1** (l'auditeur utilisait Node 22.16.0), avec le TypeScript du clone :
+- **Exécution** : sur les clones neufs de `16093cf` puis de `9227a8e`, sous **Node 26.13.1** (l'auditeur utilisait Node 22.16.0), avec le TypeScript du clone :
   `TYPESCRIPT_PATH=…/node_modules/typescript node probes-rc2.cjs <clone>`.
-- **Résultat** : **18/18**, `failures=0` (`logs/probes-rc3-fresh-node26.log`). La sonde `012/017-public-quotes` vérifie encore 185 valeurs `withheld`, citation et énoncé nuls.
+- **Résultat** : **18/18**, `failures=0` dans les deux cas (`logs/probes-rc3-fresh-node26.log`, `logs/probes-rc4-fresh-node26.log`). La sonde `012/017-public-quotes` vérifie encore 185 valeurs `withheld`, citation et énoncé nuls.
 
 ## 4. AUD02-001 : avant et après sur fixtures
 
@@ -65,8 +68,9 @@ Autres vérifications :
 | Lint | 1 erreur (variable inutilisée) | Corrigée |
 | Message du commit `7f69b83` | Décomptes inexacts (30/379 au lieu de 31/378) | Rectifiés dans le commit `e1c04c4`, sans réécriture d'historique |
 | `PUBLICATION-POLICY.md` | « 17 reprises » au lieu de 16 | Corrigé (commit `16093cf`) |
+| CI du commit du tag rc3 (`5ebefa4`) | **failure** au lint, sur le script de l'auditeur | **Erreur de procédure** : le tag a été posé sans attendre la CI du commit documentaire. Correction `9227a8e` (exclusion du lint pour `docs/audits/**/probes/**`). Porte et sondes rejouées sur un nouveau clone neuf : PASS et 18/18. CI verte. Tag `rc4` posé seulement après la CI verte de son propre commit. |
 
-Aucun journal de porte n'a été écrasé. La porte sur clone neuf n'a été lancée qu'une fois.
+Aucun journal de porte n'a été écrasé. La porte a été lancée deux fois sur clone neuf, une fois par version candidate (`rc3-fresh`, `rc4-fresh`).
 
 ## 7. Non fait
 

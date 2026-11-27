@@ -2,14 +2,15 @@
 
 Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source canonique : GitHub `s-geffroy/chronosilicon`.
 
-## REMEDIATION-02 : version candidate rc3 non publiée (2026-11-27)
+## REMEDIATION-02 : version candidate rc4 non publiée (2026-11-27)
 
 - AUDIT-02 (ChatGPT, `2026-11-27_AUDIT-02`) : GO ciblé pour les moteurs et les cas testés ; NO-GO pour la clôture sans réserve (AUD02-001, droits partiels, pas de reproduction complète) ; G-FINAL NO-GO (P3).
 - **AUD02-001 corrigé** : la porte de vulnérabilités fait correspondre chaque avis à une exception exacte (GHSA, paquet, gravité, plage, portée, chemins transitifs, format). Avant : 6 faux PASS sur 11 fixtures ; après : 0.
 - **AUD02-002 traité** : politique de publication PUB-1 (champs publics explicites, 409 décisions texte par texte, contrôle global et contrôle du site construit `publication:check`). 0 fuite sur rc3 ; 943 suites de 6 mots détectées sur le site en ligne. Options pour les contenus déjà publics, non exécutées : `docs/audits/AUDIT-02/remediation/PUBLIC-CONTENT-OPTIONS.md`.
-- Version candidate : tag `remediation-02-rc3`, code testé `16093cf`.
+- Version candidate : tag `remediation-02-rc4`, code testé `9227a8e`.
   - Porte officielle PASS sur clone neuf : 309 unitaires, 100 e2e sur l'artefact.
-  - CI verte (run 46008291593).
+  - CI verte (run 46009666098).
+  - **rc3 remplacée** : la CI de son commit de tag a échoué au lint, sur le script de sondes de l'auditeur. Le tag n'a pas été déplacé.
   - Sondes de l'auditeur 18/18 sous Node 26.
   - Moteurs et interface inchangés depuis rc2.
 - **Non publiée.** `main` et le site restent sur `491c989`. On attend l'audit de clôture (ChatGPT) et les décisions de l'utilisateur : contenus publics, relecture juridique, P3.
