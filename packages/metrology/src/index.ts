@@ -150,12 +150,15 @@ export function assertFinite(x: number, what = 'value'): void {
 }
 
 /**
- * Converts `value` expressed in `unit` into the SI base unit of `expected`.
- * Throws DimensionError if the unit does not belong to the expected kind,
- * ValueError if the value is not finite or is negative (all modelled
- * quantities are non-negative magnitudes).
+ * Shared domain checks of toSI / fromSI (AUD-001): the two directions accept
+ * and refuse exactly the same inputs.
+ *  - input: finite number, not negative (all modelled quantities are
+ *    non-negative magnitudes); -0 is normalised to +0;
+ *  - unit: known, and of the expected kind (DimensionError otherwise);
+ *  - output: finite (overflow refused) and non-zero when the input is
+ *    non-zero (total underflow refused: a magnitude never silently becomes 0).
  */
-export function toSI(value: number, unit: string, expected: QuantityKind): number {
+function convertChecked(value: number, unit: string, expected: QuantityKind, direction: 'toSI' | 'fromSI'): number {
   assertFinite(value);
   if (value < 0) throw new ValueError(`negative magnitude ${value} ${unit}`);
   const def = UNITS[unit];
@@ -163,20 +166,29 @@ export function toSI(value: number, unit: string, expected: QuantityKind): numbe
   if (def.kind !== expected) {
     throw new DimensionError(`Unit "${unit}" is a ${def.kind}, expected ${expected}`);
   }
-  const out = def.divisor !== undefined ? value / def.divisor : value * def.factor;
+  if (value === 0) return 0;
+  const out =
+    direction === 'toSI'
+      ? def.divisor !== undefined ? value / def.divisor : value * def.factor
+      : def.divisor !== undefined ? value * def.divisor : value / def.factor;
   assertFinite(out, 'converted value');
+  if (out === 0) throw new ValueError(`converted value underflows to 0 (${value} ${direction === 'toSI' ? unit : BASE_UNIT[expected]})`);
   return out;
 }
 
-/** Converts an SI base value back into `unit` (display helper; same checks). */
+/**
+ * Converts `value` expressed in `unit` into the SI base unit of `expected`.
+ * Throws DimensionError if the unit does not belong to the expected kind,
+ * ValueError if the value is not finite, is negative, or if the result
+ * overflows or underflows to 0 (see convertChecked).
+ */
+export function toSI(value: number, unit: string, expected: QuantityKind): number {
+  return convertChecked(value, unit, expected, 'toSI');
+}
+
+/** Converts an SI base value back into `unit` (display helper; exactly the same checks as toSI). */
 export function fromSI(valueSI: number, unit: string, expected: QuantityKind): number {
-  assertFinite(valueSI);
-  const def = UNITS[unit];
-  if (!def) throw new DimensionError(`Unknown unit "${unit}"`);
-  if (def.kind !== expected) {
-    throw new DimensionError(`Unit "${unit}" is a ${def.kind}, expected ${expected}`);
-  }
-  return def.divisor !== undefined ? valueSI * def.divisor : valueSI / def.factor;
+  return convertChecked(valueSI, unit, expected, 'fromSI');
 }
 
 /**

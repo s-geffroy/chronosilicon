@@ -36,3 +36,29 @@ describe('type-7 quantiles (oracle values recomputed by hand from the type-7 def
     expect(() => summarize([1, NaN])).toThrow();
   });
 });
+
+describe('AUD-011: finiteness and sort contract of summary statistics', () => {
+  const M = Number.MAX_VALUE;
+  it('mean of large finite samples stays finite (auditor probe)', () => {
+    expect(summarize([M, M]).mean).toBe(M);
+    expect(summarize([M, M, M]).mean).toBe(M);
+    expect(summarize([M, -M]).mean).toBe(0);
+    expect(summarize([1e308, 1e308, 1e308, 1e308]).mean).toBe(1e308);
+  });
+  it('type-7 interpolation does not overflow between extreme order statistics', () => {
+    expect(quantileSorted([-M, M], 0.5)).toBe(0);
+    expect(Number.isFinite(quantileSorted([-M, M], 0.99))).toBe(true);
+    const s = summarize([M, -M]);
+    for (const q of s.quantiles) expect(Number.isFinite(q.value)).toBe(true);
+    expect(checkQuantiles(s.quantiles)).toEqual([]);
+  });
+  it('quantileSorted refuses an unsorted or non-finite sample instead of presuming the sort', () => {
+    expect(() => quantileSorted([3, 1, 2], 0.5)).toThrow(RangeError);
+    expect(() => quantileSorted([1, NaN, 3], 0.5)).toThrow(RangeError);
+    expect(() => quantileSorted([1, Infinity], 0.5)).toThrow(RangeError);
+  });
+  it('ordinary samples keep the naive mean exactly (no behaviour change)', () => {
+    expect(summarize([3, 1, 2, 10, 4]).mean).toBe(4);
+    expect(summarize([0.1, 0.2, 0.3]).mean).toBe((0.1 + 0.2 + 0.3) / 3);
+  });
+});

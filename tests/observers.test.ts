@@ -4,7 +4,7 @@ import { ValueError } from '@chronosilicon/metrology';
 import {
   PEDAGOGICAL_OBSERVER, clockedObserver, toSubjective, fromSubjective, convertBetween,
   integrateSegments, validateSegments, cyclesAtConstantFrequency, idealTransferTime,
-  quantilesToSubjective, type Observer,
+  quantilesToSubjective, convertBetweenDetailed, type Observer,
 } from '@chronosilicon/observers';
 
 // Deterministic pseudo-random generator for property tests (no external dep).
@@ -109,5 +109,80 @@ describe('throughput, quantiles', () => {
   it('segmented observers refuse quantile transform', () => {
     const o: Observer = { id: 's', kind: 'clocked-segments', segments: [], tauSeconds: 1 };
     expect(() => quantilesToSubjective([{ p: 0.5, value: 1 }], o)).toThrow(ValueError);
+  });
+});
+
+describe('AUD-006: domains and finiteness of direct, inverse and integral conversions', () => {
+  it('cycles at constant frequency refuse overflow (auditor probe)', () => {
+    expect(() => cyclesAtConstantFrequency(1e308, 4e9)).toThrow(ValueError);
+  });
+  it('cycles at constant frequency refuse a non-zero result that underflows to 0', () => {
+    expect(() => cyclesAtConstantFrequency(Number.MIN_VALUE, 0.5)).toThrow(ValueError);
+    expect(cyclesAtConstantFrequency(0, 4e9)).toBe(0);
+  });
+  it('direct conversion refuses overflow and underflow of N·τ and Δt/δ·τ', () => {
+    expect(() => toSubjective(1e10, clockedObserver(1, 1e300))).toThrow(ValueError);
+    expect(() => toSubjective(1e-30, clockedObserver(1, 1e-300))).toThrow(ValueError);
+    const ref: Observer = { id: 'r', kind: 'reference-operation', referenceDurationSeconds: 1e-10, referenceDescription: 'x', tauSeconds: 1 };
+    expect(() => toSubjective(1e300, ref)).toThrow(ValueError);
+  });
+  it('inverse conversion refuses overflow and underflow', () => {
+    expect(() => fromSubjective(1e300, clockedObserver(4e9, 1e-300))).toThrow(ValueError);
+    expect(() => fromSubjective(Number.MIN_VALUE, PEDAGOGICAL_OBSERVER)).toThrow(ValueError);
+    expect(() => fromSubjective(-1, PEDAGOGICAL_OBSERVER)).toThrow(ValueError);
+    expect(fromSubjective(0, PEDAGOGICAL_OBSERVER)).toBe(0);
+  });
+  it('integral conversion refuses overflow, underflow and a non-finite end time', () => {
+    expect(() => integrateSegments(0, 10, [{ start: 0, end: 10, frequencyHz: 1e308 }])).toThrow(ValueError);
+    expect(() => integrateSegments(0, 1e-300, [{ start: 0, end: 1, frequencyHz: 1e-30 }])).toThrow(ValueError);
+    const seg: Observer = { id: 's', kind: 'clocked-segments', segments: [{ start: 0, end: 1, frequencyHz: 1 }], tauSeconds: 1 };
+    expect(() => toSubjective(Number.MAX_VALUE, seg, Number.MAX_VALUE)).toThrow(ValueError);
+    expect(() => toSubjective(1, seg, NaN)).toThrow(ValueError);
+  });
+  it('a stopped clock (f = 0) still integrates to exactly 0 cycles (not an underflow)', () => {
+    expect(integrateSegments(0, 1, [{ start: 0, end: 1, frequencyHz: 0 }]).cycles).toBe(0);
+  });
+});
+
+describe('AUD-007: conversion between observers keeps completeness, coverage and origin', () => {
+  const target: Observer = {
+    id: 'seg', kind: 'clocked-segments', tauSeconds: 1,
+    segments: [{ start: 0, end: 4, frequencyHz: 4e9 }, { start: 8, end: 10, frequencyHz: 2e9 }],
+  };
+  it('toSubjective reports incompleteness and coverage for the auditor target', () => {
+    const r = toSubjective(10, target);
+    expect(r.subjectiveSeconds).toBe(20e9);
+    expect(r.incomplete).toBe(true);
+    expect(r.coverage).toEqual({ startTime: 0, endTime: 10, activeSeconds: 6, stoppedSeconds: 0, gaps: [[4, 8]] });
+  });
+  it('convertBetween refuses to return a bare number for an incomplete result (auditor probe)', () => {
+    expect(() => convertBetween(10, clockedObserver(1), target)).toThrow(ValueError);
+  });
+  it('convertBetweenDetailed preserves completeness, coverage and origin', () => {
+    const r = convertBetweenDetailed(10, clockedObserver(1, 1, 'src'), target);
+    expect(r).toEqual({
+      subjectiveSeconds: 20e9, referenceUnits: 20e9, incomplete: true,
+      coverage: { startTime: 0, endTime: 10, activeSeconds: 6, stoppedSeconds: 0, gaps: [[4, 8]] },
+      physicalSeconds: 10, fromObserverId: 'src', toObserverId: 'seg',
+    });
+  });
+  it('the physical origin of a segmented target is explicit', () => {
+    const r = convertBetweenDetailed(2, clockedObserver(1), target, 7);
+    expect(r.coverage).toEqual({ startTime: 7, endTime: 9, activeSeconds: 1, stoppedSeconds: 0, gaps: [[7, 8]] });
+    expect(r.subjectiveSeconds).toBe(2e9);
+    expect(r.incomplete).toBe(true);
+  });
+  it('a complete segmented target still converts to a number', () => {
+    expect(convertBetween(4, clockedObserver(1), target)).toBe(16e9);
+    expect(convertBetweenDetailed(4, clockedObserver(1), target).incomplete).toBe(false);
+  });
+  it('the undefined inverse of a segmented source is refused', () => {
+    expect(() => convertBetween(1, target, PEDAGOGICAL_OBSERVER)).toThrow(ValueError);
+    expect(() => convertBetweenDetailed(1, target, PEDAGOGICAL_OBSERVER)).toThrow(ValueError);
+    expect(() => fromSubjective(1, target)).toThrow(ValueError);
+  });
+  it('constant-rate results are unchanged (no coverage field)', () => {
+    expect(toSubjective(1, PEDAGOGICAL_OBSERVER)).toEqual({ subjectiveSeconds: 4e9, referenceUnits: 4e9, incomplete: false });
+    expect(convertBetween(4e9, PEDAGOGICAL_OBSERVER, gpu)).toBe(toSubjective(1, gpu).subjectiveSeconds);
   });
 });

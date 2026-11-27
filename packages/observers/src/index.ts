@@ -69,16 +69,28 @@ function assertPositiveFinite(x: number, what: string): void {
   if (!(x > 0)) throw new ValueError(`${what} must be > 0, got ${x}`);
 }
 
-function assertDuration(dt: number): void {
-  assertFinite(dt, 'duration');
-  if (dt < 0) throw new ValueError(`duration must be >= 0, got ${dt}`);
+function assertDuration(dt: number, what = 'duration'): void {
+  assertFinite(dt, what);
+  if (dt < 0) throw new ValueError(`${what} must be >= 0, got ${dt}`);
+}
+
+/**
+ * Output check shared by direct, inverse and integral conversions (AUD-006):
+ * the result must be finite (overflow refused) and a non-zero input must not
+ * produce 0 (total underflow refused explicitly — CS-03: finite values,
+ * numerical thresholds). Zero stays exactly zero.
+ */
+function checkedResult(out: number, inputIsNonZero: boolean, what: string): number {
+  if (!Number.isFinite(out)) throw new ValueError(`${what} overflows (${String(out)})`);
+  if (inputIsNonZero && out === 0) throw new ValueError(`${what} underflows to 0 for a non-zero input`);
+  return out;
 }
 
 /** Theoretical clock cycles in Δt at constant frequency: N = f·Δt. */
 export function cyclesAtConstantFrequency(durationSeconds: number, frequencyHz: number): number {
   assertDuration(durationSeconds);
   assertPositiveFinite(frequencyHz, 'frequency');
-  return frequencyHz * durationSeconds;
+  return checkedResult(frequencyHz * durationSeconds, durationSeconds > 0, 'cycle count');
 }
 
 export interface SegmentIntegration {
@@ -125,13 +137,26 @@ export function integrateSegments(t0: number, t1: number, segments: readonly Fre
     if (b <= a) continue;
     if (a > cursor) gaps.push([cursor, a]);
     const dt = b - a;
-    cycles += s.frequencyHz * dt;
+    cycles += checkedResult(s.frequencyHz * dt, s.frequencyHz > 0, 'segment cycle count');
     if (s.frequencyHz > 0) active += dt;
     else stopped += dt;
     cursor = Math.max(cursor, b);
   }
   if (cursor < t1) gaps.push([cursor, t1]);
+  checkedResult(cycles, false, 'integrated cycle count');
   return { cycles, activeSeconds: active, stoppedSeconds: stopped, gaps };
+}
+
+/** Physical coverage of a segmented conversion (AUD-007): origin, extent and gaps. */
+export interface SegmentCoverage {
+  /** Absolute physical start of the converted interval, s. */
+  readonly startTime: number;
+  /** Absolute physical end of the converted interval, s. */
+  readonly endTime: number;
+  readonly activeSeconds: number;
+  readonly stoppedSeconds: number;
+  /** Uncovered intervals (unknown clock state): the result only counts the covered part. */
+  readonly gaps: ReadonlyArray<readonly [number, number]>;
 }
 
 export interface SubjectiveResult {
@@ -139,8 +164,18 @@ export interface SubjectiveResult {
   readonly subjectiveSeconds: number;
   /** Number of reference units (cycles or reference operations). */
   readonly referenceUnits: number;
-  /** True when the result is incomplete (segments with gaps). */
+  /** True when the result is incomplete (segments with gaps): subjectiveSeconds is then a lower bound. */
   readonly incomplete: boolean;
+  /** Segmented observers only (absent for constant-rate observers). */
+  readonly coverage?: SegmentCoverage;
+}
+
+/** Result of a conversion between two observers, with its origin (AUD-007). */
+export interface ConversionResult extends SubjectiveResult {
+  /** Physical duration through which the conversion went, s. */
+  readonly physicalSeconds: number;
+  readonly fromObserverId: string;
+  readonly toObserverId: string;
 }
 
 /** Converts a physical duration (s) into the observer's subjective time. */
@@ -150,18 +185,29 @@ export function toSubjective(durationSeconds: number, observer: Observer, startT
     case 'clocked': {
       assertPositiveFinite(observer.tauSeconds, 'tau');
       const n = cyclesAtConstantFrequency(durationSeconds, observer.frequencyHz);
-      return { subjectiveSeconds: n * observer.tauSeconds, referenceUnits: n, incomplete: false };
+      return { subjectiveSeconds: checkedResult(n * observer.tauSeconds, n > 0, 'subjective duration'), referenceUnits: n, incomplete: false };
     }
     case 'clocked-segments': {
       assertPositiveFinite(observer.tauSeconds, 'tau');
-      const r = integrateSegments(startTime, startTime + durationSeconds, observer.segments);
-      return { subjectiveSeconds: r.cycles * observer.tauSeconds, referenceUnits: r.cycles, incomplete: r.gaps.length > 0 };
+      assertFinite(startTime, 'start time');
+      const endTime = startTime + durationSeconds;
+      assertFinite(endTime, 'end time');
+      if (durationSeconds > 0 && endTime === startTime) {
+        throw new ValueError(`duration ${durationSeconds} s is absorbed by start time ${startTime} s (below double precision)`);
+      }
+      const r = integrateSegments(startTime, endTime, observer.segments);
+      return {
+        subjectiveSeconds: checkedResult(r.cycles * observer.tauSeconds, r.cycles > 0, 'subjective duration'),
+        referenceUnits: r.cycles,
+        incomplete: r.gaps.length > 0,
+        coverage: { startTime, endTime, activeSeconds: r.activeSeconds, stoppedSeconds: r.stoppedSeconds, gaps: r.gaps },
+      };
     }
     case 'reference-operation': {
       assertPositiveFinite(observer.tauSeconds, 'tau');
       assertPositiveFinite(observer.referenceDurationSeconds, 'reference duration');
-      const n = durationSeconds / observer.referenceDurationSeconds;
-      return { subjectiveSeconds: n * observer.tauSeconds, referenceUnits: n, incomplete: false };
+      const n = checkedResult(durationSeconds / observer.referenceDurationSeconds, durationSeconds > 0, 'reference unit count');
+      return { subjectiveSeconds: checkedResult(n * observer.tauSeconds, n > 0, 'subjective duration'), referenceUnits: n, incomplete: false };
     }
   }
 }
@@ -176,19 +222,39 @@ export function fromSubjective(subjectiveSeconds: number, observer: Observer): n
     case 'clocked':
       assertPositiveFinite(observer.frequencyHz, 'frequency');
       assertPositiveFinite(observer.tauSeconds, 'tau');
-      return subjectiveSeconds / observer.tauSeconds / observer.frequencyHz;
+      return checkedResult(subjectiveSeconds / observer.tauSeconds / observer.frequencyHz, subjectiveSeconds > 0, 'physical duration');
     case 'reference-operation':
       assertPositiveFinite(observer.referenceDurationSeconds, 'reference duration');
       assertPositiveFinite(observer.tauSeconds, 'tau');
-      return (subjectiveSeconds / observer.tauSeconds) * observer.referenceDurationSeconds;
+      return checkedResult((subjectiveSeconds / observer.tauSeconds) * observer.referenceDurationSeconds, subjectiveSeconds > 0, 'physical duration');
     case 'clocked-segments':
       throw new ValueError('fromSubjective is not defined for segmented observers');
   }
 }
 
-/** Subjective time of observer A re-expressed for observer B (through physical time). */
-export function convertBetween(subjectiveSecondsA: number, a: Observer, b: Observer): number {
-  return toSubjective(fromSubjective(subjectiveSecondsA, a), b).subjectiveSeconds;
+/**
+ * Subjective time of observer A re-expressed for observer B (through physical
+ * time), keeping completeness, coverage and origin (AUD-007). `startTime` is
+ * the absolute physical start used when B is segmented (ignored otherwise).
+ * Throws ValueError when A has no defined inverse (segmented A).
+ */
+export function convertBetweenDetailed(subjectiveSecondsA: number, a: Observer, b: Observer, startTime = 0): ConversionResult {
+  const physicalSeconds = fromSubjective(subjectiveSecondsA, a);
+  const r = toSubjective(physicalSeconds, b, startTime);
+  return { ...r, physicalSeconds, fromObserverId: a.id, toObserverId: b.id };
+}
+
+/**
+ * Bare-number form of convertBetweenDetailed. It REFUSES (ValueError) an
+ * incomplete result rather than returning a lower bound that would read as
+ * exact; use convertBetweenDetailed to obtain it with its coverage.
+ */
+export function convertBetween(subjectiveSecondsA: number, a: Observer, b: Observer, startTime = 0): number {
+  const r = convertBetweenDetailed(subjectiveSecondsA, a, b, startTime);
+  if (r.incomplete) {
+    throw new ValueError(`conversion to ${b.id} is incomplete (unknown clock state on part of the interval); use convertBetweenDetailed`);
+  }
+  return r.subjectiveSeconds;
 }
 
 /** Propagation delay Δt = d / v (s). Default v = c in vacuum. */

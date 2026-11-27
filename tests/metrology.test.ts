@@ -70,3 +70,44 @@ describe('display helpers (rounding only at display)', () => {
     expect(prefixDuration(0)).toEqual({ value: 0, unit: 's' });
   });
 });
+
+describe('AUD-001: toSI/fromSI symmetry, input/output checks, extremes', () => {
+  it('fromSI refuses negative magnitudes like toSI (auditor probe)', () => {
+    expect(() => fromSI(-1, 'ns', 'duration')).toThrow(ValueError);
+    expect(() => toSI(-1, 'ns', 'duration')).toThrow(ValueError);
+  });
+  it('fromSI refuses an overflowing result (auditor probe: MAX_VALUE s → ns)', () => {
+    expect(() => fromSI(Number.MAX_VALUE, 'ns', 'duration')).toThrow(ValueError);
+    expect(() => toSI(Number.MAX_VALUE, 'a', 'duration')).toThrow(ValueError);
+  });
+  it('both directions refuse a non-zero value that underflows to zero', () => {
+    expect(() => toSI(Number.MIN_VALUE, 'fs', 'duration')).toThrow(ValueError);
+    expect(() => fromSI(Number.MIN_VALUE, 'a', 'duration')).toThrow(ValueError);
+  });
+  it('both directions reject the same invalid inputs for every unit', () => {
+    for (const [u, def] of Object.entries(UNITS)) {
+      for (const bad of [NaN, Infinity, -Infinity, -1, -Number.MIN_VALUE]) {
+        expect(() => toSI(bad, u, def.kind), `toSI ${bad} ${u}`).toThrow(ValueError);
+        expect(() => fromSI(bad, u, def.kind), `fromSI ${bad} ${u}`).toThrow(ValueError);
+      }
+      expect(() => fromSI(1, u, def.kind === 'duration' ? 'frequency' : 'duration')).toThrow(DimensionError);
+      expect(() => fromSI(1, 'furlong', def.kind)).toThrow(DimensionError);
+    }
+  });
+  it('zero maps to +0 in both directions (no -0)', () => {
+    for (const [u, def] of Object.entries(UNITS)) {
+      expect(Object.is(toSI(0, u, def.kind), 0)).toBe(true);
+      expect(Object.is(fromSI(0, u, def.kind), 0)).toBe(true);
+      expect(Object.is(toSI(-0, u, def.kind), 0)).toBe(true);
+      expect(Object.is(fromSI(-0, u, def.kind), 0)).toBe(true);
+    }
+  });
+  it('round trip holds at representable extremes (1e-290 … 1e290)', () => {
+    for (const [u, def] of Object.entries(UNITS)) {
+      for (const x of [1e-290, 1e-100, 1, 1e100, 1e290]) {
+        const back = fromSI(toSI(x, u, def.kind), u, def.kind);
+        expect(Math.abs(back - x) / x, `${x} ${u}`).toBeLessThan(1e-15);
+      }
+    }
+  });
+});
