@@ -1,0 +1,13 @@
+$ npm run typecheck
+
+> chronosilicon@0.1.0 typecheck
+> tsc -p tsconfig.json && npm run -w @chronosilicon/web check
+
+
+> @chronosilicon/web@0.1.0 check
+> svelte-check --tsconfig ./tsconfig.json --fail-on-warnings
+
+Loading svelte-check in workspace: /work/.cache/p01/fresh/apps/web
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

@@ -1,0 +1,6 @@
+$ npm run dist:manifest -- check docs/reports/logs/rc5-fresh/dist-manifest.sha256
+
+> chronosilicon@0.1.0 dist:manifest
+> tsx scripts/dist-manifest.ts check docs/reports/logs/rc5-fresh/dist-manifest.sha256
+
+dist-manifest: artifact unchanged since it was built and tested

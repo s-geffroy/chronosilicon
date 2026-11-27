@@ -1,0 +1,6 @@
+$ npm run publication:check
+
+> chronosilicon@0.1.0 publication:check
+> tsx scripts/check-public-text.ts
+
+publication:check OK policy=PUB-1 files=6/6 withheldTexts=386 window=6 words

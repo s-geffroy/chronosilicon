@@ -2,6 +2,12 @@
 
 Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source canonique : GitHub `s-geffroy/chronosilicon`.
 
+## PUBLICATION-01 (D18 = B) : version candidate rc5, en attente de validation (2026-11-27)
+
+- AUDIT-03 (ChatGPT) clôt la remédiation technique ; G-PUB GO conditionnel ; G-FINAL NO-GO (P3).
+- Mandat D18 : publier RC4 sous conditions. Une précondition n'était pas remplie : le site ne disait pas qu'il était un prototype expérimental. D'où **rc5** (branche `publication-01`, code `53a5237`) : bandeau FR/EN sur chaque vue, section Statut, mention de licence précisée. Porte sur clone neuf PASS (309 unitaires, 104 e2e, 18 sondes), CI verte (run 46014637201). Détail : `docs/publication/PUBLICATION-01/RC5-CANDIDATE.md`.
+- **Non publiée** : `main` et le site restent sur `491c989` jusqu'à la validation de l'utilisateur.
+
 ## REMEDIATION-02 : version candidate rc4 non publiée (2026-11-27)
 
 - AUDIT-02 (ChatGPT, `2026-11-27_AUDIT-02`) : GO ciblé pour les moteurs et les cas testés ; NO-GO pour la clôture sans réserve (AUD02-001, droits partiels, pas de reproduction complète) ; G-FINAL NO-GO (P3).
