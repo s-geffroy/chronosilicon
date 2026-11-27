@@ -158,6 +158,9 @@ test('share link reproduces the state', async ({ page, context }) => {
 });
 
 test('accessibility: no axe violations (WCAG 2.1 AA) on main views', async ({ page }) => {
+  // Scans 9 views plus the sheet sequentially: 25.4 s of 30 s in Firefox at the audit baseline, and over 30 s
+  // under host load (REMEDIATION-01 gate, load average 14). Timeout raised; the expectations are unchanged.
+  test.setTimeout(90_000);
   for (const r of ['timeline', 'converter', 'about', 'simulation', 'architecture', 'comparison', 'observers', 'immersion', 'laboratory']) {
     await page.goto(`./#/${r}?lang=fr`);
     await page.waitForLoadState('networkidle');
