@@ -1,0 +1,14 @@
+{
+  "_comment": "AUD-014 (REMEDIATION-01). Dated exceptions to the vulnerability gate (scripts/audit-gate.ts). Each entry names one advisory, why it does not apply to the published static site, and an expiry date after which the gate fails again. Policy: SECURITY.md.",
+  "exceptions": [
+    {
+      "advisory": "https://github.com/advisories/GHSA-g3hv-75wg-m249",
+      "packages": ["minimatch", "eslint", "typescript-eslint", "@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "@typescript-eslint/type-utils", "@typescript-eslint/typescript-estree", "@typescript-eslint/utils"],
+      "severity": "moderate",
+      "scope": "dev",
+      "reason": "Denial of service by glob-pattern amplification in minimatch, reached only through ESLint, which runs at development and CI time on the repository's own files with the repository's own patterns. minimatch is not in the production bundle (npm audit --omit=dev: 0). Fix available (eslint 10.15.0, typescript-eslint 8.74.0) but not applied during REMEDIATION-01: upgrading requires checking that those releases are at least two weeks old, which was not done.",
+      "decidedAt": "2026-11-27",
+      "expires": "2027-01-31"
+    }
+  ]
+}

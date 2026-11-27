@@ -36,3 +36,4 @@ coverage/
 # Vidages memoire de navigateurs (conteneur)
 core
 core.*
+sbom.cdx.json

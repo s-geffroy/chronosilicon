@@ -23,7 +23,10 @@
     "test:e2e": "playwright test",
     "check": "npm run lint && npm run typecheck && npm run validate:data && npm test && npm run build",
     "curate": "tsx scripts/curate.ts",
-    "contribute:check": "tsx scripts/contribute-check.ts"
+    "contribute:check": "tsx scripts/contribute-check.ts",
+    "audit:gate": "tsx scripts/audit-gate.ts",
+    "dist:manifest": "tsx scripts/dist-manifest.ts",
+    "sbom": "npm sbom --sbom-format cyclonedx --sbom-type application"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

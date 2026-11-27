@@ -19,12 +19,19 @@ SUMMARY="$DIR/summary.txt"
   echo "image=mcr.microsoft.com/playwright:v1.65.0-noble@sha256:9beb546099e11f52d62e505537914870e01a67e0e6b00ae41da4775324e73dbe"
   echo "uname=$(uname -srm)"
 } > "$SUMMARY"
-STEPS="ci lint typecheck validate:data test build"
-[ "$GATE" != "G0" ] && STEPS="$STEPS test:e2e"
+STEPS="ci audit:gate lint typecheck validate:data test build dist:manifest-write"
+# AUD-018: e2e runs against the build above (no rebuild), then the artifact is re-checked.
+[ "$GATE" != "G0" ] && STEPS="$STEPS test:e2e dist:manifest-check"
 FAIL=0
 for s in $STEPS; do
   LOG="$DIR/$(echo "$s" | tr ':' '_').log"
-  if [ "$s" = "ci" ]; then CMD="npm ci"; else CMD="npm run $s"; fi
+  case "$s" in
+    ci) CMD="npm ci" ;;
+    dist:manifest-write) CMD="npm run dist:manifest -- write $DIR/dist-manifest.sha256" ;;
+    dist:manifest-check) CMD="npm run dist:manifest -- check $DIR/dist-manifest.sha256" ;;
+    test:e2e) CMD="E2E_PREBUILT=1 npm run test:e2e" ;;
+    *) CMD="npm run $s" ;;
+  esac
   echo "\$ $CMD" > "$LOG"
   if sh -c "$CMD" >> "$LOG" 2>&1; then R=PASS; else R=FAIL; FAIL=1; fi
   echo "$s=$R" | tee -a "$SUMMARY"
