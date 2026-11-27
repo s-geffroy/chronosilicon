@@ -1,0 +1,13 @@
+$ npm run dist:manifest -- write docs/reports/logs/rc3-fresh/dist-manifest.sha256
+
+> chronosilicon@0.1.0 dist:manifest
+> tsx scripts/dist-manifest.ts write docs/reports/logs/rc3-fresh/dist-manifest.sha256
+
+dist-manifest: 6 files
+4a5cff3273a070d3df3627d64cbf259a3f1ff1b2c8844c750a403b6cb664a055  404.html
+e0ae45c6ab4b8224934153a39e720e78386b0b08bbdbd79c9a7a89ddc2867d02  assets/index-BW5jkAbA.js
+84a34b8659d47a6ea824b03988d1f2940b30b6f00a6afaec132a7789ddf81ba6  assets/index-BW5jkAbA.js.map
+007f504dc7e72b90d215bcd942dd0edb8210ac7d8180fb6da24339654bda63e2  assets/index-Do0BrHmH.css
+cefc0991ec013cfc758f0dbfcdc51f92294ed86c99abbbe26860cfd7dcb56778  index.html
+6d0bb0b86947ca5b12beb1df20f752770a04303cbe5777f81a28044f77204f6e  version.json
+

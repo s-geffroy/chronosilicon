@@ -1,0 +1,31 @@
+$ npm run build
+
+> chronosilicon@0.1.0 build
+> npm run build:data && npm run -w @chronosilicon/web build
+
+
+> chronosilicon@0.1.0 build:data
+> tsx scripts/build-corpus.ts
+
+build:data OK 0.3.0+0c9ebc16ce31 {"sources":120,"phenomena":245,"measurements":245,"qualified":238,"pending":2,"contested":5,"rejected":0,"qualifiedPhenomena":238,"groups":22,"observers":9,"scenarios":5}
+
+> @chronosilicon/web@0.1.0 build
+> vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 149 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/version.json                 0.07 kB │ gzip:   0.09 kB
+dist/404.html                     0.28 kB │ gzip:   0.23 kB
+dist/index.html                   0.96 kB │ gzip:   0.56 kB
+dist/assets/index-Do0BrHmH.css    8.76 kB │ gzip:   2.72 kB
+dist/assets/index-BW5jkAbA.js   628.56 kB │ gzip: 156.63 kB │ map: 987.30 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 649ms
