@@ -2,7 +2,8 @@
 import { describe, expect, it } from 'vitest';
 import { checkScenarios } from '@chronosilicon/ontology';
 import { corpus } from './corpus';
-import { runScenario } from './scenarios';
+import { simulate, type Task } from '@chronosilicon/simulator';
+import { overlapIndicators, runScenario } from './scenarios';
 
 const sc = (id: string) => corpus.scenarios.find((s) => s.id === id)!;
 const rel = (a: number, b: number) => Math.abs(a - b) / b;
@@ -47,5 +48,33 @@ describe('analytic oracles', () => {
     const a = runScenario(sc('sc-dram-independent-reads'), { mem: 3 });
     const b = runScenario(sc('sc-dram-independent-reads'), { mem: 3 });
     expect(a.result.events).toEqual(b.result.events);
+  });
+});
+
+describe('AUD-004: overlap is separated from idle time (ADR-0010 §6)', () => {
+  const task = (id: string, seconds: number, extra: Partial<Task> = {}): Task => ({
+    id, label: id, actor: 'audit', resourceId: null, duration: { kind: 'fixed', seconds, measurementId: null }, priority: 0, dependencies: [], ...extra,
+  });
+  const run = (tasks: Task[]) => simulate({ id: 'audit', modelVersion: '1.0.0', seed: 1, tasks, resources: [] });
+  it('auditor probe: a release date is idle time, not negative overlap (was −0.5)', () => {
+    const k = overlapIndicators(run([task('A', 10, { releaseSeconds: 5 })]));
+    expect(k).toEqual({ makespanSeconds: 15, sumSeconds: 10, activeSeconds: 10, idleSeconds: 5, overlapShare: 0 });
+  });
+  it('mixed overlap and idle time: overlap = 1 − active/Σ, independent of the idle gap', () => {
+    const k = overlapIndicators(run([task('a', 2), task('b', 2), task('c', 1, { releaseSeconds: 10 })]));
+    expect(k.idleSeconds).toBe(8);
+    expect(k.activeSeconds).toBe(3);
+    expect(k.overlapShare).toBeCloseTo(1 - 3 / 5, 12);
+  });
+  it('Σ durations = 0: the indicator is undefined (null), not clamped to 0', () => {
+    expect(overlapIndicators(run([task('z', 0)])).overlapShare).toBeNull();
+  });
+  it('published scenarios have no idle time, so the new definition gives the former values exactly', () => {
+    for (const def of corpus.scenarios) for (const cap of [1, 2, 3, 4, 8]) {
+      const r = runScenario(def, def.resources[0] ? { [def.resources[0].id]: cap } : {});
+      expect(r.result.idleTime).toBe(0n);
+      expect(r.result.completedEnd).toBe(r.result.makespan);
+      expect(r.overlapShare).toBe(r.sumSeconds > 0 ? 1 - r.makespanSeconds / r.sumSeconds : 0);
+    }
   });
 });

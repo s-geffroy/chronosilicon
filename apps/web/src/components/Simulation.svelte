@@ -54,7 +54,7 @@
     <dd><strong data-testid="sim-makespan">{formatPhysicalDuration(run.makespanSeconds, lang)}</strong>
       · {formatCalendar(toSubjective(run.makespanSeconds, obs).subjectiveSeconds, lang)} ({formatFrequency(app.s.frequencyHz, lang)})</dd>
     <dt>{t('sim.sum')}</dt><dd data-testid="sim-sum">{formatPhysicalDuration(run.sumSeconds, lang)}</dd>
-    <dt>{t('sim.overlap')}</dt><dd><span data-testid="sim-overlap">{formatNumber(run.overlapShare * 100, lang, 3)} %</span>
+    <dt>{t('sim.overlap')}</dt><dd><span data-testid="sim-overlap">{run.overlapShare === null ? '—' : `${formatNumber(run.overlapShare * 100, lang, 3)} %`}</span>
       {#if firstRes}<span class="help block">{t('sim.overlapAssumption')}</span>{/if}</dd>
     <dt>{t('sim.critical')}</dt><dd data-testid="sim-critical">{run.result.criticalPath.join(' → ')}</dd>
     <dt>{t('sim.seed')}</dt><dd class="mono">{t('sim.seedValue', { seed: SCENARIO_SEED, model: SIMULATOR_MODEL_VERSION })}</dd>

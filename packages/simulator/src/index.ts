@@ -8,12 +8,21 @@
  * Serialised as decimal strings. Inputs are IEEE doubles: near 86 400 s two
  * neighbouring doubles are ~15 ps apart, so exactness is that of the input.
  *
- * Ordering of simultaneous events is deterministic:
- * (time, event type [cancel < end < ready < start], priority, declaration order).
- * Consequence: a cancellation at the exact end time wins (the task is cancelled).
+ * Simultaneity semantics (ADR-0010):
+ * - queued events are ordered by (time, event type [cancel < end < ready],
+ *   priority, declaration order); starts are never queued, they happen
+ *   immediately when a ready task finds a free unit (or none is needed);
+ * - all cancellations of one instant, cascades included, are applied as one
+ *   atomic phase; freed units are reallocated only after that phase
+ *   (resources in declaration order), so a task cancelled at t never starts at t;
+ * - a cancellation at the exact end time wins (the task is cancelled);
+ * - a resource serves its waiting tasks by (ready time, priority, declaration order).
+ * Stale events (end of a cancelled task, ready of a cancelled task, cancel of a
+ * finished task) are discarded and do not advance the clock.
  */
 
-export const SIMULATOR_MODEL_VERSION = '1.0.0';
+/** 1.1.0 (AUDIT-01, ADR-0010): atomic cancellations, completedEnd/horizon, activity, critical links. */
+export const SIMULATOR_MODEL_VERSION = '1.1.0';
 export const FS_PER_S = 1_000_000_000_000_000n;
 
 export type Fs = bigint;
@@ -102,18 +111,54 @@ export interface ResourceUsage {
   readonly capacity: number;
 }
 
+/** What fixed the start time of a task on the critical path (ADR-0010 §5). */
+export interface CriticalLink {
+  readonly taskId: string;
+  /**
+   * origin: started at t = 0, nothing constrained it;
+   * release: started at its release date;
+   * finish-to-start / start-to-start: start = predecessor end / start + lag;
+   * resource: waited for a unit, start = end (or cancellation) of the task that freed it.
+   */
+  readonly via: 'origin' | 'release' | 'finish-to-start' | 'start-to-start' | 'resource';
+  /** The constraining task (null for origin and release). */
+  readonly from: string | null;
+  /** Dependency lag (0 for the other causes). */
+  readonly lag: Fs;
+}
+
 export interface SimulationResult {
   readonly scenarioId: string;
   readonly modelVersion: string;
   readonly seed: number;
+  /**
+   * Effective end of the run: time of the last recorded event, cancellations
+   * included (0 for an empty run). Equals completedEnd when nothing is cancelled.
+   */
   readonly makespan: Fs;
+  /** End of the last successfully completed task; null when no task completed. */
+  readonly completedEnd: Fs | null;
+  /** Queue horizon: clock after the last non-stale queued event (stale events excluded). Equals makespan by construction. */
+  readonly horizon: Fs;
+  /** Stale queued events discarded without effect (they never advance the clock). */
+  readonly discardedEvents: number;
   readonly events: readonly SimEvent[];
   readonly tasks: ReadonlyMap<string, TaskResult>;
   readonly resources: readonly ResourceUsage[];
-  /** Task ids on one critical path (dependency or resource-wait chain). */
+  /**
+   * Constraint path explaining completedEnd: from the last-finishing completed
+   * task (tie: last declared) back through the cause that fixed each start.
+   * Its length is NOT Σ durations (lags, start-to-start, release). Empty if completedEnd is null.
+   */
   readonly criticalPath: readonly string[];
-  /** Sum of all task durations — compare with makespan to see overlap. */
+  /** criticalPath with the cause of each start, root first (replayable). */
+  readonly criticalLinks: readonly CriticalLink[];
+  /** Σ executed intervals (end − start) of all started tasks, cancelled ones truncated. */
   readonly sumOfDurations: Fs;
+  /** Measure of the union of execution intervals: time during which at least one task runs. */
+  readonly activeTime: Fs;
+  /** makespan − activeTime: time with no task running (release dates, lags, waits on nothing). */
+  readonly idleTime: Fs;
 }
 
 /** Mulberry32 — small deterministic PRNG for reproducible sampling. */
@@ -183,8 +228,9 @@ export function validateScenario(s: Scenario): string[] {
   return errs;
 }
 
-interface QueueItem { time: Fs; prio: number; order: number; kind: EventKind; taskId: string }
-const KIND_ORDER: Record<EventKind, number> = { cancel: 0, end: 1, ready: 2, start: 3 };
+type QueuedKind = Exclude<EventKind, 'start'>;
+interface QueueItem { time: Fs; prio: number; order: number; kind: QueuedKind; taskId: string }
+const KIND_ORDER: Record<QueuedKind, number> = { cancel: 0, end: 1, ready: 2 };
 
 /** Binary min-heap ordered by (time, event type, priority, declaration order). */
 class EventQueue {
@@ -196,6 +242,7 @@ class EventQueue {
     return a.order < b.order;
   }
   get size() { return this.h.length; }
+  peek(): QueueItem | undefined { return this.h[0]; }
   push(x: QueueItem) {
     const h = this.h; h.push(x);
     let i = h.length - 1;
@@ -238,9 +285,11 @@ export function simulate(s: Scenario): SimulationResult {
     successors.set(dep.predecessor, arr);
   }
   const pendingDeps = new Map(s.tasks.map((t) => [t.id, t.dependencies.length]));
-  const earliest = new Map<string, Fs>(s.tasks.map((t) => [t.id, secondsToFs(t.releaseSeconds ?? 0)]));
-  /** Which predecessor event determined readiness (for the critical path). */
-  const readyCause = new Map<string, string | null>(s.tasks.map((t) => [t.id, null]));
+  const earliestRelease = new Map<string, Fs>(s.tasks.map((t) => [t.id, secondsToFs(t.releaseSeconds ?? 0)]));
+  const earliest = new Map<string, Fs>(earliestRelease);
+  /** Which predecessor event determined readiness (for the critical path); null = release date or origin. */
+  const readyCause = new Map<string, { by: string; dep: Dependency } | null>(s.tasks.map((t) => [t.id, null]));
+  /** Task whose release of a unit let this task start after waiting (null = no wait). */
   const startCause = new Map<string, string | null>();
 
   const res = new Map(s.resources.map((r) => [r.id, { ...r, inUse: 0, maxConcurrent: 0, busy: 0n, lastChange: 0n, waiting: [] as string[], lastFreedBy: null as string | null }]));
@@ -250,7 +299,16 @@ export function simulate(s: Scenario): SimulationResult {
     s.tasks.map((t) => [t.id, { ready: null, start: null, end: null, status: 'open' }]),
   );
   let now = 0n;
-  const push = (time: Fs, kind: EventKind, taskId: string) => {
+  // Activity: number of running tasks and ∫ [running > 0] dt (union of execution intervals).
+  let running = 0;
+  let activeTime = 0n;
+  let lastActivityChange = 0n;
+  const accrueActivity = (delta: number) => {
+    if (running > 0) activeTime += now - lastActivityChange;
+    lastActivityChange = now;
+    running += delta;
+  };
+  const push = (time: Fs, kind: QueuedKind, taskId: string) => {
     if (time < now) throw new SimulationError(`causality violation: event at ${time} < now ${now}`);
     q.push({ time, prio: tasks.get(taskId)!.priority, order: order.get(taskId)!, kind, taskId });
   };
@@ -281,20 +339,27 @@ export function simulate(s: Scenario): SimulationResult {
   const startTask = (id: string, waitedFor: string | null) => {
     const o = out.get(id)!;
     o.start = now;
+    accrueActivity(+1);
     startCause.set(id, waitedFor);
     events.push({ seq: events.length, time: now, kind: 'start', taskId: id, resourceId: tasks.get(id)!.resourceId });
     push(now + duration.get(id)!, 'end', id);
-    for (const s2 of successors.get(id) ?? []) if (s2.dep.relation === 'start-to-start') satisfy(s2.id, now + secondsToFs(s2.dep.lagSeconds), id);
+    for (const s2 of successors.get(id) ?? []) if (s2.dep.relation === 'start-to-start') satisfy(s2.id, now + secondsToFs(s2.dep.lagSeconds), id, s2.dep);
   };
-  const satisfy = (id: string, at: Fs, by: string) => {
-    if (at > earliest.get(id)!) { earliest.set(id, at); readyCause.set(id, by); }
-    else if (readyCause.get(id) === null && at === earliest.get(id)) readyCause.set(id, by);
+  // Binding cause: the latest constraint; on a tie, the first dependency to
+  // arrive, and a dependency tying with the release date wins over the release.
+  const satisfy = (id: string, at: Fs, by: string, dep: Dependency) => {
+    if (at > earliest.get(id)!) { earliest.set(id, at); readyCause.set(id, { by, dep }); }
+    else if (readyCause.get(id) === null && at === earliest.get(id)) readyCause.set(id, { by, dep });
     const n = pendingDeps.get(id)! - 1;
     pendingDeps.set(id, n);
     if (n === 0 && out.get(id)!.status === 'open') push(earliest.get(id)!, 'ready', id);
   };
-  /** Iterative cascade (no recursion: long chains must not overflow the stack). */
-  const cancelCascade = (rootId: string) => {
+  /**
+   * Iterative cascade (no recursion: long chains must not overflow the stack).
+   * Frees units but does NOT reallocate them: the caller does it once every
+   * cancellation of the instant has been applied (atomic phase, ADR-0010 §2).
+   */
+  const cancelCascade = (rootId: string, freed: Set<string>) => {
     const stack = [rootId];
     while (stack.length) {
       const id = stack.pop()!;
@@ -307,21 +372,39 @@ export function simulate(s: Scenario): SimulationResult {
         const r = res.get(rid)!;
         const wi = r.waiting.indexOf(id);
         if (wi >= 0) r.waiting.splice(wi, 1);
-        else if (o.start !== null) { accrue(r); r.inUse--; r.lastFreedBy = id; o.end = now; tryStart(rid); }
-      } else if (o.start !== null) o.end = now;
+        else if (o.start !== null) { accrue(r); r.inUse--; r.lastFreedBy = id; o.end = now; accrueActivity(-1); freed.add(rid); }
+      } else if (o.start !== null) { o.end = now; accrueActivity(-1); }
       for (const s2 of successors.get(id) ?? []) stack.push(s2.id);
     }
   };
 
   let processed = 0;
-  while (q.size) {
+  let discarded = 0;
+  const popCounted = () => {
     if (++processed > maxEvents) throw new SimulationError(`event limit ${maxEvents} exceeded`);
-    const e = q.pop()!;
-    now = e.time;
+    return q.pop()!;
+  };
+  while (q.size) {
+    const e = popCounted();
     const o = out.get(e.taskId)!;
     const t = tasks.get(e.taskId)!;
-    if (e.kind === 'cancel') { if (o.status === 'open') cancelCascade(e.taskId); continue; }
-    if (o.status !== 'open') continue;
+    // Every queued event targets an open task; otherwise it is stale (end or
+    // ready of a cancelled task, cancel of a finished one) and is discarded
+    // without advancing the clock.
+    if (o.status !== 'open') { discarded++; continue; }
+    now = e.time;
+    if (e.kind === 'cancel') {
+      // Atomic phase: apply every cancellation of this instant (they sort
+      // first at a given time), then reallocate the freed units.
+      const freed = new Set<string>();
+      cancelCascade(e.taskId, freed);
+      for (let n = q.peek(); n && n.time === now && n.kind === 'cancel'; n = q.peek()) {
+        const c = popCounted();
+        if (out.get(c.taskId)!.status === 'open') cancelCascade(c.taskId, freed); else discarded++;
+      }
+      for (const r of s.resources) if (freed.has(r.id)) tryStart(r.id);
+      continue;
+    }
     if (e.kind === 'ready') {
       o.ready = now;
       events.push({ seq: events.length, time: now, kind: 'ready', taskId: t.id, resourceId: t.resourceId });
@@ -330,17 +413,19 @@ export function simulate(s: Scenario): SimulationResult {
     } else if (e.kind === 'end') {
       o.end = now;
       o.status = 'done';
+      accrueActivity(-1);
       events.push({ seq: events.length, time: now, kind: 'end', taskId: t.id, resourceId: t.resourceId });
       if (t.resourceId) { const r = res.get(t.resourceId)!; accrue(r); r.inUse--; r.lastFreedBy = t.id; tryStart(t.resourceId); }
-      for (const s2 of successors.get(t.id) ?? []) if (s2.dep.relation === 'finish-to-start') satisfy(s2.id, now + secondsToFs(s2.dep.lagSeconds), t.id);
+      for (const s2 of successors.get(t.id) ?? []) if (s2.dep.relation === 'finish-to-start') satisfy(s2.id, now + secondsToFs(s2.dep.lagSeconds), t.id, s2.dep);
     }
   }
   const stuck = [...out.entries()].filter(([, o]) => o.status === 'open').map(([id]) => id);
   if (stuck.length) throw new SimulationError(`deadlock or impossible cause: tasks never completed: ${stuck.join(', ')}`);
   for (const r of res.values()) accrue(r);
+  accrueActivity(0);
 
   const results = new Map<string, TaskResult>();
-  let makespan = 0n;
+  let completedEnd: Fs | null = null;
   let sum = 0n;
   let last: string | null = null;
   for (const t of s.tasks) {
@@ -352,22 +437,35 @@ export function simulate(s: Scenario): SimulationResult {
       status: o.status === 'cancelled' ? 'cancelled' : 'done',
     });
     sum += d;
-    if (o.end !== null && o.end >= makespan && o.status === 'done') { makespan = o.end; last = t.id; }
+    if (o.status === 'done' && (completedEnd === null || o.end! >= completedEnd)) { completedEnd = o.end!; last = t.id; }
   }
-  // Critical path: walk back from the last-finishing task through whichever
-  // cause (resource wait, then dependency) determined each start time.
-  const path: string[] = [];
+  // Effective end = last recorded event (the log is time-ordered). Every
+  // non-stale queued event logs an event at its own time and starts happen at
+  // such times, so the queue horizon `now` coincides with it.
+  const makespan = events.length ? events[events.length - 1]!.time : 0n;
+  if (makespan !== now) throw new SimulationError(`internal: horizon ${now} differs from effective end ${makespan}`);
+  // Critical path: walk back from the last-finishing completed task through
+  // whichever cause (resource wait, then dependency, else release/origin) fixed each start.
+  const links: CriticalLink[] = [];
   const seen = new Set<string>();
   let cur = last;
   while (cur && !seen.has(cur)) {
     seen.add(cur);
-    path.unshift(cur);
-    cur = startCause.get(cur) ?? readyCause.get(cur) ?? null;
+    const waited = startCause.get(cur) ?? null;
+    const rc = readyCause.get(cur) ?? null;
+    const release = earliestRelease.get(cur)!;
+    const link: CriticalLink = waited !== null ? { taskId: cur, via: 'resource', from: waited, lag: 0n }
+      : rc !== null ? { taskId: cur, via: rc.dep.relation, from: rc.by, lag: secondsToFs(rc.dep.lagSeconds) }
+      : { taskId: cur, via: release > 0n ? 'release' : 'origin', from: null, lag: 0n };
+    links.unshift(link);
+    cur = link.from;
   }
   return {
-    scenarioId: s.id, modelVersion: SIMULATOR_MODEL_VERSION, seed: s.seed, makespan, events, tasks: results,
+    scenarioId: s.id, modelVersion: SIMULATOR_MODEL_VERSION, seed: s.seed,
+    makespan, completedEnd, horizon: now, discardedEvents: discarded, events, tasks: results,
     resources: [...res.values()].map((r) => ({ id: r.id, busy: r.busy, maxConcurrent: r.maxConcurrent, capacity: r.capacity })),
-    criticalPath: path, sumOfDurations: sum,
+    criticalPath: links.map((l) => l.taskId), criticalLinks: links,
+    sumOfDurations: sum, activeTime, idleTime: makespan - activeTime,
   };
 }
 

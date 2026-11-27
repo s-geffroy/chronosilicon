@@ -34,13 +34,30 @@ export interface ScenarioSummary {
   readonly result: SimulationResult;
   readonly makespanSeconds: number;
   readonly sumSeconds: number;
-  /** 1 − makespan / Σdurations: share of time saved by overlap (0 = fully serial). */
-  readonly overlapShare: number;
+  /** Time during which at least one step runs (union of execution intervals). */
+  readonly activeSeconds: number;
+  /** makespan − active time: nothing runs (release dates, lags). Not an overlap effect. */
+  readonly idleSeconds: number;
+  /**
+   * 1 − active time / Σdurations: share of the summed step time hidden by
+   * concurrency, in [0, 1) (0 = no two steps ever overlap). Idle time does not
+   * enter it (AUD-004, ADR-0010 §6). null when Σdurations = 0 (undefined, not 0).
+   */
+  readonly overlapShare: number | null;
+}
+
+/** Overlap and idle indicators of a simulation result (ADR-0010 §6). */
+export function overlapIndicators(result: SimulationResult): Omit<ScenarioSummary, 'result'> {
+  const makespanSeconds = fsToSeconds(result.makespan);
+  const sumSeconds = fsToSeconds(result.sumOfDurations);
+  const activeSeconds = fsToSeconds(result.activeTime);
+  return {
+    makespanSeconds, sumSeconds, activeSeconds, idleSeconds: fsToSeconds(result.idleTime),
+    overlapShare: result.sumOfDurations > 0n ? 1 - activeSeconds / sumSeconds : null,
+  };
 }
 
 export function runScenario(def: ScenarioDef, capacities: Readonly<Record<string, number>> = {}): ScenarioSummary {
   const result = simulate(buildScenario(def, capacities));
-  const makespanSeconds = fsToSeconds(result.makespan);
-  const sumSeconds = fsToSeconds(result.sumOfDurations);
-  return { result, makespanSeconds, sumSeconds, overlapShare: sumSeconds > 0 ? 1 - makespanSeconds / sumSeconds : 0 };
+  return { result, ...overlapIndicators(result) };
 }

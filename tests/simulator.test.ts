@@ -177,3 +177,251 @@ describe('rejections', () => {
     expect(() => simulate(scen(ts, [], { maxEvents: 50 }))).toThrow(/event limit/);
   });
 });
+
+// ---------------------------------------------------------------------------
+// AUDIT-01 remediation (ADR-0010). Each block reproduces an auditor probe and
+// fixes the semantics; see docs/audits/AUDIT-01/remediation/notes-simulator.md.
+// ---------------------------------------------------------------------------
+const ss = (p: string, lagSeconds = 0) => ({ predecessor: p, relation: 'start-to-start' as const, lagSeconds });
+const kinds = (r: ReturnType<typeof simulate>) => r.events.map((e) => `${e.kind}:${e.taskId}@${fsToSeconds(e.time)}`);
+const cpu1 = [{ id: 'r', kind: 'cpu' as const, capacity: 1 }];
+
+/** Replays the critical links: each start must follow from its declared cause, and the chain must end at completedEnd. */
+const replayCriticalPath = (s: Scenario, r: ReturnType<typeof simulate>) => {
+  const byId = new Map(s.tasks.map((t) => [t.id, t]));
+  expect(r.criticalLinks.map((l) => l.taskId)).toEqual(r.criticalPath);
+  if (r.completedEnd === null) { expect(r.criticalPath).toEqual([]); return; }
+  r.criticalLinks.forEach((l, i) => {
+    const tr = r.tasks.get(l.taskId)!;
+    if (i === 0) expect(l.from).toBeNull(); else expect(l.from).toBe(r.criticalLinks[i - 1]!.taskId);
+    const from = l.from === null ? null : r.tasks.get(l.from)!;
+    const expected = {
+      origin: 0n,
+      release: fs(byId.get(l.taskId)!.releaseSeconds ?? 0),
+      'finish-to-start': from ? from.end! + l.lag : -1n,
+      'start-to-start': from ? from.start! + l.lag : -1n,
+      resource: from ? from.end! : -1n,
+    }[l.via];
+    expect(tr.start).toBe(expected);
+  });
+  const lastTask = r.tasks.get(r.criticalPath[r.criticalPath.length - 1]!)!;
+  expect(lastTask.status).toBe('done');
+  expect(lastTask.end).toBe(r.completedEnd);
+};
+
+describe('AUD-002: completed end, effective end and queue horizon are distinct notions', () => {
+  it('cancellation only: nothing completes, the run still lasts until the cancellation', () => {
+    const r = simulate(scen([task('A', 10, { cancelAtSeconds: 5 })]));
+    expect(kinds(r)).toEqual(['ready:A@0', 'start:A@0', 'cancel:A@5']);
+    expect(r.completedEnd).toBeNull();
+    expect(r.makespan).toBe(fs(5)); // effective end = last recorded event, cancellations included
+    expect(r.horizon).toBe(fs(5)); // the stale end at 10 s does not advance the clock
+    expect(r.discardedEvents).toBe(1);
+    expect(r.sumOfDurations).toBe(fs(5)); // executed (truncated) work
+    expect(r.criticalPath).toEqual([]);
+  });
+  it('mixed: the cancellation ends after the last completion', () => {
+    const r = simulate(scen([task('A', 10, { cancelAtSeconds: 5 }), task('B', 2)]));
+    expect(r.completedEnd).toBe(fs(2));
+    expect(r.makespan).toBe(fs(5));
+    expect(r.horizon).toBe(fs(5));
+    expect(r.criticalPath).toEqual(['B']);
+  });
+  it('mixed: a completion after the cancellation', () => {
+    const r = simulate(scen([task('A', 10, { cancelAtSeconds: 5 }), task('B', 8)]));
+    expect(r.completedEnd).toBe(fs(8));
+    expect(r.makespan).toBe(fs(8));
+    expect(r.horizon).toBe(fs(8));
+  });
+  it('a task cancelled before its release never starts; its ready event is discarded', () => {
+    const r = simulate(scen([task('A', 1, { releaseSeconds: 3, cancelAtSeconds: 1 })]));
+    expect(kinds(r)).toEqual(['cancel:A@1']);
+    expect(r.tasks.get('A')).toMatchObject({ status: 'cancelled', ready: null, start: null, end: null, duration: 0n });
+    expect(r.makespan).toBe(fs(1));
+    expect(r.horizon).toBe(fs(1));
+    expect(r.completedEnd).toBeNull();
+    expect(r.sumOfDurations).toBe(0n);
+    expect(r.discardedEvents).toBe(1);
+  });
+});
+
+describe('AUD-003: cancellations at one instant are atomic', () => {
+  it('auditor probe: no parasitic start of a dependent that is cancelled in the same cascade', () => {
+    const r = simulate(scen([task('A', 10, { resourceId: 'r', cancelAtSeconds: 5 }), task('B', 10, { resourceId: 'r', dependencies: [ss('A')] })], cpu1));
+    expect(kinds(r)).toEqual(['ready:A@0', 'start:A@0', 'ready:B@0', 'cancel:A@5', 'cancel:B@5']);
+    expect(r.tasks.get('B')).toMatchObject({ status: 'cancelled', start: null, end: null });
+    expect(r.resources[0]).toMatchObject({ busy: fs(5), maxConcurrent: 1 });
+  });
+  it('separate cancel events at the same instant are all applied before the resource is reallocated', () => {
+    const r = simulate(scen([
+      task('A', 10, { resourceId: 'r', cancelAtSeconds: 5 }),
+      task('B', 10, { resourceId: 'r', cancelAtSeconds: 5 }),
+      task('C', 1, { resourceId: 'r' }),
+    ], cpu1));
+    expect(kinds(r)).toEqual(['ready:A@0', 'start:A@0', 'ready:B@0', 'ready:C@0', 'cancel:A@5', 'cancel:B@5', 'start:C@5', 'end:C@6']);
+    expect(r.tasks.get('B')!.start).toBeNull();
+    expect(r.tasks.get('C')).toMatchObject({ start: fs(5), wait: fs(5) });
+    expect(r.resources[0]).toMatchObject({ busy: fs(6), maxConcurrent: 1 });
+    expect(r.criticalPath).toEqual(['A', 'C']);
+    expect(r.criticalLinks[1]).toMatchObject({ via: 'resource', from: 'A' });
+  });
+  it('a cancellation at the exact end time wins (cancel < end)', () => {
+    const r = simulate(scen([task('A', 5, { cancelAtSeconds: 5 }), task('B', 1, { dependencies: [after('A')] })]));
+    expect(r.tasks.get('A')).toMatchObject({ status: 'cancelled', end: fs(5) });
+    expect(r.tasks.get('B')!.status).toBe('cancelled');
+    expect(r.completedEnd).toBeNull();
+  });
+});
+
+describe('AUD-004: activity, idle time and overlap are separate quantities', () => {
+  it('release date: idle time is not counted as negative overlap', () => {
+    const r = simulate(scen([task('A', 10, { releaseSeconds: 5 })]));
+    expect(r.makespan).toBe(fs(15));
+    expect(r.activeTime).toBe(fs(10));
+    expect(r.idleTime).toBe(fs(5));
+    expect(r.sumOfDurations).toBe(fs(10));
+  });
+  it('active time is the measure of the union of execution intervals', () => {
+    const r = simulate(scen([task('a', 2), task('b', 2), task('c', 1, { releaseSeconds: 10 }), task('z', 0, { releaseSeconds: 4 })]));
+    expect(r.activeTime).toBe(fs(3));
+    expect(r.idleTime).toBe(fs(8));
+    expect(r.makespan).toBe(fs(11));
+    expect(r.sumOfDurations).toBe(fs(5));
+  });
+});
+
+describe('AUD-005: the critical path is a chain of binding constraints', () => {
+  it('auditor probe: start-to-start lag — the path is A → B and explains completedEnd = 10 s (not Σ durations = 11 s)', () => {
+    const s = scen([task('A', 10), task('B', 1, { dependencies: [ss('A', 9)] })]);
+    const r = simulate(s);
+    expect(r.criticalPath).toEqual(['A', 'B']);
+    expect(r.criticalLinks).toEqual([
+      { taskId: 'A', via: 'origin', from: null, lag: 0n },
+      { taskId: 'B', via: 'start-to-start', from: 'A', lag: fs(9) },
+    ]);
+    expect(r.completedEnd).toBe(fs(10));
+    replayCriticalPath(s, r);
+  });
+  it('tie at the end: the anchor is the last-declared task among those finishing at completedEnd', () => {
+    const r = simulate(scen([task('B', 1, { dependencies: [ss('A', 9)] }), task('A', 10)]));
+    expect(r.criticalPath).toEqual(['A']);
+  });
+  it('a release date that dominates the dependency cuts the path', () => {
+    const s = scen([task('A', 1), task('B', 1, { dependencies: [after('A')], releaseSeconds: 10 })]);
+    const r = simulate(s);
+    expect(r.criticalPath).toEqual(['B']);
+    expect(r.criticalLinks[0]).toMatchObject({ via: 'release', from: null });
+    replayCriticalPath(s, r);
+  });
+  it('a dependency that ties with the release date is retained as the cause', () => {
+    const s = scen([task('A', 1), task('B', 1, { dependencies: [after('A', 1)], releaseSeconds: 2 })]);
+    const r = simulate(s);
+    expect(r.criticalPath).toEqual(['A', 'B']);
+    replayCriticalPath(s, r);
+  });
+  it('capacity 2: the waiting task is linked to the task that freed its unit', () => {
+    const s = scen(['x', 'y', 'z'].map((id) => task(id, 1, { resourceId: 'r' })), [{ id: 'r', kind: 'cpu', capacity: 2 }]);
+    const r = simulate(s);
+    expect(r.makespan).toBe(fs(2));
+    expect(r.criticalPath).toEqual(['x', 'z']);
+    expect(r.criticalLinks[1]).toMatchObject({ via: 'resource', from: 'x' });
+    replayCriticalPath(s, r);
+  });
+});
+
+describe('ADR-0010: simultaneity semantics', () => {
+  it('at one instant: ends are logged before ready events', () => {
+    const r = simulate(scen([task('A', 1, { resourceId: 'r' }), task('B', 1, { resourceId: 'r', releaseSeconds: 1 })], cpu1));
+    expect(kinds(r)).toEqual(['ready:A@0', 'start:A@0', 'end:A@1', 'ready:B@1', 'start:B@1', 'end:B@2']);
+    expect(r.tasks.get('B')!.wait).toBe(0n);
+  });
+  it('the resource queue is served by ready time first, then priority, then declaration order', () => {
+    const r = simulate(scen([
+      task('A', 2, { resourceId: 'r' }),
+      task('B', 1, { resourceId: 'r', priority: 5 }),
+      task('C', 1, { resourceId: 'r', priority: 0, releaseSeconds: 1 }),
+    ], cpu1));
+    expect(r.events.filter((e) => e.kind === 'start').map((e) => e.taskId)).toEqual(['A', 'B', 'C']);
+  });
+  it('simultaneous cancel events are applied by priority, then declaration order', () => {
+    const r = simulate(scen([task('b', 3, { cancelAtSeconds: 1, priority: 1 }), task('a', 3, { cancelAtSeconds: 1, priority: 0 }), task('c', 3, { cancelAtSeconds: 1, priority: 1 })]));
+    expect(r.events.filter((e) => e.kind === 'cancel').map((e) => e.taskId)).toEqual(['a', 'b', 'c']);
+  });
+});
+
+describe('resource occupancy counter (busy) and deadlock guard', () => {
+  it('busy = ∫ occupied units dt, capacity 2, tasks without resource excluded', () => {
+    const r = simulate(scen([task('a', 1, { resourceId: 'r' }), task('b', 2, { resourceId: 'r' }), task('c', 3, { resourceId: 'r' }), task('free', 7)], [{ id: 'r', kind: 'cpu', capacity: 2 }]));
+    // a 0–1, b 0–2, c 1–4 (freed by a)
+    expect(r.resources[0]).toMatchObject({ busy: fs(6), maxConcurrent: 2, capacity: 2 });
+    expect(r.makespan).toBe(fs(7));
+  });
+  it('busy counts truncated work of cancelled tasks only up to the cancellation', () => {
+    const r = simulate(scen([task('a', 10, { resourceId: 'r', cancelAtSeconds: 3 }), task('b', 1, { resourceId: 'r' })], cpu1));
+    expect(r.resources[0]!.busy).toBe(fs(4));
+  });
+  it('a task left open when the queue empties is reported as a deadlock (defensive guard)', () => {
+    // White-box: the scenario becomes cyclic only after static validation (simulate reads
+    // `seed` after validateScenario), so the defensive post-run guard is exercised.
+    let validated = false;
+    const a = task('a', 1), b = task('b', 1);
+    const s = {
+      id: 'dl', modelVersion: '1.0.0', resources: [],
+      get seed() { validated = true; return 1; },
+      tasks: [
+        { ...a, get dependencies() { return validated ? [after('b')] : []; } },
+        { ...b, get dependencies() { return validated ? [after('a')] : []; } },
+      ],
+    } as unknown as Scenario;
+    expect(() => simulate(s)).toThrow(/deadlock or impossible cause: tasks never completed: a, b/);
+  });
+});
+
+describe('AUDIT-01 invariants on random DAGs with cancellations, start-to-start, lag, release, capacity 1–2', () => {
+  const rnd = (seed: number) => { let x = seed; return () => ((x = (x * 1103515245 + 12345) % 2 ** 31) / 2 ** 31); };
+  it('atomic cancellation, causality, occupancy, horizon and replayable critical path', () => {
+    const r = rnd(11);
+    const caps: Record<string, number> = { cpu: 2, io: 1 };
+    for (let n = 0; n < 80; n++) {
+      const ts: Task[] = [];
+      for (let i = 0; i < 16; i++) {
+        const deps = ts.filter(() => r() < 0.15).map((t) => (r() < 0.3 ? ss(t.id, Math.floor(r() * 3)) : after(t.id, Math.floor(r() * 2))));
+        ts.push(task(`t${i}`, Math.floor(r() * 4), {
+          resourceId: r() < 0.7 ? (r() < 0.5 ? 'cpu' : 'io') : null, dependencies: deps, priority: Math.floor(r() * 3),
+          ...(r() < 0.2 ? { releaseSeconds: Math.floor(r() * 5) } : {}),
+          ...(r() < 0.15 ? { cancelAtSeconds: Math.floor(r() * 8) } : {}),
+        }));
+      }
+      const s = scen(ts, [{ id: 'cpu', kind: 'cpu', capacity: 2 }, { id: 'io', kind: 'storage', capacity: 1 }]);
+      const res = simulate(s);
+      const cancelAt = new Map(res.events.filter((e) => e.kind === 'cancel').map((e) => [e.taskId, e.time]));
+      for (const t of ts) {
+        const tr = res.tasks.get(t.id)!;
+        if (tr.status === 'cancelled') {
+          // never started at (or after) its own cancellation instant: no parasitic start
+          if (tr.start !== null) expect(tr.start < cancelAt.get(t.id)!).toBe(true);
+          continue;
+        }
+        expect(tr.start! >= tr.ready!).toBe(true);
+        for (const d of t.dependencies) {
+          const p = res.tasks.get(d.predecessor)!;
+          expect(p.status).toBe('done');
+          expect(tr.start! >= (d.relation === 'finish-to-start' ? p.end! : p.start!) + fs(d.lagSeconds)).toBe(true);
+        }
+      }
+      for (const [rid, cap] of Object.entries(caps)) {
+        const iv = ts.map((t) => ({ t, x: res.tasks.get(t.id)! })).filter(({ t, x }) => t.resourceId === rid && x.start !== null).map(({ x }) => x);
+        for (const p of new Set(iv.map((x) => x.start!))) expect(iv.filter((x) => x.start! <= p && x.end! > p).length).toBeLessThanOrEqual(cap);
+        expect(res.resources.find((u) => u.id === rid)!.busy).toBe(iv.reduce((a, x) => a + (x.end! - x.start!), 0n));
+      }
+      const lastEvent = res.events.reduce((m, e) => (e.time > m ? e.time : m), 0n);
+      expect(res.makespan).toBe(lastEvent);
+      expect(res.horizon).toBe(res.makespan);
+      const done = [...res.tasks.values()].filter((x) => x.status === 'done');
+      expect(res.completedEnd).toBe(done.length ? done.reduce((m, x) => (x.end! > m ? x.end! : m), 0n) : null);
+      expect(res.activeTime + res.idleTime).toBe(res.makespan);
+      expect(res.activeTime <= res.sumOfDurations).toBe(true);
+      replayCriticalPath(s, res);
+    }
+  });
+});
