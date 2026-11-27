@@ -6978,7 +6978,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Unite de temps naturelle construite a partir des constantes fondamentales (racine de hbar G / c^5) ; echelle en dessous de laquelle la physique actuelle ne sait plus decrire le temps. Ce n'est pas un evenement observe.",
+        "fr": "Unité de temps naturelle construite à partir des constantes fondamentales (racine de ħG/c⁵) ; échelle en dessous de laquelle la physique actuelle ne sait plus décrire le temps. Ce n'est pas un événement observé.",
         "en": "Natural unit of time built from fundamental constants (sqrt(hbar G / c^5)); the scale below which current physics cannot describe time. Not an observed event."
       },
       "protocol": null,
@@ -7005,7 +7005,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Duree de vie moyenne d'un muon au repos avant sa desintegration (surtout en electron et deux neutrinos). Les muons crees par les rayons cosmiques vivent plus longtemps vus du sol, a cause de la dilatation relativiste du temps.",
+        "fr": "Durée de vie moyenne d'un muon au repos avant sa désintégration (surtout en électron et deux neutrinos). Les muons créés par les rayons cosmiques vivent plus longtemps vus du sol, à cause de la dilatation relativiste du temps.",
         "en": "Average lifetime of a muon at rest before it decays (mostly into an electron and two neutrinos). Muons created by cosmic rays live longer as seen from the ground because of relativistic time dilation."
       },
       "protocol": null,
@@ -7032,7 +7032,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Duree de vie moyenne d'un neutron hors d'un noyau atomique avant sa desintegration en proton, electron et antineutrino (environ un quart d'heure). Les neutrons lies dans des noyaux stables ne se desintegrent pas.",
+        "fr": "Durée de vie moyenne d'un neutron hors d'un noyau atomique avant sa désintégration en proton, électron et antineutrino (environ un quart d'heure). Les neutrons liés dans des noyaux stables ne se désintègrent pas.",
         "en": "Average lifetime of a neutron outside an atomic nucleus before it decays into a proton, an electron and an antineutrino (about a quarter of an hour). Neutrons bound in stable nuclei do not decay."
       },
       "protocol": null,
@@ -7059,7 +7059,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Temps au bout duquel la moitie des atomes de carbone 14 d'un echantillon se sont desintegres en azote 14 ; c'est l'horloge de la datation au radiocarbone.",
+        "fr": "Temps au bout duquel la moitié des atomes de carbone 14 d'un échantillon se sont désintégrés en azote 14 ; c'est l'horloge de la datation au radiocarbone.",
         "en": "Time for half of a sample of carbon-14 atoms to decay into nitrogen-14; the clock behind radiocarbon dating."
       },
       "protocol": null,
@@ -7086,7 +7086,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Temps au bout duquel la moitie d'un echantillon d'uranium 238 s'est desintegree (surtout par emission alpha) ; c'est a peu pres l'age de la Terre, d'ou son usage pour dater les roches les plus anciennes.",
+        "fr": "Temps au bout duquel la moitié d'un échantillon d'uranium 238 s'est désintégrée (surtout par émission alpha) ; c'est à peu près l'âge de la Terre, d'où son usage pour dater les roches les plus anciennes.",
         "en": "Time for half of a sample of uranium-238 to decay (mainly by alpha emission); about the age of the Earth, which is why U-238 is used to date the oldest rocks."
       },
       "protocol": null,
@@ -7113,7 +7113,7 @@
       "low": 1.212,
       "high": 1.353,
       "conditions": {
-        "fr": "Temps mis par la lumiere (ou un signal radio) pour parcourir la distance moyenne Terre-Lune (demi-grand axe 384 400 km), aller simple. Bas/haut : Lune au perigee (363 300 km) et a l'apogee (405 500 km).",
+        "fr": "Temps mis par la lumière (ou un signal radio) pour parcourir la distance moyenne Terre-Lune (demi-grand axe 384 400 km), aller simple. Bas/haut : Lune au périgée (363 300 km) et à l'apogée (405 500 km).",
         "en": "Time for light (or a radio signal) to cross the mean Earth-Moon distance (semimajor axis 384 400 km), one way. Low/high: Moon at perigee (363 300 km) and apogee (405 500 km)."
       },
       "protocol": null,
@@ -7147,7 +7147,7 @@
       "low": 490.7,
       "high": 507.4,
       "conditions": {
-        "fr": "Temps mis par la lumiere du Soleil pour atteindre la Terre a la distance moyenne (demi-grand axe de l'orbite terrestre, 149,598 millions de km) : environ 8 min 19 s. Bas/haut : Terre au perihelie (debut janvier) et a l'aphelie (debut juillet).",
+        "fr": "Temps mis par la lumière du Soleil pour atteindre la Terre à la distance moyenne (demi-grand axe de l'orbite terrestre, 149,598 millions de km) : environ 8 min 19 s. Bas/haut : Terre au périhélie (début janvier) et à l'aphélie (début juillet).",
         "en": "Time for sunlight to reach Earth at the mean Sun-Earth distance (Earth's orbital semimajor axis, 149.598 million km): about 8 min 19 s. Low/high: Earth at perihelion (early January) and aphelion (early July)."
       },
       "protocol": null,
@@ -7181,7 +7181,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Temps mis par la Terre pour faire un tour par rapport aux etoiles lointaines : environ 23 h 56 min, soit a peu pres 4 minutes de moins que le jour solaire de 24 h, car la Terre avance aussi sur son orbite.",
+        "fr": "Temps mis par la Terre pour faire un tour par rapport aux étoiles lointaines : environ 23 h 56 min, soit à peu près 4 minutes de moins que le jour solaire de 24 h, car la Terre avance aussi sur son orbite.",
         "en": "Time for Earth to turn once relative to distant stars: about 23 h 56 min, roughly 4 minutes shorter than the 24 h solar day because Earth also moves along its orbit."
       },
       "protocol": null,
@@ -7208,7 +7208,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Temps entre deux retours successifs au meme point des saisons (par exemple d'un equinoxe de printemps au suivant) ; c'est l'annee que les calendriers cherchent a suivre.",
+        "fr": "Temps entre deux retours successifs au même point des saisons (par exemple d'un équinoxe de printemps au suivant) ; c'est l'année que les calendriers cherchent à suivre.",
         "en": "Time between two successive identical seasonal points (e.g. spring equinox to spring equinox); the year calendars try to follow."
       },
       "protocol": null,
@@ -7235,7 +7235,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Temps moyen entre deux phases identiques de la Lune (par exemple d'une pleine Lune a la suivante). L'orbite mesuree par rapport aux etoiles (siderale) est plus courte : 27,3217 j.",
+        "fr": "Temps moyen entre deux phases identiques de la Lune (par exemple d'une pleine Lune à la suivante). L'orbite mesurée par rapport aux étoiles (sidérale) est plus courte : 27,3217 j.",
         "en": "Average time between two identical Moon phases (e.g. full Moon to full Moon). The orbit measured against the stars (sidereal) is shorter: 27.3217 d."
       },
       "protocol": null,
@@ -7262,7 +7262,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Temps mis par la comete 1P/Halley pour faire le tour du Soleil ; dernier passage au plus pres du Soleil (perihelie) le 9 fevrier 1986.",
+        "fr": "Temps mis par la comète 1P/Halley pour faire le tour du Soleil ; dernier passage au plus près du Soleil (périhélie) le 9 février 1986.",
         "en": "Time for comet 1P/Halley to go once around the Sun; last closest approach to the Sun (perihelion) on 1986-02-09."
       },
       "protocol": null,
@@ -7289,7 +7289,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Temps mis par Jupiter pour faire le tour du Soleil par rapport aux etoiles (periode siderale) : environ 11,86 annees terrestres.",
+        "fr": "Temps mis par Jupiter pour faire le tour du Soleil par rapport aux étoiles (période sidérale) : environ 11,86 années terrestres.",
         "en": "Time for Jupiter to orbit the Sun once relative to the stars (sidereal period): about 11.86 Earth years."
       },
       "protocol": null,
@@ -7316,7 +7316,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Temps approximatif mis par le Soleil (et tout le Systeme solaire) pour faire un tour complet autour du centre de notre Galaxie.",
+        "fr": "Temps approximatif mis par le Soleil (et tout le Système solaire) pour faire un tour complet autour du centre de notre Galaxie.",
         "en": "Approximate time for the Sun (and the Solar System) to complete one trip around the centre of our Galaxy."
       },
       "protocol": null,
@@ -7343,7 +7343,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Temps ecoule depuis la formation de la Terre et des autres corps solides du Systeme solaire, determine a partir des isotopes du plomb des plus vieux minerais terrestres et des meteorites.",
+        "fr": "Temps écoulé depuis la formation de la Terre et des autres corps solides du Système solaire, déterminé à partir des isotopes du plomb des plus vieux minerais terrestres et des météorites.",
         "en": "Time since Earth and the other solid bodies of the Solar System formed, determined from lead isotopes in Earth's oldest lead ores and in meteorites."
       },
       "protocol": null,
@@ -7370,7 +7370,7 @@
       "low": null,
       "high": null,
       "conditions": {
-        "fr": "Temps ecoule depuis le Big Bang, deduit de la carte du fond diffus cosmologique du satellite Planck, en supposant le modele cosmologique standard (Lambda-CDM de base), combine aux donnees de lentillage et d'oscillations acoustiques des baryons.",
+        "fr": "Temps écoulé depuis le Big Bang, déduit de la carte du fond diffus cosmologique du satellite Planck, en supposant le modèle cosmologique standard (Lambda-CDM de base), combiné aux données de lentillage et d'oscillations acoustiques des baryons.",
         "en": "Time since the Big Bang inferred from the Planck satellite's map of the cosmic microwave background, assuming the standard cosmological model (base Lambda-CDM), combined with lensing and baryon acoustic oscillation data."
       },
       "protocol": null,
@@ -7387,6 +7387,411 @@
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-27-R1-A_astronomy_physics.json#astro-age-of-universe",
       "notes": "68 % interval ±0.020 Gyr (13.787 ± 0.020 x 10^9 a). Model-dependent inference, not a direct measurement: the Planck-only baseline (TT,TE,EE+lowE+lensing) gives 13.797 ± 0.023 Gyr in the same table, and the 'Hubble tension' (disagreement between early- and late-Universe H0 values) means a different model could shift the age; not quantified here. Quote abridged with '...' between table columns. | Maintainer curation 2026-11-27: reference value restated by the source, no protocol published there: classified documented."
+    },
+    {
+      "id": "physio-synaptic-delay-m1",
+      "phenomenonId": "physio-synaptic-delay",
+      "configuration": null,
+      "value": 150,
+      "unit": "us",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps entre le début de l'influx dans la terminaison nerveuse émettrice et le début de la réponse du neurone récepteur. Synapses du cervelet de rat, mesurées à température physiologique (celle du corps).",
+        "en": "Time from the start of the action potential in the sending nerve ending to the start of the response in the receiving neuron. Rat cerebellar synapses, measured at physiological (body) temperature."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-sabatini-regehr-1996"
+      ],
+      "locator": "Abstract",
+      "quote": "postsynaptic responses commence just 150 micros after the start of the presynaptic action potential",
+      "era": 1996,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-synaptic-delay",
+      "notes": "Measured in rat brain slices, not in humans. The original uses the microsecond symbol; the Europe PMC rendering shows it as 'micros'. It is slower at room temperature, per the same abstract. Other synapse types are slower. Read from the abstract only. | Maintainer curation 2026-11-27: value restated from the source abstract or summary; no protocol written here: classified documented."
+    },
+    {
+      "id": "physio-action-potential-m1",
+      "phenomenonId": "physio-action-potential",
+      "configuration": null,
+      "value": 2,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Durée approximative du pic électrique complet d'un neurone, de la dépolarisation au retour au potentiel de repos (description de manuel pour un neurone typique).",
+        "en": "Approximate time for the whole voltage spike of a neuron, from depolarization back to resting potential (textbook description of a typical neuron)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-openstax-ap2e-12-4"
+      ],
+      "locator": "Section 'The Action Potential', paragraph before 'refractory period' (refers to Figure 12.24)",
+      "quote": "All of this takes place within approximately 2 milliseconds",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-action-potential",
+      "notes": "Textbook order of magnitude for a typical neuron. Real durations vary by cell type. No primary measurement is cited at this spot."
+    },
+    {
+      "id": "physio-saccade-reading-m1",
+      "phenomenonId": "physio-saccade-reading",
+      "configuration": null,
+      "value": 25,
+      "unit": "ms",
+      "low": 20,
+      "high": 30,
+      "conditions": {
+        "fr": "Durée d'une saccade (saut du regard d'un point à un autre) pendant la lecture. La fourchette est l'intervalle typique en lecture. Une saccade en général dure environ 20 à 200 ms selon son amplitude.",
+        "en": "Duration of one saccade, the jump of the eyes from one point to the next, during reading. The range is the typical span for reading. Saccades in general last about 20-200 ms depending on their size."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-wikipedia-saccade"
+      ],
+      "locator": "Article body, paragraph on peak angular speed and saccade timing, revision 1374500057 (section heading not recorded)",
+      "quote": "last from about 20–200 ms, depending on their amplitude (20–30 ms is typical in language reading)",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-saccade-reading",
+      "notes": "Wikipedia is a tertiary source, used as a last resort. The primary references behind it were not traced. The central value is the midpoint of the source's range, not a value stated by the source. Harwood et al. 1999 (J Neurosci, PMC6782780) only says saccades are 'usually completed in tens of milliseconds', which is consistent. Replace with a primary main-sequence source if one can be opened (e.g. Purves, Neuroscience, NCBI Bookshelf NBK10991). | Maintainer curation 2026-11-27: typical value = middle of the range published by the source; shown as illustrative with that range. | Decision: Only source opened is Wikipedia (last resort); the primary reference (Purves, Neuroscience, NCBI Bookshelf) was blocked by a CAPTCHA. Held back until a primary source is read (R1 lot 2026-11-27)."
+    },
+    {
+      "id": "physio-heartbeat-interval-m1",
+      "phenomenonId": "physio-heartbeat-interval",
+      "configuration": null,
+      "value": 0.75,
+      "unit": "s",
+      "low": 0.6,
+      "high": 1,
+      "conditions": {
+        "fr": "Adulte au repos. Calculé à partir de la fréquence cardiaque normale au repos (60 à 100 battements par minute) : 100 bpm donnent 0,6 s, 60 bpm donnent 1 s.",
+        "en": "Resting adult. Calculated from the normal resting heart rate range of 60-100 beats per minute: 100 bpm gives 0.6 s and 60 bpm gives 1 s."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-openstax-ap2e-19-4"
+      ],
+      "locator": "Section 'Heart Rates', box 'Disorders of the... Heart: Abnormal Heart Rates'",
+      "quote": "For an adult, normal resting HR will be in the range of 60–100 bpm.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-heartbeat-interval",
+      "notes": "The 60-100 bpm range is the textbook definition of a normal adult resting rate (below 60 is bradycardia, above 100 tachycardia, same page). Newborn resting rates may be 120 bpm (same page). The 0.75 s central value is the midpoint of the range, not a measured mean. MedlinePlus gives the same range but its ADAM content forbids AI reuse, so it was not used. | Maintainer curation 2026-11-27: typical value = middle of the range published by the source; shown as illustrative with that range."
+    },
+    {
+      "id": "physio-breath-interval-m1",
+      "phenomenonId": "physio-breath-interval",
+      "configuration": null,
+      "value": 4,
+      "unit": "s",
+      "low": 3.33,
+      "high": 5,
+      "conditions": {
+        "fr": "Adulte ou adolescent au repos. Calculé à partir de la fréquence respiratoire normale au repos (12 à 18 respirations par minute) : 18/min donnent environ 3,3 s par respiration, 12/min donnent 5 s.",
+        "en": "Resting adult or adolescent. Calculated from the normal resting rate of 12-18 breaths per minute: 18/min gives about 3.3 s per breath and 12/min gives 5 s."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-openstax-ap2e-22-3"
+      ],
+      "locator": "Section 'Respiratory Rate and Control of Ventilation'",
+      "quote": "By adolescence, the normal respiratory rate is similar to that of adults, 12 to 18 breaths per minute.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-breath-interval",
+      "notes": "Textbook reference range. Infants breathe 30-60 times per minute (same page). The central value is the midpoint of the range, not a measured mean. | Maintainer curation 2026-11-27: typical value = middle of the range published by the source; shown as illustrative with that range."
+    },
+    {
+      "id": "physio-mayfly-dolania-adult-m1",
+      "phenomenonId": "physio-mayfly-dolania-adult",
+      "configuration": null,
+      "value": 5,
+      "unit": "min",
+      "low": null,
+      "high": 5,
+      "conditions": {
+        "fr": "Temps que vit la femelle de l'éphémère Dolania americana après sa dernière mue ; elle s'accouple et pond pendant ce temps. La valeur est une borne haute (« moins de cinq minutes »). La plupart des éphémères vivent au plus environ 48 heures à l'état adulte.",
+        "en": "Time a female of the mayfly Dolania americana lives after its final molt, during which it mates and lays eggs. The value is an upper bound ('less than five minutes'). Most mayfly species live at most about 48 hours as adults."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-welch-1998"
+      ],
+      "locator": "Introduction (first paragraph); repeated in Results and Discussion",
+      "quote": "the female of the mayfly Dolania americana (Ephemeroptera) which lives for less than five minutes after its final molt",
+      "era": 1998,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-mayfly-dolania-adult",
+      "notes": "Secondary compilation. The primary study (Sweeney & Vannote 1982) was not opened. This is an extreme case, not a typical mayfly. Same chapter: 'few species live more than 48 hours as adults'. Read from an archived snapshot."
+    },
+    {
+      "id": "bio-ecoli-doubling-lab-m1",
+      "phenomenonId": "bio-ecoli-doubling-lab",
+      "configuration": null,
+      "value": 20,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Escherichia coli au laboratoire, avec oxygène et nutriments abondants : temps pour qu'une cellule se divise en deux.",
+        "en": "Escherichia coli in the laboratory, with oxygen and rich nutrients: the time for one cell to divide into two."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-gibson-2018"
+      ],
+      "locator": "Section 1. Introduction, first sentence; also Table 1 (laboratory DT 0.33 h)",
+      "quote": "The bacterium Escherichia coli can divide every 20 min in the laboratory under aerobic, nutrient-rich conditions.",
+      "era": 2018,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#bio-ecoli-doubling-lab",
+      "notes": "A widely cited textbook figure stated in a peer-reviewed open-access paper. The value depends on strain, medium and temperature (usually 37 °C, not stated here). Gibson et al. give it as background, not as their own measurement."
+    },
+    {
+      "id": "bio-ecoli-doubling-wild-m1",
+      "phenomenonId": "bio-ecoli-doubling-wild",
+      "configuration": null,
+      "value": 15,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Temps moyen estimé entre deux divisions d'E. coli dans son milieu naturel, déduit indirectement de la vitesse d'accumulation des mutations dans la nature comparée au laboratoire. Erreur type 7,7 h (tableau 1).",
+        "en": "Estimated average time between divisions for E. coli in its natural environment, inferred indirectly from how fast mutations accumulate in the wild compared with the lab. Standard error 7.7 h (Table 1)."
+      },
+      "protocol": null,
+      "provenanceType": "estimated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-gibson-2018"
+      ],
+      "locator": "Results text immediately before Table 1; Table 1 (E. coli DT 15 h, s.e. 7.7)",
+      "quote": "E. coli can double every 20 min in the laboratory but we estimate that it only doubles every 15 h in the wild",
+      "era": 2018,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#bio-ecoli-doubling-wild",
+      "notes": "Model-based estimate with large uncertainty (s.e. 7.7 h). It assumes the mutation rate per generation is the same in the wild and the lab. Useful as a contrast with the 20 min lab value."
+    },
+    {
+      "id": "physio-sleep-cycle-m1",
+      "phenomenonId": "physio-sleep-cycle",
+      "configuration": null,
+      "value": 90,
+      "unit": "min",
+      "low": 80,
+      "high": 100,
+      "conditions": {
+        "fr": "Durée d'un cycle complet entre sommeil lent (non-REM) et sommeil paradoxal (REM) au cours d'une nuit. La fourchette est celle donnée par la source ; il y a d'habitude quatre à six cycles par nuit.",
+        "en": "Length of one cycle through the non-REM and REM sleep phases in a night's sleep. The range is the span the source gives. Usually there are four to six cycles per night."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nhlbi-sleep-stages"
+      ],
+      "locator": "Page 'Sleep Phases and Stages', introductory paragraph (before 'Non-REM sleep')",
+      "quote": "The cycle starts over every 80 to 100 minutes. Usually there are four to six cycles per night.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-sleep-cycle",
+      "notes": "Patient-education page from a federal agency, with no primary study cited. The 90 min central value is the midpoint of the source's range, not stated as such by the source. | Maintainer curation 2026-11-27: typical value = middle of the range published by the source; shown as illustrative with that range."
+    },
+    {
+      "id": "physio-circadian-period-m1",
+      "phenomenonId": "physio-circadian-period",
+      "configuration": null,
+      "value": 24.18,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Période intrinsèque de l'horloge circadienne humaine, mesurée selon un protocole de « désynchronisation forcée » qui sépare l'horloge interne du cycle jour-nuit. Moyenne chez des adultes sains jeunes et âgés.",
+        "en": "Intrinsic period of the human circadian pacemaker, measured under a forced-desynchrony protocol that separates the body clock from the light-dark cycle. Average for healthy young and older adults."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-czeisler-1999"
+      ],
+      "locator": "Abstract",
+      "quote": "the intrinsic period of the human circadian pacemaker averages 24.18 hours in both age groups",
+      "era": 1999,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-circadian-period",
+      "notes": "Landmark controlled lab study. The number of subjects and the spread between individuals are not in the abstract and were not read (full text paywalled), so low/high stay null. Older free-running studies reported ~25 h, a figure the same abstract presents as superseded. | Maintainer curation 2026-11-27: value restated from the source abstract or summary; no protocol written here: classified documented."
+    },
+    {
+      "id": "bio-red-blood-cell-lifespan-m1",
+      "phenomenonId": "bio-red-blood-cell-lifespan",
+      "configuration": null,
+      "value": 115,
+      "unit": "d",
+      "low": 70,
+      "high": 140,
+      "conditions": {
+        "fr": "Temps moyen pendant lequel un globule rouge circule chez une personne en bonne santé avant d'être éliminé. La fourchette décrit la variation entre cellules individuelles autour de cette moyenne.",
+        "en": "Mean time a red blood cell circulates in a healthy person before removal. The range is the variation between individual cells around that mean."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-franco-2012"
+      ],
+      "locator": "Introduction, first paragraph",
+      "quote": "In a normal individual with a mean RBC lifespan of 115 days, this value may vary between 70 and 140 days",
+      "era": 2012,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#bio-red-blood-cell-lifespan",
+      "notes": "Peer-reviewed review by a specialist in RBC survival measurement (biotin and 51Cr labelling). The textbook figure is 120 days: OpenStax A&P 2e 18.3 says 'Erythrocytes live up to 120 days in the circulation', which is consistent. Quote was extracted by WebFetch with citation markers removed."
+    },
+    {
+      "id": "physio-gestation-length-m1",
+      "phenomenonId": "physio-gestation-length",
+      "configuration": null,
+      "value": 268,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Durée médiane entre l'ovulation (conception) et la naissance pour 125 grossesses uniques conçues naturellement (cohorte américaine, 1982-85). Même sans les naissances prématurées, les durées s'étalent sur 37 jours. Mesurée depuis l'ovulation, et non depuis les dernières règles comme on le fait d'habitude en clinique.",
+        "en": "Median time from ovulation (conception) to birth in 125 naturally conceived single-baby pregnancies (US cohort, 1982-85). Even without preterm births, lengths spread over a 37-day range. Measured from ovulation, not from the last menstrual period as usually done in clinics."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-jukic-2013"
+      ],
+      "locator": "Abstract, 'Main results and the role of chance'",
+      "quote": "The median time from ovulation to birth was 268 days (38 weeks, 2 days).",
+      "era": 2013,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-gestation-length",
+      "notes": "Ovulation was dated with urinary hormones, a gold-standard method, but the sample is small (n=125). The source states a 37-day spread, not explicit bounds, so low/high are null. The abstract notes that dating by last menstrual period gives more variation (CV 4.9% vs 3.7%). | Maintainer curation 2026-11-27: value restated from the source abstract or summary; no protocol written here: classified documented."
+    },
+    {
+      "id": "bio-periodical-cicada-cycle-m1",
+      "phenomenonId": "bio-periodical-cicada-cycle",
+      "configuration": null,
+      "value": 17,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Intervalle entre deux émergences massives des cigales périodiques Magicicada en un même lieu de l'est des États-Unis. Les couvées sortent tous les 13 ou tous les 17 ans ; la valeur correspond au type à 17 ans et « low » au type à 13 ans (deux durées fixes, pas une plage continue).",
+        "en": "Interval between mass emergences of Magicicada periodical cicadas at a given place in the eastern United States. Broods come out every 13 or every 17 years; the value is the 17-year type and 'low' is the 13-year type (two fixed cycle lengths, not a continuous range)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-bush-2024"
+      ],
+      "locator": "Abstract",
+      "quote": "These year classes (\"broods\") emerge dependably every 13 or 17 yr in a given location.",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#bio-periodical-cicada-cycle",
+      "notes": "Well established. The same abstract notes that a sizeable part of a population sometimes emerges 4 years early or late. The low/high pair stands for two discrete cycle types. Split it into two items if the atlas model needs that. | Maintainer curation 2026-11-27: 13 and 17 years are two distinct cycle types, not a range: value 17 years (17-year broods), low/high left null."
+    },
+    {
+      "id": "bio-honeybee-wingbeat-m1",
+      "phenomenonId": "bio-honeybee-wingbeat",
+      "configuration": null,
+      "value": 230,
+      "unit": "Hz",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Fréquence des battements d'ailes d'abeilles en vol stationnaire, mesurée au laboratoire : environ 230 battements par seconde (soit à peu près 4,3 ms par battement, conversion de ma part).",
+        "en": "Wingbeat frequency of honeybees while hovering, measured in the lab. That is about 230 wing strokes per second (about 4.3 ms per stroke, my conversion)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-altshuler-2005"
+      ],
+      "locator": "Abstract",
+      "quote": "hovering with relatively low stroke amplitude (approximately 90 degrees) and high wingbeat frequency (approximately 230 Hz)",
+      "era": 2005,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#bio-honeybee-wingbeat",
+      "notes": "Peer-reviewed measurement, stated as approximate. Read from the abstract only, so the measurement method was not checked. The 4.3 ms per stroke figure is 1/230 s, computed by me. Frequency varies with temperature, load and individual. Per the abstract it stayed nearly constant in low-density heliox. | Maintainer curation 2026-11-27: value restated from the source abstract or summary; no protocol written here: classified documented."
+    },
+    {
+      "id": "physio-life-expectancy-us-2024-m1",
+      "phenomenonId": "physio-life-expectancy-us-2024",
+      "configuration": null,
+      "value": 79,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Espérance de vie à la naissance (tous sexes) aux États-Unis en 2024 (hommes 76,5 ans, femmes 81,4 ans), publiée par le NCHS. Moyenne statistique, pas une prévision individuelle.",
+        "en": "Life expectancy at birth for both sexes in the United States in 2024 (males 76.5 years, females 81.4 years), as published by NCHS. A statistical average, not a prediction for any one person."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-cdc-fastats-le"
+      ],
+      "locator": "Section 'Life Expectancy', bullet 'Life expectancy at birth'",
+      "quote": "Both sexes: 79.0 years",
+      "era": 2024,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-life-expectancy-us-2024",
+      "notes": "Official national statistic computed by NCHS from life tables. The underlying data brief (db548) was not opened. Varies strongly by country and year. A WHO global figure was not sourced."
     },
     {
       "id": "ind-model-t-assembly-before-line-m1",

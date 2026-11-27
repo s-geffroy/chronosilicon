@@ -7,7 +7,8 @@
   import { formatCalendar, formatDecade, formatDecadeSubjective, formatFrequency, pow10, formatLevel, formatPhysicalDuration, formatValue } from '../lib/format';
   import ObserverControl from './ObserverControl.svelte';
   import ExportPanel from './ExportPanel.svelte';
-  import { BANDS, axisWindow, bandOf, bandWindow, clampZoom, decades, labelStep, position } from '../lib/timescale';
+  import CrossComparisons from './CrossComparisons.svelte';
+  import { BANDS, WINDOW, axisWindow, bandOf, bandWindow, clampZoom, decades, labelStep, position } from '../lib/timescale';
 
   const t = app.t;
   const lang = $derived(app.s.lang);
@@ -38,7 +39,10 @@
 
   // Universal window [-18, 18] decades, extended by any qualified duration (never drops one).
   const win = axisWindow(corpus.measurements.filter((m) => m.quantityKind === 'duration').flatMap((m) => [m.valueSI, m.lowSI ?? 0, m.highSI ?? 0]));
-  const zoom = $derived(app.s.zoom ? clampZoom(app.s.zoom, win) : win);
+  // Default view: the readable [-18, 18] window; the extended window (e.g. Planck time) stays one click away.
+  const home = clampZoom([Math.max(win[0], WINDOW[0]), Math.min(win[1], WINDOW[1])], win);
+  const extended = win[0] < home[0] || win[1] > home[1];
+  const zoom = $derived(app.s.zoom ? clampZoom(app.s.zoom, win) : home);
   const inZoom = (sec: number) => sec >= 10 ** zoom[0] && sec <= 10 ** zoom[1];
   const shown = $derived(positive.filter((m) => inZoom(m.valueSI)));
   const pos = (sec: number) => position(sec, zoom);
@@ -46,8 +50,10 @@
   const step = $derived(labelStep(zoom));
   const lf = $derived(Math.log10(app.s.frequencyHz));
   const bandsShown = $derived(BANDS.map((b) => ({ ...b, a: Math.max(pos(b.lo), 0), z: b.hi === Infinity ? 100 : pos(b.hi) })).filter((b) => b.z > b.a));
-  const setZoom = (z: [number, number] | null) => app.set({ zoom: z === null || (z[0] === win[0] && z[1] === win[1]) ? null : clampZoom(z, win) });
+  const setZoom = (z: [number, number] | null) => app.set({ zoom: z === null || (z[0] === home[0] && z[1] === home[1]) ? null : clampZoom(z, win) });
+  /** From "all", a click shows only that universe; afterwards clicks add or remove. */
   const toggleUniverse = (u: Universe) => {
+    if (app.s.universes === null) { app.set({ universes: [u] }); return; }
     const next = activeUniverses.includes(u) ? activeUniverses.filter((x) => x !== u) : [...activeUniverses, u];
     app.set({ universes: next.length === presentUniverses.length ? null : presentUniverses.filter((x) => next.includes(x)) });
   };
@@ -92,6 +98,8 @@
   <h1 id="tl-h">{t('timeline.heading')}</h1>
   <p>{t('timeline.intro')}</p>
 
+  <CrossComparisons />
+
   <div class="toolbar">
     <ObserverControl />
     <fieldset class="seg">
@@ -126,15 +134,16 @@
       <legend>{t('timeline.zoom')}</legend>
       <label>{t('timeline.zoomFrom')}
         <select value={zoom[0]} onchange={(e) => setZoom([Number(e.currentTarget.value), zoom[1]])} data-testid="zoom-from">
-          {#each decades(win).slice(0, -1) as e (e)}<option value={e}>{pow10(e)} s · {physLabel(e)}</option>{/each}
+          {#each decades(win).slice(0, -1) as e (e)}<option value={e}>{pow10(e)} s{physLabel(e).startsWith(pow10(e)) ? '' : ` · ${physLabel(e)}`}</option>{/each}
         </select>
       </label>
       <label>{t('timeline.zoomTo')}
         <select value={zoom[1]} onchange={(e) => setZoom([zoom[0], Number(e.currentTarget.value)])} data-testid="zoom-to">
-          {#each decades(win).slice(1) as e (e)}<option value={e}>{pow10(e)} s · {physLabel(e)}</option>{/each}
+          {#each decades(win).slice(1) as e (e)}<option value={e}>{pow10(e)} s{physLabel(e).startsWith(pow10(e)) ? '' : ` · ${physLabel(e)}`}</option>{/each}
         </select>
       </label>
       <button type="button" class="link" onclick={() => setZoom(null)} disabled={app.s.zoom === null} data-testid="zoom-reset">{t('timeline.zoomReset')}</button>
+      {#if extended}<button type="button" class="link" onclick={() => setZoom(win)} data-testid="zoom-extended">{t('timeline.zoomExtended', { from: physLabel(win[0]), to: physLabel(win[1]) })}</button>{/if}
     </fieldset>
   </div>
 
@@ -201,7 +210,7 @@
                     <span class="interval" style:left="{pos(m.lowSI)}%" style:width="{Math.max(0.5, pos(m.highSI) - pos(m.lowSI))}%" title={t('timeline.interval', { low: fmtAxis(m.lowSI), high: fmtAxis(m.highSI) })}></span>
                   {/if}
                   <span class="dot prov-{m.provenanceType}" style:left="{pos(m.valueSI)}%"></span>
-                  <span class="val" style:left="{Math.min(pos(m.valueSI), 62)}%">{boundPrefix(m)}{app.s.axis === 'physical' ? `${formatPhysicalDuration(m.valueSI, lang)} · ${formatCalendar(subj(m.valueSI), lang)}` : `${formatCalendar(subj(m.valueSI), lang)} · ${formatPhysicalDuration(m.valueSI, lang)}`}</span>
+                  <span class="val" style:left={pos(m.valueSI) <= 50 ? `${pos(m.valueSI)}%` : null} style:right={pos(m.valueSI) > 50 ? `${100 - pos(m.valueSI)}%` : null}>{boundPrefix(m)}{app.s.axis === 'physical' ? `${formatPhysicalDuration(m.valueSI, lang)} · ${formatCalendar(subj(m.valueSI), lang)}` : `${formatCalendar(subj(m.valueSI), lang)} · ${formatPhysicalDuration(m.valueSI, lang)}`}</span>
                 </span>
                 <span class="sr-only">{rowDetails(m)}</span>
               </button>

@@ -121,9 +121,10 @@ test('domain filter and table alternative', async ({ page }) => {
   const total = corpus.measurements.length;
   await expect(page.getByTestId('count')).toContainText(`${total} values shown out of ${total}`);
   await page.locator('details.filters > summary').click();
-  await page.getByRole('button', { name: 'None' }).click();
+  // exact names: R1 v2.1 added buttons whose labels contain "all"/"none" (e.g. "football").
+  await page.getByRole('button', { name: 'None', exact: true }).click();
   await expect(page.getByTestId('count')).toContainText(`0 values shown out of ${total}`);
-  await page.getByRole('button', { name: 'All' }).click();
+  await page.getByRole('button', { name: 'All', exact: true }).click();
   await page.getByTestId('view-table').check();
   await expect(page.getByTestId('duration-table')).toBeVisible();
 });
@@ -356,4 +357,43 @@ test('experimental prototype status is visible on every view, in French and Engl
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('About');
   await expect(page.getByTestId('prototype-status')).toContainText('without external human validation or certification');
   await expect(page.getByText('This precautionary rule is not legal advice.')).toBeVisible();
+});
+
+// R1 v2.1: universal chronology, twelve universes, cross-universe comparisons.
+test('universal chronology: bands zoom, search and universes are shareable', async ({ page }) => {
+  await page.goto('./#/timeline?lang=en');
+  const total = corpus.measurements.length;
+  await expect(page.getByTestId('bands').getByRole('button')).toHaveCount(13);
+  await page.getByTestId('band-nanosecond').click();
+  await expect(page).toHaveURL(/z=-9_-6/);
+  await expect(page.getByTestId('outside')).toBeVisible();
+  for (const b of await page.locator('[data-testid="chart-rows"] button[data-band]').all()) {
+    expect(['nanosecond', 'microsecond']).toContain(await b.getAttribute('data-band'));
+  }
+  await page.getByTestId('zoom-reset').click();
+  await expect(page).not.toHaveURL(/z=/);
+  await page.getByTestId('search').fill('heart');
+  await expect(page.getByTestId('count')).not.toContainText(`${total} values shown`);
+  await expect(page.locator('[data-testid="chart-rows"] button').first()).toContainText(/heart/i);
+  await page.getByTestId('search').fill('');
+  await page.getByTestId('universe-biology').click();
+  await expect(page).toHaveURL(/u=biology&/);
+  const shown = Number((await page.getByTestId('count').textContent())!.match(/\d+/)![0]);
+  expect(shown).toBeGreaterThan(0);
+  expect(shown).toBeLessThan(total);
+});
+
+test('cross-universe comparisons are computed from the corpus and open sheets', async ({ page }) => {
+  await page.goto('./#/timeline?lang=fr');
+  await expect(page.getByTestId('cross-cycle-heartbeat')).toContainText('≈ 3 milliards ×');
+  await page.getByTestId('cross-ram-reflex').getByRole('button').first().click();
+  await expect(page.getByTestId('sheet')).toBeVisible();
+});
+
+test('new subtitle and signature, FR and EN', async ({ page }) => {
+  await page.goto('./#/timeline?lang=en');
+  await expect(page.locator('.tagline')).toHaveText('An Open Atlas of Time');
+  await expect(page.locator('.signature')).toHaveText('Experience time through the eyes of a processor.');
+  await page.goto('./#/timeline?lang=fr');
+  await expect(page.locator('.tagline')).toHaveText('Un atlas ouvert des échelles du temps');
 });

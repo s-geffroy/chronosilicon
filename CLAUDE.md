@@ -10,12 +10,18 @@ Lire avant toute modification : `PROJECT_STATUS.md`, `NEXT_ACTIONS.md`,
   physiologiques, industriels, astronomiques et de la vie courante (ADR-0012,
   R1 = C). Ne pas privilegier l'informatique ; enrichir le corpus par lots
   equilibres. TypeScript strict + Svelte + Vite + D3, monorepo npm workspaces.
-- **D1 a D17 sont validees et figees.** On ne les rouvre pas sans decision
-  explicite de l'utilisateur. Les choix mineurs passent par une ADR dans
-  `docs/adr/`.
-- Portes CS-11 / CS-13 non compensatoires : M00 -> G0 -> G1 -> G2 ... G5. Une
-  porte echouee ou non executee vaut NO-GO, et on ne declare jamais une version
-  acceptee sans son rapport `docs/reports/G*.md`.
+- **Directive R1 (v2.0, v2.1) en vigueur** : elle prevaut sur D1-D18 en cas de
+  contradiction de gouvernance. D1-D18, les portes G0-G5, G-FINAL et les audits
+  sont des references historiques (archives a conserver), pas des exigences de
+  publication. P3 est un backlog facultatif. Pas de nouvel audit generaliste,
+  QCM ni dossier probatoire par lot. Choix mineurs : ADR dans `docs/adr/`.
+- **Controle de livraison unique et automatise** : la CI (`ci.yml`), soit
+  npm ci, audit:gate, lint, typecheck, validate:data, test, build,
+  publication:check, manifeste, e2e sur l'artefact, verification du manifeste.
+  Ne jamais contourner un controle pour publier.
+- Decision utilisateur requise seulement pour : changement majeur de
+  perimetre, cout, action destructive, visibilite ou licence, question
+  juridique substantielle.
 - **Aucune donnee, mesure, distribution, test ou publication inventes.** Toute
   valeur a une source consultee, un localisateur, des conditions, une unite et
   un statut. Une valeur inconnue reste inconnue (null explicite). Intervalle
@@ -39,10 +45,11 @@ Lire avant toute modification : `PROJECT_STATUS.md`, `NEXT_ACTIONS.md`,
 - N'ajouter aucun service qui tourne dans `compose.yaml`.
 
 ## Publier
-- **Publier, c'est pousser sur `main`.** Le depot est public. Le travail se
-  fait sur `develop`, ou la CI ne fait que valider. On fusionne sur `main`,
-  ce qui deploie, seulement si G1 (ou la porte de la version) est franchie
-  (ADR-0003).
+- **Publier, c'est pousser sur `main`** (le depot est public). Cycle courant
+  (directive v2.0 §7) : un lot petit et coherent sur une branche, la CI verte,
+  puis une avance rapide de `main`, sans force ; on verifie ensuite le commit
+  servi (`version.json`) et les fonctionnalites touchees. Une regression se
+  corrige par un commit normal.
 - Prerequis manuel : Settings > Pages > Source = **GitHub Actions**. Ne jamais
   rebasculer sur « Deploy from a branch ». Pas de fichier `CNAME` avant que le
   DNS resolve.

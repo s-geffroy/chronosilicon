@@ -13,8 +13,21 @@ export function formatNumber(x: number, lang: Lang, maxSig = 4): string {
 
 /** e.g. 2.5e-10 → "250 ps" ; SI symbols are language-independent. */
 export function formatPhysicalDuration(seconds: number, lang: Lang): string {
+  // R1 v2.1: the universal chronology spans 1e-44 s (Planck time) to 1e18 s: no "1E17 s", no long digit strings.
+  if (seconds > 0 && seconds < 1e-18) return `${sci(seconds, lang)} s`;
+  if (seconds >= 60) return longDuration(seconds, lang);
   const p = prefixDuration(seconds);
   return `${formatNumber(p.value, lang)} ${p.unit}`;
+}
+
+/** ≥ 1 min: one readable unit, 3 significant digits; beyond 10 000 years, "× 10ⁿ". */
+function longDuration(seconds: number, lang: Lang): string {
+  const y = lang === 'fr' ? 'a' : 'y';
+  if (seconds < 3600) return `${formatNumber(seconds / 60, lang, 3)} min`;
+  if (seconds < 86_400) return `${formatNumber(seconds / 3600, lang, 3)} h`;
+  if (seconds < 31_557_600) return `${formatNumber(seconds / 86_400, lang, 3)} ${lang === 'fr' ? 'j' : 'd'}`;
+  const years = seconds / 31_557_600;
+  return years < 1e4 ? `${formatNumber(years, lang, 3)} ${y}` : `${sci(years, lang)} ${y}`;
 }
 
 const INTL_UNIT: Record<CalendarUnit, string> = { year: 'year', day: 'day', hour: 'hour', minute: 'minute', second: 'second' };
@@ -29,10 +42,11 @@ export function formatCalendar(seconds: number, lang: Lang): string {
   const fmt = (unit: CalendarUnit, n: number, opts: Intl.NumberFormatOptions = {}) =>
     new Intl.NumberFormat(LOCALE[lang], { style: 'unit', unit: INTL_UNIT[unit], unitDisplay: 'long', ...opts }).format(n);
   const [a, b] = parts;
+  if (seconds > 0 && seconds < 1e-3) return `${sci(seconds, lang)} ${fmt('second', 2).replace(/^[\d\s.,\u202f\u00a0]+/, '')}`;
   if (!a) return fmt('second', 0);
   if (a.unit === 'year' && a.value >= 1e6) {
-    // 3 significant digits: announce the rounding explicitly.
-    return `≈ ${formatNumber(a.value, lang, 3)} ${fmt('year', 2).replace(/^[\d\s.,\u202f\u00a0]+/, '')}`;
+    // Rounded: announce it explicitly; powers of ten beyond a million years (R1 v2.1).
+    return `≈ ${sci(a.value, lang)} ${fmt('year', 2).replace(/^[\d\s.,\u202f\u00a0]+/, '')}`;
   }
   if (!b) return fmt(a.unit, a.value, { maximumSignificantDigits: a.value >= 1000 ? 21 : 3, maximumFractionDigits: a.value >= 1000 ? 0 : undefined } as Intl.NumberFormatOptions);
   let whole = a.value;
@@ -117,4 +131,11 @@ export function formatDecadeSubjective(seconds: number, lang: Lang): string {
   if (years >= 1e4) return `${sci(years, lang)} ${y}`;
   if (seconds < 1e-3) return `${sci(seconds, lang)} s`;
   return formatCalendarShort(seconds, lang);
+}
+
+/** Large counts in words: 3 milliards / 3 billion, 4,3 millions / 4.3 million (2 significant digits). */
+export function formatCount(n: number, lang: Lang): string {
+  const words: Array<[number, string, string]> = [[1e12, 'mille milliards', 'trillion'], [1e9, 'milliards', 'billion'], [1e6, 'millions', 'million']];
+  for (const [v, fr, en] of words) if (n >= v && n < v * 1000) return `${formatNumber(n / v, lang, 2)} ${lang === 'fr' ? fr : en}`;
+  return n >= 1e15 ? sci(n, lang) : formatNumber(n, lang, 2);
 }

@@ -194,6 +194,7 @@ label.block input[type='number'] { width: 8rem; }
 .bands { position: relative; height: 1.9rem; margin-left: var(--label-w); }
 .band { position: absolute; top: 0; height: 100%; padding: 0 0.15rem; border: 0; border-left: 1px solid var(--line); border-radius: 0; background: var(--panel); color: var(--muted); font-size: 0.68rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: left; }
 .band:nth-child(even) { background: none; }
+.band span { display: block; overflow: hidden; text-overflow: ellipsis; }
 .band:hover, .band:focus-visible { color: var(--fg); }
 .axis-subj { top: 2.2rem; }
 .axis-subj .tick { color: var(--muted); font-style: italic; }
@@ -203,3 +204,12 @@ label.block input[type='number'] { width: 8rem; }
 .legend .dot.prov-calculated { transform: rotate(45deg); }
 .legend .interval { position: static; display: inline-block; width: 1.4rem; height: 0.35rem; }
 @media (max-width: 40rem) { .chart { --label-w: 0%; } .band span { font-size: 0.6rem; } }
+
+/* Cross-universe comparisons (R1 v2.1). */
+.cross h2 { font-size: 1.05rem; margin: 0.5rem 0; }
+.cross-cards { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: 0.6rem; }
+.cross-card { border: 1px solid var(--line); border-radius: 0.5rem; padding: 0.6rem 0.75rem; background: var(--panel); }
+.cross-card p { margin: 0.15rem 0; }
+.cross-ratio { font-weight: 700; font-size: 1.15rem; margin: 0.2rem 0 !important; }
+.cross-line .dur { color: var(--muted); white-space: nowrap; }
+.cross-subj { font-size: 0.8rem; color: var(--muted); }

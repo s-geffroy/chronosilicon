@@ -546,6 +546,15 @@
    "basis": "rule:locator-label"
   },
   {
+   "scope": "measurement:bio-red-blood-cell-lifespan-m1",
+   "field": "notes",
+   "text": "'Erythrocytes live up to 120 days in the circulation'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
    "scope": "measurement:ble-max-connection-interval-m1",
    "field": "locator",
    "text": "\"Connection Parameters\"",
@@ -2812,6 +2821,125 @@
    "scope": "measurement:phys-uranium-238-half-life-m1",
    "field": "notes",
    "text": "'109'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:physio-action-potential-m1",
+   "field": "locator",
+   "text": "'The Action Potential'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:physio-action-potential-m1",
+   "field": "locator",
+   "text": "'refractory period'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:physio-breath-interval-m1",
+   "field": "locator",
+   "text": "'Respiratory Rate and Control of Ventilation'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:physio-circadian-period-m1",
+   "field": "conditions.en",
+   "text": "Intrinsic period of the human circadian pacemaker",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "review",
+   "note": "Name of the measured quantity, needed to say what is measured."
+  },
+  {
+   "scope": "measurement:physio-circadian-period-m1",
+   "field": "conditions.fr",
+   "text": "« désynchronisation forcée »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:physio-gestation-length-m1",
+   "field": "locator",
+   "text": "'Main results and the role of chance'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:physio-heartbeat-interval-m1",
+   "field": "locator",
+   "text": "'Disorders of the... Heart: Abnormal Heart Rates'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:physio-heartbeat-interval-m1",
+   "field": "locator",
+   "text": "'Heart Rates'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:physio-mayfly-dolania-adult-m1",
+   "field": "conditions.en",
+   "text": "'less than five minutes'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:physio-mayfly-dolania-adult-m1",
+   "field": "conditions.en",
+   "text": "female of the mayfly Dolania americana",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Species and sex: a scientific name, not wording."
+  },
+  {
+   "scope": "measurement:physio-mayfly-dolania-adult-m1",
+   "field": "conditions.fr",
+   "text": "« moins de cinq minutes »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:physio-mayfly-dolania-adult-m1",
+   "field": "notes",
+   "text": "'few species live more than 48 hours as adults'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:physio-synaptic-delay-m1",
+   "field": "notes",
+   "text": "'micros'",
    "kind": "quoted",
    "decision": "publish",
    "ground": "term",

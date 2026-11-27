@@ -2,6 +2,23 @@
 
 Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant qu'une version n'est pas validée par sa porte et publiée.
 
+## [Non publié] — R1 v2.1 (branche `editorial-r1c`)
+
+### Ajouté
+- Atlas transversal des échelles du temps (ADR-0012) : douze univers, une projection éditoriale qui permet plusieurs univers par phénomène, et neuf nouveaux domaines.
+- Chronologie universelle de 10⁻¹⁸ à 10¹⁸ s : treize bandes, zoom par décennie, fenêtre étendue si nécessaire, recherche, filtre multi-univers, double échelle physique et subjective, légende. L'état est partageable (`u`, `z`, `q`).
+- Comparaisons entre univers, calculées à partir du corpus.
+- 41 valeurs hors informatique (physique, astronomie, biologie, physiologie, industrie, vie quotidienne), chacune vérifiée contre sa source.
+- Provenances `conventional` et `illustrative` (avec plage), signalées dans l'interface.
+
+### Modifié
+- Sous-titre « An Open Atlas of Time » / « Un atlas ouvert des échelles du temps », et signature.
+- Durées longues écrites en min, h, j et années ; notation scientifique aux extrêmes : plus de « 1E17 s ».
+- Gouvernance simplifiée (directive v2.0) : un contrôle de livraison automatisé unique, et les archives conservées.
+
+## [Non publié] — PUBLICATION-01 (tag `publication-01-rc5`)
+- Bandeau « prototype scientifique et pédagogique expérimental », section Statut, mention de licence précisée.
+
 ## [Non publié] — REMEDIATION-02 (branche `remediation-02`, tag `remediation-02-rc4` ; `rc3` remplacée, CI en échec au lint)
 
 ### Corrigé (AUDIT-02)

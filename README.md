@@ -1,15 +1,15 @@
-# CHRONOSILICON — An Open Atlas of Computational Time
+# CHRONOSILICON — An Open Atlas of Time
 
-> « Experience time through the eyes of a processor. » *Nom provisoire, sous réserve de vérification ; voir `docs/audits/M00.md`.*
+> *Un atlas ouvert des échelles du temps.* « Experience time through the eyes of a processor. » / « Découvrez le temps à travers les yeux d'un processeur. » *Nom provisoire, sous réserve de vérification.*
 
-CHRONOSILICON est un atlas pédagogique et scientifique, open source et statique (GitHub Pages, sans backend ni compte). Il fait percevoir les échelles de temps des systèmes informatiques : un cœur cadencé à 4 GHz vit chaque cycle comme une seconde. C'est une métaphore pédagogique, sans conscience ni relativité physique.
+CHRONOSILICON est un site gratuit, bilingue FR/EN, de vulgarisation interactive des échelles du temps (GitHub Pages, sans backend, sans compte, sans collecte de données). Il compare **sur une même échelle**, de 10⁻¹⁸ à 10¹⁸ secondes, des phénomènes de douze univers : informatique, physique, chimie, biologie, physiologie, cognition, vie quotidienne, transports, industrie, nature, histoire et géologie, astronomie. Le processeur sert de référentiel pédagogique : à 4 GHz, un cycle dure 250 ps et vaut une « seconde subjective ». C'est une convention, pas une perception réelle.
 
-Chaque valeur du corpus a une source réellement consultée, un localisateur précis, des conditions, une unité SI et des statuts de provenance et de vérification. Aucune valeur n'est inventée.
+Chaque valeur a une source consultée, un localisateur, un contexte, une unité et une provenance. Les durées conventionnelles et les ordres de grandeur illustratifs sont signalés comme tels. C'est un **prototype expérimental** : les valeurs sont sourcées, mais non certifiées.
 
-- Site : https://s-geffroy.github.io/chronosilicon/. Voir `PROJECT_STATUS.md` pour l'état réel du déploiement.
-- État, portes, prochain pas : `PROJECT_STATUS.md`, `NEXT_ACTIONS.md`
-- Conception validée (D1–D17) : `docs/CS-00_Charte.md` … `docs/CS-14_Contrat.md`
-- Décisions d'implémentation : `docs/adr/`
+- Site : https://s-geffroy.github.io/chronosilicon/. État réel du déploiement : `PROJECT_STATUS.md`.
+- Pistes classées par valeur pédagogique : `NEXT_ACTIONS.md`. Historique : `CHANGELOG.md`.
+- Directives en vigueur : R1 = C (ADR-0012) et directives R1 v2.0 et v2.1, conservées sur Drive. Décisions d'implémentation : `docs/adr/`.
+- Archives historiques, non applicables comme exigences permanentes : conception D1–D18 (`docs/CS-*.md`), portes G0–G5, audits `docs/audits/`.
 
 ## Structure
 

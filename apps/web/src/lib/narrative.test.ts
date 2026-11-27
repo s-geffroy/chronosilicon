@@ -63,7 +63,8 @@ describe('journal content oracles', () => {
     expect(gaps).toHaveLength(2);
     for (const g of gaps) expect(g.text).toMatch(/The model does not say what I do meanwhile/);
     // 182.126 s × 4e9 = 7.28504e11 s = 23 084.898 Julian years
-    expect(gaps[0]!.text).toMatch(/^Elapsed for me: 23,084 years 328 days \(182\.1 s in real time\)\. In progress: uplink\./);
+    // R1 v2.1: physical durations of a minute or more are written in min/h/d/years (182.126 s = 3.04 min).
+    expect(gaps[0]!.text).toMatch(/^Elapsed for me: 23,084 years 328 days \(3\.04 min in real time\)\. In progress: uplink\./);
   });
 });
 

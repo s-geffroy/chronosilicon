@@ -1,24 +1,28 @@
 # NEXT_ACTIONS — CHRONOSILICON
 
-Ordre de priorité. Mis à jour le 2026-11-27.
+Backlog court, classé par valeur pédagogique (directive R1 v2.0 §6, v2.1). Mis à jour le 2026-11-27. L'ancienne liste est archivée dans `docs/archives/NEXT_ACTIONS_2026-11-27_avant-R1.md`.
 
-0. **[Arrêt : version candidate REMEDIATION-02, `remediation-02-rc4`]** Attendre l'audit de clôture ciblé de ChatGPT et la décision de l'utilisateur. Aucune publication, fusion sur `main`, suppression ni réécriture d'historique sans autorisation explicite.
-   - **[Utilisateur]** Décider du traitement des contenus déjà publics : site en ligne (correctif de précaution S2 ou attente), `data/raw` et `data/curated`, historique Git (`docs/audits/AUDIT-02/remediation/PUBLIC-CONTENT-OPTIONS.md`).
-   - **[Utilisateur]** Faire relire PUB-1 et le registre `PUBLIC-TEXT-REGISTER.csv` par une personne qualifiée.
-   - **[Utilisateur]** Arbitrer le périmètre de P3 (`docs/audits/AUDIT-01/remediation/ROADMAP-P3.md`), séparément de la remédiation.
-   - **[Agent, avant le 2027-01-31]** Mettre à jour eslint et typescript-eslint (versions publiées depuis plus de deux semaines), ou soumettre une nouvelle exception motivée pour GHSA-g3hv-75wg-m249. Il n'y a pas de renouvellement automatique.
-   - **[Agent, à la première publication]** Vérifier le premier run de `pages.yml` (artefact unique, `publication:check`).
-   Les points ci-dessous restent en attente et seront repriorisés par le plan P3.
+## Bloquant
 
-1. ~~Régler Pages et publier V1~~ : fait le 2026-11-26 (commit `7ca44b5`).
-2. **[Agent]** Correctif relevé à l'inspection en ligne : « ≈ » sur les durées fortement arrondies. (Fait : textes de curation et extraits de source en anglais signalés et balisés `lang="en"` dans la fiche, 2026-11-26/27.)
-3. ~~Copie Drive datée~~ : faite et vérifiée le 2026-11-26 ; à refaire à chaque porte.
-4. ~~V2 à V5~~ : réalisés, portes G2 à G5 GO le 2026-11-26 (`docs/reports/`).
-5. **[Données]** Lot 2 fait le 2026-11-26 : 239 valeurs qualifiées (`docs/audits/M01.md`). Suite possible vers 300 à 500, par la même chaîne :
-   - lever les réserves : fiche Intel MCS-4 primaire, URL AMD officielles, communiqués PCI-SIG originaux ;
-   - incertitude structurée : faite (ADR-0009 : 3 dispersions et 12 jeux de statistiques renseignés) ; à compléter dès qu'une source publie une dispersion ;
-   - latence de commutateur InfiniBand et transfert PCIe hôte-GPU mesurés avec protocole ;
-   - ajouter des mesures avec protocole : appels système modernes, distributions empiriques sourcées pour le simulateur.
-6. **[Propriétaire]** Recherche de marque EUIPO / INPI / USPTO pour « CHRONOSILICON » (risque R1).
-7. **[Qualité]** Relecture humaine d'un échantillon du corpus et des notes de groupes (R2) ; vérification de reproductibilité sur une autre machine (V08) ; sources en 403 à revérifier à la main.
-8. **[Évolutions]** Durées conditionnelles et distributions empiriques dans les scénarios ; import documenté de mesures natives (CS-06) ; observateur à fréquence variable dans l'interface (le moteur `clocked-segments` existe et il est testé).
+1. **[Utilisateur] Publier.** La session de l'agent ne peut pas pousser sur `main` (permission refusée). Il faut soit l'autoriser, soit lancer soi-même l'avance rapide (`git push origin <commit>:refs/heads/main`) : d'abord rc5 (PUBLICATION-01), puis `editorial-r1c` une fois sa CI verte.
+
+## Contenu
+
+2. Enrichir les univers peu remplis, par lots équilibrés et sourcés :
+   - priorité 1 : vie quotidienne (gestes, repas, sommeil), physiologie, biologie ;
+   - priorité 2 : cognition, nature (météo, saisons, croissance), chimie (réactions, diffusion), physique (attoseconde, femtoseconde) ;
+   - priorité 3 : transports (trajets, aviation), industrie, histoire et géologie (civilisations, ères, tectonique).
+3. Retrouver une source primaire pour la durée d'une saccade (valeur en attente). Ajouter les sources qui n'ont pas pu être ouvertes : porte-conteneurs, TGV, vol Paris–New York.
+4. Ajouter des comparaisons entre univers à mesure que le corpus s'étoffe, par exemple un trajet et un paquet réseau, ou une saison et l'entraînement d'un modèle d'IA.
+
+## Interface
+
+5. Sur mobile, les libellés de bandes se tronquent : envisager une bande active développée.
+6. Mettre en avant l'entrée « 4 GHz = 1 cycle par seconde subjective » par un exemple guidé sur la page d'accueil.
+7. Permettre de choisir les comparaisons dans l'espace Comparaison.
+
+## Maintenance
+
+8. **Avant le 2027-01-31** : mettre à jour ESLint et typescript-eslint (versions publiées depuis plus de deux semaines), ou motiver une nouvelle exception.
+9. Vérifier le premier run de `pages.yml` à la prochaine publication (artefact unique, `publication:check`).
+10. **Droits (questions ouvertes, décision de l'utilisateur)** : une revue humaine de PUB-1, et le sort des extraits historiques du dépôt (`docs/audits/AUDIT-02/remediation/PUBLIC-CONTENT-OPTIONS.md`).

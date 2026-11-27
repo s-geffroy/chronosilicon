@@ -772,6 +772,10 @@
       "patch": {
         "boundChecked": true
       }
+    },
+    "physio-saccade-reading": {
+      "status": "pending",
+      "reason": "Only source opened is Wikipedia (last resort); the primary reference (Purves, Neuroscience, NCBI Bookshelf) was blocked by a CAPTCHA. Held back until a primary source is read (R1 lot 2026-11-27)."
     }
   },
   "sourcePatches": {
