@@ -67,7 +67,7 @@ Le même contrôle s'applique au **site construit** (`npm run publication:check`
 | Décisions `redact` (`third-party-excerpt`) | 31 |
 | Décisions `publish` | 378 : 229 `term`, 126 `locating-label`, 15 `fact`, 8 `attribution` |
 | Décisions relues une à une (`review`) | 23, dont les **5 résidus** signalés par AUD02-002 |
-| Reprises sans guillemets trouvées | 17. L'heuristique de REMEDIATION-01 n'en voyait aucune. |
+| Reprises sans guillemets trouvées | 16. L'heuristique de REMEDIATION-01 n'en voyait aucune. |
 | Fuites résiduelles (corpus public et `apps/web/dist`) | **0** |
 | Même contrôle sur le site en ligne (`491c989`) | **943** suites de 6 mots détectées (`logs/aud02-002-live-site-check.txt`) |
 
