@@ -71,7 +71,8 @@ export function parseHash(hash: string, fallbackLang: Lang = 'fr'): UrlState {
   const [path = '', query = ''] = h.split('?');
   const q = new URLSearchParams(query);
   const fRaw = q.get('f') ?? '';
-  const f = /^\d+(\.\d+)?(e\d+)?$/i.test(fRaw) ? Number(fRaw) : NaN;
+  // Decimal literal with an optional signed exponent: String(x) writes 1e-7 for small x (AUD-015).
+  const f = /^\d+(\.\d+)?(e[+-]?\d+)?$/i.test(fRaw) ? Number(fRaw) : NaN;
   const sel = q.get('sel');
   return {
     route: pick(path, ROUTES, DEFAULT_STATE.route),
