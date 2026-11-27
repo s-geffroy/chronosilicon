@@ -27,7 +27,7 @@ Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source cano
 
 ## Publication
 
-- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = commit « Journaux de la porte de la revue finale » (2026-11-27), qui ne diffère de `715051a` que par les journaux et ce statut. Porte `final-review` jouée sur `715051a`, `dirty=0` : 212 unitaires, 96 e2e, tous PASS (`docs/reports/logs/final-review/`). Précédents : `6bea223` (incertitude structurée), `6f213d0` (mineurs du lot 2), `cf84cdd` (lot 2), `178d4ad` (V1 à V5).
+- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = `develop` = le commit qui porte cette ligne (2026-11-27). Il ne diffère de `2fd9034` (code de la revue finale) que par de la documentation : copie Drive et ce statut. `version.json.commit` vérifié en ligne pour `2fd9034` puis `db9c30f`. Porte `final-review` jouée sur `715051a`, `dirty=0` : 212 unitaires, 96 e2e, tous PASS (`docs/reports/logs/final-review/`). Précédents : `6bea223` (incertitude structurée), `6f213d0` (mineurs du lot 2), `cf84cdd` (lot 2), `178d4ad` (V1 à V5).
 - Vérifié le 2026-11-26 : HTTP 200, `version.json.commit` = SHA poussé, actifs sous `/chronosilicon/`, aucune erreur console (Chromium).
 - Toute publication suivante : fast-forward de `develop` vers `main` après la porte de la version (ADR-0003).
 
