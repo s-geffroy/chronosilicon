@@ -6,27 +6,30 @@
  */
 import type { NormalizedMeasurement } from '@chronosilicon/ontology';
 
-export interface CrossPair { id: string; a: string | 'cycle'; b: string }
+export interface CrossPair { id: string; a: string | 'cycle'; b: string | 'cycle' }
 export const CROSS_PAIRS: readonly CrossPair[] = [
   { id: 'cycle-heartbeat', a: 'cycle', b: 'physio-heartbeat-interval-m1' },
   { id: 'ram-reflex', a: 'intel-xeon5500-local-dram-latency-m1', b: 'human-simple-visual-reaction-time-m1' },
+  { id: 'network-train', a: 'azure-rtt-westeurope-francecentral-m1', b: 'trans-tgv-paris-lyon-m1' },
   { id: 'network-marathon', a: 'azure-rtt-eastus-westeurope-m1', b: 'day-marathon-best-men-m1' },
+  { id: 'pulse-cycle', a: 'phys-shortest-attosecond-pulse-2017-m1', b: 'cycle' },
   { id: 'mars-football', a: 'earth-mars-light-time-min-m1', b: 'day-football-match-m1' },
   { id: 'sleep-earth', a: 'physio-sleep-cycle-m1', b: 'astro-age-of-earth-m1' },
 ];
 
-export interface CrossResult { id: string; a: NormalizedMeasurement | null; b: NormalizedMeasurement; aSeconds: number; bSeconds: number; ratio: number }
+export interface CrossResult { id: string; a: NormalizedMeasurement | null; b: NormalizedMeasurement | null; aSeconds: number; bSeconds: number; ratio: number }
 
 /** Pairs whose values are all present in the corpus, with b/a ratio (b is the longer one). */
 export function crossComparisons(measurements: readonly NormalizedMeasurement[], frequencyHz: number): CrossResult[] {
   const byId = new Map(measurements.map((m) => [m.id, m]));
   const out: CrossResult[] = [];
   for (const p of CROSS_PAIRS) {
-    const b = byId.get(p.b);
+    const b = p.b === 'cycle' ? null : byId.get(p.b);
     const a = p.a === 'cycle' ? null : byId.get(p.a);
-    if (!b || (p.a !== 'cycle' && !a)) continue;
+    if ((p.b !== 'cycle' && !b) || (p.a !== 'cycle' && !a)) continue;
     const aSeconds = a ? a.valueSI : 1 / frequencyHz;
-    out.push({ id: p.id, a: a ?? null, b, aSeconds, bSeconds: b.valueSI, ratio: b.valueSI / aSeconds });
+    const bSeconds = b ? b.valueSI : 1 / frequencyHz;
+    out.push({ id: p.id, a: a ?? null, b: b ?? null, aSeconds, bSeconds, ratio: bSeconds / aSeconds });
   }
   return out;
 }

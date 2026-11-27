@@ -12,7 +12,7 @@ Backlog court, classé par valeur pédagogique (directive R1 v2.0 §6, v2.1). Mi
    - priorité 1 : vie quotidienne (gestes, repas, sommeil), physiologie, biologie ;
    - priorité 2 : cognition, nature (météo, saisons, croissance), chimie (réactions, diffusion), physique (attoseconde, femtoseconde) ;
    - priorité 3 : transports (trajets, aviation), industrie, histoire et géologie (civilisations, ères, tectonique).
-3. Retrouver une source primaire pour la durée d'une saccade (valeur en attente). Ajouter les sources qui n'ont pas pu être ouvertes : porte-conteneurs, TGV, vol Paris–New York.
+3. ~~Saccade, TGV~~ (lot 2). Restent sans source ouvrable : la traversée d'un porte-conteneurs Asie–Europe (CMA CGM, Hapag-Lloyd, Maersk en 403, UNCTAD non essayé) et un vol régulier Paris–New York. Également à vérifier : l'échange des liaisons hydrogène de l'eau (Chem Rev, bloqué). Décennies encore vides : 10⁻¹⁸, 10⁻¹⁴, 10¹³, 10¹⁴, 10¹⁶.
 4. Ajouter des comparaisons entre univers à mesure que le corpus s'étoffe, par exemple un trajet et un paquet réseau, ou une saison et l'entraînement d'un modèle d'IA.
 
 ## Interface

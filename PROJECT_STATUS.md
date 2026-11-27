@@ -25,8 +25,22 @@ Mise à jour : 2026-11-27. Référence canonique : GitHub `s-geffroy/chronosilic
   - légende, et vue tableau conservée.
 - **Comparaisons entre univers**, calculées à partir du corpus : cycle et battement de cœur, RAM et réflexe, réseau et marathon, lumière de Mars et match de football, sommeil et âge de la Terre.
 - **Sous-titre** « An Open Atlas of Time », signature, bandeau « prototype expérimental ».
-- **Corpus** : 279 valeurs qualifiées, dont 41 nouvelles hors informatique : physique, astronomie, biologie, physiologie, industrie, vie quotidienne. Chacune a été vérifiée contre sa source par le mainteneur. Deux doublons ont été écartés ; une valeur reste en attente (saccade, source primaire non lue).
+- **Corpus publié** : 279 valeurs qualifiées, dont 41 nouvelles hors informatique : physique, astronomie, biologie, physiologie, industrie, vie quotidienne. Chacune a été vérifiée contre sa source par le mainteneur. Deux doublons ont été écartés ; une valeur reste en attente (saccade, source primaire non lue).
 - **Contrôles** : 324 tests unitaires, 116 e2e sur l'artefact, `publication:check` OK, `audit:gate` OK.
+
+## En cours : branche `r1-lot2` (traitement des limites)
+
+- **Lot 2** : 43 valeurs supplémentaires, vérifiées contre leurs sources (curl, pdftotext, API Europe PMC, navigateur).
+  - **Chimie et physique ultrarapide** : impulsion attoseconde record, unité atomique de temps, vibration O–H de l'eau, rupture de liaison (Zewail), isomérisation du rétinal, photosynthèse, enzymes.
+  - **Nature** : orage, Old Faithful, Methuselah, séquoia, colibri, monarque, cyclone Freddy.
+  - **Transports** : ISS, Apollo 11, Concorde, TGV Paris–Lyon (open data SNCF), métro 14, rotation d'un 737.
+  - **Histoire et géologie** : extinction K-Pg, Cambrien, Mésozoïque, dernier maximum glaciaire, plus vieux zircon, *Homo sapiens*, Grande Pyramide, cunéiforme, Bible de Gutenberg.
+  - **Cognition** : mémoire iconique, mémoire à court terme, clignement attentionnel, fixation de lecture, saccade (source primaire), tour de parole.
+  - Une valeur est en attente (Chem Rev inaccessible) et l'ancienne saccade (Wikipédia) est remplacée.
+- **Corpus** : 322 valeurs qualifiées. Les 12 univers sont tous représentés, avec 5 à 25 valeurs chacun hors informatique.
+- **Unité attoseconde** (`as`) ajoutée.
+- **Deux comparaisons de plus** : réseau et TGV, impulsion attoseconde et cycle. La fiche affiche les univers de la valeur.
+- **ESLint 10.15.0** appliqué : 7 avis modérés au lieu de 8, en développement seulement.
 
 ## Contrôle de livraison
 

@@ -7456,7 +7456,7 @@
       },
       "protocol": null,
       "provenanceType": "illustrative",
-      "verificationStatus": "pending",
+      "verificationStatus": "rejected",
       "sourceIds": [
         "src-wikipedia-saccade"
       ],
@@ -7467,7 +7467,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-27-R1-B_biology_physiology.json#physio-saccade-reading",
-      "notes": "Wikipedia is a tertiary source, used as a last resort. The primary references behind it were not traced. The central value is the midpoint of the source's range, not a value stated by the source. Harwood et al. 1999 (J Neurosci, PMC6782780) only says saccades are 'usually completed in tens of milliseconds', which is consistent. Replace with a primary main-sequence source if one can be opened (e.g. Purves, Neuroscience, NCBI Bookshelf NBK10991). | Maintainer curation 2026-11-27: typical value = middle of the range published by the source; shown as illustrative with that range. | Decision: Only source opened is Wikipedia (last resort); the primary reference (Purves, Neuroscience, NCBI Bookshelf) was blocked by a CAPTCHA. Held back until a primary source is read (R1 lot 2026-11-27)."
+      "notes": "Wikipedia is a tertiary source, used as a last resort. The primary references behind it were not traced. The central value is the midpoint of the source's range, not a value stated by the source. Harwood et al. 1999 (J Neurosci, PMC6782780) only says saccades are 'usually completed in tens of milliseconds', which is consistent. Replace with a primary main-sequence source if one can be opened (e.g. Purves, Neuroscience, NCBI Bookshelf NBK10991). | Maintainer curation 2026-11-27: typical value = middle of the range published by the source; shown as illustrative with that range. | Decision: Superseded (R1 lot 2, 2026-11-27) by cog-saccade-duration, sourced from a primary open-access study (Gibaldi & Sabatini 2021); the earlier value rested on Wikipedia only."
     },
     {
       "id": "physio-heartbeat-interval-m1",
@@ -8170,6 +8170,1249 @@
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-27-R1-C_industry_everyday.json#day-max-work-day-france",
       "notes": "Legal rule; exceptions not detailed here."
+    },
+    {
+      "id": "nat-thunderstorm-cell-lifetime-m1",
+      "phenomenonId": "nat-thunderstorm-cell-lifetime",
+      "configuration": null,
+      "value": 45,
+      "unit": "min",
+      "low": 30,
+      "high": 60,
+      "conditions": {
+        "fr": "Une seule cellule orageuse, du stade de développement à la dissipation. Les orages multicellulaires et les supercellules durent plus longtemps. La valeur est le milieu de la plage de 30 à 60 min donnée par la source, pas une valeur typique publiée.",
+        "en": "One thunderstorm cell, from developing to dissipating stage. Multicell clusters and supercells last longer. The value is the midpoint of the 30-60 min range given by the source, not a stated typical value."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nws-spotter-tstorm-lifecycle"
+      ],
+      "locator": "Thunderstorm Life Cycle, first paragraph",
+      "quote": "The life time a single thunderstorm cell ranges from 30 to 60 minutes.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-thunderstorm-cell-lifetime",
+      "notes": "NWS spotter training material; only the range is sourced. Midpoint flagged as such. | Maintainer curation 2026-11-27: value = middle of the published range; shown as illustrative with that range."
+    },
+    {
+      "id": "nat-old-faithful-interval-m1",
+      "phenomenonId": "nat-old-faithful-interval",
+      "configuration": null,
+      "value": 102,
+      "unit": "min",
+      "low": 54,
+      "high": 118,
+      "conditions": {
+        "fr": "Geyser Old Faithful, Yellowstone. Intervalle médian en janvier 2025 (prévision à ± 10 min près) ; les intervalles observés vont de 54 à 118 min. L'intervalle évolue au fil des années.",
+        "en": "Old Faithful Geyser, Yellowstone. Median interval as of January 2025 (± 10 min prediction window); observed intervals range from 54 to 118 min. The interval drifts over the years."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-yell-old-faithful"
+      ],
+      "locator": "Old Faithful Area Frequently Asked Questions, 'How often does Old Faithful Geyser erupt?'",
+      "quote": "as of January 2025, it is 102 minutes ± 10 minutes, with intervals ranging from 54 to 118 minutes.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-old-faithful-interval",
+      "notes": "Official NPS figure, dated by the source. Value is a median from park monitoring."
+    },
+    {
+      "id": "nat-old-faithful-eruption-m1",
+      "phenomenonId": "nat-old-faithful-eruption",
+      "configuration": null,
+      "value": 3.25,
+      "unit": "min",
+      "low": 1.5,
+      "high": 5,
+      "conditions": {
+        "fr": "Geyser Old Faithful, Yellowstone ; éruptions normales. La valeur est le milieu de la plage de 1,5 à 5 min donnée par la source, pas une valeur typique publiée.",
+        "en": "Old Faithful Geyser, Yellowstone; normal eruptions. The value is the midpoint of the 1.5-5 min range given by the source, not a stated typical value."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-yell-old-faithful"
+      ],
+      "locator": "Old Faithful Area Frequently Asked Questions, 'How long does it last?'",
+      "quote": "Eruptions normally last between 1½ to 5 minutes",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-old-faithful-eruption",
+      "notes": "Range is sourced; midpoint flagged. Could be shown as a range only. | Maintainer curation 2026-11-27: value = middle of the published range; shown as illustrative with that range."
+    },
+    {
+      "id": "nat-longest-tropical-cyclone-freddy-m1",
+      "phenomenonId": "nat-longest-tropical-cyclone-freddy",
+      "configuration": null,
+      "value": 36,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Cyclone tropical Freddy, océan Indien Sud, février-mars 2023 : record mondial de durée dans le tableau des records de la NOAA (AOML). Un ouragan ordinaire dure bien moins (quelques jours à environ une semaine).",
+        "en": "Tropical Cyclone Freddy, South Indian Ocean, February-March 2023: world record for the longest-running tropical cyclone in NOAA AOML's table of records. A typical hurricane lasts far less (days to about a week)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-noaa-aoml-hurricane-faq"
+      ],
+      "locator": "Hurricane FAQ, table of tropical cyclone records, row 'Longest running'",
+      "quote": "Longest running 2023 Tropical Cyclone Freddy South Indian Ocean 36 days",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-longest-tropical-cyclone-freddy",
+      "notes": "Record value, not typical. Older pages (e.g. hurricanescience.org) still give Hurricane/Typhoon John, 1994, 31 days: superseded. The 'days to about a week' remark in conditions is context only, not a sourced value."
+    },
+    {
+      "id": "nat-methuselah-age-m1",
+      "phenomenonId": "nat-methuselah-age",
+      "configuration": null,
+      "value": 4765,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Pin Bristlecone du Grand Bassin « Mathusalem », White Mountains, Californie ; âge obtenu par comptage des cernes d'une carotte prélevée en 1957, tel qu'indiqué par le NPS (la page ne précise pas l'année de référence).",
+        "en": "Great Basin bristlecone pine 'Methuselah', White Mountains, California; age from tree-ring count of a core taken in 1957, as stated by NPS (the page does not say for which year the age is given)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-brca-bristlecone"
+      ],
+      "locator": "Great Basin Bristlecone Pine page, paragraph on the oldest living tree",
+      "quote": "The oldest LIVING tree is called \"Methuselah\" and is 4,765 years old.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-methuselah-age",
+      "notes": "Uncertain reference year: the 1957 core date is not stated on this page (it comes from other sources). Other sources give 4,789 (USDA, page returned 403, not opened) to about 4,850 years (age updated to the current year). Order of magnitude solid; last digits not."
+    },
+    {
+      "id": "nat-oldest-giant-sequoia-m1",
+      "phenomenonId": "nat-oldest-giant-sequoia",
+      "configuration": null,
+      "value": 3266,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Séquoia géant du bosquet de Converse Basin (Giant Sequoia National Monument), âge obtenu par comptage des cernes ; plus vieux spécimen connu de l'espèce.",
+        "en": "Giant sequoia in the Converse Basin Grove (Giant Sequoia National Monument), age from ring count; oldest known specimen of the species."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-yose-sequoia-research"
+      ],
+      "locator": "Sequoia Research, 'How long do tree species live?'",
+      "quote": "the oldest known specimen to have been 3,266 years old in the Converse Basin Grove of Giant Sequoia National Monument",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-oldest-giant-sequoia",
+      "notes": "NPS figure; the specimen was a felled tree (past tense 'to have been'). Another NPS page (Sequoia & Kings Canyon) says 'up to 3,400 years' without detail."
+    },
+    {
+      "id": "nat-hummingbird-gulf-crossing-m1",
+      "phenomenonId": "nat-hummingbird-gulf-crossing",
+      "configuration": null,
+      "value": 19,
+      "unit": "h",
+      "low": 18,
+      "high": 20,
+      "conditions": {
+        "fr": "Vol migratoire d'environ 800 km (500 miles) au-dessus du golfe du Mexique. La valeur est le milieu de la plage de 18 à 20 h donnée par la source.",
+        "en": "Migratory flight of about 500 miles (800 km) over the Gulf of Mexico. The value is the midpoint of the 18-20 h range given by the source."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-netn-hummingbird"
+      ],
+      "locator": "NETN Species Spotlight, section 'What is it?'",
+      "quote": "a 500-mile, 18-20 hour migratory flight across the Gulf of Mexico",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-hummingbird-gulf-crossing",
+      "notes": "NPS popular-science article without a cited study; plausible but secondary in nature. Midpoint flagged. | Maintainer curation 2026-11-27: value = middle of the published range; shown as illustrative with that range."
+    },
+    {
+      "id": "nat-hummingbird-heartbeat-m1",
+      "phenomenonId": "nat-hummingbird-heartbeat",
+      "configuration": null,
+      "value": 0.05,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Fréquence cardiaque de 1 200 battements par minute indiquée par la source (niveau d'activité non précisé) ; intervalle = 60 s / 1 200.",
+        "en": "Heart rate of 1,200 beats per minute stated by the source (activity level not specified); interval = 60 s / 1,200."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-netn-hummingbird"
+      ],
+      "locator": "NETN Species Spotlight, paragraph on flight adaptations",
+      "quote": "a large heart (beating 1200 times per minute)",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "60 s / 1200 beats per minute = 0.05 s",
+        "inputs": [
+          "src:src-nps-netn-hummingbird"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-hummingbird-heartbeat",
+      "notes": "Single popular-science figure without activity state; other non-federal sources give about 600 bpm at rest up to more than 1,000 bpm in flight. Treat as order of magnitude (tens of milliseconds)."
+    },
+    {
+      "id": "nat-monarch-fall-migration-m1",
+      "phenomenonId": "nat-monarch-fall-migration",
+      "configuration": null,
+      "value": 60,
+      "unit": "d",
+      "low": null,
+      "high": 60,
+      "conditions": {
+        "fr": "Monarques de l'est de l'Amérique du Nord, migration d'automne vers les forêts d'hivernage du Mexique, à raison de 80 à 160 km par jour. La source donne une borne haute (« jusqu'à deux mois »), convertie ici en 2 × 30 jours.",
+        "en": "Eastern North American monarchs, fall migration to the overwintering forests in Mexico, at 50-100 miles (80-160 km) a day. The source gives an upper bound ('up to two months'), converted here as 2 × 30 days."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-usfs-monarch-migration"
+      ],
+      "locator": "Monarch Butterfly Migration and Overwintering, paragraph after the Biosphere Reserve",
+      "quote": "Monarchs can travel between 50-100 miles a day; it can take up to two months to complete their journey.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-monarch-fall-migration",
+      "notes": "Upper bound, not a typical duration; the 30-day month conversion is ours. Other organisations (not opened) describe a mid-August to mid-November season, which is the migration window, not one butterfly's trip."
+    },
+    {
+      "id": "trans-iss-orbit-m1",
+      "phenomenonId": "trans-iss-orbit",
+      "configuration": null,
+      "value": 90,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "ISS en orbite basse, à environ 8 km par seconde ; la NASA indique « environ toutes les 90 minutes », soit 16 orbites en 24 heures.",
+        "en": "ISS in low Earth orbit at about five miles (8 km) per second; NASA states 'about every 90 minutes', i.e. 16 orbits in 24 hours."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nasa-iss-facts"
+      ],
+      "locator": "Space Station Facts and Figures, introduction",
+      "quote": "orbiting Earth about every 90 minutes",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-iss-orbit",
+      "notes": "Rounded official figure ('about'); actual period varies slightly with altitude (about 92-93 min at current altitudes, not sourced here)."
+    },
+    {
+      "id": "trans-apollo11-earth-to-moon-orbit-m1",
+      "phenomenonId": "trans-apollo11-earth-to-moon-orbit",
+      "configuration": null,
+      "value": 75.83,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Apollo 11, juillet 1969 : temps écoulé entre le décollage (16 juillet) et la première manœuvre d'insertion en orbite lunaire (19 juillet), environ 75 h 50 min (75,83 h) ; inclut le temps passé en orbite d'attente terrestre.",
+        "en": "Apollo 11, July 1969: time from launch (16 July) to the first lunar orbit insertion burn (19 July), about 75 h 50 min (75.83 h); includes the time spent in Earth parking orbit."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nasa-apollo11-overview"
+      ],
+      "locator": "Apollo 11 Mission Overview, Mission Highlights",
+      "quote": "At about 75 hours, 50 minutes into the flight, a retrograde firing of the SPS for 357.5 seconds",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-apollo11-earth-to-moon-orbit",
+      "notes": "Mission elapsed time from NASA; conversion 75 h 50 min = 75.83 h is ours."
+    },
+    {
+      "id": "trans-concorde-paris-new-york-m1",
+      "phenomenonId": "trans-concorde-paris-new-york",
+      "configuration": null,
+      "value": 3.92,
+      "unit": "h",
+      "low": 3.75,
+      "high": 3.92,
+      "conditions": {
+        "fr": "Concorde d'Air France, horaire annoncé pour la reprise des vols en octobre 2001 : Paris–New York 3 h 55 (au lieu de 3 h 45, allongé pour tenir compte des restrictions de trafic aérien) ; New York–Paris 3 h 45. Valeur = 3 h 55.",
+        "en": "Air France Concorde, schedule announced for the October 2001 relaunch: Paris–New York 3 h 55 min (previously 3 h 45 min, lengthened for air traffic restrictions); New York–Paris 3 h 45 min. Value = 3 h 55 min."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-airfrance-concorde-kit-2001"
+      ],
+      "locator": "Section I 'On board the Air France Concorde', opening paragraph",
+      "quote": "The recently announced flight time from Paris to New York is 3hr 55min instead of 3hr 45min to take into account air traffic restrictions",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-concorde-paris-new-york",
+      "notes": "Primary operator text, but read on a secondary host (Air France and British Airways heritage pages could not be opened). The often-quoted '3 h 30' is airborne time, not this scheduled time. Record (2 h 52 min 59 s, BA, 1996) not verified here."
+    },
+    {
+      "id": "trans-tgv-paris-lyon-m1",
+      "phenomenonId": "trans-tgv-paris-lyon",
+      "configuration": null,
+      "value": 116,
+      "unit": "min",
+      "low": 116,
+      "high": 130,
+      "conditions": {
+        "fr": "TGV INOUI Paris Gare de Lyon → Lyon Part-Dieu listés dans les données ouvertes SNCF pour le 4 décembre 2026 (20 trains) : le plus rapide 1 h 56, le plus lent 2 h 10. Les OUIGO et les autres gares de Lyon ne figurent pas dans ce jeu de données.",
+        "en": "TGV INOUI trains Paris Gare de Lyon → Lyon Part-Dieu listed in SNCF open data for 4 December 2026 (20 trains): fastest 1 h 56 min, slowest 2 h 10 min. OUIGO trains and other Lyon stations are not in this dataset."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-sncf-opendata-tgvmax"
+      ],
+      "locator": "Explore API v2.1, dataset tgvmax, records date=2026-12-04, FRPLY→FRLPD (e.g. train 6643)",
+      "quote": "\"train_no\": \"6643\", ... \"destination_iata\": \"FRLPD\", ... \"heure_depart\": \"07:26\", \"heure_arrivee\": \"09:22\"",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-tgv-paris-lyon",
+      "notes": "Official SNCF timetable data, but one day only and only trains listed for TGVmax booking (may omit some trains). The minimum 1 h 56 recurs on 11 of the 20 trains. Snapshot will change with timetables. | Maintainer curation 2026-11-27: timetable durations read in the open-data records (fastest 116 min, slowest 130 min); the derivation is a subtraction of scheduled times: duration = heure_arrivee - heure_depart for each record; value = min (116 min), low = min, high = max (130 min)"
+    },
+    {
+      "id": "trans-paris-metro-14-headway-m1",
+      "phenomenonId": "trans-paris-metro-14-headway",
+      "configuration": null,
+      "value": 85,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Ligne 14 du métro parisien (automatique, sans conducteur), heures de pointe, depuis avril 2025.",
+        "en": "Paris Métro line 14 (automatic, driverless), peak hours, since April 2025."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ratp-cp-l14-2026-01-29"
+      ],
+      "locator": "Press release of 29 January 2026, page 1, section 'Fréquentation record pour la ligne 14'",
+      "quote": "intervalle de 85 secondes en heure de pointe entre deux trains depuis avril 2025.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-paris-metro-14-headway",
+      "notes": "Operator's planned headway, not a measured average."
+    },
+    {
+      "id": "trans-737-800-turnaround-m1",
+      "phenomenonId": "trans-737-800-turnaround",
+      "configuration": null,
+      "value": 37.5,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Diagramme de planification du constructeur : 737-800 avec 162 passagers en 2 classes, une porte, échange complet des passagers et du fret, service complet avec avitaillement ; conditions idéales pour un seul avion. Les compagnies planifient souvent autrement.",
+        "en": "Manufacturer planning chart: 737-800 with 162 passengers in 2 classes, one door, 100 % passenger and cargo exchange, full servicing including refuelling; ideal conditions for a single airplane. Airlines often plan differently."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-boeing-737ng-acap-revc"
+      ],
+      "locator": "Section 5.2.4 'Terminal Operations – Turnaround Station: Model 737-800, -800W', page 5-11, chart title",
+      "quote": "737-800 TURNTIME ANALYSIS 162 PASSENGERS 1 DOOR 37.5 MINUTES",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-737-800-turnaround",
+      "notes": "Read from the chart graphic (not extractable text) at 300 dpi; manufacturer's idealised schedule, not an airline average. Section 5.0 states the data 'reflect ideal conditions for a single airplane'."
+    },
+    {
+      "id": "phys-shortest-attosecond-pulse-2017-m1",
+      "phenomenonId": "phys-shortest-attosecond-pulse-2017",
+      "configuration": null,
+      "value": 43,
+      "unit": "as",
+      "low": 42,
+      "high": 44,
+      "conditions": {
+        "fr": "Impulsion de rayons X mous produite par un laser infrarouge moyen de deux cycles, mesurée par « streaking » attoseconde (ETH Zurich). La plage correspond à l’incertitude annoncée de ±1 as.",
+        "en": "Soft-X-ray pulse produced from a two-cycle mid-infrared laser, measured by attosecond streaking (ETH Zurich). Range is the stated ±1 as uncertainty."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-gaumnitz-2017-oe"
+      ],
+      "locator": "Abstract",
+      "quote": "We extract an SXR pulse duration of (43±1) as from our streaking measurements, defining a new world record.",
+      "era": 2017,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#phys-shortest-attosecond-pulse-2017",
+      "notes": "Primary peer-reviewed measurement. 'Record' is as claimed in 2017; I did not verify whether a shorter isolated pulse has been reported since. Value read in the abstract (publisher page blocked by CAPTCHA)."
+    },
+    {
+      "id": "phys-first-isolated-attosecond-pulse-2001-m1",
+      "phenomenonId": "phys-first-isolated-attosecond-pulse-2001",
+      "configuration": null,
+      "value": 650,
+      "unit": "as",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Impulsion unique dans l’ultraviolet extrême isolée par l’équipe de Ferenc Krausz à Vienne en 2001 ; travaux récompensés par le prix Nobel de physique 2023.",
+        "en": "Single extreme-ultraviolet pulse isolated by Ferenc Krausz's group in Vienna in 2001; work recognised by the 2023 Nobel Prize in Physics."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nobel-phys-2023-press"
+      ],
+      "locator": "Press release, paragraph on Agostini and Krausz",
+      "quote": "it possible to isolate a single light pulse that lasted 650 attoseconds.",
+      "era": 2001,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#phys-first-isolated-attosecond-pulse-2001",
+      "notes": "Authoritative secondary (Nobel committee) summary of Hentschel et al., Nature 414, 509 (2001); same value in the scientific background (p. 5)."
+    },
+    {
+      "id": "phys-atomic-unit-of-time-m1",
+      "phenomenonId": "phys-atomic-unit-of-time",
+      "configuration": null,
+      "value": 24.188843265864,
+      "unit": "as",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Valeur recommandée CODATA 2022, 2,418 884 326 5864(26) × 10^-17 s ; échelle de temps intrinsèque de la dynamique des électrons dans les atomes.",
+        "en": "CODATA 2022 recommended value, 2.418 884 326 5864(26) × 10^-17 s; the intrinsic time scale of electron dynamics in atoms."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nist-codata-2022-aut"
+      ],
+      "locator": "CODATA value page 'atomic unit of time', Numerical value",
+      "quote": "Numerical value 2.418 884 326 5864 x 10 -17 s",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#phys-atomic-unit-of-time",
+      "notes": "Physical constant, very high confidence. The gloss 'natural time scale of electrons' follows the Nobel 2023 scientific background ('the intrinsic atomic unit of time, about 24 attoseconds'). The NIST page gives the value only, not this interpretation."
+    },
+    {
+      "id": "phys-photoemission-delay-neon-m1",
+      "phenomenonId": "phys-photoemission-delay-neon",
+      "configuration": null,
+      "value": 21,
+      "unit": "as",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Néon ionisé par des photons de 100 eV : l’électron 2p part 21 as après l’électron 2s (Schultze et al., Science 2010), mesure par « streaking » attoseconde.",
+        "en": "Neon ionised by 100 eV photons: the 2p electron leaves 21 as later than the 2s electron (Schultze et al., Science 2010), measured with attosecond streaking."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nobel-phys-2023-scientific"
+      ],
+      "locator": "Section 'Delayed photoemission', p. 5–6; ref. 25",
+      "quote": "The 2p electron is slower to leave the neon atom than the 2s electron by 21 as.",
+      "era": 2010,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#phys-photoemission-delay-neon",
+      "notes": "Single landmark experiment; the same source notes theory gave values about a factor of two shorter, so the absolute value was debated. Good as an order of magnitude."
+    },
+    {
+      "id": "phys-red-light-oscillation-period-m1",
+      "phenomenonId": "phys-red-light-oscillation-period",
+      "configuration": null,
+      "value": 2.325581395348837,
+      "unit": "fs",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Lumière rouge de longueur d’onde d’environ 700 nm, qui oscille environ 430 000 milliards (4,3 × 10^14) de fois par seconde ; période = 1 / fréquence.",
+        "en": "Red light of wavelength about 700 nm, which oscillates about 430 thousand billion (4.3 × 10^14) times per second; period = 1 / frequency."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nobel-phys-2023-popular"
+      ],
+      "locator": "Heading 'Shorter pulses with the help of high overtones', first paragraph",
+      "quote": "it cycles at about four hundred and thirty thousand billion times per second",
+      "era": 2023,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "T = 1 / f = 1 / (4.3e14 Hz) = 2.33e-15 s",
+        "inputs": [
+          "src:src-nobel-phys-2023-popular"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#phys-red-light-oscillation-period",
+      "notes": "Calculated from an approximate frequency ('about'); 2 significant figures meaningful (≈2.3 fs). The 700 nm wavelength is stated in the same sentence. | Decision: Calculated value stored unrounded so that it is reproducible from its formula (1 / 4.3e14 Hz); the source figure is approximate (\"about\"), the display rounds it (R1 lot 2)."
+    },
+    {
+      "id": "chem-water-oh-stretch-vibration-period-m1",
+      "phenomenonId": "chem-water-oh-stretch-vibration-period",
+      "configuration": null,
+      "value": 9.121249526884112,
+      "unit": "fs",
+      "low": 8.880833205488605,
+      "high": 9.121249526884112,
+      "conditions": {
+        "fr": "Molécule d’eau isolée (phase gazeuse). Valeur : élongation symétrique à 3657 cm^-1 ; borne basse : élongation antisymétrique à 3756 cm^-1. Période = 1 / (c × nombre d’onde).",
+        "en": "Isolated water molecule (gas phase). Value: symmetric stretch at 3657 cm^-1; low: antisymmetric stretch at 3756 cm^-1. Period = 1 / (c × wavenumber)."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nist-webbook-water-vib"
+      ],
+      "locator": "Table 'Vibrational and/or electronic energy levels', modes 1 (Sym str) and 3 (Anti str)",
+      "quote": "1 Sym str 3657 A 3656.65 gas",
+      "era": 1972,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "T = 1 / (c × ν̃), c = 2.99792458e10 cm/s; ν̃ = 3657 cm^-1 → 9.12e-15 s; ν̃ = 3756 cm^-1 → 8.88e-15 s",
+        "inputs": [
+          "src:src-nist-webbook-water-vib"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-water-oh-stretch-vibration-period",
+      "notes": "Wavenumbers are accurate (0–1 cm^-1); the calculation is exact. In liquid water hydrogen bonding lowers the O–H stretch (broad band), making the period slightly longer; not covered by this source. Consistent with the Nobel 1999 statement that a molecular vibration typically takes 10–100 fs. Quote is the table row for mode 1; mode 3 row reads '3 Anti str 3756 A 3755.79 gas'. | Decision: Calculated values stored unrounded (1 / (c × ν̃), ν̃ = 3657 and 3756 cm^-1); the display rounds them (R1 lot 2)."
+    },
+    {
+      "id": "chem-broken-hydrogen-bond-water-m1",
+      "phenomenonId": "chem-broken-hydrogen-bond-water",
+      "configuration": null,
+      "value": 200,
+      "unit": "fs",
+      "low": null,
+      "high": 200,
+      "conditions": {
+        "fr": "Eau liquide à température ambiante (HOD dans D2O pour l’expérience infrarouge 2D ; simulations de dynamique moléculaire pour le chiffre de 200 fs). Borne supérieure : presque toutes les molécules retrouvent un partenaire dans ce délai.",
+        "en": "Room-temperature liquid water (HOD in D2O for the 2D infrared experiment; molecular-dynamics simulations for the 200 fs figure). Upper bound: virtually all molecules find a new partner within this time."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-eaves-2005-pnas"
+      ],
+      "locator": "Abstract; also Results ('Broken hydrogen bonds that persist for 1 ps or longer are extremely rare')",
+      "quote": "virtually all molecules return to a hydrogen-bonding partner within 200 fs.",
+      "era": 2005,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-broken-hydrogen-bond-water",
+      "notes": "Upper bound, not a mean lifetime; the figure comes from simulation, supported qualitatively by 2D-IR experiments. Moderate confidence. | Maintainer curation 2026-11-27: \"within 200 fs\" is an upper bound: encoded as high."
+    },
+    {
+      "id": "chem-icn-bond-breaking-m1",
+      "phenomenonId": "chem-icn-bond-breaking",
+      "configuration": null,
+      "value": 200,
+      "unit": "fs",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Photodissociation du cyanure d’iode, ICN → I + CN, observée par l’équipe d’Ahmed Zewail avec des impulsions laser femtoseconde (prix Nobel de chimie 1999).",
+        "en": "Photodissociation of iodine cyanide, ICN → I + CN, observed by Ahmed Zewail's team with femtosecond laser pulses (Nobel Prize in Chemistry 1999)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nobel-chem-1999-press"
+      ],
+      "locator": "Press release, subsection 'The first experiments'",
+      "quote": "the I-C bond was about to break: the whole reaction takes place in 200 femtoseconds.",
+      "era": 1999,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-icn-bond-breaking",
+      "notes": "Authoritative summary of Zewail's first experiments. The press release does not date the ICN experiment itself; era = date of the source (1999). The primary paper should be added if an experiment date is wanted."
+    },
+    {
+      "id": "chem-retinal-isomerisation-vision-m1",
+      "phenomenonId": "chem-retinal-isomerisation-vision",
+      "configuration": null,
+      "value": 200,
+      "unit": "fs",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Isomérisation cis-trans du rétinal dans la rhodopsine, le pigment des bâtonnets de l’œil, mesurée par spectroscopie femtoseconde.",
+        "en": "Cis-trans isomerisation of retinal in rhodopsin, the pigment of the rods of the eye, measured by femtosecond spectroscopy."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nobel-chem-1999-press"
+      ],
+      "locator": "Press release, subsection 'Research explosion'",
+      "quote": "With femtosecond spectroscopy other researchers have found that the process takes 200 fs",
+      "era": 1999,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-retinal-isomerisation-vision",
+      "notes": "Nobel committee summary of other groups' work; primary paper not cited on the page. Era = date of the source. Order of magnitude reliable."
+    },
+    {
+      "id": "chem-photosystem-ii-charge-separation-m1",
+      "phenomenonId": "chem-photosystem-ii-charge-separation",
+      "configuration": null,
+      "value": 1.5,
+      "unit": "ps",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Centre réactionnel isolé du photosystème II (D1/D2-cyt b559) à température ambiante, spectroscopie électronique bidimensionnelle et modélisation.",
+        "en": "Isolated photosystem II reaction centre (D1/D2-cyt b559) at ambient temperature, two-dimensional electronic spectroscopy with modelling."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-duan-2017-scirep"
+      ],
+      "locator": "Abstract; Results (Fig. 3a: components 132 fs, 1.5 ps, 13.9 ps)",
+      "quote": "occurs on a time scale of 1.5 ps under ambient conditions.",
+      "era": 2017,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-photosystem-ii-charge-separation",
+      "notes": "Single study; the same paper cites other analyses with components of 400 fs and 1.8 ps, and a faster <200 fs component. Contested assignment; treat as order of magnitude (about 1 ps)."
+    },
+    {
+      "id": "chem-water-hydrogen-bond-exchange-m1",
+      "phenomenonId": "chem-water-hydrogen-bond-exchange",
+      "configuration": null,
+      "value": 2.5,
+      "unit": "ps",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Eau liquide à température ambiante ; échelle de temps de l’échange de liaisons hydrogène, cohérente avec la réorientation d’environ 2,5 ps mesurée par spectroscopie infrarouge ultrarapide.",
+        "en": "Bulk liquid water at room temperature; time scale of hydrogen-bond exchange, matching the ~2.5 ps reorientation (anisotropy decay) measured by ultrafast infrared spectroscopy."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "pending",
+      "sourceIds": [
+        "src-hazrah-2026-chemrev"
+      ],
+      "locator": "Section 'Spectral Diffusion and H-Bond Dynamics'; also 'Cation and Anion Effects on Solvation Shell Dynamics'",
+      "quote": "much faster than the H-bond exchange dynamics (∼2.5 ps).",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-water-hydrogen-bond-exchange",
+      "notes": "Recent review (CC BY) summarising several independent experiments (Rezus & Bakker 2005, 2007 cited for the 2.5 ps anisotropy decay; also cited in a CC BY Frontiers in Chemistry 2024 review). Well established; approximate value. | Decision: Source (Chem Rev 2026, ACS) could not be opened by the maintainer for the check (anti-bot page, HTTP 403). Held back until verified (R1 lot 2, 2026-11-27)."
+    },
+    {
+      "id": "chem-carbonic-anhydrase-turnover-m1",
+      "phenomenonId": "chem-carbonic-anhydrase-turnover",
+      "configuration": null,
+      "value": 1,
+      "unit": "us",
+      "low": 0.1,
+      "high": 1,
+      "conditions": {
+        "fr": "Les enzymes championnes comme l’anhydrase carbonique (CO2 + H2O ⇌ HCO3- + H+) réalisent jusqu’à 10^6 à 10^7 réactions par seconde ; temps par réaction = 1 / cadence. Valeur pour 10^6/s ; borne basse pour 10^7/s.",
+        "en": "Record-holding enzymes such as carbonic anhydrase (CO2 + H2O ⇌ HCO3- + H+) carry out up to 10^6–10^7 reactions per second; time per reaction = 1 / rate. Value uses 10^6/s; low uses 10^7/s."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-bionumbers-enzyme-rates"
+      ],
+      "locator": "Section text after Figure 2 caption ('Rates vary immensely. Record holders are carbonic anhydrase…')",
+      "quote": "These enzymes can carry out as many as 106-107 reactions per second.",
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 1 / kcat; 1 / 1e6 s^-1 = 1e-6 s; 1 / 1e7 s^-1 = 1e-7 s",
+        "inputs": [
+          "src:src-bionumbers-enzyme-rates"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-carbonic-anhydrase-turnover",
+      "notes": "'106-107' on the page is 10^6–10^7 with superscripts lost. The source groups carbonic anhydrase with superoxide dismutase; the value is a ceiling under saturating substrate, not a cellular rate. Value chosen at the 10^6 end, not a midpoint."
+    },
+    {
+      "id": "chem-median-enzyme-turnover-m1",
+      "phenomenonId": "chem-median-enzyme-turnover",
+      "configuration": null,
+      "value": 0.1,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Nombre de cycles catalytiques médian (kcat) des enzymes du métabolisme, environ 10 par seconde (compilation de la littérature, base BRENDA) ; temps par réaction = 1 / kcat.",
+        "en": "Median turnover number (kcat) of metabolic enzymes, about 10 per second (literature compilation, BRENDA-based); time per reaction = 1 / kcat."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-bionumbers-enzyme-rates"
+      ],
+      "locator": "Paragraph on Figure 2A (distribution of kcat values, BNID 111411)",
+      "quote": "the median kcat is about 10 s-1",
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 1 / kcat = 1 / (10 s^-1) = 0.1 s",
+        "inputs": [
+          "src:src-bionumbers-enzyme-rates"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-median-enzyme-turnover",
+      "notes": "Median of a wide distribution (orders of magnitude spread); 'about'. Underlying data: Bar-Even et al., Biochemistry 2011."
+    },
+    {
+      "id": "chem-sucrose-hydrolysis-half-life-m1",
+      "phenomenonId": "chem-sucrose-hydrolysis-half-life",
+      "configuration": null,
+      "value": 440,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Hydrolyse spontanée (non catalysée) du saccharose dans l’eau neutre à 25 °C ; extrapolée à partir de vitesses mesurées à haute température.",
+        "en": "Spontaneous (uncatalysed) hydrolysis of sucrose in neutral water at 25 °C; extrapolated from rates measured at high temperature."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-wolfenden-2008-jacs"
+      ],
+      "locator": "Abstract and main text, Table 1",
+      "quote": "The half-lives for spontaneous hydrolysis of trehalose and sucrose at 25 °C are 6.6 × 10 6 years and 440 years.",
+      "era": 2008,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-sucrose-hydrolysis-half-life",
+      "notes": "Single primary study, Arrhenius extrapolation from elevated temperatures. Same paper: invertase speeds this up enormously; good pedagogical contrast with the enzyme items."
+    },
+    {
+      "id": "geo-time-since-k-pg-extinction-m1",
+      "phenomenonId": "geo-time-since-k-pg-extinction",
+      "configuration": null,
+      "value": 66000000,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Âge de la limite Crétacé–Paléogène (base de l'étage danien), quand les dinosaures non aviens ont disparu. Âge numérique de la charte de l'ICS, en millions d'années avant le présent.",
+        "en": "Age of the Cretaceous–Paleogene boundary (base of the Danian stage), when the non-avian dinosaurs died out. Numerical age on the ICS chart, in millions of years before present."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ics-chart-2026-06"
+      ],
+      "locator": "Chart, Cenozoic column: Paleocene, Danian stage, lower boundary numerical age (Ma)",
+      "quote": "66.00",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-time-since-k-pg-extinction",
+      "notes": "The chart gives 66.00 Ma with no uncertainty. Linking the boundary to the dinosaur extinction is general knowledge, not stated on the chart. Chart notes that numerical ages are subject to revision."
+    },
+    {
+      "id": "geo-cambrian-duration-m1",
+      "phenomenonId": "geo-cambrian-duration",
+      "configuration": null,
+      "value": 51950000,
+      "unit": "a",
+      "low": 49850000,
+      "high": 54050000,
+      "conditions": {
+        "fr": "De la base du Cambrien (538,8 ± 0,6 Ma) à la base de l'Ordovicien (486,85 ± 1,5 Ma), charte de l'ICS v2026/06.",
+        "en": "From the base of the Cambrian (538.8 ± 0.6 Ma) to the base of the Ordovician (486.85 ± 1.5 Ma), ICS chart v2026/06."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ics-chart-2026-06"
+      ],
+      "locator": "Chart, Paleozoic column: base of Fortunian (Cambrian) and base of Tremadocian (Ordovician)",
+      "quote": "486.85 ±1.5 … 538.8 ±0.6",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "538.8 Ma - 486.85 Ma = 51.95 Ma; low/high = worst-case sum of the two boundary uncertainties (±2.1 Ma)",
+        "inputs": [
+          "src:src-ics-chart-2026-06"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-cambrian-duration",
+      "notes": "Low/high combine both uncertainties linearly (conservative). The two numbers are separate chart cells; the quote joins them with an ellipsis. Older charts gave a different Ordovician base (485.4 Ma)."
+    },
+    {
+      "id": "geo-mesozoic-duration-m1",
+      "phenomenonId": "geo-mesozoic-duration",
+      "configuration": null,
+      "value": 185902000,
+      "unit": "a",
+      "low": 185878000,
+      "high": 185926000,
+      "conditions": {
+        "fr": "De la base du Trias (251,902 ± 0,024 Ma) à la base du Paléogène (66,00 Ma), charte de l'ICS v2026/06.",
+        "en": "From the base of the Triassic (251.902 ± 0.024 Ma) to the base of the Paleogene (66.00 Ma), ICS chart v2026/06."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ics-chart-2026-06"
+      ],
+      "locator": "Chart, Mesozoic column: base of Induan (Triassic); Cenozoic column: base of Danian",
+      "quote": "Induan 251.902 ±0.024",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "251.902 Ma - 66.00 Ma = 185.902 Ma; low/high from the ±0.024 Ma Triassic-base uncertainty only",
+        "inputs": [
+          "src:src-ics-chart-2026-06"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-mesozoic-duration",
+      "notes": "The range is narrow only because the chart gives no uncertainty for 66.00 Ma; the true uncertainty is larger. Display as about 186 million years."
+    },
+    {
+      "id": "geo-time-since-last-glacial-maximum-m1",
+      "phenomenonId": "geo-time-since-last-glacial-maximum",
+      "configuration": null,
+      "value": 19500,
+      "unit": "a",
+      "low": 19000,
+      "high": 20000,
+      "conditions": {
+        "fr": "Les calottes glaciaires sont restées à leur extension maximale de 26 500 à 19 000–20 000 ans avant le présent, puis la déglaciation de l'hémisphère Nord a commencé. Valeur : milieu de la fourchette 19 000–20 000 ans.",
+        "en": "Ice sheets stood at their largest extent from 26.5 ka until 19–20 ka, when northern deglaciation began. Value is the midpoint of the 19–20 ka end date (ka = thousands of years ago)."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-clark-2009-lgm"
+      ],
+      "locator": "Abstract",
+      "quote": "Nearly all ice sheets were at their LGM positions from 26.5 ka to 19 to 20 ka",
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-time-since-last-glacial-maximum",
+      "notes": "19 500 is a midpoint we chose, not a value in the source. Based on 5704 radiocarbon, Be-10 and He-3 ages. 'ka' is read as before present; the abstract does not state the reference year, and the difference (decades) is negligible. The LGM itself lasted about 26.5 to 19–20 ka. | Maintainer curation 2026-11-27: value = middle of the published \"19 to 20 ka\"; shown as illustrative with that range."
+    },
+    {
+      "id": "geo-oldest-zircon-m1",
+      "phenomenonId": "geo-oldest-zircon",
+      "configuration": null,
+      "value": 4404000000,
+      "unit": "a",
+      "low": 4396000000,
+      "high": 4412000000,
+      "conditions": {
+        "fr": "Âge uranium–plomb d'un grain de zircon détritique des Jack Hills (Australie-Occidentale). C'est un cristal isolé, pas une roche entière.",
+        "en": "Uranium–lead age of a detrital zircon grain from the Jack Hills, Western Australia. It is a single crystal, not a whole rock."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-wilde-2001-zircon"
+      ],
+      "locator": "Abstract",
+      "quote": "the discovery of a detrital zircon with an age as old as 4,404+/-8 Myr",
+      "era": 2001,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-oldest-zircon",
+      "notes": "Low/high from the stated ±8 Myr. Same abstract gives 4,030 Myr for the oldest known rock components (Acasta Gneiss, Canada). NASA Earth Observatory gives '4.4 billion years'. A 2014 atom-probe study confirming the age was not opened."
+    },
+    {
+      "id": "geo-age-homo-sapiens-m1",
+      "phenomenonId": "geo-age-homo-sapiens",
+      "configuration": null,
+      "value": 315000,
+      "unit": "a",
+      "low": 281000,
+      "high": 349000,
+      "conditions": {
+        "fr": "Âge par thermoluminescence de silex chauffés trouvés avec des restes d'Homo sapiens à Jebel Irhoud (Maroc) ; moyenne pondérée ± incertitude.",
+        "en": "Thermoluminescence age of heated flint tools found with H. sapiens remains at Jebel Irhoud, Morocco (weighted average ± uncertainty)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-richter-2017-irhoud"
+      ],
+      "locator": "Abstract",
+      "quote": "A weighted average age places these Middle Stone Age artefacts and fossils at 315 ± 34 thousand years ago.",
+      "era": 2017,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-age-homo-sapiens",
+      "notes": "Low/high from ±34 ka. A tooth from the site gives 286 ± 32 ka (same abstract). Smithsonian Human Origins rounds to 'About 300,000 years ago'. Classifying these fossils as H. sapiens is debated by some researchers."
+    },
+    {
+      "id": "geo-age-great-pyramid-m1",
+      "phenomenonId": "geo-age-great-pyramid",
+      "configuration": null,
+      "value": 4564.5,
+      "unit": "a",
+      "low": 4553,
+      "high": 4576,
+      "conditions": {
+        "fr": "Années écoulées entre le règne du roi Khéops (vers 2551–2528 av. J.-C., chronologie du Metropolitan Museum), qui fit bâtir la pyramide, et 2026. Valeur : milieu du règne.",
+        "en": "Years from the reign of King Khufu (ca. 2551–2528 BC, Met Museum chronology), who built the pyramid, to 2026. Value is the midpoint of the reign."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-met-old-kingdom"
+      ],
+      "locator": "Essay, Dynasty 4 paragraph",
+      "quote": "The Great Pyramid at Giza, which is the largest Egyptian pyramid, belongs to his son and successor, Khufu (r. ca. 2551–2528 B.C.).",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "2026 + 2551 - 1 = 4576; 2026 + 2528 - 1 = 4553 (no year zero); value = midpoint ≈ 4565",
+        "inputs": [
+          "src:src-met-old-kingdom"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-age-great-pyramid",
+      "notes": "Egyptian chronologies differ: other references place Khufu decades earlier (e.g. 2589–2566 BC), so the true uncertainty is about a century, larger than low/high. Midpoint chosen by us. Mark as about 4,500 years. | Decision: Calculated value stored unrounded: middle of the reign of Khufu (Met: ca. 2551–2528 B.C.), counted to 2026 without a year 0 = 4564.5 years (R1 lot 2)."
+    },
+    {
+      "id": "geo-time-since-cuneiform-m1",
+      "phenomenonId": "geo-time-since-cuneiform",
+      "configuration": null,
+      "value": 5225,
+      "unit": "a",
+      "low": 5025,
+      "high": 5225,
+      "conditions": {
+        "fr": "Années écoulées entre les premiers temps de l'écriture cunéiforme (3200–3000 av. J.-C., Uruk, sud de l'Irak) et 2026. Valeur : début de cette phase.",
+        "en": "Years from the earliest stage of cuneiform (3200–3000 BC, Uruk, southern Iraq) to 2026. Value uses the start of that stage."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-met-origins-writing"
+      ],
+      "locator": "Essay, paragraph on the rebus principle",
+      "quote": "Only a few examples of its use exist in the earliest stages of cuneiform from between 3200 and 3000 B.C.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "2026 + 3200 - 1 = 5225; 2026 + 3000 - 1 = 5025 (no year zero)",
+        "inputs": [
+          "src:src-met-origins-writing"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-time-since-cuneiform",
+      "notes": "The sentence is about the rebus principle but dates the earliest stages of cuneiform. The same essay says proto-cuneiform may have existed in Syria and Turkey as early as the mid-fourth millennium BC, so writing may be older. Dates are approximate ('ca.')."
+    },
+    {
+      "id": "geo-time-since-gutenberg-bible-m1",
+      "phenomenonId": "geo-time-since-gutenberg-bible",
+      "configuration": null,
+      "value": 571,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Années écoulées depuis 1455 environ, date à laquelle les premiers exemplaires de la Bible de Gutenberg (Mayence) furent disponibles, jusqu'en 2026.",
+        "en": "Years from about 1455, when the first copies of the Gutenberg Bible (Mainz) became available, to 2026."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-loc-gutenberg"
+      ],
+      "locator": "Interactive presentation, introductory paragraph",
+      "quote": "Approximately 180 copies of the Gutenberg Bible were printed and first made available in about 1455.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "2026 - 1455 = 571",
+        "inputs": [
+          "src:src-loc-gutenberg"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-time-since-gutenberg-bible",
+      "notes": "'About 1455' per the Library of Congress; other libraries say 1454–1455 (not opened). Gutenberg was printing before the Bible, so this is not the exact invention date of the press. Uncertainty about ±1 year."
+    },
+    {
+      "id": "cog-iconic-memory-decay-m1",
+      "phenomenonId": "cog-iconic-memory-decay",
+      "configuration": null,
+      "value": 100,
+      "unit": "ms",
+      "low": 100,
+      "high": 400,
+      "conditions": {
+        "fr": "Constante de temps d'effacement de la mémoire iconique (mémoire sensorielle visuelle) chez l'humain après une présentation brève, mesurée avec un masque ; d'autres méthodes donnent jusqu'à 400 ms.",
+        "en": "Decay time constant of iconic (visual sensory) memory in human observers after a brief display, measured with a mask; other methods give up to 400 ms."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-teeuwen-2021-iconic"
+      ],
+      "locator": "Introduction (citing Loftus et al. and ref. 23)",
+      "quote": "iconic memory decayed with a time constant of around 100 ms, although studies using other procedures observed longer time constants, up to 400 ms",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-iconic-memory-decay",
+      "notes": "Secondary statement in a CC BY paper about monkeys; the human values come from the works it cites, which were not opened. A time constant is not the full lifetime: the same paper says a cue delay of 'a few hundred milliseconds' (Sperling 1960) wipes out the benefit. Sperling 1960 itself was not opened."
+    },
+    {
+      "id": "cog-short-term-memory-decay-m1",
+      "phenomenonId": "cog-short-term-memory-decay",
+      "configuration": null,
+      "value": 18,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Peterson et Peterson (1959) : trigrammes de trois lettres, répétition mentale empêchée ; le rappel passe d'environ 80 % à 3 s à environ 10 % à 18 s. Adultes, en laboratoire.",
+        "en": "Peterson & Peterson (1959): three-letter trigrams, rehearsal prevented; recall fell from about 80 % at 3 s to about 10 % at 18 s. Adults, laboratory."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-openstax-psych2e-8-1"
+      ],
+      "locator": "Section on short-term memory (Atkinson–Shiffrin model), paragraph on decay and interference",
+      "quote": "Participants remembered about 80% of the trigrams after a 3-second delay, but only 10% after a delay of 18 seconds",
+      "era": 1959,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-short-term-memory-decay",
+      "notes": "Textbook account of the 1959 study; the original was not opened (paywalled). 18 s is the longest delay tested, not a measured 'lifetime'. The same page notes Keppel & Underwood (1962) attributed much of the loss to interference, not decay, and gives a general STM duration of 15 to 30 seconds. Source is CC BY-NC-SA: reference only."
+    },
+    {
+      "id": "cog-attentional-blink-m1",
+      "phenomenonId": "cog-attentional-blink",
+      "configuration": null,
+      "value": 500,
+      "unit": "ms",
+      "low": 200,
+      "high": 500,
+      "conditions": {
+        "fr": "Dans un flux rapide d'images, une seconde cible passe souvent inaperçue si elle arrive 200 à 500 ms après la première. Valeur : fin de cette fenêtre.",
+        "en": "In a rapid stream of images, a second target is often missed if it comes 200–500 ms after the first one. Value is the end of that window."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-dux-marois-2009-ab"
+      ],
+      "locator": "Abstract",
+      "quote": "a reduced ability to report the second of two targets … if it appears within 200-500 msec of Target 1 (T1)",
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-attentional-blink",
+      "notes": "Review summarising many rapid-serial-visual-presentation studies; the exact window depends on the task. Value = upper end of the window (how long the blink lasts), low = start of the deficit window."
+    },
+    {
+      "id": "cog-reading-fixation-m1",
+      "phenomenonId": "cog-reading-fixation",
+      "configuration": null,
+      "value": 250,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Durée moyenne d'une fixation (l'œil immobile sur un mot) pendant la lecture silencieuse chez des lecteurs adultes expérimentés.",
+        "en": "Average duration of a fixation (eye still on one word) during silent reading by skilled adult readers."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-degno-liversedge-2020"
+      ],
+      "locator": "Section 1, Introduction",
+      "quote": "Fixations are short periods of time, which on average last approximately 250 ms",
+      "era": 2020,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-reading-fixation",
+      "notes": "Review value; individual fixations vary widely, and other reviews give 200–250 ms (not opened). No range given in this source, so low/high are left null."
+    },
+    {
+      "id": "cog-saccade-duration-m1",
+      "phenomenonId": "cog-saccade-duration",
+      "configuration": null,
+      "value": 44.94,
+      "unit": "ms",
+      "low": 31.44,
+      "high": 68.22,
+      "conditions": {
+        "fr": "Médiane des durées moyennes de neuf sujets pour des saccades d'environ 9 degrés d'amplitude en moyenne ; 9 adultes en bonne santé de 24 à 39 ans. Bornes = plus faible et plus forte moyenne individuelle.",
+        "en": "Median of the nine per-subject mean durations for saccades averaging about 9 degrees of amplitude; 9 healthy adults aged 24–39. Low/high = lowest and highest subject means."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-gibaldi-sabatini-2021"
+      ],
+      "locator": "Table 5, Statistics of Saccadic Parameters (Exp. 1.1), Duration [ms] column",
+      "quote": "SBJ6 9.03 ± 6.54 160.23 ± 68.23 44.94 ± 20.67",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "median of per-subject mean durations in Table 5 (31.52, 31.44, 56.17, 47.95, 36.85, 44.94, 68.22, 49.41, 43.91 ms) = 44.94 ms; low/high = min/max",
+        "inputs": [
+          "src:src-gibaldi-sabatini-2021"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-saccade-duration",
+      "notes": "Saccade duration grows with amplitude (main sequence), so this applies to ~9° jumps only; per-subject SDs are about 15–28 ms. Duration also depends on the detection threshold and sampling rate (discussed in the paper). Purves et al., Neuroscience 2e (NCBI Bookshelf NBK10991) gives 'on the order of 15–100 ms', consistent with this."
+    },
+    {
+      "id": "cog-conversation-turn-gap-m1",
+      "phenomenonId": "cog-conversation-turn-gap",
+      "configuration": null,
+      "value": 100,
+      "unit": "ms",
+      "low": 0,
+      "high": 300,
+      "conditions": {
+        "fr": "Écart médian entre la fin d'une question fermée et le début de la réponse, dans 10 langues (enregistrements vidéo de conversations naturelles). Bornes = plage des médianes par langue.",
+        "en": "Median gap between the end of a yes/no question and the start of the answer, across 10 languages (video recordings of natural conversation). Low/high = range of the language medians."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-stivers-2009-turn"
+      ],
+      "locator": "Results, paragraph on Fig. 1 and Table S3",
+      "quote": "ranging from 0 ms (English, Japanese, Tzeltal, and Yélî-Dnye) to +300 ms (Danish, ‡Ākhoe Hai‖om, Lao) (overall cross-linguistic median +100 ms)",
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-conversation-turn-gap",
+      "notes": "Overall mode is 0 ms; language means range from +7 ms (Japanese) to +469 ms (Danish). The popular '~200 ms' summary matches the reported mode window (0–200 ms), not the median. Question–answer pairs only."
     }
   ]
 }

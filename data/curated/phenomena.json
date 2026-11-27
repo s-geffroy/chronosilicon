@@ -2890,6 +2890,446 @@
         "en": "Maximum working day in France"
       },
       "description": null
+    },
+    {
+      "id": "nat-thunderstorm-cell-lifetime",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Vie d'une cellule orageuse isolée",
+        "en": "Life of a single thunderstorm cell"
+      },
+      "description": null
+    },
+    {
+      "id": "nat-old-faithful-interval",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Intervalle entre deux éruptions du geyser Old Faithful",
+        "en": "Time between two eruptions of Old Faithful"
+      },
+      "description": null
+    },
+    {
+      "id": "nat-old-faithful-eruption",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'une éruption d'Old Faithful",
+        "en": "Length of an Old Faithful eruption"
+      },
+      "description": null
+    },
+    {
+      "id": "nat-longest-tropical-cyclone-freddy",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Cyclone tropical le plus long jamais observé (Freddy, 2023)",
+        "en": "Longest-lived tropical cyclone on record (Freddy, 2023)"
+      },
+      "description": null
+    },
+    {
+      "id": "nat-methuselah-age",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Âge de Mathusalem, le plus vieil arbre vivant connu",
+        "en": "Age of Methuselah, the oldest known living tree"
+      },
+      "description": null
+    },
+    {
+      "id": "nat-oldest-giant-sequoia",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Plus vieux séquoia géant connu",
+        "en": "Oldest known giant sequoia"
+      },
+      "description": null
+    },
+    {
+      "id": "nat-hummingbird-gulf-crossing",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Traversée sans escale du golfe du Mexique par le colibri à gorge rubis",
+        "en": "Ruby-throated hummingbird's non-stop flight across the Gulf of Mexico"
+      },
+      "description": null
+    },
+    {
+      "id": "nat-hummingbird-heartbeat",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Intervalle entre deux battements de cœur du colibri à gorge rubis",
+        "en": "Time between two heartbeats of a ruby-throated hummingbird"
+      },
+      "description": null
+    },
+    {
+      "id": "nat-monarch-fall-migration",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Migration des monarques jusqu'au Mexique",
+        "en": "Monarch butterflies' migration to Mexico"
+      },
+      "description": null
+    },
+    {
+      "id": "trans-iss-orbit",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Un tour de la Terre par la Station spatiale internationale",
+        "en": "One orbit of the International Space Station"
+      },
+      "description": null
+    },
+    {
+      "id": "trans-apollo11-earth-to-moon-orbit",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Apollo 11 : du décollage à la mise en orbite lunaire",
+        "en": "Apollo 11: from launch to entering lunar orbit"
+      },
+      "description": null
+    },
+    {
+      "id": "trans-concorde-paris-new-york",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de vol prévu du Concorde Paris–New York",
+        "en": "Concorde Paris–New York scheduled flight time"
+      },
+      "description": null
+    },
+    {
+      "id": "trans-tgv-paris-lyon",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "TGV le plus rapide de Paris à Lyon (horaire)",
+        "en": "Fastest scheduled TGV from Paris to Lyon"
+      },
+      "description": null
+    },
+    {
+      "id": "trans-paris-metro-14-headway",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Intervalle entre deux métros de la ligne 14 à l'heure de pointe",
+        "en": "Time between two trains on Paris Métro line 14 at rush hour"
+      },
+      "description": null
+    },
+    {
+      "id": "trans-737-800-turnaround",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Escale d'un Boeing 737-800 au terminal (rotation)",
+        "en": "Turnaround of a Boeing 737-800 at the gate"
+      },
+      "description": null
+    },
+    {
+      "id": "phys-shortest-attosecond-pulse-2017",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Plus courte impulsion de lumière attoseconde isolée mesurée (record annoncé en 2017)",
+        "en": "Shortest isolated attosecond light pulse measured (record reported in 2017)"
+      },
+      "description": null
+    },
+    {
+      "id": "phys-first-isolated-attosecond-pulse-2001",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Première impulsion de lumière attoseconde isolée (2001)",
+        "en": "First isolated attosecond light pulse (2001)"
+      },
+      "description": null
+    },
+    {
+      "id": "phys-atomic-unit-of-time",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Unité atomique de temps (échelle de temps naturelle d’un électron dans un atome)",
+        "en": "Atomic unit of time (natural time scale of an electron in an atom)"
+      },
+      "description": null
+    },
+    {
+      "id": "phys-photoemission-delay-neon",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Décalage entre deux électrons qui quittent un atome de néon (effet photoélectrique)",
+        "en": "Delay between two electrons leaving a neon atom (photoelectric effect)"
+      },
+      "description": null
+    },
+    {
+      "id": "phys-red-light-oscillation-period",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une oscillation de la lumière rouge",
+        "en": "One oscillation of red light"
+      },
+      "description": null
+    },
+    {
+      "id": "chem-water-oh-stretch-vibration-period",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une vibration d’élongation des liaisons O–H d’une molécule d’eau",
+        "en": "One stretching vibration of the O–H bonds in a water molecule"
+      },
+      "description": null
+    },
+    {
+      "id": "chem-broken-hydrogen-bond-water",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une liaison hydrogène rompue dans l’eau liquide se reforme en moins de",
+        "en": "A broken hydrogen bond in liquid water reforms within"
+      },
+      "description": null
+    },
+    {
+      "id": "chem-icn-bond-breaking",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Rupture d’une liaison chimique observée en direct (molécule ICN)",
+        "en": "Breaking of a chemical bond, watched live (ICN molecule)"
+      },
+      "description": null
+    },
+    {
+      "id": "chem-retinal-isomerisation-vision",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Première étape chimique de la vision (le rétinal change de forme)",
+        "en": "First chemical step of vision (retinal changes shape)"
+      },
+      "description": null
+    },
+    {
+      "id": "chem-photosystem-ii-charge-separation",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Première séparation de charges de la photosynthèse (photosystème II)",
+        "en": "First charge separation in photosynthesis (photosystem II)"
+      },
+      "description": null
+    },
+    {
+      "id": "chem-water-hydrogen-bond-exchange",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une molécule d’eau change de partenaire de liaison hydrogène",
+        "en": "A water molecule switches hydrogen-bond partner"
+      },
+      "description": null
+    },
+    {
+      "id": "chem-carbonic-anhydrase-turnover",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une réaction par l’une des enzymes les plus rapides (anhydrase carbonique)",
+        "en": "One reaction by one of the fastest enzymes (carbonic anhydrase)"
+      },
+      "description": null
+    },
+    {
+      "id": "chem-median-enzyme-turnover",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une réaction par une enzyme typique",
+        "en": "One reaction by a typical enzyme"
+      },
+      "description": null
+    },
+    {
+      "id": "chem-sucrose-hydrolysis-half-life",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Sucre (saccharose) qui se décompose seul dans l’eau, sans enzyme (demi-vie)",
+        "en": "Sugar (sucrose) breaking down in water on its own, without enzyme (half-life)"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-time-since-k-pg-extinction",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps écoulé depuis l'extinction des dinosaures (fin du Crétacé)",
+        "en": "Time since the extinction of the dinosaurs (end of the Cretaceous)"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-cambrian-duration",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée de la période cambrienne",
+        "en": "Length of the Cambrian period"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-mesozoic-duration",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée de l'ère mésozoïque (l'âge des dinosaures)",
+        "en": "Length of the Mesozoic era (age of dinosaurs)"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-time-since-last-glacial-maximum",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps écoulé depuis la fin du dernier maximum glaciaire",
+        "en": "Time since the end of the last ice age's peak (Last Glacial Maximum)"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-oldest-zircon",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Âge du plus vieux fragment de Terre connu (un cristal de zircon des Jack Hills)",
+        "en": "Age of the oldest known piece of the Earth (a Jack Hills zircon crystal)"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-age-homo-sapiens",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Âge des plus anciens fossiles connus d'Homo sapiens",
+        "en": "Age of the oldest known Homo sapiens fossils"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-age-great-pyramid",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Âge de la grande pyramide de Gizeh",
+        "en": "Age of the Great Pyramid of Giza"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-time-since-cuneiform",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps écoulé depuis la première écriture (cunéiforme, Mésopotamie)",
+        "en": "Time since the first writing (cuneiform, Mesopotamia)"
+      },
+      "description": null
+    },
+    {
+      "id": "geo-time-since-gutenberg-bible",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps écoulé depuis la Bible de Gutenberg (début de l'imprimerie en Europe)",
+        "en": "Time since the Gutenberg Bible (start of printing in Europe)"
+      },
+      "description": null
+    },
+    {
+      "id": "cog-iconic-memory-decay",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Vitesse d'effacement de l'image visuelle en mémoire (mémoire iconique)",
+        "en": "How fast a visual afterimage in memory fades (iconic memory)"
+      },
+      "description": null
+    },
+    {
+      "id": "cog-short-term-memory-decay",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'un souvenir à court terme sans répétition mentale",
+        "en": "How long a short-term memory lasts without rehearsal"
+      },
+      "description": null
+    },
+    {
+      "id": "cog-attentional-blink",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Le clignement attentionnel : angle mort après avoir repéré quelque chose",
+        "en": "The attentional blink: blind spot after noticing something"
+      },
+      "description": null
+    },
+    {
+      "id": "cog-reading-fixation",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une fixation de l'œil pendant la lecture",
+        "en": "One eye fixation while reading"
+      },
+      "description": null
+    },
+    {
+      "id": "cog-saccade-duration",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Un saut rapide de l'œil (saccade)",
+        "en": "One quick eye jump (saccade)"
+      },
+      "description": null
+    },
+    {
+      "id": "cog-conversation-turn-gap",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Pause avant de répondre dans une conversation",
+        "en": "Pause before answering in a conversation"
+      },
+      "description": null
     }
   ]
 }

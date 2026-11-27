@@ -54,6 +54,7 @@ const DURATION_PREFIXES: ReadonlyArray<readonly [string, number]> = [
   ['ns', 1e-9],
   ['ps', 1e-12],
   ['fs', 1e-15],
+  ['as', 1e-18], // R1 v2.1: universal chronology starts at the attosecond
 ];
 
 /** Picks the largest SI sub-multiple of the second such that value >= 1. */
@@ -63,5 +64,5 @@ export function prefixDuration(seconds: number): SIPrefixed {
   for (const [unit, f] of DURATION_PREFIXES) {
     if (seconds >= f) return { value: seconds / f, unit };
   }
-  return { value: seconds / 1e-15, unit: 'fs' };
+  return { value: seconds / 1e-18, unit: 'as' };
 }

@@ -61,6 +61,7 @@ const U = (kind: QuantityKind, factor: number): UnitDef =>
 
 export const UNITS: Readonly<Record<string, UnitDef>> = {
   // duration
+  as: U('duration', 1e-18), // attosecond: lower end of the universal chronology (R1 v2.1)
   fs: U('duration', 1e-15),
   ps: U('duration', 1e-12),
   ns: U('duration', 1e-9),

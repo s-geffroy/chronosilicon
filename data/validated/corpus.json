@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
-  "corpusVersion": "0.3.0+ab4273383a57",
+  "corpusVersion": "0.3.0+25f163a182a7",
   "inputs": {
-    "data/sources/sources.json": "8036f9c9b381f70a510314c895907a78e79d2231a1bfb82fc038c0f186aed6dd",
-    "data/curated/phenomena.json": "395592e4a3d4e7792aa3256a9d699fd0a6e1c41172ae53098b41739c5e0275ee",
-    "data/curated/measurements.json": "c884440914463246fed89de469974b0133f54b92f5679b6cdcd2aa09f788ac69",
+    "data/sources/sources.json": "b261671f6c6ffbfbed16430fe6d63440f28a196b810beb9aca65e200515ea59e",
+    "data/curated/phenomena.json": "4cecb27614148430cdad657b0bfc82a71912422b143cccbc6af090a0978c7f55",
+    "data/curated/measurements.json": "36e1607258a0befa2b76784589351588dd7b14b09a88daa27d2c65dea2680a60",
     "data/curated/groups.json": "30480b338290a48e54f9b8c58303368f37749d28bd5d906eb7804378c0c72772",
     "data/curated/observers.json": "16d7b09cf5d838bfe153241917bbf4054df8f57f3a7a354d4638a0bdb20b55bd",
     "data/curated/scenarios.json": "c922b1ea2e636abf6eddcc895126dcebb879f675478a61a7406101a603f2b0de",
-    "data/publication/text-decisions.json": "f8d3040cb7a20c1f91ddf9e170edcb3e88318637559bba7f2ef914915a66eab9",
-    "data/editorial/universes.json": "2e1329fecde3b4398f293c97a32308290b8b12be7b3f9d50bfca8a18f7a6b6ec"
+    "data/publication/text-decisions.json": "a5d4752db5a405f5bbccbd16b7f0ffa35e979c16a4e952ee9df5fd09df5dc79d",
+    "data/editorial/universes.json": "013225a027cc6c01fac3c61d6d93fab5ddd2003e6d42e6bf81532370a4961699"
   },
   "phenomena": [
     {
@@ -3666,6 +3666,583 @@
       },
       "description": null,
       "universes": [
+        "everyday"
+      ]
+    },
+    {
+      "id": "nat-thunderstorm-cell-lifetime",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Vie d'une cellule orageuse isolée",
+        "en": "Life of a single thunderstorm cell"
+      },
+      "description": null,
+      "universes": [
+        "nature"
+      ]
+    },
+    {
+      "id": "nat-old-faithful-interval",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Intervalle entre deux éruptions du geyser Old Faithful",
+        "en": "Time between two eruptions of Old Faithful"
+      },
+      "description": null,
+      "universes": [
+        "nature"
+      ]
+    },
+    {
+      "id": "nat-old-faithful-eruption",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'une éruption d'Old Faithful",
+        "en": "Length of an Old Faithful eruption"
+      },
+      "description": null,
+      "universes": [
+        "nature"
+      ]
+    },
+    {
+      "id": "nat-longest-tropical-cyclone-freddy",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Cyclone tropical le plus long jamais observé (Freddy, 2023)",
+        "en": "Longest-lived tropical cyclone on record (Freddy, 2023)"
+      },
+      "description": null,
+      "universes": [
+        "nature"
+      ]
+    },
+    {
+      "id": "nat-methuselah-age",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Âge de Mathusalem, le plus vieil arbre vivant connu",
+        "en": "Age of Methuselah, the oldest known living tree"
+      },
+      "description": null,
+      "universes": [
+        "nature"
+      ]
+    },
+    {
+      "id": "nat-oldest-giant-sequoia",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Plus vieux séquoia géant connu",
+        "en": "Oldest known giant sequoia"
+      },
+      "description": null,
+      "universes": [
+        "nature"
+      ]
+    },
+    {
+      "id": "nat-hummingbird-gulf-crossing",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Traversée sans escale du golfe du Mexique par le colibri à gorge rubis",
+        "en": "Ruby-throated hummingbird's non-stop flight across the Gulf of Mexico"
+      },
+      "description": null,
+      "universes": [
+        "nature",
+        "biology"
+      ]
+    },
+    {
+      "id": "nat-hummingbird-heartbeat",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Intervalle entre deux battements de cœur du colibri à gorge rubis",
+        "en": "Time between two heartbeats of a ruby-throated hummingbird"
+      },
+      "description": null,
+      "universes": [
+        "nature",
+        "biology",
+        "physiology"
+      ]
+    },
+    {
+      "id": "nat-monarch-fall-migration",
+      "domain": "nature",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Migration des monarques jusqu'au Mexique",
+        "en": "Monarch butterflies' migration to Mexico"
+      },
+      "description": null,
+      "universes": [
+        "nature",
+        "biology"
+      ]
+    },
+    {
+      "id": "trans-iss-orbit",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Un tour de la Terre par la Station spatiale internationale",
+        "en": "One orbit of the International Space Station"
+      },
+      "description": null,
+      "universes": [
+        "transport",
+        "astronomy"
+      ]
+    },
+    {
+      "id": "trans-apollo11-earth-to-moon-orbit",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Apollo 11 : du décollage à la mise en orbite lunaire",
+        "en": "Apollo 11: from launch to entering lunar orbit"
+      },
+      "description": null,
+      "universes": [
+        "transport",
+        "astronomy"
+      ]
+    },
+    {
+      "id": "trans-concorde-paris-new-york",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps de vol prévu du Concorde Paris–New York",
+        "en": "Concorde Paris–New York scheduled flight time"
+      },
+      "description": null,
+      "universes": [
+        "transport"
+      ]
+    },
+    {
+      "id": "trans-tgv-paris-lyon",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "TGV le plus rapide de Paris à Lyon (horaire)",
+        "en": "Fastest scheduled TGV from Paris to Lyon"
+      },
+      "description": null,
+      "universes": [
+        "transport",
+        "everyday"
+      ]
+    },
+    {
+      "id": "trans-paris-metro-14-headway",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Intervalle entre deux métros de la ligne 14 à l'heure de pointe",
+        "en": "Time between two trains on Paris Métro line 14 at rush hour"
+      },
+      "description": null,
+      "universes": [
+        "transport",
+        "everyday"
+      ]
+    },
+    {
+      "id": "trans-737-800-turnaround",
+      "domain": "transport",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Escale d'un Boeing 737-800 au terminal (rotation)",
+        "en": "Turnaround of a Boeing 737-800 at the gate"
+      },
+      "description": null,
+      "universes": [
+        "transport",
+        "industry"
+      ]
+    },
+    {
+      "id": "phys-shortest-attosecond-pulse-2017",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Plus courte impulsion de lumière attoseconde isolée mesurée (record annoncé en 2017)",
+        "en": "Shortest isolated attosecond light pulse measured (record reported in 2017)"
+      },
+      "description": null,
+      "universes": [
+        "physics"
+      ]
+    },
+    {
+      "id": "phys-first-isolated-attosecond-pulse-2001",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Première impulsion de lumière attoseconde isolée (2001)",
+        "en": "First isolated attosecond light pulse (2001)"
+      },
+      "description": null,
+      "universes": [
+        "physics"
+      ]
+    },
+    {
+      "id": "phys-atomic-unit-of-time",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Unité atomique de temps (échelle de temps naturelle d’un électron dans un atome)",
+        "en": "Atomic unit of time (natural time scale of an electron in an atom)"
+      },
+      "description": null,
+      "universes": [
+        "physics"
+      ]
+    },
+    {
+      "id": "phys-photoemission-delay-neon",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Décalage entre deux électrons qui quittent un atome de néon (effet photoélectrique)",
+        "en": "Delay between two electrons leaving a neon atom (photoelectric effect)"
+      },
+      "description": null,
+      "universes": [
+        "physics"
+      ]
+    },
+    {
+      "id": "phys-red-light-oscillation-period",
+      "domain": "physics",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une oscillation de la lumière rouge",
+        "en": "One oscillation of red light"
+      },
+      "description": null,
+      "universes": [
+        "physics"
+      ]
+    },
+    {
+      "id": "chem-water-oh-stretch-vibration-period",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une vibration d’élongation des liaisons O–H d’une molécule d’eau",
+        "en": "One stretching vibration of the O–H bonds in a water molecule"
+      },
+      "description": null,
+      "universes": [
+        "chemistry"
+      ]
+    },
+    {
+      "id": "chem-broken-hydrogen-bond-water",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une liaison hydrogène rompue dans l’eau liquide se reforme en moins de",
+        "en": "A broken hydrogen bond in liquid water reforms within"
+      },
+      "description": null,
+      "universes": [
+        "chemistry"
+      ]
+    },
+    {
+      "id": "chem-icn-bond-breaking",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Rupture d’une liaison chimique observée en direct (molécule ICN)",
+        "en": "Breaking of a chemical bond, watched live (ICN molecule)"
+      },
+      "description": null,
+      "universes": [
+        "chemistry"
+      ]
+    },
+    {
+      "id": "chem-retinal-isomerisation-vision",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Première étape chimique de la vision (le rétinal change de forme)",
+        "en": "First chemical step of vision (retinal changes shape)"
+      },
+      "description": null,
+      "universes": [
+        "chemistry",
+        "physiology"
+      ]
+    },
+    {
+      "id": "chem-photosystem-ii-charge-separation",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Première séparation de charges de la photosynthèse (photosystème II)",
+        "en": "First charge separation in photosynthesis (photosystem II)"
+      },
+      "description": null,
+      "universes": [
+        "chemistry",
+        "biology",
+        "nature"
+      ]
+    },
+    {
+      "id": "chem-carbonic-anhydrase-turnover",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une réaction par l’une des enzymes les plus rapides (anhydrase carbonique)",
+        "en": "One reaction by one of the fastest enzymes (carbonic anhydrase)"
+      },
+      "description": null,
+      "universes": [
+        "chemistry",
+        "biology"
+      ]
+    },
+    {
+      "id": "chem-median-enzyme-turnover",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une réaction par une enzyme typique",
+        "en": "One reaction by a typical enzyme"
+      },
+      "description": null,
+      "universes": [
+        "chemistry",
+        "biology"
+      ]
+    },
+    {
+      "id": "chem-sucrose-hydrolysis-half-life",
+      "domain": "chemistry",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Sucre (saccharose) qui se décompose seul dans l’eau, sans enzyme (demi-vie)",
+        "en": "Sugar (sucrose) breaking down in water on its own, without enzyme (half-life)"
+      },
+      "description": null,
+      "universes": [
+        "chemistry"
+      ]
+    },
+    {
+      "id": "geo-time-since-k-pg-extinction",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps écoulé depuis l'extinction des dinosaures (fin du Crétacé)",
+        "en": "Time since the extinction of the dinosaurs (end of the Cretaceous)"
+      },
+      "description": null,
+      "universes": [
+        "history-geology"
+      ]
+    },
+    {
+      "id": "geo-cambrian-duration",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée de la période cambrienne",
+        "en": "Length of the Cambrian period"
+      },
+      "description": null,
+      "universes": [
+        "history-geology"
+      ]
+    },
+    {
+      "id": "geo-mesozoic-duration",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée de l'ère mésozoïque (l'âge des dinosaures)",
+        "en": "Length of the Mesozoic era (age of dinosaurs)"
+      },
+      "description": null,
+      "universes": [
+        "history-geology"
+      ]
+    },
+    {
+      "id": "geo-time-since-last-glacial-maximum",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps écoulé depuis la fin du dernier maximum glaciaire",
+        "en": "Time since the end of the last ice age's peak (Last Glacial Maximum)"
+      },
+      "description": null,
+      "universes": [
+        "history-geology"
+      ]
+    },
+    {
+      "id": "geo-oldest-zircon",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Âge du plus vieux fragment de Terre connu (un cristal de zircon des Jack Hills)",
+        "en": "Age of the oldest known piece of the Earth (a Jack Hills zircon crystal)"
+      },
+      "description": null,
+      "universes": [
+        "history-geology"
+      ]
+    },
+    {
+      "id": "geo-age-homo-sapiens",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Âge des plus anciens fossiles connus d'Homo sapiens",
+        "en": "Age of the oldest known Homo sapiens fossils"
+      },
+      "description": null,
+      "universes": [
+        "history-geology",
+        "biology"
+      ]
+    },
+    {
+      "id": "geo-age-great-pyramid",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Âge de la grande pyramide de Gizeh",
+        "en": "Age of the Great Pyramid of Giza"
+      },
+      "description": null,
+      "universes": [
+        "history-geology"
+      ]
+    },
+    {
+      "id": "geo-time-since-cuneiform",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps écoulé depuis la première écriture (cunéiforme, Mésopotamie)",
+        "en": "Time since the first writing (cuneiform, Mesopotamia)"
+      },
+      "description": null,
+      "universes": [
+        "history-geology"
+      ]
+    },
+    {
+      "id": "geo-time-since-gutenberg-bible",
+      "domain": "geology",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Temps écoulé depuis la Bible de Gutenberg (début de l'imprimerie en Europe)",
+        "en": "Time since the Gutenberg Bible (start of printing in Europe)"
+      },
+      "description": null,
+      "universes": [
+        "history-geology"
+      ]
+    },
+    {
+      "id": "cog-iconic-memory-decay",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Vitesse d'effacement de l'image visuelle en mémoire (mémoire iconique)",
+        "en": "How fast a visual afterimage in memory fades (iconic memory)"
+      },
+      "description": null,
+      "universes": [
+        "cognition"
+      ]
+    },
+    {
+      "id": "cog-short-term-memory-decay",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Durée d'un souvenir à court terme sans répétition mentale",
+        "en": "How long a short-term memory lasts without rehearsal"
+      },
+      "description": null,
+      "universes": [
+        "cognition"
+      ]
+    },
+    {
+      "id": "cog-attentional-blink",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Le clignement attentionnel : angle mort après avoir repéré quelque chose",
+        "en": "The attentional blink: blind spot after noticing something"
+      },
+      "description": null,
+      "universes": [
+        "cognition"
+      ]
+    },
+    {
+      "id": "cog-reading-fixation",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Une fixation de l'œil pendant la lecture",
+        "en": "One eye fixation while reading"
+      },
+      "description": null,
+      "universes": [
+        "cognition",
+        "everyday"
+      ]
+    },
+    {
+      "id": "cog-saccade-duration",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Un saut rapide de l'œil (saccade)",
+        "en": "One quick eye jump (saccade)"
+      },
+      "description": null,
+      "universes": [
+        "cognition",
+        "physiology"
+      ]
+    },
+    {
+      "id": "cog-conversation-turn-gap",
+      "domain": "cognition",
+      "quantityKind": "duration",
+      "label": {
+        "fr": "Pause avant de répondre dans une conversation",
+        "en": "Pause before answering in a conversation"
+      },
+      "description": null,
+      "universes": [
+        "cognition",
         "everyday"
       ]
     }
@@ -15036,6 +15613,1711 @@
       "excerpt": {
         "status": "published"
       }
+    },
+    {
+      "id": "nat-thunderstorm-cell-lifetime-m1",
+      "phenomenonId": "nat-thunderstorm-cell-lifetime",
+      "configuration": null,
+      "value": 45,
+      "unit": "min",
+      "low": 30,
+      "high": 60,
+      "conditions": {
+        "fr": "Une seule cellule orageuse, du stade de développement à la dissipation. Les orages multicellulaires et les supercellules durent plus longtemps. La valeur est le milieu de la plage de 30 à 60 min donnée par la source, pas une valeur typique publiée.",
+        "en": "One thunderstorm cell, from developing to dissipating stage. Multicell clusters and supercells last longer. The value is the midpoint of the 30-60 min range given by the source, not a stated typical value."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nws-spotter-tstorm-lifecycle"
+      ],
+      "locator": "Thunderstorm Life Cycle, first paragraph",
+      "quote": "The life time a single thunderstorm cell ranges from 30 to 60 minutes.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-thunderstorm-cell-lifetime",
+      "notes": "NWS spotter training material; only the range is sourced. Midpoint flagged as such. | Maintainer curation 2026-11-27: value = middle of the published range; shown as illustrative with that range.",
+      "quantityKind": "duration",
+      "valueSI": 2700,
+      "lowSI": 1800,
+      "highSI": 3600,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "nat-old-faithful-interval-m1",
+      "phenomenonId": "nat-old-faithful-interval",
+      "configuration": null,
+      "value": 102,
+      "unit": "min",
+      "low": 54,
+      "high": 118,
+      "conditions": {
+        "fr": "Geyser Old Faithful, Yellowstone. Intervalle médian en janvier 2025 (prévision à ± 10 min près) ; les intervalles observés vont de 54 à 118 min. L'intervalle évolue au fil des années.",
+        "en": "Old Faithful Geyser, Yellowstone. Median interval as of January 2025 (± 10 min prediction window); observed intervals range from 54 to 118 min. The interval drifts over the years."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-yell-old-faithful"
+      ],
+      "locator": "Old Faithful Area Frequently Asked Questions, 'How often does Old Faithful Geyser erupt?'",
+      "quote": "as of January 2025, it is 102 minutes ± 10 minutes, with intervals ranging from 54 to 118 minutes.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-old-faithful-interval",
+      "notes": "Official NPS figure, dated by the source. Value is a median from park monitoring.",
+      "quantityKind": "duration",
+      "valueSI": 6120,
+      "lowSI": 3240,
+      "highSI": 7080,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "nat-old-faithful-eruption-m1",
+      "phenomenonId": "nat-old-faithful-eruption",
+      "configuration": null,
+      "value": 3.25,
+      "unit": "min",
+      "low": 1.5,
+      "high": 5,
+      "conditions": {
+        "fr": "Geyser Old Faithful, Yellowstone ; éruptions normales. La valeur est le milieu de la plage de 1,5 à 5 min donnée par la source, pas une valeur typique publiée.",
+        "en": "Old Faithful Geyser, Yellowstone; normal eruptions. The value is the midpoint of the 1.5-5 min range given by the source, not a stated typical value."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-yell-old-faithful"
+      ],
+      "locator": "Old Faithful Area Frequently Asked Questions, 'How long does it last?'",
+      "quote": "Eruptions normally last between 1½ to 5 minutes",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-old-faithful-eruption",
+      "notes": "Range is sourced; midpoint flagged. Could be shown as a range only. | Maintainer curation 2026-11-27: value = middle of the published range; shown as illustrative with that range.",
+      "quantityKind": "duration",
+      "valueSI": 195,
+      "lowSI": 90,
+      "highSI": 300,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "nat-longest-tropical-cyclone-freddy-m1",
+      "phenomenonId": "nat-longest-tropical-cyclone-freddy",
+      "configuration": null,
+      "value": 36,
+      "unit": "d",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Cyclone tropical Freddy, océan Indien Sud, février-mars 2023 : record mondial de durée dans le tableau des records de la NOAA (AOML). Un ouragan ordinaire dure bien moins (quelques jours à environ une semaine).",
+        "en": "Tropical Cyclone Freddy, South Indian Ocean, February-March 2023: world record for the longest-running tropical cyclone in NOAA AOML's table of records. A typical hurricane lasts far less (days to about a week)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-noaa-aoml-hurricane-faq"
+      ],
+      "locator": "Hurricane FAQ, table of tropical cyclone records, row 'Longest running'",
+      "quote": "Longest running 2023 Tropical Cyclone Freddy South Indian Ocean 36 days",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-longest-tropical-cyclone-freddy",
+      "notes": "Record value, not typical. Older pages (e.g. hurricanescience.org) still give Hurricane/Typhoon John, 1994, 31 days: superseded. The 'days to about a week' remark in conditions is context only, not a sourced value.",
+      "quantityKind": "duration",
+      "valueSI": 3110400,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "nat-methuselah-age-m1",
+      "phenomenonId": "nat-methuselah-age",
+      "configuration": null,
+      "value": 4765,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Pin Bristlecone du Grand Bassin « Mathusalem », White Mountains, Californie ; âge obtenu par comptage des cernes d'une carotte prélevée en 1957, tel qu'indiqué par le NPS (la page ne précise pas l'année de référence).",
+        "en": "Great Basin bristlecone pine 'Methuselah', White Mountains, California; age from tree-ring count of a core taken in 1957, as stated by NPS (the page does not say for which year the age is given)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-brca-bristlecone"
+      ],
+      "locator": "Great Basin Bristlecone Pine page, paragraph on the oldest living tree",
+      "quote": "The oldest LIVING tree is called \"Methuselah\" and is 4,765 years old.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-methuselah-age",
+      "notes": "Uncertain reference year: the 1957 core date is not stated on this page (it comes from other sources). Other sources give 4,789 (USDA, page returned 403, not opened) to about 4,850 years (age updated to the current year). Order of magnitude solid; last digits not.",
+      "quantityKind": "duration",
+      "valueSI": 150371964000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "nat-oldest-giant-sequoia-m1",
+      "phenomenonId": "nat-oldest-giant-sequoia",
+      "configuration": null,
+      "value": 3266,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Séquoia géant du bosquet de Converse Basin (Giant Sequoia National Monument), âge obtenu par comptage des cernes ; plus vieux spécimen connu de l'espèce.",
+        "en": "Giant sequoia in the Converse Basin Grove (Giant Sequoia National Monument), age from ring count; oldest known specimen of the species."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-yose-sequoia-research"
+      ],
+      "locator": "Sequoia Research, 'How long do tree species live?'",
+      "quote": "the oldest known specimen to have been 3,266 years old in the Converse Basin Grove of Giant Sequoia National Monument",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-oldest-giant-sequoia",
+      "notes": "NPS figure; the specimen was a felled tree (past tense 'to have been'). Another NPS page (Sequoia & Kings Canyon) says 'up to 3,400 years' without detail.",
+      "quantityKind": "duration",
+      "valueSI": 103067121600,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "nat-hummingbird-gulf-crossing-m1",
+      "phenomenonId": "nat-hummingbird-gulf-crossing",
+      "configuration": null,
+      "value": 19,
+      "unit": "h",
+      "low": 18,
+      "high": 20,
+      "conditions": {
+        "fr": "Vol migratoire d'environ 800 km (500 miles) au-dessus du golfe du Mexique. La valeur est le milieu de la plage de 18 à 20 h donnée par la source.",
+        "en": "Migratory flight of about 500 miles (800 km) over the Gulf of Mexico. The value is the midpoint of the 18-20 h range given by the source."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-netn-hummingbird"
+      ],
+      "locator": "NETN Species Spotlight, section 'What is it?'",
+      "quote": "a 500-mile, 18-20 hour migratory flight across the Gulf of Mexico",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-hummingbird-gulf-crossing",
+      "notes": "NPS popular-science article without a cited study; plausible but secondary in nature. Midpoint flagged. | Maintainer curation 2026-11-27: value = middle of the published range; shown as illustrative with that range.",
+      "quantityKind": "duration",
+      "valueSI": 68400,
+      "lowSI": 64800,
+      "highSI": 72000,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "nat-hummingbird-heartbeat-m1",
+      "phenomenonId": "nat-hummingbird-heartbeat",
+      "configuration": null,
+      "value": 0.05,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Fréquence cardiaque de 1 200 battements par minute indiquée par la source (niveau d'activité non précisé) ; intervalle = 60 s / 1 200.",
+        "en": "Heart rate of 1,200 beats per minute stated by the source (activity level not specified); interval = 60 s / 1,200."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nps-netn-hummingbird"
+      ],
+      "locator": "NETN Species Spotlight, paragraph on flight adaptations",
+      "quote": "a large heart (beating 1200 times per minute)",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "60 s / 1200 beats per minute = 0.05 s",
+        "inputs": [
+          "src:src-nps-netn-hummingbird"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-hummingbird-heartbeat",
+      "notes": "Single popular-science figure without activity state; other non-federal sources give about 600 bpm at rest up to more than 1,000 bpm in flight. Treat as order of magnitude (tens of milliseconds).",
+      "quantityKind": "duration",
+      "valueSI": 0.05,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "nat-monarch-fall-migration-m1",
+      "phenomenonId": "nat-monarch-fall-migration",
+      "configuration": null,
+      "value": 60,
+      "unit": "d",
+      "low": null,
+      "high": 60,
+      "conditions": {
+        "fr": "Monarques de l'est de l'Amérique du Nord, migration d'automne vers les forêts d'hivernage du Mexique, à raison de 80 à 160 km par jour. La source donne une borne haute (« jusqu'à deux mois »), convertie ici en 2 × 30 jours.",
+        "en": "Eastern North American monarchs, fall migration to the overwintering forests in Mexico, at 50-100 miles (80-160 km) a day. The source gives an upper bound ('up to two months'), converted here as 2 × 30 days."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-usfs-monarch-migration"
+      ],
+      "locator": "Monarch Butterfly Migration and Overwintering, paragraph after the Biosphere Reserve",
+      "quote": "Monarchs can travel between 50-100 miles a day; it can take up to two months to complete their journey.",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#nat-monarch-fall-migration",
+      "notes": "Upper bound, not a typical duration; the 30-day month conversion is ours. Other organisations (not opened) describe a mid-August to mid-November season, which is the migration window, not one butterfly's trip.",
+      "quantityKind": "duration",
+      "valueSI": 5184000,
+      "lowSI": null,
+      "highSI": 5184000,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "trans-iss-orbit-m1",
+      "phenomenonId": "trans-iss-orbit",
+      "configuration": null,
+      "value": 90,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "ISS en orbite basse, à environ 8 km par seconde ; la NASA indique « environ toutes les 90 minutes », soit 16 orbites en 24 heures.",
+        "en": "ISS in low Earth orbit at about five miles (8 km) per second; NASA states 'about every 90 minutes', i.e. 16 orbits in 24 hours."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nasa-iss-facts"
+      ],
+      "locator": "Space Station Facts and Figures, introduction",
+      "quote": "orbiting Earth about every 90 minutes",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-iss-orbit",
+      "notes": "Rounded official figure ('about'); actual period varies slightly with altitude (about 92-93 min at current altitudes, not sourced here).",
+      "quantityKind": "duration",
+      "valueSI": 5400,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "trans-apollo11-earth-to-moon-orbit-m1",
+      "phenomenonId": "trans-apollo11-earth-to-moon-orbit",
+      "configuration": null,
+      "value": 75.83,
+      "unit": "h",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Apollo 11, juillet 1969 : temps écoulé entre le décollage (16 juillet) et la première manœuvre d'insertion en orbite lunaire (19 juillet), environ 75 h 50 min (75,83 h) ; inclut le temps passé en orbite d'attente terrestre.",
+        "en": "Apollo 11, July 1969: time from launch (16 July) to the first lunar orbit insertion burn (19 July), about 75 h 50 min (75.83 h); includes the time spent in Earth parking orbit."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nasa-apollo11-overview"
+      ],
+      "locator": "Apollo 11 Mission Overview, Mission Highlights",
+      "quote": "At about 75 hours, 50 minutes into the flight, a retrograde firing of the SPS for 357.5 seconds",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-apollo11-earth-to-moon-orbit",
+      "notes": "Mission elapsed time from NASA; conversion 75 h 50 min = 75.83 h is ours.",
+      "quantityKind": "duration",
+      "valueSI": 272988,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "trans-concorde-paris-new-york-m1",
+      "phenomenonId": "trans-concorde-paris-new-york",
+      "configuration": null,
+      "value": 3.92,
+      "unit": "h",
+      "low": 3.75,
+      "high": 3.92,
+      "conditions": {
+        "fr": "Concorde d'Air France, horaire annoncé pour la reprise des vols en octobre 2001 : Paris–New York 3 h 55 (au lieu de 3 h 45, allongé pour tenir compte des restrictions de trafic aérien) ; New York–Paris 3 h 45. Valeur = 3 h 55.",
+        "en": "Air France Concorde, schedule announced for the October 2001 relaunch: Paris–New York 3 h 55 min (previously 3 h 45 min, lengthened for air traffic restrictions); New York–Paris 3 h 45 min. Value = 3 h 55 min."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-airfrance-concorde-kit-2001"
+      ],
+      "locator": "Section I 'On board the Air France Concorde', opening paragraph",
+      "quote": null,
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-concorde-paris-new-york",
+      "notes": "Primary operator text, but read on a secondary host (Air France and British Airways heritage pages could not be opened). The often-quoted '3 h 30' is airborne time, not this scheduled time. Record (2 h 52 min 59 s, BA, 1996) not verified here.",
+      "quantityKind": "duration",
+      "valueSI": 14112,
+      "lowSI": 13500,
+      "highSI": 14112,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "trans-tgv-paris-lyon-m1",
+      "phenomenonId": "trans-tgv-paris-lyon",
+      "configuration": null,
+      "value": 116,
+      "unit": "min",
+      "low": 116,
+      "high": 130,
+      "conditions": {
+        "fr": "TGV INOUI Paris Gare de Lyon → Lyon Part-Dieu listés dans les données ouvertes SNCF pour le 4 décembre 2026 (20 trains) : le plus rapide 1 h 56, le plus lent 2 h 10. Les OUIGO et les autres gares de Lyon ne figurent pas dans ce jeu de données.",
+        "en": "TGV INOUI trains Paris Gare de Lyon → Lyon Part-Dieu listed in SNCF open data for 4 December 2026 (20 trains): fastest 1 h 56 min, slowest 2 h 10 min. OUIGO trains and other Lyon stations are not in this dataset."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-sncf-opendata-tgvmax"
+      ],
+      "locator": "Explore API v2.1, dataset tgvmax, records date=2026-12-04, FRPLY→FRLPD (e.g. train 6643)",
+      "quote": "\"train_no\": \"6643\", ... \"destination_iata\": \"FRLPD\", ... \"heure_depart\": \"07:26\", \"heure_arrivee\": \"09:22\"",
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-tgv-paris-lyon",
+      "notes": "Official SNCF timetable data, but one day only and only trains listed for TGVmax booking (may omit some trains). The minimum 1 h 56 recurs on 11 of the 20 trains. Snapshot will change with timetables. | Maintainer curation 2026-11-27: timetable durations read in the open-data records (fastest 116 min, slowest 130 min); the derivation is a subtraction of scheduled times: duration = heure_arrivee - heure_depart for each record; value = min (116 min), low = min, high = max (130 min)",
+      "quantityKind": "duration",
+      "valueSI": 6960,
+      "lowSI": 6960,
+      "highSI": 7800,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "trans-paris-metro-14-headway-m1",
+      "phenomenonId": "trans-paris-metro-14-headway",
+      "configuration": null,
+      "value": 85,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Ligne 14 du métro parisien (automatique, sans conducteur), heures de pointe, depuis avril 2025.",
+        "en": "Paris Métro line 14 (automatic, driverless), peak hours, since April 2025."
+      },
+      "protocol": null,
+      "provenanceType": "conventional",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ratp-cp-l14-2026-01-29"
+      ],
+      "locator": "Press release of 29 January 2026, page 1, section 'Fréquentation record pour la ligne 14'",
+      "quote": null,
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-paris-metro-14-headway",
+      "notes": "Operator's planned headway, not a measured average.",
+      "quantityKind": "duration",
+      "valueSI": 85,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "trans-737-800-turnaround-m1",
+      "phenomenonId": "trans-737-800-turnaround",
+      "configuration": null,
+      "value": 37.5,
+      "unit": "min",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Diagramme de planification du constructeur : 737-800 avec 162 passagers en 2 classes, une porte, échange complet des passagers et du fret, service complet avec avitaillement ; conditions idéales pour un seul avion. Les compagnies planifient souvent autrement.",
+        "en": "Manufacturer planning chart: 737-800 with 162 passengers in 2 classes, one door, 100 % passenger and cargo exchange, full servicing including refuelling; ideal conditions for a single airplane. Airlines often plan differently."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-boeing-737ng-acap-revc"
+      ],
+      "locator": "Section 5.2.4 'Terminal Operations – Turnaround Station: Model 737-800, -800W', page 5-11, chart title",
+      "quote": null,
+      "era": null,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-D_nature_transport.json#trans-737-800-turnaround",
+      "notes": "Read from the chart graphic (not extractable text) at 300 dpi; manufacturer's idealised schedule, not an airline average. Section 5.0 states the data […].",
+      "quantityKind": "duration",
+      "valueSI": 2250,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
+    },
+    {
+      "id": "phys-shortest-attosecond-pulse-2017-m1",
+      "phenomenonId": "phys-shortest-attosecond-pulse-2017",
+      "configuration": null,
+      "value": 43,
+      "unit": "as",
+      "low": 42,
+      "high": 44,
+      "conditions": {
+        "fr": "Impulsion de rayons X mous produite par un laser infrarouge moyen de deux cycles, mesurée par « streaking » attoseconde (ETH Zurich). La plage correspond à l’incertitude annoncée de ±1 as.",
+        "en": "Soft-X-ray pulse produced from a two-cycle mid-infrared laser, measured by attosecond streaking (ETH Zurich). Range is the stated ±1 as uncertainty."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-gaumnitz-2017-oe"
+      ],
+      "locator": "Abstract",
+      "quote": null,
+      "era": 2017,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#phys-shortest-attosecond-pulse-2017",
+      "notes": "Primary peer-reviewed measurement. 'Record' is as claimed in 2017; I did not verify whether a shorter isolated pulse has been reported since. Value read in the abstract (publisher page blocked by CAPTCHA).",
+      "quantityKind": "duration",
+      "valueSI": 4.300000000000001e-17,
+      "lowSI": 4.2000000000000005e-17,
+      "highSI": 4.4000000000000006e-17,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "phys-first-isolated-attosecond-pulse-2001-m1",
+      "phenomenonId": "phys-first-isolated-attosecond-pulse-2001",
+      "configuration": null,
+      "value": 650,
+      "unit": "as",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Impulsion unique dans l’ultraviolet extrême isolée par l’équipe de Ferenc Krausz à Vienne en 2001 ; travaux récompensés par le prix Nobel de physique 2023.",
+        "en": "Single extreme-ultraviolet pulse isolated by Ferenc Krausz's group in Vienna in 2001; work recognised by the 2023 Nobel Prize in Physics."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nobel-phys-2023-press"
+      ],
+      "locator": "Press release, paragraph on Agostini and Krausz",
+      "quote": null,
+      "era": 2001,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#phys-first-isolated-attosecond-pulse-2001",
+      "notes": "Authoritative secondary (Nobel committee) summary of Hentschel et al., Nature 414, 509 (2001); same value in the scientific background (p. 5).",
+      "quantityKind": "duration",
+      "valueSI": 6.500000000000001e-16,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "phys-atomic-unit-of-time-m1",
+      "phenomenonId": "phys-atomic-unit-of-time",
+      "configuration": null,
+      "value": 24.188843265864,
+      "unit": "as",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Valeur recommandée CODATA 2022, 2,418 884 326 5864(26) × 10^-17 s ; échelle de temps intrinsèque de la dynamique des électrons dans les atomes.",
+        "en": "CODATA 2022 recommended value, 2.418 884 326 5864(26) × 10^-17 s; the intrinsic time scale of electron dynamics in atoms."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nist-codata-2022-aut"
+      ],
+      "locator": "CODATA value page 'atomic unit of time', Numerical value",
+      "quote": "Numerical value 2.418 884 326 5864 x 10 -17 s",
+      "era": 2022,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#phys-atomic-unit-of-time",
+      "notes": "Physical constant, very high confidence. The gloss 'natural time scale of electrons' follows the Nobel 2023 scientific background ('the intrinsic atomic unit of time, about 24 attoseconds'). The NIST page gives the value only, not this interpretation.",
+      "quantityKind": "duration",
+      "valueSI": 2.4188843265864005e-17,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "phys-photoemission-delay-neon-m1",
+      "phenomenonId": "phys-photoemission-delay-neon",
+      "configuration": null,
+      "value": 21,
+      "unit": "as",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Néon ionisé par des photons de 100 eV : l’électron 2p part 21 as après l’électron 2s (Schultze et al., Science 2010), mesure par « streaking » attoseconde.",
+        "en": "Neon ionised by 100 eV photons: the 2p electron leaves 21 as later than the 2s electron (Schultze et al., Science 2010), measured with attosecond streaking."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nobel-phys-2023-scientific"
+      ],
+      "locator": "Section 'Delayed photoemission', p. 5–6; ref. 25",
+      "quote": null,
+      "era": 2010,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#phys-photoemission-delay-neon",
+      "notes": "Single landmark experiment; the same source notes theory gave values about a factor of two shorter, so the absolute value was debated. Good as an order of magnitude.",
+      "quantityKind": "duration",
+      "valueSI": 2.1000000000000002e-17,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "phys-red-light-oscillation-period-m1",
+      "phenomenonId": "phys-red-light-oscillation-period",
+      "configuration": null,
+      "value": 2.325581395348837,
+      "unit": "fs",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Lumière rouge de longueur d’onde d’environ 700 nm, qui oscille environ 430 000 milliards (4,3 × 10^14) de fois par seconde ; période = 1 / fréquence.",
+        "en": "Red light of wavelength about 700 nm, which oscillates about 430 thousand billion (4.3 × 10^14) times per second; period = 1 / frequency."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nobel-phys-2023-popular"
+      ],
+      "locator": "Heading 'Shorter pulses with the help of high overtones', first paragraph",
+      "quote": null,
+      "era": 2023,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "T = 1 / f = 1 / (4.3e14 Hz) = 2.33e-15 s",
+        "inputs": [
+          "src:src-nobel-phys-2023-popular"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#phys-red-light-oscillation-period",
+      "notes": "Calculated from an approximate frequency ('about'); 2 significant figures meaningful (≈2.3 fs). The 700 nm wavelength is stated in the same sentence. | Decision: Calculated value stored unrounded so that it is reproducible from its formula (1 / 4.3e14 Hz); the source figure is approximate (\"about\"), the display rounds it (R1 lot 2).",
+      "quantityKind": "duration",
+      "valueSI": 2.325581395348837e-15,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "chem-water-oh-stretch-vibration-period-m1",
+      "phenomenonId": "chem-water-oh-stretch-vibration-period",
+      "configuration": null,
+      "value": 9.121249526884112,
+      "unit": "fs",
+      "low": 8.880833205488605,
+      "high": 9.121249526884112,
+      "conditions": {
+        "fr": "Molécule d’eau isolée (phase gazeuse). Valeur : élongation symétrique à 3657 cm^-1 ; borne basse : élongation antisymétrique à 3756 cm^-1. Période = 1 / (c × nombre d’onde).",
+        "en": "Isolated water molecule (gas phase). Value: symmetric stretch at 3657 cm^-1; low: antisymmetric stretch at 3756 cm^-1. Period = 1 / (c × wavenumber)."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nist-webbook-water-vib"
+      ],
+      "locator": "Table 'Vibrational and/or electronic energy levels', modes 1 (Sym str) and 3 (Anti str)",
+      "quote": null,
+      "era": 1972,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "T = 1 / (c × ν̃), c = 2.99792458e10 cm/s; ν̃ = 3657 cm^-1 → 9.12e-15 s; ν̃ = 3756 cm^-1 → 8.88e-15 s",
+        "inputs": [
+          "src:src-nist-webbook-water-vib"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-water-oh-stretch-vibration-period",
+      "notes": "Wavenumbers are accurate (0–1 cm^-1); the calculation is exact. In liquid water hydrogen bonding lowers the O–H stretch (broad band), making the period slightly longer; not covered by this source. Consistent with the Nobel 1999 statement that a molecular vibration typically takes 10–100 fs. Quote is the table row for mode 1; mode 3 row reads […]. | Decision: Calculated values stored unrounded (1 / (c × ν̃), ν̃ = 3657 and 3756 cm^-1); the display rounds them (R1 lot 2).",
+      "quantityKind": "duration",
+      "valueSI": 9.121249526884112e-15,
+      "lowSI": 8.880833205488606e-15,
+      "highSI": 9.121249526884112e-15,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote",
+          "notes"
+        ]
+      }
+    },
+    {
+      "id": "chem-broken-hydrogen-bond-water-m1",
+      "phenomenonId": "chem-broken-hydrogen-bond-water",
+      "configuration": null,
+      "value": 200,
+      "unit": "fs",
+      "low": null,
+      "high": 200,
+      "conditions": {
+        "fr": "Eau liquide à température ambiante (HOD dans D2O pour l’expérience infrarouge 2D ; simulations de dynamique moléculaire pour le chiffre de 200 fs). Borne supérieure : presque toutes les molécules retrouvent un partenaire dans ce délai.",
+        "en": "Room-temperature liquid water (HOD in D2O for the 2D infrared experiment; molecular-dynamics simulations for the 200 fs figure). Upper bound: virtually all molecules find a new partner within this time."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-eaves-2005-pnas"
+      ],
+      "locator": "Abstract; also Results ('Broken hydrogen bonds that persist for 1 ps or longer are extremely rare')",
+      "quote": null,
+      "era": 2005,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-broken-hydrogen-bond-water",
+      "notes": "Upper bound, not a mean lifetime; the figure comes from simulation, supported qualitatively by 2D-IR experiments. Moderate confidence. | Maintainer curation 2026-11-27: \"within 200 fs\" is an upper bound: encoded as high.",
+      "quantityKind": "duration",
+      "valueSI": 2e-13,
+      "lowSI": null,
+      "highSI": 2e-13,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "chem-icn-bond-breaking-m1",
+      "phenomenonId": "chem-icn-bond-breaking",
+      "configuration": null,
+      "value": 200,
+      "unit": "fs",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Photodissociation du cyanure d’iode, ICN → I + CN, observée par l’équipe d’Ahmed Zewail avec des impulsions laser femtoseconde (prix Nobel de chimie 1999).",
+        "en": "Photodissociation of iodine cyanide, ICN → I + CN, observed by Ahmed Zewail's team with femtosecond laser pulses (Nobel Prize in Chemistry 1999)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nobel-chem-1999-press"
+      ],
+      "locator": "Press release, subsection 'The first experiments'",
+      "quote": null,
+      "era": 1999,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-icn-bond-breaking",
+      "notes": "Authoritative summary of Zewail's first experiments. The press release does not date the ICN experiment itself; era = date of the source (1999). The primary paper should be added if an experiment date is wanted.",
+      "quantityKind": "duration",
+      "valueSI": 2e-13,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "chem-retinal-isomerisation-vision-m1",
+      "phenomenonId": "chem-retinal-isomerisation-vision",
+      "configuration": null,
+      "value": 200,
+      "unit": "fs",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Isomérisation cis-trans du rétinal dans la rhodopsine, le pigment des bâtonnets de l’œil, mesurée par spectroscopie femtoseconde.",
+        "en": "Cis-trans isomerisation of retinal in rhodopsin, the pigment of the rods of the eye, measured by femtosecond spectroscopy."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-nobel-chem-1999-press"
+      ],
+      "locator": "Press release, subsection 'Research explosion'",
+      "quote": null,
+      "era": 1999,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-retinal-isomerisation-vision",
+      "notes": "Nobel committee summary of other groups' work; primary paper not cited on the page. Era = date of the source. Order of magnitude reliable.",
+      "quantityKind": "duration",
+      "valueSI": 2e-13,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "chem-photosystem-ii-charge-separation-m1",
+      "phenomenonId": "chem-photosystem-ii-charge-separation",
+      "configuration": null,
+      "value": 1.5,
+      "unit": "ps",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Centre réactionnel isolé du photosystème II (D1/D2-cyt b559) à température ambiante, spectroscopie électronique bidimensionnelle et modélisation.",
+        "en": "Isolated photosystem II reaction centre (D1/D2-cyt b559) at ambient temperature, two-dimensional electronic spectroscopy with modelling."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-duan-2017-scirep"
+      ],
+      "locator": "Abstract; Results (Fig. 3a: components 132 fs, 1.5 ps, 13.9 ps)",
+      "quote": "occurs on a time scale of 1.5 ps under ambient conditions.",
+      "era": 2017,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-photosystem-ii-charge-separation",
+      "notes": "Single study; the same paper cites other analyses with components of 400 fs and 1.8 ps, and a faster <200 fs component. Contested assignment; treat as order of magnitude (about 1 ps).",
+      "quantityKind": "duration",
+      "valueSI": 1.5e-12,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "chem-carbonic-anhydrase-turnover-m1",
+      "phenomenonId": "chem-carbonic-anhydrase-turnover",
+      "configuration": null,
+      "value": 1,
+      "unit": "us",
+      "low": 0.1,
+      "high": 1,
+      "conditions": {
+        "fr": "Les enzymes championnes comme l’anhydrase carbonique (CO2 + H2O ⇌ HCO3- + H+) réalisent jusqu’à 10^6 à 10^7 réactions par seconde ; temps par réaction = 1 / cadence. Valeur pour 10^6/s ; borne basse pour 10^7/s.",
+        "en": "Record-holding enzymes such as carbonic anhydrase (CO2 + H2O ⇌ HCO3- + H+) carry out up to 10^6–10^7 reactions per second; time per reaction = 1 / rate. Value uses 10^6/s; low uses 10^7/s."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-bionumbers-enzyme-rates"
+      ],
+      "locator": "Section text after Figure 2 caption ('Rates vary immensely. Record holders are carbonic anhydrase…')",
+      "quote": null,
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 1 / kcat; 1 / 1e6 s^-1 = 1e-6 s; 1 / 1e7 s^-1 = 1e-7 s",
+        "inputs": [
+          "src:src-bionumbers-enzyme-rates"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-carbonic-anhydrase-turnover",
+      "notes": "'106-107' on the page is 10^6–10^7 with superscripts lost. The source groups carbonic anhydrase with superoxide dismutase; the value is a ceiling under saturating substrate, not a cellular rate. Value chosen at the 10^6 end, not a midpoint.",
+      "quantityKind": "duration",
+      "valueSI": 0.000001,
+      "lowSI": 1.0000000000000001e-7,
+      "highSI": 0.000001,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "chem-median-enzyme-turnover-m1",
+      "phenomenonId": "chem-median-enzyme-turnover",
+      "configuration": null,
+      "value": 0.1,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Nombre de cycles catalytiques médian (kcat) des enzymes du métabolisme, environ 10 par seconde (compilation de la littérature, base BRENDA) ; temps par réaction = 1 / kcat.",
+        "en": "Median turnover number (kcat) of metabolic enzymes, about 10 per second (literature compilation, BRENDA-based); time per reaction = 1 / kcat."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-bionumbers-enzyme-rates"
+      ],
+      "locator": "Paragraph on Figure 2A (distribution of kcat values, BNID 111411)",
+      "quote": null,
+      "era": 2015,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "t = 1 / kcat = 1 / (10 s^-1) = 0.1 s",
+        "inputs": [
+          "src:src-bionumbers-enzyme-rates"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-median-enzyme-turnover",
+      "notes": "Median of a wide distribution (orders of magnitude spread); 'about'. Underlying data: Bar-Even et al., Biochemistry 2011.",
+      "quantityKind": "duration",
+      "valueSI": 0.1,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "chem-sucrose-hydrolysis-half-life-m1",
+      "phenomenonId": "chem-sucrose-hydrolysis-half-life",
+      "configuration": null,
+      "value": 440,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Hydrolyse spontanée (non catalysée) du saccharose dans l’eau neutre à 25 °C ; extrapolée à partir de vitesses mesurées à haute température.",
+        "en": "Spontaneous (uncatalysed) hydrolysis of sucrose in neutral water at 25 °C; extrapolated from rates measured at high temperature."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-wolfenden-2008-jacs"
+      ],
+      "locator": "Abstract and main text, Table 1",
+      "quote": null,
+      "era": 2008,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-E_chemistry_ultrafast.json#chem-sucrose-hydrolysis-half-life",
+      "notes": "Single primary study, Arrhenius extrapolation from elevated temperatures. Same paper: invertase speeds this up enormously; good pedagogical contrast with the enzyme items.",
+      "quantityKind": "duration",
+      "valueSI": 13885344000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "geo-time-since-k-pg-extinction-m1",
+      "phenomenonId": "geo-time-since-k-pg-extinction",
+      "configuration": null,
+      "value": 66000000,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Âge de la limite Crétacé–Paléogène (base de l'étage danien), quand les dinosaures non aviens ont disparu. Âge numérique de la charte de l'ICS, en millions d'années avant le présent.",
+        "en": "Age of the Cretaceous–Paleogene boundary (base of the Danian stage), when the non-avian dinosaurs died out. Numerical age on the ICS chart, in millions of years before present."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ics-chart-2026-06"
+      ],
+      "locator": "Chart, Cenozoic column: Paleocene, Danian stage, lower boundary numerical age (Ma)",
+      "quote": null,
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-time-since-k-pg-extinction",
+      "notes": "The chart gives 66.00 Ma with no uncertainty. Linking the boundary to the dinosaur extinction is general knowledge, not stated on the chart. Chart notes that numerical ages are subject to revision.",
+      "quantityKind": "duration",
+      "valueSI": 2082801600000000,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "geo-cambrian-duration-m1",
+      "phenomenonId": "geo-cambrian-duration",
+      "configuration": null,
+      "value": 51950000,
+      "unit": "a",
+      "low": 49850000,
+      "high": 54050000,
+      "conditions": {
+        "fr": "De la base du Cambrien (538,8 ± 0,6 Ma) à la base de l'Ordovicien (486,85 ± 1,5 Ma), charte de l'ICS v2026/06.",
+        "en": "From the base of the Cambrian (538.8 ± 0.6 Ma) to the base of the Ordovician (486.85 ± 1.5 Ma), ICS chart v2026/06."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ics-chart-2026-06"
+      ],
+      "locator": "Chart, Paleozoic column: base of Fortunian (Cambrian) and base of Tremadocian (Ordovician)",
+      "quote": null,
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "538.8 Ma - 486.85 Ma = 51.95 Ma; low/high = worst-case sum of the two boundary uncertainties (±2.1 Ma)",
+        "inputs": [
+          "src:src-ics-chart-2026-06"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-cambrian-duration",
+      "notes": "Low/high combine both uncertainties linearly (conservative). The two numbers are separate chart cells; the quote joins them with an ellipsis. Older charts gave a different Ordovician base (485.4 Ma).",
+      "quantityKind": "duration",
+      "valueSI": 1639417320000000,
+      "lowSI": 1573146360000000,
+      "highSI": 1705688280000000,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "geo-mesozoic-duration-m1",
+      "phenomenonId": "geo-mesozoic-duration",
+      "configuration": null,
+      "value": 185902000,
+      "unit": "a",
+      "low": 185878000,
+      "high": 185926000,
+      "conditions": {
+        "fr": "De la base du Trias (251,902 ± 0,024 Ma) à la base du Paléogène (66,00 Ma), charte de l'ICS v2026/06.",
+        "en": "From the base of the Triassic (251.902 ± 0.024 Ma) to the base of the Paleogene (66.00 Ma), ICS chart v2026/06."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-ics-chart-2026-06"
+      ],
+      "locator": "Chart, Mesozoic column: base of Induan (Triassic); Cenozoic column: base of Danian",
+      "quote": null,
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "251.902 Ma - 66.00 Ma = 185.902 Ma; low/high from the ±0.024 Ma Triassic-base uncertainty only",
+        "inputs": [
+          "src:src-ics-chart-2026-06"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-mesozoic-duration",
+      "notes": "The range is narrow only because the chart gives no uncertainty for 66.00 Ma; the true uncertainty is larger. Display as about 186 million years.",
+      "quantityKind": "duration",
+      "valueSI": 5866620955200000,
+      "lowSI": 5865863572800000,
+      "highSI": 5867378337600000,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "geo-time-since-last-glacial-maximum-m1",
+      "phenomenonId": "geo-time-since-last-glacial-maximum",
+      "configuration": null,
+      "value": 19500,
+      "unit": "a",
+      "low": 19000,
+      "high": 20000,
+      "conditions": {
+        "fr": "Les calottes glaciaires sont restées à leur extension maximale de 26 500 à 19 000–20 000 ans avant le présent, puis la déglaciation de l'hémisphère Nord a commencé. Valeur : milieu de la fourchette 19 000–20 000 ans.",
+        "en": "Ice sheets stood at their largest extent from 26.5 ka until 19–20 ka, when northern deglaciation began. Value is the midpoint of the 19–20 ka end date (ka = thousands of years ago)."
+      },
+      "protocol": null,
+      "provenanceType": "illustrative",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-clark-2009-lgm"
+      ],
+      "locator": "Abstract",
+      "quote": null,
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-time-since-last-glacial-maximum",
+      "notes": "19 500 is a midpoint we chose, not a value in the source. Based on 5704 radiocarbon, Be-10 and He-3 ages. 'ka' is read as before present; the abstract does not state the reference year, and the difference (decades) is negligible. The LGM itself lasted about 26.5 to 19–20 ka. | Maintainer curation 2026-11-27: value = middle of the published \"19 to 20 ka\"; shown as illustrative with that range.",
+      "quantityKind": "duration",
+      "valueSI": 615373200000,
+      "lowSI": 599594400000,
+      "highSI": 631152000000,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "geo-oldest-zircon-m1",
+      "phenomenonId": "geo-oldest-zircon",
+      "configuration": null,
+      "value": 4404000000,
+      "unit": "a",
+      "low": 4396000000,
+      "high": 4412000000,
+      "conditions": {
+        "fr": "Âge uranium–plomb d'un grain de zircon détritique des Jack Hills (Australie-Occidentale). C'est un cristal isolé, pas une roche entière.",
+        "en": "Uranium–lead age of a detrital zircon grain from the Jack Hills, Western Australia. It is a single crystal, not a whole rock."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-wilde-2001-zircon"
+      ],
+      "locator": "Abstract",
+      "quote": null,
+      "era": 2001,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-oldest-zircon",
+      "notes": "Low/high from the stated ±8 Myr. Same abstract gives 4,030 Myr for the oldest known rock components (Acasta Gneiss, Canada). NASA Earth Observatory gives '4.4 billion years'. A 2014 atom-probe study confirming the age was not opened.",
+      "quantityKind": "duration",
+      "valueSI": 138979670400000000,
+      "lowSI": 138727209600000000,
+      "highSI": 139232131200000000,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "geo-age-homo-sapiens-m1",
+      "phenomenonId": "geo-age-homo-sapiens",
+      "configuration": null,
+      "value": 315000,
+      "unit": "a",
+      "low": 281000,
+      "high": 349000,
+      "conditions": {
+        "fr": "Âge par thermoluminescence de silex chauffés trouvés avec des restes d'Homo sapiens à Jebel Irhoud (Maroc) ; moyenne pondérée ± incertitude.",
+        "en": "Thermoluminescence age of heated flint tools found with H. sapiens remains at Jebel Irhoud, Morocco (weighted average ± uncertainty)."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-richter-2017-irhoud"
+      ],
+      "locator": "Abstract",
+      "quote": null,
+      "era": 2017,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-age-homo-sapiens",
+      "notes": "Low/high from ±34 ka. A tooth from the site gives 286 ± 32 ka (same abstract). Smithsonian Human Origins rounds to 'About 300,000 years ago'. Classifying these fossils as H. sapiens is debated by some researchers.",
+      "quantityKind": "duration",
+      "valueSI": 9940644000000,
+      "lowSI": 8867685600000,
+      "highSI": 11013602400000,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "geo-age-great-pyramid-m1",
+      "phenomenonId": "geo-age-great-pyramid",
+      "configuration": null,
+      "value": 4564.5,
+      "unit": "a",
+      "low": 4553,
+      "high": 4576,
+      "conditions": {
+        "fr": "Années écoulées entre le règne du roi Khéops (vers 2551–2528 av. J.-C., chronologie du Metropolitan Museum), qui fit bâtir la pyramide, et 2026. Valeur : milieu du règne.",
+        "en": "Years from the reign of King Khufu (ca. 2551–2528 BC, Met Museum chronology), who built the pyramid, to 2026. Value is the midpoint of the reign."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-met-old-kingdom"
+      ],
+      "locator": "Essay, Dynasty 4 paragraph",
+      "quote": null,
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "2026 + 2551 - 1 = 4576; 2026 + 2528 - 1 = 4553 (no year zero); value = midpoint ≈ 4565",
+        "inputs": [
+          "src:src-met-old-kingdom"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-age-great-pyramid",
+      "notes": "Egyptian chronologies differ: other references place Khufu decades earlier (e.g. 2589–2566 BC), so the true uncertainty is about a century, larger than low/high. Midpoint chosen by us. Mark as about 4,500 years. | Decision: Calculated value stored unrounded: middle of the reign of Khufu (Met: ca. 2551–2528 B.C.), counted to 2026 without a year 0 = 4564.5 years (R1 lot 2).",
+      "quantityKind": "duration",
+      "valueSI": 144044665200,
+      "lowSI": 143681752800,
+      "highSI": 144407577600,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "geo-time-since-cuneiform-m1",
+      "phenomenonId": "geo-time-since-cuneiform",
+      "configuration": null,
+      "value": 5225,
+      "unit": "a",
+      "low": 5025,
+      "high": 5225,
+      "conditions": {
+        "fr": "Années écoulées entre les premiers temps de l'écriture cunéiforme (3200–3000 av. J.-C., Uruk, sud de l'Irak) et 2026. Valeur : début de cette phase.",
+        "en": "Years from the earliest stage of cuneiform (3200–3000 BC, Uruk, southern Iraq) to 2026. Value uses the start of that stage."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-met-origins-writing"
+      ],
+      "locator": "Essay, paragraph on the rebus principle",
+      "quote": null,
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "2026 + 3200 - 1 = 5225; 2026 + 3000 - 1 = 5025 (no year zero)",
+        "inputs": [
+          "src:src-met-origins-writing"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-time-since-cuneiform",
+      "notes": "The sentence is about the rebus principle but dates the earliest stages of cuneiform. The same essay says proto-cuneiform may have existed in Syria and Turkey as early as the mid-fourth millennium BC, so writing may be older. Dates are approximate ('ca.').",
+      "quantityKind": "duration",
+      "valueSI": 164888460000,
+      "lowSI": 158576940000,
+      "highSI": 164888460000,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "geo-time-since-gutenberg-bible-m1",
+      "phenomenonId": "geo-time-since-gutenberg-bible",
+      "configuration": null,
+      "value": 571,
+      "unit": "a",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Années écoulées depuis 1455 environ, date à laquelle les premiers exemplaires de la Bible de Gutenberg (Mayence) furent disponibles, jusqu'en 2026.",
+        "en": "Years from about 1455, when the first copies of the Gutenberg Bible (Mainz) became available, to 2026."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-loc-gutenberg"
+      ],
+      "locator": "Interactive presentation, introductory paragraph",
+      "quote": "Approximately 180 copies of the Gutenberg Bible were printed and first made available in about 1455.",
+      "era": 2026,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "2026 - 1455 = 571",
+        "inputs": [
+          "src:src-loc-gutenberg"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#geo-time-since-gutenberg-bible",
+      "notes": "'About 1455' per the Library of Congress; other libraries say 1454–1455 (not opened). Gutenberg was printing before the Bible, so this is not the exact invention date of the press. Uncertainty about ±1 year.",
+      "quantityKind": "duration",
+      "valueSI": 18019389600,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "cog-iconic-memory-decay-m1",
+      "phenomenonId": "cog-iconic-memory-decay",
+      "configuration": null,
+      "value": 100,
+      "unit": "ms",
+      "low": 100,
+      "high": 400,
+      "conditions": {
+        "fr": "Constante de temps d'effacement de la mémoire iconique (mémoire sensorielle visuelle) chez l'humain après une présentation brève, mesurée avec un masque ; d'autres méthodes donnent jusqu'à 400 ms.",
+        "en": "Decay time constant of iconic (visual sensory) memory in human observers after a brief display, measured with a mask; other methods give up to 400 ms."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-teeuwen-2021-iconic"
+      ],
+      "locator": "Introduction (citing Loftus et al. and ref. 23)",
+      "quote": "iconic memory decayed with a time constant of around 100 ms, although studies using other procedures observed longer time constants, up to 400 ms",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-iconic-memory-decay",
+      "notes": "Secondary statement in a CC BY paper about monkeys; the human values come from the works it cites, which were not opened. A time constant is not the full lifetime: the same paper says a cue delay of 'a few hundred milliseconds' (Sperling 1960) wipes out the benefit. Sperling 1960 itself was not opened.",
+      "quantityKind": "duration",
+      "valueSI": 0.1,
+      "lowSI": 0.1,
+      "highSI": 0.4,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "cog-short-term-memory-decay-m1",
+      "phenomenonId": "cog-short-term-memory-decay",
+      "configuration": null,
+      "value": 18,
+      "unit": "s",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Peterson et Peterson (1959) : trigrammes de trois lettres, répétition mentale empêchée ; le rappel passe d'environ 80 % à 3 s à environ 10 % à 18 s. Adultes, en laboratoire.",
+        "en": "Peterson & Peterson (1959): three-letter trigrams, rehearsal prevented; recall fell from about 80 % at 3 s to about 10 % at 18 s. Adults, laboratory."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-openstax-psych2e-8-1"
+      ],
+      "locator": "Section on short-term memory (Atkinson–Shiffrin model), paragraph on decay and interference",
+      "quote": null,
+      "era": 1959,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-short-term-memory-decay",
+      "notes": "Textbook account of the 1959 study; the original was not opened (paywalled). 18 s is the longest delay tested, not a measured 'lifetime'. The same page notes Keppel & Underwood (1962) attributed much of the loss to interference, not decay, and gives a general STM duration of 15 to 30 seconds. Source is CC BY-NC-SA: reference only.",
+      "quantityKind": "duration",
+      "valueSI": 18,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "cog-attentional-blink-m1",
+      "phenomenonId": "cog-attentional-blink",
+      "configuration": null,
+      "value": 500,
+      "unit": "ms",
+      "low": 200,
+      "high": 500,
+      "conditions": {
+        "fr": "Dans un flux rapide d'images, une seconde cible passe souvent inaperçue si elle arrive 200 à 500 ms après la première. Valeur : fin de cette fenêtre.",
+        "en": "In a rapid stream of images, a second target is often missed if it comes 200–500 ms after the first one. Value is the end of that window."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-dux-marois-2009-ab"
+      ],
+      "locator": "Abstract",
+      "quote": null,
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-attentional-blink",
+      "notes": "Review summarising many rapid-serial-visual-presentation studies; the exact window depends on the task. Value = upper end of the window (how long the blink lasts), low = start of the deficit window.",
+      "quantityKind": "duration",
+      "valueSI": 0.5,
+      "lowSI": 0.2,
+      "highSI": 0.5,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
+    },
+    {
+      "id": "cog-reading-fixation-m1",
+      "phenomenonId": "cog-reading-fixation",
+      "configuration": null,
+      "value": 250,
+      "unit": "ms",
+      "low": null,
+      "high": null,
+      "conditions": {
+        "fr": "Durée moyenne d'une fixation (l'œil immobile sur un mot) pendant la lecture silencieuse chez des lecteurs adultes expérimentés.",
+        "en": "Average duration of a fixation (eye still on one word) during silent reading by skilled adult readers."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-degno-liversedge-2020"
+      ],
+      "locator": "Section 1, Introduction",
+      "quote": "Fixations are short periods of time, which on average last approximately 250 ms",
+      "era": 2020,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-reading-fixation",
+      "notes": "Review value; individual fixations vary widely, and other reviews give 200–250 ms (not opened). No range given in this source, so low/high are left null.",
+      "quantityKind": "duration",
+      "valueSI": 0.25,
+      "lowSI": null,
+      "highSI": null,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "cog-saccade-duration-m1",
+      "phenomenonId": "cog-saccade-duration",
+      "configuration": null,
+      "value": 44.94,
+      "unit": "ms",
+      "low": 31.44,
+      "high": 68.22,
+      "conditions": {
+        "fr": "Médiane des durées moyennes de neuf sujets pour des saccades d'environ 9 degrés d'amplitude en moyenne ; 9 adultes en bonne santé de 24 à 39 ans. Bornes = plus faible et plus forte moyenne individuelle.",
+        "en": "Median of the nine per-subject mean durations for saccades averaging about 9 degrees of amplitude; 9 healthy adults aged 24–39. Low/high = lowest and highest subject means."
+      },
+      "protocol": null,
+      "provenanceType": "calculated",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-gibaldi-sabatini-2021"
+      ],
+      "locator": "Table 5, Statistics of Saccadic Parameters (Exp. 1.1), Duration [ms] column",
+      "quote": "SBJ6 9.03 ± 6.54 160.23 ± 68.23 44.94 ± 20.67",
+      "era": 2021,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": {
+        "formula": "median of per-subject mean durations in Table 5 (31.52, 31.44, 56.17, 47.95, 36.85, 44.94, 68.22, 49.41, 43.91 ms) = 44.94 ms; low/high = min/max",
+        "inputs": [
+          "src:src-gibaldi-sabatini-2021"
+        ]
+      },
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-saccade-duration",
+      "notes": "Saccade duration grows with amplitude (main sequence), so this applies to ~9° jumps only; per-subject SDs are about 15–28 ms. Duration also depends on the detection threshold and sampling rate (discussed in the paper). Purves et al., Neuroscience 2e (NCBI Bookshelf NBK10991) gives 'on the order of 15–100 ms', consistent with this.",
+      "quantityKind": "duration",
+      "valueSI": 0.04494,
+      "lowSI": 0.03144,
+      "highSI": 0.06822,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "published"
+      }
+    },
+    {
+      "id": "cog-conversation-turn-gap-m1",
+      "phenomenonId": "cog-conversation-turn-gap",
+      "configuration": null,
+      "value": 100,
+      "unit": "ms",
+      "low": 0,
+      "high": 300,
+      "conditions": {
+        "fr": "Écart médian entre la fin d'une question fermée et le début de la réponse, dans 10 langues (enregistrements vidéo de conversations naturelles). Bornes = plage des médianes par langue.",
+        "en": "Median gap between the end of a yes/no question and the start of the answer, across 10 languages (video recordings of natural conversation). Low/high = range of the language medians."
+      },
+      "protocol": null,
+      "provenanceType": "documented",
+      "verificationStatus": "qualified",
+      "sourceIds": [
+        "src-stivers-2009-turn"
+      ],
+      "locator": "Results, paragraph on Fig. 1 and Table S3",
+      "quote": null,
+      "era": 2009,
+      "uncertainty": null,
+      "statistics": null,
+      "calculation": null,
+      "rawRef": "data/raw/m00-2026-11-27-R1-F_history_geology_cognition.json#cog-conversation-turn-gap",
+      "notes": "Overall mode is 0 ms; language means range from +7 ms (Japanese) to +469 ms (Danish). The popular '~200 ms' summary matches the reported mode window (0–200 ms), not the median. Question–answer pairs only.",
+      "quantityKind": "duration",
+      "valueSI": 0.1,
+      "lowSI": 0,
+      "highSI": 0.3,
+      "quantilesSI": null,
+      "uncertaintySI": null,
+      "excerpt": {
+        "status": "withheld",
+        "reason": "redistribution-not-established",
+        "redacted": [
+          "quote"
+        ]
+      }
     }
   ],
   "sources": [
@@ -17213,6 +19495,561 @@
       "redistribution": "allowed",
       "accessNotes": "Opened with WebFetch on 2026-11-27 (after redirect from service-public.fr).",
       "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nws-spotter-tstorm-lifecycle",
+      "title": "Weather Spotter's Field Guide - Thunderstorm Life Cycle",
+      "author": null,
+      "publisher": "NOAA National Weather Service",
+      "url": "https://www.weather.gov/spotterguide/life",
+      "doi": null,
+      "publishedDate": null,
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; US federal government work (public domain)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with curl on 2026-11-27; sentence read in the page introduction.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nps-yell-old-faithful",
+      "title": "Old Faithful - Yellowstone National Park",
+      "author": null,
+      "publisher": "U.S. National Park Service",
+      "url": "https://www.nps.gov/yell/planyourvisit/exploreoldfaithful.htm",
+      "doi": null,
+      "publishedDate": "2025-05-20 (last updated)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; US federal government work (public domain) (NPS pages may contain third-party images; text used only)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with curl on 2026-11-27; 'Old Faithful Area Frequently Asked Questions' section.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-noaa-aoml-hurricane-faq",
+      "title": "Hurricane FAQ",
+      "author": null,
+      "publisher": "NOAA Atlantic Oceanographic and Meteorological Laboratory (AOML), Hurricane Research Division",
+      "url": "https://www.aoml.noaa.gov/hrd-faq/",
+      "doi": null,
+      "publishedDate": "2025-09-26 (dateModified in page metadata)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; US federal government work (public domain)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with curl on 2026-11-27; records table of tropical cyclone extremes (worldwide).",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nps-brca-bristlecone",
+      "title": "Great Basin Bristlecone Pine - Bryce Canyon National Park",
+      "author": null,
+      "publisher": "U.S. National Park Service",
+      "url": "https://www.nps.gov/brca/learn/nature/bristleconepine.htm",
+      "doi": null,
+      "publishedDate": "2024-03-05 (last updated)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; US federal government work (public domain)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with curl on 2026-11-27; main text, paragraph on Methuselah.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nps-yose-sequoia-research",
+      "title": "Sequoia Research - Yosemite National Park",
+      "author": null,
+      "publisher": "U.S. National Park Service",
+      "url": "https://www.nps.gov/yose/learn/nature/sequoia-research.htm",
+      "doi": null,
+      "publishedDate": "2023-07-27 (last updated)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; US federal government work (public domain)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with curl on 2026-11-27; question 'How long do tree species live?'.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nps-netn-hummingbird",
+      "title": "NETN Species Spotlight - Ruby-throated Hummingbird",
+      "author": null,
+      "publisher": "U.S. National Park Service, Northeast Temperate Network",
+      "url": "https://www.nps.gov/articles/netn-species-spotlight-ruby-throated-hummingbird.htm",
+      "doi": null,
+      "publishedDate": "2021-08-15 (last updated)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; US federal government work (public domain)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with curl on 2026-11-27; sections 'What is it?' and flight adaptations. Popular-science article; the numbers are not referenced to a study on the page.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-usfs-monarch-migration",
+      "title": "Monarch Butterfly Migration and Overwintering",
+      "author": null,
+      "publisher": "USDA Forest Service, Celebrating Wildflowers",
+      "url": "https://www.fs.usda.gov/wildflowers/pollinators/Monarch_Butterfly/migration/index.shtml",
+      "doi": null,
+      "publishedDate": null,
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; US federal government work (public domain)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with curl on 2026-11-27; paragraph after the description of the Monarch Butterfly Biosphere Reserve. No date on the page.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nasa-iss-facts",
+      "title": "International Space Station Facts and Figures",
+      "author": null,
+      "publisher": "NASA",
+      "url": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+      "doi": null,
+      "publishedDate": null,
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; NASA material generally not copyrighted (US federal work)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with curl on 2026-11-27; 'Station Facts' introduction.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nasa-apollo11-overview",
+      "title": "Apollo 11 Mission Overview",
+      "author": null,
+      "publisher": "NASA",
+      "url": "https://www.nasa.gov/missions/apollo/apollo-11-mission-overview/",
+      "doi": null,
+      "publishedDate": "2015-04-17 (modified 2026-07-29)",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated; NASA material generally not copyrighted (US federal work)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened with curl on 2026-11-27; 'Mission Highlights' section.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-airfrance-concorde-kit-2001",
+      "title": "Extremely Comprehensive Concorde Relaunch Kit from Air France",
+      "author": "Air France (press kit)",
+      "publisher": "Travel News Asia (asiatraveltips.com), reproducing an Air France press kit",
+      "url": "https://www.asiatraveltips.com/travelnews2001/17October2001AirFrance.htm",
+      "doi": null,
+      "publishedDate": "2001-10-17",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated (Air France press material reproduced by a trade news site)",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened with curl on 2026-11-27; section I 'On board the Air France Concorde'. Secondary host of a primary operator document; the Air France corporate site (Cloudflare 403) could not be opened to cross-check.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-sncf-opendata-tgvmax",
+      "title": "TGVmax - Disponibilité à 30 jours de places MAX JEUNE et MAX SENIOR ouvertes à la réservation",
+      "author": null,
+      "publisher": "SNCF Voyageurs, open data portal ressources.data.sncf.com",
+      "url": "https://ressources.data.sncf.com/explore/dataset/tgvmax/",
+      "doi": null,
+      "publishedDate": "2026-11-27 (dataset modified 05:23 UTC)",
+      "version": "snapshot of 2026-11-27",
+      "accessedAt": "2026-11-27",
+      "license": "Open Database License (ODbL)",
+      "redistribution": "allowed",
+      "accessNotes": "Queried with curl on 2026-11-27 through the Explore API v2.1: records where date = 2026-12-04, origine_iata = FRPLY (Paris Gare de Lyon), destination_iata = FRLPD (Lyon Part-Dieu); 20 trains returned. ODbL requires attribution and share-alike for derived databases.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-ratp-cp-l14-2026-01-29",
+      "title": "La ligne 14 devient la ligne de métro la plus fréquentée du réseau francilien (communiqué de presse)",
+      "author": null,
+      "publisher": "RATP / Île-de-France Mobilités",
+      "url": "https://ratpgroup.com/api/media/20260129_cp_frequentation-l14_vdef-2.pdf",
+      "doi": null,
+      "publishedDate": "2026-01-29",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "not stated (press release)",
+      "redistribution": "reference-only",
+      "accessNotes": "PDF downloaded with curl on 2026-11-27, text extracted with pdftotext; page 1.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-boeing-737ng-acap-revc",
+      "title": "737 Airplane Characteristics for Airport Planning (737-600/-700/-800/-900/-900ER, BBJ), D6-58325-7",
+      "author": null,
+      "publisher": "The Boeing Company",
+      "url": "https://www.boeing.com/content/dam/boeing/v2/airports/acaps/737NG_REV_C.pdf",
+      "doi": null,
+      "publishedDate": "2025-10",
+      "version": "Rev C",
+      "accessedAt": "2026-11-27",
+      "license": "Copyright © 2025 Boeing. All Rights Reserved.",
+      "redistribution": "reference-only",
+      "accessNotes": "PDF downloaded with curl on 2026-11-27; section 5.2.4, page 5-11 (PDF page 141). The value is printed inside the chart graphic, read from a 300 dpi rendering of the page.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nobel-chem-1999-press",
+      "title": "Press release: The Nobel Prize in Chemistry 1999 (Development of femtochemistry rewarded)",
+      "author": "The Royal Swedish Academy of Sciences",
+      "publisher": "NobelPrize.org (Nobel Prize Outreach)",
+      "url": "https://www.nobelprize.org/prizes/chemistry/1999/press-release/",
+      "doi": null,
+      "publishedDate": "1999-10-12",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Copyright © Nobel Prize Outreach (no open licence stated)",
+      "redistribution": "reference-only",
+      "accessNotes": "Fetched with curl on 2026-11-27; HTML text extracted and searched; section headings checked in the HTML.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nobel-phys-2023-press",
+      "title": "Press release: The Nobel Prize in Physics 2023",
+      "author": "The Royal Swedish Academy of Sciences",
+      "publisher": "NobelPrize.org (Nobel Prize Outreach)",
+      "url": "https://www.nobelprize.org/prizes/physics/2023/press-release/",
+      "doi": null,
+      "publishedDate": "2023-10-03",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Copyright © Nobel Prize Outreach (text); illustrations free for non-commercial use only",
+      "redistribution": "reference-only",
+      "accessNotes": "Fetched with curl on 2026-11-27; text extracted and searched.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nobel-phys-2023-popular",
+      "title": "Popular information: Electrons in pulses of light (The Nobel Prize in Physics 2023)",
+      "author": "The Royal Swedish Academy of Sciences",
+      "publisher": "NobelPrize.org (Nobel Prize Outreach)",
+      "url": "https://www.nobelprize.org/prizes/physics/2023/popular-information/",
+      "doi": null,
+      "publishedDate": "2023-10-03",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Copyright © Nobel Prize Outreach (no open licence stated)",
+      "redistribution": "reference-only",
+      "accessNotes": "Fetched with curl on 2026-11-27; text extracted; quote located under heading 'Shorter pulses with the help of high overtones'.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nobel-phys-2023-scientific",
+      "title": "Scientific background to the Nobel Prize in Physics 2023: For experimental methods that generate attosecond pulses of light for the study of electron dynamics in matter",
+      "author": "The Nobel Committee for Physics, The Royal Swedish Academy of Sciences",
+      "publisher": "NobelPrize.org (Nobel Prize Outreach)",
+      "url": "https://www.nobelprize.org/uploads/2023/10/advanced-physicsprize2023-2.pdf",
+      "doi": null,
+      "publishedDate": "2023-10-03",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "No licence stated in the PDF; NobelPrize.org copyright",
+      "redistribution": "reference-only",
+      "accessNotes": "PDF downloaded with curl on 2026-11-27 (link taken from the press-release page), converted with pdftotext; reference list checked for years (refs 24, 25).",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-gaumnitz-2017-oe",
+      "title": "Streaking of 43-attosecond soft-X-ray pulses generated by a passively CEP-stable mid-infrared driver",
+      "author": "T. Gaumnitz, A. Jain, Y. Pertot, M. Huppert, I. Jordan, F. Ardana-Lamas, H. J. Wörner",
+      "publisher": "Optics Express 25(22):27506 (Optica Publishing Group)",
+      "url": "https://doi.org/10.1364/OE.25.027506",
+      "doi": "10.1364/OE.25.027506",
+      "publishedDate": "2017-10-24",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Optica (OSA) Open Access Publishing Agreement (OA_License_v1, per Crossref); not a Creative Commons licence",
+      "redistribution": "reference-only",
+      "accessNotes": "Publisher page (opg.optica.org) returned a CAPTCHA to curl on 2026-11-27; the value was read in the article's own abstract as indexed by Europe PMC / PubMed (PMID 29092222). Licence read from the Crossref record.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nist-codata-2022-aut",
+      "title": "CODATA Value: atomic unit of time (2022 CODATA recommended values)",
+      "author": null,
+      "publisher": "NIST Physical Measurement Laboratory, Fundamental Physical Constants",
+      "url": "https://physics.nist.gov/cgi-bin/cuu/Value?aut",
+      "doi": null,
+      "publishedDate": null,
+      "version": "CODATA 2022",
+      "accessedAt": "2026-11-27",
+      "license": "US federal government work (NIST); public domain in the US",
+      "redistribution": "allowed",
+      "accessNotes": "Fetched with curl on 2026-11-27.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-nist-webbook-water-vib",
+      "title": "Water: Vibrational and/or electronic energy levels (NIST Chemistry WebBook, SRD 69)",
+      "author": "Takehiko Shimanouchi (data compilation)",
+      "publisher": "NIST Chemistry WebBook, NIST Standard Reference Database 69",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=800",
+      "doi": null,
+      "publishedDate": null,
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Data compilation copyright by the U.S. Secretary of Commerce on behalf of the U.S.A. All rights reserved (Standard Reference Data).",
+      "redistribution": "reference-only",
+      "accessNotes": "Fetched with curl on 2026-11-27; source of data: Shimanouchi, Tables of Molecular Vibrational Frequencies, NBS 1972.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-eaves-2005-pnas",
+      "title": "Hydrogen bonds in liquid water are broken only fleetingly",
+      "author": "J. D. Eaves, J. J. Loparo, C. J. Fecko, S. T. Roberts, A. Tokmakoff, P. L. Geissler",
+      "publisher": "PNAS 102(37):13019–13022",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1201598/",
+      "doi": "10.1073/pnas.0505125102",
+      "publishedDate": "2005-08-31",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Copyright © 2005, The National Academy of Sciences (free to read on PMC, no open licence)",
+      "redistribution": "reference-only",
+      "accessNotes": "PMC page fetched with curl on 2026-11-27 (first attempt hit a reCAPTCHA, retry succeeded); abstract and results text searched.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-duan-2017-scirep",
+      "title": "Primary Charge Separation in the Photosystem II Reaction Center Revealed by a Global Analysis of the Two-dimensional Electronic Spectra",
+      "author": "H.-G. Duan, V. I. Prokhorenko, E. Wientjes, R. Croce, M. Thorwart, R. J. D. Miller",
+      "publisher": "Scientific Reports 7:12347 (Springer Nature)",
+      "url": "https://doi.org/10.1038/s41598-017-12564-4",
+      "doi": "10.1038/s41598-017-12564-4",
+      "publishedDate": "2017-09-27",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "CC BY 4.0",
+      "redistribution": "allowed",
+      "accessNotes": "Full-text XML (PMC5617839) fetched from Europe PMC on 2026-11-27; licence read in the XML.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-bionumbers-enzyme-rates",
+      "title": "How many reactions do enzymes carry out each second? (Cell Biology by the Numbers)",
+      "author": "Ron Milo, Rob Phillips",
+      "publisher": "book.bionumbers.org (Cell Biology by the Numbers, Garland Science 2015, online edition)",
+      "url": "https://book.bionumbers.org/how-many-reactions-do-enzymes-carry-out-each-second/",
+      "doi": null,
+      "publishedDate": null,
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "No licence stated on the page",
+      "redistribution": "unknown",
+      "accessNotes": "Fetched with curl on 2026-11-27. The page renders 10^6–10^7 as plain '106-107' (superscripts lost in the HTML source).",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-wolfenden-2008-jacs",
+      "title": "Rates of Spontaneous Cleavage of Glucose, Fructose, Sucrose, and Trehalose in Water, and the Catalytic Proficiencies of Invertase and Trehalas",
+      "author": "Richard Wolfenden, Yang Yuan",
+      "publisher": "Journal of the American Chemical Society 130(24):7548–7549",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2664835/",
+      "doi": "10.1021/ja802206s",
+      "publishedDate": "2008-05-28",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "ACS AuthorChoice Terms & Conditions (not a Creative Commons licence)",
+      "redistribution": "reference-only",
+      "accessNotes": "Full-text XML (PMC2664835) fetched from Europe PMC on 2026-11-27; licence statement read in the XML.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-ics-chart-2026-06",
+      "title": "International Chronostratigraphic Chart, v2026/06",
+      "author": "K.M. Cohen, D.A.T. Harper, P.L. Gibbard, N. Car",
+      "publisher": "International Commission on Stratigraphy (ICS)",
+      "url": "https://stratigraphy.org/ICSchart/ChronostratChart2026-06.pdf",
+      "doi": null,
+      "publishedDate": "2026-06",
+      "version": "v2026/06",
+      "accessedAt": "2026-11-27",
+      "license": "(c) International Commission on Stratigraphy, June 2026 (no open licence stated)",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened on 2026-11-27 with curl (PDF) and read with pdftotext; row alignment checked in the layout text. Chart states most ages come from GTS2020 and are subject to revision.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-clark-2009-lgm",
+      "title": "The Last Glacial Maximum",
+      "author": "P.U. Clark, A.S. Dyke, J.D. Shakun, A.E. Carlson, J. Clark, B. Wohlfarth, J.X. Mitrovica, S.W. Hostetler, A.M. McCabe",
+      "publisher": "Science 325(5941):710-714, record in the USGS Publications Warehouse",
+      "url": "https://pubs.usgs.gov/publication/70036965",
+      "doi": "10.1126/science.1172873",
+      "publishedDate": "2009",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Abstract of a Science (AAAS) article; no open licence stated",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened on 2026-11-27 with curl; abstract read on the USGS Publications Warehouse page (usgs.gov FAQ pages returned 403 to curl, WebFetch and the browser).",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-wilde-2001-zircon",
+      "title": "Evidence from detrital zircons for the existence of continental crust and oceans on the Earth 4.4 Gyr ago",
+      "author": "S.A. Wilde, J.W. Valley, W.H. Peck, C.M. Graham",
+      "publisher": "Nature 409:175-178 (abstract via Europe PMC, PMID 11196637)",
+      "url": "https://europepmc.org/article/MED/11196637",
+      "doi": "10.1038/35051550",
+      "publishedDate": "2001-01-11",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Nature abstract; no open licence stated",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened on 2026-11-27 via the Europe PMC REST API (abstract only). NASA Earth Observatory 'Ancient Crystals Suggest Earlier Ocean' (https://earthobservatory.nasa.gov/features/Zircon), also opened, says the crystals are '4.4 billion years old'.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-richter-2017-irhoud",
+      "title": "The age of the hominin fossils from Jebel Irhoud, Morocco, and the origins of the Middle Stone Age",
+      "author": "D. Richter, R. Grün, R. Joannes-Boyau, T.E. Steele, F. Amani, M. Rué, P. Fernandes, J.-P. Raynal, D. Geraads, A. Ben-Ncer, J.-J. Hublin, S.P. McPherron",
+      "publisher": "Nature 546:293-296 (abstract via Europe PMC, PMID 28593967)",
+      "url": "https://europepmc.org/article/MED/28593967",
+      "doi": "10.1038/nature22335",
+      "publishedDate": "2017-06-08",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Nature abstract; no open licence stated",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened on 2026-11-27 via the Europe PMC REST API (abstract only). Smithsonian Human Origins page https://humanorigins.si.edu/evidence/human-fossils/species/homo-sapiens (opened with curl) gives 'About 300,000 years ago to present'.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-met-old-kingdom",
+      "title": "Egypt in the Old Kingdom (ca. 2649–2130 B.C.)",
+      "author": "Tara Prakash",
+      "publisher": "The Metropolitan Museum of Art, Heilbrunn Timeline of Art History",
+      "url": "https://www.metmuseum.org/essays/egypt-in-the-old-kingdom-ca-2649-2150-b-c",
+      "doi": null,
+      "publishedDate": "2019-02",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "© The Metropolitan Museum of Art; no open licence stated for essay text",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened on 2026-11-27 in the shared browser (curl returns no text). UNESCO World Heritage page 86 blocked by Cloudflare.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-met-origins-writing",
+      "title": "The Origins of Writing",
+      "author": "Ira Spar",
+      "publisher": "The Metropolitan Museum of Art, Heilbrunn Timeline of Art History",
+      "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
+      "doi": null,
+      "publishedDate": "2004-10",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "© The Metropolitan Museum of Art; no open licence stated for essay text",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened on 2026-11-27 in the shared browser.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-loc-gutenberg",
+      "title": "Library of Congress Bibles Collection: Interactive Presentation (Gutenberg Bible)",
+      "author": null,
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/exhibits/bibles/interactives/gutenberg/index.html",
+      "doi": null,
+      "publishedDate": null,
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "US federal government work (Library of Congress exhibit text); no licence statement on the page",
+      "redistribution": "allowed",
+      "accessNotes": "Opened on 2026-11-27 with curl. Images on loc.gov may carry separate rights; only the text value is used.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-teeuwen-2021-iconic",
+      "title": "A neuronal basis of iconic memory in macaque primary visual cortex",
+      "author": "R.R.M. Teeuwen, C. Wacongne, U.H. Schnabel, M.W. Self, P.R. Roelfsema",
+      "publisher": "Current Biology 31(24):5401-5414 (PMC8699744)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8699744/",
+      "doi": "10.1016/j.cub.2021.09.052",
+      "publishedDate": "2021",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "CC BY 4.0",
+      "redistribution": "allowed",
+      "accessNotes": "Opened on 2026-11-27; full text read via the Europe PMC fullTextXML API; licence from Europe PMC metadata. Value is from the Introduction, which cites Loftus et al. for humans.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-openstax-psych2e-8-1",
+      "title": "Psychology 2e, 8.1 How Memory Functions",
+      "author": "Rose M. Spielman, William J. Jenkins, Marilyn D. Lovett",
+      "publisher": "OpenStax (Rice University)",
+      "url": "https://openstax.org/books/psychology-2e/pages/8-1-how-memory-functions",
+      "doi": null,
+      "publishedDate": null,
+      "version": "2e",
+      "accessedAt": "2026-11-27",
+      "license": "Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA), as stated on the page; page also forbids LLM ingestion without permission",
+      "redistribution": "reference-only",
+      "accessNotes": "Opened on 2026-11-27 with curl. Secondary textbook account of Peterson & Peterson (1959); the original (doi:10.1037/h0049234) is paywalled and has no abstract in Europe PMC.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-dux-marois-2009-ab",
+      "title": "The attentional blink: a review of data and theory",
+      "author": "P.E. Dux, R. Marois",
+      "publisher": "Attention, Perception & Psychophysics 71(8):1683-1700 (PMC2915904)",
+      "url": "https://europepmc.org/article/MED/19933555",
+      "doi": "10.3758/APP.71.8.1683",
+      "publishedDate": "2009-11",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Not stated in Europe PMC metadata (NIH author manuscript)",
+      "redistribution": "unknown",
+      "accessNotes": "Opened on 2026-11-27 via the Europe PMC REST API (abstract).",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-degno-liversedge-2020",
+      "title": "Eye Movements and Fixation-Related Potentials in Reading: A Review",
+      "author": "F. Degno, S.P. Liversedge",
+      "publisher": "Vision 4(1):11, MDPI (PMC7157570)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7157570/",
+      "doi": "10.3390/vision4010011",
+      "publishedDate": "2020",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "CC BY 4.0 (stated in the article licence block)",
+      "redistribution": "allowed",
+      "accessNotes": "Opened on 2026-11-27; full text read via the Europe PMC fullTextXML API.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-gibaldi-sabatini-2021",
+      "title": "The saccade main sequence revised: A fast and repeatable tool for oculomotor analysis",
+      "author": "A. Gibaldi, S.P. Sabatini",
+      "publisher": "Behavior Research Methods 53:167-187 (PMC7880984)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7880984/",
+      "doi": "10.3758/s13428-020-01388-2",
+      "publishedDate": "2021",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "CC BY 4.0",
+      "redistribution": "allowed",
+      "accessNotes": "Opened on 2026-11-27; full text and Table 5 read via the Europe PMC fullTextXML API.",
+      "verificationStatus": "qualified"
+    },
+    {
+      "id": "src-stivers-2009-turn",
+      "title": "Universals and cultural variation in turn-taking in conversation",
+      "author": "T. Stivers, N.J. Enfield, P. Brown, C. Englert, M. Hayashi, T. Heinemann, G. Hoymann, F. Rossano, J.P. de Ruiter, K.-E. Yoon, S.C. Levinson",
+      "publisher": "PNAS 106(26):10587-10592 (PMC2705608)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2705608/",
+      "doi": "10.1073/pnas.0903616106",
+      "publishedDate": "2009-06-30",
+      "version": null,
+      "accessedAt": "2026-11-27",
+      "license": "Not stated in Europe PMC metadata; PMC page shows only 'Copyright and License information'",
+      "redistribution": "unknown",
+      "accessNotes": "Opened on 2026-11-27 in the shared browser (full text, Results section).",
+      "verificationStatus": "qualified"
     }
   ],
   "groups": [
@@ -18156,8 +20993,17 @@
         "fr": "Un saut rapide de l'œil pendant la lecture (saccade)",
         "en": "A quick eye jump while reading (saccade)"
       },
+      "status": "rejected",
+      "reason": "Superseded (R1 lot 2, 2026-11-27) by cog-saccade-duration, sourced from a primary open-access study (Gibaldi & Sabatini 2021); the earlier value rested on Wikipedia only."
+    },
+    {
+      "id": "chem-water-hydrogen-bond-exchange-m1",
+      "label": {
+        "fr": "Une molécule d’eau change de partenaire de liaison hydrogène",
+        "en": "A water molecule switches hydrogen-bond partner"
+      },
       "status": "pending",
-      "reason": "Only source opened is Wikipedia (last resort); the primary reference (Purves, Neuroscience, NCBI Bookshelf) was blocked by a CAPTCHA. Held back until a primary source is read (R1 lot 2026-11-27)."
+      "reason": "Source (Chem Rev 2026, ACS) could not be opened by the maintainer for the check (anti-bot page, HTTP 403). Held back until verified (R1 lot 2, 2026-11-27)."
     }
   ]
 }

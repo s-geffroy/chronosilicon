@@ -26,7 +26,7 @@ describe('dimensions', () => {
   });
   it('absolute factors of every unit (independent table, review M-8)', () => {
     const expected: Record<string, number> = {
-      fs: 1e-15, ps: 1e-12, ns: 1e-9, us: 1e-6, 'µs': 1e-6, ms: 1e-3, s: 1, min: 60, h: 3600, d: 86400, a: 31557600,
+      as: 1e-18, fs: 1e-15, ps: 1e-12, ns: 1e-9, us: 1e-6, 'µs': 1e-6, ms: 1e-3, s: 1, min: 60, h: 3600, d: 86400, a: 31557600,
       Hz: 1, kHz: 1e3, MHz: 1e6, GHz: 1e9, THz: 1e12,
       'B/s': 1, 'kB/s': 1e3, 'MB/s': 1e6, 'GB/s': 1e9, 'TB/s': 1e12, 'KiB/s': 1024, 'MiB/s': 1048576, 'GiB/s': 1073741824,
       'bit/s': 0.125, 'kbit/s': 125, 'Mbit/s': 125000, 'Gbit/s': 125000000, 'Tbit/s': 125000000000,
@@ -109,5 +109,13 @@ describe('AUD-001: toSI/fromSI symmetry, input/output checks, extremes', () => {
         expect(Math.abs(back - x) / x, `${x} ${u}`).toBeLessThan(1e-15);
       }
     }
+  });
+});
+
+describe('R1 v2.1: attosecond', () => {
+  it('as is a duration unit worth 1e-18 s', async () => {
+    const { toSI, isKnownUnit } = await import('@chronosilicon/metrology');
+    expect(isKnownUnit('as')).toBe(true);
+    expect(toSI(43, 'as', 'duration')).toBeCloseTo(4.3e-17, 30);
   });
 });

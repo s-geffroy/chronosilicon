@@ -573,6 +573,105 @@
    "basis": "rule:locator-label"
   },
   {
+   "scope": "measurement:chem-broken-hydrogen-bond-water-m1",
+   "field": "locator",
+   "text": "'Broken hydrogen bonds that persist for 1 ps or longer are extremely rare'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:chem-broken-hydrogen-bond-water-m1",
+   "field": "notes",
+   "text": "\"within 200 fs\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:chem-carbonic-anhydrase-turnover-m1",
+   "field": "locator",
+   "text": "'Rates vary immensely. Record holders are carbonic anhydrase…'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:chem-carbonic-anhydrase-turnover-m1",
+   "field": "notes",
+   "text": "'106-107'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:chem-icn-bond-breaking-m1",
+   "field": "locator",
+   "text": "'The first experiments'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:chem-median-enzyme-turnover-m1",
+   "field": "notes",
+   "text": "'about'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:chem-retinal-isomerisation-vision-m1",
+   "field": "locator",
+   "text": "'Research explosion'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:chem-water-oh-stretch-vibration-period-m1",
+   "field": "locator",
+   "text": "'Vibrational and/or electronic energy levels'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:chem-water-oh-stretch-vibration-period-m1",
+   "field": "notes",
+   "text": "'3 Anti str 3756 A 3755.79 gas'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:cog-conversation-turn-gap-m1",
+   "field": "notes",
+   "text": "'~200 ms'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:cog-short-term-memory-decay-m1",
+   "field": "notes",
+   "text": "'lifetime'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
    "scope": "measurement:cuda-null-kernel-launch-h100-m1",
    "field": "locator",
    "text": "'Null-kernel T_sys^floor (μs) measured in isolation'",
@@ -907,6 +1006,24 @@
    "basis": "rule:short-term"
   },
   {
+   "scope": "measurement:geo-age-homo-sapiens-m1",
+   "field": "notes",
+   "text": "'About 300,000 years ago'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:geo-oldest-zircon-m1",
+   "field": "notes",
+   "text": "'4.4 billion years'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
    "scope": "measurement:geo-one-way-light-time-subsatellite-m1",
    "field": "locator",
    "text": "\"Geostationary orbit (GEO)\"",
@@ -923,6 +1040,33 @@
    "decision": "publish",
    "ground": "locating-label",
    "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:geo-time-since-cuneiform-m1",
+   "field": "notes",
+   "text": "'ca.'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:geo-time-since-last-glacial-maximum-m1",
+   "field": "notes",
+   "text": "\"19 to 20 ka\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:geo-time-since-last-glacial-maximum-m1",
+   "field": "notes",
+   "text": "'ka'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
   },
   {
    "scope": "measurement:h100-sxm-fp64-peak-m1",
@@ -2800,6 +2944,24 @@
    "basis": "rule:short-term"
   },
   {
+   "scope": "measurement:phys-photoemission-delay-neon-m1",
+   "field": "conditions.fr",
+   "text": "« streaking »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:phys-photoemission-delay-neon-m1",
+   "field": "locator",
+   "text": "'Delayed photoemission'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
    "scope": "measurement:phys-planck-time-m1",
    "field": "locator",
    "text": "'Planck time'",
@@ -2807,6 +2969,51 @@
    "decision": "publish",
    "ground": "locating-label",
    "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:phys-red-light-oscillation-period-m1",
+   "field": "locator",
+   "text": "'Shorter pulses with the help of high overtones'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:phys-red-light-oscillation-period-m1",
+   "field": "notes",
+   "text": "\"about\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:phys-red-light-oscillation-period-m1",
+   "field": "notes",
+   "text": "'about'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:phys-shortest-attosecond-pulse-2017-m1",
+   "field": "conditions.fr",
+   "text": "« streaking »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:phys-shortest-attosecond-pulse-2017-m1",
+   "field": "notes",
+   "text": "'Record'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
   },
   {
    "scope": "measurement:phys-uranium-238-half-life-m1",
@@ -3584,6 +3791,51 @@
    "basis": "rule:short-term"
   },
   {
+   "scope": "measurement:trans-737-800-turnaround-m1",
+   "field": "locator",
+   "text": "'Terminal Operations – Turnaround Station: Model 737-800, -800W'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:trans-737-800-turnaround-m1",
+   "field": "notes",
+   "text": "'reflect ideal conditions for a single airplane'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:trans-concorde-paris-new-york-m1",
+   "field": "locator",
+   "text": "'On board the Air France Concorde'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:trans-concorde-paris-new-york-m1",
+   "field": "notes",
+   "text": "'3 h 30'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:trans-paris-metro-14-headway-m1",
+   "field": "locator",
+   "text": "'Fréquentation record pour la ligne 14'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
    "scope": "measurement:usb-fs-interrupt-min-period-m1",
    "field": "notes",
    "text": "« typical of HID mice/keyboards »",
@@ -3874,9 +4126,27 @@
    "basis": "rule:licence-notice"
   },
   {
+   "scope": "source:src-airfrance-concorde-kit-2001",
+   "field": "accessNotes",
+   "text": "'On board the Air France Concorde'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
    "scope": "source:src-azure-latency",
    "field": "accessNotes",
    "text": "'source row x destination column'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-bionumbers-enzyme-rates",
+   "field": "accessNotes",
+   "text": "'106-107'",
    "kind": "quoted",
    "decision": "publish",
    "ground": "locating-label",
@@ -4027,6 +4297,15 @@
    "basis": "rule:access-label"
   },
   {
+   "scope": "source:src-nobel-phys-2023-popular",
+   "field": "accessNotes",
+   "text": "'Shorter pulses with the help of high overtones'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
    "scope": "source:src-pdg2024-baryons",
    "field": "accessNotes",
    "text": "'Mean life τ = 878.4 ± 0.5 s (S = 1.8)'",
@@ -4045,6 +4324,15 @@
    "basis": "rule:access-label"
   },
   {
+   "scope": "source:src-richter-2017-irhoud",
+   "field": "accessNotes",
+   "text": "'About 300,000 years ago to present'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
    "scope": "source:src-seagate-exos-x20",
    "field": "license",
    "text": "'© 2021 Seagate Technology LLC. All rights reserved.'",
@@ -4057,6 +4345,15 @@
    "scope": "source:src-solidigm-p5520-brief",
    "field": "license",
    "text": "'© Solidigm 2022. All rights reserved.'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "attribution",
+   "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "source:src-stivers-2009-turn",
+   "field": "license",
+   "text": "'Copyright and License information'",
    "kind": "quoted",
    "decision": "publish",
    "ground": "attribution",
@@ -4088,6 +4385,24 @@
    "decision": "publish",
    "ground": "attribution",
    "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "source:src-wilde-2001-zircon",
+   "field": "accessNotes",
+   "text": "'4.4 billion years old'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-wilde-2001-zircon",
+   "field": "accessNotes",
+   "text": "'Ancient Crystals Suggest Earlier Ocean'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
   },
   {
    "scope": "withheld:osu-latency-crossroads-8b-m1",

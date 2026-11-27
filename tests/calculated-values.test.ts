@@ -29,6 +29,18 @@ const ORACLE: Record<string, () => number> = {
   'ethernet-min-frame-wire-time-10g': () => ((si('ethernet-min-frame-size') + 8 + 12) * 8) / 1e10,
   'ethernet-min-frame-wire-time-100g': () => ((si('ethernet-min-frame-size') + 8 + 12) * 8) / 1e11,
   'linux-tick-period-hz1000': () => 1 / 1000, // Kconfig option HZ_1000 (cited source)
+  // R1 v2.1 lot 2 (2026-11-27): inputs are the figures printed by the cited sources.
+  'nat-hummingbird-heartbeat': () => 60 / 1200, // NPS: 1200 beats per minute
+  'phys-red-light-oscillation-period': () => 1 / 4.3e14, // Nobel 2023: about 4.3e14 Hz
+  'chem-water-oh-stretch-vibration-period': () => 1 / (2.99792458e10 * 3657), // NIST WebBook: 3657 cm^-1
+  'chem-carbonic-anhydrase-turnover': () => 1 / 1e6, // BioNumbers: kcat 10^6 /s (lower end)
+  'chem-median-enzyme-turnover': () => 1 / 10, // BioNumbers: median kcat about 10 /s
+  'geo-cambrian-duration': () => (538.8 - 486.85) * 1e6 * 31_557_600, // ICS chart v2026/06 boundaries (Ma)
+  'geo-mesozoic-duration': () => (251.902 - 66.0) * 1e6 * 31_557_600, // ICS chart v2026/06
+  'geo-age-great-pyramid': () => ((2026 + 2551 - 1 + 2026 + 2528 - 1) / 2) * 31_557_600, // Met: Khufu r. ca. 2551–2528 B.C., no year 0
+  'geo-time-since-cuneiform': () => (2026 + 3200 - 1) * 31_557_600, // Met: 3200–3000 B.C. (upper end), no year 0
+  'geo-time-since-gutenberg-bible': () => (2026 - 1455) * 31_557_600, // Library of Congress: 1455
+  'cog-saccade-duration': () => [31.52, 31.44, 56.17, 47.95, 36.85, 44.94, 68.22, 49.41, 43.91].sort((x, y) => x - y)[4]! * 1e-3, // Gibaldi & Sabatini 2021, Table 5: median of subject means
   'usb-fs-max-polling-rate': () => 1 / si('usb-fs-interrupt-min-period'),
   'usb-hs-max-polling-rate': () => 1 / si('usb-hs-microframe'), // bInterval = 1 → 2^0 × 125 µs
   'frame-time-60hz': () => 1 / si('hdmi-8k60-refresh'),

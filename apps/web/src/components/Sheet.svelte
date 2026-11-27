@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { UNIVERSE_OF } from '@chronosilicon/ontology';
   import { app } from '../lib/app.svelte';
   import { measurementById, phenomenonOf, sourceById } from '../lib/corpus';
   import { clockedObserver, toSubjective } from '@chronosilicon/observers';
@@ -24,7 +25,7 @@
   {#if m}
     {@const p = phenomenonOf(m)}
     <header>
-      <p class="kicker">{t('sheet.heading')} · {t(`domain.${p.domain}`)}</p>
+      <p class="kicker">{t('sheet.heading')} · {(p.universes ?? [UNIVERSE_OF[p.domain]]).map((u) => t(`universe.${u}`)).join(' · ')}</p>
       <h2 id="sheet-h">{p.label[lang]}</h2>
       <button type="button" class="close" onclick={close} aria-label={t('sheet.close')}>×</button>
     </header>

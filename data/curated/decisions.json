@@ -774,8 +774,32 @@
       }
     },
     "physio-saccade-reading": {
+      "status": "rejected",
+      "reason": "Superseded (R1 lot 2, 2026-11-27) by cog-saccade-duration, sourced from a primary open-access study (Gibaldi & Sabatini 2021); the earlier value rested on Wikipedia only."
+    },
+    "chem-water-hydrogen-bond-exchange": {
       "status": "pending",
-      "reason": "Only source opened is Wikipedia (last resort); the primary reference (Purves, Neuroscience, NCBI Bookshelf) was blocked by a CAPTCHA. Held back until a primary source is read (R1 lot 2026-11-27)."
+      "reason": "Source (Chem Rev 2026, ACS) could not be opened by the maintainer for the check (anti-bot page, HTTP 403). Held back until verified (R1 lot 2, 2026-11-27)."
+    },
+    "phys-red-light-oscillation-period": {
+      "reason": "Calculated value stored unrounded so that it is reproducible from its formula (1 / 4.3e14 Hz); the source figure is approximate (\"about\"), the display rounds it (R1 lot 2).",
+      "patch": {
+        "value": 2.325581395348837
+      }
+    },
+    "chem-water-oh-stretch-vibration-period": {
+      "reason": "Calculated values stored unrounded (1 / (c × ν̃), ν̃ = 3657 and 3756 cm^-1); the display rounds them (R1 lot 2).",
+      "patch": {
+        "value": 9.121249526884112,
+        "low": 8.880833205488605,
+        "high": 9.121249526884112
+      }
+    },
+    "geo-age-great-pyramid": {
+      "reason": "Calculated value stored unrounded: middle of the reign of Khufu (Met: ca. 2551–2528 B.C.), counted to 2026 without a year 0 = 4564.5 years (R1 lot 2).",
+      "patch": {
+        "value": 4564.5
+      }
     }
   },
   "sourcePatches": {

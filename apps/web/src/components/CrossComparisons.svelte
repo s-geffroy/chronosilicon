@@ -20,7 +20,7 @@
     <ul class="cross-cards">
       {#each pairs as p (p.id)}
         <li class="cross-card" data-testid={`cross-${p.id}`}>
-          <p class="cross-line"><button type="button" class="link" onclick={() => open(p.b)}>{name(p.b)}</button> <span class="dur">{formatPhysicalDuration(p.bSeconds, lang)}</span></p>
+          <p class="cross-line">{#if p.b}<button type="button" class="link" onclick={() => open(p.b)}>{name(p.b)}</button>{:else}{name(p.b)}{/if} <span class="dur">{formatPhysicalDuration(p.bSeconds, lang)}</span></p>
           <p class="cross-ratio">{t('cross.times', { n: formatCount(p.ratio, lang) })}</p>
           <p class="cross-line">{#if p.a}<button type="button" class="link" onclick={() => open(p.a)}>{name(p.a)}</button>{:else}{name(p.a)}{/if} <span class="dur">{formatPhysicalDuration(p.aSeconds, lang)}</span></p>
           <p class="cross-subj">{t('cross.subjective', { f: formatFrequency(app.s.frequencyHz, lang), a: subj(p.aSeconds), b: subj(p.bSeconds) })}</p>

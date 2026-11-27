@@ -121,6 +121,72 @@
     "ind-model-t-assembly-before-line": [
       "industry",
       "history-geology"
+    ],
+    "trans-iss-orbit": [
+      "transport",
+      "astronomy"
+    ],
+    "trans-apollo11-earth-to-moon-orbit": [
+      "transport",
+      "astronomy"
+    ],
+    "nat-hummingbird-heartbeat": [
+      "nature",
+      "biology",
+      "physiology"
+    ],
+    "nat-hummingbird-gulf-crossing": [
+      "nature",
+      "biology"
+    ],
+    "nat-monarch-fall-migration": [
+      "nature",
+      "biology"
+    ],
+    "geo-age-homo-sapiens": [
+      "history-geology",
+      "biology"
+    ],
+    "chem-retinal-isomerisation-vision": [
+      "chemistry",
+      "physiology"
+    ],
+    "chem-photosystem-ii-charge-separation": [
+      "chemistry",
+      "biology",
+      "nature"
+    ],
+    "cog-saccade-duration": [
+      "cognition",
+      "physiology"
+    ],
+    "cog-reading-fixation": [
+      "cognition",
+      "everyday"
+    ],
+    "cog-conversation-turn-gap": [
+      "cognition",
+      "everyday"
+    ],
+    "trans-tgv-paris-lyon": [
+      "transport",
+      "everyday"
+    ],
+    "trans-paris-metro-14-headway": [
+      "transport",
+      "everyday"
+    ],
+    "trans-737-800-turnaround": [
+      "transport",
+      "industry"
+    ],
+    "chem-carbonic-anhydrase-turnover": [
+      "chemistry",
+      "biology"
+    ],
+    "chem-median-enzyme-turnover": [
+      "chemistry",
+      "biology"
     ]
   }
 }

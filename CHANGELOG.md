@@ -2,7 +2,16 @@
 
 Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant qu'une version n'est pas validée par sa porte et publiée.
 
-## [Non publié] — R1 v2.1 (branche `editorial-r1c`)
+## [Non publié] — R1 lot 2 (branche `r1-lot2`)
+
+### Ajouté
+- 43 valeurs : chimie et physique ultrarapide, nature, transports, histoire et géologie, cognition. Les 12 univers sont représentés.
+- Unité attoseconde. Comparaisons « réseau et TGV » et « impulsion attoseconde et cycle ».
+
+### Modifié
+- La fiche affiche les univers. ESLint 10.15.0.
+
+## [Publié 2026-11-27, `e48db4e`] — R1 v2.1
 
 ### Ajouté
 - Atlas transversal des échelles du temps (ADR-0012) : douze univers, une projection éditoriale qui permet plusieurs univers par phénomène, et neuf nouveaux domaines.
@@ -16,7 +25,7 @@ Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant 
 - Durées longues écrites en min, h, j et années ; notation scientifique aux extrêmes : plus de « 1E17 s ».
 - Gouvernance simplifiée (directive v2.0) : un contrôle de livraison automatisé unique, et les archives conservées.
 
-## [Non publié] — PUBLICATION-01 (tag `publication-01-rc5`)
+## [Publié 2026-11-27, `c2f191e`] — PUBLICATION-01 (tag `publication-01-rc5`)
 - Bandeau « prototype scientifique et pédagogique expérimental », section Statut, mention de licence précisée.
 
 ## [Non publié] — REMEDIATION-02 (branche `remediation-02`, tag `remediation-02-rc4` ; `rc3` remplacée, CI en échec au lint)
