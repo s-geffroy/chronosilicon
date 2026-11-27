@@ -15,6 +15,11 @@ Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source cano
   - Moteurs et interface inchangés depuis rc2.
 - **Non publiée.** `main` et le site restent sur `491c989`. On attend l'audit de clôture (ChatGPT) et les décisions de l'utilisateur : contenus publics, relecture juridique, P3.
 - Corpus `0.3.0+0c9ebc16ce31` : 238 valeurs qualifiées, 185 `withheld`.
+- Tag `remediation-02-rc4` sur `c70edca` : CI de ce commit verte (run 46010295184).
+- Copie Drive vérifiée le 2026-11-27 dans `…/2026-11-27_AUDIT-02/02_REMEDIATION_CLAUDE/rc4/` (https://drive.google.com/drive/folders/1_uCdJANyZ06Q3ivjoXykC1jQcRH4ApMY) :
+  - 12 fichiers, dont `chronosilicon-remediation-02-rc4.zip` (SHA-256 174c93cd…) et `DEPOSIT-SHA256SUMS.txt` ;
+  - tailles concordantes ; l'archive et le fichier d'empreintes, retéléchargés, ont la même empreinte SHA-256 ;
+  - les fichiers de rc3, remplacée, restent à la racine de `02_REMEDIATION_CLAUDE`, sans écrasement.
 
 ## REMEDIATION-01 : version candidate non publiée (2026-11-27)
 
