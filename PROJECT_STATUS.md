@@ -8,6 +8,7 @@ Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source cano
 - Version candidate : tag `remediation-01-rc2`, code testé `9e28892` ; `rc1` est remplacé, car sa CI a échoué sur ENOENT dans `dist:manifest`. Porte `remediation-01` PASS : 281 tests unitaires, 100 e2e sur l'artefact, porte de vulnérabilités.
 - **Non publiée.** `main` et le site restent sur `491c989`. On attend AUDIT-02 et la décision de l'utilisateur, en particulier sur les extraits déjà publiés (`remediation/SOURCE-RIGHTS.md` §4).
 - Corpus de la version candidate : 238 valeurs qualifiées (5 contestées). Extraits tiers retenus pour 185 valeurs (ADR-0011).
+- Copie Drive vérifiée le 2026-11-27 : `…/2026-11-27_AUDIT-01/02_REMEDIATION_CLAUDE/rc2/` (https://drive.google.com/drive/folders/1RqJFArEE5dQ-rHZPDTTw7quQajeaZYEp). Elle contient 34 fichiers : 13 documents de remédiation, 18 journaux, l'archive `chronosilicon-remediation-01-rc2.zip` (SHA-256 8c74906c…), `README-rc2.md` et `DEPOSIT-SHA256SUMS.txt`. Toutes les tailles concordent, et l'archive comme le fichier d'empreintes, retéléchargés, ont la même empreinte SHA-256. La version `rc1`, remplacée, reste à la racine du dossier, sans écrasement.
 
 ## AUDIT-01 : audit indépendant (ouvert et rendu le 2026-11-27)
 
