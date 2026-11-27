@@ -8,6 +8,7 @@ const fr = {
   'app.tagline': 'Un atlas ouvert du temps informatique',
   'app.subtitle': 'Percevoir les durées des systèmes informatiques depuis le point de vue d’un processeur.',
   'app.provisionalName': 'Nom provisoire (sous réserve de vérification).',
+  'app.status': 'Prototype scientifique et pédagogique expérimental : valeurs sourcées, non certifiées.',
   'app.skip': 'Aller au contenu',
   'app.metaphor':
     'Métaphore pédagogique : un cœur cadencé à {f} vit chaque cycle comme une seconde. Il ne s’agit ni de conscience ni de relativité physique.',
@@ -144,7 +145,11 @@ const fr = {
   'about.status': 'État du projet',
   'about.statusBody':
     'Version {app}, corpus {corpus} : {n} valeurs qualifiées. Réalisés : chronologie, convertisseur, architecture, comparaison, observateurs, simulation, immersion, laboratoire.',
-  'about.licenses': 'Licences : code Apache-2.0, documentation et contenus originaux CC BY 4.0, données originales CC0 1.0. Les sources tierces gardent leurs propres conditions et sont citées, pas copiées.',
+  'about.licenses':
+    'Licences : code Apache-2.0, documentation et contenus originaux CC BY 4.0, données originales CC0 1.0. Les sources tierces gardent leurs propres conditions ; elles sont citées par référence et localisateur. Quand leur droit de redistribution n’est pas établi, leurs extraits ne sont pas reproduits, hormis de courts libellés de tableau, termes et mentions de licence nécessaires pour retrouver la valeur. Cette règle de prudence n’est pas un avis juridique.',
+  'about.prototype': 'Statut',
+  'about.prototypeBody':
+    'Prototype scientifique et pédagogique expérimental. Chaque valeur est sourcée et vérifiée par la curation du projet, sans validation humaine externe ni certification ; le corpus est partiel et l’interface peut changer. Ne pas utiliser ces valeurs comme référence normative.',
   'about.repo': 'Dépôt GitHub',
   'about.method': 'Méthode et limites',
   'about.methodBody':
@@ -293,6 +298,7 @@ const en: Record<MessageKey, string> = {
   'app.tagline': 'An Open Atlas of Computational Time',
   'app.subtitle': 'Experience the time scales of computer systems through the eyes of a processor.',
   'app.provisionalName': 'Provisional name (subject to verification).',
+  'app.status': 'Experimental scientific and educational prototype: sourced values, not certified.',
   'app.skip': 'Skip to content',
   'app.metaphor':
     'Teaching metaphor: a core clocked at {f} experiences each cycle as one second. It implies neither consciousness nor physical relativity.',
@@ -428,7 +434,11 @@ const en: Record<MessageKey, string> = {
   'about.status': 'Project status',
   'about.statusBody':
     'Version {app}, corpus {corpus}: {n} qualified values. Built: timeline, converter, architecture, comparison, observers, simulation, immersion, laboratory.',
-  'about.licenses': 'Licences: code Apache-2.0, original documentation and content CC BY 4.0, original data CC0 1.0. Third-party sources keep their own terms and are cited, not copied.',
+  'about.licenses':
+    'Licences: code Apache-2.0, original documentation and content CC BY 4.0, original data CC0 1.0. Third-party sources keep their own terms; they are cited by reference and locator. Where their redistribution right is not established, their excerpts are not reproduced, except short table labels, terms and licence notices needed to find the value. This precautionary rule is not legal advice.',
+  'about.prototype': 'Status',
+  'about.prototypeBody':
+    'Experimental scientific and educational prototype. Every value is sourced and checked by the project’s curation, without external human validation or certification; the corpus is partial and the interface may change. Do not use these values as a normative reference.',
   'about.repo': 'GitHub repository',
   'about.method': 'Method and limits',
   'about.methodBody':

@@ -343,3 +343,17 @@ test('table view shows every dispersion with its type (review of uncertainty, M1
   await expect(page.getByTestId('duration-table')).toContainText('± 2 ms (standard error)');
   await expect(page.getByTestId('duration-table')).toContainText('± 25 ms (unspecified ±)');
 });
+
+// PUBLICATION-01 (D18): the site states its experimental-prototype status on every view, FR and EN.
+test('experimental prototype status is visible on every view, in French and English', async ({ page }) => {
+  await page.goto('./#/timeline?lang=fr');
+  const banner = page.getByTestId('status-banner');
+  await expect(banner).toContainText('Prototype scientifique et pédagogique expérimental');
+  await expect(banner).toContainText('non certifiées');
+  await page.goto('./#/simulation?lang=en');
+  await expect(banner).toContainText('Experimental scientific and educational prototype');
+  await banner.getByRole('link').click();
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('About');
+  await expect(page.getByTestId('prototype-status')).toContainText('without external human validation or certification');
+  await expect(page.getByText('This precautionary rule is not legal advice.')).toBeVisible();
+});

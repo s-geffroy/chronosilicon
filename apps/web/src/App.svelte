@@ -57,6 +57,10 @@
   </nav>
 </header>
 
+<p class="status-banner" role="note" data-testid="status-banner">
+  {t('app.status')} <a href={app.href({ route: 'about', selected: null })}>{t('about.method')}</a>
+</p>
+
 <main id="main" tabindex="-1">
   <p class="metaphor">{t('app.metaphor', { f: formatFrequency(app.s.frequencyHz, app.s.lang) })}</p>
   {#if route === 'timeline'}
