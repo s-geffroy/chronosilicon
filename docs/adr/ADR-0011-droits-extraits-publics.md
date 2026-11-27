@@ -18,3 +18,13 @@
   - Le seuil de 6 mots et le choix de garder les titres dans les localisateurs sont des choix de prudence, pas des seuils juridiques.
   - Cette ADR n'est **pas un avis juridique** ; une revue humaine des droits reste à faire.
   - Réversible : une source dont la redistribution est établie plus tard republie ses extraits sans autre changement.
+
+## Amendement du 2026-11-27 (REMEDIATION-02, AUD02-002)
+
+- **Raison** : AUDIT-02 a montré que la règle du point 1 (passages entre guillemets de 6 mots ou plus, dans trois champs) laissait passer les reprises sans guillemets, les citations courtes et les autres champs. Il ne fallait pas la présenter comme une garantie.
+- **Décision** : la vue publique applique désormais la politique **PUB-1** (`docs/audits/AUDIT-02/remediation/PUBLICATION-POLICY.md`) :
+  1. **Champs publics explicites** (`PUBLIC_FIELDS`) : un champ non listé fait échouer la construction.
+  2. **Décision texte par texte** pour toute citation entre guillemets, quelle que soit sa longueur, et pour toute reprise sans guillemets de 6 mots ou plus d'un texte tiers, dans les champs rédigés d'une portée non ouverte. Les décisions sont dans `data/publication/text-decisions.json`, qui entre dans `inputs` et dans la version du corpus. Une décision manquante, périmée ou en double fait échouer la construction.
+  3. **Contrôle global** sur le corpus public et sur le site construit (`npm run publication:check`, dans la porte, `ci.yml` et `pages.yml`).
+- `publicView` est remplacée par `applyPublicationPolicy`. Le point 1 ci-dessus est caduc. Les points 2 à 5 restent valables, et le point 6 est complété par `tests/remediation-02-publication.test.ts`.
+- **Toujours pas un avis juridique.** Les décisions motivées par une règle ont été relues par catégorie ; seules 23 ont été relues une à une.
