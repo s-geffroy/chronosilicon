@@ -41,6 +41,8 @@ jobs:
       - run: npm run build
         env:
           BASE_PATH: /chronosilicon/
+      # AUD02-002: no withheld third-party wording in the built site (policy PUB-1).
+      - run: npm run publication:check
       - run: npm run dist:manifest -- write
       - run: npm run test:e2e
         env:

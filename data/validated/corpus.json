@@ -1,13 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "corpusVersion": "0.3.0+965d1230a867",
+  "corpusVersion": "0.3.0+0c9ebc16ce31",
   "inputs": {
     "data/sources/sources.json": "71566c6bfd2b20268b40497da849c4e1e54c372aa776b2fcd7b16a24aab5cbad",
     "data/curated/phenomena.json": "310ade2c3fda90b9eae3f0f7198f49a9187144ba6a379dac436e93312145e0f0",
     "data/curated/measurements.json": "a62c7169bd829fb495294a0dd4a54fbd54a8aff3621bfd1cf889c1409be06fa6",
     "data/curated/groups.json": "30480b338290a48e54f9b8c58303368f37749d28bd5d906eb7804378c0c72772",
     "data/curated/observers.json": "16d7b09cf5d838bfe153241917bbf4054df8f57f3a7a354d4638a0bdb20b55bd",
-    "data/curated/scenarios.json": "c922b1ea2e636abf6eddcc895126dcebb879f675478a61a7406101a603f2b0de"
+    "data/curated/scenarios.json": "c922b1ea2e636abf6eddcc895126dcebb879f675478a61a7406101a603f2b0de",
+    "data/publication/text-decisions.json": "b564f7ab36474e50b4f168dd6c262b7cf870dbe8de61e453f17b44baf3f2b0a8"
   },
   "phenomena": [
     {
@@ -5887,7 +5888,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#pcie4-lane-rate",
-      "notes": "Press-release text read on a third-party reproduction because pcisig.com refused the request (403). No x16 GB/s value in this release. | Verifier: Valeur exacte. 'per direction, before 128b/130b encoding' ne figure pas dans la source : retiré.",
+      "notes": "Press-release text read on a third-party reproduction because pcisig.com refused the request (403). No x16 GB/s value in this release. | Verifier: Valeur exacte. […] ne figure pas dans la source : retiré.",
       "quantityKind": "transfer_rate",
       "valueSI": 16000000000,
       "lowSI": null,
@@ -5898,7 +5899,8 @@
         "status": "withheld",
         "reason": "redistribution-not-established",
         "redacted": [
-          "quote"
+          "quote",
+          "notes"
         ]
       }
     },
@@ -6088,7 +6090,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#cxl3-data-rate",
-      "notes": "'64GTs' is written without slash in the source. The 'no added latency' claim is not quantified. | Verifier: Valeur juste ; « built on PCIe 6.0 electricals » non sourcé ; c'est la 2e puce, pas la 1re.",
+      "notes": "'64GTs' is written without slash in the source. The 'no added latency' claim is not quantified. | Verifier: Valeur juste ; […] non sourcé ; c'est la 2e puce, pas la 1re.",
       "quantityKind": "transfer_rate",
       "valueSI": 64000000000,
       "lowSI": null,
@@ -6099,7 +6101,8 @@
         "status": "withheld",
         "reason": "redistribution-not-established",
         "redacted": [
-          "quote"
+          "quote",
+          "notes"
         ]
       }
     },
@@ -7336,7 +7339,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26-C_storage_interconnect_gpu_ai.json#exos-x20-average-latency",
-      "notes": "Matches the half-rotation calculation (item hdd-7200rpm-half-rotation) to 3 significant figures, confirming its meaning. Seek time is not given in this data sheet. | Verifier: L'interprétation « demi-tour, hors temps d'accès » est une déduction, pas un énoncé de la source.",
+      "notes": "Matches the half-rotation calculation (item hdd-7200rpm-half-rotation) to 3 significant figures, confirming its meaning. Seek time is not given in this data sheet. | Verifier: L'interprétation […] est une déduction, pas un énoncé de la source.",
       "quantityKind": "duration",
       "valueSI": 0.0041600000000000005,
       "lowSI": null,
@@ -7347,7 +7350,8 @@
         "status": "withheld",
         "reason": "redistribution-not-established",
         "redacted": [
-          "quote"
+          "quote",
+          "notes"
         ]
       }
     },
@@ -10117,7 +10121,7 @@
       "low": 9.2,
       "high": null,
       "conditions": {
-        "fr": "Micron HBM3E 8 et 12 couches ; par broche d’E/S ; « supérieur à 9,2 Gbit/s » : valeur plancher.",
+        "fr": "Micron HBM3E 8 et 12 couches ; par broche d’E/S ; […] : valeur plancher.",
         "en": "Micron HBM3E 8-high and 12-high; per I/O pin; 'greater than 9.2Gbps': lower bound."
       },
       "protocol": null,
@@ -10144,6 +10148,7 @@
         "status": "withheld",
         "reason": "redistribution-not-established",
         "redacted": [
+          "conditions.fr",
           "quote"
         ]
       }
@@ -10279,7 +10284,7 @@
       "high": 500,
       "conditions": {
         "fr": "Intel Xeon E5-2630 v3, Linux avec KPTI (introduit après la 4.14), avec ou sans PCID ; la borne basse du coût constant de KPTI par entrée et sortie du noyau est […] ; la valeur 400 est le bas de cette plage ; coût dominé par deux écritures de CR3 d’environ 200 cycles chacune.",
-        "en": "Intel Xeon E5-2630 v3, Linux with KPTI (introduced after 4.14), with or without PCID; the lower bound of KPTI's constant cost per kernel entry and exit is […]; value 400 = low end of that range; mainly two CR3 writes of around 200 cycles each."
+        "en": "Intel Xeon E5-2630 v3, Linux with KPTI (introduced after 4.14), with or without PCID; the lower bound of KPTI's constant cost per kernel entry and exit […]; value 400 = low end of that range; mainly two CR3 writes of around 200 cycles each."
       },
       "protocol": "KPTI constant cost measured by comparing an empty system call with and without the KPTI patch, measuring cycles spent in the MMU TLB miss handler, and subtracting that increase from the overall latency increase (footnote 1). HP DL160 G9 server, Intel Xeon E5-2630 v3 2.40 GHz, 128 GB DDR4 1866 MHz; Ubuntu-configured Linux kernels 3.0 to 4.20. The paper's general LEBench method (10,000 repetitions, K-best K=5, 5% tolerance) is described for its microbenchmarks; the paper does not say it was applied to this empty-system-call figure.",
       "provenanceType": "measured",
@@ -10305,9 +10310,9 @@
         "status": "withheld",
         "reason": "redistribution-not-established",
         "redacted": [
-          "quote",
           "conditions.fr",
-          "conditions.en"
+          "conditions.en",
+          "quote"
         ]
       }
     },
@@ -10844,10 +10849,10 @@
         "status": "withheld",
         "reason": "redistribution-not-established",
         "redacted": [
-          "quote",
-          "notes",
           "conditions.fr",
-          "conditions.en"
+          "conditions.en",
+          "quote",
+          "notes"
         ]
       }
     },
@@ -10916,7 +10921,7 @@
       "statistics": null,
       "calculation": null,
       "rawRef": "data/raw/m00-2026-11-26b-C_storage_gpu_ai_peripheral.json#pcie3-lane-rate",
-      "notes": "Faithful reprint of the PCI-SIG press release; pcisig.com itself could not be fetched by the tool. | Verifier: Secondary reprint of the PCI-SIG press release; pcisig.com not retried. | Decision: Unsourced derived figure ('about 1 GB/s per direction') removed from the conditions (lot-2 review m7).",
+      "notes": "Faithful reprint of the PCI-SIG press release; pcisig.com itself could not be fetched by the tool. | Verifier: Secondary reprint of the PCI-SIG press release; pcisig.com not retried. | Decision: Unsourced derived figure ([…]) removed from the conditions (lot-2 review m7).",
       "quantityKind": "transfer_rate",
       "valueSI": 8000000000,
       "lowSI": null,
@@ -10927,7 +10932,8 @@
         "status": "withheld",
         "reason": "redistribution-not-established",
         "redacted": [
-          "quote"
+          "quote",
+          "notes"
         ]
       }
     },
@@ -13241,7 +13247,7 @@
       "accessedAt": "2026-11-26",
       "license": "Copyright 1993-2026 TOP500.org (c); no open licence stated",
       "redistribution": "reference-only",
-      "accessNotes": "HTML fetched with curl on 2026-11-26 (HTTP 200); table converted to text, so quotes are the text of one table row with whitespace collapsed. Page header: \"R max and R peak values are in PFlop/s\". Power column in kW not used (no compatible quantityKind).",
+      "accessNotes": "HTML fetched with curl on 2026-11-26 (HTTP 200); table converted to text, so quotes are the text of one table row with whitespace collapsed. Page header: […]. Power column in kW not used (no compatible quantityKind).",
       "verificationStatus": "qualified"
     },
     {

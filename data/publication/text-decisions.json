@@ -1,0 +1,3712 @@
+{
+ "_comment": "Publication policy PUB-1 (REMEDIATION-02, AUD02-002; ADR-0011 amended; SOURCE-RIGHTS.md). One decision per text finding in a non-open scope: quoted span (any length) or unquoted run of 6+ words shared with a third-party text. basis = rule:<name> (proposed by draft-text-decisions.py, then read by the maintainer) or review (decided case by case). This is a precautionary maintainer decision, not a legal opinion; it awaits human review.",
+ "schemaVersion": 1,
+ "policy": "PUB-1",
+ "decidedAt": "2026-11-27",
+ "decisions": [
+  {
+   "scope": "group:cmp-azure-rtt",
+   "field": "note.en",
+   "text": "'same protocol'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-azure-rtt",
+   "field": "note.en",
+   "text": "'same source'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-azure-rtt",
+   "field": "note.fr",
+   "text": "« même protocole »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-azure-rtt",
+   "field": "note.fr",
+   "text": "« même source »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-hbm-stack",
+   "field": "note.en",
+   "text": "'Per stack'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-hbm-stack",
+   "field": "note.en",
+   "text": "'more than'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-hbm-stack",
+   "field": "note.en",
+   "text": "'per placement'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-hbm-stack",
+   "field": "note.en",
+   "text": "'reaches'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-hbm-stack",
+   "field": "note.en",
+   "text": "'up to'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-hbm-stack",
+   "field": "note.fr",
+   "text": "« Par pile »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-hbm-stack",
+   "field": "note.fr",
+   "text": "« atteint »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-hbm-stack",
+   "field": "note.fr",
+   "text": "« jusqu'à »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-hbm-stack",
+   "field": "note.fr",
+   "text": "« per placement »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-hbm-stack",
+   "field": "note.fr",
+   "text": "« plus de »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-mlperf-ttft",
+   "field": "note.en",
+   "text": "'interactive'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-mlperf-ttft",
+   "field": "note.fr",
+   "text": "« interactive »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-top500-2026-11-top5",
+   "field": "note.en",
+   "text": "'never ranked by value'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:cmp-top500-2026-11-top5",
+   "field": "note.fr",
+   "text": "« jamais classé par valeur »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:hier-icelake-client",
+   "field": "note.en",
+   "text": "'xx'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:hier-icelake-client",
+   "field": "note.fr",
+   "text": "« xx »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:hier-skylake-client",
+   "field": "note.fr",
+   "text": "« les plus courtes »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:hier-zen4",
+   "field": "note.en",
+   "text": "'no less than 14 cycles'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:hier-zen4",
+   "field": "note.fr",
+   "text": "« pas moins de 14 cycles »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:hier-zen5",
+   "field": "note.en",
+   "text": "'no less than 14 cycles'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "group:hier-zen5",
+   "field": "note.fr",
+   "text": "« pas moins de 14 cycles »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:amd-athlon-1ghz-2000-m1",
+   "field": "notes",
+   "text": "'K7'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:amd-athlon-1ghz-2000-m1",
+   "field": "notes",
+   "text": "'Original Document'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:amd-zen4-l1d-load-to-use-m1",
+   "field": "locator",
+   "text": "'L1 Data Cache'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:amd-zen4-l2-load-to-use-m1",
+   "field": "locator",
+   "text": "'L2 Cache'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:amd-zen4-l3-load-to-use-m1",
+   "field": "locator",
+   "text": "'L3 Cache'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:amd-zen5-l1d-load-to-use-m1",
+   "field": "locator",
+   "text": "'L1 Data Cache'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:amd-zen5-l2-load-to-use-m1",
+   "field": "locator",
+   "text": "'L2 Cache'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:amd-zen5-l3-load-to-use-m1",
+   "field": "locator",
+   "text": "'L3 Cache'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:android-pro-audio-rtl-max-analog-m1",
+   "field": "notes",
+   "text": "'Start of requirements changed in Android 16'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:arm-cortex-a520-l1-hit-latency-m1",
+   "field": "locator",
+   "text": "\"Cortex-A520 cache access latencies\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:arm-neoverse-n2-l1d-load-latency-m1",
+   "field": "locator",
+   "text": "\"AArch64 Load instructions\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:arm-neoverse-n2-l1d-load-latency-m1",
+   "field": "notes",
+   "text": "'First release for r0p3'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:arm-neoverse-v3-l1d-load-latency-m1",
+   "field": "locator",
+   "text": "\"AArch64 Load instructions\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:audio-sample-rate-44100-m1",
+   "field": "notes",
+   "text": "'standard PCM rate'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:audio-sample-rate-48000-m1",
+   "field": "notes",
+   "text": "'only shared-mode rate above 44.1 kHz'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:azure-rtt-eastus-australiaeast-m1",
+   "field": "locator",
+   "text": "'Australia East'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:azure-rtt-eastus-australiaeast-m1",
+   "field": "locator",
+   "text": "'East US'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:azure-rtt-eastus-australiaeast-m1",
+   "field": "notes",
+   "text": "'Virginia to New South Wales'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:azure-rtt-eastus-westeurope-m1",
+   "field": "locator",
+   "text": "'East US'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:azure-rtt-eastus-westeurope-m1",
+   "field": "locator",
+   "text": "'West Europe'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:azure-rtt-eastus-westeurope-m1",
+   "field": "notes",
+   "text": "'Netherlands'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:azure-rtt-eastus-westeurope-m1",
+   "field": "notes",
+   "text": "'The measurements are collected in 1-minute intervals'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:azure-rtt-eastus-westeurope-m1",
+   "field": "notes",
+   "text": "'Virginia'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:azure-rtt-eastus-westus-m1",
+   "field": "locator",
+   "text": "'East US'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:azure-rtt-eastus-westus-m1",
+   "field": "locator",
+   "text": "'West US'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:azure-rtt-westeurope-francecentral-m1",
+   "field": "locator",
+   "text": "'France Central'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:azure-rtt-westeurope-francecentral-m1",
+   "field": "locator",
+   "text": "'West Europe'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:azure-rtt-westeurope-francecentral-m1",
+   "field": "notes",
+   "text": "'Amsterdam area to Paris area'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:b200-nvlink-gpu-to-gpu-m1",
+   "field": "conditions.en",
+   "text": "NVLink, GPU-to-GPU bandwidth; 1.8 TB/s",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Interface name, metric and value."
+  },
+  {
+   "scope": "measurement:b200-nvlink-gpu-to-gpu-m1",
+   "field": "locator",
+   "text": "'NVLink GPU-to-GPU Bandwidth'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:b200-nvlink-gpu-to-gpu-m1",
+   "field": "notes",
+   "text": "'Total Memory 2.1 TB 1.4 TB'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:b200-per-gpu-hbm-bandwidth-m1",
+   "field": "locator",
+   "text": "'GPU Memory'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ble-max-connection-interval-m1",
+   "field": "locator",
+   "text": "\"Connection Parameters\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ble-min-connection-interval-m1",
+   "field": "locator",
+   "text": "\"Connection Parameters\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:cuda-null-kernel-launch-h100-m1",
+   "field": "locator",
+   "text": "'Null-kernel T_sys^floor (μs) measured in isolation'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:cuda-null-kernel-launch-h100-m1",
+   "field": "protocol",
+   "text": "'profiled under the same protocol'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:cuda-null-kernel-launch-h200-m1",
+   "field": "protocol",
+   "text": "'profiled under the same protocol'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:cxl3-data-rate-m1",
+   "field": "locator",
+   "text": "'Doubles the bandwidth to 64GTs'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:cxl3-data-rate-m1",
+   "field": "notes",
+   "text": "'64GTs'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:cxl3-data-rate-m1",
+   "field": "notes",
+   "text": "'no added latency'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:cxl3-data-rate-m1",
+   "field": "notes",
+   "text": "« built on PCIe 6.0 electricals »",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:ddr4-3200-cl-micron-m1",
+   "field": "locator",
+   "text": "'Key Timing Parameters'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ddr4-8gb-trfc1-micron-m1",
+   "field": "locator",
+   "text": "'tREFI and tRFC Parameters'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ddr4-trefi-micron-m1",
+   "field": "locator",
+   "text": "'tREFI and tRFC Parameters'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ddr5-5600b-taa-micron-m1",
+   "field": "locator",
+   "text": "'Part Numbers and Timing Parameters'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:dgx-b200-total-hbm-bandwidth-m1",
+   "field": "locator",
+   "text": "'GPU Memory'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:dram-latency-epyc-7702-measured-m1",
+   "field": "locator",
+   "text": "'Latencies'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:dram-latency-pentiumpro-lmbench-1995-m1",
+   "field": "locator",
+   "text": "'Cache and memory latency (ns)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ethernet-400gbe-rate-m1",
+   "field": "notes",
+   "text": "'MAC rate'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ethernet-400gbe-rate-m1",
+   "field": "notes",
+   "text": "'standardised'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ethernet-800gbe-rate-m1",
+   "field": "notes",
+   "text": "'MAC'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:exos-15e900-average-latency-m1",
+   "field": "conditions.en",
+   "text": "'Average Latency'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:exos-15e900-average-latency-m1",
+   "field": "conditions.fr",
+   "text": "« Average Latency »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:exos-15e900-average-latency-m1",
+   "field": "locator",
+   "text": "'Average Latency (ms)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "review",
+   "note": "Residual 4/5. Row label of the specification table; the withheld quote is that label."
+  },
+  {
+   "scope": "measurement:exos-15e900-average-latency-m1",
+   "field": "notes",
+   "text": "'2'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:exos-15e900-average-latency-m1",
+   "field": "notes",
+   "text": "'rotational'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:exos-x20-average-latency-m1",
+   "field": "conditions.en",
+   "text": "'Average Latency'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:exos-x20-average-latency-m1",
+   "field": "conditions.fr",
+   "text": "« latence moyenne »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:exos-x20-average-latency-m1",
+   "field": "locator",
+   "text": "'Average Latency (ms)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:exos-x20-average-latency-m1",
+   "field": "notes",
+   "text": "« demi-tour, hors temps d'accès »",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:exos-x20-spindle-frequency-m1",
+   "field": "locator",
+   "text": "'Spindle Speed (RPM)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:exos-x20-sustained-transfer-m1",
+   "field": "locator",
+   "text": "'Max. Sustained Transfer Rate OD'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:fdsoi28-ro-stage-delay-296k-1v-m1",
+   "field": "notes",
+   "text": "'Measured on wafer'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:fdsoi28-ro-stage-delay-4k-0v325-m1",
+   "field": "notes",
+   "text": "'on wafer'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:geo-one-way-light-time-subsatellite-m1",
+   "field": "locator",
+   "text": "\"Geostationary orbit (GEO)\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:geo-orbit-altitude-m1",
+   "field": "locator",
+   "text": "\"Geostationary orbit (GEO)\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:h100-sxm-fp64-peak-m1",
+   "field": "notes",
+   "text": "'At boost clock'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:h100-sxm-hbm-bandwidth-m1",
+   "field": "locator",
+   "text": "'GPU Memory Bandwidth'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:h100-sxm-hbm-bandwidth-m1",
+   "field": "notes",
+   "text": "« HBM3 »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:h100-sxm-hbm-bandwidth-m1",
+   "field": "notes",
+   "text": "« peak theoretical »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:h100-sxm-nvlink-bandwidth-m1",
+   "field": "locator",
+   "text": "'Interconnect'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:h100-sxm-nvlink-bandwidth-m1",
+   "field": "notes",
+   "text": "« aggregate of all links, both directions as marketed »",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "conditions.en",
+   "text": "'per pin'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "conditions.en",
+   "text": "'per stack'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "conditions.en",
+   "text": "'reaches'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "conditions.en",
+   "text": "with processing speeds 'up to' 6",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Rate with its qualifier."
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "conditions.fr",
+   "text": "« atteint »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "conditions.fr",
+   "text": "« jusqu’à »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "conditions.fr",
+   "text": "« par broche »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "conditions.fr",
+   "text": "« par pile »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "locator",
+   "text": "\"Breakthrough speed, breathtaking performance\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "notes",
+   "text": "'per stack'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3-samsung-stack-bandwidth-m1",
+   "field": "notes",
+   "text": "'reaches'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3e-micron-pin-speed-m1",
+   "field": "conditions.en",
+   "text": "'greater than 9.2Gbps'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3e-micron-pin-speed-m1",
+   "field": "conditions.fr",
+   "text": "« supérieur à 9,2 Gbit/s »",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:hbm3e-micron-pin-speed-m1",
+   "field": "locator",
+   "text": "\"What is the data rate of Micron’s HBM3E\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:hbm3e-micron-stack-bandwidth-m1",
+   "field": "conditions.en",
+   "text": "'more than' 1.2 TB/s",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Bandwidth with its qualifier (found once overlaps crossing quoted spans were merged)."
+  },
+  {
+   "scope": "measurement:hbm3e-micron-stack-bandwidth-m1",
+   "field": "conditions.fr",
+   "text": "« plus de »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3e-micron-stack-bandwidth-m1",
+   "field": "locator",
+   "text": "\"What is the bandwidth of Micron’s HBM3E?\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:hbm3e-micron-stack-bandwidth-m1",
+   "field": "notes",
+   "text": "'per placement'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3e-samsung-12h-stack-bandwidth-m1",
+   "field": "conditions.en",
+   "text": "'up to'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hbm3e-samsung-12h-stack-bandwidth-m1",
+   "field": "conditions.fr",
+   "text": "« jusqu’à »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hdd-15k-spindle-frequency-m1",
+   "field": "conditions.en",
+   "text": "'15K'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hdd-15k-spindle-frequency-m1",
+   "field": "conditions.fr",
+   "text": "« 15K »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hdd-15k-spindle-frequency-m1",
+   "field": "notes",
+   "text": "'15K'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hdd-5400rpm-half-rotation-m1",
+   "field": "locator",
+   "text": "'Spindle Speed (RPM)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:hdd-5400rpm-spindle-frequency-m1",
+   "field": "locator",
+   "text": "'Spindle Speed (RPM)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:hdmi-8k60-refresh-m1",
+   "field": "notes",
+   "text": "'8K60'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hdmi-8k60-refresh-m1",
+   "field": "notes",
+   "text": "« also by HDMI 2.1 »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hdmi21-max-bandwidth-m1",
+   "field": "notes",
+   "text": "'2017'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hdmi21-max-bandwidth-m1",
+   "field": "notes",
+   "text": "'HDMI 2.1 maximum bandwidth'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:hdmi21-max-bandwidth-m1",
+   "field": "notes",
+   "text": "'gross link rate (FRL)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:heron-r1-cz-gate-length-m1",
+   "field": "locator",
+   "text": "\"Device details\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:heron-r1-cz-gate-length-m1",
+   "field": "notes",
+   "text": "'documented'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:heron-r1-cz-gate-length-m1",
+   "field": "notes",
+   "text": "'native CZ'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:heron-r1-median-t1-m1",
+   "field": "locator",
+   "text": "\"Device details\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:heron-r1-median-t1-m1",
+   "field": "notes",
+   "text": "'backend calibration data'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:heron-r1-median-t1-m1",
+   "field": "notes",
+   "text": "'standard relaxation experiments'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:heron-r1-single-qubit-gate-length-m1",
+   "field": "locator",
+   "text": "\"Device details\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:human-stylus-latency-jnd-large-box-m1",
+   "field": "notes",
+   "text": "'2 - 16'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:human-stylus-latency-jnd-large-box-m1",
+   "field": "notes",
+   "text": "'range 2 - 7'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:human-stylus-latency-jnd-small-box-m1",
+   "field": "notes",
+   "text": "'~1 versus 2 milliseconds while dragging'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:human-voluntary-blink-closing-phase-m1",
+   "field": "notes",
+   "text": "'76 ± 2'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Residual 1/5. Table cell (mean ± s.e. in ms): a number, not wording. The statement field itself stays withheld."
+  },
+  {
+   "scope": "measurement:human-voluntary-blink-closing-phase-m1",
+   "field": "uncertainty.locator",
+   "text": "\"This study (2013), 600 fps, n=25\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "review",
+   "note": "Row label of Table 1."
+  },
+  {
+   "scope": "measurement:human-voluntary-blink-closing-phase-m1",
+   "field": "uncertainty.locator",
+   "text": "\"our values are mean ± s.e.\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "review",
+   "note": "Caption fragment that types the dispersion (s.e.); needed to read the uncertainty."
+  },
+  {
+   "scope": "measurement:human-voluntary-blink-duration-m1",
+   "field": "notes",
+   "text": "'a blink'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:human-voluntary-blink-duration-m1",
+   "field": "notes",
+   "text": "'voluntary'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ihp-sg13g2-hbt-fmax-m1",
+   "field": "notes",
+   "text": "'peak'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ihp-sg13g2-hbt-ft-m1",
+   "field": "notes",
+   "text": "'peak fT/fmax values of 300 GHz/500 GHz'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:ihp-sg13g2-hbt-ft-m1",
+   "field": "notes",
+   "text": "'peak value'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ihp-sg13g3-hbt-fmax-m1",
+   "field": "conditions.en",
+   "text": "'up to'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ihp-sg13g3-hbt-fmax-m1",
+   "field": "conditions.fr",
+   "text": "« jusqu’à »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ihp-sg13g3-hbt-fmax-m1",
+   "field": "locator",
+   "text": "\"0.13µm SG13G3\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ihp-sg13g3-hbt-ft-m1",
+   "field": "conditions.en",
+   "text": "'up to'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ihp-sg13g3-hbt-ft-m1",
+   "field": "conditions.fr",
+   "text": "« jusqu’à »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ihp-sg13g3-hbt-ft-m1",
+   "field": "locator",
+   "text": "\"0.13µm SG13G3\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ihp-sg13g3-hbt-ft-m1",
+   "field": "notes",
+   "text": "'cut-off frequencies of up to 500 GHz'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:imec-sot-mram-switching-time-m1",
+   "field": "notes",
+   "text": "'down to 210 ps'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:infiniband-ndr-port-rate-m1",
+   "field": "notes",
+   "text": "'Per direction'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-80286-initial-clock-m1",
+   "field": "conditions.en",
+   "text": "'initial clock speed'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-80286-initial-clock-m1",
+   "field": "conditions.fr",
+   "text": "« fréquence d’horloge initiale »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-80286-initial-clock-m1",
+   "field": "locator",
+   "text": "\"1982 Intel 286\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-80286-initial-clock-m1",
+   "field": "locator",
+   "text": "\"Initial clock speed\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-80286-initial-clock-m1",
+   "field": "notes",
+   "text": "'(first shipped speed grade)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-80386-initial-clock-m1",
+   "field": "conditions.en",
+   "text": "'initial clock speed'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-80386-initial-clock-m1",
+   "field": "conditions.fr",
+   "text": "« fréquence d’horloge initiale »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-80386-initial-clock-m1",
+   "field": "locator",
+   "text": "\"1985 Intel386\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-80386-initial-clock-m1",
+   "field": "locator",
+   "text": "\"Initial clock speed\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-80386-initial-clock-m1",
+   "field": "notes",
+   "text": "'(first shipped speed grade)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-80486-initial-clock-m1",
+   "field": "conditions.en",
+   "text": "'initial clock speed'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-80486-initial-clock-m1",
+   "field": "conditions.fr",
+   "text": "« fréquence d’horloge initiale »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-80486-initial-clock-m1",
+   "field": "locator",
+   "text": "\"1989 Intel486\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-80486-initial-clock-m1",
+   "field": "locator",
+   "text": "\"Initial clock speed\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-80486-initial-clock-m1",
+   "field": "notes",
+   "text": "'(first shipped speed grade)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-8080-initial-clock-m1",
+   "field": "conditions.en",
+   "text": "'initial clock speed'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-8080-initial-clock-m1",
+   "field": "conditions.fr",
+   "text": "« fréquence d’horloge initiale »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-8080-initial-clock-m1",
+   "field": "locator",
+   "text": "\"1974 Intel 8080\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-8080-initial-clock-m1",
+   "field": "locator",
+   "text": "\"Initial clock speed\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-8080-initial-clock-m1",
+   "field": "notes",
+   "text": "'(first shipped speed grade)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-core-i9-14900k-max-turbo-m1",
+   "field": "notes",
+   "text": "'(best cores, favourable conditions)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-core-i9-14900k-max-turbo-m1",
+   "field": "notes",
+   "text": "'Raptor Lake Refresh'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-core-i9-14900k-max-turbo-m1",
+   "field": "notes",
+   "text": "'Raptor Lake'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-haswell-l3-latency-m1",
+   "field": "locator",
+   "text": "'Cache Parameters of the Haswell Microarchitecture'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-icelake-client-l1d-latency-m1",
+   "field": "locator",
+   "text": "'Cache Parameters of the Ice Lake Client Microarchitecture'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-icelake-client-l2-latency-m1",
+   "field": "notes",
+   "text": "'xx'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-pentium-initial-clock-m1",
+   "field": "conditions.en",
+   "text": "'initial clock speed'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-pentium-initial-clock-m1",
+   "field": "conditions.fr",
+   "text": "« fréquence d’horloge initiale »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-pentium-initial-clock-m1",
+   "field": "locator",
+   "text": "\"1993 Intel Pentium\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-pentium-initial-clock-m1",
+   "field": "locator",
+   "text": "\"Initial clock speed\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-pentium-initial-clock-m1",
+   "field": "notes",
+   "text": "'(first shipped speed grade)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-pentium-pro-initial-clock-m1",
+   "field": "conditions.en",
+   "text": "'initial clock speed'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-pentium-pro-initial-clock-m1",
+   "field": "conditions.fr",
+   "text": "« fréquence d’horloge initiale »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-pentium-pro-initial-clock-m1",
+   "field": "locator",
+   "text": "\"1995 Intel Pentium Pro\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-pentium-pro-initial-clock-m1",
+   "field": "locator",
+   "text": "\"Initial clock speed\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-pentium-pro-initial-clock-m1",
+   "field": "notes",
+   "text": "'(first shipped speed grade)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-pentium4-launch-clock-m1",
+   "field": "notes",
+   "text": "'Willamette'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-sandybridge-c6-exit-latency-m1",
+   "field": "locator",
+   "text": "'C-State Total Processor Exit Latency for Client Systems with Slow VR'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-sandybridge-c6-exit-latency-m1",
+   "field": "notes",
+   "text": "'Worst Case'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-sandybridge-c6-exit-latency-m1",
+   "field": "notes",
+   "text": "'not processor specifications but estimates derived from empirical measurements'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:intel-sandybridge-c6-exit-latency-m1",
+   "field": "notes",
+   "text": "'typical'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-sandybridge-c6-exit-latency-m1",
+   "field": "notes",
+   "text": "'worst case'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-sandybridge-llc-latency-m1",
+   "field": "locator",
+   "text": "'Lookup Order and Load Latency'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-sandybridge-llc-latency-m1",
+   "field": "notes",
+   "text": "'2'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-sandybridge-llc-latency-m1",
+   "field": "notes",
+   "text": "'value'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:intel-skylake-client-l1d-latency-m1",
+   "field": "locator",
+   "text": "'Cache Parameters of the Skylake Client Microarchitecture'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-skylake-client-l3-latency-m1",
+   "field": "locator",
+   "text": "'Third Level (Shared L3)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-skylake-client-l3-latency-m1",
+   "field": "notes",
+   "text": "'L3 latency depends on core/uncore clock ratio'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:intel-xeon5500-local-dram-latency-m1",
+   "field": "locator",
+   "text": "'Approximate Latency of L2 Misses of Intel Xeon Processor 5500'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:intel-xeon5500-local-dram-latency-m1",
+   "field": "notes",
+   "text": "'examples of the approximate latency values'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:intel-xeon5500-local-dram-latency-m1",
+   "field": "notes",
+   "text": "'two sockets'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:kioxia-cm7r-seq-read-measured-m1",
+   "field": "notes",
+   "text": "'presumably decimal'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-kernel-entry-exit-no-kpti-haswell-m1",
+   "field": "conditions.en",
+   "text": "'less than 100 cycles'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-kernel-entry-exit-no-kpti-haswell-m1",
+   "field": "conditions.fr",
+   "text": "« inférieur à 100 cycles »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-kernel-entry-exit-no-kpti-haswell-m1",
+   "field": "locator",
+   "text": "\"Remove Kernel Mappings in Userspace\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:linux-kpti-entry-exit-cost-haswell-m1",
+   "field": "conditions.en",
+   "text": "is 'on the order of 400–500 cycles'",
+   "kind": "overlap",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "review",
+   "note": "Six-word quoted passage, already redacted in rc2: kept redacted (no review decision publishes what rc2 withheld). The value itself stays in the value field."
+  },
+  {
+   "scope": "measurement:linux-kpti-entry-exit-cost-haswell-m1",
+   "field": "conditions.fr",
+   "text": "« de l’ordre de 400 à 500 cycles »",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:linux-kpti-entry-exit-cost-haswell-m1",
+   "field": "locator",
+   "text": "\"Remove Kernel Mappings in Userspace\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:linux-minor-page-fault-sandybridge-m1",
+   "field": "conditions.en",
+   "text": "'most frequent'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-minor-page-fault-sandybridge-m1",
+   "field": "conditions.fr",
+   "text": "« le plus fréquent »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-minor-page-fault-sandybridge-m1",
+   "field": "locator",
+   "text": "\"Penalties for system in Table 1\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:linux-minor-page-fault-sandybridge-m1",
+   "field": "locator",
+   "text": "\"minor page fault\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:linux-minor-page-fault-sandybridge-m1",
+   "field": "notes",
+   "text": "'mitigation status not stated'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-minor-page-fault-sandybridge-m1",
+   "field": "protocol",
+   "text": "\"most frequent\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-read-syscall-baseline-haswell-m1",
+   "field": "notes",
+   "text": "\"shortest read test\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-read-syscall-baseline-haswell-m1",
+   "field": "notes",
+   "text": "'4.14-era'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-read-syscall-baseline-haswell-m1",
+   "field": "notes",
+   "text": "'shortest'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-retpoline-indirect-branch-cost-m1",
+   "field": "conditions.en",
+   "text": "'around 30 cycles'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-retpoline-indirect-branch-cost-m1",
+   "field": "conditions.en",
+   "text": "'avoid indirect branch speculation'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-retpoline-indirect-branch-cost-m1",
+   "field": "conditions.fr",
+   "text": "« avoid indirect branch speculation »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-retpoline-indirect-branch-cost-m1",
+   "field": "conditions.fr",
+   "text": "« environ 30 cycles »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-retpoline-indirect-branch-cost-m1",
+   "field": "locator",
+   "text": "\"Avoid indirect branch speculation (§4.1.2)\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:linux-retpoline-indirect-branch-cost-m1",
+   "field": "locator",
+   "text": "\"Summary of root causes\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:linux-retpoline-indirect-branch-cost-m1",
+   "field": "notes",
+   "text": "\"indirect jump or call.\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-retpoline-indirect-branch-cost-m1",
+   "field": "notes",
+   "text": "'around 30 cycles'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-retpoline-indirect-branch-cost-m1",
+   "field": "notes",
+   "text": "'around'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:linux-retpoline-indirect-branch-cost-m1",
+   "field": "notes",
+   "text": "'estimated'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:lmbench-context-switch-linux-pentiumpro-m1",
+   "field": "locator",
+   "text": "'Context switch time (microseconds)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:lmbench-null-syscall-linux-pentiumpro-m1",
+   "field": "locator",
+   "text": "'Simple system call time (microseconds)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:lpddr5x-samsung-pin-speed-m1",
+   "field": "conditions.en",
+   "text": "'up to'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:lpddr5x-samsung-pin-speed-m1",
+   "field": "conditions.fr",
+   "text": "« jusqu’à »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:lpddr5x-samsung-pin-speed-m1",
+   "field": "locator",
+   "text": "\"Bar-raising speed\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:lpddr5x-samsung-pin-speed-m1",
+   "field": "notes",
+   "text": "\"Gbps\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:lpddr5x-samsung-pin-speed-m1",
+   "field": "notes",
+   "text": "'(fastest bin advertised on the page at access date)'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:lpddr5x-samsung-pin-speed-m1",
+   "field": "notes",
+   "text": "'per pin'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:lto9-average-space-record-time-m1",
+   "field": "conditions.en",
+   "text": "'average space record time from load point'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:lto9-average-space-record-time-m1",
+   "field": "conditions.fr",
+   "text": "« temps moyen de positionnement sur un enregistrement depuis le point de chargement »",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:lto9-average-space-record-time-m1",
+   "field": "locator",
+   "text": "'Drive information and performance specification for full-height drives'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:lto9-average-space-record-time-m1",
+   "field": "notes",
+   "text": "'headers'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:lto9-average-space-record-time-m1",
+   "field": "notes",
+   "text": "'i.e. the mean seek to a file'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:lto9-native-transfer-rate-m1",
+   "field": "notes",
+   "text": "'up to'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:mi300x-fp64-vector-peak-m1",
+   "field": "locator",
+   "text": "'Peak-performance capabilities of the MI300X for different data types'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "review",
+   "note": "Residual 5/5. Table caption, needed to find the value; it is also the (withheld) quote, which is only the caption: no running text is reproduced."
+  },
+  {
+   "scope": "measurement:mi300x-peak-engine-clock-m1",
+   "field": "notes",
+   "text": "« (boost) »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:mlperf-v50-b200x8-llama2-70b-interactive-tpot-mean-m1",
+   "field": "locator",
+   "text": "'Additional Stats'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean-m1",
+   "field": "locator",
+   "text": "'Additional Stats'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean-m1",
+   "field": "notes",
+   "text": "'NVIDIA DGX B200 (8x B200-SXM-180GB, TensorRT)'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:mlperf-v50-b200x8-llama31-405b-server-tpot-mean-m1",
+   "field": "locator",
+   "text": "'Additional Stats'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:mlperf-v50-b200x8-llama31-405b-server-ttft-mean-m1",
+   "field": "locator",
+   "text": "'Additional Stats'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:mlperf-v50-b200x8-llama31-405b-server-ttft-mean-m1",
+   "field": "notes",
+   "text": "'Long-context prompts'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:mlperf-v50-h200x8-llama2-70b-server-tpot-mean-m1",
+   "field": "locator",
+   "text": "'Additional Stats'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:mlperf-v50-h200x8-llama2-70b-server-ttft-mean-m1",
+   "field": "locator",
+   "text": "'Additional Stats'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:mlperf-v50-h200x8-llama2-70b-server-ttft-mean-m1",
+   "field": "notes",
+   "text": "'Audited by MLCommons'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:motorola-mc68000-8mhz-max-frequency-m1",
+   "field": "locator",
+   "text": "\"Frequency of Operation\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ngc-inp-hemt-25nm-fmax-m1",
+   "field": "notes",
+   "text": "'Direct demonstration of 1THz performance in InP HEMTs'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:ngc-inp-hemt-25nm-fmax-m1",
+   "field": "notes",
+   "text": "'estimated'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ngc-inp-hemt-25nm-fmax-m1",
+   "field": "notes",
+   "text": "'measured'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ngc-inp-hemt-25nm-fmax-m1",
+   "field": "notes",
+   "text": "'on-wafer S-parameter measurements'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ngc-inp-hemt-25nm-fmax-m1",
+   "field": "protocol",
+   "text": "extrapolating the data to unity gain",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Standard name of the fMAX extraction method (extrapolation of gain to unity), needed to state the protocol."
+  },
+  {
+   "scope": "measurement:nr-urllc-reliability-latency-m1",
+   "field": "locator",
+   "text": "'Reliability'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:nr-urllc-reliability-latency-m1",
+   "field": "notes",
+   "text": "'1-10-5'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:nr-urllc-user-plane-latency-target-m1",
+   "field": "locator",
+   "text": "'User plane latency'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:ntp-lan-typical-accuracy-m1",
+   "field": "conditions.en",
+   "text": "'typically less than'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ntp-lan-typical-accuracy-m1",
+   "field": "conditions.en",
+   "text": "up to a few milliseconds on WANs",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Short factual bound restated in the conditions; the full sentence stays withheld."
+  },
+  {
+   "scope": "measurement:ntp-lan-typical-accuracy-m1",
+   "field": "conditions.fr",
+   "text": "« typiquement inférieure »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:ntp-lan-typical-accuracy-m1",
+   "field": "notes",
+   "text": "'estimated'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:optane-p5800x-4k-qd1-p99-read-m1",
+   "field": "conditions.en",
+   "text": "'< 6 µs'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:optane-p5800x-4k-qd1-p99-read-m1",
+   "field": "conditions.fr",
+   "text": "« < 6 µs »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:optane-p5800x-4k-qd1-p99-read-m1",
+   "field": "notes",
+   "text": "« 3D XPoint »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:optane-p5800x-4k-qd1-p99-read-m1",
+   "field": "notes",
+   "text": "« 4 KiB »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:pcie3-lane-rate-m1",
+   "field": "locator",
+   "text": "'BEAVERTON, Ore. -- November 19, 2010'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:pcie3-lane-rate-m1",
+   "field": "notes",
+   "text": "'about 1 GB/s per direction'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:pcie4-lane-rate-m1",
+   "field": "notes",
+   "text": "'per direction, before 128b/130b encoding'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:pcie5-lane-rate-m1",
+   "field": "conditions.en",
+   "text": "32 GT/s raw bit rate",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Specification value and its standard name."
+  },
+  {
+   "scope": "measurement:pcie5-lane-rate-m1",
+   "field": "notes",
+   "text": "'128b/130b encoding'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:pcie5-x16-bandwidth-m1",
+   "field": "conditions.en",
+   "text": "'up to'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:pcie5-x16-bandwidth-m1",
+   "field": "conditions.fr",
+   "text": "« jusqu'à »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:pcie5-x16-bandwidth-m1",
+   "field": "notes",
+   "text": "'PCIe Gen5: 128GB/s'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:pcie5-x16-bandwidth-m1",
+   "field": "notes",
+   "text": "'bidirectional'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:pcie5-x16-bandwidth-m1",
+   "field": "notes",
+   "text": "« deux sens »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:pcie6-lane-rate-m1",
+   "field": "conditions.en",
+   "text": "64 GT/s raw data rate",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Specification value and its standard name."
+  },
+  {
+   "scope": "measurement:pcie6-x16-bandwidth-m1",
+   "field": "conditions.en",
+   "text": "'up to'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:pcie6-x16-bandwidth-m1",
+   "field": "conditions.fr",
+   "text": "« jusqu'à »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:pcie6-x16-bandwidth-m1",
+   "field": "notes",
+   "text": "'128 GB/s'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:pcie6-x16-bandwidth-m1",
+   "field": "notes",
+   "text": "« deux sens / 128 GB/s par sens »",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:rtx4090-memory-bandwidth-m1",
+   "field": "locator",
+   "text": "'GeForce RTX 4090 vs RTX 3090 Ti vs 2080 Ti'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:rtx4090-memory-bandwidth-m1",
+   "field": "notes",
+   "text": "'1 TB/sec'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:rtx4090-memory-bandwidth-m1",
+   "field": "notes",
+   "text": "'RTX 4090 offers 1 TB/sec of peak'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:rtx5090-memory-bandwidth-m1",
+   "field": "notes",
+   "text": "'1792 GB/sec'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:sata-rev3-line-rate-m1",
+   "field": "notes",
+   "text": "'SATA III'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:slingshot-rosetta-switch-latency-m1",
+   "field": "locator",
+   "text": "'Distribution of switch latency for RoCE traffic'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:slingshot-rosetta-switch-latency-m1",
+   "field": "notes",
+   "text": "'except for a few outliers'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-read-latency-m1",
+   "field": "locator",
+   "text": "'Latency Random Rating (Read / Write)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "review",
+   "note": "Residual 2/5. Row label of the specification block; the withheld quote is that label plus the values."
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-read-latency-m1",
+   "field": "notes",
+   "text": "'(typ.)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-read-latency-m1",
+   "field": "notes",
+   "text": "'-'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-read-latency-m1",
+   "field": "notes",
+   "text": "'Latency - Read'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-read-latency-m1",
+   "field": "notes",
+   "text": "'Latency - Write'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-read-latency-m1",
+   "field": "notes",
+   "text": "'Latency Sequential Rating'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-read-latency-m1",
+   "field": "notes",
+   "text": "'Up to 60 µs'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-read-latency-m1",
+   "field": "notes",
+   "text": "'all capacities on the same page'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-write-latency-m1",
+   "field": "locator",
+   "text": "'Latency Random Rating (Read / Write)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "review",
+   "note": "Residual 3/5. Row label of the specification block; the withheld quote is that label plus the values."
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-write-latency-m1",
+   "field": "notes",
+   "text": "'(typ.)'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-write-latency-m1",
+   "field": "notes",
+   "text": "'-'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-write-latency-m1",
+   "field": "notes",
+   "text": "'8 µs'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-write-latency-m1",
+   "field": "notes",
+   "text": "'Latency - Read'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-write-latency-m1",
+   "field": "notes",
+   "text": "'Latency - Write'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-write-latency-m1",
+   "field": "notes",
+   "text": "'Latency Sequential Rating'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-write-latency-m1",
+   "field": "notes",
+   "text": "'all capacities on the same page'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:starlink-satellite-hop-latency-usvi-2025-07-m1",
+   "field": "notes",
+   "text": "'2025'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:starlink-us-median-peak-hour-latency-m1",
+   "field": "locator",
+   "text": "\"Network latency\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:starlink-us-median-peak-hour-latency-m1",
+   "field": "notes",
+   "text": "\"the internet\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:starlink-us-median-peak-hour-latency-m1",
+   "field": "notes",
+   "text": "'anonymized measurements from millions of Starlink routers every 15 seconds'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "measurement:top500-1993-06-r1-cm5-rmax-m1",
+   "field": "conditions.en",
+   "text": "1: CM-5/1024, Thinking Machines Corporation (Los Alamos National Laboratory",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Rank, system, vendor and site from the list entry."
+  },
+  {
+   "scope": "measurement:top500-1993-06-r1-cm5-rmax-m1",
+   "field": "conditions.fr",
+   "text": "1 : CM-5/1024, Thinking Machines Corporation (Los Alamos National Laboratory",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Rank, system, vendor and site from the list entry."
+  },
+  {
+   "scope": "measurement:top500-1993-06-r1-cm5-rmax-m1",
+   "field": "locator",
+   "text": "\"TOP500 June 1993\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-1993-06-r1-cm5-rmax-m1",
+   "field": "notes",
+   "text": "'HPL'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-1993-06-r1-cm5-rmax-m1",
+   "field": "notes",
+   "text": "'LINPACK'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-1993-06-r1-cm5-rmax-m1",
+   "field": "notes",
+   "text": "'audited by the TOP500 editors'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-1993-06-r1-cm5-rmax-m1",
+   "field": "notes",
+   "text": "'submitted by the site'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-1993-06-r1-cm5-rmax-m1",
+   "field": "notes",
+   "text": "'the LINPACK Benchmark'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2008-06-r1-roadrunner-rmax-m1",
+   "field": "conditions.en",
+   "text": "Voltaire Infiniband, IBM (DOE/NNSA/LANL",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Interconnect, vendor and site from the list entry."
+  },
+  {
+   "scope": "measurement:top500-2008-06-r1-roadrunner-rmax-m1",
+   "field": "conditions.fr",
+   "text": "Voltaire Infiniband, IBM (DOE/NNSA/LANL",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Interconnect, vendor and site from the list entry."
+  },
+  {
+   "scope": "measurement:top500-2008-06-r1-roadrunner-rmax-m1",
+   "field": "locator",
+   "text": "\"TOP500 June 2008\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2008-06-r1-roadrunner-rmax-m1",
+   "field": "notes",
+   "text": "'audited by the TOP500 editors'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2008-06-r1-roadrunner-rmax-m1",
+   "field": "notes",
+   "text": "'submitted by the site'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2022-06-r1-frontier-rmax-m1",
+   "field": "locator",
+   "text": "\"TOP500 June 2022\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2022-06-r1-frontier-rmax-m1",
+   "field": "notes",
+   "text": "'audited by the TOP500 editors'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2022-06-r1-frontier-rmax-m1",
+   "field": "notes",
+   "text": "'submitted by the site'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r1-lineshine-rmax-m1",
+   "field": "locator",
+   "text": "\"TOP500 November 2026\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r1-lineshine-rmax-m1",
+   "field": "notes",
+   "text": "'audited by the TOP500 editors'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r1-lineshine-rmax-m1",
+   "field": "notes",
+   "text": "'submitted by the site'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r1-lineshine-rpeak-m1",
+   "field": "locator",
+   "text": "\"TOP500 November 2026\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r1-lineshine-rpeak-m1",
+   "field": "notes",
+   "text": "'by TOP500'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r2-el-capitan-rmax-m1",
+   "field": "locator",
+   "text": "\"TOP500 November 2026\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r2-el-capitan-rmax-m1",
+   "field": "notes",
+   "text": "'audited by the TOP500 editors'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r2-el-capitan-rmax-m1",
+   "field": "notes",
+   "text": "'submitted by the site'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r2-el-capitan-rpeak-m1",
+   "field": "locator",
+   "text": "\"TOP500 November 2026\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r2-el-capitan-rpeak-m1",
+   "field": "notes",
+   "text": "'by TOP500'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r3-frontier-rmax-m1",
+   "field": "locator",
+   "text": "\"TOP500 November 2026\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r3-frontier-rmax-m1",
+   "field": "notes",
+   "text": "'audited by the TOP500 editors'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r3-frontier-rmax-m1",
+   "field": "notes",
+   "text": "'submitted by the site'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r3-frontier-rpeak-m1",
+   "field": "locator",
+   "text": "\"TOP500 November 2026\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r3-frontier-rpeak-m1",
+   "field": "notes",
+   "text": "'by TOP500'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r4-aurora-rmax-m1",
+   "field": "locator",
+   "text": "\"TOP500 November 2026\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r4-aurora-rmax-m1",
+   "field": "notes",
+   "text": "'audited by the TOP500 editors'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r4-aurora-rmax-m1",
+   "field": "notes",
+   "text": "'submitted by the site'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r4-aurora-rpeak-m1",
+   "field": "locator",
+   "text": "\"TOP500 November 2026\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r4-aurora-rpeak-m1",
+   "field": "notes",
+   "text": "'by TOP500'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r5-jupiter-booster-rmax-m1",
+   "field": "conditions.en",
+   "text": "EuroHPC/FZJ, Germany); 4,801,344",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Site, country and core count from the list entry."
+  },
+  {
+   "scope": "measurement:top500-2026-11-r5-jupiter-booster-rmax-m1",
+   "field": "locator",
+   "text": "\"TOP500 November 2026\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r5-jupiter-booster-rmax-m1",
+   "field": "notes",
+   "text": "'audited by the TOP500 editors'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r5-jupiter-booster-rmax-m1",
+   "field": "notes",
+   "text": "'submitted by the site'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r5-jupiter-booster-rpeak-m1",
+   "field": "conditions.en",
+   "text": "EuroHPC/FZJ, Germany); 4,801,344",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Site, country and core count from the list entry."
+  },
+  {
+   "scope": "measurement:top500-2026-11-r5-jupiter-booster-rpeak-m1",
+   "field": "locator",
+   "text": "\"TOP500 November 2026\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:top500-2026-11-r5-jupiter-booster-rpeak-m1",
+   "field": "notes",
+   "text": "'by TOP500'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:usb-fs-interrupt-min-period-m1",
+   "field": "notes",
+   "text": "« typical of HID mice/keyboards »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:usb-fs-max-polling-rate-m1",
+   "field": "notes",
+   "text": "« gaming-mouse 1000 Hz »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:usb-hs-max-polling-rate-m1",
+   "field": "notes",
+   "text": "'8000 Hz mouse'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:usb-low-speed-rate-m1",
+   "field": "conditions.en",
+   "text": "limited-capability low-speed signaling mode",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "review",
+   "note": "Name of the signalling mode defined by the specification."
+  },
+  {
+   "scope": "measurement:usb-low-speed-rate-m1",
+   "field": "notes",
+   "text": "« USB 1.x era »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:usb-low-speed-rate-m1",
+   "field": "notes",
+   "text": "« keyboards »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:usb4-80g-rate-m1",
+   "field": "notes",
+   "text": "« USB4 Version 2.0 »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:vesa-adaptivesync-display240-tier-m1",
+   "field": "locator",
+   "text": "'VESA CERTIFIED Compliance Program'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:vesa-adaptivesync-min-max-refresh-m1",
+   "field": "locator",
+   "text": "'Mandates that Vary by Logo Performance Tier'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:vesa-adaptivesync-min-max-refresh-m1",
+   "field": "notes",
+   "text": "'At factory default resolution'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:vesa-adaptivesync-min-max-refresh-m1",
+   "field": "notes",
+   "text": "'Page 22 of 89'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:voyager1-distance-2026-11-18-m1",
+   "field": "notes",
+   "text": "'will be'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:voyager1-light-time-2026-11-18-m1",
+   "field": "notes",
+   "text": "'one light-day'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:white-rabbit-sync-accuracy-m1",
+   "field": "conditions.en",
+   "text": "'sub-nanosecond'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:white-rabbit-sync-accuracy-m1",
+   "field": "conditions.fr",
+   "text": "« sous la nanoseconde »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:white-rabbit-sync-accuracy-m1",
+   "field": "notes",
+   "text": "'High Accuracy profile'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:wifi7-max-throughput-m1",
+   "field": "conditions.en",
+   "text": "a maximum throughput of 'at least' 30 Gbps",
+   "kind": "overlap",
+   "decision": "publish",
+   "ground": "fact",
+   "basis": "review",
+   "note": "Design target and its qualifier; the qualifier is quoted to keep its exact meaning."
+  },
+  {
+   "scope": "measurement:wifi7-max-throughput-m1",
+   "field": "conditions.fr",
+   "text": "« d’au moins »",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:wifi7-max-throughput-m1",
+   "field": "notes",
+   "text": "'Wi-Fi 7'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:x86-add-r64-latency-alderlake-p-m1",
+   "field": "locator",
+   "text": "'Alder Lake-P'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:x86-add-r64-latency-alderlake-p-m1",
+   "field": "notes",
+   "text": "'Golden Cove P-core'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:x86-div-r64-latency-alderlake-p-m1",
+   "field": "locator",
+   "text": "'Alder Lake-P'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:x86-div-r64-latency-alderlake-p-m1",
+   "field": "notes",
+   "text": "'...'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:x86-div-r64-latency-skylake-m1",
+   "field": "locator",
+   "text": "'Skylake'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:x86-div-r64-latency-skylake-m1",
+   "field": "notes",
+   "text": "'other pairs 32-87'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:x86-div-r64-latency-skylake-m1",
+   "field": "notes",
+   "text": "'value'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "measurement:x86-div-r64-latency-zen4-m1",
+   "field": "locator",
+   "text": "'DIV r64/m64'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:x86-imul-r64-latency-alderlake-p-m1",
+   "field": "locator",
+   "text": "'Alder Lake-P'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:locator-label"
+  },
+  {
+   "scope": "measurement:x86-imul-r64-latency-alderlake-p-m1",
+   "field": "notes",
+   "text": "'64 bits × 64 bits with 3 cycle latency'",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "source:src-agner-instr-tables",
+   "field": "license",
+   "text": "'Public distribution and mirroring is not allowed'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "attribution",
+   "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "source:src-azure-latency",
+   "field": "accessNotes",
+   "text": "'source row x destination column'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-dr-pcie5",
+   "field": "accessNotes",
+   "text": "'BEAVERTON, Ore.-- May 29, 2019'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-hdmi-spec",
+   "field": "license",
+   "text": "'2026 © All Rights Reserved'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "attribution",
+   "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "source:src-intel-p5800x-brief",
+   "field": "license",
+   "text": "'© 2021 Intel Corporation'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "attribution",
+   "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "source:src-m01a-europractice-ihp-2026",
+   "field": "accessNotes",
+   "text": "\"0.13µm SG13G3\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-m01a-heron-krylov-2024",
+   "field": "accessNotes",
+   "text": "\"Device details\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-m01b-arm-neoverse-v3-sog",
+   "field": "accessNotes",
+   "text": "\"Page 18 of 67\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-m01b-intel-chips-timeline-poster",
+   "field": "accessNotes",
+   "text": "\"Initial clock speed\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-m01b-samsung-lpddr5x",
+   "field": "accessNotes",
+   "text": "\"Bar-raising speed\"",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-m01b-top500-2026-11",
+   "field": "accessNotes",
+   "text": "\"R max and R peak values are in PFlop/s\"",
+   "kind": "quoted",
+   "decision": "redact",
+   "ground": "third-party-excerpt",
+   "basis": "rule:quoted-6-words"
+  },
+  {
+   "scope": "source:src-m01c-designreuse-pcie3-pr",
+   "field": "accessNotes",
+   "text": "'BEAVERTON, Ore. -- November 19, 2010'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-m01c-nvidia-qm97x0-manual",
+   "field": "accessNotes",
+   "text": "'extremely low-latency'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-m01c-nvidia-quantum-x800-page",
+   "field": "accessNotes",
+   "text": "'XDR'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-m01c-solidigm-ps1010-page",
+   "field": "accessNotes",
+   "text": "'Latency Random Rating'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "locating-label",
+   "basis": "rule:access-label"
+  },
+  {
+   "scope": "source:src-nasa-voyager-where",
+   "field": "license",
+   "text": "'NASA/JPL-Caltech'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "attribution",
+   "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "source:src-seagate-exos-x20",
+   "field": "license",
+   "text": "'© 2021 Seagate Technology LLC. All rights reserved.'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "attribution",
+   "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "source:src-solidigm-p5520-brief",
+   "field": "license",
+   "text": "'© Solidigm 2022. All rights reserved.'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "attribution",
+   "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "source:src-uops-info",
+   "field": "license",
+   "text": "'(c) Real-Time and Embedded Systems Lab'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "attribution",
+   "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "source:src-usb20-spec",
+   "field": "license",
+   "text": "'All rights reserved'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "attribution",
+   "basis": "rule:licence-notice"
+  },
+  {
+   "scope": "withheld:osu-latency-crossroads-8b-m1",
+   "field": "reason",
+   "text": "'inadequate'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  },
+  {
+   "scope": "withheld:samsung-990pro-qd1-read-latency-derived-m1",
+   "field": "reason",
+   "text": "'up to'",
+   "kind": "quoted",
+   "decision": "publish",
+   "ground": "term",
+   "basis": "rule:short-term"
+  }
+ ]
+}

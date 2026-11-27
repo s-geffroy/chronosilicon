@@ -26,7 +26,8 @@
     "contribute:check": "tsx scripts/contribute-check.ts",
     "audit:gate": "tsx scripts/audit-gate.ts",
     "dist:manifest": "tsx scripts/dist-manifest.ts",
-    "sbom": "npm sbom --sbom-format cyclonedx --sbom-type application"
+    "sbom": "npm sbom --sbom-format cyclonedx --sbom-type application",
+    "publication:check": "tsx scripts/check-public-text.ts"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

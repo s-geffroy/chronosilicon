@@ -1,0 +1,130 @@
+{
+ "_comment": "Spans redacted by the REMEDIATION-01 rule at remediation-01-rc2 (quoted, 6+ whitespace words, notes/protocol/conditions of non-open qualified values), recomputed from that tag by REMEDIATION-02 to prove PUB-1 publishes none of them.",
+ "spans": [
+  {
+   "scope": "measurement:azure-rtt-eastus-westeurope-m1",
+   "field": "notes",
+   "text": "'The measurements are collected in 1-minute intervals'"
+  },
+  {
+   "scope": "measurement:human-stylus-latency-jnd-small-box-m1",
+   "field": "notes",
+   "text": "'~1 versus 2 milliseconds while dragging'"
+  },
+  {
+   "scope": "measurement:intel-skylake-client-l3-latency-m1",
+   "field": "notes",
+   "text": "'L3 latency depends on core/uncore clock ratio'"
+  },
+  {
+   "scope": "measurement:intel-xeon5500-local-dram-latency-m1",
+   "field": "notes",
+   "text": "'examples of the approximate latency values'"
+  },
+  {
+   "scope": "measurement:intel-sandybridge-c6-exit-latency-m1",
+   "field": "notes",
+   "text": "'not processor specifications but estimates derived from empirical measurements'"
+  },
+  {
+   "scope": "measurement:x86-imul-r64-latency-alderlake-p-m1",
+   "field": "notes",
+   "text": "'64 bits × 64 bits with 3 cycle latency'"
+  },
+  {
+   "scope": "measurement:pcie6-x16-bandwidth-m1",
+   "field": "notes",
+   "text": "« deux sens / 128 GB/s par sens »"
+  },
+  {
+   "scope": "measurement:h100-sxm-nvlink-bandwidth-m1",
+   "field": "notes",
+   "text": "« aggregate of all links, both directions as marketed »"
+  },
+  {
+   "scope": "measurement:b200-nvlink-gpu-to-gpu-m1",
+   "field": "notes",
+   "text": "'Total Memory 2.1 TB 1.4 TB'"
+  },
+  {
+   "scope": "measurement:ihp-sg13g2-hbt-ft-m1",
+   "field": "notes",
+   "text": "'peak fT/fmax values of 300 GHz/500 GHz'"
+  },
+  {
+   "scope": "measurement:ihp-sg13g3-hbt-ft-m1",
+   "field": "notes",
+   "text": "'cut-off frequencies of up to 500 GHz'"
+  },
+  {
+   "scope": "measurement:ngc-inp-hemt-25nm-fmax-m1",
+   "field": "notes",
+   "text": "'Direct demonstration of 1THz performance in InP HEMTs'"
+  },
+  {
+   "scope": "measurement:starlink-us-median-peak-hour-latency-m1",
+   "field": "notes",
+   "text": "'anonymized measurements from millions of Starlink routers every 15 seconds'"
+  },
+  {
+   "scope": "measurement:lpddr5x-samsung-pin-speed-m1",
+   "field": "notes",
+   "text": "'(fastest bin advertised on the page at access date)'"
+  },
+  {
+   "scope": "measurement:linux-kpti-entry-exit-cost-haswell-m1",
+   "field": "conditions.fr",
+   "text": "« de l’ordre de 400 à 500 cycles »"
+  },
+  {
+   "scope": "measurement:linux-kpti-entry-exit-cost-haswell-m1",
+   "field": "conditions.en",
+   "text": "'on the order of 400–500 cycles'"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-read-latency-m1",
+   "field": "notes",
+   "text": "'all capacities on the same page'"
+  },
+  {
+   "scope": "measurement:solidigm-ps1010-random-write-latency-m1",
+   "field": "notes",
+   "text": "'all capacities on the same page'"
+  },
+  {
+   "scope": "measurement:lto9-average-space-record-time-m1",
+   "field": "notes",
+   "text": "'i.e. the mean seek to a file'"
+  },
+  {
+   "scope": "measurement:lto9-average-space-record-time-m1",
+   "field": "conditions.fr",
+   "text": "« temps moyen de positionnement sur un enregistrement depuis le point de chargement »"
+  },
+  {
+   "scope": "measurement:lto9-average-space-record-time-m1",
+   "field": "conditions.en",
+   "text": "'average space record time from load point'"
+  },
+  {
+   "scope": "measurement:rtx4090-memory-bandwidth-m1",
+   "field": "notes",
+   "text": "'RTX 4090 offers 1 TB/sec of peak'"
+  },
+  {
+   "scope": "measurement:mlperf-v50-b200x8-llama2-70b-interactive-ttft-mean-m1",
+   "field": "notes",
+   "text": "'NVIDIA DGX B200 (8x B200-SXM-180GB, TensorRT)'"
+  },
+  {
+   "scope": "measurement:android-pro-audio-rtl-max-analog-m1",
+   "field": "notes",
+   "text": "'Start of requirements changed in Android 16'"
+  },
+  {
+   "scope": "measurement:audio-sample-rate-48000-m1",
+   "field": "notes",
+   "text": "'only shared-mode rate above 44.1 kHz'"
+  }
+ ]
+}

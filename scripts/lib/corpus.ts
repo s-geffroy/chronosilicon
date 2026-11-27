@@ -7,7 +7,7 @@ import { Ajv2020 } from 'ajv/dist/2020.js';
 import { simulate, SIMULATOR_MODEL_VERSION } from '@chronosilicon/simulator';
 import {
   SCHEMA_VERSION, checkInvariants, checkScenarios, checkV2Invariants, normalize, resolveObservers,
-  type Corpus, type Evidence, type Group, type Measurement, type ObserverDef, type Phenomenon, type ScenarioDef, publicView } from '@chronosilicon/ontology';
+  type Corpus, type Evidence, type Group, type Measurement, type ObserverDef, type Phenomenon, type ScenarioDef, applyPublicationPolicy, type Finding, type TextDecision } from '@chronosilicon/ontology';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const P = {
@@ -20,6 +20,7 @@ export const P = {
   corpus: 'data/validated/corpus.json',
   rawDir: 'data/raw',
   rawManifest: 'data/raw/MANIFEST.sha256',
+  textDecisions: 'data/publication/text-decisions.json',
 } as const;
 
 export const sha256 = (buf: Buffer | string) => createHash('sha256').update(buf).digest('hex');
@@ -38,6 +39,26 @@ export interface PipelineResult {
   readonly errors: string[];
   readonly corpus: Corpus | null;
   readonly stats: Record<string, number>;
+  /** Publication policy PUB-1 (AUD02-002): every finding and its decision. */
+  readonly findings?: Finding[];
+  readonly publicationCheck?: { withheldTexts: string[]; approvedSpans: string[]; openTexts: string[] };
+}
+
+/** Raw quotes (data/raw) keyed by curated measurement id, through rawRef. */
+function rawQuotes(ms: readonly Measurement[]): Map<string, string[]> {
+  const files = new Map<string, Map<string, string>>();
+  const out = new Map<string, string[]>();
+  for (const m of ms) {
+    const [file, item] = m.rawRef.split('#');
+    if (!file || !item) continue;
+    if (!files.has(file)) {
+      const d = readJson(file) as { items?: Array<{ id: string; quote?: string | null }>; itemsNonConforming?: Array<{ id: string; quote?: string | null }> };
+      files.set(file, new Map([...(d.items ?? []), ...(d.itemsNonConforming ?? [])].filter((x) => x.quote).map((x) => [x.id, x.quote!])));
+    }
+    const q = files.get(file)!.get(item);
+    if (q) out.set(m.id, [q]);
+  }
+  return out;
 }
 
 /** Runs schema validation + invariants and builds the qualified corpus. */
@@ -92,31 +113,46 @@ export function runPipeline(): PipelineResult {
   const usedPh = new Set(qualified.map((m) => m.phenomenonId));
   const usedSrc = new Set(qualified.flatMap((m) => m.sourceIds));
   const inputs: Record<string, string> = {};
-  for (const rel of [P.sources, P.phenomena, P.measurements, P.groups, P.observers, P.scenarios]) inputs[rel] = sha256(read(rel));
-  const corpus: Corpus = {
+  for (const rel of [P.sources, P.phenomena, P.measurements, P.groups, P.observers, P.scenarios, P.textDecisions]) inputs[rel] = sha256(read(rel));
+  const notQualified = ms.measurements.filter((m) => m.verificationStatus !== 'qualified');
+  // AUD-012/017, AUD02-002 (ADR-0011): publication policy PUB-1, explicit fields and text-by-text decisions.
+  const pub = applyPublicationPolicy({
+    measurements: normalized,
+    sources: s.sources.filter((x) => usedSrc.has(x.id)),
+    groups: gr.groups,
+    phenomena: ph.phenomena.filter((p) => usedPh.has(p.id)),
+    observers: resolveObservers(ob.observers, normalized),
+    scenarios: sc.scenarios,
+    withheld: notQualified.map((m) => ({
+      id: m.id,
+      label: ph.phenomena.find((p) => p.id === m.phenomenonId)!.label,
+      status: m.verificationStatus,
+      reason: m.notes?.split(' | ').find((x) => x.startsWith('Decision: '))?.slice(10) ?? 'No independent verdict yet.',
+    })),
+    rawQuotes: rawQuotes(ms.measurements),
+    withheldQuotes: new Map(notQualified.filter((m) => m.quote).map((m) => [m.id, [m.quote!]])),
+    decisions: (readJson(P.textDecisions) as { decisions: TextDecision[] }).decisions,
+  });
+  errors.push(...pub.problems.map((p) => `publication ${p}`));
+  if (errors.length) return { errors, corpus: null, stats: {}, findings: pub.findings };
+  const corpus = {
     schemaVersion: SCHEMA_VERSION,
     corpusVersion: `0.3.0+${sha256(Object.values(inputs).join('')).slice(0, 12)}`,
     inputs,
-    phenomena: ph.phenomena.filter((p) => usedPh.has(p.id)),
-    // AUD-012/017 (ADR-0011): verbatim third-party text only where every cited source allows redistribution.
-    measurements: publicView(normalized, s.sources),
-    sources: s.sources.filter((x) => usedSrc.has(x.id)),
-    groups: gr.groups,
-    observers: resolveObservers(ob.observers, normalized),
-    scenarios: sc.scenarios,
-    withheld: ms.measurements
-      .filter((m) => m.verificationStatus !== 'qualified')
-      .map((m) => ({
-        id: m.id,
-        label: ph.phenomena.find((p) => p.id === m.phenomenonId)!.label,
-        status: m.verificationStatus,
-        reason: m.notes?.split(' | ').find((x) => x.startsWith('Decision: '))?.slice(10) ?? 'No independent verdict yet.',
-      })),
-  };
+    phenomena: pub.phenomena,
+    measurements: pub.measurements,
+    sources: pub.sources,
+    groups: pub.groups,
+    observers: pub.observers,
+    scenarios: pub.scenarios,
+    withheld: pub.withheld,
+  } as Corpus;
   const count = (st: string) => ms.measurements.filter((m) => m.verificationStatus === st).length;
   return {
     errors,
     corpus,
+    findings: pub.findings,
+    publicationCheck: pub.check,
     stats: {
       sources: s.sources.length,
       phenomena: ph.phenomena.length,

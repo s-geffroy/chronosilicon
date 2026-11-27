@@ -6,7 +6,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { publicView, quotedSpans, MIN_REDACTED_WORDS, ALLOWED_UNDER_REVIEW, normalize } from '@chronosilicon/ontology';
+import { quotedSpans, MIN_REDACTED_WORDS, ALLOWED_UNDER_REVIEW } from '@chronosilicon/ontology';
 import { ROOT } from '../scripts/lib/corpus';
 
 interface PubM { id: string; sourceIds: string[]; quote: string | null; notes: string | null; protocol: string | null;
@@ -38,27 +38,5 @@ describe('published corpus: excerpt policy (data guard)', () => {
   });
 });
 
-describe('publicView (unit)', () => {
-  const ph = [{ id: 'p', domain: 'cpu', quantityKind: 'duration', label: { fr: 'p', en: 'p' }, description: null }];
-  const m = (sourceIds: string[], notes: string) => ({
-    id: 'm1', phenomenonId: 'p', configuration: null, value: 1, unit: 's', low: null, high: null,
-    conditions: { fr: "l'unité « une phrase de six mots au moins ici »", en: 'plain' }, protocol: null,
-    provenanceType: 'documented', verificationStatus: 'qualified', sourceIds, locator: "Table 2 'Cache Parameters of the Skylake Client Microarchitecture'",
-    quote: 'a verbatim sentence from the source', era: null, uncertainty: null, statistics: null, calculation: null, rawRef: 'x', notes,
-  });
-  const src = (id: string, redistribution: string) => ({ id, redistribution }) as never;
-  it('keeps everything when all sources are allowed', () => {
-    const [v] = publicView(normalize(ph as never, [m(['a'], 'n') as never]), [src('a', 'allowed')]);
-    expect(v!.quote).toBe('a verbatim sentence from the source');
-    expect(v!.excerpt).toEqual({ status: 'published' });
-  });
-  it('withholds quote, redacts long quoted passages, keeps short ones, apostrophes and locators', () => {
-    const notes = "Source says 'this is a long quoted passage of words' and 'short one'; l'apostrophe reste.";
-    const [v] = publicView(normalize(ph as never, [m(['a', 'b'], notes) as never]), [src('a', 'allowed'), src('b', 'reference-only')]);
-    expect(v!.quote).toBeNull();
-    expect(v!.notes).toBe("Source says […] and 'short one'; l'apostrophe reste.");
-    expect(v!.conditions.fr).toBe("l'unité […]");
-    expect(v!.locator).toContain('Cache Parameters of the Skylake Client Microarchitecture');
-    expect(v!.excerpt).toEqual({ status: 'withheld', reason: 'redistribution-not-established', redacted: ['quote', 'notes', 'conditions.fr'] });
-  });
-});
+// The REMEDIATION-01 unit tests of publicView() are superseded by tests/remediation-02-publication.test.ts:
+// AUD02-002 replaced that heuristic by policy PUB-1 (explicit fields, text-by-text decisions).

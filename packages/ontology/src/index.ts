@@ -436,4 +436,8 @@ export function normalize(phenomena: readonly Phenomenon[], measurements: readon
   });
 }
 
-export { publicView, quotedSpans, MIN_REDACTED_WORDS, ALLOWED_UNDER_REVIEW } from './publication';
+export {
+  applyPublicationPolicy, quotedSpans, overlapSpans, grams, leaks, isOpenSource, decisionKey,
+  MIN_REDACTED_WORDS, OVERLAP_WORDS, ALLOWED_UNDER_REVIEW, REDACTION, POLICY_ID, PUBLIC_FIELDS,
+  type TextDecision, type Finding, type DecisionGround, type PublicationInput, type PublicationOutput,
+} from './publication';

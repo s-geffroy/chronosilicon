@@ -19,7 +19,7 @@ SUMMARY="$DIR/summary.txt"
   echo "image=mcr.microsoft.com/playwright:v1.65.0-noble@sha256:9beb546099e11f52d62e505537914870e01a67e0e6b00ae41da4775324e73dbe"
   echo "uname=$(uname -srm)"
 } > "$SUMMARY"
-STEPS="ci audit:gate lint typecheck validate:data test build dist:manifest-write"
+STEPS="ci audit:gate lint typecheck validate:data test build publication:check dist:manifest-write"
 # AUD-018: e2e runs against the build above (no rebuild), then the artifact is re-checked.
 [ "$GATE" != "G0" ] && STEPS="$STEPS test:e2e dist:manifest-check"
 FAIL=0
