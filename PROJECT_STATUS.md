@@ -21,13 +21,13 @@ Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source cano
   - 245 candidates (lots M00 et M01) : **239 qualifiées**, 2 en attente, 4 contestées.
   - 120 sources, dont 108 portent au moins une valeur qualifiée. Les 15 domaines sont couverts.
 - Site V1 : chronologie logarithmique, fiches, convertisseur, FR/EN, 3 niveaux de lecture, export JSON/CSV, lien de partage. V2 : Architecture, Comparaison (22 groupes : 17 comparaisons et 5 hiérarchies, sans classement), Observateurs (9). V3 : Simulation (5 scénarios, chemin critique, ressources). V4 : Immersion (journal dérivé). V5 : Laboratoire (registre, valeurs écartées, mesure navigateur, contributions). Tous les espaces de navigation sont réalisés.
-- Tests : 212 unitaires, 96 e2e (4 navigateurs) ; build déterministe.
+- Tests : 212 unitaires, 96 e2e (4 navigateurs) ; build déterministe. Dernière revue contradictoire : `docs/reports/review-2026-11-27-final.md` (0 bloquant, 4 majeurs, 6 mineurs, tous traités).
 - Incertitude structurée (ADR-0009) : 3 dispersions et 12 jeux de statistiques publiées, jamais inventées ; « ± » toujours affiché avec son type.
 - CI : `ci.yml` s'exécute sur toutes les branches ; son statut se lit dans l'onglet Actions pour le commit publié (voir « Publication »). `pages.yml` ne s'exécute que sur `main`.
 
 ## Publication
 
-- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = `6f213d0` (V1 à V5, corpus de 239 valeurs, mineurs de la revue du lot 2 traités). Précédents : `cf84cdd` (lot 2), `178d4ad` (V1 à V5)
+- **En ligne** : https://s-geffroy.github.io/chronosilicon/. `main` = commit « Journaux de la porte de la revue finale » (2026-11-27), qui ne diffère de `715051a` que par les journaux et ce statut. Porte `final-review` jouée sur `715051a`, `dirty=0` : 212 unitaires, 96 e2e, tous PASS (`docs/reports/logs/final-review/`). Précédents : `6bea223` (incertitude structurée), `6f213d0` (mineurs du lot 2), `cf84cdd` (lot 2), `178d4ad` (V1 à V5).
 - Vérifié le 2026-11-26 : HTTP 200, `version.json.commit` = SHA poussé, actifs sous `/chronosilicon/`, aucune erreur console (Chromium).
 - Toute publication suivante : fast-forward de `develop` vers `main` après la porte de la version (ADR-0003).
 
