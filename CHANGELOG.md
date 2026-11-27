@@ -36,6 +36,9 @@ Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant 
 ### Ajouté (incertitude structurée)
 - Champ `uncertainty` des mesures (ADR-0009) : écart-type, erreur-type, « ± » non précisé, intervalle de confiance ; formulation de la source, n, normalisation SI, invariants, affichage dans la fiche et le tableau, export CSV. Trois dispersions publiées renseignées ; statistiques publiées (n inconnu déclaré) pour 12 valeurs : CUDA, MLPerf, Azure. Revue du modèle intégrée (« ± » toujours typé, protocole exigé, règles conditionnelles, garde sur les données). Affichage « µs » corrigé.
 
+### Documentation (AUDIT-01, 2026-11-27)
+- Ouverture de l'audit indépendant AUDIT-01 : tag `audit-01-baseline` (`491c989`), dossier probatoire `docs/audits/AUDIT-01/evidence/`, rapport de transmission. Aucun changement de code, de données ni du site.
+
 ### Corrigé (revue finale du 2026-11-27)
 - Fiche : protocole, citation et localisateurs balisés `lang="en"` et signalés en FR ; extrait de source distingué du texte de curation ; étiquettes de percentiles exactes aux extrêmes.
 - Invariant « la formulation contient la valeur » par jeton numérique (et les deux bornes d'un intervalle) ; formulation du clignement réduite au fragment littéral.

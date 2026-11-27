@@ -2,6 +2,8 @@
 
 Ordre de priorité. Mis à jour le 2026-11-27.
 
+0. **[Gel — AUDIT-01 en cours]** Aucun développement, aucune modification du corpus, de `main` ni du site jusqu'à réception du rapport indépendant et du plan de remédiation (`docs/audits/AUDIT-01/AUDIT-01_HANDOVER.md`). Les points ci-dessous restent en attente et seront re-priorisés par le plan de remédiation.
+
 1. ~~Régler Pages et publier V1~~ : fait le 2026-11-26 (commit `7ca44b5`).
 2. **[Agent]** Correctif relevé à l'inspection en ligne : « ≈ » sur les durées fortement arrondies. (Fait : textes de curation et extraits de source en anglais signalés et balisés `lang="en"` dans la fiche, 2026-11-26/27.)
 3. ~~Copie Drive datée~~ : faite et vérifiée le 2026-11-26 ; à refaire à chaque porte.

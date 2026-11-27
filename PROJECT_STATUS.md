@@ -2,6 +2,13 @@
 
 Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source canonique : GitHub `s-geffroy/chronosilicon`.
 
+## AUDIT-01 : audit indépendant ouvert (2026-11-27)
+
+- **Développement arrêté.** ChatGPT réalise un audit indépendant (A01 à A17). Le mainteneur ne modifie ni le corpus, ni `main`, ni le site, et ne corrige rien par anticipation.
+- État de référence : tag `audit-01-baseline` = `491c989d46d0d75ecedd9741ef4b6586892b80ae`, publié et vérifié (`version.json` ; 6 fichiers sur 6 identiques au build reproduit depuis un clone neuf).
+- Dossier probatoire : `docs/audits/AUDIT-01/evidence/` ; transmission : `docs/audits/AUDIT-01/AUDIT-01_HANDOVER.md` ; copie Drive : `…/CHRONOSILICON/2026-11-27_AUDIT-01/00_EVIDENCE_CLAUDE/` (https://drive.google.com/drive/folders/12NiViPhoKclCGxEQaX2SmjQotdn7EeJV).
+- Le dossier est commité sur `develop` seulement, après le tag. Reprise : à réception du rapport indépendant et du plan de remédiation.
+
 ## État des portes
 
 | Étape | Porte | Statut | Rapport |
@@ -42,7 +49,7 @@ Dernière mise à jour : 2026-11-27 (session Claude Code, Opus 5.5). Source cano
 
 ## Décisions non validées par l'utilisateur
 
-Aucune décision structurante en suspens. Les choix mineurs sont tracés dans `docs/adr/ADR-0001` à `ADR-0005`.
+Aucune décision structurante en suspens. Les choix mineurs sont tracés dans `docs/adr/ADR-0001` à `ADR-0009`.
 
 ## Risques ouverts
 
