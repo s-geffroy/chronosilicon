@@ -2,6 +2,17 @@
 
 Format inspiré de Keep a Changelog. Versionnement sémantique : aucun tag tant qu'une version n'est pas validée par sa porte et publiée.
 
+## [Non publié] — REMEDIATION-01 (branche `remediation-01`, tag `remediation-01-rc1`)
+
+### Corrigé (AUDIT-01)
+- AUD-001, 006, 011 : domaines numériques (symétrie toSI/fromSI, finitude des conversions, moyenne robuste, quantiles triés).
+- AUD-002, 003, 004 : simulateur (annulations atomiques, fin effective, horizon, activité et inactivité) ; AUD-005 contesté, chemin critique formalisé ; ordre de la file (ADR-0010).
+- AUD-007, 008 : complétude des référentiels segmentés, journal intégré sur l'intervalle absolu.
+- AUD-009 : calculs en graphe acyclique. AUD-010 : `same-protocol` exige une preuve citée ; 3 groupes reclassés `same-source`.
+- AUD-012, 017 : vue publique sans extrait tiers non autorisé (ADR-0011), registre des extraits.
+- AUD-013 : latence SSD dérivée par Little retirée (hypothèses non démontrées).
+- AUD-014 : porte de vulnérabilités, exceptions datées, `SECURITY.md`, SBOM. AUD-015 : aller-retour de l'URL. AUD-016 : CSV avec `schemaVersion`, `commit`, `excerptStatus`. AUD-018 : artefact unique testé puis déployé.
+
 ## [Non publié] — 0.1.0 (develop)
 
 ### Ajouté

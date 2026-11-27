@@ -24,6 +24,8 @@ Statut d'une exigence : **réalisée** (preuve de test exécuté), **partielle**
 | V03 statistiques | invariant « statistiques ⇒ protocole, méthode (ou « non publiée » déclarée), n ou `sampleCountNote` si la source ne le publie pas, quantiles ordonnés » ; incertitude structurée (ADR-0009 : type, n, formulation de la source, invariants) ; aucune distribution inventée |
 | V04 architecture | conditions et configuration obligatoires par valeur ; cycles non convertis sans fréquence |
 | V05 mathématique | `oracle-cs03.test.ts`, `observers.test.ts` (identité, A→B→A, monotonie, limites, segments) |
-| V06 causalité | `simulator.test.ts`, `scenarios.test.ts`, exécution des scénarios à la construction |
+| V06 causalité | ADR-0010 (ordre, annulations, chemin critique) ; `simulator.test.ts`, `scenarios.test.ts`, exécution des scénarios à la construction |
 | V07 pédagogie | métaphore annoncée, distinction cycles / instructions / travail utile (convertisseur, fiche), espaces non réalisés signalés |
-| V08 reproductibilité | lockfile, image épinglée, `validate:data` (dérivé à jour, raw immuable), logs `docs/reports/logs/` |
+| Droits des extraits (ADR-0011) | `publicView`, `tests/remediation-01-rights.test.ts` (garde sur le corpus publié), e2e « excerpts are withheld… » |
+| Sécurité (AUD-014) | `npm run audit:gate` (CI, Pages, porte locale), `security/audit-exceptions.json`, SBOM |
+| V08 reproductibilité | artefact unique (`dist:manifest`, `E2E_PREBUILT=1`, AUD-018), lockfile, image épinglée, `validate:data` (dérivé à jour, raw immuable), logs `docs/reports/logs/` |

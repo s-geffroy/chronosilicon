@@ -1,0 +1,5 @@
+$ npm run -s dist:manifest -- write .cache/m.sha256 ; check ; (modify dist/version.json) ; check
+dist-manifest: 6 files
+dist-manifest: artifact unchanged since it was built and tested
+dist-manifest: the built artifact changed after it was recorded (AUD-018)
+exit=1

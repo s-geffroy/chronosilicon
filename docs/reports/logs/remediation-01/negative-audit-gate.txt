@@ -1,0 +1,12 @@
+$ (exception expiry set to 2026-11-01) npm run -s audit:gate
+audit:gate FAILED (9)
+  - exception for https://github.com/advisories/GHSA-g3hv-75wg-m249 expired on 2026-11-01
+  - dev dependency @typescript-eslint/eslint-plugin: moderate advisory without a dated exception
+  - dev dependency @typescript-eslint/parser: moderate advisory without a dated exception
+  - dev dependency @typescript-eslint/type-utils: moderate advisory without a dated exception
+  - dev dependency @typescript-eslint/typescript-estree: moderate advisory without a dated exception
+  - dev dependency @typescript-eslint/utils: moderate advisory without a dated exception
+  - dev dependency eslint: moderate advisory without a dated exception
+  - dev dependency minimatch: moderate advisory without a dated exception
+  - dev dependency typescript-eslint: moderate advisory without a dated exception
+exit=1

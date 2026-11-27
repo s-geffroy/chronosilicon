@@ -43,3 +43,7 @@
 - L'invariant « la formulation contient la valeur » compare des **nombres entiers en tant que jetons** : 2 ne se trouve ni dans « n=25 » ni dans « 2.5 ». Pour un intervalle de confiance, les deux bornes doivent figurer dans la formulation.
 - Affichage FR : un extrait de source en anglais porte « (extrait de la source, en anglais) », un texte de curation (protocole, méthode) porte « (texte de curation en anglais) ». Les deux sont balisés `lang="en"`, de même que la citation et les localisateurs. Les percentiles s'étiquettent avec `formatLevel` (P99,9 et non P100).
 - CSV : un n inconnu est une cellule vide dans `uncertaintyN` comme dans `statisticsN`. `statisticsNNote` en donne la raison ; `uncertaintyStatement` et `statisticsMethod` reprennent ce qu'affiche la fiche.
+
+## Amendement (2026-11-27, ADR-0011)
+
+Dans la vue publique, `uncertainty.statement` vaut `null` quand la redistribution d'une source n'est pas établie. Le type, la valeur, n et le localisateur restent publiés. Dans les données curées, `statement` reste obligatoire : un `null` y est une erreur d'invariant.

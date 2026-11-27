@@ -2,7 +2,12 @@
 
 Ordre de priorité. Mis à jour le 2026-11-27.
 
-0. **[Gel — AUDIT-01 en cours]** Aucun développement, aucune modification du corpus, de `main` ni du site jusqu'à réception du rapport indépendant et du plan de remédiation (`docs/audits/AUDIT-01/AUDIT-01_HANDOVER.md`). Les points ci-dessous restent en attente et seront re-priorisés par le plan de remédiation.
+0. **[Arrêt — version candidate REMEDIATION-01]** Attendre AUDIT-02 et la décision de l'utilisateur. Ni publication ni fusion sur `main` sans autorisation explicite.
+   - **[Utilisateur]** Décider du traitement des extraits déjà publiés : site actuel, `data/raw` et `data/curated` dans le dépôt public, historique (`docs/audits/AUDIT-01/remediation/SOURCE-RIGHTS.md` §4).
+   - **[Utilisateur]** Faire relire la règle de droits par une personne qualifiée.
+   - **[Agent, après AUDIT-02]** Traiter les retours, puis exécuter la feuille de route P3 (`remediation/ROADMAP-P3.md`), dont trois items demandent une décision structurante.
+   - **[Agent, avant le 2027-01-31]** Mettre à jour eslint et typescript-eslint (versions publiées depuis plus de deux semaines), ou renouveler avec justification l'exception GHSA-g3hv-75wg-m249.
+   Les points ci-dessous restent en attente et seront repriorisés par le plan P3.
 
 1. ~~Régler Pages et publier V1~~ : fait le 2026-11-26 (commit `7ca44b5`).
 2. **[Agent]** Correctif relevé à l'inspection en ligne : « ≈ » sur les durées fortement arrondies. (Fait : textes de curation et extraits de source en anglais signalés et balisés `lang="en"` dans la fiche, 2026-11-26/27.)

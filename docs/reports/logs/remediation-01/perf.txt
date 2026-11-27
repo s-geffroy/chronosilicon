@@ -1,0 +1,3 @@
+chromium: n=5 median DOMContentLoaded=118 ms load=160 ms timeline-visible<=196 ms
+firefox: n=5 median DOMContentLoaded=196 ms load=254 ms timeline-visible<=315 ms
+webkit: n=5 median DOMContentLoaded=140 ms load=193 ms timeline-visible<=312 ms

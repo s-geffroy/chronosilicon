@@ -18,3 +18,10 @@
 - Conséquences : l'ajout d'un groupe ou d'un observateur est une modification de données relue comme telle. Le regroupement par « phénomène commun » au niveau de l'ontologie reste possible plus tard, sans casser ce format.
 
 - Exception assumée (2026-11-26, revue du lot 2, m11) : dans un groupe dont tous les membres ont la même année, l'ordre curé s'applique. Pour `cmp-top500-2026-11-top5`, c'est le rang publié par le TOP500, et la note le dit explicitement.
+
+- Amendement (2026-11-27, AUDIT-01 AUD-010, REMEDIATION-01) : « même protocole » n'est plus déduit de « mêmes sources », puisqu'une source peut décrire plusieurs protocoles. Un groupe `same-protocol` doit désormais remplir deux conditions, que vérifie `checkV2Invariants` :
+  - porter `protocolEvidence` (source, localisateur, formulation), c'est-à-dire l'endroit où la source affirme que tous les membres suivent le même protocole ;
+  - avoir un protocole renseigné pour chaque membre.
+  Aucun groupe ne disposait d'une telle preuve. Les trois groupes `same-protocol` deviennent donc `same-source` :
+  - `hier-skylake-client` et `hier-icelake-client` : valeurs documentées d'un même tableau, sans protocole ;
+  - `cmp-azure-rtt` : la page ne décrit pas de protocole de sonde unique.

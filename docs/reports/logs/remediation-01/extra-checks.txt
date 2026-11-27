@@ -1,0 +1,10 @@
+curate OK: 245 measurements — qualified 238, pending 2, contested 5, rejected 0; 120 sources (108 qualified)
+build:data OK 0.3.0+965d1230a867 {"sources":120,"phenomena":245,"measurements":245,"qualified":238,"pending":2,"contested":5,"rejected":0,"qualifiedPhenomena":238,"groups":22,"observers":9,"scenarios":5}
+curate-dirty=0
+deterministic=yes
+283 238 ./404.html
+628599 154903 ./assets/index-BKOEDYGl.js
+8766 2728 ./assets/index-Do0BrHmH.css
+962 572 ./index.html
+77 104 ./version.json
+12
