@@ -1,12 +1,16 @@
 {
-  "_comment": "AUD-014 (REMEDIATION-01). Dated exceptions to the vulnerability gate (scripts/audit-gate.ts). Each entry names one advisory, why it does not apply to the published static site, and an expiry date after which the gate fails again. Policy: SECURITY.md.",
+  "_comment": "Dated exceptions to the vulnerability gate (scripts/audit-gate.ts, scripts/lib/audit-policy.ts, SECURITY.md). Schema 2 (REMEDIATION-02, AUD02-001): one entry per (advisory, vulnerable package); it covers only that exact GHSA identifier, package, severity and affected range, in development scope, until `expires` (at most 92 days after `decidedAt`). `paths` lists the packages npm audit reports as affected through this advisory; any other package reached by it fails the gate. Never renewed automatically.",
+  "schemaVersion": 2,
   "exceptions": [
     {
-      "advisory": "https://github.com/advisories/GHSA-g3hv-75wg-m249",
-      "packages": ["minimatch", "eslint", "typescript-eslint", "@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "@typescript-eslint/type-utils", "@typescript-eslint/typescript-estree", "@typescript-eslint/utils"],
+      "advisory": "GHSA-g3hv-75wg-m249",
+      "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249",
+      "package": "minimatch",
+      "range": ">=7.0.0 <11.0.1",
       "severity": "moderate",
       "scope": "dev",
-      "reason": "Denial of service by glob-pattern amplification in minimatch, reached only through ESLint, which runs at development and CI time on the repository's own files with the repository's own patterns. minimatch is not in the production bundle (npm audit --omit=dev: 0). Fix available (eslint 10.15.0, typescript-eslint 8.74.0) but not applied during REMEDIATION-01: upgrading requires checking that those releases are at least two weeks old, which was not done.",
+      "paths": ["eslint", "typescript-eslint", "@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "@typescript-eslint/type-utils", "@typescript-eslint/typescript-estree", "@typescript-eslint/utils"],
+      "reason": "Denial of service by glob-pattern amplification in minimatch, reached only through ESLint, which runs at development and CI time on the repository's own files with the repository's own patterns. minimatch is not in the production bundle (npm audit --omit=dev: 0). Fix available (eslint 10.15.0, typescript-eslint 8.74.0) but not applied: upgrading requires checking that those releases are at least two weeks old, which was not done. Decided in REMEDIATION-01 (2026-11-27); rewritten to the exact-match schema in REMEDIATION-02 without changing its scope or expiry.",
       "decidedAt": "2026-11-27",
       "expires": "2027-01-31"
     }

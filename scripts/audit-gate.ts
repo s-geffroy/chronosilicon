@@ -1,51 +1,44 @@
 /**
- * Vulnerability gate (AUD-014, SECURITY.md). Blocking rules:
- *  - production dependencies (npm audit --omit=dev): any advisory, any severity, fails;
- *  - development dependencies: high or critical fails; moderate or low fails unless a
- *    dated, unexpired exception in security/audit-exceptions.json covers the package;
- *  - an expired exception fails.
- * Usage: npm run audit:gate  (needs the npm registry; run in CI and in the gate).
+ * Vulnerability gate (AUD-014; matching made exact by REMEDIATION-02 / AUD02-001).
+ * Rules: scripts/lib/audit-policy.ts and SECURITY.md.
+ * Usage:
+ *   npm run audit:gate                       # runs npm audit (needs the npm registry)
+ *   npm run audit:gate -- --all A.json --prod P.json [--today YYYY-MM-DD]
+ *                                            # replays saved reports (tests, evidence)
  */
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT } from './lib/corpus';
+import { evaluate } from './lib/audit-policy';
 
-interface Vuln { severity: 'info' | 'low' | 'moderate' | 'high' | 'critical'; via: Array<string | { url?: string; title?: string }> }
-interface Exception { advisory: string; packages: string[]; severity: string; scope: 'dev'; reason: string; decidedAt: string; expires: string }
+function arg(name: string): string | undefined {
+  const i = process.argv.indexOf(name);
+  return i > 0 ? process.argv[i + 1] : undefined;
+}
 
-function audit(args: string[]): Record<string, Vuln> {
+function audit(args: string[]): unknown {
   let out: string;
   try {
     out = execFileSync('npm', ['audit', '--json', ...args], { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
   } catch (e) {
     out = (e as { stdout?: string }).stdout ?? ''; // npm audit exits 1 when it finds advisories
   }
-  const parsed = JSON.parse(out) as { vulnerabilities?: Record<string, Vuln>; error?: unknown };
-  if (parsed.error || !parsed.vulnerabilities) throw new Error(`npm audit failed: ${JSON.stringify(parsed.error ?? 'no report')}`);
-  return parsed.vulnerabilities;
+  try { return JSON.parse(out); } catch { return { error: `unparseable npm audit output (${out.length} bytes)` }; }
 }
 
-const today = new Date().toISOString().slice(0, 10);
-const { exceptions } = JSON.parse(readFileSync(join(ROOT, 'security/audit-exceptions.json'), 'utf8')) as { exceptions: Exception[] };
-const errors: string[] = [];
-for (const x of exceptions) if (x.expires < today) errors.push(`exception for ${x.advisory} expired on ${x.expires}`);
+const file = (p: string): unknown => JSON.parse(readFileSync(p, 'utf8'));
+const allPath = arg('--all');
+const prodPath = arg('--prod');
+const today = arg('--today') ?? new Date().toISOString().slice(0, 10);
+const prod = prodPath ? file(prodPath) : audit(['--omit=dev']);
+const all = allPath ? file(allPath) : audit([]);
+const r = evaluate(prod, all, file(join(ROOT, 'security/audit-exceptions.json')), today);
 
-const prod = audit(['--omit=dev']);
-for (const [name, v] of Object.entries(prod)) errors.push(`production dependency ${name}: ${v.severity} advisory`);
-
-const all = audit([]);
-const active = exceptions.filter((x) => x.expires >= today);
-for (const [name, v] of Object.entries(all)) {
-  if (prod[name]) continue;
-  if (v.severity === 'high' || v.severity === 'critical') { errors.push(`dev dependency ${name}: ${v.severity} advisory (no exception allowed)`); continue; }
-  if (!active.some((x) => x.packages.includes(name))) errors.push(`dev dependency ${name}: ${v.severity} advisory without a dated exception`);
-}
-
-const counted = Object.values(all).reduce<Record<string, number>>((acc, v) => ({ ...acc, [v.severity]: (acc[v.severity] ?? 0) + 1 }), {});
-if (errors.length) {
-  console.error(`audit:gate FAILED (${errors.length})`);
-  for (const e of errors) console.error('  - ' + e);
+for (const w of r.warnings) console.warn('  warning: ' + w);
+if (r.errors.length) {
+  console.error(`audit:gate FAILED (${r.errors.length})`);
+  for (const e of r.errors) console.error('  - ' + e);
   process.exit(1);
 }
-console.log(`audit:gate OK production=0 dev=${JSON.stringify(counted)} exceptions=${active.length}`);
+console.log(`audit:gate OK production=0 dev=${JSON.stringify(r.counts)} advisories=${r.advisories.join(',') || 'none'} exceptions=${r.exceptionsActive}`);

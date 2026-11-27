@@ -1,0 +1,11 @@
+advisory-without-url: PASS
+dangling-via: PASS
+high-on-allowed-advisory: FAIL dev dependency minimatch: high advisory (no exception allowed)
+other-advisory-same-package: PASS
+range-changed: PASS
+real-2026-11-27: PASS
+two-advisories-one-unknown: PASS
+unjustified-transitive: FAIL dev dependency fixture-new-tool: moderate advisory without a dated exception
+unknown-report-version: PASS
+production-advisory: FAIL production dependency d3-array: low advisory
+expired-exception: FAIL exception for https://github.com/advisories/GHSA-g3hv-75wg-m249 expired on 2027-01-31 | dev dependency @typescript-eslint/eslint-plugin: moderate advisory without a dated exception | dev dependency @typescript-eslint/parser: moderate advisory without a dated exception | dev dependency @typescript-eslint/type-utils: moderate advisory without a dated exception | dev dependency @typescript-eslint/typescript-estree: moderate advisory without a dated exception | dev dependency @typescript-eslint/utils: moderate advisory without a dated exception | dev dependency eslint: moderate advisory without a dated exception | dev dependency minimatch: moderate advisory without a dated exception | dev dependency typescript-eslint: moderate advisory without a dated exception

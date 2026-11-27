@@ -1,0 +1,50 @@
+{
+ "auditReportVersion": 2,
+ "vulnerabilities": {
+  "d3-array": {
+   "name": "d3-array",
+   "severity": "low",
+   "isDirect": true,
+   "via": [
+    {
+     "source": 9000001,
+     "name": "d3-array",
+     "dependency": "d3-array",
+     "title": "FIXTURE: unrelated advisory (not real)",
+     "url": "https://github.com/advisories/GHSA-fixt-ure0-0001",
+     "severity": "low",
+     "cwe": [],
+     "cvss": {
+      "score": 0,
+      "vectorString": null
+     },
+     "range": "*"
+    }
+   ],
+   "effects": [],
+   "range": "*",
+   "nodes": [
+    "node_modules/d3-array"
+   ],
+   "fixAvailable": false
+  }
+ },
+ "metadata": {
+  "vulnerabilities": {
+   "info": 0,
+   "low": 0,
+   "moderate": 0,
+   "high": 0,
+   "critical": 0,
+   "total": 0
+  },
+  "dependencies": {
+   "prod": 39,
+   "dev": 221,
+   "optional": 60,
+   "peer": 0,
+   "peerOptional": 0,
+   "total": 259
+  }
+ }
+}
