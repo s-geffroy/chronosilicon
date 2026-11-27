@@ -3,7 +3,9 @@ import svelte from 'eslint-plugin-svelte';
 import globals from 'globals';
 
 export default tseslint.config(
-  { ignores: ['**/node_modules/**', '**/dist/**', '.cache/**', 'playwright-report/**', 'test-results/**', 'specs/**', '.claude/**'] },
+  { ignores: ['**/node_modules/**', '**/dist/**', '.cache/**', 'playwright-report/**', 'test-results/**', 'specs/**', '.claude/**',
+    // Third-party audit evidence (auditor's probes), kept byte-identical: not project code.
+    'docs/audits/**/probes/**'] },
   ...tseslint.configs.strict,
   ...svelte.configs['flat/recommended'],
   {
